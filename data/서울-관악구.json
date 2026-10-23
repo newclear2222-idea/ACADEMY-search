@@ -12,12 +12,13 @@
   "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)"
  ],
  "salesPeriod": "2026년 2분기",
- "unmatchedAcademies": 41,
+ "aptPeriod": "",
+ "unmatchedAcademies": 42,
  "fees": {
   "all": {
    "elem": [
     180000,
-    211
+    209
    ],
    "middle": [
     250000,
@@ -28,8 +29,8 @@
     99
    ],
    "total": [
-    210000,
-    584
+    220000,
+    574
    ]
   },
   "math": {
@@ -46,8 +47,8 @@
     47
    ],
    "total": [
-    240000,
-    217
+    250000,
+    215
    ]
   },
   "english": {
@@ -70,88 +71,6 @@
   }
  },
  "areas": [
-  {
-   "name": "115동",
-   "students": {
-    "elem": 0,
-    "middle": 0,
-    "high": 0,
-    "total": 0
-   },
-   "academies": {
-    "all": 1,
-    "math": 0,
-    "english": 0
-   },
-   "schools": [],
-   "fees": {
-    "all": {
-     "elem": [
-      null,
-      2
-     ],
-     "middle": [
-      null,
-      0
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      75000,
-      10
-     ]
-    },
-    "math": {
-     "elem": [
-      null,
-      0
-     ],
-     "middle": [
-      null,
-      0
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      null,
-      2
-     ]
-    },
-    "english": {
-     "elem": [
-      null,
-      0
-     ],
-     "middle": [
-      null,
-      0
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      null,
-      0
-     ]
-    }
-   },
-   "top": [
-    {
-     "name": "지니어스논술교습소",
-     "kind": "교습소",
-     "capacity": 44,
-     "since": 2018,
-     "branches": 3,
-     "subjects": []
-    }
-   ],
-   "sales": null
-  },
   {
    "name": "낙성대동",
    "students": {
@@ -1003,7 +922,20 @@
      ]
     }
    ],
-   "sales": null
+   "sales": null,
+   "fervor": {
+    "score": 50,
+    "parts": {
+     "density": [
+      2.0,
+      67
+     ],
+     "fee": [
+      220000,
+      32
+     ]
+    }
+   }
   },
   {
    "name": "서림동",
@@ -1351,7 +1283,20 @@
      ]
     }
    ],
-   "sales": null
+   "sales": null,
+   "fervor": {
+    "score": 40,
+    "parts": {
+     "density": [
+      1.9,
+      63
+     ],
+     "fee": [
+      200000,
+      16
+     ]
+    }
+   }
   },
   {
    "name": "신사동",

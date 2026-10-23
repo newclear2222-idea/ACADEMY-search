@@ -11,6 +11,7 @@
   "대표 학원: 교육청에 등록한 정원이 큰 순서"
  ],
  "salesPeriod": "",
+ "aptPeriod": "",
  "unmatchedAcademies": 0,
  "fees": {
   "all": {
@@ -695,7 +696,20 @@
       "math"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 31,
+    "parts": {
+     "density": [
+      1.2,
+      43
+     ],
+     "fee": [
+      200000,
+      19
+     ]
+    }
+   }
   },
   {
    "name": "청산면",

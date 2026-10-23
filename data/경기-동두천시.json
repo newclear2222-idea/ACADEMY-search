@@ -11,6 +11,7 @@
   "대표 학원: 교육청에 등록한 정원이 큰 순서"
  ],
  "salesPeriod": "",
+ "aptPeriod": "",
  "unmatchedAcademies": 1,
  "fees": {
   "all": {
@@ -773,7 +774,20 @@
       "math"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 40,
+    "parts": {
+     "density": [
+      2.0,
+      76
+     ],
+     "fee": [
+      135000,
+      3
+     ]
+    }
+   }
   },
   {
    "name": "탑동동",

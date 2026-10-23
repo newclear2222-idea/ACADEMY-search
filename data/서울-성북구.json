@@ -12,7 +12,8 @@
   "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)"
  ],
  "salesPeriod": "2026년 2분기",
- "unmatchedAcademies": 7,
+ "aptPeriod": "",
+ "unmatchedAcademies": 8,
  "fees": {
   "all": {
    "elem": [
@@ -70,90 +71,6 @@
   }
  },
  "areas": [
-  {
-   "name": "417동",
-   "students": {
-    "elem": 0,
-    "middle": 0,
-    "high": 0,
-    "total": 0
-   },
-   "academies": {
-    "all": 1,
-    "math": 0,
-    "english": 1
-   },
-   "schools": [],
-   "fees": {
-    "all": {
-     "elem": [
-      null,
-      0
-     ],
-     "middle": [
-      null,
-      0
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      null,
-      0
-     ]
-    },
-    "math": {
-     "elem": [
-      null,
-      0
-     ],
-     "middle": [
-      null,
-      0
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      null,
-      0
-     ]
-    },
-    "english": {
-     "elem": [
-      null,
-      0
-     ],
-     "middle": [
-      null,
-      0
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      null,
-      0
-     ]
-    }
-   },
-   "top": [
-    {
-     "name": "샘앤클로이영어학원",
-     "kind": "학원",
-     "capacity": 160,
-     "since": 2009,
-     "branches": 2,
-     "subjects": [
-      "english"
-     ]
-    }
-   ],
-   "sales": null
-  },
   {
    "name": "길음동",
    "students": {
@@ -350,7 +267,24 @@
      ]
     }
    ],
-   "sales": 4670033664
+   "sales": 4670033664,
+   "fervor": {
+    "score": 68,
+    "parts": {
+     "density": [
+      2.8,
+      85
+     ],
+     "fee": [
+      250000,
+      53
+     ],
+     "spend": [
+      339886.0,
+      65
+     ]
+    }
+   }
   },
   {
    "name": "돈암동",
@@ -601,7 +535,24 @@
      ]
     }
    ],
-   "sales": 3963049044
+   "sales": 3963049044,
+   "fervor": {
+    "score": 35,
+    "parts": {
+     "density": [
+      1.2,
+      34
+     ],
+     "fee": [
+      200000,
+      16
+     ],
+     "spend": [
+      269870.6,
+      55
+     ]
+    }
+   }
   },
   {
    "name": "동선동1가",
@@ -1842,7 +1793,20 @@
      ]
     }
    ],
-   "sales": null
+   "sales": null,
+   "fervor": {
+    "score": 84,
+    "parts": {
+     "density": [
+      4.1,
+      93
+     ],
+     "fee": [
+      300000,
+      75
+     ]
+    }
+   }
   },
   {
    "name": "동소문동7가",
@@ -2017,7 +1981,20 @@
      ]
     }
    ],
-   "sales": null
+   "sales": null,
+   "fervor": {
+    "score": 45,
+    "parts": {
+     "density": [
+      2.3,
+      77
+     ],
+     "fee": [
+      190000,
+      13
+     ]
+    }
+   }
   },
   {
    "name": "보문동",
@@ -2857,7 +2834,20 @@
      ]
     }
    ],
-   "sales": null
+   "sales": null,
+   "fervor": {
+    "score": 6,
+    "parts": {
+     "density": [
+      0.4,
+      10
+     ],
+     "fee": [
+      150000,
+      2
+     ]
+    }
+   }
   },
   {
    "name": "삼선동3가",
@@ -3531,7 +3521,24 @@
      ]
     }
    ],
-   "sales": 179468819
+   "sales": 179468819,
+   "fervor": {
+    "score": 25,
+    "parts": {
+     "density": [
+      1.2,
+      37
+     ],
+     "fee": [
+      220000,
+      32
+     ],
+     "spend": [
+      28406.0,
+      6
+     ]
+    }
+   }
   },
   {
    "name": "성북동",
@@ -3647,7 +3654,20 @@
      "subjects": []
     }
    ],
-   "sales": 1511636482
+   "sales": 1511636482,
+   "fervor": {
+    "score": 37,
+    "parts": {
+     "density": [
+      0.2,
+      4
+     ],
+     "spend": [
+      399903.8,
+      70
+     ]
+    }
+   }
   },
   {
    "name": "성북동1가",
@@ -4266,7 +4286,24 @@
      ]
     }
    ],
-   "sales": 707249613
+   "sales": 707249613,
+   "fervor": {
+    "score": 28,
+    "parts": {
+     "density": [
+      1.4,
+      42
+     ],
+     "fee": [
+      210000,
+      27
+     ],
+     "spend": [
+      66822.5,
+      15
+     ]
+    }
+   }
   },
   {
    "name": "정릉동",
@@ -4479,7 +4516,24 @@
      ]
     }
    ],
-   "sales": 805045219
+   "sales": 805045219,
+   "fervor": {
+    "score": 36,
+    "parts": {
+     "density": [
+      2.0,
+      66
+     ],
+     "fee": [
+      210000,
+      27
+     ],
+     "spend": [
+      67356.5,
+      15
+     ]
+    }
+   }
   },
   {
    "name": "종암동",
@@ -4695,7 +4749,24 @@
      ]
     }
    ],
-   "sales": 1667472201
+   "sales": 1667472201,
+   "fervor": {
+    "score": 53,
+    "parts": {
+     "density": [
+      2.4,
+      81
+     ],
+     "fee": [
+      220000,
+      32
+     ],
+     "spend": [
+      204272.0,
+      47
+     ]
+    }
+   }
   },
   {
    "name": "하월곡동",
@@ -4905,7 +4976,20 @@
      ]
     }
    ],
-   "sales": null
+   "sales": null,
+   "fervor": {
+    "score": 56,
+    "parts": {
+     "density": [
+      2.3,
+      79
+     ],
+     "fee": [
+      220000,
+      32
+     ]
+    }
+   }
   }
  ]
 }

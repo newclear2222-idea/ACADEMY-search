@@ -12,16 +12,17 @@
   "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)"
  ],
  "salesPeriod": "2026년 2분기",
- "unmatchedAcademies": 1,
+ "aptPeriod": "",
+ "unmatchedAcademies": 3,
  "fees": {
   "all": {
    "elem": [
     180000,
-    512
+    510
    ],
    "middle": [
     250000,
-    434
+    433
    ],
    "high": [
     340000,
@@ -29,7 +30,7 @@
    ],
    "total": [
     220000,
-    1347
+    1344
    ]
   },
   "math": {
@@ -53,11 +54,11 @@
   "english": {
    "elem": [
     210000,
-    163
+    161
    ],
    "middle": [
     250000,
-    129
+    128
    ],
    "high": [
     320000,
@@ -65,106 +66,11 @@
    ],
    "total": [
     230000,
-    364
+    361
    ]
   }
  },
  "areas": [
-  {
-   "name": "1202동",
-   "students": {
-    "elem": 0,
-    "middle": 0,
-    "high": 0,
-    "total": 0
-   },
-   "academies": {
-    "all": 2,
-    "math": 1,
-    "english": 2
-   },
-   "schools": [],
-   "fees": {
-    "all": {
-     "elem": [
-      null,
-      2
-     ],
-     "middle": [
-      null,
-      1
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      220000,
-      3
-     ]
-    },
-    "math": {
-     "elem": [
-      null,
-      0
-     ],
-     "middle": [
-      null,
-      0
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      null,
-      0
-     ]
-    },
-    "english": {
-     "elem": [
-      null,
-      2
-     ],
-     "middle": [
-      null,
-      1
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      220000,
-      3
-     ]
-    }
-   },
-   "top": [
-    {
-     "name": "마곡쎈수학뮤엠영어학원",
-     "kind": "학원",
-     "capacity": 165,
-     "since": 2017,
-     "branches": 1,
-     "subjects": [
-      "english",
-      "math"
-     ]
-    },
-    {
-     "name": "마곡공진해법영어교습소",
-     "kind": "교습소",
-     "capacity": 27,
-     "since": 2017,
-     "branches": 1,
-     "subjects": [
-      "english"
-     ]
-    }
-   ],
-   "sales": null
-  },
   {
    "name": "가양동",
    "students": {
@@ -366,7 +272,24 @@
      ]
     }
    ],
-   "sales": 216856074
+   "sales": 216856074,
+   "fervor": {
+    "score": 21,
+    "parts": {
+     "density": [
+      0.5,
+      14
+     ],
+     "fee": [
+      230000,
+      42
+     ],
+     "spend": [
+      31442.1,
+      8
+     ]
+    }
+   }
   },
   {
    "name": "공항동",
@@ -523,7 +446,24 @@
      ]
     }
    ],
-   "sales": 159054105
+   "sales": 159054105,
+   "fervor": {
+    "score": 24,
+    "parts": {
+     "density": [
+      0.5,
+      13
+     ],
+     "fee": [
+      240000,
+      49
+     ],
+     "spend": [
+      38446.7,
+      10
+     ]
+    }
+   }
   },
   {
    "name": "내발산동",
@@ -806,7 +746,20 @@
      ]
     }
    ],
-   "sales": null
+   "sales": null,
+   "fervor": {
+    "score": 64,
+    "parts": {
+     "density": [
+      2.2,
+      75
+     ],
+     "fee": [
+      250000,
+      53
+     ]
+    }
+   }
   },
   {
    "name": "등촌동",
@@ -1099,7 +1052,24 @@
      ]
     }
    ],
-   "sales": 4677598292
+   "sales": 4677598292,
+   "fervor": {
+    "score": 36,
+    "parts": {
+     "density": [
+      1.2,
+      38
+     ],
+     "fee": [
+      210000,
+      27
+     ],
+     "spend": [
+      187223.8,
+      42
+     ]
+    }
+   }
   },
   {
    "name": "마곡동",
@@ -1337,7 +1307,20 @@
      ]
     }
    ],
-   "sales": null
+   "sales": null,
+   "fervor": {
+    "score": 68,
+    "parts": {
+     "density": [
+      2.8,
+      87
+     ],
+     "fee": [
+      238000,
+      48
+     ]
+    }
+   }
   },
   {
    "name": "방화동",
@@ -1595,7 +1578,24 @@
      ]
     }
    ],
-   "sales": 2742962585
+   "sales": 2742962585,
+   "fervor": {
+    "score": 45,
+    "parts": {
+     "density": [
+      1.4,
+      43
+     ],
+     "fee": [
+      230000,
+      42
+     ],
+     "spend": [
+      232888.7,
+      50
+     ]
+    }
+   }
   },
   {
    "name": "염창동",
@@ -1811,7 +1811,24 @@
      ]
     }
    ],
-   "sales": 2890908605
+   "sales": 2890908605,
+   "fervor": {
+    "score": 54,
+    "parts": {
+     "density": [
+      2.4,
+      81
+     ],
+     "fee": [
+      205000,
+      26
+     ],
+     "spend": [
+      269699.5,
+      54
+     ]
+    }
+   }
   },
   {
    "name": "화곡동",
@@ -2079,7 +2096,24 @@
      ]
     }
    ],
-   "sales": 5316460178
+   "sales": 5316460178,
+   "fervor": {
+    "score": 54,
+    "parts": {
+     "density": [
+      3.0,
+      88
+     ],
+     "fee": [
+      200000,
+      16
+     ],
+     "spend": [
+      280359.7,
+      58
+     ]
+    }
+   }
   }
  ]
 }

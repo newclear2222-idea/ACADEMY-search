@@ -12,7 +12,8 @@
   "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)"
  ],
  "salesPeriod": "2026년 2분기",
- "unmatchedAcademies": 0,
+ "aptPeriod": "",
+ "unmatchedAcademies": 1,
  "fees": {
   "all": {
    "elem": [
@@ -70,90 +71,6 @@
   }
  },
  "areas": [
-  {
-   "name": "403동",
-   "students": {
-    "elem": 0,
-    "middle": 0,
-    "high": 0,
-    "total": 0
-   },
-   "academies": {
-    "all": 1,
-    "math": 0,
-    "english": 1
-   },
-   "schools": [],
-   "fees": {
-    "all": {
-     "elem": [
-      null,
-      0
-     ],
-     "middle": [
-      null,
-      0
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      null,
-      0
-     ]
-    },
-    "math": {
-     "elem": [
-      null,
-      0
-     ],
-     "middle": [
-      null,
-      0
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      null,
-      0
-     ]
-    },
-    "english": {
-     "elem": [
-      null,
-      0
-     ],
-     "middle": [
-      null,
-      0
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      null,
-      0
-     ]
-    }
-   },
-   "top": [
-    {
-     "name": "B.K.영어전문학원",
-     "kind": "학원",
-     "capacity": 40,
-     "since": 2010,
-     "branches": 1,
-     "subjects": [
-      "english"
-     ]
-    }
-   ],
-   "sales": null
-  },
   {
    "name": "가회동",
    "students": {
@@ -1939,7 +1856,20 @@
      ]
     }
    ],
-   "sales": null
+   "sales": null,
+   "fervor": {
+    "score": 56,
+    "parts": {
+     "density": [
+      1.8,
+      59
+     ],
+     "fee": [
+      250000,
+      53
+     ]
+    }
+   }
   },
   {
    "name": "안국동",
@@ -2453,7 +2383,20 @@
      ]
     }
    ],
-   "sales": 18197065
+   "sales": 18197065,
+   "fervor": {
+    "score": 2,
+    "parts": {
+     "density": [
+      0.1,
+      3
+     ],
+     "spend": [
+      8378.0,
+      1
+     ]
+    }
+   }
   },
   {
    "name": "청운동",
@@ -2904,7 +2847,24 @@
      ]
     }
    ],
-   "sales": 484546575
+   "sales": 484546575,
+   "fervor": {
+    "score": 43,
+    "parts": {
+     "density": [
+      1.4,
+      43
+     ],
+     "fee": [
+      250000,
+      53
+     ],
+     "spend": [
+      153677.9,
+      33
+     ]
+    }
+   }
   },
   {
    "name": "필운동",
@@ -3044,7 +3004,20 @@
      ]
     }
    ],
-   "sales": null
+   "sales": null,
+   "fervor": {
+    "score": 16,
+    "parts": {
+     "density": [
+      0.8,
+      20
+     ],
+     "fee": [
+      185000,
+      12
+     ]
+    }
+   }
   },
   {
    "name": "행촌동",
@@ -3280,7 +3253,20 @@
      ]
     }
    ],
-   "sales": 438338350
+   "sales": 438338350,
+   "fervor": {
+    "score": 10,
+    "parts": {
+     "density": [
+      0.2,
+      5
+     ],
+     "spend": [
+      68054.4,
+      16
+     ]
+    }
+   }
   },
   {
    "name": "홍지동",

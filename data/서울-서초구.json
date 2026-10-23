@@ -12,7 +12,8 @@
   "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)"
  ],
  "salesPeriod": "2026년 2분기",
- "unmatchedAcademies": 6,
+ "aptPeriod": "",
+ "unmatchedAcademies": 7,
  "fees": {
   "all": {
    "elem": [
@@ -70,90 +71,6 @@
   }
  },
  "areas": [
-  {
-   "name": "7동",
-   "students": {
-    "elem": 0,
-    "middle": 0,
-    "high": 0,
-    "total": 0
-   },
-   "academies": {
-    "all": 1,
-    "math": 0,
-    "english": 1
-   },
-   "schools": [],
-   "fees": {
-    "all": {
-     "elem": [
-      null,
-      0
-     ],
-     "middle": [
-      null,
-      0
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      null,
-      0
-     ]
-    },
-    "math": {
-     "elem": [
-      null,
-      0
-     ],
-     "middle": [
-      null,
-      0
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      null,
-      0
-     ]
-    },
-    "english": {
-     "elem": [
-      null,
-      0
-     ],
-     "middle": [
-      null,
-      0
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      null,
-      0
-     ]
-    }
-   },
-   "top": [
-    {
-     "name": "이희정영어학원",
-     "kind": "학원",
-     "capacity": 12,
-     "since": 2010,
-     "branches": 1,
-     "subjects": [
-      "english"
-     ]
-    }
-   ],
-   "sales": null
-  },
   {
    "name": "내곡동",
    "students": {
@@ -298,7 +215,24 @@
      ]
     }
    ],
-   "sales": 79669763
+   "sales": 79669763,
+   "fervor": {
+    "score": 26,
+    "parts": {
+     "density": [
+      1.2,
+      36
+     ],
+     "fee": [
+      220000,
+      32
+     ],
+     "spend": [
+      36279.5,
+      9
+     ]
+    }
+   }
   },
   {
    "name": "반포동",
@@ -565,7 +499,24 @@
      ]
     }
    ],
-   "sales": 69597926913
+   "sales": 69597926913,
+   "fervor": {
+    "score": 82,
+    "parts": {
+     "density": [
+      1.8,
+      58
+     ],
+     "fee": [
+      400000,
+      91
+     ],
+     "spend": [
+      1788552.1,
+      96
+     ]
+    }
+   }
   },
   {
    "name": "방배동",
@@ -832,7 +783,24 @@
      ]
     }
    ],
-   "sales": 14789244322
+   "sales": 14789244322,
+   "fervor": {
+    "score": 74,
+    "parts": {
+     "density": [
+      2.7,
+      84
+     ],
+     "fee": [
+      250000,
+      53
+     ],
+     "spend": [
+      590742.7,
+      85
+     ]
+    }
+   }
   },
   {
    "name": "서초동",
@@ -1091,7 +1059,24 @@
      ]
     }
    ],
-   "sales": 19633402471
+   "sales": 19633402471,
+   "fervor": {
+    "score": 78,
+    "parts": {
+     "density": [
+      1.9,
+      62
+     ],
+     "fee": [
+      350000,
+      87
+     ],
+     "spend": [
+      619213.5,
+      86
+     ]
+    }
+   }
   },
   {
    "name": "신원동",
@@ -1401,7 +1386,24 @@
      ]
     }
    ],
-   "sales": 2474022955
+   "sales": 2474022955,
+   "fervor": {
+    "score": 78,
+    "parts": {
+     "density": [
+      2.1,
+      74
+     ],
+     "fee": [
+      306720,
+      82
+     ],
+     "spend": [
+      485673.9,
+      78
+     ]
+    }
+   }
   },
   {
    "name": "우면동",
@@ -1619,7 +1621,20 @@
      ]
     }
    ],
-   "sales": null
+   "sales": null,
+   "fervor": {
+    "score": 77,
+    "parts": {
+     "density": [
+      2.3,
+      79
+     ],
+     "fee": [
+      300000,
+      75
+     ]
+    }
+   }
   },
   {
    "name": "잠원동",
@@ -1849,7 +1864,24 @@
      ]
     }
    ],
-   "sales": 6318932444
+   "sales": 6318932444,
+   "fervor": {
+    "score": 91,
+    "parts": {
+     "density": [
+      5.6,
+      97
+     ],
+     "fee": [
+      375000,
+      89
+     ],
+     "spend": [
+      678142.6,
+      88
+     ]
+    }
+   }
   }
  ]
 }

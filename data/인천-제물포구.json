@@ -11,42 +11,43 @@
   "대표 학원: 교육청에 등록한 정원이 큰 순서"
  ],
  "salesPeriod": "",
- "unmatchedAcademies": 2,
+ "aptPeriod": "",
+ "unmatchedAcademies": 3,
  "fees": {
   "all": {
    "elem": [
-    160000,
-    16
+    150000,
+    15
    ],
    "middle": [
     200000,
-    12
+    11
    ],
    "high": [
-    300000,
-    12
+    290000,
+    11
    ],
    "total": [
     200000,
-    49
+    46
    ]
   },
   "math": {
    "elem": [
     150000,
-    5
+    4
    ],
    "middle": [
-    250000,
-    4
+    200000,
+    3
    ],
    "high": [
     320000,
-    7
+    6
    ],
    "total": [
-    220000,
-    17
+    200000,
+    14
    ]
   },
   "english": {
@@ -69,89 +70,6 @@
   }
  },
  "areas": [
-  {
-   "name": "777동",
-   "students": {
-    "elem": 0,
-    "middle": 0,
-    "high": 0,
-    "total": 0
-   },
-   "academies": {
-    "all": 1,
-    "math": 1,
-    "english": 0
-   },
-   "schools": [],
-   "fees": {
-    "all": {
-     "elem": [
-      null,
-      1
-     ],
-     "middle": [
-      null,
-      1
-     ],
-     "high": [
-      null,
-      1
-     ],
-     "total": [
-      340000,
-      3
-     ]
-    },
-    "math": {
-     "elem": [
-      null,
-      1
-     ],
-     "middle": [
-      null,
-      1
-     ],
-     "high": [
-      null,
-      1
-     ],
-     "total": [
-      340000,
-      3
-     ]
-    },
-    "english": {
-     "elem": [
-      null,
-      0
-     ],
-     "middle": [
-      null,
-      0
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      null,
-      0
-     ]
-    }
-   },
-   "top": [
-    {
-     "name": "곰곰수학교습소",
-     "kind": "교습소",
-     "capacity": 8,
-     "since": 2023,
-     "branches": 1,
-     "subjects": [
-      "math"
-     ]
-    }
-   ]
-  },
   {
    "name": "금곡동",
    "students": {
@@ -890,7 +808,20 @@
       "math"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 52,
+    "parts": {
+     "density": [
+      0.3,
+      15
+     ],
+     "fee": [
+      250000,
+      88
+     ]
+    }
+   }
   },
   {
    "name": "송월동1가",
@@ -1526,7 +1457,20 @@
      "branches": 1,
      "subjects": []
     }
-   ]
+   ],
+   "fervor": {
+    "score": 14,
+    "parts": {
+     "density": [
+      0.2,
+      13
+     ],
+     "fee": [
+      164220,
+      16
+     ]
+    }
+   }
   },
   {
    "name": "율목동",

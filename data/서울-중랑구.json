@@ -12,7 +12,8 @@
   "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)"
  ],
  "salesPeriod": "2026년 2분기",
- "unmatchedAcademies": 2,
+ "aptPeriod": "",
+ "unmatchedAcademies": 3,
  "fees": {
   "all": {
    "elem": [
@@ -70,88 +71,6 @@
   }
  },
  "areas": [
-  {
-   "name": "201동",
-   "students": {
-    "elem": 0,
-    "middle": 0,
-    "high": 0,
-    "total": 0
-   },
-   "academies": {
-    "all": 1,
-    "math": 0,
-    "english": 0
-   },
-   "schools": [],
-   "fees": {
-    "all": {
-     "elem": [
-      null,
-      0
-     ],
-     "middle": [
-      null,
-      0
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      null,
-      0
-     ]
-    },
-    "math": {
-     "elem": [
-      null,
-      0
-     ],
-     "middle": [
-      null,
-      0
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      null,
-      0
-     ]
-    },
-    "english": {
-     "elem": [
-      null,
-      0
-     ],
-     "middle": [
-      null,
-      0
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      null,
-      0
-     ]
-    }
-   },
-   "top": [
-    {
-     "name": "공감써밋학원",
-     "kind": "학원",
-     "capacity": 78,
-     "since": 2026,
-     "branches": 1,
-     "subjects": []
-    }
-   ],
-   "sales": null
-  },
   {
    "name": "망우동",
    "students": {
@@ -431,7 +350,24 @@
      ]
     }
    ],
-   "sales": 460809173
+   "sales": 460809173,
+   "fervor": {
+    "score": 10,
+    "parts": {
+     "density": [
+      0.7,
+      17
+     ],
+     "fee": [
+      180000,
+      8
+     ],
+     "spend": [
+      24963.9,
+      5
+     ]
+    }
+   }
   },
   {
    "name": "면목동",
@@ -661,7 +597,24 @@
      ]
     }
    ],
-   "sales": 1903688985
+   "sales": 1903688985,
+   "fervor": {
+    "score": 30,
+    "parts": {
+     "density": [
+      1.6,
+      50
+     ],
+     "fee": [
+      190000,
+      13
+     ],
+     "spend": [
+      125805.5,
+      26
+     ]
+    }
+   }
   },
   {
    "name": "묵동",
@@ -875,7 +828,24 @@
      ]
     }
    ],
-   "sales": 1396020550
+   "sales": 1396020550,
+   "fervor": {
+    "score": 19,
+    "parts": {
+     "density": [
+      0.8,
+      21
+     ],
+     "fee": [
+      190000,
+      13
+     ],
+     "spend": [
+      117658.7,
+      24
+     ]
+    }
+   }
   },
   {
    "name": "상봉동",
@@ -1084,7 +1054,24 @@
      ]
     }
    ],
-   "sales": 487412487
+   "sales": 487412487,
+   "fervor": {
+    "score": 17,
+    "parts": {
+     "density": [
+      0.7,
+      18
+     ],
+     "fee": [
+      200000,
+      16
+     ],
+     "spend": [
+      70303.3,
+      18
+     ]
+    }
+   }
   },
   {
    "name": "신내동",
@@ -1315,7 +1302,24 @@
      ]
     }
    ],
-   "sales": 9542814433
+   "sales": 9542814433,
+   "fervor": {
+    "score": 71,
+    "parts": {
+     "density": [
+      3.0,
+      89
+     ],
+     "fee": [
+      220000,
+      32
+     ],
+     "spend": [
+      1002501.8,
+      92
+     ]
+    }
+   }
   },
   {
    "name": "중화동",
@@ -1555,7 +1559,24 @@
      ]
     }
    ],
-   "sales": 751582928
+   "sales": 751582928,
+   "fervor": {
+    "score": 31,
+    "parts": {
+     "density": [
+      1.6,
+      52
+     ],
+     "fee": [
+      190000,
+      13
+     ],
+     "spend": [
+      135055.3,
+      29
+     ]
+    }
+   }
   }
  ]
 }

@@ -11,6 +11,7 @@
   "대표 학원: 교육청에 등록한 정원이 큰 순서"
  ],
  "salesPeriod": "",
+ "aptPeriod": "",
  "unmatchedAcademies": 0,
  "fees": {
   "all": {
@@ -309,7 +310,20 @@
       "english"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 39,
+    "parts": {
+     "density": [
+      1.0,
+      47
+     ],
+     "fee": [
+      200000,
+      31
+     ]
+    }
+   }
   },
   {
    "name": "교동면",

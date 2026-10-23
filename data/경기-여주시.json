@@ -11,6 +11,7 @@
   "대표 학원: 교육청에 등록한 정원이 큰 순서"
  ],
  "salesPeriod": "",
+ "aptPeriod": "",
  "unmatchedAcademies": 3,
  "fees": {
   "all": {
@@ -527,7 +528,20 @@
       "math"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 78,
+    "parts": {
+     "density": [
+      2.0,
+      78
+     ],
+     "fee": [
+      250000,
+      77
+     ]
+    }
+   }
   },
   {
    "name": "금사면",
@@ -1150,7 +1164,20 @@
       "math"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 40,
+    "parts": {
+     "density": [
+      0.6,
+      14
+     ],
+     "fee": [
+      240000,
+      67
+     ]
+    }
+   }
   },
   {
    "name": "세종대왕면",
@@ -1496,7 +1523,20 @@
       "english"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 74,
+    "parts": {
+     "density": [
+      2.2,
+      82
+     ],
+     "fee": [
+      240000,
+      67
+     ]
+    }
+   }
   },
   {
    "name": "월송동",

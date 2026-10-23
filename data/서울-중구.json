@@ -12,6 +12,7 @@
   "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)"
  ],
  "salesPeriod": "2026년 2분기",
+ "aptPeriod": "",
  "unmatchedAcademies": 0,
  "fees": {
   "all": {
@@ -876,7 +877,20 @@
      ]
     }
    ],
-   "sales": null
+   "sales": null,
+   "fervor": {
+    "score": 30,
+    "parts": {
+     "density": [
+      0.8,
+      19
+     ],
+     "fee": [
+      230000,
+      42
+     ]
+    }
+   }
   },
   {
    "name": "예장동",

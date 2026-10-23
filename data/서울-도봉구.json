@@ -12,6 +12,7 @@
   "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)"
  ],
  "salesPeriod": "2026년 2분기",
+ "aptPeriod": "",
  "unmatchedAcademies": 0,
  "fees": {
   "all": {
@@ -70,85 +71,6 @@
   }
  },
  "areas": [
-  {
-   "name": "2동",
-   "students": {
-    "elem": 681,
-    "middle": 0,
-    "high": 0,
-    "total": 681
-   },
-   "academies": {
-    "all": 0,
-    "math": 0,
-    "english": 0
-   },
-   "schools": [
-    {
-     "name": "서울창림초등학교",
-     "level": "elem",
-     "students": 681
-    }
-   ],
-   "fees": {
-    "all": {
-     "elem": [
-      null,
-      0
-     ],
-     "middle": [
-      null,
-      0
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      null,
-      0
-     ]
-    },
-    "math": {
-     "elem": [
-      null,
-      0
-     ],
-     "middle": [
-      null,
-      0
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      null,
-      0
-     ]
-    },
-    "english": {
-     "elem": [
-      null,
-      0
-     ],
-     "middle": [
-      null,
-      0
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      null,
-      0
-     ]
-    }
-   },
-   "top": [],
-   "sales": null
-  },
   {
    "name": "도봉동",
    "students": {
@@ -360,7 +282,24 @@
      ]
     }
    ],
-   "sales": 57207842
+   "sales": 57207842,
+   "fervor": {
+    "score": 12,
+    "parts": {
+     "density": [
+      0.9,
+      25
+     ],
+     "fee": [
+      180000,
+      8
+     ],
+     "spend": [
+      9525.1,
+      2
+     ]
+    }
+   }
   },
   {
    "name": "방학동",
@@ -596,7 +535,24 @@
      ]
     }
    ],
-   "sales": 5296444940
+   "sales": 5296444940,
+   "fervor": {
+    "score": 61,
+    "parts": {
+     "density": [
+      2.3,
+      77
+     ],
+     "fee": [
+      215000,
+      32
+     ],
+     "spend": [
+      463746.2,
+      75
+     ]
+    }
+   }
   },
   {
    "name": "쌍문동",
@@ -869,15 +825,32 @@
      ]
     }
    ],
-   "sales": 7225359937
+   "sales": 7225359937,
+   "fervor": {
+    "score": 43,
+    "parts": {
+     "density": [
+      1.6,
+      53
+     ],
+     "fee": [
+      200000,
+      16
+     ],
+     "spend": [
+      295769.8,
+      60
+     ]
+    }
+   }
   },
   {
    "name": "창동",
    "students": {
-    "elem": 2725,
+    "elem": 3406,
     "middle": 1352,
     "high": 2471,
-    "total": 6548
+    "total": 7229
    },
    "academies": {
     "all": 141,
@@ -909,6 +882,11 @@
      "name": "서울창동초등학교",
      "level": "elem",
      "students": 289
+    },
+    {
+     "name": "서울창림초등학교",
+     "level": "elem",
+     "students": 681
     },
     {
      "name": "서울창원초등학교",
@@ -1139,7 +1117,24 @@
      ]
     }
    ],
-   "sales": 6020158580
+   "sales": 6020158580,
+   "fervor": {
+    "score": 46,
+    "parts": {
+     "density": [
+      2.0,
+      66
+     ],
+     "fee": [
+      200000,
+      16
+     ],
+     "spend": [
+      277593.0,
+      57
+     ]
+    }
+   }
   }
  ]
 }

@@ -11,6 +11,7 @@
   "대표 학원: 교육청에 등록한 정원이 큰 순서"
  ],
  "salesPeriod": "",
+ "aptPeriod": "",
  "unmatchedAcademies": 0,
  "fees": {
   "all": {
@@ -270,7 +271,20 @@
       "math"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 50,
+    "parts": {
+     "density": [
+      1.2,
+      42
+     ],
+     "fee": [
+      230000,
+      58
+     ]
+    }
+   }
   },
   {
    "name": "북면",
@@ -600,7 +614,20 @@
       "english"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 54,
+    "parts": {
+     "density": [
+      0.5,
+      9
+     ],
+     "fee": [
+      480000,
+      100
+     ]
+    }
+   }
   },
   {
    "name": "조종면",

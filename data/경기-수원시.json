@@ -11,7 +11,8 @@
   "대표 학원: 교육청에 등록한 정원이 큰 순서"
  ],
  "salesPeriod": "",
- "unmatchedAcademies": 39,
+ "aptPeriod": "",
+ "unmatchedAcademies": 44,
  "fees": {
   "all": {
    "elem": [
@@ -69,271 +70,6 @@
   }
  },
  "areas": [
-  {
-   "name": "0당수동",
-   "students": {
-    "elem": 0,
-    "middle": 0,
-    "high": 0,
-    "total": 0
-   },
-   "academies": {
-    "all": 1,
-    "math": 0,
-    "english": 0
-   },
-   "schools": [],
-   "fees": {
-    "all": {
-     "elem": [
-      null,
-      0
-     ],
-     "middle": [
-      null,
-      0
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      null,
-      0
-     ]
-    },
-    "math": {
-     "elem": [
-      null,
-      0
-     ],
-     "middle": [
-      null,
-      0
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      null,
-      0
-     ]
-    },
-    "english": {
-     "elem": [
-      null,
-      0
-     ],
-     "middle": [
-      null,
-      0
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      null,
-      0
-     ]
-    }
-   },
-   "top": [
-    {
-     "name": "한우리수원권선당수인정프린스독서논술교습소",
-     "kind": "교습소",
-     "capacity": 8,
-     "since": 2026,
-     "branches": 2,
-     "subjects": []
-    }
-   ]
-  },
-  {
-   "name": "101동",
-   "students": {
-    "elem": 0,
-    "middle": 0,
-    "high": 0,
-    "total": 0
-   },
-   "academies": {
-    "all": 2,
-    "math": 1,
-    "english": 1
-   },
-   "schools": [],
-   "fees": {
-    "all": {
-     "elem": [
-      null,
-      0
-     ],
-     "middle": [
-      null,
-      0
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      null,
-      0
-     ]
-    },
-    "math": {
-     "elem": [
-      null,
-      0
-     ],
-     "middle": [
-      null,
-      0
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      null,
-      0
-     ]
-    },
-    "english": {
-     "elem": [
-      null,
-      0
-     ],
-     "middle": [
-      null,
-      0
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      null,
-      0
-     ]
-    }
-   },
-   "top": [
-    {
-     "name": "엘에이씨(LAC)린쌤사고력영어학원",
-     "kind": "학원",
-     "capacity": 150,
-     "since": 2022,
-     "branches": 1,
-     "subjects": [
-      "english"
-     ]
-    },
-    {
-     "name": "시스템수학과학학원",
-     "kind": "학원",
-     "capacity": 45,
-     "since": 2022,
-     "branches": 1,
-     "subjects": [
-      "math"
-     ]
-    }
-   ]
-  },
-  {
-   "name": "102동",
-   "students": {
-    "elem": 0,
-    "middle": 0,
-    "high": 0,
-    "total": 0
-   },
-   "academies": {
-    "all": 2,
-    "math": 0,
-    "english": 1
-   },
-   "schools": [],
-   "fees": {
-    "all": {
-     "elem": [
-      null,
-      0
-     ],
-     "middle": [
-      null,
-      0
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      null,
-      0
-     ]
-    },
-    "math": {
-     "elem": [
-      null,
-      0
-     ],
-     "middle": [
-      null,
-      0
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      null,
-      0
-     ]
-    },
-    "english": {
-     "elem": [
-      null,
-      0
-     ],
-     "middle": [
-      null,
-      0
-     ],
-     "high": [
-      null,
-      0
-     ],
-     "total": [
-      null,
-      0
-     ]
-    }
-   },
-   "top": [
-    {
-     "name": "뮤엠영어뮤엠폴리오국어논술광교레이크시티학원",
-     "kind": "학원",
-     "capacity": 270,
-     "since": 2022,
-     "branches": 2,
-     "subjects": [
-      "english"
-     ]
-    },
-    {
-     "name": "아템에듀학원",
-     "kind": "학원",
-     "capacity": 150,
-     "since": 2022,
-     "branches": 1,
-     "subjects": []
-    }
-   ]
-  },
   {
    "name": "고등동",
    "students": {
@@ -524,7 +260,20 @@
       "english"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 53,
+    "parts": {
+     "density": [
+      1.1,
+      39
+     ],
+     "fee": [
+      240000,
+      67
+     ]
+    }
+   }
   },
   {
    "name": "고색동",
@@ -690,7 +439,20 @@
       "math"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 12,
+    "parts": {
+     "density": [
+      0.7,
+      17
+     ],
+     "fee": [
+      160000,
+      7
+     ]
+    }
+   }
   },
   {
    "name": "곡반정동",
@@ -882,7 +644,20 @@
       "math"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 72,
+    "parts": {
+     "density": [
+      4.1,
+      97
+     ],
+     "fee": [
+      220000,
+      46
+     ]
+    }
+   }
   },
   {
    "name": "교동",
@@ -1192,7 +967,20 @@
       "english"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 34,
+    "parts": {
+     "density": [
+      1.3,
+      48
+     ],
+     "fee": [
+      200000,
+      19
+     ]
+    }
+   }
   },
   {
    "name": "권선동",
@@ -1476,7 +1264,20 @@
       "math"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 58,
+    "parts": {
+     "density": [
+      1.5,
+      57
+     ],
+     "fee": [
+      230000,
+      58
+     ]
+    }
+   }
   },
   {
    "name": "금곡동",
@@ -1724,7 +1525,20 @@
       "math"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 66,
+    "parts": {
+     "density": [
+      2.5,
+      87
+     ],
+     "fee": [
+      220000,
+      46
+     ]
+    }
+   }
   },
   {
    "name": "남창동",
@@ -2056,7 +1870,20 @@
       "math"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 70,
+    "parts": {
+     "density": [
+      3.3,
+      95
+     ],
+     "fee": [
+      220000,
+      46
+     ]
+    }
+   }
   },
   {
    "name": "망포동",
@@ -2299,7 +2126,20 @@
       "english"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 55,
+    "parts": {
+     "density": [
+      1.7,
+      64
+     ],
+     "fee": [
+      220000,
+      46
+     ]
+    }
+   }
   },
   {
    "name": "매교동",
@@ -2496,7 +2336,20 @@
       "math"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 32,
+    "parts": {
+     "density": [
+      1.4,
+      53
+     ],
+     "fee": [
+      174000,
+      11
+     ]
+    }
+   }
   },
   {
    "name": "매산로2가",
@@ -2695,7 +2548,20 @@
       "math"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 52,
+    "parts": {
+     "density": [
+      0.1,
+      3
+     ],
+     "fee": [
+      1390003,
+      100
+     ]
+    }
+   }
   },
   {
    "name": "매탄동",
@@ -2970,7 +2836,20 @@
       "english"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 42,
+    "parts": {
+     "density": [
+      1.8,
+      67
+     ],
+     "fee": [
+      190000,
+      16
+     ]
+    }
+   }
   },
   {
    "name": "매향동",
@@ -3534,7 +3413,20 @@
       "math"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 38,
+    "parts": {
+     "density": [
+      1.5,
+      58
+     ],
+     "fee": [
+      200000,
+      19
+     ]
+    }
+   }
   },
   {
    "name": "송죽동",
@@ -3710,7 +3602,20 @@
       "math"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 58,
+    "parts": {
+     "density": [
+      0.9,
+      28
+     ],
+     "fee": [
+      254000,
+      87
+     ]
+    }
+   }
   },
   {
    "name": "신동",
@@ -4347,7 +4252,20 @@
       "english"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 48,
+    "parts": {
+     "density": [
+      2.4,
+      84
+     ],
+     "fee": [
+      180000,
+      12
+     ]
+    }
+   }
   },
   {
    "name": "영화동",
@@ -4524,7 +4442,20 @@
       "math"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 60,
+    "parts": {
+     "density": [
+      1.6,
+      62
+     ],
+     "fee": [
+      230000,
+      58
+     ]
+    }
+   }
   },
   {
    "name": "오목천동",
@@ -4725,7 +4656,20 @@
       "math"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 40,
+    "parts": {
+     "density": [
+      1.0,
+      34
+     ],
+     "fee": [
+      220000,
+      46
+     ]
+    }
+   }
   },
   {
    "name": "우만동",
@@ -4962,7 +4906,20 @@
       "math"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 27,
+    "parts": {
+     "density": [
+      1.4,
+      49
+     ],
+     "fee": [
+      150000,
+      5
+     ]
+    }
+   }
   },
   {
    "name": "원천동",
@@ -5184,7 +5141,20 @@
       "math"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 40,
+    "parts": {
+     "density": [
+      1.2,
+      42
+     ],
+     "fee": [
+      210000,
+      37
+     ]
+    }
+   }
   },
   {
    "name": "율전동",
@@ -5379,7 +5349,20 @@
       "math"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 68,
+    "parts": {
+     "density": [
+      4.3,
+      98
+     ],
+     "fee": [
+      210000,
+      37
+     ]
+    }
+   }
   },
   {
    "name": "이목동",
@@ -5496,7 +5479,20 @@
       "english"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 36,
+    "parts": {
+     "density": [
+      0.1,
+      4
+     ],
+     "fee": [
+      240000,
+      67
+     ]
+    }
+   }
   },
   {
    "name": "이의동",
@@ -5741,7 +5737,20 @@
       "english"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 84,
+    "parts": {
+     "density": [
+      2.0,
+      76
+     ],
+     "fee": [
+      280000,
+      91
+     ]
+    }
+   }
   },
   {
    "name": "인계동",
@@ -5930,7 +5939,20 @@
       "math"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 72,
+    "parts": {
+     "density": [
+      1.8,
+      67
+     ],
+     "fee": [
+      250000,
+      77
+     ]
+    }
+   }
   },
   {
    "name": "입북동",
@@ -6357,7 +6379,20 @@
       "english"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 77,
+    "parts": {
+     "density": [
+      2.4,
+      87
+     ],
+     "fee": [
+      240000,
+      67
+     ]
+    }
+   }
   },
   {
    "name": "조원동",
@@ -6621,7 +6656,20 @@
       "english"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 41,
+    "parts": {
+     "density": [
+      1.3,
+      45
+     ],
+     "fee": [
+      210000,
+      37
+     ]
+    }
+   }
   },
   {
    "name": "지동",
@@ -6983,7 +7031,20 @@
       "math"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 68,
+    "parts": {
+     "density": [
+      2.1,
+      78
+     ],
+     "fee": [
+      230000,
+      58
+     ]
+    }
+   }
   },
   {
    "name": "탑동",
@@ -7204,7 +7265,20 @@
       "english"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 39,
+    "parts": {
+     "density": [
+      1.5,
+      59
+     ],
+     "fee": [
+      200000,
+      19
+     ]
+    }
+   }
   },
   {
    "name": "파장동",
@@ -7389,7 +7463,20 @@
       "math"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 34,
+    "parts": {
+     "density": [
+      1.0,
+      32
+     ],
+     "fee": [
+      201240,
+      36
+     ]
+    }
+   }
   },
   {
    "name": "팔달로1가",
@@ -7674,7 +7761,20 @@
       "english"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 70,
+    "parts": {
+     "density": [
+      1.7,
+      64
+     ],
+     "fee": [
+      250000,
+      77
+     ]
+    }
+   }
   },
   {
    "name": "호매실동",
@@ -7893,7 +7993,20 @@
       "math"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 28,
+    "parts": {
+     "density": [
+      1.2,
+      41
+     ],
+     "fee": [
+      190000,
+      16
+     ]
+    }
+   }
   },
   {
    "name": "화서동",
@@ -8169,7 +8282,20 @@
       "math"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 34,
+    "parts": {
+     "density": [
+      0.8,
+      21
+     ],
+     "fee": [
+      220000,
+      46
+     ]
+    }
+   }
   }
  ]
 }

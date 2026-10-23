@@ -11,6 +11,7 @@
   "대표 학원: 교육청에 등록한 정원이 큰 순서"
  ],
  "salesPeriod": "",
+ "aptPeriod": "",
  "unmatchedAcademies": 0,
  "fees": {
   "all": {
@@ -370,7 +371,20 @@
       "english"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 12,
+    "parts": {
+     "density": [
+      0.5,
+      20
+     ],
+     "fee": [
+      134400,
+      4
+     ]
+    }
+   }
   },
   {
    "name": "운북동",
@@ -678,7 +692,20 @@
       "english"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 26,
+    "parts": {
+     "density": [
+      0.7,
+      33
+     ],
+     "fee": [
+      180000,
+      18
+     ]
+    }
+   }
   },
   {
    "name": "중산동",
@@ -913,7 +940,20 @@
       "english"
      ]
     }
-   ]
+   ],
+   "fervor": {
+    "score": 81,
+    "parts": {
+     "density": [
+      2.2,
+      95
+     ],
+     "fee": [
+      230000,
+      67
+     ]
+    }
+   }
   }
  ]
 }
