@@ -8,7 +8,7 @@
   "학원: 나이스 교육정보 개방포털 학원교습소정보",
   "학생 수: 학교알리미 학년별·학급별 학생수"
  ],
- "unmatchedAcademies": 48,
+ "unmatchedAcademies": 49,
  "areas": [
   {
    "name": "고기동",
@@ -599,8 +599,8 @@
     "total": 3592
    },
    "academies": {
-    "all": 59,
-    "math": 22,
+    "all": 61,
+    "math": 24,
     "english": 12
    },
    "schools": [
@@ -707,36 +707,6 @@
      "students": 542
     }
    ]
-  },
-  {
-   "name": "상가",
-   "students": {
-    "elem": 0,
-    "middle": 0,
-    "high": 0,
-    "total": 0
-   },
-   "academies": {
-    "all": 2,
-    "math": 2,
-    "english": 0
-   },
-   "schools": []
-  },
-  {
-   "name": "상가동",
-   "students": {
-    "elem": 0,
-    "middle": 0,
-    "high": 0,
-    "total": 0
-   },
-   "academies": {
-    "all": 1,
-    "math": 0,
-    "english": 1
-   },
-   "schools": []
   },
   {
    "name": "상갈동",
@@ -942,9 +912,9 @@
    "name": "신갈동",
    "students": {
     "elem": 1114,
-    "middle": 721,
+    "middle": 1436,
     "high": 989,
-    "total": 2824
+    "total": 3539
    },
    "academies": {
     "all": 39,
@@ -971,6 +941,11 @@
      "name": "구갈중학교",
      "level": "middle",
      "students": 721
+    },
+    {
+     "name": "용인신릉중학교",
+     "level": "middle",
+     "students": 715
     },
     {
      "name": "기흥고등학교",
@@ -1507,9 +1482,9 @@
    "name": "포곡읍",
    "students": {
     "elem": 1415,
-    "middle": 504,
+    "middle": 1232,
     "high": 1634,
-    "total": 3553
+    "total": 4281
    },
    "academies": {
     "all": 46,
@@ -1531,6 +1506,11 @@
      "name": "둔전제일초등학교",
      "level": "elem",
      "students": 254
+    },
+    {
+     "name": "영문중학교",
+     "level": "middle",
+     "students": 728
     },
     {
      "name": "포곡중학교",
