@@ -4,6 +4,7 @@ data/<지역>.json (구·시·군마다 하나)과 data/regions.json 을 새로 
 필요한 환경변수 (GitHub 저장소 Secrets에 넣어 둡니다. 코드에는 절대 적지 않습니다):
   NEIS_API_KEY        나이스 교육정보 개방포털 인증키 (학원교습소정보)
   SCHOOLINFO_API_KEY  학교알리미 OpenAPI 인증키 (학교기본정보, 학년별·학급별 학생수)
+  SEOUL_API_KEY       서울 열린데이터광장 인증키 (상권분석서비스 추정매출, 없으면 매출은 건너뜁니다)
 
 사용 예:
   python3 scripts/update_data.py              # 서울, 경기, 인천 모두
@@ -26,6 +27,20 @@ DATA_DIR = ROOT / "data"
 NEIS_URL = "https://open.neis.go.kr/hub/acaInsTiInfo"
 NEIS_SCHOOL_URL = "https://open.neis.go.kr/hub/schoolInfo"
 SCHOOLINFO_URL = "https://www.schoolinfo.go.kr/openApi.do"
+SEOUL_URL = "http://openapi.seoul.go.kr:8088"
+SEOUL_SALES_SERVICE = "VwsmAdstrdSelngW"  # 상권분석서비스(추정매출-행정동)
+
+# 상권분석서비스 업종 코드: 일반교습학원, 외국어학원
+ACADEMY_INDUSTRIES = {"CS200001", "CS200002"}
+
+# 행정동 코드 앞 5자리 -> 서울 자치구
+SEOUL_GU = {
+    "11110": "종로구", "11140": "중구", "11170": "용산구", "11200": "성동구", "11215": "광진구",
+    "11230": "동대문구", "11260": "중랑구", "11290": "성북구", "11305": "강북구", "11320": "도봉구",
+    "11350": "노원구", "11380": "은평구", "11410": "서대문구", "11440": "마포구", "11470": "양천구",
+    "11500": "강서구", "11530": "구로구", "11545": "금천구", "11560": "영등포구", "11590": "동작구",
+    "11620": "관악구", "11650": "서초구", "11680": "강남구", "11710": "송파구", "11740": "강동구",
+}
 
 # office: 나이스 시도교육청 코드, sido/sgg: 학교알리미 시도·시군구 코드
 # 구가 있는 시는 시 코드와 구 코드를 모두 넣습니다. 같은 학교는 한 번만 셉니다.
@@ -324,6 +339,46 @@ def is_open_tutoring(row):
     return status in ("", "개원", "등록") and ("보습" in realm or "입시" in realm)
 
 
+def fetch_seoul_sales(key):
+    """서울 행정동별 학원 추정매출(카드 결제 기반)을 가장 최근 분기로 받습니다.
+
+    돌려주는 값: ({(자치구, 법정동): 분기 매출 합계}, '2026년 2분기')
+    """
+    today = datetime.date.today()
+    for back in range(1, 9):
+        q = (today.year * 4 + (today.month - 1) // 3) - back
+        quarter = f"{q // 4}{q % 4 + 1}"
+        sales, start, total = {}, 1, None
+        while total is None or start <= total:
+            url = f"{SEOUL_URL}/{key}/json/{SEOUL_SALES_SERVICE}/{start}/{start + 999}/{quarter}"
+            try:
+                data = get_json(url, {}).get(SEOUL_SALES_SERVICE) or {}
+            except Exception as e:  # 매출은 덤이라 실패해도 나머지는 그대로 만듭니다.
+                print(f"  서울 매출을 받지 못했습니다: {e}")
+                return {}, ""
+            total = to_int(data.get("list_total_count"))
+            rows = data.get("row") or []
+            if not rows or total > 200_000:  # 분기 조건이 안 먹으면 전체 기간이 와서 멈춥니다.
+                break
+            if start == 1:
+                print(f"  서울 매출 {quarter}: {total}줄, 항목 {', '.join(sorted(rows[0]))}")
+            for row in rows:
+                if str(row.get("STDR_YYQU_CD")) != quarter or row.get("SVC_INDUTY_CD") not in ACADEMY_INDUSTRIES:
+                    continue
+                gu = SEOUL_GU.get(str(row.get("ADSTRD_CD") or "")[:5])
+                dong = legal_dong(str(row.get("ADSTRD_CD_NM") or "").strip())
+                if gu and dong:
+                    k = (gu, dong)
+                    sales[k] = sales.get(k, 0) + to_int(row.get("THSMON_SELNG_AMT"))
+            start += 1000
+        if sales:
+            label = f"{quarter[:4]}년 {quarter[4]}분기"
+            print(f"  서울 학원 매출: {label}, 동 {len(sales)}곳")
+            return sales, label
+    print("  서울 학원 매출 자료를 찾지 못했습니다.")
+    return {}, ""
+
+
 def capacity_of(row):
     """정원합계. 비어 있으면 일시수용능력인원합계를 씁니다."""
     return to_int(row.get("TOFOR_SMTOT")) or to_int(row.get("DTM_RCPTN_ABLTY_NMPR_SMTOT"))
@@ -362,7 +417,7 @@ def new_area(name):
     }
 
 
-def build(province, academies, schools, year):
+def build(province, academies, schools, year, sales=None, sales_label=""):
     """시도 하나의 학원·학교를 구·시·군 > 동·읍·면으로 묶습니다."""
     regions = {}
     if academies:
@@ -448,6 +503,8 @@ def build(province, academies, schools, year):
             a["schools"].sort(key=lambda s: ("elem", "middle", "high").index(s["level"]))
             a["fees"] = summarize_fees(a["fees"])
             a["top"] = pick_top_academies(a["top"])
+            if sales:
+                a["sales"] = sales.get((r["name"], a["name"]))
         outputs.append({
             "id": f"{PROVINCES[province]['short']}-{r['name']}",
             "province": province,
@@ -459,7 +516,8 @@ def build(province, academies, schools, year):
                 "학생 수: 학교알리미 학년별·학급별 학생수",
                 "수강료: 학원이 교육청에 등록한 1인당 교습비",
                 "대표 학원: 교육청에 등록한 정원이 큰 순서",
-            ],
+            ] + (["학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)"] if sales else []),
+            "salesPeriod": sales_label if sales else "",
             "unmatchedAcademies": r["unmatched"],
             "fees": summarize_fees(r["fees"]),
             "areas": areas,
@@ -491,6 +549,7 @@ def save(outputs, provinces):
 def main():
     neis_key = os.environ.get("NEIS_API_KEY")
     schoolinfo_key = os.environ.get("SCHOOLINFO_API_KEY")
+    seoul_key = os.environ.get("SEOUL_API_KEY")
     if not neis_key or not schoolinfo_key:
         sys.exit("NEIS_API_KEY와 SCHOOLINFO_API_KEY 환경변수가 필요합니다.")
 
@@ -501,7 +560,10 @@ def main():
         academies = fetch_academies(neis_key, PROVINCES[province]["office"])
         neis_addresses = fetch_neis_school_addresses(neis_key, PROVINCES[province]["office"])
         schools, year = fetch_schools(schoolinfo_key, province, neis_addresses)
-        built = build(province, academies, schools, year)
+        sales, sales_label = {}, ""
+        if province == "서울특별시" and seoul_key:
+            sales, sales_label = fetch_seoul_sales(seoul_key)
+        built = build(province, academies, schools, year, sales, sales_label)
         if not built:
             sys.exit(f"{province}: 지역별로 묶인 결과가 없어 저장하지 않습니다. 주소 형식을 확인해 주세요.")
         for o in built:

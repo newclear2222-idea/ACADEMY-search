@@ -31,6 +31,7 @@ async function loadRegion(id) {
 const LEVEL_NAMES = { elem: "초등학생", middle: "중학생", high: "고등학생" };
 const pct = (x) => `${Math.round(x * 100)}%`;
 const won = (n) => `${fmt(Math.round(n / 1000) / 10)}만원`;
+const bigWon = (n) => (n >= 1e8 ? `${fmt(Math.round(n / 1e7) / 10)}억원` : `${fmt(Math.round(n / 1e4))}만원`);
 
 function feeOf(fees, subject, level) {
   const cell = fees && fees[subject] && fees[subject][level];
@@ -142,6 +143,9 @@ function render(data) {
       const schoolCount = r.area.schools.length;
       const fee = feeOf(r.area.fees, subject, level);
       const feeText = fee ? ` · 보통 수강료 ${won(fee.median)} (${fmt(fee.count)}개 과정)` : "";
+      const salesText = data.salesPeriod && r.area.sales
+        ? `<div class="rank-sub">학원 카드매출 추정 <strong>${bigWon(r.area.sales)}</strong> (${data.salesPeriod}, 동 전체 학원 합계)</div>`
+        : "";
       const reasons = reasonsFor(r, ctx);
       const why = reasons.length
         ? `<details class="why"><summary>왜 이런 결과일까?</summary><ul>${reasons.map((t) => `<li>${t}</li>`).join("")}</ul></details>`
@@ -153,6 +157,7 @@ function render(data) {
         </div>
         <div class="bar"><span style="width:${width.toFixed(1)}%"></span></div>
         <div class="rank-sub">${LEVEL_LABELS[level]} ${fmt(r.students)}명 · ${SUBJECT_LABELS[subject]} ${fmt(r.academies)}곳 · 학교 ${schoolCount}곳${feeText}</div>
+        ${salesText}
         ${topAcademies(r.area, subject)}
         ${why}
       </li>`;

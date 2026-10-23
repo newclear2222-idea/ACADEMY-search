@@ -22,6 +22,7 @@ jobs:
         env:
           NEIS_API_KEY: ${{ secrets.NEIS_API_KEY }}
           SCHOOLINFO_API_KEY: ${{ secrets.SCHOOLINFO_API_KEY }}
+          SEOUL_API_KEY: ${{ secrets.SEOUL_API_KEY }}
         run: python3 scripts/update_data.py
 
       - name: 바뀐 데이터 저장
