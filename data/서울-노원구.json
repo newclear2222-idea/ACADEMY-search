@@ -8,9 +8,10 @@
   "학원: 나이스 교육정보 개방포털 학원교습소정보",
   "학생 수: 학교알리미 학년별·학급별 학생수",
   "수강료: 학원이 교육청에 등록한 1인당 교습비",
-  "대표 학원: 교육청에 등록한 정원이 큰 순서"
+  "대표 학원: 교육청에 등록한 정원이 큰 순서",
+  "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)"
  ],
- "salesPeriod": "",
+ "salesPeriod": "2026년 2분기",
  "unmatchedAcademies": 93,
  "fees": {
   "all": {
@@ -253,7 +254,7 @@
      "kind": "교습소",
      "capacity": 126,
      "since": 2010,
-     "branches": 5,
+     "branches": 4,
      "subjects": [
       "english"
      ]
@@ -300,7 +301,8 @@
       "math"
      ]
     }
-   ]
+   ],
+   "sales": 3176963476
   },
   {
    "name": "상계동",
@@ -571,7 +573,7 @@
      "kind": "학원",
      "capacity": 560,
      "since": 2015,
-     "branches": 2,
+     "branches": 1,
      "subjects": []
     },
     {
@@ -599,7 +601,7 @@
      "kind": "학원",
      "capacity": 180,
      "since": 2021,
-     "branches": 4,
+     "branches": 3,
      "subjects": [
       "math"
      ]
@@ -665,7 +667,8 @@
       "math"
      ]
     }
-   ]
+   ],
+   "sales": 10953382738
   },
   {
    "name": "월계동",
@@ -897,7 +900,7 @@
      "kind": "학원",
      "capacity": 70,
      "since": 2010,
-     "branches": 7,
+     "branches": 1,
      "subjects": [
       "math"
      ]
@@ -943,7 +946,8 @@
       "english"
      ]
     }
-   ]
+   ],
+   "sales": 782037775
   },
   {
    "name": "중계동",
@@ -1277,7 +1281,8 @@
       "english"
      ]
     }
-   ]
+   ],
+   "sales": 21568691687
   },
   {
    "name": "하계동",
@@ -1446,7 +1451,7 @@
      "kind": "학원",
      "capacity": 91,
      "since": 1988,
-     "branches": 1,
+     "branches": 2,
      "subjects": [
       "english",
       "math"
@@ -1493,7 +1498,8 @@
       "english"
      ]
     }
-   ]
+   ],
+   "sales": 2672265978
   }
  ]
 }
