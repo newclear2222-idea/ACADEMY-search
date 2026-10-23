@@ -70,27 +70,28 @@ function render(data) {
         else if (r.ratio <= average * 0.8) tag = '<span class="tag warn">경쟁 높음</span>';
         width = (r.ratio / max) * 100;
       }
-      const dongs = r.area.dongs.map((d) => d.name).join(", ");
+      const schoolCount = r.area.schools.length;
       return `<li>
         <div class="rank-head">
           <span class="rank-name"><span class="no">${i + 1}</span>${r.area.name}${tag}</span>
           <span class="rank-metric">${metric}</span>
         </div>
         <div class="bar"><span style="width:${width.toFixed(1)}%"></span></div>
-        <div class="rank-sub">${LEVEL_LABELS[level]} ${fmt(r.students)}명 · ${SUBJECT_LABELS[subject]} ${fmt(r.academies)}곳 · ${dongs}</div>
+        <div class="rank-sub">${LEVEL_LABELS[level]} ${fmt(r.students)}명 · ${SUBJECT_LABELS[subject]} ${fmt(r.academies)}곳 · 학교 ${schoolCount}곳</div>
       </li>`;
     })
     .join("");
 
+  const levelNames = { elem: "초", middle: "중", high: "고" };
   els.dongBody.innerHTML = data.areas
     .flatMap((area) =>
-      area.dongs.map(
-        (d) => `<tr><td>${area.name}</td><td>${d.name}</td><td>${fmt(d.students.elem)}</td><td>${fmt(d.students.middle)}</td><td>${fmt(d.students.high)}</td><td>${fmt(d.students.total)}</td></tr>`
+      area.schools.map(
+        (sc) => `<tr><td>${area.name}</td><td>${sc.name} (${levelNames[sc.level]})</td><td>${fmt(sc.students)}</td></tr>`
       )
     )
     .join("");
 
-  const base = data.baseDate ? `기준: ${data.baseDate}. ` : "";
+  const base = data.baseDate ? `${data.baseDate}. ` : "";
   els.sources.textContent = `${base}출처: ${data.sources.join(" / ")}.`;
 }
 

@@ -37,7 +37,7 @@
 
     <section id="empty" class="notice" hidden>
       <h2>아직 불러온 지역 데이터가 없습니다</h2>
-      <p>공공데이터 파일 두 개(학원 목록, 연령별 인구)를 받아 정리하면 이곳에 동네별 비교가 나타납니다. 방법은 저장소의 README를 참고하세요.</p>
+      <p>매달 자동으로 공공데이터를 받아오는 작업이 처음 실행되면 이곳에 동네별 비교가 나타납니다.</p>
     </section>
 
     <section id="result" hidden>
@@ -47,10 +47,10 @@
       <ol id="ranking" class="ranking"></ol>
 
       <details class="detail">
-        <summary>행정동별 학생 수 자세히 보기</summary>
+        <summary>학교별 학생 수 자세히 보기</summary>
         <div class="table-wrap">
           <table id="dong-table">
-            <thead><tr><th>동 묶음</th><th>행정동</th><th>초등</th><th>중등</th><th>고등</th><th>합계</th></tr></thead>
+            <thead><tr><th>동</th><th>학교</th><th>학생 수</th></tr></thead>
             <tbody></tbody>
           </table>
         </div>
@@ -59,9 +59,9 @@
       <section class="notes">
         <h2>이 숫자를 읽는 법</h2>
         <ul>
-          <li><strong>학생 수</strong>는 주민등록 기준 만 6~17세 인구입니다. 초등 6~11세, 중등 12~14세, 고등 15~17세로 나눴습니다.</li>
+          <li><strong>학생 수</strong>는 그 동에 있는 초·중·고등학교의 재학생 수 합계입니다 (학교알리미 공시).</li>
           <li><strong>학원 수</strong>는 교육청에 등록된 입시·보습 분야 학원·교습소입니다. 과목은 학원명과 교습과정에 '수학', '영어'가 들어간 곳을 셉니다.</li>
-          <li>학원 주소의 법정동(예: 중계동)과 인구 통계의 행정동(예: 중계1동, 중계2·3동)이 달라서, 같은 이름의 동끼리 묶어 비교합니다.</li>
+          <li>동은 주소에 나오는 법정동(예: 중계동) 기준입니다. 학교가 없는 동은 학생 수가 0으로 나옵니다.</li>
           <li>임대료, 유동인구, 학교와의 거리, 학원가 선호도는 아직 반영하지 않았습니다. 최종 결정 전에 현장을 꼭 확인하세요.</li>
         </ul>
         <p id="sources" class="sources"></p>

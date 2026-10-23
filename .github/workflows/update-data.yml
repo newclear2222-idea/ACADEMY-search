@@ -1,0 +1,37 @@
+name: 공공데이터 업데이트
+
+on:
+  schedule:
+    - cron: "0 0 5 * *" # 매달 5일 오전 9시 (한국 시간)
+  workflow_dispatch: # Actions 탭에서 'Run workflow'로 바로 실행할 수도 있습니다
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 서울 노원구 데이터 받기
+        env:
+          NEIS_API_KEY: ${{ secrets.NEIS_API_KEY }}
+          SCHOOLINFO_API_KEY: ${{ secrets.SCHOOLINFO_API_KEY }}
+        run: python3 scripts/update_data.py --gu 노원구 --office B10 --sido 11 --sgg 11350
+
+      - name: 바뀐 데이터 저장
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "바뀐 데이터가 없습니다."
+          else
+            git commit -m "공공데이터 자동 업데이트 ($(date +%Y-%m-%d))"
+            git push
+          fi
