@@ -15,8 +15,8 @@
    "students": {
     "elem": 839,
     "middle": 532,
-    "high": 0,
-    "total": 1371
+    "high": 399,
+    "total": 1770
    },
    "academies": {
     "all": 13,
@@ -38,6 +38,11 @@
      "name": "군자중학교",
      "level": "middle",
      "students": 532
+    },
+    {
+     "name": "군자디지털과학고등학교",
+     "level": "high",
+     "students": 399
     }
    ]
   },
@@ -68,34 +73,72 @@
    ]
   },
   {
-   "name": "광석동",
+   "name": "과림동",
    "students": {
     "elem": 0,
+    "middle": 170,
+    "high": 630,
+    "total": 800
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "한국글로벌중학교",
+     "level": "middle",
+     "students": 170
+    },
+    {
+     "name": "한국조리과학고등학교",
+     "level": "high",
+     "students": 630
+    }
+   ]
+  },
+  {
+   "name": "광석동",
+   "students": {
+    "elem": 155,
     "middle": 0,
     "high": 0,
-    "total": 0
+    "total": 155
    },
    "academies": {
     "all": 1,
     "math": 0,
     "english": 0
    },
-   "schools": []
+   "schools": [
+    {
+     "name": "연성초등학교",
+     "level": "elem",
+     "students": 155
+    }
+   ]
   },
   {
    "name": "군자동",
    "students": {
-    "elem": 0,
+    "elem": 773,
     "middle": 0,
     "high": 0,
-    "total": 0
+    "total": 773
    },
    "academies": {
     "all": 7,
     "math": 3,
     "english": 4
    },
-   "schools": []
+   "schools": [
+    {
+     "name": "한여울초등학교",
+     "level": "elem",
+     "students": 773
+    }
+   ]
   },
   {
    "name": "논곡동",
@@ -126,10 +169,10 @@
   {
    "name": "능곡동",
    "students": {
-    "elem": 317,
+    "elem": 677,
     "middle": 506,
-    "high": 0,
-    "total": 823
+    "high": 905,
+    "total": 2088
    },
    "academies": {
     "all": 33,
@@ -143,9 +186,19 @@
      "students": 317
     },
     {
+     "name": "승지초등학교",
+     "level": "elem",
+     "students": 360
+    },
+    {
      "name": "시흥능곡중학교",
      "level": "middle",
      "students": 506
+    },
+    {
+     "name": "시흥능곡고등학교",
+     "level": "high",
+     "students": 905
     }
    ]
   },
@@ -181,12 +234,33 @@
    ]
   },
   {
+   "name": "도창동",
+   "students": {
+    "elem": 70,
+    "middle": 0,
+    "high": 0,
+    "total": 70
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "도창초등학교",
+     "level": "elem",
+     "students": 70
+    }
+   ]
+  },
+  {
    "name": "매화동",
    "students": {
-    "elem": 0,
+    "elem": 256,
     "middle": 239,
     "high": 475,
-    "total": 714
+    "total": 970
    },
    "academies": {
     "all": 5,
@@ -194,6 +268,11 @@
     "english": 1
    },
    "schools": [
+    {
+     "name": "시흥매화초등학교",
+     "level": "elem",
+     "students": 256
+    },
     {
      "name": "시흥매화중학교",
      "level": "middle",
@@ -245,17 +324,33 @@
   {
    "name": "배곧동",
    "students": {
-    "elem": 0,
-    "middle": 0,
+    "elem": 386,
+    "middle": 2059,
     "high": 0,
-    "total": 0
+    "total": 2445
    },
    "academies": {
     "all": 168,
     "math": 59,
     "english": 49
    },
-   "schools": []
+   "schools": [
+    {
+     "name": "배곧라라초등학교",
+     "level": "elem",
+     "students": 386
+    },
+    {
+     "name": "배곧해솔중학교",
+     "level": "middle",
+     "students": 1286
+    },
+    {
+     "name": "배곧라라중학교",
+     "level": "middle",
+     "students": 773
+    }
+   ]
   },
   {
    "name": "산현동",
@@ -286,10 +381,10 @@
   {
    "name": "신천동",
    "students": {
-    "elem": 949,
+    "elem": 1139,
     "middle": 240,
     "high": 883,
-    "total": 2072
+    "total": 2262
    },
    "academies": {
     "all": 15,
@@ -306,6 +401,11 @@
      "name": "시흥신일초등학교",
      "level": "elem",
      "students": 525
+    },
+    {
+     "name": "신천초등학교",
+     "level": "elem",
+     "students": 190
     },
     {
      "name": "시흥도원초등학교",
@@ -327,10 +427,10 @@
   {
    "name": "월곶동",
    "students": {
-    "elem": 578,
+    "elem": 759,
     "middle": 440,
     "high": 0,
-    "total": 1018
+    "total": 1199
    },
    "academies": {
     "all": 18,
@@ -344,6 +444,11 @@
      "students": 578
     },
     {
+     "name": "월포초등학교",
+     "level": "elem",
+     "students": 181
+    },
+    {
      "name": "월곶중학교",
      "level": "middle",
      "students": 440
@@ -353,10 +458,10 @@
   {
    "name": "은행동",
    "students": {
-    "elem": 2708,
+    "elem": 4557,
     "middle": 2106,
-    "high": 1088,
-    "total": 5902
+    "high": 2126,
+    "total": 8789
    },
    "academies": {
     "all": 173,
@@ -385,6 +490,11 @@
      "students": 650
     },
     {
+     "name": "은빛초등학교",
+     "level": "elem",
+     "students": 1849
+    },
+    {
      "name": "소래중학교",
      "level": "middle",
      "students": 1056
@@ -393,6 +503,11 @@
      "name": "시흥은행중학교",
      "level": "middle",
      "students": 1050
+    },
+    {
+     "name": "소래고등학교",
+     "level": "high",
+     "students": 1038
     },
     {
      "name": "은행고등학교",
@@ -404,10 +519,10 @@
   {
    "name": "장곡동",
    "students": {
-    "elem": 465,
+    "elem": 1758,
     "middle": 1133,
-    "high": 0,
-    "total": 1598
+    "high": 850,
+    "total": 3741
    },
    "academies": {
     "all": 108,
@@ -421,6 +536,11 @@
      "students": 465
     },
     {
+     "name": "진말초등학교",
+     "level": "elem",
+     "students": 1293
+    },
+    {
      "name": "장곡중학교",
      "level": "middle",
      "students": 468
@@ -429,16 +549,21 @@
      "name": "응곡중학교",
      "level": "middle",
      "students": 665
+    },
+    {
+     "name": "장곡고등학교",
+     "level": "high",
+     "students": 850
     }
    ]
   },
   {
    "name": "장현동",
    "students": {
-    "elem": 765,
+    "elem": 2344,
     "middle": 967,
     "high": 0,
-    "total": 1732
+    "total": 3311
    },
    "academies": {
     "all": 20,
@@ -452,6 +577,11 @@
      "students": 765
     },
     {
+     "name": "시흥가온초등학교",
+     "level": "elem",
+     "students": 1579
+    },
+    {
      "name": "시흥가온중학교",
      "level": "middle",
      "students": 967
@@ -461,10 +591,10 @@
   {
    "name": "정왕동",
    "students": {
-    "elem": 7201,
-    "middle": 3906,
-    "high": 4696,
-    "total": 15803
+    "elem": 11362,
+    "middle": 4768,
+    "high": 5695,
+    "total": 21825
    },
    "academies": {
     "all": 169,
@@ -473,9 +603,19 @@
    },
    "schools": [
     {
+     "name": "군서초등학교",
+     "level": "elem",
+     "students": 680
+    },
+    {
      "name": "냉정초등학교",
      "level": "elem",
      "students": 380
+    },
+    {
+     "name": "서촌초등학교",
+     "level": "elem",
+     "students": 378
     },
     {
      "name": "서해초등학교",
@@ -486,6 +626,11 @@
      "name": "송운초등학교",
      "level": "elem",
      "students": 529
+    },
+    {
+     "name": "시화초등학교",
+     "level": "elem",
+     "students": 405
     },
     {
      "name": "시흥초등학교",
@@ -523,6 +668,21 @@
      "students": 956
     },
     {
+     "name": "배곧해솔초등학교",
+     "level": "elem",
+     "students": 1199
+    },
+    {
+     "name": "배곧누리초등학교",
+     "level": "elem",
+     "students": 729
+    },
+    {
+     "name": "시화나래초등학교",
+     "level": "elem",
+     "students": 770
+    },
+    {
      "name": "서해중학교",
      "level": "middle",
      "students": 690
@@ -531,6 +691,11 @@
      "name": "송운중학교",
      "level": "middle",
      "students": 493
+    },
+    {
+     "name": "시흥중학교",
+     "level": "middle",
+     "students": 618
     },
     {
      "name": "정왕중학교",
@@ -551,6 +716,11 @@
      "name": "배곧중학교",
      "level": "middle",
      "students": 1275
+    },
+    {
+     "name": "시화나래중학교",
+     "level": "middle",
+     "students": 244
     },
     {
      "name": "서해고등학교",
@@ -576,6 +746,11 @@
      "name": "군서고등학교",
      "level": "high",
      "students": 1079
+    },
+    {
+     "name": "배곧고등학교",
+     "level": "high",
+     "students": 999
     }
    ]
   },
@@ -583,9 +758,9 @@
    "name": "조남동",
    "students": {
     "elem": 1690,
-    "middle": 0,
-    "high": 0,
-    "total": 1690
+    "middle": 884,
+    "high": 763,
+    "total": 3337
    },
    "academies": {
     "all": 61,
@@ -602,6 +777,16 @@
      "name": "조남초등학교",
      "level": "elem",
      "students": 546
+    },
+    {
+     "name": "조남중학교",
+     "level": "middle",
+     "students": 884
+    },
+    {
+     "name": "목감고등학교",
+     "level": "high",
+     "students": 763
     }
    ]
   },
@@ -651,9 +836,9 @@
    "name": "하상동",
    "students": {
     "elem": 0,
-    "middle": 0,
+    "middle": 359,
     "high": 965,
-    "total": 965
+    "total": 1324
    },
    "academies": {
     "all": 14,
@@ -661,6 +846,11 @@
     "english": 5
    },
    "schools": [
+    {
+     "name": "연성중학교",
+     "level": "middle",
+     "students": 359
+    },
     {
      "name": "시흥고등학교",
      "level": "high",

@@ -14,9 +14,9 @@
    "name": "가수동",
    "students": {
     "elem": 471,
-    "middle": 0,
+    "middle": 576,
     "high": 0,
-    "total": 471
+    "total": 1047
    },
    "academies": {
     "all": 6,
@@ -28,6 +28,11 @@
      "name": "가수초등학교",
      "level": "elem",
      "students": 471
+    },
+    {
+     "name": "가수중학교",
+     "level": "middle",
+     "students": 576
     }
    ]
   },
@@ -55,25 +60,31 @@
   {
    "name": "고현동",
    "students": {
-    "elem": 0,
+    "elem": 746,
     "middle": 0,
     "high": 0,
-    "total": 0
+    "total": 746
    },
    "academies": {
     "all": 11,
     "math": 4,
     "english": 4
    },
-   "schools": []
+   "schools": [
+    {
+     "name": "오산고현초등학교",
+     "level": "elem",
+     "students": 746
+    }
+   ]
   },
   {
    "name": "궐동",
    "students": {
     "elem": 533,
-    "middle": 0,
+    "middle": 528,
     "high": 0,
-    "total": 533
+    "total": 1061
    },
    "academies": {
     "all": 29,
@@ -85,16 +96,21 @@
      "name": "대호초등학교",
      "level": "elem",
      "students": 533
+    },
+    {
+     "name": "대호중학교",
+     "level": "middle",
+     "students": 528
     }
    ]
   },
   {
    "name": "금암동",
    "students": {
-    "elem": 0,
+    "elem": 846,
     "middle": 1152,
     "high": 1934,
-    "total": 3086
+    "total": 3932
    },
    "academies": {
     "all": 50,
@@ -102,6 +118,16 @@
     "english": 13
    },
    "schools": [
+    {
+     "name": "문시초등학교",
+     "level": "elem",
+     "students": 528
+    },
+    {
+     "name": "금암초등학교",
+     "level": "elem",
+     "students": 318
+    },
     {
      "name": "문시중학교",
      "level": "middle",
@@ -163,10 +189,10 @@
   {
    "name": "부산동",
    "students": {
-    "elem": 585,
+    "elem": 1359,
     "middle": 0,
-    "high": 0,
-    "total": 585
+    "high": 972,
+    "total": 2331
    },
    "academies": {
     "all": 14,
@@ -178,6 +204,16 @@
      "name": "운천초등학교",
      "level": "elem",
      "students": 585
+    },
+    {
+     "name": "다온초등학교",
+     "level": "elem",
+     "students": 774
+    },
+    {
+     "name": "운천고등학교",
+     "level": "high",
+     "students": 972
     }
    ]
   },
@@ -211,9 +247,9 @@
    "name": "수청동",
    "students": {
     "elem": 856,
-    "middle": 0,
+    "middle": 1149,
     "high": 963,
-    "total": 1819
+    "total": 2968
    },
    "academies": {
     "all": 42,
@@ -235,6 +271,11 @@
      "name": "수청초등학교",
      "level": "elem",
      "students": 422
+    },
+    {
+     "name": "매홀중학교",
+     "level": "middle",
+     "students": 1149
     },
     {
      "name": "매홀고등학교",
@@ -324,10 +365,10 @@
   {
    "name": "원동",
    "students": {
-    "elem": 1959,
+    "elem": 2230,
     "middle": 2654,
-    "high": 783,
-    "total": 5396
+    "high": 1706,
+    "total": 6590
    },
    "academies": {
     "all": 60,
@@ -335,6 +376,11 @@
     "english": 13
    },
    "schools": [
+    {
+     "name": "운암초등학교",
+     "level": "elem",
+     "students": 271
+    },
     {
      "name": "원동초등학교",
      "level": "elem",
@@ -366,6 +412,11 @@
      "students": 1049
     },
     {
+     "name": "성호고등학교",
+     "level": "high",
+     "students": 923
+    },
+    {
      "name": "운암고등학교",
      "level": "high",
      "students": 783
@@ -390,17 +441,23 @@
   {
    "name": "지곶동",
    "students": {
-    "elem": 0,
+    "elem": 488,
     "middle": 0,
     "high": 0,
-    "total": 0
+    "total": 488
    },
    "academies": {
     "all": 7,
     "math": 4,
     "english": 3
    },
-   "schools": []
+   "schools": [
+    {
+     "name": "세마초등학교",
+     "level": "elem",
+     "students": 488
+    }
+   ]
   },
   {
    "name": "청학동",
@@ -451,17 +508,28 @@
   {
    "name": "탑동",
    "students": {
-    "elem": 0,
+    "elem": 265,
     "middle": 0,
-    "high": 0,
-    "total": 0
+    "high": 370,
+    "total": 635
    },
    "academies": {
     "all": 7,
     "math": 2,
     "english": 5
    },
-   "schools": []
+   "schools": [
+    {
+     "name": "마루초등학교",
+     "level": "elem",
+     "students": 265
+    },
+    {
+     "name": "마루고등학교",
+     "level": "high",
+     "students": 370
+    }
+   ]
   }
  ]
 }

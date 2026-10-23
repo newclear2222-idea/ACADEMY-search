@@ -13,10 +13,10 @@
   {
    "name": "간석동",
    "students": {
-    "elem": 1693,
-    "middle": 1530,
+    "elem": 2416,
+    "middle": 1791,
     "high": 3465,
-    "total": 6688
+    "total": 7672
    },
    "academies": {
     "all": 69,
@@ -28,6 +28,11 @@
      "name": "상인천초등학교",
      "level": "elem",
      "students": 361
+    },
+    {
+     "name": "인천석정초등학교",
+     "level": "elem",
+     "students": 723
     },
     {
      "name": "인천약산초등학교",
@@ -43,6 +48,11 @@
      "name": "인천상아초등학교",
      "level": "elem",
      "students": 546
+    },
+    {
+     "name": "간석여자중학교",
+     "level": "middle",
+     "students": 261
     },
     {
      "name": "상인천여자중학교",
@@ -115,10 +125,10 @@
   {
    "name": "구월동",
    "students": {
-    "elem": 4104,
+    "elem": 4997,
     "middle": 3960,
     "high": 0,
-    "total": 8064
+    "total": 8957
    },
    "academies": {
     "all": 153,
@@ -140,6 +150,11 @@
      "name": "인천구월초등학교",
      "level": "elem",
      "students": 268
+    },
+    {
+     "name": "인천만월초등학교",
+     "level": "elem",
+     "students": 893
     },
     {
      "name": "인천석천초등학교",
@@ -219,8 +234,8 @@
    "students": {
     "elem": 4279,
     "middle": 3693,
-    "high": 2094,
-    "total": 10066
+    "high": 2933,
+    "total": 10905
    },
    "academies": {
     "all": 199,
@@ -312,31 +327,42 @@
      "name": "미추홀외국어고등학교",
      "level": "high",
      "students": 548
+    },
+    {
+     "name": "인천고잔고등학교",
+     "level": "high",
+     "students": 839
     }
    ]
   },
   {
    "name": "도림동",
    "students": {
-    "elem": 0,
+    "elem": 292,
     "middle": 0,
     "high": 0,
-    "total": 0
+    "total": 292
    },
    "academies": {
     "all": 4,
     "math": 2,
     "english": 2
    },
-   "schools": []
+   "schools": [
+    {
+     "name": "인천도림초등학교",
+     "level": "elem",
+     "students": 292
+    }
+   ]
   },
   {
    "name": "만수동",
    "students": {
-    "elem": 2209,
-    "middle": 1428,
-    "high": 3268,
-    "total": 6905
+    "elem": 3369,
+    "middle": 2564,
+    "high": 3916,
+    "total": 9849
    },
    "academies": {
     "all": 97,
@@ -350,6 +376,11 @@
      "students": 291
     },
     {
+     "name": "인천담방초등학교",
+     "level": "elem",
+     "students": 309
+    },
+    {
      "name": "인천동부초등학교",
      "level": "elem",
      "students": 381
@@ -360,9 +391,29 @@
      "students": 543
     },
     {
+     "name": "인천만수초등학교",
+     "level": "elem",
+     "students": 196
+    },
+    {
      "name": "인천인동초등학교",
      "level": "elem",
      "students": 693
+    },
+    {
+     "name": "인천인수초등학교",
+     "level": "elem",
+     "students": 224
+    },
+    {
+     "name": "인천장수초등학교",
+     "level": "elem",
+     "students": 81
+    },
+    {
+     "name": "인천조동초등학교",
+     "level": "elem",
+     "students": 350
     },
     {
      "name": "인천새말초등학교",
@@ -380,9 +431,29 @@
      "students": 334
     },
     {
+     "name": "만수북중학교",
+     "level": "middle",
+     "students": 474
+    },
+    {
+     "name": "만수여자중학교",
+     "level": "middle",
+     "students": 478
+    },
+    {
+     "name": "만수중학교",
+     "level": "middle",
+     "students": 184
+    },
+    {
      "name": "숭덕여자중학교",
      "level": "middle",
      "students": 341
+    },
+    {
+     "name": "동인천고등학교",
+     "level": "high",
+     "students": 648
     },
     {
      "name": "인천금융고등학교",

@@ -90,17 +90,23 @@
   {
    "name": "대현동",
    "students": {
-    "elem": 0,
+    "elem": 139,
     "middle": 0,
     "high": 0,
-    "total": 0
+    "total": 139
    },
    "academies": {
     "all": 1,
     "math": 1,
     "english": 0
    },
-   "schools": []
+   "schools": [
+    {
+     "name": "서울대신초등학교",
+     "level": "elem",
+     "students": 139
+    }
+   ]
   },
   {
    "name": "미근동",
@@ -409,10 +415,10 @@
   {
    "name": "홍은동",
    "students": {
-    "elem": 1130,
+    "elem": 1837,
     "middle": 1360,
     "high": 1223,
-    "total": 3713
+    "total": 4420
    },
    "academies": {
     "all": 88,
@@ -429,6 +435,11 @@
      "name": "서울홍연초등학교",
      "level": "elem",
      "students": 406
+    },
+    {
+     "name": "서울홍제초등학교",
+     "level": "elem",
+     "students": 707
     },
     {
      "name": "명지중학교",

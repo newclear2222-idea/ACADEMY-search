@@ -146,10 +146,10 @@
   {
    "name": "구로동",
    "students": {
-    "elem": 2297,
+    "elem": 3139,
     "middle": 1930,
     "high": 2422,
-    "total": 6649
+    "total": 7491
    },
    "academies": {
     "all": 82,
@@ -166,6 +166,11 @@
      "name": "서울구로초등학교",
      "level": "elem",
      "students": 348
+    },
+    {
+     "name": "서울구일초등학교",
+     "level": "elem",
+     "students": 842
     },
     {
      "name": "서울동구로초등학교",
@@ -228,9 +233,9 @@
    "name": "궁동",
    "students": {
     "elem": 0,
-    "middle": 0,
+    "middle": 257,
     "high": 3188,
-    "total": 3188
+    "total": 3445
    },
    "academies": {
     "all": 11,
@@ -238,6 +243,11 @@
     "english": 1
    },
    "schools": [
+    {
+     "name": "우신중학교",
+     "level": "middle",
+     "students": 257
+    },
     {
      "name": "오류고등학교",
      "level": "high",
@@ -402,10 +412,10 @@
   {
    "name": "항동",
    "students": {
-    "elem": 0,
+    "elem": 1405,
     "middle": 572,
     "high": 442,
-    "total": 1014
+    "total": 2419
    },
    "academies": {
     "all": 39,
@@ -413,6 +423,11 @@
     "english": 11
    },
    "schools": [
+    {
+     "name": "서울항동초등학교",
+     "level": "elem",
+     "students": 1405
+    },
     {
      "name": "항동중학교",
      "level": "middle",

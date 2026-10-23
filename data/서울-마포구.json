@@ -13,17 +13,23 @@
   {
    "name": "공덕동",
    "students": {
-    "elem": 0,
+    "elem": 650,
     "middle": 0,
     "high": 0,
-    "total": 0
+    "total": 650
    },
    "academies": {
     "all": 27,
     "math": 5,
     "english": 12
    },
-   "schools": []
+   "schools": [
+    {
+     "name": "서울공덕초등학교",
+     "level": "elem",
+     "students": 650
+    }
+   ]
   },
   {
    "name": "구수동",
@@ -224,17 +230,23 @@
   {
    "name": "서교동",
    "students": {
-    "elem": 0,
+    "elem": 255,
     "middle": 0,
     "high": 0,
-    "total": 0
+    "total": 255
    },
    "academies": {
     "all": 7,
     "math": 2,
     "english": 1
    },
-   "schools": []
+   "schools": [
+    {
+     "name": "서울서교초등학교",
+     "level": "elem",
+     "students": 255
+    }
+   ]
   },
   {
    "name": "성산동",
@@ -311,9 +323,9 @@
    "name": "신수동",
    "students": {
     "elem": 503,
-    "middle": 477,
+    "middle": 833,
     "high": 709,
-    "total": 1689
+    "total": 2045
    },
    "academies": {
     "all": 44,
@@ -325,6 +337,11 @@
      "name": "서울신석초등학교",
      "level": "elem",
      "students": 503
+    },
+    {
+     "name": "광성중학교",
+     "level": "middle",
+     "students": 356
     },
     {
      "name": "신수중학교",
@@ -383,9 +400,9 @@
    "name": "연남동",
    "students": {
     "elem": 0,
-    "middle": 0,
+    "middle": 277,
     "high": 866,
-    "total": 866
+    "total": 1143
    },
    "academies": {
     "all": 5,
@@ -393,6 +410,11 @@
     "english": 1
    },
    "schools": [
+    {
+     "name": "경성중학교",
+     "level": "middle",
+     "students": 277
+    },
     {
      "name": "경성고등학교",
      "level": "high",

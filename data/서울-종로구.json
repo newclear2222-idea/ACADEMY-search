@@ -282,6 +282,27 @@
    "schools": []
   },
   {
+   "name": "송현동",
+   "students": {
+    "elem": 0,
+    "middle": 146,
+    "high": 0,
+    "total": 146
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "덕성여자중학교",
+     "level": "middle",
+     "students": 146
+    }
+   ]
+  },
+  {
    "name": "숭인동",
    "students": {
     "elem": 0,
@@ -459,10 +480,10 @@
   {
    "name": "청운동",
    "students": {
-    "elem": 0,
+    "elem": 259,
     "middle": 321,
     "high": 988,
-    "total": 1309
+    "total": 1568
    },
    "academies": {
     "all": 0,
@@ -470,6 +491,11 @@
     "english": 0
    },
    "schools": [
+    {
+     "name": "서울청운초등학교",
+     "level": "elem",
+     "students": 259
+    },
     {
      "name": "청운중학교",
      "level": "middle",
@@ -573,9 +599,9 @@
    "name": "행촌동",
    "students": {
     "elem": 0,
-    "middle": 0,
+    "middle": 235,
     "high": 263,
-    "total": 263
+    "total": 498
    },
    "academies": {
     "all": 1,
@@ -583,6 +609,11 @@
     "english": 1
    },
    "schools": [
+    {
+     "name": "대신중학교",
+     "level": "middle",
+     "students": 235
+    },
     {
      "name": "대신고등학교",
      "level": "high",
@@ -594,9 +625,9 @@
    "name": "혜화동",
    "students": {
     "elem": 320,
-    "middle": 192,
-    "high": 800,
-    "total": 1312
+    "middle": 397,
+    "high": 1430,
+    "total": 2147
    },
    "academies": {
     "all": 4,
@@ -610,6 +641,11 @@
      "students": 320
     },
     {
+     "name": "경신중학교",
+     "level": "middle",
+     "students": 205
+    },
+    {
      "name": "동성중학교",
      "level": "middle",
      "students": 192
@@ -618,6 +654,11 @@
      "name": "경신고등학교",
      "level": "high",
      "students": 420
+    },
+    {
+     "name": "동성고등학교",
+     "level": "high",
+     "students": 630
     },
     {
      "name": "서울과학고등학교",

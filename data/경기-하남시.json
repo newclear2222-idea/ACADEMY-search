@@ -13,10 +13,10 @@
   {
    "name": "감이동",
    "students": {
-    "elem": 810,
-    "middle": 0,
-    "high": 0,
-    "total": 810
+    "elem": 2059,
+    "middle": 669,
+    "high": 890,
+    "total": 3618
    },
    "academies": {
     "all": 78,
@@ -28,6 +28,21 @@
      "name": "감일초등학교",
      "level": "elem",
      "students": 810
+    },
+    {
+     "name": "단샘초등학교",
+     "level": "elem",
+     "students": 1249
+    },
+    {
+     "name": "감일중학교",
+     "level": "middle",
+     "students": 669
+    },
+    {
+     "name": "감일고등학교",
+     "level": "high",
+     "students": 890
     }
    ]
   },
@@ -67,8 +82,8 @@
    "students": {
     "elem": 1748,
     "middle": 913,
-    "high": 785,
-    "total": 3446
+    "high": 1552,
+    "total": 4213
    },
    "academies": {
     "all": 43,
@@ -110,16 +125,21 @@
      "name": "남한고등학교",
      "level": "high",
      "students": 785
+    },
+    {
+     "name": "풍산고등학교",
+     "level": "high",
+     "students": 767
     }
    ]
   },
   {
    "name": "망월동",
    "students": {
-    "elem": 2372,
-    "middle": 1277,
-    "high": 977,
-    "total": 4626
+    "elem": 4349,
+    "middle": 2438,
+    "high": 1950,
+    "total": 8737
    },
    "academies": {
     "all": 222,
@@ -127,6 +147,16 @@
     "english": 63
    },
    "schools": [
+    {
+     "name": "망월초등학교",
+     "level": "elem",
+     "students": 1263
+    },
+    {
+     "name": "미사초등학교",
+     "level": "elem",
+     "students": 714
+    },
     {
      "name": "미사중앙초등학교",
      "level": "elem",
@@ -138,9 +168,19 @@
      "students": 1073
     },
     {
+     "name": "미사중학교",
+     "level": "middle",
+     "students": 1161
+    },
+    {
      "name": "윤슬중학교",
      "level": "middle",
      "students": 1277
+    },
+    {
+     "name": "하남고등학교",
+     "level": "high",
+     "students": 973
     },
     {
      "name": "미사고등학교",
@@ -154,8 +194,8 @@
    "students": {
     "elem": 1074,
     "middle": 1979,
-    "high": 0,
-    "total": 3053
+    "high": 995,
+    "total": 4048
    },
    "academies": {
     "all": 2,
@@ -177,6 +217,11 @@
      "name": "은가람중학교",
      "level": "middle",
      "students": 658
+    },
+    {
+     "name": "미사강변고등학교",
+     "level": "high",
+     "students": 995
     }
    ]
   },
@@ -275,10 +320,10 @@
   {
    "name": "풍산동",
    "students": {
-    "elem": 1190,
+    "elem": 2563,
     "middle": 301,
     "high": 0,
-    "total": 1491
+    "total": 2864
    },
    "academies": {
     "all": 134,
@@ -290,6 +335,11 @@
      "name": "한홀초등학교",
      "level": "elem",
      "students": 1190
+    },
+    {
+     "name": "청아초등학교",
+     "level": "elem",
+     "students": 1373
     },
     {
      "name": "한홀중학교",

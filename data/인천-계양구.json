@@ -13,10 +13,10 @@
   {
    "name": "계산동",
    "students": {
-    "elem": 1352,
-    "middle": 877,
-    "high": 888,
-    "total": 3117
+    "elem": 2104,
+    "middle": 1109,
+    "high": 1430,
+    "total": 4643
    },
    "academies": {
     "all": 60,
@@ -30,9 +30,19 @@
      "students": 146
     },
     {
+     "name": "인천부평초등학교",
+     "level": "elem",
+     "students": 193
+    },
+    {
      "name": "인천부현동초등학교",
      "level": "elem",
      "students": 394
+    },
+    {
+     "name": "인천부현초등학교",
+     "level": "elem",
+     "students": 320
     },
     {
      "name": "인천신대초등학교",
@@ -43,6 +53,11 @@
      "name": "인천안남초등학교",
      "level": "elem",
      "students": 234
+    },
+    {
+     "name": "인천안산초등학교",
+     "level": "elem",
+     "students": 239
     },
     {
      "name": "인천해서초등학교",
@@ -65,6 +80,16 @@
      "students": 139
     },
     {
+     "name": "인천안남중학교",
+     "level": "middle",
+     "students": 232
+    },
+    {
+     "name": "계산고등학교",
+     "level": "high",
+     "students": 542
+    },
+    {
      "name": "계산공업고등학교",
      "level": "high",
      "students": 434
@@ -80,9 +105,9 @@
    "name": "귤현동",
    "students": {
     "elem": 456,
-    "middle": 0,
+    "middle": 503,
     "high": 0,
-    "total": 456
+    "total": 959
    },
    "academies": {
     "all": 13,
@@ -94,6 +119,11 @@
      "name": "인천귤현초등학교",
      "level": "elem",
      "students": 456
+    },
+    {
+     "name": "계양중학교",
+     "level": "middle",
+     "students": 503
     }
    ]
   },
@@ -126,25 +156,31 @@
   {
    "name": "박촌동",
    "students": {
-    "elem": 0,
+    "elem": 310,
     "middle": 0,
     "high": 0,
-    "total": 0
+    "total": 310
    },
    "academies": {
     "all": 7,
     "math": 5,
     "english": 2
    },
-   "schools": []
+   "schools": [
+    {
+     "name": "인천소양초등학교",
+     "level": "elem",
+     "students": 310
+    }
+   ]
   },
   {
    "name": "방축동",
    "students": {
     "elem": 0,
     "middle": 207,
-    "high": 0,
-    "total": 207
+    "high": 613,
+    "total": 820
    },
    "academies": {
     "all": 1,
@@ -156,6 +192,11 @@
      "name": "인천예일중학교",
      "level": "middle",
      "students": 207
+    },
+    {
+     "name": "인천예일고등학교",
+     "level": "high",
+     "students": 613
     }
    ]
   },
@@ -164,8 +205,8 @@
    "students": {
     "elem": 408,
     "middle": 446,
-    "high": 0,
-    "total": 854
+    "high": 539,
+    "total": 1393
    },
    "academies": {
     "all": 11,
@@ -192,6 +233,11 @@
      "name": "인천양촌중학교",
      "level": "middle",
      "students": 119
+    },
+    {
+     "name": "인천세원고등학교",
+     "level": "high",
+     "students": 539
     }
    ]
   },
@@ -199,9 +245,9 @@
    "name": "서운동",
    "students": {
     "elem": 473,
-    "middle": 700,
+    "middle": 1571,
     "high": 548,
-    "total": 1721
+    "total": 2592
    },
    "academies": {
     "all": 3,
@@ -218,6 +264,11 @@
      "name": "서운중학교",
      "level": "middle",
      "students": 700
+    },
+    {
+     "name": "인천계수중학교",
+     "level": "middle",
+     "students": 871
     },
     {
      "name": "서운고등학교",
@@ -285,10 +336,10 @@
   {
    "name": "작전동",
    "students": {
-    "elem": 279,
+    "elem": 1605,
     "middle": 340,
     "high": 1620,
-    "total": 2239
+    "total": 3565
    },
    "academies": {
     "all": 53,
@@ -297,9 +348,24 @@
    },
    "schools": [
     {
+     "name": "인천성지초등학교",
+     "level": "elem",
+     "students": 251
+    },
+    {
+     "name": "인천작동초등학교",
+     "level": "elem",
+     "students": 397
+    },
+    {
      "name": "인천작전초등학교",
      "level": "elem",
      "students": 279
+    },
+    {
+     "name": "인천화전초등학교",
+     "level": "elem",
+     "students": 678
     },
     {
      "name": "작전중학교",
@@ -347,10 +413,10 @@
   {
    "name": "효성동",
    "students": {
-    "elem": 1668,
-    "middle": 386,
+    "elem": 2471,
+    "middle": 1261,
     "high": 585,
-    "total": 2639
+    "total": 4317
    },
    "academies": {
     "all": 56,
@@ -374,6 +440,16 @@
      "students": 631
     },
     {
+     "name": "인천효성동초등학교",
+     "level": "elem",
+     "students": 504
+    },
+    {
+     "name": "인천효성서초등학교",
+     "level": "elem",
+     "students": 299
+    },
+    {
      "name": "인천효성초등학교",
      "level": "elem",
      "students": 251
@@ -384,9 +460,19 @@
      "students": 6
     },
     {
+     "name": "명현중학교",
+     "level": "middle",
+     "students": 471
+    },
+    {
      "name": "북인천여자중학교",
      "level": "middle",
      "students": 386
+    },
+    {
+     "name": "인천효성중학교",
+     "level": "middle",
+     "students": 404
     },
     {
      "name": "인천효성고등학교",

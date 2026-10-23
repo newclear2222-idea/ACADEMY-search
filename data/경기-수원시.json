@@ -85,9 +85,9 @@
    "name": "고색동",
    "students": {
     "elem": 442,
-    "middle": 0,
+    "middle": 222,
     "high": 713,
-    "total": 1155
+    "total": 1377
    },
    "academies": {
     "all": 9,
@@ -106,6 +106,11 @@
      "students": 114
     },
     {
+     "name": "고색중학교",
+     "level": "middle",
+     "students": 222
+    },
+    {
      "name": "고색고등학교",
      "level": "high",
      "students": 713
@@ -116,9 +121,9 @@
    "name": "곡반정동",
    "students": {
     "elem": 555,
-    "middle": 0,
+    "middle": 318,
     "high": 0,
-    "total": 555
+    "total": 873
    },
    "academies": {
     "all": 36,
@@ -130,6 +135,11 @@
      "name": "안룡초등학교",
      "level": "elem",
      "students": 555
+    },
+    {
+     "name": "곡반중학교",
+     "level": "middle",
+     "students": 318
     }
    ]
   },
@@ -183,9 +193,9 @@
    "name": "권선동",
    "students": {
     "elem": 4112,
-    "middle": 940,
-    "high": 793,
-    "total": 5845
+    "middle": 2218,
+    "high": 2685,
+    "total": 9015
    },
    "academies": {
     "all": 136,
@@ -244,9 +254,34 @@
      "students": 306
     },
     {
+     "name": "곡선중학교",
+     "level": "middle",
+     "students": 238
+    },
+    {
      "name": "남수원중학교",
      "level": "middle",
      "students": 940
+    },
+    {
+     "name": "화홍중학교",
+     "level": "middle",
+     "students": 836
+    },
+    {
+     "name": "규장중학교",
+     "level": "middle",
+     "students": 204
+    },
+    {
+     "name": "권선고등학교",
+     "level": "high",
+     "students": 981
+    },
+    {
+     "name": "화홍고등학교",
+     "level": "high",
+     "students": 911
     },
     {
      "name": "곡정고등학교",
@@ -258,10 +293,10 @@
   {
    "name": "금곡동",
    "students": {
-    "elem": 2040,
+    "elem": 2881,
     "middle": 1788,
     "high": 798,
-    "total": 4626
+    "total": 5467
    },
    "academies": {
     "all": 135,
@@ -288,6 +323,11 @@
      "name": "수원중촌초등학교",
      "level": "elem",
      "students": 714
+    },
+    {
+     "name": "수원가온초등학교",
+     "level": "elem",
+     "students": 841
     },
     {
      "name": "칠보중학교",
@@ -371,10 +411,10 @@
   {
    "name": "망포동",
    "students": {
-    "elem": 2025,
-    "middle": 1029,
+    "elem": 6694,
+    "middle": 3061,
     "high": 807,
-    "total": 3861
+    "total": 10562
    },
    "academies": {
     "all": 179,
@@ -393,9 +433,34 @@
      "students": 671
     },
     {
+     "name": "대선초등학교",
+     "level": "elem",
+     "students": 1077
+    },
+    {
+     "name": "망포초등학교",
+     "level": "elem",
+     "students": 1897
+    },
+    {
+     "name": "글빛초등학교",
+     "level": "elem",
+     "students": 1695
+    },
+    {
      "name": "망포중학교",
      "level": "middle",
      "students": 1029
+    },
+    {
+     "name": "영동중학교",
+     "level": "middle",
+     "students": 911
+    },
+    {
+     "name": "잠원중학교",
+     "level": "middle",
+     "students": 1121
     },
     {
      "name": "망포고등학교",
@@ -453,25 +518,31 @@
   {
    "name": "매산로3가",
    "students": {
-    "elem": 0,
+    "elem": 718,
     "middle": 0,
     "high": 0,
-    "total": 0
+    "total": 718
    },
    "academies": {
     "all": 1,
     "math": 1,
     "english": 0
    },
-   "schools": []
+   "schools": [
+    {
+     "name": "매산초등학교",
+     "level": "elem",
+     "students": 718
+    }
+   ]
   },
   {
    "name": "매탄동",
    "students": {
-    "elem": 1847,
+    "elem": 2820,
     "middle": 2779,
     "high": 2778,
-    "total": 7404
+    "total": 8377
    },
    "academies": {
     "all": 148,
@@ -483,6 +554,11 @@
      "name": "동수원초등학교",
      "level": "elem",
      "students": 268
+    },
+    {
+     "name": "매탄초등학교",
+     "level": "elem",
+     "students": 973
     },
     {
      "name": "매현초등학교",
@@ -625,10 +701,10 @@
   {
    "name": "서둔동",
    "students": {
-    "elem": 209,
+    "elem": 343,
     "middle": 244,
     "high": 0,
-    "total": 453
+    "total": 587
    },
    "academies": {
     "all": 6,
@@ -642,6 +718,11 @@
      "students": 209
     },
     {
+     "name": "서평초등학교",
+     "level": "elem",
+     "students": 134
+    },
+    {
      "name": "서호중학교",
      "level": "middle",
      "students": 244
@@ -652,9 +733,9 @@
    "name": "세류동",
    "students": {
     "elem": 1681,
-    "middle": 466,
+    "middle": 725,
     "high": 0,
-    "total": 2147
+    "total": 2406
    },
    "academies": {
     "all": 37,
@@ -678,6 +759,11 @@
      "students": 611
     },
     {
+     "name": "권선중학교",
+     "level": "middle",
+     "students": 259
+    },
+    {
      "name": "세류중학교",
      "level": "middle",
      "students": 466
@@ -687,10 +773,10 @@
   {
    "name": "송죽동",
    "students": {
-    "elem": 413,
+    "elem": 656,
     "middle": 367,
     "high": 372,
-    "total": 1152
+    "total": 1395
    },
    "academies": {
     "all": 13,
@@ -702,6 +788,11 @@
      "name": "송정초등학교",
      "level": "elem",
      "students": 413
+    },
+    {
+     "name": "송죽초등학교",
+     "level": "elem",
+     "students": 243
     },
     {
      "name": "송원중학교",
@@ -774,10 +865,10 @@
   {
    "name": "영통동",
    "students": {
-    "elem": 3303,
-    "middle": 1664,
+    "elem": 4044,
+    "middle": 2806,
     "high": 3210,
-    "total": 8177
+    "total": 10060
    },
    "academies": {
     "all": 238,
@@ -811,9 +902,19 @@
      "students": 412
     },
     {
+     "name": "영통초등학교",
+     "level": "elem",
+     "students": 274
+    },
+    {
      "name": "청명초등학교",
      "level": "elem",
      "students": 304
+    },
+    {
+     "name": "황곡초등학교",
+     "level": "elem",
+     "students": 467
     },
     {
      "name": "영덕중학교",
@@ -821,9 +922,19 @@
      "students": 928
     },
     {
+     "name": "영일중학교",
+     "level": "middle",
+     "students": 583
+    },
+    {
      "name": "영통중학교",
      "level": "middle",
      "students": 183
+    },
+    {
+     "name": "청명중학교",
+     "level": "middle",
+     "students": 559
     },
     {
      "name": "태장중학교",
@@ -857,8 +968,8 @@
    "students": {
     "elem": 0,
     "middle": 206,
-    "high": 0,
-    "total": 206
+    "high": 615,
+    "total": 821
    },
    "academies": {
     "all": 13,
@@ -870,6 +981,11 @@
      "name": "수원북중학교",
      "level": "middle",
      "students": 206
+    },
+    {
+     "name": "수원농생명과학고등학교",
+     "level": "high",
+     "students": 615
     }
    ]
   },
@@ -958,10 +1074,10 @@
   {
    "name": "원천동",
    "students": {
-    "elem": 2665,
-    "middle": 368,
+    "elem": 3495,
+    "middle": 1137,
     "high": 619,
-    "total": 3652
+    "total": 5251
    },
    "academies": {
     "all": 63,
@@ -990,6 +1106,11 @@
      "students": 827
     },
     {
+     "name": "광교호수초등학교",
+     "level": "elem",
+     "students": 830
+    },
+    {
      "name": "원천중학교",
      "level": "middle",
      "students": 101
@@ -998,6 +1119,11 @@
      "name": "중앙기독중학교",
      "level": "middle",
      "students": 267
+    },
+    {
+     "name": "광교호수중학교",
+     "level": "middle",
+     "students": 769
     },
     {
      "name": "수원정보과학고등학교",
@@ -1077,9 +1203,9 @@
    "name": "이의동",
    "students": {
     "elem": 3466,
-    "middle": 1040,
+    "middle": 2684,
     "high": 1385,
-    "total": 5891
+    "total": 7535
    },
    "academies": {
     "all": 149,
@@ -1108,6 +1234,16 @@
      "students": 1040
     },
     {
+     "name": "광교중학교",
+     "level": "middle",
+     "students": 601
+    },
+    {
+     "name": "수원다산중학교",
+     "level": "middle",
+     "students": 1043
+    },
+    {
      "name": "수원외국어고등학교",
      "level": "high",
      "students": 614
@@ -1122,10 +1258,10 @@
   {
    "name": "인계동",
    "students": {
-    "elem": 354,
+    "elem": 1147,
     "middle": 0,
-    "high": 0,
-    "total": 354
+    "high": 886,
+    "total": 2033
    },
    "academies": {
     "all": 36,
@@ -1134,34 +1270,50 @@
    },
    "schools": [
     {
+     "name": "인계초등학교",
+     "level": "elem",
+     "students": 793
+    },
+    {
      "name": "매여울초등학교",
      "level": "elem",
      "students": 354
+    },
+    {
+     "name": "수원공업고등학교",
+     "level": "high",
+     "students": 886
     }
    ]
   },
   {
    "name": "입북동",
    "students": {
-    "elem": 0,
+    "elem": 357,
     "middle": 0,
     "high": 0,
-    "total": 0
+    "total": 357
    },
    "academies": {
     "all": 10,
     "math": 6,
     "english": 5
    },
-   "schools": []
+   "schools": [
+    {
+     "name": "입북초등학교",
+     "level": "elem",
+     "students": 357
+    }
+   ]
   },
   {
    "name": "정자동",
    "students": {
     "elem": 4292,
     "middle": 2069,
-    "high": 1654,
-    "total": 8015
+    "high": 2419,
+    "total": 8780
    },
    "academies": {
     "all": 215,
@@ -1215,6 +1367,11 @@
      "students": 930
     },
     {
+     "name": "대평고등학교",
+     "level": "high",
+     "students": 765
+    },
+    {
      "name": "수성고등학교",
      "level": "high",
      "students": 866
@@ -1230,9 +1387,9 @@
    "name": "조원동",
    "students": {
     "elem": 1578,
-    "middle": 333,
+    "middle": 1425,
     "high": 1559,
-    "total": 3470
+    "total": 4562
    },
    "academies": {
     "all": 58,
@@ -1266,9 +1423,19 @@
      "students": 283
     },
     {
+     "name": "수성중학교",
+     "level": "middle",
+     "students": 379
+    },
+    {
      "name": "수일여자중학교",
      "level": "middle",
      "students": 333
+    },
+    {
+     "name": "조원중학교",
+     "level": "middle",
+     "students": 713
     },
     {
      "name": "수일고등학교",
@@ -1308,8 +1475,8 @@
    "students": {
     "elem": 1531,
     "middle": 1009,
-    "high": 1067,
-    "total": 3607
+    "high": 1852,
+    "total": 4392
    },
    "academies": {
     "all": 91,
@@ -1351,6 +1518,11 @@
      "name": "영생고등학교",
      "level": "high",
      "students": 828
+    },
+    {
+     "name": "천천고등학교",
+     "level": "high",
+     "students": 785
     }
    ]
   },
@@ -1388,10 +1560,10 @@
   {
    "name": "파장동",
    "students": {
-    "elem": 623,
+    "elem": 1002,
     "middle": 121,
     "high": 0,
-    "total": 744
+    "total": 1123
    },
    "academies": {
     "all": 11,
@@ -1403,6 +1575,11 @@
      "name": "파장초등학교",
      "level": "elem",
      "students": 623
+    },
+    {
+     "name": "수일초등학교",
+     "level": "elem",
+     "students": 379
     },
     {
      "name": "수일중학교",
@@ -1507,9 +1684,9 @@
    "name": "화서동",
    "students": {
     "elem": 1752,
-    "middle": 217,
-    "high": 1220,
-    "total": 3189
+    "middle": 2737,
+    "high": 2089,
+    "total": 6578
    },
    "academies": {
     "all": 50,
@@ -1548,9 +1725,34 @@
      "students": 81
     },
     {
+     "name": "숙지중학교",
+     "level": "middle",
+     "students": 582
+    },
+    {
+     "name": "영복여자중학교",
+     "level": "middle",
+     "students": 478
+    },
+    {
+     "name": "율현중학교",
+     "level": "middle",
+     "students": 694
+    },
+    {
+     "name": "정천중학교",
+     "level": "middle",
+     "students": 766
+    },
+    {
      "name": "수원제일중학교부설방송통신중학교",
      "level": "middle",
      "students": 136
+    },
+    {
+     "name": "숙지고등학교",
+     "level": "high",
+     "students": 869
     },
     {
      "name": "영복여자고등학교",

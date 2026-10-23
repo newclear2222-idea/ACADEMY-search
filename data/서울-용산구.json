@@ -84,17 +84,23 @@
   {
    "name": "산천동",
    "students": {
-    "elem": 0,
+    "elem": 385,
     "middle": 0,
     "high": 0,
-    "total": 0
+    "total": 385
    },
    "academies": {
     "all": 12,
     "math": 5,
     "english": 4
    },
-   "schools": []
+   "schools": [
+    {
+     "name": "서울원효초등학교",
+     "level": "elem",
+     "students": 385
+    }
+   ]
   },
   {
    "name": "서계동",
@@ -244,9 +250,9 @@
    "name": "원효로4가",
    "students": {
     "elem": 0,
-    "middle": 0,
+    "middle": 176,
     "high": 331,
-    "total": 331
+    "total": 507
    },
    "academies": {
     "all": 1,
@@ -254,6 +260,11 @@
     "english": 0
    },
    "schools": [
+    {
+     "name": "성심여자중학교",
+     "level": "middle",
+     "students": 176
+    },
     {
      "name": "성심여자고등학교",
      "level": "high",
@@ -487,10 +498,10 @@
   {
    "name": "후암동",
    "students": {
-    "elem": 210,
+    "elem": 505,
     "middle": 0,
     "high": 0,
-    "total": 210
+    "total": 505
    },
    "academies": {
     "all": 16,
@@ -498,6 +509,11 @@
     "english": 6
    },
    "schools": [
+    {
+     "name": "서울삼광초등학교",
+     "level": "elem",
+     "students": 295
+    },
     {
      "name": "서울후암초등학교",
      "level": "elem",

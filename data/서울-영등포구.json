@@ -243,9 +243,9 @@
    "name": "문래동3가",
    "students": {
     "elem": 901,
-    "middle": 0,
+    "middle": 633,
     "high": 0,
-    "total": 901
+    "total": 1534
    },
    "academies": {
     "all": 34,
@@ -257,6 +257,11 @@
      "name": "서울문래초등학교",
      "level": "elem",
      "students": 901
+    },
+    {
+     "name": "양화중학교",
+     "level": "middle",
+     "students": 633
     }
    ]
   },
@@ -304,10 +309,10 @@
   {
    "name": "신길동",
    "students": {
-    "elem": 2701,
-    "middle": 619,
+    "elem": 3629,
+    "middle": 1353,
     "high": 2450,
-    "total": 5770
+    "total": 7432
    },
    "academies": {
     "all": 137,
@@ -324,6 +329,11 @@
      "name": "서울대방초등학교",
      "level": "elem",
      "students": 1244
+    },
+    {
+     "name": "서울대영초등학교",
+     "level": "elem",
+     "students": 928
     },
     {
      "name": "서울도림초등학교",
@@ -344,6 +354,11 @@
      "name": "대영중학교",
      "level": "middle",
      "students": 619
+    },
+    {
+     "name": "신길중학교",
+     "level": "middle",
+     "students": 734
     },
     {
      "name": "대영고등학교",
@@ -455,8 +470,8 @@
    "students": {
     "elem": 291,
     "middle": 0,
-    "high": 591,
-    "total": 882
+    "high": 1057,
+    "total": 1348
    },
    "academies": {
     "all": 0,
@@ -468,6 +483,11 @@
      "name": "서울당산초등학교",
      "level": "elem",
      "students": 291
+    },
+    {
+     "name": "한강미디어고등학교",
+     "level": "high",
+     "students": 466
     },
     {
      "name": "선유고등학교",
@@ -494,10 +514,10 @@
   {
    "name": "여의도동",
    "students": {
-    "elem": 364,
+    "elem": 1182,
     "middle": 897,
     "high": 1067,
-    "total": 2328
+    "total": 3146
    },
    "academies": {
     "all": 43,
@@ -505,6 +525,11 @@
     "english": 7
    },
    "schools": [
+    {
+     "name": "서울여의도초등학교",
+     "level": "elem",
+     "students": 818
+    },
     {
      "name": "서울윤중초등학교",
      "level": "elem",

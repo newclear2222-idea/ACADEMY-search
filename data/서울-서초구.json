@@ -125,10 +125,10 @@
   {
    "name": "방배동",
    "students": {
-    "elem": 2564,
+    "elem": 3427,
     "middle": 1643,
     "high": 3275,
-    "total": 7482
+    "total": 8345
    },
    "academies": {
     "all": 226,
@@ -140,6 +140,11 @@
      "name": "서울방배초등학교",
      "level": "elem",
      "students": 843
+    },
+    {
+     "name": "서울방일초등학교",
+     "level": "elem",
+     "students": 863
     },
     {
      "name": "서울방현초등학교",
@@ -197,9 +202,9 @@
    "name": "서초동",
    "students": {
     "elem": 4902,
-    "middle": 1766,
+    "middle": 2793,
     "high": 2874,
-    "total": 9542
+    "total": 10569
    },
    "academies": {
     "all": 200,
@@ -243,6 +248,11 @@
      "students": 1128
     },
     {
+     "name": "서일중학교",
+     "level": "middle",
+     "students": 1027
+    },
+    {
      "name": "서초중학교",
      "level": "middle",
      "students": 638
@@ -268,24 +278,30 @@
    "name": "신원동",
    "students": {
     "elem": 0,
-    "middle": 0,
+    "middle": 468,
     "high": 0,
-    "total": 0
+    "total": 468
    },
    "academies": {
     "all": 2,
     "math": 1,
     "english": 1
    },
-   "schools": []
+   "schools": [
+    {
+     "name": "내곡중학교",
+     "level": "middle",
+     "students": 468
+    }
+   ]
   },
   {
    "name": "양재동",
    "students": {
     "elem": 717,
     "middle": 345,
-    "high": 0,
-    "total": 1062
+    "high": 636,
+    "total": 1698
    },
    "academies": {
     "all": 36,
@@ -307,6 +323,11 @@
      "name": "언남중학교",
      "level": "middle",
      "students": 345
+    },
+    {
+     "name": "언남고등학교",
+     "level": "high",
+     "students": 636
     }
    ]
   },

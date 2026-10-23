@@ -15,8 +15,8 @@
    "students": {
     "elem": 617,
     "middle": 0,
-    "high": 0,
-    "total": 617
+    "high": 368,
+    "total": 985
    },
    "academies": {
     "all": 27,
@@ -28,6 +28,11 @@
      "name": "서울금북초등학교",
      "level": "elem",
      "students": 617
+    },
+    {
+     "name": "금호고등학교",
+     "level": "high",
+     "students": 368
     }
    ]
   },
@@ -111,10 +116,10 @@
   {
    "name": "마장동",
    "students": {
-    "elem": 162,
+    "elem": 534,
     "middle": 675,
     "high": 0,
-    "total": 837
+    "total": 1209
    },
    "academies": {
     "all": 9,
@@ -126,6 +131,11 @@
      "name": "서울동명초등학교",
      "level": "elem",
      "students": 162
+    },
+    {
+     "name": "서울마장초등학교",
+     "level": "elem",
+     "students": 372
     },
     {
      "name": "동마중학교",
@@ -379,10 +389,10 @@
   {
    "name": "응봉동",
    "students": {
-    "elem": 0,
+    "elem": 575,
     "middle": 776,
     "high": 0,
-    "total": 776
+    "total": 1351
    },
    "academies": {
     "all": 12,
@@ -390,6 +400,11 @@
     "english": 3
    },
    "schools": [
+    {
+     "name": "서울응봉초등학교",
+     "level": "elem",
+     "students": 575
+    },
     {
      "name": "광희중학교",
      "level": "middle",

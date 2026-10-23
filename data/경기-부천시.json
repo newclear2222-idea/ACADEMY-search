@@ -34,10 +34,10 @@
   {
    "name": "고강동",
    "students": {
-    "elem": 610,
+    "elem": 903,
     "middle": 609,
     "high": 551,
-    "total": 1770
+    "total": 2063
    },
    "academies": {
     "all": 20,
@@ -56,6 +56,11 @@
      "students": 231
     },
     {
+     "name": "부천수주초등학교",
+     "level": "elem",
+     "students": 293
+    },
+    {
      "name": "수주중학교",
      "level": "middle",
      "students": 609
@@ -70,10 +75,10 @@
   {
    "name": "괴안동",
    "students": {
-    "elem": 894,
+    "elem": 1275,
     "middle": 378,
     "high": 0,
-    "total": 1272
+    "total": 1653
    },
    "academies": {
     "all": 25,
@@ -81,6 +86,11 @@
     "english": 5
    },
    "schools": [
+    {
+     "name": "부천부안초등학교",
+     "level": "elem",
+     "students": 381
+    },
     {
      "name": "창영초등학교",
      "level": "elem",
@@ -127,10 +137,10 @@
   {
    "name": "도당동",
    "students": {
-    "elem": 672,
-    "middle": 0,
-    "high": 649,
-    "total": 1321
+    "elem": 1003,
+    "middle": 481,
+    "high": 1283,
+    "total": 2767
    },
    "academies": {
     "all": 13,
@@ -144,6 +154,21 @@
      "students": 672
     },
     {
+     "name": "부천신흥초등학교",
+     "level": "elem",
+     "students": 331
+    },
+    {
+     "name": "도당중학교",
+     "level": "middle",
+     "students": 481
+    },
+    {
+     "name": "도당고등학교",
+     "level": "high",
+     "students": 634
+    },
+    {
      "name": "부천북고등학교",
      "level": "high",
      "students": 649
@@ -154,9 +179,9 @@
    "name": "범박동",
    "students": {
     "elem": 1419,
-    "middle": 1053,
+    "middle": 2017,
     "high": 1694,
-    "total": 4166
+    "total": 5130
    },
    "academies": {
     "all": 60,
@@ -180,6 +205,11 @@
      "students": 1053
     },
     {
+     "name": "범박중학교",
+     "level": "middle",
+     "students": 964
+    },
+    {
      "name": "시온고등학교",
      "level": "high",
      "students": 873
@@ -194,25 +224,31 @@
   {
    "name": "삼정동",
    "students": {
-    "elem": 0,
+    "elem": 293,
     "middle": 0,
     "high": 0,
-    "total": 0
+    "total": 293
    },
    "academies": {
     "all": 4,
     "math": 0,
     "english": 0
    },
-   "schools": []
+   "schools": [
+    {
+     "name": "부천삼정초등학교",
+     "level": "elem",
+     "students": 293
+    }
+   ]
   },
   {
    "name": "상동",
    "students": {
-    "elem": 2824,
+    "elem": 4639,
     "middle": 2873,
-    "high": 1461,
-    "total": 7158
+    "high": 1902,
+    "total": 9414
    },
    "academies": {
     "all": 269,
@@ -246,9 +282,19 @@
      "students": 851
     },
     {
+     "name": "상일초등학교",
+     "level": "elem",
+     "students": 930
+    },
+    {
      "name": "송내초등학교",
      "level": "elem",
      "students": 117
+    },
+    {
+     "name": "석천초등학교",
+     "level": "elem",
+     "students": 885
     },
     {
      "name": "상미초등학교",
@@ -284,6 +330,11 @@
      "name": "부천여자고등학교",
      "level": "high",
      "students": 266
+    },
+    {
+     "name": "부천정보산업고등학교",
+     "level": "high",
+     "students": 441
     },
     {
      "name": "상일고등학교",
@@ -378,9 +429,9 @@
    "name": "송내동",
    "students": {
     "elem": 1126,
-    "middle": 910,
-    "high": 668,
-    "total": 2704
+    "middle": 1478,
+    "high": 1446,
+    "total": 4050
    },
    "academies": {
     "all": 51,
@@ -414,6 +465,21 @@
      "students": 446
     },
     {
+     "name": "성주중학교",
+     "level": "middle",
+     "students": 568
+    },
+    {
+     "name": "부천고등학교",
+     "level": "high",
+     "students": 428
+    },
+    {
+     "name": "부천공업고등학교",
+     "level": "high",
+     "students": 350
+    },
+    {
      "name": "송내고등학교",
      "level": "high",
      "students": 668
@@ -423,10 +489,10 @@
   {
    "name": "심곡동",
    "students": {
-    "elem": 1513,
+    "elem": 1858,
     "middle": 0,
     "high": 1217,
-    "total": 2730
+    "total": 3075
    },
    "academies": {
     "all": 36,
@@ -443,6 +509,11 @@
      "name": "원미초등학교",
      "level": "elem",
      "students": 607
+    },
+    {
+     "name": "도원초등학교",
+     "level": "elem",
+     "students": 345
     },
     {
      "name": "부천남초등학교",
@@ -464,17 +535,28 @@
   {
    "name": "약대동",
    "students": {
-    "elem": 0,
+    "elem": 620,
     "middle": 0,
     "high": 0,
-    "total": 0
+    "total": 620
    },
    "academies": {
     "all": 15,
     "math": 3,
     "english": 7
    },
-   "schools": []
+   "schools": [
+    {
+     "name": "부천초등학교",
+     "level": "elem",
+     "students": 458
+    },
+    {
+     "name": "약대초등학교",
+     "level": "elem",
+     "students": 162
+    }
+   ]
   },
   {
    "name": "여월동",
@@ -515,10 +597,10 @@
   {
    "name": "역곡동",
    "students": {
-    "elem": 941,
+    "elem": 1278,
     "middle": 687,
     "high": 447,
-    "total": 2075
+    "total": 2412
    },
    "academies": {
     "all": 30,
@@ -530,6 +612,11 @@
      "name": "동곡초등학교",
      "level": "elem",
      "students": 485
+    },
+    {
+     "name": "부천동초등학교",
+     "level": "elem",
+     "students": 337
     },
     {
      "name": "부천역곡초등학교",
@@ -551,10 +638,10 @@
   {
    "name": "오정동",
    "students": {
-    "elem": 627,
+    "elem": 978,
     "middle": 756,
-    "high": 0,
-    "total": 1383
+    "high": 428,
+    "total": 2162
    },
    "academies": {
     "all": 18,
@@ -562,6 +649,11 @@
     "english": 5
    },
    "schools": [
+    {
+     "name": "부천대명초등학교",
+     "level": "elem",
+     "students": 351
+    },
     {
      "name": "부천덕산초등학교",
      "level": "elem",
@@ -576,16 +668,21 @@
      "name": "덕산중학교",
      "level": "middle",
      "students": 756
+    },
+    {
+     "name": "덕산고등학교",
+     "level": "high",
+     "students": 428
     }
    ]
   },
   {
    "name": "옥길동",
    "students": {
-    "elem": 945,
-    "middle": 0,
+    "elem": 2479,
+    "middle": 1107,
     "high": 29,
-    "total": 974
+    "total": 3615
    },
    "academies": {
     "all": 137,
@@ -597,6 +694,21 @@
      "name": "옥길버들초등학교",
      "level": "elem",
      "students": 945
+    },
+    {
+     "name": "옥길산들초등학교",
+     "level": "elem",
+     "students": 1534
+    },
+    {
+     "name": "옥길중학교",
+     "level": "middle",
+     "students": 883
+    },
+    {
+     "name": "옥길새길중학교",
+     "level": "middle",
+     "students": 224
     },
     {
      "name": "옥길새길고등학교",
@@ -675,10 +787,10 @@
   {
    "name": "작동",
    "students": {
-    "elem": 0,
+    "elem": 130,
     "middle": 391,
     "high": 0,
-    "total": 391
+    "total": 521
    },
    "academies": {
     "all": 3,
@@ -686,6 +798,11 @@
     "english": 1
    },
    "schools": [
+    {
+     "name": "까치울초등학교",
+     "level": "elem",
+     "students": 130
+    },
     {
      "name": "성곡중학교",
      "level": "middle",
@@ -696,10 +813,10 @@
   {
    "name": "중동",
    "students": {
-    "elem": 5105,
-    "middle": 3948,
-    "high": 4525,
-    "total": 13578
+    "elem": 6363,
+    "middle": 4557,
+    "high": 5197,
+    "total": 16117
    },
    "academies": {
     "all": 288,
@@ -753,6 +870,11 @@
      "students": 188
     },
     {
+     "name": "신도초등학교",
+     "level": "elem",
+     "students": 561
+    },
+    {
      "name": "심원초등학교",
      "level": "elem",
      "students": 623
@@ -763,9 +885,24 @@
      "students": 710
     },
     {
+     "name": "옥산초등학교",
+     "level": "elem",
+     "students": 40
+    },
+    {
+     "name": "중동초등학교",
+     "level": "elem",
+     "students": 657
+    },
+    {
      "name": "계남중학교",
      "level": "middle",
      "students": 557
+    },
+    {
+     "name": "부명중학교",
+     "level": "middle",
+     "students": 609
     },
     {
      "name": "부천부곡중학교",
@@ -796,6 +933,11 @@
      "name": "중흥중학교",
      "level": "middle",
      "students": 725
+    },
+    {
+     "name": "계남고등학교",
+     "level": "high",
+     "students": 672
     },
     {
      "name": "부명고등학교",

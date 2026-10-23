@@ -11,12 +11,33 @@
  "unmatchedAcademies": 0,
  "areas": [
   {
+   "name": "금곡동",
+   "students": {
+    "elem": 254,
+    "middle": 0,
+    "high": 0,
+    "total": 254
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "인천금곡초등학교",
+     "level": "elem",
+     "students": 254
+    }
+   ]
+  },
+  {
    "name": "당하동",
    "students": {
-    "elem": 2853,
-    "middle": 933,
+    "elem": 4988,
+    "middle": 2317,
     "high": 1869,
-    "total": 5655
+    "total": 9174
    },
    "academies": {
     "all": 105,
@@ -24,6 +45,11 @@
     "english": 30
    },
    "schools": [
+    {
+     "name": "인천당하초등학교",
+     "level": "elem",
+     "students": 652
+    },
     {
      "name": "인천백석초등학교",
      "level": "elem",
@@ -40,9 +66,24 @@
      "students": 1657
     },
     {
+     "name": "인천원당초등학교",
+     "level": "elem",
+     "students": 285
+    },
+    {
+     "name": "인천아라초등학교",
+     "level": "elem",
+     "students": 1198
+    },
+    {
      "name": "인천당하중학교",
      "level": "middle",
      "students": 933
+    },
+    {
+     "name": "인천아라중학교",
+     "level": "middle",
+     "students": 1384
     },
     {
      "name": "문곡고등학교",
@@ -59,10 +100,10 @@
   {
    "name": "마전동",
    "students": {
-    "elem": 1679,
-    "middle": 814,
-    "high": 0,
-    "total": 2493
+    "elem": 2102,
+    "middle": 1955,
+    "high": 1542,
+    "total": 5599
    },
    "academies": {
     "all": 78,
@@ -86,19 +127,39 @@
      "students": 482
     },
     {
+     "name": "인천완정초등학교",
+     "level": "elem",
+     "students": 423
+    },
+    {
      "name": "검단중학교",
      "level": "middle",
      "students": 814
+    },
+    {
+     "name": "마전중학교",
+     "level": "middle",
+     "students": 1141
+    },
+    {
+     "name": "검단고등학교",
+     "level": "high",
+     "students": 773
+    },
+    {
+     "name": "인천마전고등학교",
+     "level": "high",
+     "students": 769
     }
    ]
   },
   {
    "name": "백석동",
    "students": {
-    "elem": 0,
+    "elem": 840,
     "middle": 412,
-    "high": 1148,
-    "total": 1560
+    "high": 1368,
+    "total": 2620
    },
    "academies": {
     "all": 14,
@@ -106,6 +167,11 @@
     "english": 3
    },
    "schools": [
+    {
+     "name": "인천한들초등학교",
+     "level": "elem",
+     "students": 840
+    },
     {
      "name": "백석중학교",
      "level": "middle",
@@ -115,16 +181,21 @@
      "name": "백석고등학교",
      "level": "high",
      "students": 1148
+    },
+    {
+     "name": "한국주얼리고등학교",
+     "level": "high",
+     "students": 220
     }
    ]
   },
   {
    "name": "불로동",
    "students": {
-    "elem": 0,
-    "middle": 727,
+    "elem": 3007,
+    "middle": 1471,
     "high": 0,
-    "total": 727
+    "total": 4478
    },
    "academies": {
     "all": 57,
@@ -133,9 +204,34 @@
    },
    "schools": [
     {
+     "name": "인천불로초등학교",
+     "level": "elem",
+     "students": 627
+    },
+    {
+     "name": "인천신검단초등학교",
+     "level": "elem",
+     "students": 1651
+    },
+    {
+     "name": "인천목향초등학교",
+     "level": "elem",
+     "students": 425
+    },
+    {
+     "name": "인천검단호수초등학교",
+     "level": "elem",
+     "students": 304
+    },
+    {
      "name": "인천검단가온중학교",
      "level": "middle",
      "students": 727
+    },
+    {
+     "name": "불로중학교",
+     "level": "middle",
+     "students": 744
     }
    ]
   },
@@ -143,9 +239,9 @@
    "name": "오류동",
    "students": {
     "elem": 700,
-    "middle": 0,
+    "middle": 211,
     "high": 0,
-    "total": 700
+    "total": 911
    },
    "academies": {
     "all": 0,
@@ -157,35 +253,46 @@
      "name": "인천단봉초등학교",
      "level": "elem",
      "students": 700
+    },
+    {
+     "name": "인천단봉중학교",
+     "level": "middle",
+     "students": 211
     }
    ]
   },
   {
    "name": "왕길동",
    "students": {
-    "elem": 0,
+    "elem": 445,
     "middle": 0,
     "high": 0,
-    "total": 0
+    "total": 445
    },
    "academies": {
     "all": 22,
     "math": 6,
     "english": 8
    },
-   "schools": []
+   "schools": [
+    {
+     "name": "인천왕길초등학교",
+     "level": "elem",
+     "students": 445
+    }
+   ]
   },
   {
    "name": "원당동",
    "students": {
-    "elem": 3225,
-    "middle": 1118,
-    "high": 0,
-    "total": 4343
+    "elem": 4786,
+    "middle": 2499,
+    "high": 2101,
+    "total": 9386
    },
    "academies": {
-    "all": 202,
-    "math": 81,
+    "all": 204,
+    "math": 82,
     "english": 53
    },
    "schools": [
@@ -205,9 +312,29 @@
      "students": 1899
     },
     {
+     "name": "인천한별초등학교",
+     "level": "elem",
+     "students": 1561
+    },
+    {
      "name": "원당중학교",
      "level": "middle",
      "students": 1118
+    },
+    {
+     "name": "인천이음중학교",
+     "level": "middle",
+     "students": 1381
+    },
+    {
+     "name": "인천원당고등학교",
+     "level": "high",
+     "students": 1015
+    },
+    {
+     "name": "인천이음고등학교",
+     "level": "high",
+     "students": 1086
     }
    ]
   }

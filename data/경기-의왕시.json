@@ -15,8 +15,8 @@
    "students": {
     "elem": 505,
     "middle": 0,
-    "high": 603,
-    "total": 1108
+    "high": 1344,
+    "total": 1849
    },
    "academies": {
     "all": 5,
@@ -35,6 +35,11 @@
      "students": 305
     },
     {
+     "name": "우성고등학교",
+     "level": "high",
+     "students": 741
+    },
+    {
      "name": "경기외국어고등학교",
      "level": "high",
      "students": 603
@@ -45,9 +50,9 @@
    "name": "내손동",
    "students": {
     "elem": 1954,
-    "middle": 686,
-    "high": 44,
-    "total": 2684
+    "middle": 928,
+    "high": 809,
+    "total": 3691
    },
    "academies": {
     "all": 65,
@@ -79,6 +84,16 @@
      "name": "갈뫼중학교",
      "level": "middle",
      "students": 686
+    },
+    {
+     "name": "내손중학교",
+     "level": "middle",
+     "students": 242
+    },
+    {
+     "name": "백운고등학교",
+     "level": "high",
+     "students": 765
     },
     {
      "name": "내손고등학교",
@@ -123,8 +138,8 @@
    "students": {
     "elem": 1171,
     "middle": 1026,
-    "high": 0,
-    "total": 2197
+    "high": 554,
+    "total": 2751
    },
    "academies": {
     "all": 40,
@@ -161,6 +176,11 @@
      "name": "모락중학교",
      "level": "middle",
      "students": 606
+    },
+    {
+     "name": "모락고등학교",
+     "level": "high",
+     "students": 554
     }
    ]
   },
@@ -261,10 +281,10 @@
   {
    "name": "학의동",
    "students": {
-    "elem": 0,
+    "elem": 425,
     "middle": 49,
     "high": 0,
-    "total": 49
+    "total": 474
    },
    "academies": {
     "all": 9,
@@ -272,6 +292,11 @@
     "english": 5
    },
    "schools": [
+    {
+     "name": "백운호수초등학교",
+     "level": "elem",
+     "students": 425
+    },
     {
      "name": "백운호수중학교",
      "level": "middle",

@@ -39,21 +39,26 @@
   {
    "name": "운남동",
    "students": {
-    "elem": 1351,
+    "elem": 1834,
     "middle": 1874,
-    "high": 0,
-    "total": 3225
+    "high": 489,
+    "total": 4197
    },
    "academies": {
-    "all": 2,
-    "math": 1,
-    "english": 0
+    "all": 23,
+    "math": 7,
+    "english": 5
    },
    "schools": [
     {
      "name": "인천별빛초등학교",
      "level": "elem",
      "students": 1351
+    },
+    {
+     "name": "인천운남초등학교",
+     "level": "elem",
+     "students": 483
     },
     {
      "name": "영종중학교",
@@ -64,6 +69,16 @@
      "name": "인천하늘중학교",
      "level": "middle",
      "students": 972
+    },
+    {
+     "name": "영종국제물류고등학교",
+     "level": "high",
+     "students": 207
+    },
+    {
+     "name": "인천운남고등학교",
+     "level": "high",
+     "students": 282
     }
    ]
   },
@@ -91,21 +106,26 @@
   {
    "name": "운서동",
    "students": {
-    "elem": 1316,
-    "middle": 676,
+    "elem": 1708,
+    "middle": 1233,
     "high": 2566,
-    "total": 4558
+    "total": 5507
    },
    "academies": {
-    "all": 4,
-    "math": 0,
-    "english": 1
+    "all": 39,
+    "math": 13,
+    "english": 9
    },
    "schools": [
     {
      "name": "인천공항초등학교",
      "level": "elem",
      "students": 331
+    },
+    {
+     "name": "인천운서초등학교",
+     "level": "elem",
+     "students": 392
     },
     {
      "name": "인천삼목초등학교",
@@ -121,6 +141,11 @@
      "name": "인천공항중학교",
      "level": "middle",
      "students": 676
+    },
+    {
+     "name": "인천운서중학교",
+     "level": "middle",
+     "students": 557
     },
     {
      "name": "인천공항고등학교",
@@ -147,15 +172,15 @@
   {
    "name": "중산동",
    "students": {
-    "elem": 2701,
+    "elem": 4149,
     "middle": 980,
     "high": 1062,
-    "total": 4743
+    "total": 6191
    },
    "academies": {
-    "all": 10,
-    "math": 2,
-    "english": 4
+    "all": 139,
+    "math": 45,
+    "english": 33
    },
    "schools": [
     {
@@ -167,6 +192,16 @@
      "name": "인천중산초등학교",
      "level": "elem",
      "students": 1471
+    },
+    {
+     "name": "인천하늘초등학교",
+     "level": "elem",
+     "students": 1353
+    },
+    {
+     "name": "인천달빛초등학교",
+     "level": "elem",
+     "students": 95
     },
     {
      "name": "인천중산중학교",

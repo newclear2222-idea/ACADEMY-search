@@ -119,10 +119,10 @@
   {
    "name": "면목동",
    "students": {
-    "elem": 2566,
+    "elem": 3191,
     "middle": 1343,
-    "high": 0,
-    "total": 3909
+    "high": 510,
+    "total": 5044
    },
    "academies": {
     "all": 81,
@@ -144,6 +144,11 @@
      "name": "서울면목초등학교",
      "level": "elem",
      "students": 479
+    },
+    {
+     "name": "서울중곡초등학교",
+     "level": "elem",
+     "students": 625
     },
     {
      "name": "서울중랑초등학교",
@@ -169,16 +174,21 @@
      "name": "중화중학교",
      "level": "middle",
      "students": 433
+    },
+    {
+     "name": "면목고등학교",
+     "level": "high",
+     "students": 510
     }
    ]
   },
   {
    "name": "묵동",
    "students": {
-    "elem": 1245,
+    "elem": 1546,
     "middle": 1070,
     "high": 1339,
-    "total": 3654
+    "total": 3955
    },
    "academies": {
     "all": 33,
@@ -186,6 +196,11 @@
     "english": 3
    },
    "schools": [
+    {
+     "name": "서울신묵초등학교",
+     "level": "elem",
+     "students": 301
+    },
     {
      "name": "서울원묵초등학교",
      "level": "elem",

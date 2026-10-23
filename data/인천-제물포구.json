@@ -8,8 +8,23 @@
   "학원: 나이스 교육정보 개방포털 학원교습소정보",
   "학생 수: 학교알리미 학년별·학급별 학생수"
  ],
- "unmatchedAcademies": 0,
+ "unmatchedAcademies": 2,
  "areas": [
+  {
+   "name": "777동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 1,
+    "english": 0
+   },
+   "schools": []
+  },
   {
    "name": "금곡동",
    "students": {
@@ -19,8 +34,23 @@
     "total": 0
    },
    "academies": {
-    "all": 1,
+    "all": 2,
     "math": 0,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "내동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 1,
     "english": 0
    },
    "schools": []
@@ -34,9 +64,9 @@
     "total": 475
    },
    "academies": {
-    "all": 0,
-    "math": 0,
-    "english": 0
+    "all": 4,
+    "math": 1,
+    "english": 1
    },
    "schools": [
     {
@@ -55,20 +85,30 @@
    "name": "도원동",
    "students": {
     "elem": 0,
-    "middle": 0,
-    "high": 414,
-    "total": 414
+    "middle": 407,
+    "high": 849,
+    "total": 1256
    },
    "academies": {
-    "all": 0,
-    "math": 0,
+    "all": 1,
+    "math": 1,
     "english": 0
    },
    "schools": [
     {
+     "name": "광성중학교",
+     "level": "middle",
+     "students": 407
+    },
+    {
      "name": "인천중앙여자고등학교",
      "level": "high",
      "students": 414
+    },
+    {
+     "name": "광성고등학교",
+     "level": "high",
+     "students": 435
     }
    ]
   },
@@ -81,8 +121,8 @@
     "total": 0
    },
    "academies": {
-    "all": 1,
-    "math": 1,
+    "all": 2,
+    "math": 2,
     "english": 1
    },
    "schools": []
@@ -111,13 +151,69 @@
   {
    "name": "송림동",
    "students": {
+    "elem": 1700,
+    "middle": 845,
+    "high": 1026,
+    "total": 3571
+   },
+   "academies": {
+    "all": 11,
+    "math": 2,
+    "english": 2
+   },
+   "schools": [
+    {
+     "name": "인천동명초등학교",
+     "level": "elem",
+     "students": 449
+    },
+    {
+     "name": "인천서림초등학교",
+     "level": "elem",
+     "students": 464
+    },
+    {
+     "name": "인천서흥초등학교",
+     "level": "elem",
+     "students": 355
+    },
+    {
+     "name": "인천송림초등학교",
+     "level": "elem",
+     "students": 432
+    },
+    {
+     "name": "재능중학교",
+     "level": "middle",
+     "students": 240
+    },
+    {
+     "name": "동산중학교",
+     "level": "middle",
+     "students": 605
+    },
+    {
+     "name": "재능고등학교",
+     "level": "high",
+     "students": 571
+    },
+    {
+     "name": "동산고등학교",
+     "level": "high",
+     "students": 455
+    }
+   ]
+  },
+  {
+   "name": "송월동1가",
+   "students": {
     "elem": 0,
     "middle": 0,
     "high": 0,
     "total": 0
    },
    "academies": {
-    "all": 2,
+    "all": 1,
     "math": 0,
     "english": 0
    },
@@ -127,9 +223,9 @@
    "name": "송학동2가",
    "students": {
     "elem": 497,
-    "middle": 0,
+    "middle": 289,
     "high": 569,
-    "total": 1066
+    "total": 1355
    },
    "academies": {
     "all": 0,
@@ -143,6 +239,11 @@
      "students": 497
     },
     {
+     "name": "인성여자중학교",
+     "level": "middle",
+     "students": 289
+    },
+    {
      "name": "인성여자고등학교",
      "level": "high",
      "students": 569
@@ -152,17 +253,23 @@
   {
    "name": "송현동",
    "students": {
-    "elem": 0,
+    "elem": 284,
     "middle": 0,
     "high": 0,
-    "total": 0
+    "total": 284
    },
    "academies": {
-    "all": 1,
-    "math": 0,
-    "english": 0
+    "all": 19,
+    "math": 6,
+    "english": 5
    },
-   "schools": []
+   "schools": [
+    {
+     "name": "인천송현초등학교",
+     "level": "elem",
+     "students": 284
+    }
+   ]
   },
   {
    "name": "신생동",
@@ -186,16 +293,31 @@
    ]
   },
   {
-   "name": "신흥동3가",
+   "name": "신흥동1가",
    "students": {
-    "elem": 686,
-    "middle": 427,
+    "elem": 0,
+    "middle": 0,
     "high": 0,
-    "total": 1113
+    "total": 0
    },
    "academies": {
-    "all": 0,
-    "math": 0,
+    "all": 1,
+    "math": 1,
+    "english": 1
+   },
+   "schools": []
+  },
+  {
+   "name": "신흥동3가",
+   "students": {
+    "elem": 962,
+    "middle": 799,
+    "high": 0,
+    "total": 1761
+   },
+   "academies": {
+    "all": 4,
+    "math": 1,
     "english": 0
    },
    "schools": [
@@ -205,19 +327,65 @@
      "students": 686
     },
     {
+     "name": "인천신선초등학교",
+     "level": "elem",
+     "students": 276
+    },
+    {
      "name": "신흥여자중학교",
      "level": "middle",
      "students": 427
+    },
+    {
+     "name": "신흥중학교",
+     "level": "middle",
+     "students": 372
     }
    ]
+  },
+  {
+   "name": "율목동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 424,
+    "total": 424
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "인천반도체고등학교",
+     "level": "high",
+     "students": 424
+    }
+   ]
+  },
+  {
+   "name": "인현동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": []
   },
   {
    "name": "전동",
    "students": {
     "elem": 114,
     "middle": 0,
-    "high": 574,
-    "total": 688
+    "high": 1021,
+    "total": 1135
    },
    "academies": {
     "all": 0,
@@ -234,6 +402,42 @@
      "name": "인일여자고등학교",
      "level": "high",
      "students": 574
+    },
+    {
+     "name": "제물포고등학교",
+     "level": "high",
+     "students": 447
+    }
+   ]
+  },
+  {
+   "name": "창영동",
+   "students": {
+    "elem": 587,
+    "middle": 0,
+    "high": 444,
+    "total": 1031
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "영화초등학교",
+     "level": "elem",
+     "students": 344
+    },
+    {
+     "name": "인천창영초등학교",
+     "level": "elem",
+     "students": 243
+    },
+    {
+     "name": "영화국제관광고등학교",
+     "level": "high",
+     "students": 444
     }
    ]
   },
@@ -246,15 +450,41 @@
     "total": 83
    },
    "academies": {
-    "all": 0,
-    "math": 0,
-    "english": 0
+    "all": 3,
+    "math": 1,
+    "english": 1
    },
    "schools": [
     {
      "name": "인천연안초등학교",
      "level": "elem",
      "students": 83
+    }
+   ]
+  },
+  {
+   "name": "화수동",
+   "students": {
+    "elem": 232,
+    "middle": 337,
+    "high": 0,
+    "total": 569
+   },
+   "academies": {
+    "all": 4,
+    "math": 1,
+    "english": 1
+   },
+   "schools": [
+    {
+     "name": "인천만석초등학교",
+     "level": "elem",
+     "students": 232
+    },
+    {
+     "name": "화도진중학교",
+     "level": "middle",
+     "students": 337
     }
    ]
   }

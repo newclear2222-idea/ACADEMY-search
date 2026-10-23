@@ -13,10 +13,10 @@
   {
    "name": "가정동",
    "students": {
-    "elem": 1329,
+    "elem": 2965,
     "middle": 926,
     "high": 0,
-    "total": 2255
+    "total": 3891
    },
    "academies": {
     "all": 118,
@@ -25,9 +25,19 @@
    },
    "schools": [
     {
+     "name": "인천가석초등학교",
+     "level": "elem",
+     "students": 200
+    },
+    {
      "name": "인천봉수초등학교",
      "level": "elem",
      "students": 1329
+    },
+    {
+     "name": "인천가원초등학교",
+     "level": "elem",
+     "students": 1436
     },
     {
      "name": "인천루원중학교",
@@ -41,8 +51,8 @@
    "students": {
     "elem": 1645,
     "middle": 1288,
-    "high": 0,
-    "total": 2933
+    "high": 1630,
+    "total": 4563
    },
    "academies": {
     "all": 39,
@@ -94,16 +104,26 @@
      "name": "제물포중학교",
      "level": "middle",
      "students": 460
+    },
+    {
+     "name": "가림고등학교",
+     "level": "high",
+     "students": 818
+    },
+    {
+     "name": "가좌고등학교",
+     "level": "high",
+     "students": 812
     }
    ]
   },
   {
    "name": "검암동",
    "students": {
-    "elem": 273,
-    "middle": 0,
+    "elem": 1324,
+    "middle": 1342,
     "high": 1234,
-    "total": 1507
+    "total": 3900
    },
    "academies": {
     "all": 43,
@@ -117,6 +137,26 @@
      "students": 273
     },
     {
+     "name": "인천간재울초등학교",
+     "level": "elem",
+     "students": 899
+    },
+    {
+     "name": "인천검암초등학교",
+     "level": "elem",
+     "students": 152
+    },
+    {
+     "name": "검암중학교",
+     "level": "middle",
+     "students": 372
+    },
+    {
+     "name": "간재울중학교",
+     "level": "middle",
+     "students": 970
+    },
+    {
      "name": "서인천고등학교",
      "level": "high",
      "students": 1234
@@ -126,10 +166,10 @@
   {
    "name": "경서동",
    "students": {
-    "elem": 1641,
-    "middle": 0,
+    "elem": 4926,
+    "middle": 1010,
     "high": 907,
-    "total": 2548
+    "total": 6843
    },
    "academies": {
     "all": 10,
@@ -148,6 +188,26 @@
      "students": 1074
     },
     {
+     "name": "인천청일초등학교",
+     "level": "elem",
+     "students": 740
+    },
+    {
+     "name": "인천경명초등학교",
+     "level": "elem",
+     "students": 816
+    },
+    {
+     "name": "인천해원초등학교",
+     "level": "elem",
+     "students": 1729
+    },
+    {
+     "name": "인천해원중학교",
+     "level": "middle",
+     "students": 1010
+    },
+    {
      "name": "인천해원고등학교",
      "level": "high",
      "students": 907
@@ -157,10 +217,10 @@
   {
    "name": "공촌동",
    "students": {
-    "elem": 0,
+    "elem": 184,
     "middle": 0,
     "high": 865,
-    "total": 865
+    "total": 1049
    },
    "academies": {
     "all": 1,
@@ -168,6 +228,11 @@
     "english": 0
    },
    "schools": [
+    {
+     "name": "인천공촌초등학교",
+     "level": "elem",
+     "students": 184
+    },
     {
      "name": "대인고등학교",
      "level": "high",
@@ -178,10 +243,10 @@
   {
    "name": "석남동",
    "students": {
-    "elem": 292,
+    "elem": 1077,
     "middle": 203,
-    "high": 0,
-    "total": 495
+    "high": 1361,
+    "total": 2641
    },
    "academies": {
     "all": 16,
@@ -195,9 +260,34 @@
      "students": 292
     },
     {
+     "name": "인천석남초등학교",
+     "level": "elem",
+     "students": 419
+    },
+    {
+     "name": "인천신석초등학교",
+     "level": "elem",
+     "students": 240
+    },
+    {
+     "name": "인천천마초등학교",
+     "level": "elem",
+     "students": 126
+    },
+    {
      "name": "인천석남중학교",
      "level": "middle",
      "students": 203
+    },
+    {
+     "name": "가정고등학교",
+     "level": "high",
+     "students": 909
+    },
+    {
+     "name": "인천보건고등학교",
+     "level": "high",
+     "students": 452
     }
    ]
   },
@@ -205,9 +295,9 @@
    "name": "신현동",
    "students": {
     "elem": 545,
-    "middle": 862,
+    "middle": 1812,
     "high": 680,
-    "total": 2087
+    "total": 3037
    },
    "academies": {
     "all": 41,
@@ -236,6 +326,11 @@
      "students": 374
     },
     {
+     "name": "인천가현중학교",
+     "level": "middle",
+     "students": 950
+    },
+    {
      "name": "인천신현고등학교",
      "level": "high",
      "students": 680
@@ -245,25 +340,36 @@
   {
    "name": "심곡동",
    "students": {
-    "elem": 0,
+    "elem": 407,
     "middle": 0,
     "high": 0,
-    "total": 0
+    "total": 407
    },
    "academies": {
     "all": 14,
     "math": 3,
     "english": 1
    },
-   "schools": []
+   "schools": [
+    {
+     "name": "인천심곡초등학교",
+     "level": "elem",
+     "students": 174
+    },
+    {
+     "name": "인천양지초등학교",
+     "level": "elem",
+     "students": 233
+    }
+   ]
   },
   {
    "name": "연희동",
    "students": {
-    "elem": 0,
-    "middle": 0,
-    "high": 591,
-    "total": 591
+    "elem": 2397,
+    "middle": 1342,
+    "high": 1460,
+    "total": 5199
    },
    "academies": {
     "all": 4,
@@ -272,9 +378,39 @@
    },
    "schools": [
     {
+     "name": "인천서곶초등학교",
+     "level": "elem",
+     "students": 379
+    },
+    {
+     "name": "인천청라초등학교",
+     "level": "elem",
+     "students": 1198
+    },
+    {
+     "name": "인천초은초등학교",
+     "level": "elem",
+     "students": 820
+    },
+    {
+     "name": "서곶중학교",
+     "level": "middle",
+     "students": 490
+    },
+    {
+     "name": "인천초은중학교",
+     "level": "middle",
+     "students": 852
+    },
+    {
      "name": "인천디자인고등학교",
      "level": "high",
      "students": 591
+    },
+    {
+     "name": "인천초은고등학교",
+     "level": "high",
+     "students": 869
     }
    ]
   },
@@ -282,14 +418,14 @@
    "name": "청라동",
    "students": {
     "elem": 1487,
-    "middle": 2736,
-    "high": 904,
-    "total": 5127
+    "middle": 3247,
+    "high": 1187,
+    "total": 5921
    },
    "academies": {
-    "all": 381,
+    "all": 383,
     "math": 137,
-    "english": 112
+    "english": 114
    },
    "schools": [
     {
@@ -316,6 +452,16 @@
      "name": "인천경연중학교",
      "level": "middle",
      "students": 656
+    },
+    {
+     "name": "인천청호중학교",
+     "level": "middle",
+     "students": 511
+    },
+    {
+     "name": "인천체육고등학교",
+     "level": "high",
+     "students": 283
     },
     {
      "name": "인천청라고등학교",

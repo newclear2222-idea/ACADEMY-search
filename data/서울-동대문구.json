@@ -13,10 +13,10 @@
   {
    "name": "답십리동",
    "students": {
-    "elem": 782,
+    "elem": 1761,
     "middle": 391,
     "high": 0,
-    "total": 1173
+    "total": 2152
    },
    "academies": {
     "all": 55,
@@ -28,6 +28,16 @@
      "name": "서울답십리초등학교",
      "level": "elem",
      "students": 782
+    },
+    {
+     "name": "서울동답초등학교",
+     "level": "elem",
+     "students": 457
+    },
+    {
+     "name": "서울신답초등학교",
+     "level": "elem",
+     "students": 522
     },
     {
      "name": "숭인중학교",
@@ -112,10 +122,10 @@
   {
    "name": "장안동",
    "students": {
-    "elem": 2522,
+    "elem": 2774,
     "middle": 1241,
     "high": 957,
-    "total": 4720
+    "total": 4972
    },
    "academies": {
     "all": 138,
@@ -123,6 +133,11 @@
     "english": 34
    },
    "schools": [
+    {
+     "name": "서울군자초등학교",
+     "level": "elem",
+     "students": 252
+    },
     {
      "name": "서울안평초등학교",
      "level": "elem",
@@ -159,9 +174,9 @@
    "name": "전농동",
    "students": {
     "elem": 2176,
-    "middle": 739,
-    "high": 266,
-    "total": 3181
+    "middle": 1326,
+    "high": 952,
+    "total": 4454
    },
    "academies": {
     "all": 72,
@@ -190,6 +205,11 @@
      "students": 513
     },
     {
+     "name": "동대문중학교",
+     "level": "middle",
+     "students": 587
+    },
+    {
      "name": "전농중학교",
      "level": "middle",
      "students": 406
@@ -203,6 +223,11 @@
      "name": "해성국제컨벤션고등학교",
      "level": "high",
      "students": 266
+    },
+    {
+     "name": "해성여자고등학교",
+     "level": "high",
+     "students": 686
     }
    ]
   },
@@ -281,10 +306,10 @@
   {
    "name": "회기동",
    "students": {
-    "elem": 689,
+    "elem": 2042,
     "middle": 893,
     "high": 375,
-    "total": 1957
+    "total": 3310
    },
    "academies": {
     "all": 5,
@@ -293,9 +318,19 @@
    },
    "schools": [
     {
+     "name": "경희초등학교",
+     "level": "elem",
+     "students": 686
+    },
+    {
      "name": "서울삼육초등학교",
      "level": "elem",
      "students": 689
+    },
+    {
+     "name": "서울청량초등학교",
+     "level": "elem",
+     "students": 667
     },
     {
      "name": "경희여자중학교",
@@ -318,9 +353,9 @@
    "name": "휘경동",
    "students": {
     "elem": 766,
-    "middle": 858,
+    "middle": 1152,
     "high": 1104,
-    "total": 2728
+    "total": 3022
    },
    "academies": {
     "all": 29,
@@ -347,6 +382,11 @@
      "name": "휘경여자중학교",
      "level": "middle",
      "students": 463
+    },
+    {
+     "name": "휘경중학교",
+     "level": "middle",
+     "students": 294
     },
     {
      "name": "휘경여자고등학교",

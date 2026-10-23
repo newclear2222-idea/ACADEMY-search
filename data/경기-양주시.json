@@ -13,10 +13,10 @@
   {
    "name": "고암동",
    "students": {
-    "elem": 533,
+    "elem": 971,
     "middle": 380,
-    "high": 0,
-    "total": 913
+    "high": 836,
+    "total": 2187
    },
    "academies": {
     "all": 13,
@@ -30,6 +30,11 @@
      "students": 411
     },
     {
+     "name": "회천초등학교",
+     "level": "elem",
+     "students": 438
+    },
+    {
      "name": "주원초등학교",
      "level": "elem",
      "students": 122
@@ -38,6 +43,11 @@
      "name": "회천중학교",
      "level": "middle",
      "students": 380
+    },
+    {
+     "name": "덕정고등학교",
+     "level": "high",
+     "students": 836
     }
    ]
   },
@@ -168,10 +178,10 @@
   {
    "name": "덕계동",
    "students": {
-    "elem": 1400,
+    "elem": 2054,
     "middle": 723,
     "high": 0,
-    "total": 2123
+    "total": 2777
    },
    "academies": {
     "all": 34,
@@ -195,6 +205,11 @@
      "students": 789
     },
     {
+     "name": "푸른샘초등학교",
+     "level": "elem",
+     "students": 654
+    },
+    {
      "name": "덕계중학교",
      "level": "middle",
      "students": 723
@@ -205,9 +220,9 @@
    "name": "덕정동",
    "students": {
     "elem": 548,
-    "middle": 597,
+    "middle": 985,
     "high": 0,
-    "total": 1145
+    "total": 1533
    },
    "academies": {
     "all": 22,
@@ -229,6 +244,11 @@
      "name": "고암중학교",
      "level": "middle",
      "students": 597
+    },
+    {
+     "name": "덕정중학교",
+     "level": "middle",
+     "students": 388
     }
    ]
   },
@@ -237,8 +257,8 @@
    "students": {
     "elem": 216,
     "middle": 0,
-    "high": 0,
-    "total": 216
+    "high": 1101,
+    "total": 1317
    },
    "academies": {
     "all": 0,
@@ -250,6 +270,11 @@
      "name": "만송초등학교",
      "level": "elem",
      "students": 216
+    },
+    {
+     "name": "덕현고등학교",
+     "level": "high",
+     "students": 1101
     }
    ]
   },
@@ -324,9 +349,9 @@
    "name": "삼숭동",
    "students": {
     "elem": 2048,
-    "middle": 0,
+    "middle": 779,
     "high": 701,
-    "total": 2749
+    "total": 3528
    },
    "academies": {
     "all": 33,
@@ -350,6 +375,11 @@
      "students": 1069
     },
     {
+     "name": "삼숭중학교",
+     "level": "middle",
+     "students": 779
+    },
+    {
      "name": "양주고등학교",
      "level": "high",
      "students": 701
@@ -361,8 +391,8 @@
    "students": {
     "elem": 4456,
     "middle": 3704,
-    "high": 993,
-    "total": 9153
+    "high": 2181,
+    "total": 10341
    },
    "academies": {
     "all": 182,
@@ -414,6 +444,11 @@
      "name": "옥정고등학교",
      "level": "high",
      "students": 993
+    },
+    {
+     "name": "옥빛고등학교",
+     "level": "high",
+     "students": 1188
     }
    ]
   },

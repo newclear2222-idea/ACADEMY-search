@@ -13,10 +13,10 @@
   {
    "name": "강일동",
    "students": {
-    "elem": 1107,
+    "elem": 2207,
     "middle": 1512,
     "high": 554,
-    "total": 3173
+    "total": 4273
    },
    "academies": {
     "all": 65,
@@ -33,6 +33,11 @@
      "name": "서울강솔초등학교",
      "level": "elem",
      "students": 615
+    },
+    {
+     "name": "서울강빛초등학교",
+     "level": "elem",
+     "students": 1100
     },
     {
      "name": "강명중학교",
@@ -375,10 +380,10 @@
   {
    "name": "암사동",
    "students": {
-    "elem": 987,
+    "elem": 1797,
     "middle": 1255,
-    "high": 0,
-    "total": 2242
+    "high": 648,
+    "total": 3700
    },
    "academies": {
     "all": 109,
@@ -386,6 +391,11 @@
     "english": 25
    },
    "schools": [
+    {
+     "name": "서울명일초등학교",
+     "level": "elem",
+     "students": 810
+    },
     {
      "name": "서울선사초등학교",
      "level": "elem",
@@ -405,6 +415,11 @@
      "name": "신암중학교",
      "level": "middle",
      "students": 538
+    },
+    {
+     "name": "선사고등학교",
+     "level": "high",
+     "students": 648
     }
    ]
   },

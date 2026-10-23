@@ -13,10 +13,10 @@
   {
    "name": "금정동",
    "students": {
-    "elem": 1303,
+    "elem": 1468,
     "middle": 724,
-    "high": 701,
-    "total": 2728
+    "high": 1627,
+    "total": 3819
    },
    "academies": {
     "all": 29,
@@ -28,6 +28,11 @@
      "name": "군포양정초등학교",
      "level": "elem",
      "students": 508
+    },
+    {
+     "name": "군포화산초등학교",
+     "level": "elem",
+     "students": 165
     },
     {
      "name": "금정초등학교",
@@ -53,6 +58,11 @@
      "name": "군포고등학교",
      "level": "high",
      "students": 701
+    },
+    {
+     "name": "흥진고등학교",
+     "level": "high",
+     "students": 926
     }
    ]
   },
@@ -162,17 +172,44 @@
   {
    "name": "도마교동",
    "students": {
-    "elem": 0,
+    "elem": 918,
     "middle": 0,
     "high": 0,
-    "total": 0
+    "total": 918
    },
    "academies": {
     "all": 22,
     "math": 8,
     "english": 9
    },
-   "schools": []
+   "schools": [
+    {
+     "name": "송안초등학교",
+     "level": "elem",
+     "students": 918
+    }
+   ]
+  },
+  {
+   "name": "둔대동",
+   "students": {
+    "elem": 69,
+    "middle": 0,
+    "high": 0,
+    "total": 69
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "둔대초등학교",
+     "level": "elem",
+     "students": 69
+    }
+   ]
   },
   {
    "name": "부곡동",
@@ -214,9 +251,9 @@
    "name": "산동",
    "students": {
     "elem": 3177,
-    "middle": 2806,
+    "middle": 3005,
     "high": 2655,
-    "total": 8638
+    "total": 8837
    },
    "academies": {
     "all": 205,
@@ -278,6 +315,11 @@
      "name": "한얼초등학교",
      "level": "elem",
      "students": 198
+    },
+    {
+     "name": "곡란중학교",
+     "level": "middle",
+     "students": 199
     },
     {
      "name": "궁내중학교",

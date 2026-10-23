@@ -90,17 +90,28 @@
   {
    "name": "교동",
    "students": {
-    "elem": 0,
-    "middle": 0,
+    "elem": 910,
+    "middle": 749,
     "high": 0,
-    "total": 0
+    "total": 1659
    },
    "academies": {
     "all": 34,
     "math": 12,
     "english": 14
    },
-   "schools": []
+   "schools": [
+    {
+     "name": "세종초등학교",
+     "level": "elem",
+     "students": 910
+    },
+    {
+     "name": "세종중학교",
+     "level": "middle",
+     "students": 749
+    }
+   ]
   },
   {
    "name": "금사면",
@@ -277,8 +288,8 @@
    "students": {
     "elem": 0,
     "middle": 520,
-    "high": 0,
-    "total": 520
+    "high": 494,
+    "total": 1014
    },
    "academies": {
     "all": 6,
@@ -290,6 +301,11 @@
      "name": "여흥중학교",
      "level": "middle",
      "students": 520
+    },
+    {
+     "name": "세종고등학교",
+     "level": "high",
+     "students": 494
     }
    ]
   },

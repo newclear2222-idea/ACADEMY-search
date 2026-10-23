@@ -250,9 +250,9 @@
    "name": "금촌동",
    "students": {
     "elem": 2193,
-    "middle": 0,
+    "middle": 714,
     "high": 0,
-    "total": 2193
+    "total": 2907
    },
    "academies": {
     "all": 52,
@@ -289,16 +289,21 @@
      "name": "새금초등학교",
      "level": "elem",
      "students": 316
+    },
+    {
+     "name": "금릉중학교",
+     "level": "middle",
+     "students": 714
     }
    ]
   },
   {
    "name": "다율동",
    "students": {
-    "elem": 447,
-    "middle": 0,
+    "elem": 2307,
+    "middle": 863,
     "high": 372,
-    "total": 819
+    "total": 3542
    },
    "academies": {
     "all": 94,
@@ -312,6 +317,21 @@
      "students": 447
     },
     {
+     "name": "다율초등학교",
+     "level": "elem",
+     "students": 1407
+    },
+    {
+     "name": "청미르초등학교",
+     "level": "elem",
+     "students": 453
+    },
+    {
+     "name": "다율중학교",
+     "level": "middle",
+     "students": 863
+    },
+    {
      "name": "다율고등학교",
      "level": "high",
      "students": 372
@@ -321,10 +341,10 @@
   {
    "name": "동패동",
    "students": {
-    "elem": 2570,
-    "middle": 1042,
+    "elem": 4602,
+    "middle": 2425,
     "high": 0,
-    "total": 3612
+    "total": 7027
    },
    "academies": {
     "all": 195,
@@ -343,6 +363,16 @@
      "students": 1538
     },
     {
+     "name": "석곶초등학교",
+     "level": "elem",
+     "students": 725
+    },
+    {
+     "name": "초롱초등학교",
+     "level": "elem",
+     "students": 1307
+    },
+    {
      "name": "숲노을초등학교",
      "level": "elem",
      "students": 639
@@ -353,19 +383,29 @@
      "students": 322
     },
     {
+     "name": "교하중학교",
+     "level": "middle",
+     "students": 723
+    },
+    {
      "name": "동패중학교",
      "level": "middle",
      "students": 1042
+    },
+    {
+     "name": "심학중학교",
+     "level": "middle",
+     "students": 660
     }
    ]
   },
   {
    "name": "목동동",
    "students": {
-    "elem": 2958,
+    "elem": 3703,
     "middle": 1851,
     "high": 0,
-    "total": 4809
+    "total": 5554
    },
    "academies": {
     "all": 185,
@@ -382,6 +422,11 @@
      "name": "산내초등학교",
      "level": "elem",
      "students": 1918
+    },
+    {
+     "name": "산들초등학교",
+     "level": "elem",
+     "students": 745
     },
     {
      "name": "운정중앙초등학교",
@@ -551,10 +596,10 @@
   {
    "name": "야당동",
    "students": {
-    "elem": 684,
+    "elem": 1598,
     "middle": 924,
-    "high": 0,
-    "total": 1608
+    "high": 1179,
+    "total": 3701
    },
    "academies": {
     "all": 50,
@@ -562,6 +607,11 @@
     "english": 10
    },
    "schools": [
+    {
+     "name": "한빛초등학교",
+     "level": "elem",
+     "students": 914
+    },
     {
      "name": "운정초등학교",
      "level": "elem",
@@ -571,6 +621,11 @@
      "name": "한빛중학교",
      "level": "middle",
      "students": 924
+    },
+    {
+     "name": "한빛고등학교",
+     "level": "high",
+     "students": 1179
     }
    ]
   },
@@ -578,9 +633,9 @@
    "name": "야동동",
    "students": {
     "elem": 0,
-    "middle": 0,
+    "middle": 740,
     "high": 794,
-    "total": 794
+    "total": 1534
    },
    "academies": {
     "all": 2,
@@ -588,6 +643,11 @@
     "english": 1
    },
    "schools": [
+    {
+     "name": "문산중학교",
+     "level": "middle",
+     "students": 740
+    },
     {
      "name": "문산제일고등학교",
      "level": "high",
@@ -598,10 +658,10 @@
   {
    "name": "와동동",
    "students": {
-    "elem": 1001,
-    "middle": 852,
+    "elem": 2539,
+    "middle": 1019,
     "high": 1193,
-    "total": 3046
+    "total": 4751
    },
    "academies": {
     "all": 86,
@@ -615,9 +675,24 @@
      "students": 1001
     },
     {
+     "name": "한가람초등학교",
+     "level": "elem",
+     "students": 824
+    },
+    {
+     "name": "별하람초등학교",
+     "level": "elem",
+     "students": 714
+    },
+    {
      "name": "한가람중학교",
      "level": "middle",
      "students": 852
+    },
+    {
+     "name": "별하람중학교",
+     "level": "middle",
+     "students": 167
     },
     {
      "name": "지산고등학교",

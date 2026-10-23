@@ -14,9 +14,9 @@
    "name": "가운동",
    "students": {
     "elem": 250,
-    "middle": 0,
+    "middle": 215,
     "high": 1011,
-    "total": 1261
+    "total": 1476
    },
    "academies": {
     "all": 3,
@@ -30,6 +30,11 @@
      "students": 250
     },
     {
+     "name": "가운중학교",
+     "level": "middle",
+     "students": 215
+    },
+    {
      "name": "가운고등학교",
      "level": "high",
      "students": 1011
@@ -39,10 +44,10 @@
   {
    "name": "금곡동",
    "students": {
-    "elem": 156,
+    "elem": 281,
     "middle": 183,
     "high": 642,
-    "total": 981
+    "total": 1106
    },
    "academies": {
     "all": 8,
@@ -54,6 +59,11 @@
      "name": "남양주금곡초등학교",
      "level": "elem",
      "students": 156
+    },
+    {
+     "name": "남양주동곡초등학교",
+     "level": "elem",
+     "students": 125
     },
     {
      "name": "금곡중학교",
@@ -70,25 +80,91 @@
   {
    "name": "다산동",
    "students": {
-    "elem": 0,
-    "middle": 0,
-    "high": 0,
-    "total": 0
+    "elem": 8417,
+    "middle": 4016,
+    "high": 1934,
+    "total": 14367
    },
    "academies": {
     "all": 434,
     "math": 162,
     "english": 123
    },
-   "schools": []
+   "schools": [
+    {
+     "name": "남양주미금초등학교",
+     "level": "elem",
+     "students": 438
+    },
+    {
+     "name": "다산가람초등학교",
+     "level": "elem",
+     "students": 1098
+    },
+    {
+     "name": "다산한강초등학교",
+     "level": "elem",
+     "students": 1808
+    },
+    {
+     "name": "남양주다산초등학교",
+     "level": "elem",
+     "students": 1008
+    },
+    {
+     "name": "다산새봄초등학교",
+     "level": "elem",
+     "students": 1636
+    },
+    {
+     "name": "다산하늘초등학교",
+     "level": "elem",
+     "students": 1374
+    },
+    {
+     "name": "다산별빛초등학교",
+     "level": "elem",
+     "students": 1055
+    },
+    {
+     "name": "동화중학교",
+     "level": "middle",
+     "students": 559
+    },
+    {
+     "name": "남양주다산중학교",
+     "level": "middle",
+     "students": 1277
+    },
+    {
+     "name": "다산한강중학교",
+     "level": "middle",
+     "students": 910
+    },
+    {
+     "name": "다산새봄중학교",
+     "level": "middle",
+     "students": 1270
+    },
+    {
+     "name": "도농고등학교",
+     "level": "high",
+     "students": 929
+    },
+    {
+     "name": "남양주다산고등학교",
+     "level": "high",
+     "students": 1005
+    }
+   ]
   },
   {
    "name": "도농동",
    "students": {
     "elem": 1010,
-    "middle": 0,
+    "middle": 623,
     "high": 1385,
-    "total": 2395
+    "total": 3018
    },
    "academies": {
     "all": 9,
@@ -107,6 +183,11 @@
      "students": 508
     },
     {
+     "name": "도농중학교",
+     "level": "middle",
+     "students": 623
+    },
+    {
      "name": "동화고등학교",
      "level": "high",
      "students": 1385
@@ -116,10 +197,10 @@
   {
    "name": "별내동",
    "students": {
-    "elem": 2112,
+    "elem": 3185,
     "middle": 1376,
-    "high": 910,
-    "total": 4398
+    "high": 1706,
+    "total": 6267
    },
    "academies": {
     "all": 153,
@@ -131,6 +212,11 @@
      "name": "화접초등학교",
      "level": "elem",
      "students": 636
+    },
+    {
+     "name": "남양주덕송초등학교",
+     "level": "elem",
+     "students": 1073
     },
     {
      "name": "별가람초등학교",
@@ -156,6 +242,11 @@
      "name": "별내고등학교",
      "level": "high",
      "students": 910
+    },
+    {
+     "name": "별가람고등학교",
+     "level": "high",
+     "students": 796
     }
    ]
   },
@@ -602,10 +693,10 @@
   {
    "name": "평내동",
    "students": {
-    "elem": 1377,
+    "elem": 1802,
     "middle": 1227,
-    "high": 0,
-    "total": 2604
+    "high": 933,
+    "total": 3962
    },
    "academies": {
     "all": 93,
@@ -613,6 +704,11 @@
     "english": 22
    },
    "schools": [
+    {
+     "name": "평내초등학교",
+     "level": "elem",
+     "students": 425
+    },
     {
      "name": "남양주신촌초등학교",
      "level": "elem",
@@ -637,16 +733,21 @@
      "name": "평내중학교",
      "level": "middle",
      "students": 531
+    },
+    {
+     "name": "평내고등학교",
+     "level": "high",
+     "students": 933
     }
    ]
   },
   {
    "name": "호평동",
    "students": {
-    "elem": 1285,
-    "middle": 1722,
-    "high": 1128,
-    "total": 4135
+    "elem": 3178,
+    "middle": 1996,
+    "high": 2091,
+    "total": 7265
    },
    "academies": {
     "all": 105,
@@ -665,6 +766,21 @@
      "students": 702
     },
     {
+     "name": "평동초등학교",
+     "level": "elem",
+     "students": 432
+    },
+    {
+     "name": "구룡초등학교",
+     "level": "elem",
+     "students": 711
+    },
+    {
+     "name": "하랑초등학교",
+     "level": "elem",
+     "students": 750
+    },
+    {
      "name": "호평중학교",
      "level": "middle",
      "students": 798
@@ -673,6 +789,16 @@
      "name": "판곡중학교",
      "level": "middle",
      "students": 924
+    },
+    {
+     "name": "하랑중학교",
+     "level": "middle",
+     "students": 274
+    },
+    {
+     "name": "호평고등학교",
+     "level": "high",
+     "students": 963
     },
     {
      "name": "판곡고등학교",

@@ -35,9 +35,9 @@
    "name": "구미동",
    "students": {
     "elem": 1569,
-    "middle": 340,
+    "middle": 1051,
     "high": 694,
-    "total": 2603
+    "total": 3314
    },
    "academies": {
     "all": 64,
@@ -64,6 +64,11 @@
      "name": "오리초등학교",
      "level": "elem",
      "students": 71
+    },
+    {
+     "name": "불곡중학교",
+     "level": "middle",
+     "students": 711
     },
     {
      "name": "분당구미중학교",
@@ -106,10 +111,10 @@
   {
    "name": "금광동",
    "students": {
-    "elem": 1251,
+    "elem": 1899,
     "middle": 1468,
     "high": 604,
-    "total": 3323
+    "total": 3971
    },
    "academies": {
     "all": 67,
@@ -117,6 +122,11 @@
     "english": 21
    },
    "schools": [
+    {
+     "name": "금상초등학교",
+     "level": "elem",
+     "students": 648
+    },
     {
      "name": "단남초등학교",
      "level": "elem",
@@ -204,9 +214,9 @@
    "name": "대장동",
    "students": {
     "elem": 1276,
-    "middle": 0,
+    "middle": 434,
     "high": 0,
-    "total": 1276
+    "total": 1710
    },
    "academies": {
     "all": 35,
@@ -218,6 +228,11 @@
      "name": "판교대장초등학교",
      "level": "elem",
      "students": 1276
+    },
+    {
+     "name": "판교대장중학교",
+     "level": "middle",
+     "students": 434
     }
    ]
   },
@@ -276,10 +291,10 @@
   {
    "name": "백현동",
    "students": {
-    "elem": 329,
+    "elem": 867,
     "middle": 1140,
     "high": 1196,
-    "total": 2665
+    "total": 3203
    },
    "academies": {
     "all": 29,
@@ -291,6 +306,11 @@
      "name": "성남화랑초등학교",
      "level": "elem",
      "students": 329
+    },
+    {
+     "name": "신백현초등학교",
+     "level": "elem",
+     "students": 538
     },
     {
      "name": "보평중학교",
@@ -317,10 +337,10 @@
   {
    "name": "복정동",
    "students": {
-    "elem": 274,
+    "elem": 453,
     "middle": 0,
     "high": 509,
-    "total": 783
+    "total": 962
    },
    "academies": {
     "all": 4,
@@ -328,6 +348,11 @@
     "english": 0
    },
    "schools": [
+    {
+     "name": "복정초등학교",
+     "level": "elem",
+     "students": 179
+    },
     {
      "name": "위례해솔초등학교",
      "level": "elem",
@@ -343,10 +368,10 @@
   {
    "name": "분당동",
    "students": {
-    "elem": 417,
+    "elem": 1094,
     "middle": 477,
-    "high": 0,
-    "total": 894
+    "high": 912,
+    "total": 2483
    },
    "academies": {
     "all": 7,
@@ -354,6 +379,11 @@
     "english": 2
    },
    "schools": [
+    {
+     "name": "당촌초등학교",
+     "level": "elem",
+     "students": 677
+    },
     {
      "name": "성남장안초등학교",
      "level": "elem",
@@ -363,6 +393,11 @@
      "name": "장안중학교",
      "level": "middle",
      "students": 477
+    },
+    {
+     "name": "분당대진고등학교",
+     "level": "high",
+     "students": 912
     }
    ]
   },
@@ -370,9 +405,9 @@
    "name": "산성동",
    "students": {
     "elem": 168,
-    "middle": 0,
+    "middle": 270,
     "high": 0,
-    "total": 168
+    "total": 438
    },
    "academies": {
     "all": 5,
@@ -384,16 +419,21 @@
      "name": "성남북초등학교",
      "level": "elem",
      "students": 168
+    },
+    {
+     "name": "창성중학교",
+     "level": "middle",
+     "students": 270
     }
    ]
   },
   {
    "name": "삼평동",
    "students": {
-    "elem": 794,
+    "elem": 1616,
     "middle": 657,
-    "high": 0,
-    "total": 1451
+    "high": 597,
+    "total": 2870
    },
    "academies": {
     "all": 39,
@@ -401,6 +441,11 @@
     "english": 12
    },
    "schools": [
+    {
+     "name": "성남송현초등학교",
+     "level": "elem",
+     "students": 822
+    },
     {
      "name": "보평초등학교",
      "level": "elem",
@@ -415,16 +460,21 @@
      "name": "삼평중학교부설방송통신중학교",
      "level": "middle",
      "students": 163
+    },
+    {
+     "name": "판교고등학교",
+     "level": "high",
+     "students": 597
     }
    ]
   },
   {
    "name": "상대원동",
    "students": {
-    "elem": 315,
+    "elem": 687,
     "middle": 0,
     "high": 0,
-    "total": 315
+    "total": 687
    },
    "academies": {
     "all": 13,
@@ -441,16 +491,21 @@
      "name": "상대원초등학교",
      "level": "elem",
      "students": 102
+    },
+    {
+     "name": "중원초등학교",
+     "level": "elem",
+     "students": 372
     }
    ]
   },
   {
    "name": "서현동",
    "students": {
-    "elem": 2284,
+    "elem": 2399,
     "middle": 1755,
     "high": 967,
-    "total": 5006
+    "total": 5121
    },
    "academies": {
     "all": 165,
@@ -472,6 +527,11 @@
      "name": "서현초등학교",
      "level": "elem",
      "students": 843
+    },
+    {
+     "name": "양영초등학교",
+     "level": "elem",
+     "students": 115
     },
     {
      "name": "서현중학교",
@@ -500,8 +560,8 @@
    "students": {
     "elem": 355,
     "middle": 420,
-    "high": 1993,
-    "total": 2768
+    "high": 3142,
+    "total": 3917
    },
    "academies": {
     "all": 37,
@@ -525,6 +585,11 @@
      "students": 216
     },
     {
+     "name": "성남고등학교",
+     "level": "high",
+     "students": 534
+    },
+    {
      "name": "성남여자고등학교",
      "level": "high",
      "students": 583
@@ -533,6 +598,11 @@
      "name": "성일고등학교",
      "level": "high",
      "students": 708
+    },
+    {
+     "name": "동광고등학교",
+     "level": "high",
+     "students": 615
     },
     {
      "name": "성일정보고등학교",
@@ -545,9 +615,9 @@
    "name": "수내동",
    "students": {
     "elem": 3118,
-    "middle": 2029,
+    "middle": 2623,
     "high": 1464,
-    "total": 6611
+    "total": 7205
    },
    "academies": {
     "all": 309,
@@ -579,6 +649,11 @@
      "name": "수내중학교",
      "level": "middle",
      "students": 1048
+    },
+    {
+     "name": "샛별중학교",
+     "level": "middle",
+     "students": 594
     },
     {
      "name": "분당고등학교",
@@ -703,10 +778,10 @@
   {
    "name": "야탑동",
    "students": {
-    "elem": 1222,
-    "middle": 437,
+    "elem": 2208,
+    "middle": 1240,
     "high": 2983,
-    "total": 4642
+    "total": 6431
    },
    "academies": {
     "all": 91,
@@ -728,6 +803,21 @@
      "name": "야탑초등학교",
      "level": "elem",
      "students": 554
+    },
+    {
+     "name": "중탑초등학교",
+     "level": "elem",
+     "students": 391
+    },
+    {
+     "name": "하탑초등학교",
+     "level": "elem",
+     "students": 595
+    },
+    {
+     "name": "야탑중학교",
+     "level": "middle",
+     "students": 803
     },
     {
      "name": "하탑중학교",
@@ -837,10 +927,10 @@
   {
    "name": "은행동",
    "students": {
-    "elem": 537,
+    "elem": 775,
     "middle": 267,
     "high": 0,
-    "total": 804
+    "total": 1042
    },
    "academies": {
     "all": 14,
@@ -848,6 +938,11 @@
     "english": 4
    },
    "schools": [
+    {
+     "name": "상원초등학교",
+     "level": "elem",
+     "students": 238
+    },
     {
      "name": "성남은행초등학교",
      "level": "elem",
@@ -868,10 +963,10 @@
   {
    "name": "이매동",
    "students": {
-    "elem": 1266,
-    "middle": 1327,
+    "elem": 1850,
+    "middle": 1627,
     "high": 2145,
-    "total": 4738
+    "total": 5622
    },
    "academies": {
     "all": 100,
@@ -890,9 +985,19 @@
      "students": 554
     },
     {
+     "name": "이매초등학교",
+     "level": "elem",
+     "students": 584
+    },
+    {
      "name": "매송중학교",
      "level": "middle",
      "students": 425
+    },
+    {
+     "name": "송림중학교",
+     "level": "middle",
+     "students": 300
     },
     {
      "name": "이매중학교",
@@ -1048,8 +1153,8 @@
    "students": {
     "elem": 2781,
     "middle": 1419,
-    "high": 0,
-    "total": 4200
+    "high": 866,
+    "total": 5066
    },
    "academies": {
     "all": 219,
@@ -1086,6 +1191,11 @@
      "name": "위례한빛중학교",
      "level": "middle",
      "students": 1083
+    },
+    {
+     "name": "위례한빛고등학교",
+     "level": "high",
+     "students": 866
     }
    ]
   },
@@ -1179,10 +1289,10 @@
   {
    "name": "하대원동",
    "students": {
-    "elem": 363,
+    "elem": 773,
     "middle": 202,
     "high": 249,
-    "total": 814
+    "total": 1224
    },
    "academies": {
     "all": 24,
@@ -1194,6 +1304,11 @@
      "name": "검단초등학교",
      "level": "elem",
      "students": 363
+    },
+    {
+     "name": "대하초등학교",
+     "level": "elem",
+     "students": 410
     },
     {
      "name": "영성중학교",

@@ -39,10 +39,10 @@
   {
    "name": "고덕동",
    "students": {
-    "elem": 0,
-    "middle": 953,
+    "elem": 3360,
+    "middle": 1843,
     "high": 0,
-    "total": 953
+    "total": 5203
    },
    "academies": {
     "all": 122,
@@ -51,9 +51,29 @@
    },
    "schools": [
     {
+     "name": "고덕초등학교",
+     "level": "elem",
+     "students": 1690
+    },
+    {
+     "name": "율포초등학교",
+     "level": "elem",
+     "students": 991
+    },
+    {
+     "name": "고덕함박초등학교",
+     "level": "elem",
+     "students": 679
+    },
+    {
      "name": "민세중학교",
      "level": "middle",
      "students": 953
+    },
+    {
+     "name": "해창중학교",
+     "level": "middle",
+     "students": 890
     }
    ]
   },
@@ -127,10 +147,10 @@
   {
    "name": "동삭동",
    "students": {
-    "elem": 1539,
+    "elem": 3037,
     "middle": 946,
     "high": 0,
-    "total": 2485
+    "total": 3983
    },
    "academies": {
     "all": 52,
@@ -142,6 +162,11 @@
      "name": "동삭초등학교",
      "level": "elem",
      "students": 659
+    },
+    {
+     "name": "평택서재초등학교",
+     "level": "elem",
+     "students": 1498
     },
     {
      "name": "평택모산초등학교",
@@ -159,9 +184,9 @@
    "name": "비전동",
    "students": {
     "elem": 2673,
-    "middle": 4172,
+    "middle": 4738,
     "high": 5977,
-    "total": 12822
+    "total": 13388
    },
    "academies": {
     "all": 149,
@@ -223,6 +248,11 @@
      "name": "비전중학교",
      "level": "middle",
      "students": 906
+    },
+    {
+     "name": "소사벌중학교",
+     "level": "middle",
+     "students": 566
     },
     {
      "name": "동일공업고등학교",
@@ -336,10 +366,10 @@
   {
    "name": "세교동",
    "students": {
-    "elem": 683,
+    "elem": 2017,
     "middle": 978,
-    "high": 0,
-    "total": 1661
+    "high": 1046,
+    "total": 4041
    },
    "academies": {
     "all": 20,
@@ -358,26 +388,47 @@
      "students": 157
     },
     {
+     "name": "세아초등학교",
+     "level": "elem",
+     "students": 670
+    },
+    {
+     "name": "평택영신초등학교",
+     "level": "elem",
+     "students": 664
+    },
+    {
      "name": "세교중학교",
      "level": "middle",
      "students": 978
+    },
+    {
+     "name": "평택여자고등학교",
+     "level": "high",
+     "students": 1046
     }
    ]
   },
   {
    "name": "소사동",
    "students": {
-    "elem": 0,
+    "elem": 765,
     "middle": 0,
     "high": 0,
-    "total": 0
+    "total": 765
    },
    "academies": {
     "all": 6,
     "math": 3,
     "english": 3
    },
-   "schools": []
+   "schools": [
+    {
+     "name": "평택대동초등학교",
+     "level": "elem",
+     "students": 765
+    }
+   ]
   },
   {
    "name": "신장동",
@@ -515,10 +566,10 @@
   {
    "name": "용이동",
    "students": {
-    "elem": 2530,
-    "middle": 0,
+    "elem": 3621,
+    "middle": 1942,
     "high": 400,
-    "total": 2930
+    "total": 5963
    },
    "academies": {
     "all": 90,
@@ -532,9 +583,24 @@
      "students": 949
     },
     {
+     "name": "현촌초등학교",
+     "level": "elem",
+     "students": 1091
+    },
+    {
      "name": "용죽초등학교",
      "level": "elem",
      "students": 1581
+    },
+    {
+     "name": "평택중학교",
+     "level": "middle",
+     "students": 1120
+    },
+    {
+     "name": "용이중학교",
+     "level": "middle",
+     "students": 822
     },
     {
      "name": "용죽고등학교",
@@ -588,9 +654,9 @@
    "name": "장당동",
    "students": {
     "elem": 621,
-    "middle": 451,
+    "middle": 855,
     "high": 962,
-    "total": 2034
+    "total": 2438
    },
    "academies": {
     "all": 7,
@@ -609,6 +675,11 @@
      "students": 451
     },
     {
+     "name": "장당중학교",
+     "level": "middle",
+     "students": 404
+    },
+    {
      "name": "효명고등학교",
      "level": "high",
      "students": 962
@@ -619,24 +690,35 @@
    "name": "장안동",
    "students": {
     "elem": 0,
-    "middle": 0,
-    "high": 0,
-    "total": 0
+    "middle": 344,
+    "high": 918,
+    "total": 1262
    },
    "academies": {
     "all": 8,
     "math": 3,
     "english": 2
    },
-   "schools": []
+   "schools": [
+    {
+     "name": "은혜중학교",
+     "level": "middle",
+     "students": 344
+    },
+    {
+     "name": "은혜고등학교",
+     "level": "high",
+     "students": 918
+    }
+   ]
   },
   {
    "name": "죽백동",
    "students": {
-    "elem": 165,
-    "middle": 0,
+    "elem": 1677,
+    "middle": 413,
     "high": 0,
-    "total": 165
+    "total": 2090
    },
    "academies": {
     "all": 18,
@@ -648,6 +730,21 @@
      "name": "죽백초등학교",
      "level": "elem",
      "students": 165
+    },
+    {
+     "name": "가내초등학교",
+     "level": "elem",
+     "students": 1042
+    },
+    {
+     "name": "배다리초등학교",
+     "level": "elem",
+     "students": 470
+    },
+    {
+     "name": "배다리중학교",
+     "level": "middle",
+     "students": 413
     }
    ]
   },
@@ -824,17 +921,23 @@
   {
    "name": "칠원동",
    "students": {
-    "elem": 0,
+    "elem": 1126,
     "middle": 0,
     "high": 0,
-    "total": 0
+    "total": 1126
    },
    "academies": {
     "all": 17,
     "math": 8,
     "english": 3
    },
-   "schools": []
+   "schools": [
+    {
+     "name": "평택새빛초등학교",
+     "level": "elem",
+     "students": 1126
+    }
+   ]
   },
   {
    "name": "통복동",

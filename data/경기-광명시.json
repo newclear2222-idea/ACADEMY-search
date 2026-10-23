@@ -98,12 +98,33 @@
    ]
   },
   {
+   "name": "노온사동",
+   "students": {
+    "elem": 36,
+    "middle": 0,
+    "high": 0,
+    "total": 36
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "온신초등학교",
+     "level": "elem",
+     "students": 36
+    }
+   ]
+  },
+  {
    "name": "소하동",
    "students": {
-    "elem": 1929,
-    "middle": 1403,
-    "high": 2644,
-    "total": 5976
+    "elem": 2354,
+    "middle": 1630,
+    "high": 3334,
+    "total": 7318
    },
    "academies": {
     "all": 90,
@@ -122,6 +143,11 @@
      "students": 796
     },
     {
+     "name": "충현초등학교",
+     "level": "elem",
+     "students": 425
+    },
+    {
      "name": "구름산초등학교",
      "level": "elem",
      "students": 791
@@ -130,6 +156,11 @@
      "name": "소하중학교",
      "level": "middle",
      "students": 1040
+    },
+    {
+     "name": "안서중학교",
+     "level": "middle",
+     "students": 227
     },
     {
      "name": "충현중학교",
@@ -147,6 +178,11 @@
      "students": 852
     },
     {
+     "name": "충현고등학교",
+     "level": "high",
+     "students": 690
+    },
+    {
      "name": "운산고등학교",
      "level": "high",
      "students": 807
@@ -162,9 +198,9 @@
    "name": "일직동",
    "students": {
     "elem": 1226,
-    "middle": 0,
+    "middle": 710,
     "high": 0,
-    "total": 1226
+    "total": 1936
    },
    "academies": {
     "all": 72,
@@ -176,6 +212,11 @@
      "name": "빛가온초등학교",
      "level": "elem",
      "students": 1226
+    },
+    {
+     "name": "빛가온중학교",
+     "level": "middle",
+     "students": 710
     }
    ]
   },
@@ -184,8 +225,8 @@
    "students": {
     "elem": 4283,
     "middle": 2798,
-    "high": 880,
-    "total": 7961
+    "high": 1763,
+    "total": 8844
    },
    "academies": {
     "all": 164,
@@ -247,16 +288,21 @@
      "name": "광명고등학교",
      "level": "high",
      "students": 880
+    },
+    {
+     "name": "광명북고등학교",
+     "level": "high",
+     "students": 883
     }
    ]
   },
   {
    "name": "하안동",
    "students": {
-    "elem": 2217,
+    "elem": 2438,
     "middle": 1774,
-    "high": 0,
-    "total": 3991
+    "high": 451,
+    "total": 4663
    },
    "academies": {
     "all": 119,
@@ -278,6 +324,11 @@
      "name": "하안남초등학교",
      "level": "elem",
      "students": 200
+    },
+    {
+     "name": "하안북초등학교",
+     "level": "elem",
+     "students": 221
     },
     {
      "name": "하안초등학교",
@@ -308,6 +359,11 @@
      "name": "하안중학교",
      "level": "middle",
      "students": 461
+    },
+    {
+     "name": "진성고등학교",
+     "level": "high",
+     "students": 451
     }
    ]
   }

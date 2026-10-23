@@ -15,8 +15,8 @@
    "students": {
     "elem": 2166,
     "middle": 1122,
-    "high": 0,
-    "total": 3288
+    "high": 632,
+    "total": 3920
    },
    "academies": {
     "all": 67,
@@ -38,16 +38,21 @@
      "name": "갈매중학교",
      "level": "middle",
      "students": 1122
+    },
+    {
+     "name": "갈매고등학교",
+     "level": "high",
+     "students": 632
     }
    ]
   },
   {
    "name": "교문동",
    "students": {
-    "elem": 1378,
+    "elem": 1470,
     "middle": 953,
     "high": 556,
-    "total": 2887
+    "total": 2979
    },
    "academies": {
     "all": 22,
@@ -59,6 +64,11 @@
      "name": "교문초등학교",
      "level": "elem",
      "students": 333
+    },
+    {
+     "name": "도림초등학교",
+     "level": "elem",
+     "students": 92
     },
     {
      "name": "백문초등학교",
@@ -90,25 +100,31 @@
   {
    "name": "사노동",
    "students": {
-    "elem": 0,
+    "elem": 49,
     "middle": 0,
     "high": 0,
-    "total": 0
+    "total": 49
    },
    "academies": {
     "all": 1,
     "math": 0,
     "english": 1
    },
-   "schools": []
+   "schools": [
+    {
+     "name": "내양초등학교",
+     "level": "elem",
+     "students": 49
+    }
+   ]
   },
   {
    "name": "수택동",
    "students": {
-    "elem": 372,
-    "middle": 0,
+    "elem": 756,
+    "middle": 151,
     "high": 1243,
-    "total": 1615
+    "total": 2150
    },
    "academies": {
     "all": 113,
@@ -117,9 +133,19 @@
    },
    "schools": [
     {
+     "name": "구리초등학교",
+     "level": "elem",
+     "students": 384
+    },
+    {
      "name": "부양초등학교",
      "level": "elem",
      "students": 372
+    },
+    {
+     "name": "구리중학교",
+     "level": "middle",
+     "students": 151
     },
     {
      "name": "구리고등학교",
@@ -137,9 +163,9 @@
    "name": "인창동",
    "students": {
     "elem": 2114,
-    "middle": 820,
+    "middle": 1508,
     "high": 689,
-    "total": 3623
+    "total": 4311
    },
    "academies": {
     "all": 110,
@@ -173,6 +199,11 @@
      "students": 207
     },
     {
+     "name": "동구중학교",
+     "level": "middle",
+     "students": 688
+    },
+    {
      "name": "인창중학교",
      "level": "middle",
      "students": 820
@@ -187,10 +218,10 @@
   {
    "name": "토평동",
    "students": {
-    "elem": 316,
+    "elem": 530,
     "middle": 601,
-    "high": 456,
-    "total": 1373
+    "high": 1101,
+    "total": 2232
    },
    "academies": {
     "all": 18,
@@ -202,6 +233,11 @@
      "name": "수택초등학교",
      "level": "elem",
      "students": 316
+    },
+    {
+     "name": "토평초등학교",
+     "level": "elem",
+     "students": 214
     },
     {
      "name": "구리여자중학교",
@@ -217,6 +253,11 @@
      "name": "구리여자고등학교",
      "level": "high",
      "students": 456
+    },
+    {
+     "name": "토평고등학교",
+     "level": "high",
+     "students": 645
     }
    ]
   }

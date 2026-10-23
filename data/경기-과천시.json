@@ -13,10 +13,10 @@
   {
    "name": "갈현동",
    "students": {
-    "elem": 1266,
-    "middle": 0,
+    "elem": 1798,
+    "middle": 442,
     "high": 548,
-    "total": 1814
+    "total": 2788
    },
    "academies": {
     "all": 24,
@@ -28,6 +28,16 @@
      "name": "과천갈현초등학교",
      "level": "elem",
      "students": 1266
+    },
+    {
+     "name": "과천율목초등학교",
+     "level": "elem",
+     "students": 532
+    },
+    {
+     "name": "과천율목중학교",
+     "level": "middle",
+     "students": 442
     },
     {
      "name": "과천중앙고등학교",
@@ -54,10 +64,10 @@
   {
    "name": "별양동",
    "students": {
-    "elem": 1630,
-    "middle": 0,
-    "high": 0,
-    "total": 1630
+    "elem": 2440,
+    "middle": 1144,
+    "high": 504,
+    "total": 4088
    },
    "academies": {
     "all": 66,
@@ -69,6 +79,21 @@
      "name": "문원초등학교",
      "level": "elem",
      "students": 1630
+    },
+    {
+     "name": "청계초등학교",
+     "level": "elem",
+     "students": 810
+    },
+    {
+     "name": "과천문원중학교",
+     "level": "middle",
+     "students": 1144
+    },
+    {
+     "name": "과천고등학교",
+     "level": "high",
+     "students": 504
     }
    ]
   },
@@ -111,10 +136,10 @@
   {
    "name": "중앙동",
    "students": {
-    "elem": 0,
+    "elem": 649,
     "middle": 737,
-    "high": 717,
-    "total": 1454
+    "high": 991,
+    "total": 2377
    },
    "academies": {
     "all": 76,
@@ -123,9 +148,19 @@
    },
    "schools": [
     {
+     "name": "과천초등학교",
+     "level": "elem",
+     "students": 649
+    },
+    {
      "name": "과천중학교",
      "level": "middle",
      "students": 737
+    },
+    {
+     "name": "과천여자고등학교",
+     "level": "high",
+     "students": 274
     },
     {
      "name": "과천외국어고등학교",
