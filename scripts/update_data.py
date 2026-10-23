@@ -114,8 +114,6 @@ LEVEL_PATTERNS = {
     "high": re.compile(r"고등|고교|고[0-9]|(^|[(\s])고([)\s~]|$)|수능"),
 }
 
-# 학원 이름에서 지점 표시를 떼어 같은 브랜드를 묶습니다. 예: 'OO수학학원 중계점', 'OO학원(대치관)'
-BRANCH_SUFFIX = re.compile(r"\s*(\([^)]*\)|[가-힣A-Za-z0-9]+(점|캠퍼스|관|분원|본원))$")
 TOP_ACADEMIES = 5
 BRAND_MIN_LEN = 4
 
@@ -386,10 +384,10 @@ def capacity_of(row):
 
 
 def brand_of(name):
-    name = re.sub(r"\s+", " ", name or "").strip()
-    for _ in range(2):
-        name = BRANCH_SUFFIX.sub("", name).strip()
-    return re.sub(r"(학원|교습소|어학원)$", "", name).replace(" ", "")
+    """괄호와 띄어쓰기, 끝의 '학원'·'교습소'를 뗀 이름. 지점 구분은 count_branches가 앞부분으로 합니다."""
+    name = re.sub(r"\([^)]*\)", "", name or "")
+    name = re.sub(r"(어학원|학원|교습소)$", "", name.replace(" ", "").strip())
+    return name
 
 
 def count_branches(names):
@@ -561,9 +559,9 @@ def save(outputs, provinces):
 
 
 def main():
-    neis_key = os.environ.get("NEIS_API_KEY")
-    schoolinfo_key = os.environ.get("SCHOOLINFO_API_KEY")
-    seoul_key = os.environ.get("SEOUL_API_KEY")
+    neis_key = (os.environ.get("NEIS_API_KEY") or "").strip()
+    schoolinfo_key = (os.environ.get("SCHOOLINFO_API_KEY") or "").strip()
+    seoul_key = (os.environ.get("SEOUL_API_KEY") or "").strip()
     if not neis_key or not schoolinfo_key:
         sys.exit("NEIS_API_KEY와 SCHOOLINFO_API_KEY 환경변수가 필요합니다.")
 
