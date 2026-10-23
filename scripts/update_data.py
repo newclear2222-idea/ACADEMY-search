@@ -24,6 +24,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 
 NEIS_URL = "https://open.neis.go.kr/hub/acaInsTiInfo"
+NEIS_SCHOOL_URL = "https://open.neis.go.kr/hub/schoolInfo"
 SCHOOLINFO_URL = "https://www.schoolinfo.go.kr/openApi.do"
 
 # office: 나이스 시도교육청 코드, sido/sgg: 학교알리미 시도·시군구 코드
@@ -86,28 +87,48 @@ def get_json(url, params, tries=4):
             time.sleep(2 ** (attempt + 1))
 
 
-def fetch_academies(key, office):
-    """나이스 학원교습소정보에서 시도교육청 관할 학원·교습소 전체를 받습니다."""
+def neis_rows(url, service, key, params):
+    """나이스 API를 1,000건씩 끝까지 받습니다."""
     rows = []
     page = 1
     while True:
-        data = get_json(NEIS_URL, {
-            "KEY": key, "Type": "json", "pIndex": page, "pSize": 1000,
-            "ATPT_OFCDC_SC_CODE": office,
-        })
-        if "acaInsTiInfo" not in data:
+        data = get_json(url, {"KEY": key, "Type": "json", "pIndex": page, "pSize": 1000, **params})
+        if service not in data:
             result = data.get("RESULT", {})
             if result.get("CODE") == "INFO-200":  # 해당하는 데이터가 없습니다
                 break
             sys.exit(f"나이스 API 오류: {result.get('CODE')} {result.get('MESSAGE')}")
-        head, body = data["acaInsTiInfo"]
+        head, body = data[service]
         total = head["head"][0]["list_total_count"]
         rows.extend(body["row"])
         if len(rows) >= total:
             break
         page += 1
+    return rows
+
+
+def fetch_academies(key, office):
+    """나이스 학원교습소정보에서 시도교육청 관할 학원·교습소 전체를 받습니다."""
+    rows = neis_rows(NEIS_URL, "acaInsTiInfo", key, {"ATPT_OFCDC_SC_CODE": office})
     print(f"  학원·교습소 {len(rows)}곳을 받았습니다.")
     return rows
+
+
+def fetch_neis_school_addresses(key, office):
+    """나이스 학교기본정보의 학교 주소를 (구·시·군, 학교명)으로 찾을 수 있게 모읍니다.
+
+    학교알리미에 주소가 없는 학교(예: 2026년 새 구가 생긴 화성시)를 채우는 데 씁니다.
+    """
+    addresses = {}
+    for row in neis_rows(NEIS_SCHOOL_URL, "schoolInfo", key, {"ATPT_OFCDC_SC_CODE": office}):
+        address = f"{row.get('ORG_RDNMA') or ''} {row.get('ORG_RDNDA') or ''}".strip()
+        region = region_of(address)
+        if region:
+            name = row.get("SCHUL_NM")
+            addresses[(region[1], name)] = address
+            # 지역을 모를 때를 위해 학교 이름만으로도 찾게 하되, 같은 이름이 여럿이면 쓰지 않습니다.
+            addresses[("", name)] = None if ("", name) in addresses else address
+    return addresses
 
 
 def schoolinfo_list(key, params):
@@ -115,7 +136,7 @@ def schoolinfo_list(key, params):
     return data.get("list", []) if data.get("resultCode") == "success" else []
 
 
-def fetch_schools(key, province):
+def fetch_schools(key, province, neis_addresses):
     """학교알리미에서 학교 주소(apiType 0)와 학교별 학생 수(apiType 09)를 받습니다.
 
     올해 공시가 아직 없으면 작년 공시를 씁니다.
@@ -145,15 +166,17 @@ def fetch_schools(key, province):
                     students = to_int(row.get("COL_S_SUM") or row.get("COL_SUM_S4"))
                     if code in schools or not students:
                         continue
-                    schools[code] = {
-                        "name": row.get("SCHUL_NM", ""),
-                        "level": level,
-                        "address": address_of.get(code) or row.get("ADRCD_NM", ""),
-                        "students": students,
-                    }
+                    name = row.get("SCHUL_NM", "")
+                    address = address_of.get(code)
+                    if not address:
+                        region = region_of(row.get("ADRCD_NM", ""))
+                        address = (neis_addresses.get((region[1] if region else "", name))
+                                   or neis_addresses.get(("", name)) or "")
+                    schools[code] = {"name": name, "level": level, "address": address, "students": students}
             print(f"    {year}년 {sgg or '시도 전체'}: 새 학교 {len(schools) - before}곳")
         if schools:
-            print(f"  {year}년 공시 기준 학교 {len(schools)}곳을 받았습니다.")
+            no_address = sum(1 for school in schools.values() if not area_of(school["address"]))
+            print(f"  {year}년 공시 기준 학교 {len(schools)}곳을 받았습니다 (동을 못 찾은 학교 {no_address}곳).")
             return list(schools.values()), year
     sys.exit(f"{province}: 학교알리미에서 학생 수를 받지 못했습니다. 인증키를 확인해 주세요.")
 
@@ -320,7 +343,8 @@ def main():
     for province in provinces:
         print(f"{province}")
         academies = fetch_academies(neis_key, PROVINCES[province]["office"])
-        schools, year = fetch_schools(schoolinfo_key, province)
+        neis_addresses = fetch_neis_school_addresses(neis_key, PROVINCES[province]["office"])
+        schools, year = fetch_schools(schoolinfo_key, province, neis_addresses)
         built = build(province, academies, schools, year)
         if not built:
             sys.exit(f"{province}: 지역별로 묶인 결과가 없어 저장하지 않습니다. 주소 형식을 확인해 주세요.")

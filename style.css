@@ -11,7 +11,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #161618;
     --surface: #1f1f22;
     --text: #ececef;
@@ -21,7 +21,21 @@
     --accent-soft: #24365c;
     --good: #4ade80;
     --warn: #fbbf24;
+    color-scheme: dark;
   }
+}
+
+:root[data-theme="dark"] {
+  --bg: #161618;
+  --surface: #1f1f22;
+  --text: #ececef;
+  --muted: #a0a0a8;
+  --line: #34343a;
+  --accent: #7aa7ff;
+  --accent-soft: #24365c;
+  --good: #4ade80;
+  --warn: #fbbf24;
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -38,7 +52,8 @@ body {
 .top, main {
   max-width: 880px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
 }
 
 .top { padding-top: 32px; }
