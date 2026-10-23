@@ -2,6 +2,7 @@ const SUBJECT_LABELS = { math: "수학 학원", english: "영어 학원", all: "
 const LEVEL_LABELS = { total: "초·중·고 학생", elem: "초등학생", middle: "중학생", high: "고등학생" };
 
 const els = {
+  province: document.getElementById("province"),
   region: document.getElementById("region"),
   subject: document.getElementById("subject"),
   level: document.getElementById("level"),
@@ -50,7 +51,7 @@ function render(data) {
   els.summary.innerHTML = `
     <div><div class="label">${data.region} ${LEVEL_LABELS[level]}</div><div class="value">${fmt(totalStudents)}명</div></div>
     <div><div class="label">${SUBJECT_LABELS[subject]}</div><div class="value">${fmt(totalAcademies)}곳</div></div>
-    <div><div class="label">구 평균, 학원 1곳당 학생</div><div class="value">${Number.isFinite(average) ? fmt(Math.round(average)) + "명" : "-"}</div></div>`;
+    <div><div class="label">지역 평균, 학원 1곳당 학생</div><div class="value">${Number.isFinite(average) ? fmt(Math.round(average)) + "명" : "-"}</div></div>`;
 
   const finite = rows.filter((r) => Number.isFinite(r.ratio)).map((r) => r.ratio);
   const max = Math.max(...finite, 1);
@@ -114,15 +115,19 @@ async function init() {
     return;
   }
   const provinces = [...new Set(regions.map((r) => r.province))];
-  els.region.innerHTML = provinces
-    .map((p) => {
-      const options = regions
-        .filter((r) => r.province === p)
-        .map((r) => `<option value="${r.id}">${r.name.replace(p + " ", "")}</option>`)
-        .join("");
-      return `<optgroup label="${p}">${options}</optgroup>`;
-    })
-    .join("");
+  els.province.innerHTML = provinces.map((p) => `<option value="${p}">${p}</option>`).join("");
+  const fillRegions = () => {
+    const p = els.province.value;
+    els.region.innerHTML = regions
+      .filter((r) => r.province === p)
+      .map((r) => `<option value="${r.id}">${r.name.replace(p + " ", "")}</option>`)
+      .join("");
+  };
+  fillRegions();
+  els.province.addEventListener("change", () => {
+    fillRegions();
+    update();
+  });
   els.result.hidden = false;
   for (const el of [els.region, els.subject, els.level]) el.addEventListener("change", update);
   await update();
