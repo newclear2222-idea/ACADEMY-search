@@ -10,6 +10,7 @@
   "수강료: 학원이 교육청에 등록한 1인당 교습비",
   "대표 학원: 교육청에 등록한 정원이 큰 순서"
  ],
+ "salesPeriod": "",
  "unmatchedAcademies": 0,
  "fees": {
   "all": {
@@ -316,7 +317,7 @@
      "kind": "학원",
      "capacity": 40,
      "since": 2023,
-     "branches": 2,
+     "branches": 1,
      "subjects": [
       "math"
      ]
@@ -407,7 +408,7 @@
      "kind": "교습소",
      "capacity": 12,
      "since": 2021,
-     "branches": 5,
+     "branches": 1,
      "subjects": [
       "math"
      ]
@@ -417,7 +418,7 @@
      "kind": "교습소",
      "capacity": 4,
      "since": 2025,
-     "branches": 1,
+     "branches": 50,
      "subjects": [
       "english"
      ]
@@ -494,16 +495,7 @@
      ]
     }
    },
-   "top": [
-    {
-     "name": "입시의기세입시컨설팅원격학원",
-     "kind": "학원",
-     "capacity": 999,
-     "since": 2024,
-     "branches": 1,
-     "subjects": []
-    }
-   ]
+   "top": []
   },
   {
    "name": "순화동",
@@ -757,7 +749,7 @@
      "kind": "학원",
      "capacity": 690,
      "since": 2010,
-     "branches": 1,
+     "branches": 16,
      "subjects": []
     },
     {
@@ -791,7 +783,7 @@
      "kind": "학원",
      "capacity": 96,
      "since": 2021,
-     "branches": 1,
+     "branches": 2,
      "subjects": [
       "math"
      ]
@@ -801,7 +793,7 @@
      "kind": "학원",
      "capacity": 86,
      "since": 2018,
-     "branches": 1,
+     "branches": 2,
      "subjects": [
       "math"
      ]
@@ -841,7 +833,7 @@
      "kind": "학원",
      "capacity": 68,
      "since": 2026,
-     "branches": 1,
+     "branches": 15,
      "subjects": [
       "english"
      ]
@@ -1036,16 +1028,7 @@
      ]
     }
    },
-   "top": [
-    {
-     "name": "아이캔두클래스원격교습학원",
-     "kind": "학원",
-     "capacity": 0,
-     "since": 2023,
-     "branches": 1,
-     "subjects": []
-    }
-   ]
+   "top": []
   },
   {
    "name": "인현동2가",
@@ -1378,7 +1361,7 @@
      "kind": "교습소",
      "capacity": 40,
      "since": 2019,
-     "branches": 2,
+     "branches": 1,
      "subjects": [
       "math"
      ]
@@ -1388,7 +1371,7 @@
      "kind": "교습소",
      "capacity": 4,
      "since": 2024,
-     "branches": 1,
+     "branches": 2,
      "subjects": [
       "english"
      ]
@@ -1471,7 +1454,7 @@
      "kind": "학원",
      "capacity": 200,
      "since": 2022,
-     "branches": 1,
+     "branches": 2,
      "subjects": []
     },
     {

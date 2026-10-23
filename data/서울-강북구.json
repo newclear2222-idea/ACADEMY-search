@@ -10,6 +10,7 @@
   "수강료: 학원이 교육청에 등록한 1인당 교습비",
   "대표 학원: 교육청에 등록한 정원이 큰 순서"
  ],
+ "salesPeriod": "",
  "unmatchedAcademies": 1,
  "fees": {
   "all": {
@@ -259,7 +260,7 @@
      "kind": "학원",
      "capacity": 633,
      "since": 2019,
-     "branches": 1,
+     "branches": 4,
      "subjects": [
       "math"
      ]
@@ -279,7 +280,7 @@
      "kind": "학원",
      "capacity": 474,
      "since": 2021,
-     "branches": 1,
+     "branches": 8,
      "subjects": [
       "math"
      ]
@@ -309,7 +310,7 @@
      "kind": "학원",
      "capacity": 414,
      "since": 2018,
-     "branches": 1,
+     "branches": 2,
      "subjects": [
       "english"
      ]
@@ -319,7 +320,7 @@
      "kind": "학원",
      "capacity": 385,
      "since": 2020,
-     "branches": 1,
+     "branches": 96,
      "subjects": [
       "english"
      ]
@@ -448,7 +449,7 @@
      "kind": "학원",
      "capacity": 840,
      "since": 2022,
-     "branches": 5,
+     "branches": 8,
      "subjects": [
       "english"
      ]
@@ -458,7 +459,7 @@
      "kind": "학원",
      "capacity": 812,
      "since": 2019,
-     "branches": 4,
+     "branches": 1,
      "subjects": []
     },
     {
@@ -482,7 +483,7 @@
      "kind": "학원",
      "capacity": 474,
      "since": 2024,
-     "branches": 1,
+     "branches": 15,
      "subjects": [
       "english"
      ]
@@ -492,7 +493,7 @@
      "kind": "학원",
      "capacity": 360,
      "since": 2013,
-     "branches": 1,
+     "branches": 4,
      "subjects": [
       "english",
       "math"
@@ -503,7 +504,7 @@
      "kind": "학원",
      "capacity": 156,
      "since": 2015,
-     "branches": 2,
+     "branches": 1,
      "subjects": [
       "math"
      ]
@@ -513,7 +514,7 @@
      "kind": "교습소",
      "capacity": 126,
      "since": 2008,
-     "branches": 2,
+     "branches": 1,
      "subjects": [
       "math"
      ]
@@ -523,7 +524,7 @@
      "kind": "교습소",
      "capacity": 36,
      "since": 2017,
-     "branches": 1,
+     "branches": 2,
      "subjects": [
       "math"
      ]
@@ -543,7 +544,7 @@
      "kind": "교습소",
      "capacity": 24,
      "since": 2022,
-     "branches": 2,
+     "branches": 1,
      "subjects": [
       "english"
      ]
@@ -916,7 +917,7 @@
      "kind": "학원",
      "capacity": 909,
      "since": 1993,
-     "branches": 3,
+     "branches": 1,
      "subjects": []
     },
     {
@@ -924,7 +925,7 @@
      "kind": "학원",
      "capacity": 708,
      "since": 2022,
-     "branches": 1,
+     "branches": 28,
      "subjects": [
       "english"
      ]
@@ -934,7 +935,18 @@
      "kind": "학원",
      "capacity": 680,
      "since": 2023,
-     "branches": 1,
+     "branches": 2,
+     "subjects": [
+      "english",
+      "math"
+     ]
+    },
+    {
+     "name": "삼성영어셀레나일대일수학수유학원",
+     "kind": "학원",
+     "capacity": 648,
+     "since": 2023,
+     "branches": 3,
      "subjects": [
       "english",
       "math"
@@ -947,17 +959,6 @@
      "since": 2022,
      "branches": 1,
      "subjects": []
-    },
-    {
-     "name": "삼성영어셀레나일대일수학수유학원",
-     "kind": "학원",
-     "capacity": 648,
-     "since": 2023,
-     "branches": 1,
-     "subjects": [
-      "english",
-      "math"
-     ]
     },
     {
      "name": "메이트영어수학학원",
@@ -985,7 +986,7 @@
      "kind": "학원",
      "capacity": 365,
      "since": 2011,
-     "branches": 1,
+     "branches": 16,
      "subjects": [
       "english"
      ]

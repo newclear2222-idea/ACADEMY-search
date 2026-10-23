@@ -10,6 +10,7 @@
   "수강료: 학원이 교육청에 등록한 1인당 교습비",
   "대표 학원: 교육청에 등록한 정원이 큰 순서"
  ],
+ "salesPeriod": "",
  "unmatchedAcademies": 5,
  "fees": {
   "all": {
@@ -195,21 +196,13 @@
      "kind": "학원",
      "capacity": 865,
      "since": 2022,
-     "branches": 1,
+     "branches": 2,
      "subjects": []
     },
     {
      "name": "은평대치명인학원",
      "kind": "학원",
      "capacity": 865,
-     "since": 2021,
-     "branches": 1,
-     "subjects": []
-    },
-    {
-     "name": "목동사과나무학원",
-     "kind": "학원",
-     "capacity": 820,
      "since": 2021,
      "branches": 2,
      "subjects": []
@@ -219,7 +212,7 @@
      "kind": "학원",
      "capacity": 820,
      "since": 2022,
-     "branches": 1,
+     "branches": 13,
      "subjects": []
     },
     {
@@ -227,7 +220,15 @@
      "kind": "학원",
      "capacity": 820,
      "since": 2023,
-     "branches": 1,
+     "branches": 13,
+     "subjects": []
+    },
+    {
+     "name": "목동사과나무국영수전문학원",
+     "kind": "학원",
+     "capacity": 820,
+     "since": 2022,
+     "branches": 13,
      "subjects": []
     },
     {
@@ -276,7 +277,7 @@
      "kind": "학원",
      "capacity": 291,
      "since": 2019,
-     "branches": 1,
+     "branches": 2,
      "subjects": [
       "english"
      ]
@@ -316,7 +317,7 @@
      "kind": "학원",
      "capacity": 105,
      "since": 2003,
-     "branches": 1,
+     "branches": 2,
      "subjects": [
       "english"
      ]
@@ -445,7 +446,7 @@
      "kind": "학원",
      "capacity": 968,
      "since": 2007,
-     "branches": 1,
+     "branches": 2,
      "subjects": [
       "math"
      ]
@@ -463,7 +464,7 @@
      "kind": "학원",
      "capacity": 744,
      "since": 2012,
-     "branches": 1,
+     "branches": 2,
      "subjects": []
     },
     {
@@ -501,7 +502,7 @@
      "kind": "학원",
      "capacity": 237,
      "since": 2018,
-     "branches": 4,
+     "branches": 2,
      "subjects": [
       "math"
      ]
@@ -511,7 +512,7 @@
      "kind": "학원",
      "capacity": 120,
      "since": 1989,
-     "branches": 1,
+     "branches": 2,
      "subjects": [
       "english",
       "math"
@@ -522,7 +523,7 @@
      "kind": "학원",
      "capacity": 76,
      "since": 2021,
-     "branches": 1,
+     "branches": 20,
      "subjects": [
       "english"
      ]
@@ -532,7 +533,7 @@
      "kind": "학원",
      "capacity": 60,
      "since": 2020,
-     "branches": 1,
+     "branches": 2,
      "subjects": [
       "english"
      ]
@@ -542,7 +543,7 @@
      "kind": "교습소",
      "capacity": 45,
      "since": 2004,
-     "branches": 1,
+     "branches": 20,
      "subjects": [
       "english"
      ]
@@ -552,7 +553,7 @@
      "kind": "교습소",
      "capacity": 28,
      "since": 2015,
-     "branches": 2,
+     "branches": 7,
      "subjects": [
       "english"
      ]
@@ -651,7 +652,7 @@
      "kind": "학원",
      "capacity": 632,
      "since": 2025,
-     "branches": 2,
+     "branches": 1,
      "subjects": [
       "math"
      ]
@@ -679,7 +680,7 @@
      "kind": "학원",
      "capacity": 370,
      "since": 2024,
-     "branches": 1,
+     "branches": 2,
      "subjects": [
       "english",
       "math"
@@ -690,7 +691,7 @@
      "kind": "학원",
      "capacity": 360,
      "since": 2025,
-     "branches": 1,
+     "branches": 2,
      "subjects": [
       "math"
      ]
@@ -726,20 +727,20 @@
      ]
     },
     {
-     "name": "제니쌤영어교습소",
+     "name": "튼튼영어마스터클럽은평녹번영어교습소",
      "kind": "교습소",
      "capacity": 36,
-     "since": 2023,
-     "branches": 2,
+     "since": 2014,
+     "branches": 16,
      "subjects": [
       "english"
      ]
     },
     {
-     "name": "튼튼영어마스터클럽은평녹번영어교습소",
+     "name": "제니쌤영어교습소",
      "kind": "교습소",
      "capacity": 36,
-     "since": 2014,
+     "since": 2023,
      "branches": 1,
      "subjects": [
       "english"
@@ -862,7 +863,7 @@
      "kind": "학원",
      "capacity": 357,
      "since": 2007,
-     "branches": 1,
+     "branches": 2,
      "subjects": []
     },
     {
@@ -870,7 +871,7 @@
      "kind": "학원",
      "capacity": 320,
      "since": 2021,
-     "branches": 1,
+     "branches": 3,
      "subjects": []
     },
     {
@@ -886,7 +887,7 @@
      "kind": "교습소",
      "capacity": 70,
      "since": 2018,
-     "branches": 1,
+     "branches": 2,
      "subjects": [
       "english"
      ]
@@ -896,7 +897,7 @@
      "kind": "교습소",
      "capacity": 42,
      "since": 2014,
-     "branches": 1,
+     "branches": 13,
      "subjects": [
       "english"
      ]
@@ -1091,14 +1092,6 @@
    },
    "top": [
     {
-     "name": "차오르다원격학원",
-     "kind": "학원",
-     "capacity": 9990,
-     "since": 2020,
-     "branches": 1,
-     "subjects": []
-    },
-    {
      "name": "켈리스리딩영어학원",
      "kind": "학원",
      "capacity": 512,
@@ -1123,7 +1116,7 @@
      "kind": "학원",
      "capacity": 285,
      "since": 2011,
-     "branches": 2,
+     "branches": 1,
      "subjects": []
     },
     {
@@ -1139,7 +1132,7 @@
      "kind": "학원",
      "capacity": 172,
      "since": 2025,
-     "branches": 1,
+     "branches": 2,
      "subjects": [
       "math"
      ]
@@ -1159,7 +1152,7 @@
      "kind": "학원",
      "capacity": 120,
      "since": 2022,
-     "branches": 1,
+     "branches": 4,
      "subjects": [
       "english"
      ]
@@ -1209,7 +1202,7 @@
      "kind": "교습소",
      "capacity": 32,
      "since": 2018,
-     "branches": 2,
+     "branches": 1,
      "subjects": [
       "english"
      ]
@@ -1298,7 +1291,7 @@
      "kind": "학원",
      "capacity": 304,
      "since": 2025,
-     "branches": 1,
+     "branches": 2,
      "subjects": []
     },
     {
@@ -1306,7 +1299,7 @@
      "kind": "학원",
      "capacity": 280,
      "since": 2026,
-     "branches": 1,
+     "branches": 2,
      "subjects": [
       "english"
      ]
@@ -1327,7 +1320,7 @@
      "kind": "학원",
      "capacity": 32,
      "since": 2009,
-     "branches": 2,
+     "branches": 81,
      "subjects": []
     },
     {
@@ -1335,7 +1328,7 @@
      "kind": "교습소",
      "capacity": 27,
      "since": 2021,
-     "branches": 1,
+     "branches": 6,
      "subjects": []
     },
     {
@@ -1353,7 +1346,7 @@
      "kind": "교습소",
      "capacity": 8,
      "since": 2023,
-     "branches": 1,
+     "branches": 15,
      "subjects": [
       "english"
      ]
@@ -1363,7 +1356,7 @@
      "kind": "교습소",
      "capacity": 7,
      "since": 2025,
-     "branches": 1,
+     "branches": 2,
      "subjects": [
       "math"
      ]
@@ -1373,7 +1366,7 @@
      "kind": "교습소",
      "capacity": 6,
      "since": 2023,
-     "branches": 1,
+     "branches": 2,
      "subjects": [
       "english"
      ]
@@ -1502,7 +1495,7 @@
      "kind": "학원",
      "capacity": 1635,
      "since": 2018,
-     "branches": 1,
+     "branches": 7,
      "subjects": []
     },
     {
@@ -1510,7 +1503,7 @@
      "kind": "학원",
      "capacity": 1000,
      "since": 2007,
-     "branches": 2,
+     "branches": 1,
      "subjects": []
     },
     {
@@ -1538,7 +1531,7 @@
      "kind": "학원",
      "capacity": 246,
      "since": 2026,
-     "branches": 2,
+     "branches": 1,
      "subjects": []
     },
     {
@@ -1546,7 +1539,7 @@
      "kind": "학원",
      "capacity": 166,
      "since": 2022,
-     "branches": 1,
+     "branches": 20,
      "subjects": [
       "math"
      ]
@@ -1556,7 +1549,7 @@
      "kind": "학원",
      "capacity": 160,
      "since": 2016,
-     "branches": 1,
+     "branches": 5,
      "subjects": [
       "english",
       "math"
@@ -1577,7 +1570,7 @@
      "kind": "학원",
      "capacity": 60,
      "since": 2012,
-     "branches": 1,
+     "branches": 2,
      "subjects": [
       "english",
       "math"
@@ -1588,7 +1581,7 @@
      "kind": "학원",
      "capacity": 45,
      "since": 2005,
-     "branches": 1,
+     "branches": 5,
      "subjects": [
       "english"
      ]
@@ -1713,7 +1706,7 @@
      "kind": "학원",
      "capacity": 808,
      "since": 2015,
-     "branches": 1,
+     "branches": 2,
      "subjects": [
       "math"
      ]
@@ -1741,7 +1734,7 @@
      "kind": "학원",
      "capacity": 370,
      "since": 2001,
-     "branches": 1,
+     "branches": 3,
      "subjects": [
       "english"
      ]
@@ -1771,17 +1764,7 @@
      "kind": "학원",
      "capacity": 150,
      "since": 2022,
-     "branches": 1,
-     "subjects": [
-      "math"
-     ]
-    },
-    {
-     "name": "가우스수학학원",
-     "kind": "학원",
-     "capacity": 125,
-     "since": 2008,
-     "branches": 4,
+     "branches": 3,
      "subjects": [
       "math"
      ]
@@ -1791,7 +1774,17 @@
      "kind": "학원",
      "capacity": 125,
      "since": 2013,
-     "branches": 1,
+     "branches": 2,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "가우스수학학원",
+     "kind": "학원",
+     "capacity": 125,
+     "since": 2008,
+     "branches": 2,
      "subjects": [
       "math"
      ]
@@ -1801,7 +1794,7 @@
      "kind": "학원",
      "capacity": 62,
      "since": 2023,
-     "branches": 1,
+     "branches": 46,
      "subjects": [
       "english"
      ]
@@ -1925,14 +1918,6 @@
      "kind": "학원",
      "capacity": 8390,
      "since": 2003,
-     "branches": 3,
-     "subjects": []
-    },
-    {
-     "name": "에듀닥터원격학원",
-     "kind": "학원",
-     "capacity": 1998,
-     "since": 2016,
      "branches": 1,
      "subjects": []
     },
@@ -1941,7 +1926,7 @@
      "kind": "학원",
      "capacity": 1450,
      "since": 2001,
-     "branches": 2,
+     "branches": 1,
      "subjects": [
       "math"
      ]
@@ -1951,7 +1936,7 @@
      "kind": "학원",
      "capacity": 872,
      "since": 2023,
-     "branches": 1,
+     "branches": 2,
      "subjects": [
       "english"
      ]
@@ -1962,6 +1947,14 @@
      "capacity": 744,
      "since": 2013,
      "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "리드인독서논술응암학원",
+     "kind": "학원",
+     "capacity": 736,
+     "since": 2025,
+     "branches": 20,
      "subjects": []
     },
     {
@@ -1979,7 +1972,7 @@
      "kind": "학원",
      "capacity": 435,
      "since": 2025,
-     "branches": 1,
+     "branches": 3,
      "subjects": [
       "math"
      ]
@@ -1999,7 +1992,7 @@
      "kind": "학원",
      "capacity": 292,
      "since": 2026,
-     "branches": 2,
+     "branches": 4,
      "subjects": [
       "math"
      ]
@@ -2019,7 +2012,7 @@
      "kind": "학원",
      "capacity": 270,
      "since": 2026,
-     "branches": 1,
+     "branches": 2,
      "subjects": [
       "english"
      ]
@@ -2029,7 +2022,7 @@
      "kind": "학원",
      "capacity": 240,
      "since": 2017,
-     "branches": 1,
+     "branches": 2,
      "subjects": [
       "math"
      ]
@@ -2141,7 +2134,7 @@
      "kind": "학원",
      "capacity": 360,
      "since": 2008,
-     "branches": 2,
+     "branches": 3,
      "subjects": []
     },
     {
@@ -2165,7 +2158,7 @@
      "kind": "학원",
      "capacity": 96,
      "since": 2013,
-     "branches": 3,
+     "branches": 1,
      "subjects": [
       "math"
      ]
@@ -2196,7 +2189,7 @@
      "kind": "학원",
      "capacity": 50,
      "since": 2016,
-     "branches": 1,
+     "branches": 4,
      "subjects": [
       "math"
      ]
@@ -2217,16 +2210,6 @@
      "capacity": 48,
      "since": 2022,
      "branches": 1,
-     "subjects": [
-      "math"
-     ]
-    },
-    {
-     "name": "봄수학교습소",
-     "kind": "교습소",
-     "capacity": 40,
-     "since": 2022,
-     "branches": 3,
      "subjects": [
       "math"
      ]
@@ -2394,7 +2377,7 @@
      "kind": "학원",
      "capacity": 784,
      "since": 2018,
-     "branches": 1,
+     "branches": 7,
      "subjects": []
     },
     {
@@ -2430,19 +2413,9 @@
      "kind": "학원",
      "capacity": 525,
      "since": 2018,
-     "branches": 1,
+     "branches": 5,
      "subjects": [
       "english"
-     ]
-    },
-    {
-     "name": "하이탑수학학원",
-     "kind": "학원",
-     "capacity": 486,
-     "since": 2008,
-     "branches": 2,
-     "subjects": [
-      "math"
      ]
     },
     {
@@ -2450,6 +2423,16 @@
      "kind": "학원",
      "capacity": 486,
      "since": 2025,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "하이탑수학학원",
+     "kind": "학원",
+     "capacity": 486,
+     "since": 2008,
      "branches": 1,
      "subjects": [
       "math"
