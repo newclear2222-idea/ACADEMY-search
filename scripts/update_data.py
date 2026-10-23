@@ -76,6 +76,19 @@ def fetch_schools(key, sido, sgg):
 
     올해 공시가 아직 없으면 작년 공시를 씁니다.
     """
+    # 학교기본정보(apiType 0)의 지번 주소에서 법정동을 얻습니다. 예: 서울특별시 노원구 중계동 123
+    dong_of = {}
+    for kind in SCHOOL_KINDS.values():
+        data = get_json(SCHOOLINFO_URL, {
+            "apiKey": key, "apiType": "0",
+            "sidoCode": sido, "sggCode": sgg, "schulKndCode": kind,
+        })
+        for row in data.get("list", []):
+            dong_of[row.get("SCHUL_CODE")] = (
+                last_dong(row.get("ADRES_BRKDN", ""))
+                or academy_dong(row.get("SCHUL_RDNMA", "") + " " + (row.get("SCHUL_RDNDA") or ""), [])
+            )
+
     this_year = datetime.date.today().year
     for year in (this_year, this_year - 1):
         schools = []
@@ -94,11 +107,12 @@ def fetch_schools(key, sido, sgg):
                 schools.append({
                     "name": row.get("SCHUL_NM", ""),
                     "level": level,
-                    "dong": last_dong(row.get("ADRCD_NM", "")),
+                    "dong": dong_of.get(row.get("SCHUL_CODE")) or last_dong(row.get("ADRCD_NM", "")),
                     "students": students,
                 })
         if schools:
-            print(f"{year}년 공시 기준 학교 {len(schools)}곳을 받았습니다.")
+            located = sum(1 for s in schools if s["dong"])
+            print(f"{year}년 공시 기준 학교 {len(schools)}곳을 받았습니다 (동을 찾은 학교 {located}곳).")
             return schools, year
     sys.exit("학교알리미에서 학생 수를 받지 못했습니다. 인증키와 지역 코드를 확인해 주세요.")
 
@@ -113,7 +127,7 @@ def to_int(value):
 
 def last_dong(text):
     """'서울특별시 노원구 중계동' 같은 주소에서 마지막 동 이름을 꺼냅니다."""
-    names = re.findall(r"[가-힣0-9]+동", text)
+    names = re.findall(r"[가-힣]+[0-9]*가?동(?=[\s\d,)]|$)", text or "")
     return names[-1] if names else ""
 
 
@@ -155,9 +169,12 @@ def build(gu, province, academies, schools, year):
     for row in academies:
         if not is_open_tutoring(row):
             continue
-        dong = academy_dong(row.get("FA_RDNMA", ""), list(areas))
+        address = f"{row.get('FA_RDNMA') or ''} {row.get('FA_RDNDA') or ''}"
+        dong = academy_dong(address, list(areas))
         if not dong:
             unmatched += 1
+            if unmatched <= 3:
+                print(f"  동을 못 찾은 주소 예: {address.strip()}", file=sys.stderr)
             continue
         a = area(dong)
         text = " ".join(row.get(k, "") or "" for k in ("ACA_NM", "LE_CRSE_LIST_NM", "LE_CRSE_NM"))
@@ -213,6 +230,8 @@ def main():
     academies = fetch_academies(neis_key, args.office, args.gu)
     schools, year = fetch_schools(schoolinfo_key, args.sido, args.sgg)
     output = build(args.gu, args.province, academies, schools, year)
+    if not output["areas"] or not any(a["students"]["total"] for a in output["areas"]):
+        sys.exit("동별로 묶인 결과가 없어 저장하지 않습니다. 주소 형식을 확인해 주세요.")
     save(output)
 
     total = sum(a["academies"]["all"] for a in output["areas"])
