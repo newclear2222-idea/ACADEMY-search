@@ -193,8 +193,8 @@ def area_of(address):
 
 def is_open_tutoring(row):
     """영업 중인 입시·보습 분야 학원·교습소만 셉니다."""
-    status = row.get("REG_STTUS_NM", "")
-    realm = row.get("REALM_SC_NM", "")
+    status = row.get("REG_STTUS_NM") or ""
+    realm = row.get("REALM_SC_NM") or ""
     return status in ("", "개원", "등록") and ("보습" in realm or "입시" in realm)
 
 
