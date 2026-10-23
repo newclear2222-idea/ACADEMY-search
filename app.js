@@ -78,6 +78,11 @@ function reasonsFor(r, ctx) {
   return reasons;
 }
 
+// 서울 상권분석 추정매출은 분기 합계라 3으로 나눠 한 달로 봅니다. 과목과 상관없이 입시·보습 학원 전체로 나눕니다.
+function monthlyPerAcademy(area) {
+  return area.sales && area.academies.all ? area.sales / 3 / area.academies.all : 0;
+}
+
 // 정원이 큰 순서. 유명도·평판이 아니라 교육청에 등록한 규모입니다.
 function topAcademies(area, subject) {
   const list = (area.top || []).filter((x) => subject === "all" || x.subjects.includes(subject)).slice(0, 3);
@@ -114,13 +119,18 @@ function render(data) {
   const average = perAcademy(totalStudents, totalAcademies);
 
   const regionFee = feeOf(data.fees, subject, level);
+  const withSales = data.areas.filter((a) => a.sales && a.academies.all);
+  const regionPerMonth = withSales.length
+    ? withSales.reduce((t, a) => t + a.sales, 0) / 3 / withSales.reduce((t, a) => t + a.academies.all, 0)
+    : 0;
   const ctx = { subject, level, totalStudents, totalAcademies, regionFee };
 
   els.summary.innerHTML = `
     <div><div class="label">${data.region} ${LEVEL_LABELS[level]}</div><div class="value">${fmt(totalStudents)}명</div></div>
     <div><div class="label">${SUBJECT_LABELS[subject]}</div><div class="value">${fmt(totalAcademies)}곳</div></div>
     <div><div class="label">지역 평균, 학원 1곳당 학생</div><div class="value">${Number.isFinite(average) ? fmt(Math.round(average)) + "명" : "-"}</div></div>
-    <div><div class="label">보통 수강료 (1인당, 등록 기준)</div><div class="value">${regionFee ? won(regionFee.median) : "-"}</div></div>`;
+    <div><div class="label">보통 수강료 (1인당, 등록 기준)</div><div class="value">${regionFee ? won(regionFee.median) : "-"}</div></div>${regionPerMonth ? `
+    <div><div class="label">학원 1곳당 월 카드매출 (추정, 평균)</div><div class="value">${bigWon(regionPerMonth)}</div></div>` : ""}`;
 
   const finite = rows.filter((r) => Number.isFinite(r.ratio)).map((r) => r.ratio);
   const max = Math.max(...finite, 1);
@@ -143,8 +153,9 @@ function render(data) {
       const schoolCount = r.area.schools.length;
       const fee = feeOf(r.area.fees, subject, level);
       const feeText = fee ? ` · 보통 수강료 ${won(fee.median)} (${fmt(fee.count)}개 과정)` : "";
+      const perMonth = monthlyPerAcademy(r.area);
       const salesText = data.salesPeriod && r.area.sales
-        ? `<div class="rank-sub">학원 카드매출 추정 <strong>${bigWon(r.area.sales)}</strong> (${data.salesPeriod}, 동 전체 학원 합계)</div>`
+        ? `<div class="rank-sub">학원 카드매출 추정: 동 전체 ${bigWon(r.area.sales)} (${data.salesPeriod})${perMonth ? ` · 학원 1곳당 <strong>월 ${bigWon(perMonth)}</strong>` : ""}${regionPerMonth && perMonth ? ` (지역 평균의 ${pct(perMonth / regionPerMonth)})` : ""}</div>`
         : "";
       const reasons = reasonsFor(r, ctx);
       const why = reasons.length
