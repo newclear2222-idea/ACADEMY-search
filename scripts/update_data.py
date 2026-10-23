@@ -99,6 +99,10 @@ LEVEL_PATTERNS = {
     "high": re.compile(r"고등|고교|고[0-9]|(^|[(\s])고([)\s~]|$)|수능"),
 }
 
+# 학원 이름에서 지점 표시를 떼어 같은 브랜드를 묶습니다. 예: 'OO수학학원 중계점', 'OO학원(대치관)'
+BRANCH_SUFFIX = re.compile(r"\s*(\([^)]*\)|[가-힣A-Za-z0-9]+(점|캠퍼스|관|분원|본원))$")
+TOP_ACADEMIES = 5
+
 # 1인당 교습비로 보기 어려운 값(입력 실수 등)은 뺍니다.
 FEE_MIN, FEE_MAX = 30_000, 2_000_000
 
@@ -320,6 +324,29 @@ def is_open_tutoring(row):
     return status in ("", "개원", "등록") and ("보습" in realm or "입시" in realm)
 
 
+def capacity_of(row):
+    """정원합계. 비어 있으면 일시수용능력인원합계를 씁니다."""
+    return to_int(row.get("TOFOR_SMTOT")) or to_int(row.get("DTM_RCPTN_ABLTY_NMPR_SMTOT"))
+
+
+def brand_of(name):
+    name = re.sub(r"\s+", " ", name or "").strip()
+    for _ in range(2):
+        name = BRANCH_SUFFIX.sub("", name).strip()
+    return re.sub(r"(학원|교습소|어학원)$", "", name).replace(" ", "")
+
+
+def pick_top_academies(academies):
+    """과목별로 정원이 큰 학원을 몇 곳씩 남깁니다. 유명도가 아니라 규모 기준입니다."""
+    keep = {}
+    for subject in ("all", "math", "english"):
+        pool = [x for x in academies if subject == "all" or subject in x["subjects"]]
+        pool.sort(key=lambda x: (-x["capacity"], -x["branches"], x["name"]))
+        for x in pool[:TOP_ACADEMIES]:
+            keep[x["name"] + x["kind"]] = x
+    return sorted(keep.values(), key=lambda x: -x["capacity"])
+
+
 def new_region(province, name):
     return {"province": province, "name": name, "areas": {}, "unmatched": 0, "fees": new_fee_table()}
 
@@ -331,12 +358,20 @@ def new_area(name):
         "academies": {"all": 0, "math": 0, "english": 0},
         "schools": [],
         "fees": new_fee_table(),
+        "top": [],
     }
 
 
 def build(province, academies, schools, year):
     """시도 하나의 학원·학교를 구·시·군 > 동·읍·면으로 묶습니다."""
     regions = {}
+    if academies:
+        print(f"  학원 항목: {', '.join(sorted(academies[0]))}")
+    brand_counts = {}
+    for row in academies:
+        if is_open_tutoring(row):
+            brand = brand_of(row.get("ACA_NM"))
+            brand_counts[brand] = brand_counts.get(brand, 0) + 1
 
     def region(address):
         found = region_of(address)
@@ -373,6 +408,15 @@ def build(province, academies, schools, year):
             a["academies"][subject] += 1
         add_fees(a["fees"], row, subjects)
         add_fees(r["fees"], row, subjects)
+        established = str(row.get("ESTBL_YMD") or "")[:4]
+        a["top"].append({
+            "name": (row.get("ACA_NM") or "").strip(),
+            "kind": "교습소" if "교습소" in (row.get("ACA_INSTI_SC_NM") or "") else "학원",
+            "capacity": capacity_of(row),
+            "since": int(established) if established.isdigit() else None,
+            "branches": brand_counts.get(brand_of(row.get("ACA_NM")), 1),
+            "subjects": sorted(subjects),
+        })
 
     for old, targets in SPLIT_REGIONS.get(province, {}).items():
         if old not in regions:
@@ -388,6 +432,7 @@ def build(province, academies, schools, year):
                 for k, v in area[key].items():
                     merged[key][k] += v
             merged["schools"] += area["schools"]
+            merged["top"] += area["top"]
             for subject, levels in area["fees"].items():
                 for level, amounts in levels.items():
                     merged["fees"][subject][level] += amounts
@@ -402,6 +447,7 @@ def build(province, academies, schools, year):
         for a in areas:
             a["schools"].sort(key=lambda s: ("elem", "middle", "high").index(s["level"]))
             a["fees"] = summarize_fees(a["fees"])
+            a["top"] = pick_top_academies(a["top"])
         outputs.append({
             "id": f"{PROVINCES[province]['short']}-{r['name']}",
             "province": province,
@@ -412,6 +458,7 @@ def build(province, academies, schools, year):
                 "학원: 나이스 교육정보 개방포털 학원교습소정보",
                 "학생 수: 학교알리미 학년별·학급별 학생수",
                 "수강료: 학원이 교육청에 등록한 1인당 교습비",
+                "대표 학원: 교육청에 등록한 정원이 큰 순서",
             ],
             "unmatchedAcademies": r["unmatched"],
             "fees": summarize_fees(r["fees"]),

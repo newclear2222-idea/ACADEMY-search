@@ -77,6 +77,21 @@ function reasonsFor(r, ctx) {
   return reasons;
 }
 
+// 정원이 큰 순서. 유명도·평판이 아니라 교육청에 등록한 규모입니다.
+function topAcademies(area, subject) {
+  const list = (area.top || []).filter((x) => subject === "all" || x.subjects.includes(subject)).slice(0, 3);
+  if (!list.length) return "";
+  const year = new Date().getFullYear();
+  const items = list.map((x) => {
+    const bits = [];
+    if (x.capacity) bits.push(`정원 ${fmt(x.capacity)}명`);
+    if (x.since) bits.push(`${Math.max(year - x.since, 0)}년째`);
+    if (x.branches >= 2) bits.push(`같은 이름 ${fmt(x.branches)}곳`);
+    return `<li><strong>${x.name}</strong>${bits.length ? ` <span class="muted">${bits.join(" · ")}</span>` : ""}</li>`;
+  });
+  return `<div class="top"><span class="top-label">규모 큰 학원</span><ul>${items.join("")}</ul></div>`;
+}
+
 // 학원 1곳당 학생 수. 학원이 없으면 Infinity로 두고 맨 위에 보여줍니다.
 function perAcademy(students, academies) {
   return academies === 0 ? Infinity : students / academies;
@@ -138,6 +153,7 @@ function render(data) {
         </div>
         <div class="bar"><span style="width:${width.toFixed(1)}%"></span></div>
         <div class="rank-sub">${LEVEL_LABELS[level]} ${fmt(r.students)}명 · ${SUBJECT_LABELS[subject]} ${fmt(r.academies)}곳 · 학교 ${schoolCount}곳${feeText}</div>
+        ${topAcademies(r.area, subject)}
         ${why}
       </li>`;
     })
