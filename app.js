@@ -83,6 +83,22 @@ function reasonsFor(r, ctx) {
   return reasons;
 }
 
+// 교육열 추정치: 시·도 안 동들과 비교한 백분위 평균 (scripts/update_data.py add_fervor)
+function fervorLabel(score) {
+  return score >= 67 ? "높음" : score >= 34 ? "보통" : "낮음";
+}
+
+function fervorText(area) {
+  const f = area.fervor;
+  if (!f) return "";
+  const p = f.parts;
+  const bits = [];
+  if (p.density) bits.push(`학생 100명당 학원 ${p.density[0]}곳`);
+  if (p.fee) bits.push(`보통 수강료 ${won(p.fee[0])}`);
+  if (p.spend) bits.push(`학생 1명당 월 학원 카드매출 ${bigWon(p.spend[0])}`);
+  return `<div class="rank-sub">교육열 추정 <strong>${fervorLabel(f.score)}</strong> (${f.score}점/100) · ${bits.join(" · ")}</div>`;
+}
+
 // 서울 상권분석 추정매출은 분기 합계라 3으로 나눠 한 달로 봅니다. 과목과 상관없이 입시·보습 학원 전체로 나눕니다.
 // 학원이 적은 동은 매출 집계(행정동)와 학원 주소(법정동)의 경계 차이에 크게 흔들려 보여주지 않습니다.
 const MIN_ACADEMIES_FOR_SALES = 20;
@@ -178,6 +194,8 @@ function render(data) {
         <div class="bar"><span style="width:${width.toFixed(1)}%"></span></div>
         <div class="rank-sub">${LEVEL_LABELS[level]} ${fmt(r.students)}명 · ${SUBJECT_LABELS[subject]} ${fmt(r.academies)}곳 · 학교 ${schoolCount}곳${feeText}</div>
         ${salesText}
+        ${fervorText(r.area)}
+        ${r.area.apt ? `<div class="rank-sub">아파트 평당 <strong>${bigWon(r.area.apt[0])}</strong> (${data.aptPeriod} ${fmt(r.area.apt[1])}건의 중간값)</div>` : ""}
         ${why}
       </li>`;
     })
@@ -207,6 +225,16 @@ const COLUMNS = [
     text: (r) => (Number.isFinite(r.ratio) ? `${fmt(Math.round(r.ratio))}명` : "학원 없음"),
   },
   {
+    key: "fervor", label: "교육열(추정)",
+    value: (r) => r.area.fervor?.score ?? -1,
+    text: (r) => (r.area.fervor ? `${fervorLabel(r.area.fervor.score)} ${r.area.fervor.score}` : "-"),
+  },
+  {
+    key: "apt", label: "아파트 평당가", aptOnly: true,
+    value: (r) => r.area.apt?.[0] || 0,
+    text: (r) => (r.area.apt ? bigWon(r.area.apt[0]) : "-"),
+  },
+  {
     key: "fee", label: "보통 수강료",
     value: (r) => r.fee?.median || 0,
     text: (r) => (r.fee ? won(r.fee.median) : "-"),
@@ -221,8 +249,9 @@ const COLUMNS = [
 function renderCompare(rows, data, subject, level) {
   const hasSales = Boolean(data.salesPeriod);
   // 휴대폰에서도 바로 보이도록 매출과 경쟁 지표를 동 이름 옆에 둡니다.
-  const order = ["name", "sales", "ratio", "fee", "students", "academies"];
-  const cols = COLUMNS.filter((c) => hasSales || !c.salesOnly).sort((a, b) => order.indexOf(a.key) - order.indexOf(b.key));
+  const order = ["name", "sales", "fervor", "apt", "ratio", "fee", "students", "academies"];
+  const hasApt = Boolean(data.aptPeriod);
+  const cols = COLUMNS.filter((c) => (hasSales || !c.salesOnly) && (hasApt || !c.aptOnly)).sort((a, b) => order.indexOf(a.key) - order.indexOf(b.key));
   if (!cols.some((c) => c.key === sortKey)) sortKey = "ratio";
   const list = rows.map((r) => ({ ...r, fee: feeOf(r.area.fees, subject, level), perMonth: monthlyPerAcademy(r.area) }));
   const col = cols.find((c) => c.key === sortKey);

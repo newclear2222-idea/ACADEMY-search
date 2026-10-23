@@ -5,6 +5,7 @@ data/<지역>.json (구·시·군마다 하나)과 data/regions.json 을 새로 
   NEIS_API_KEY        나이스 교육정보 개방포털 인증키 (학원교습소정보)
   SCHOOLINFO_API_KEY  학교알리미 OpenAPI 인증키 (학교기본정보, 학년별·학급별 학생수)
   SEOUL_API_KEY       서울 열린데이터광장 인증키 (상권분석서비스 추정매출, 없으면 매출은 건너뜁니다)
+  DATA_GO_KR_KEY      공공데이터포털 인증키 (국토교통부 아파트 매매 실거래가, 없으면 아파트 가격은 건너뜁니다)
 
 사용 예:
   python3 scripts/update_data.py              # 서울, 경기, 인천 모두
@@ -12,6 +13,7 @@ data/<지역>.json (구·시·군마다 하나)과 data/regions.json 을 새로 
 """
 
 import datetime
+import xml.etree.ElementTree as ET
 import json
 import os
 import re
@@ -27,6 +29,9 @@ DATA_DIR = ROOT / "data"
 NEIS_URL = "https://open.neis.go.kr/hub/acaInsTiInfo"
 NEIS_SCHOOL_URL = "https://open.neis.go.kr/hub/schoolInfo"
 SCHOOLINFO_URL = "https://www.schoolinfo.go.kr/openApi.do"
+APT_URL = "https://apis.data.go.kr/1613000/RTMSDataSvcAptTrade/getRTMSDataSvcAptTrade"
+APT_MONTHS = 6  # 최근 몇 달 거래로 평당가를 낼지
+PYEONG = 3.305785  # 1평(m²)
 SEOUL_URL = "http://openapi.seoul.go.kr:8088"
 SEOUL_SALES_SERVICE = "VwsmAdstrdSelngW"  # 상권분석서비스(추정매출-행정동)
 
@@ -274,7 +279,7 @@ def fetch_schools(key, province, neis_addresses):
                     ]
                     # 동·읍·면까지 읽히는 첫 주소를 씁니다.
                     address = next((a for a in candidates if area_of(a)), "")
-                    schools[code] = {"name": name, "level": level, "address": address, "students": students}
+                    schools[code] = {"name": name, "level": level, "address": address, "students": students, "sgg": sgg}
             print(f"    {year}년 {sgg or '시도 전체'}: 새 학교 {len(schools) - before}곳")
         if schools:
             no_address = sum(1 for school in schools.values() if not area_of(school["address"]))
@@ -307,7 +312,8 @@ def legal_dong(dong):
 
 
 def is_area_name(name):
-    return len(name) <= 7 and not any(word in name for word in NOT_AREA_WORDS)
+    # '201동'처럼 숫자로 시작하면 아파트 동 번호입니다.
+    return len(name) <= 7 and not name[:1].isdigit() and not any(word in name for word in NOT_AREA_WORDS)
 
 
 def area_of(address):
@@ -378,6 +384,51 @@ def fetch_seoul_sales(key):
     return {}, ""
 
 
+def fetch_apartment_prices(key, province):
+    """국토교통부 아파트 매매 실거래가에서 최근 몇 달 거래의 평당가를 받습니다.
+
+    돌려주는 값: [(학교알리미 시군구 코드, 법정동, 평당가(원)), ...]
+    """
+    today = datetime.date.today()
+    months = []
+    for back in range(1, APT_MONTHS + 1):
+        m = today.year * 12 + today.month - 1 - back
+        months.append(f"{m // 12}{m % 12 + 1:02d}")
+    rows = []
+    for sgg in PROVINCES[province]["sgg"]:
+        for ymd in months:
+            page = 1
+            while True:
+                url = f"{APT_URL}?" + urllib.parse.urlencode({
+                    "serviceKey": key, "LAWD_CD": sgg, "DEAL_YMD": ymd, "pageNo": page, "numOfRows": 1000,
+                })
+                try:
+                    with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "academy-search"}), timeout=60) as res:
+                        root = ET.fromstring(res.read())
+                except Exception as e:  # 아파트 가격은 덤이라 실패해도 나머지는 그대로 만듭니다.
+                    print(f"  아파트 실거래가를 받지 못했습니다 ({sgg} {ymd}): {e}")
+                    return rows
+                code = root.findtext(".//resultCode") or ""
+                if code not in ("000", "00"):
+                    print(f"  아파트 실거래가 오류 ({sgg} {ymd}): {code} {root.findtext('.//resultMsg')}")
+                    return rows
+                items = root.findall(".//item")
+                for item in items:
+                    if (item.findtext("cdealType") or "").strip():  # 해제된 거래
+                        continue
+                    area = float((item.findtext("excluUseAr") or "0").strip() or 0)
+                    price = to_int(item.findtext("dealAmount")) * 10_000
+                    dong = legal_dong((item.findtext("umdNm") or "").strip().split(" ")[0])
+                    if area > 0 and price > 0 and dong:
+                        rows.append((sgg, dong, round(price / (area / PYEONG))))
+                total = to_int(root.findtext(".//totalCount"))
+                if page * 1000 >= total or not items:
+                    break
+                page += 1
+    print(f"  아파트 매매 {len(rows)}건 (최근 {APT_MONTHS}개월)")
+    return rows
+
+
 def capacity_of(row):
     """정원합계. 비어 있으면 일시수용능력인원합계를 씁니다."""
     return to_int(row.get("TOFOR_SMTOT")) or to_int(row.get("DTM_RCPTN_ABLTY_NMPR_SMTOT"))
@@ -433,9 +484,10 @@ def new_area(name):
     }
 
 
-def build(province, academies, schools, year, sales=None, sales_label=""):
+def build(province, academies, schools, year, sales=None, sales_label="", apt_rows=None):
     """시도 하나의 학원·학교를 구·시·군 > 동·읍·면으로 묶습니다."""
     regions = {}
+    sgg_regions = {}  # 학교알리미 시군구 코드 -> {구·시·군: 학교 수}. 아파트 거래를 구·시·군에 붙일 때 씁니다.
     if academies:
         print(f"  학원 항목: {', '.join(sorted(academies[0]))}")
     brand_counts = count_branches(r.get("ACA_NM") for r in academies if is_open_tutoring(r))
@@ -455,6 +507,9 @@ def build(province, academies, schools, year, sales=None, sales_label=""):
         a["students"][school["level"]] += school["students"]
         a["students"]["total"] += school["students"]
         a["schools"].append({k: school[k] for k in ("name", "level", "students")})
+        if school.get("sgg"):
+            sgg_regions.setdefault(school["sgg"], {}).setdefault(r["name"], 0)
+            sgg_regions[school["sgg"]][r["name"]] += 1
 
     for row in academies:
         if not is_open_tutoring(row):
@@ -505,6 +560,14 @@ def build(province, academies, schools, year, sales=None, sales_label=""):
                     merged["fees"][subject][level] += amounts
                     regions[target]["fees"][subject][level] += amounts
 
+    apt = {}
+    for sgg, area_name, price in apt_rows or []:
+        names = sgg_regions.get(sgg)
+        if names:
+            region_name = max(names, key=names.get)
+            region_name = next((t for t in SPLIT_REGIONS.get(province, {}).get(region_name, []) if area_name in regions.get(t, {}).get("areas", {})), region_name)
+            apt.setdefault((region_name, area_name), []).append(price)
+
     today = datetime.date.today()
     outputs = []
     for r in regions.values():
@@ -517,6 +580,9 @@ def build(province, academies, schools, year, sales=None, sales_label=""):
             a["top"] = pick_top_academies(a["top"])
             if sales:
                 a["sales"] = sales.get((r["name"], a["name"]))
+            prices = sorted(apt.get((r["name"], a["name"]), []))
+            if len(prices) >= 3:
+                a["apt"] = [prices[len(prices) // 2], len(prices)]
         outputs.append({
             "id": f"{PROVINCES[province]['short']}-{r['name']}",
             "province": province,
@@ -528,13 +594,47 @@ def build(province, academies, schools, year, sales=None, sales_label=""):
                 "학생 수: 학교알리미 학년별·학급별 학생수",
                 "수강료: 학원이 교육청에 등록한 1인당 교습비",
                 "대표 학원: 교육청에 등록한 정원이 큰 순서",
-            ] + (["학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)"] if sales else []),
+            ] + (["학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)"] if sales else [])
+              + (["아파트 가격: 국토교통부 아파트 매매 실거래가"] if apt else []),
             "salesPeriod": sales_label if sales else "",
+            "aptPeriod": f"최근 {APT_MONTHS}개월 매매" if apt else "",
             "unmatchedAcademies": r["unmatched"],
             "fees": summarize_fees(r["fees"]),
             "areas": areas,
         })
+    add_fervor(outputs)
     return outputs
+
+
+# 교육열 지수에 넣을 동의 최소 학생 수. 학생이 너무 적은 동은 비율이 크게 흔들립니다.
+FERVOR_MIN_STUDENTS = 500
+
+
+def add_fervor(outputs):
+    """공개 숫자로 만든 '교육열' 추정치. 시도 안 동들과 비교한 백분위의 평균(0~100)입니다.
+
+    재료: 학생 100명당 학원 수, 보통 수강료(입시·보습 전체), 학생 1명당 월 학원 카드매출(서울).
+    """
+    areas = [a for o in outputs for a in o["areas"] if a["students"]["total"] >= FERVOR_MIN_STUDENTS]
+    metrics = {
+        "density": lambda a: a["academies"]["all"] / a["students"]["total"] * 100,
+        "fee": lambda a: a["fees"]["all"]["total"][0],
+        "spend": lambda a: a.get("sales") and a["sales"] / 3 / a["students"]["total"],
+    }
+    ranks = {}
+    for key, fn in metrics.items():
+        values = sorted(v for v in (fn(a) for a in areas) if v)
+        if len(values) < 10:
+            continue
+        for a in areas:
+            v = fn(a)
+            if v:
+                below = sum(1 for x in values if x < v)
+                ranks.setdefault(id(a), {})[key] = [round(v, 1), round(below / (len(values) - 1) * 100)]
+    for a in areas:
+        parts = ranks.get(id(a))
+        if parts and len(parts) >= 2:
+            a["fervor"] = {"score": round(sum(p[1] for p in parts.values()) / len(parts)), "parts": parts}
 
 
 def save(outputs, provinces):
@@ -562,6 +662,7 @@ def main():
     neis_key = (os.environ.get("NEIS_API_KEY") or "").strip()
     schoolinfo_key = (os.environ.get("SCHOOLINFO_API_KEY") or "").strip()
     seoul_key = (os.environ.get("SEOUL_API_KEY") or "").strip()
+    apt_key = (os.environ.get("DATA_GO_KR_KEY") or "").strip()
     if not neis_key or not schoolinfo_key:
         sys.exit("NEIS_API_KEY와 SCHOOLINFO_API_KEY 환경변수가 필요합니다.")
 
@@ -575,7 +676,8 @@ def main():
         sales, sales_label = {}, ""
         if province == "서울특별시" and seoul_key:
             sales, sales_label = fetch_seoul_sales(seoul_key)
-        built = build(province, academies, schools, year, sales, sales_label)
+        apt_rows = fetch_apartment_prices(apt_key, province) if apt_key else []
+        built = build(province, academies, schools, year, sales, sales_label, apt_rows)
         if not built:
             sys.exit(f"{province}: 지역별로 묶인 결과가 없어 저장하지 않습니다. 주소 형식을 확인해 주세요.")
         for o in built:
