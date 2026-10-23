@@ -1,0 +1,184 @@
+{
+ "id": "인천-영종구",
+ "province": "인천광역시",
+ "region": "인천광역시 영종구",
+ "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 10월 기준",
+ "builtAt": "2026-10-23",
+ "sources": [
+  "학원: 나이스 교육정보 개방포털 학원교습소정보",
+  "학생 수: 학교알리미 학년별·학급별 학생수"
+ ],
+ "unmatchedAcademies": 0,
+ "areas": [
+  {
+   "name": "남북동",
+   "students": {
+    "elem": 27,
+    "middle": 63,
+    "high": 0,
+    "total": 90
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "인천용유초등학교",
+     "level": "elem",
+     "students": 27
+    },
+    {
+     "name": "용유중학교",
+     "level": "middle",
+     "students": 63
+    }
+   ]
+  },
+  {
+   "name": "운남동",
+   "students": {
+    "elem": 1351,
+    "middle": 1874,
+    "high": 0,
+    "total": 3225
+   },
+   "academies": {
+    "all": 2,
+    "math": 1,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "인천별빛초등학교",
+     "level": "elem",
+     "students": 1351
+    },
+    {
+     "name": "영종중학교",
+     "level": "middle",
+     "students": 902
+    },
+    {
+     "name": "인천하늘중학교",
+     "level": "middle",
+     "students": 972
+    }
+   ]
+  },
+  {
+   "name": "운북동",
+   "students": {
+    "elem": 42,
+    "middle": 0,
+    "high": 0,
+    "total": 42
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "인천영종초등학교금산분교장",
+     "level": "elem",
+     "students": 42
+    }
+   ]
+  },
+  {
+   "name": "운서동",
+   "students": {
+    "elem": 1316,
+    "middle": 676,
+    "high": 2566,
+    "total": 4558
+   },
+   "academies": {
+    "all": 4,
+    "math": 0,
+    "english": 1
+   },
+   "schools": [
+    {
+     "name": "인천공항초등학교",
+     "level": "elem",
+     "students": 331
+    },
+    {
+     "name": "인천삼목초등학교",
+     "level": "elem",
+     "students": 469
+    },
+    {
+     "name": "인천윤슬초등학교",
+     "level": "elem",
+     "students": 516
+    },
+    {
+     "name": "인천공항중학교",
+     "level": "middle",
+     "students": 676
+    },
+    {
+     "name": "인천공항고등학교",
+     "level": "high",
+     "students": 633
+    },
+    {
+     "name": "인천국제고등학교",
+     "level": "high",
+     "students": 406
+    },
+    {
+     "name": "인천영종고등학교",
+     "level": "high",
+     "students": 861
+    },
+    {
+     "name": "인천하늘고등학교",
+     "level": "high",
+     "students": 666
+    }
+   ]
+  },
+  {
+   "name": "중산동",
+   "students": {
+    "elem": 2701,
+    "middle": 980,
+    "high": 1062,
+    "total": 4743
+   },
+   "academies": {
+    "all": 10,
+    "math": 2,
+    "english": 4
+   },
+   "schools": [
+    {
+     "name": "인천영종초등학교",
+     "level": "elem",
+     "students": 1230
+    },
+    {
+     "name": "인천중산초등학교",
+     "level": "elem",
+     "students": 1471
+    },
+    {
+     "name": "인천중산중학교",
+     "level": "middle",
+     "students": 980
+    },
+    {
+     "name": "인천중산고등학교",
+     "level": "high",
+     "students": 1062
+    }
+   ]
+  }
+ ]
+}
