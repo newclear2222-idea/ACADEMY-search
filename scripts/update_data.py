@@ -69,7 +69,17 @@ PROVINCES = {
 PROVINCE_ALIASES = {"서울": "서울특별시", "서울시": "서울특별시", "경기": "경기도", "인천": "인천광역시"}
 
 # 옛 이름으로 남은 주소를 지금 이름으로 맞춥니다.
-REGION_RENAMES = {"여주군": "여주시", "포천군": "포천시"}
+REGION_RENAMES = {"여주군": "여주시", "포천군": "포천시", "남구": "미추홀구"}
+
+# 나뉘거나 합쳐진 구: 옛 구의 동은 같은 이름의 동이 있는 새 구로, 없으면 첫 번째 새 구로 옮깁니다.
+# 인천은 2026년 7월 중구·동구가 제물포구·영종구로, 서구가 서해구·검단구로 바뀌었습니다.
+SPLIT_REGIONS = {
+    "인천광역시": {
+        "중구": ["제물포구", "영종구"],
+        "동구": ["제물포구"],
+        "서구": ["서해구", "검단구"],
+    },
+}
 
 # 도로명주소 괄호 안의 건물 이름이 동 이름처럼 보이는 경우를 거릅니다. 예: (OO아파트상가동)
 NOT_AREA_WORDS = ("상가", "아파트", "빌딩", "타운", "프라자", "플라자", "센터", "오피스")
@@ -160,7 +170,10 @@ def fetch_schools(key, province, neis_addresses):
             for row in schoolinfo_list(key, {
                 "apiType": "0", "sidoCode": config["sido"], "sggCode": sgg, "schulKndCode": kind,
             }):
-                address_of[row.get("SCHUL_CODE")] = row.get("ADRES_BRKDN") or row.get("SCHUL_RDNMA") or ""
+                address_of[row.get("SCHUL_CODE")] = [
+                    row.get("ADRES_BRKDN") or "",
+                    f"{row.get('SCHUL_RDNMA') or ''} {row.get('SCHUL_RDNDA') or ''}".strip(),
+                ]
 
     this_year = datetime.date.today().year
     for year in (this_year, this_year - 1):
@@ -177,11 +190,13 @@ def fetch_schools(key, province, neis_addresses):
                     if code in schools or not students:
                         continue
                     name = row.get("SCHUL_NM", "")
-                    address = address_of.get(code)
-                    if not address:
-                        region = region_of(row.get("ADRCD_NM", ""))
-                        address = (neis_addresses.get((region[1] if region else "", name))
-                                   or neis_addresses.get(("", name)) or "")
+                    region = region_of(row.get("ADRCD_NM", ""))
+                    candidates = address_of.get(code, []) + [
+                        neis_addresses.get((region[1] if region else "", name)) or "",
+                        neis_addresses.get(("", name)) or "",
+                    ]
+                    # 동·읍·면까지 읽히는 첫 주소를 씁니다.
+                    address = next((a for a in candidates if area_of(a)), "")
                     schools[code] = {"name": name, "level": level, "address": address, "students": students}
             print(f"    {year}년 {sgg or '시도 전체'}: 새 학교 {len(schools) - before}곳")
         if schools:
@@ -296,6 +311,21 @@ def build(province, academies, schools, year):
         for subject, keywords in SUBJECT_KEYWORDS.items():
             if any(k in text for k in keywords):
                 a["academies"][subject] += 1
+
+    for old, targets in SPLIT_REGIONS.get(province, {}).items():
+        if old not in regions:
+            continue
+        for target in targets:
+            regions.setdefault(target, new_region(province, target))
+        old_region = regions.pop(old)
+        regions[targets[0]]["unmatched"] += old_region["unmatched"]
+        for name, area in old_region["areas"].items():
+            target = next((t for t in targets if name in regions[t]["areas"]), targets[0])
+            merged = regions[target]["areas"].setdefault(name, new_area(name))
+            for key in ("students", "academies"):
+                for k, v in area[key].items():
+                    merged[key][k] += v
+            merged["schools"] += area["schools"]
 
     today = datetime.date.today()
     outputs = []
