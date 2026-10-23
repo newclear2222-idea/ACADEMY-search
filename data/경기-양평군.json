@@ -6,9 +6,66 @@
  "builtAt": "2026-10-23",
  "sources": [
   "학원: 나이스 교육정보 개방포털 학원교습소정보",
-  "학생 수: 학교알리미 학년별·학급별 학생수"
+  "학생 수: 학교알리미 학년별·학급별 학생수",
+  "수강료: 학원이 교육청에 등록한 1인당 교습비"
  ],
  "unmatchedAcademies": 0,
+ "fees": {
+  "all": {
+   "elem": [
+    200000,
+    52
+   ],
+   "middle": [
+    250000,
+    58
+   ],
+   "high": [
+    340000,
+    47
+   ],
+   "total": [
+    250000,
+    177
+   ]
+  },
+  "math": {
+   "elem": [
+    200000,
+    24
+   ],
+   "middle": [
+    280000,
+    21
+   ],
+   "high": [
+    350000,
+    20
+   ],
+   "total": [
+    280000,
+    68
+   ]
+  },
+  "english": {
+   "elem": [
+    190000,
+    23
+   ],
+   "middle": [
+    240000,
+    31
+   ],
+   "high": [
+    320000,
+    21
+   ],
+   "total": [
+    250000,
+    83
+   ]
+  }
+ },
  "areas": [
   {
    "name": "강상면",
@@ -34,7 +91,63 @@
      "level": "elem",
      "students": 75
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      180000,
+      4
+     ],
+     "middle": [
+      null,
+      1
+     ],
+     "high": [
+      null,
+      1
+     ],
+     "total": [
+      210000,
+      6
+     ]
+    },
+    "math": {
+     "elem": [
+      180000,
+      4
+     ],
+     "middle": [
+      null,
+      1
+     ],
+     "high": [
+      null,
+      1
+     ],
+     "total": [
+      210000,
+      6
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "강하면",
@@ -60,7 +173,63 @@
      "level": "middle",
      "students": 42
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      190000,
+      4
+     ],
+     "middle": [
+      220000,
+      3
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      190000,
+      7
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "english": {
+     "elem": [
+      190000,
+      4
+     ],
+     "middle": [
+      220000,
+      3
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      190000,
+      7
+     ]
+    }
+   }
   },
   {
    "name": "개군면",
@@ -86,7 +255,63 @@
      "level": "middle",
      "students": 121
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "단월면",
@@ -112,7 +337,63 @@
      "level": "middle",
      "students": 96
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "서종면",
@@ -148,7 +429,63 @@
      "level": "middle",
      "students": 242
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      250000,
+      11
+     ],
+     "middle": [
+      290000,
+      14
+     ],
+     "high": [
+      350000,
+      8
+     ],
+     "total": [
+      280000,
+      34
+     ]
+    },
+    "math": {
+     "elem": [
+      250000,
+      6
+     ],
+     "middle": [
+      300000,
+      8
+     ],
+     "high": [
+      350000,
+      5
+     ],
+     "total": [
+      300000,
+      19
+     ]
+    },
+    "english": {
+     "elem": [
+      250000,
+      4
+     ],
+     "middle": [
+      280000,
+      4
+     ],
+     "high": [
+      null,
+      1
+     ],
+     "total": [
+      250000,
+      10
+     ]
+    }
+   }
   },
   {
    "name": "양동면",
@@ -184,7 +521,63 @@
      "level": "high",
      "students": 191
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      200000,
+      3
+     ],
+     "middle": [
+      250000,
+      3
+     ],
+     "high": [
+      300000,
+      3
+     ],
+     "total": [
+      250000,
+      9
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      2
+     ],
+     "middle": [
+      null,
+      2
+     ],
+     "high": [
+      null,
+      2
+     ],
+     "total": [
+      280000,
+      6
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      1
+     ],
+     "middle": [
+      null,
+      1
+     ],
+     "high": [
+      null,
+      1
+     ],
+     "total": [
+      250000,
+      3
+     ]
+    }
+   }
   },
   {
    "name": "양서면",
@@ -235,7 +628,63 @@
      "level": "high",
      "students": 88
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      250000,
+      3
+     ],
+     "high": [
+      null,
+      2
+     ],
+     "total": [
+      200000,
+      12
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      250000,
+      3
+     ],
+     "high": [
+      null,
+      2
+     ],
+     "total": [
+      300000,
+      5
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "양평읍",
@@ -286,7 +735,63 @@
      "level": "high",
      "students": 546
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      180000,
+      25
+     ],
+     "middle": [
+      250000,
+      28
+     ],
+     "high": [
+      350000,
+      27
+     ],
+     "total": [
+      250000,
+      91
+     ]
+    },
+    "math": {
+     "elem": [
+      200000,
+      11
+     ],
+     "middle": [
+      300000,
+      6
+     ],
+     "high": [
+      400000,
+      9
+     ],
+     "total": [
+      250000,
+      29
+     ]
+    },
+    "english": {
+     "elem": [
+      170000,
+      11
+     ],
+     "middle": [
+      245000,
+      20
+     ],
+     "high": [
+      340000,
+      16
+     ],
+     "total": [
+      260000,
+      54
+     ]
+    }
+   }
   },
   {
    "name": "옥천면",
@@ -307,7 +812,63 @@
      "level": "elem",
      "students": 265
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "용문면",
@@ -348,7 +909,63 @@
      "level": "high",
      "students": 472
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      180000,
+      5
+     ],
+     "middle": [
+      230000,
+      6
+     ],
+     "high": [
+      300000,
+      6
+     ],
+     "total": [
+      230000,
+      18
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      1
+     ],
+     "middle": [
+      null,
+      1
+     ],
+     "high": [
+      null,
+      1
+     ],
+     "total": [
+      250000,
+      3
+     ]
+    },
+    "english": {
+     "elem": [
+      200000,
+      3
+     ],
+     "middle": [
+      230000,
+      3
+     ],
+     "high": [
+      300000,
+      3
+     ],
+     "total": [
+      230000,
+      9
+     ]
+    }
+   }
   },
   {
    "name": "지평면",
@@ -384,7 +1001,63 @@
      "level": "high",
      "students": 124
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "청운면",
@@ -415,7 +1088,63 @@
      "level": "high",
      "students": 52
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   }
  ]
 }

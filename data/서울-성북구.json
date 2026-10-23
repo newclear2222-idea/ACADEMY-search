@@ -6,9 +6,66 @@
  "builtAt": "2026-10-23",
  "sources": [
   "학원: 나이스 교육정보 개방포털 학원교습소정보",
-  "학생 수: 학교알리미 학년별·학급별 학생수"
+  "학생 수: 학교알리미 학년별·학급별 학생수",
+  "수강료: 학원이 교육청에 등록한 1인당 교습비"
  ],
  "unmatchedAcademies": 7,
+ "fees": {
+  "all": {
+   "elem": [
+    180000,
+    358
+   ],
+   "middle": [
+    250000,
+    308
+   ],
+   "high": [
+    330000,
+    220
+   ],
+   "total": [
+    220000,
+    964
+   ]
+  },
+  "math": {
+   "elem": [
+    190000,
+    170
+   ],
+   "middle": [
+    280000,
+    149
+   ],
+   "high": [
+    350000,
+    122
+   ],
+   "total": [
+    250000,
+    443
+   ]
+  },
+  "english": {
+   "elem": [
+    200000,
+    110
+   ],
+   "middle": [
+    250000,
+    100
+   ],
+   "high": [
+    330000,
+    53
+   ],
+   "total": [
+    240000,
+    272
+   ]
+  }
+ },
  "areas": [
   {
    "name": "417동",
@@ -23,7 +80,63 @@
     "math": 0,
     "english": 1
    },
-   "schools": []
+   "schools": [],
+   "fees": {
+    "all": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "길음동",
@@ -64,7 +177,63 @@
      "level": "high",
      "students": 875
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      180000,
+      57
+     ],
+     "middle": [
+      300000,
+      54
+     ],
+     "high": [
+      380000,
+      61
+     ],
+     "total": [
+      250000,
+      197
+     ]
+    },
+    "math": {
+     "elem": [
+      200000,
+      27
+     ],
+     "middle": [
+      350000,
+      28
+     ],
+     "high": [
+      400000,
+      40
+     ],
+     "total": [
+      320000,
+      95
+     ]
+    },
+    "english": {
+     "elem": [
+      230000,
+      18
+     ],
+     "middle": [
+      300000,
+      14
+     ],
+     "high": [
+      350000,
+      14
+     ],
+     "total": [
+      300000,
+      46
+     ]
+    }
+   }
   },
   {
    "name": "돈암동",
@@ -125,7 +294,63 @@
      "level": "high",
      "students": 444
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      165000,
+      64
+     ],
+     "middle": [
+      200000,
+      43
+     ],
+     "high": [
+      250000,
+      35
+     ],
+     "total": [
+      200000,
+      149
+     ]
+    },
+    "math": {
+     "elem": [
+      180000,
+      24
+     ],
+     "middle": [
+      270000,
+      21
+     ],
+     "high": [
+      350000,
+      12
+     ],
+     "total": [
+      216000,
+      57
+     ]
+    },
+    "english": {
+     "elem": [
+      155000,
+      13
+     ],
+     "middle": [
+      265000,
+      4
+     ],
+     "high": [
+      290000,
+      3
+     ],
+     "total": [
+      190000,
+      20
+     ]
+    }
+   }
   },
   {
    "name": "동선동1가",
@@ -140,7 +365,63 @@
     "math": 1,
     "english": 0
    },
-   "schools": []
+   "schools": [],
+   "fees": {
+    "all": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "동선동4가",
@@ -155,7 +436,63 @@
     "math": 0,
     "english": 1
    },
-   "schools": []
+   "schools": [],
+   "fees": {
+    "all": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "동선동5가",
@@ -170,7 +507,63 @@
     "math": 5,
     "english": 4
    },
-   "schools": []
+   "schools": [],
+   "fees": {
+    "all": {
+     "elem": [
+      200000,
+      7
+     ],
+     "middle": [
+      300000,
+      10
+     ],
+     "high": [
+      330000,
+      18
+     ],
+     "total": [
+      300000,
+      35
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      300000,
+      3
+     ],
+     "high": [
+      300000,
+      14
+     ],
+     "total": [
+      300000,
+      17
+     ]
+    },
+    "english": {
+     "elem": [
+      200000,
+      7
+     ],
+     "middle": [
+      250000,
+      7
+     ],
+     "high": [
+      440000,
+      4
+     ],
+     "total": [
+      250000,
+      18
+     ]
+    }
+   }
   },
   {
    "name": "동소문동1가",
@@ -191,7 +584,63 @@
      "level": "middle",
      "students": 297
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      1
+     ],
+     "high": [
+      null,
+      1
+     ],
+     "total": [
+      null,
+      2
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "동소문동2가",
@@ -206,7 +655,63 @@
     "math": 1,
     "english": 1
    },
-   "schools": []
+   "schools": [],
+   "fees": {
+    "all": {
+     "elem": [
+      null,
+      2
+     ],
+     "middle": [
+      null,
+      2
+     ],
+     "high": [
+      null,
+      2
+     ],
+     "total": [
+      150000,
+      6
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      1
+     ],
+     "high": [
+      null,
+      1
+     ],
+     "total": [
+      null,
+      2
+     ]
+    }
+   }
   },
   {
    "name": "동소문동3가",
@@ -221,7 +726,63 @@
     "math": 3,
     "english": 2
    },
-   "schools": []
+   "schools": [],
+   "fees": {
+    "all": {
+     "elem": [
+      320000,
+      6
+     ],
+     "middle": [
+      null,
+      1
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      320000,
+      7
+     ]
+    },
+    "math": {
+     "elem": [
+      320000,
+      6
+     ],
+     "middle": [
+      null,
+      1
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      320000,
+      7
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "동소문동4가",
@@ -236,7 +797,63 @@
     "math": 6,
     "english": 5
    },
-   "schools": []
+   "schools": [],
+   "fees": {
+    "all": {
+     "elem": [
+      210000,
+      3
+     ],
+     "middle": [
+      280000,
+      5
+     ],
+     "high": [
+      350000,
+      3
+     ],
+     "total": [
+      280000,
+      11
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      1
+     ],
+     "middle": [
+      null,
+      1
+     ],
+     "high": [
+      null,
+      1
+     ],
+     "total": [
+      280000,
+      3
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      2
+     ],
+     "middle": [
+      280000,
+      4
+     ],
+     "high": [
+      null,
+      2
+     ],
+     "total": [
+      280000,
+      8
+     ]
+    }
+   }
   },
   {
    "name": "동소문동5가",
@@ -251,7 +868,63 @@
     "math": 2,
     "english": 1
    },
-   "schools": []
+   "schools": [],
+   "fees": {
+    "all": {
+     "elem": [
+      200000,
+      8
+     ],
+     "middle": [
+      360000,
+      8
+     ],
+     "high": [
+      460000,
+      3
+     ],
+     "total": [
+      250000,
+      19
+     ]
+    },
+    "math": {
+     "elem": [
+      200000,
+      8
+     ],
+     "middle": [
+      360000,
+      8
+     ],
+     "high": [
+      460000,
+      3
+     ],
+     "total": [
+      250000,
+      19
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "동소문동6가",
@@ -272,7 +945,63 @@
      "level": "elem",
      "students": 540
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      208000,
+      5
+     ],
+     "middle": [
+      300000,
+      4
+     ],
+     "high": [
+      330000,
+      7
+     ],
+     "total": [
+      300000,
+      16
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "english": {
+     "elem": [
+      208000,
+      5
+     ],
+     "middle": [
+      300000,
+      4
+     ],
+     "high": [
+      350000,
+      4
+     ],
+     "total": [
+      280000,
+      13
+     ]
+    }
+   }
   },
   {
    "name": "동소문동7가",
@@ -293,7 +1022,63 @@
      "level": "elem",
      "students": 708
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      170000,
+      7
+     ],
+     "middle": [
+      270000,
+      3
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      190000,
+      10
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "english": {
+     "elem": [
+      190000,
+      4
+     ],
+     "middle": [
+      null,
+      2
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      230000,
+      6
+     ]
+    }
+   }
   },
   {
    "name": "보문동",
@@ -314,7 +1099,63 @@
      "level": "elem",
      "students": 505
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "보문동2가",
@@ -329,7 +1170,63 @@
     "math": 2,
     "english": 1
    },
-   "schools": []
+   "schools": [],
+   "fees": {
+    "all": {
+     "elem": [
+      null,
+      2
+     ],
+     "middle": [
+      300000,
+      3
+     ],
+     "high": [
+      350000,
+      3
+     ],
+     "total": [
+      300000,
+      8
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      2
+     ],
+     "middle": [
+      null,
+      2
+     ],
+     "high": [
+      null,
+      1
+     ],
+     "total": [
+      250000,
+      5
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      1
+     ],
+     "high": [
+      null,
+      2
+     ],
+     "total": [
+      300000,
+      3
+     ]
+    }
+   }
   },
   {
    "name": "보문동3가",
@@ -350,7 +1247,63 @@
      "level": "elem",
      "students": 329
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "보문동4가",
@@ -365,7 +1318,63 @@
     "math": 0,
     "english": 1
    },
-   "schools": []
+   "schools": [],
+   "fees": {
+    "all": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "보문동5가",
@@ -380,7 +1389,63 @@
     "math": 0,
     "english": 1
    },
-   "schools": []
+   "schools": [],
+   "fees": {
+    "all": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "보문동6가",
@@ -395,7 +1460,63 @@
     "math": 1,
     "english": 0
    },
-   "schools": []
+   "schools": [],
+   "fees": {
+    "all": {
+     "elem": [
+      176000,
+      7
+     ],
+     "middle": [
+      null,
+      2
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      176000,
+      9
+     ]
+    },
+    "math": {
+     "elem": [
+      176000,
+      7
+     ],
+     "middle": [
+      null,
+      2
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      176000,
+      9
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "보문동7가",
@@ -410,7 +1531,63 @@
     "math": 1,
     "english": 0
    },
-   "schools": []
+   "schools": [],
+   "fees": {
+    "all": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "삼선동",
@@ -431,7 +1608,63 @@
      "level": "high",
      "students": 447
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "삼선동2가",
@@ -457,7 +1690,63 @@
      "level": "high",
      "students": 474
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      140000,
+      5
+     ],
+     "middle": [
+      null,
+      1
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      150000,
+      6
+     ]
+    },
+    "math": {
+     "elem": [
+      140000,
+      5
+     ],
+     "middle": [
+      null,
+      1
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      150000,
+      6
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "삼선동3가",
@@ -478,7 +1767,63 @@
      "level": "elem",
      "students": 399
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      null,
+      2
+     ],
+     "middle": [
+      260000,
+      4
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      200000,
+      9
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      2
+     ],
+     "middle": [
+      260000,
+      4
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      260000,
+      6
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "삼선동4가",
@@ -493,7 +1838,63 @@
     "math": 3,
     "english": 1
    },
-   "schools": []
+   "schools": [],
+   "fees": {
+    "all": {
+     "elem": [
+      null,
+      1
+     ],
+     "middle": [
+      null,
+      1
+     ],
+     "high": [
+      null,
+      1
+     ],
+     "total": [
+      320000,
+      3
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      1
+     ],
+     "middle": [
+      null,
+      1
+     ],
+     "high": [
+      null,
+      1
+     ],
+     "total": [
+      320000,
+      3
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "삼선동5가",
@@ -508,7 +1909,63 @@
     "math": 1,
     "english": 0
    },
-   "schools": []
+   "schools": [],
+   "fees": {
+    "all": {
+     "elem": [
+      null,
+      1
+     ],
+     "middle": [
+      null,
+      1
+     ],
+     "high": [
+      null,
+      1
+     ],
+     "total": [
+      250000,
+      3
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      1
+     ],
+     "middle": [
+      null,
+      1
+     ],
+     "high": [
+      null,
+      1
+     ],
+     "total": [
+      250000,
+      3
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "상월곡동",
@@ -529,7 +1986,63 @@
      "level": "middle",
      "students": 456
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "석관동",
@@ -565,7 +2078,63 @@
      "level": "high",
      "students": 682
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      200000,
+      15
+     ],
+     "middle": [
+      250000,
+      12
+     ],
+     "high": [
+      330000,
+      5
+     ],
+     "total": [
+      220000,
+      34
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      1
+     ],
+     "high": [
+      null,
+      1
+     ],
+     "total": [
+      null,
+      2
+     ]
+    },
+    "english": {
+     "elem": [
+      200000,
+      13
+     ],
+     "middle": [
+      256000,
+      8
+     ],
+     "high": [
+      350000,
+      4
+     ],
+     "total": [
+      230000,
+      27
+     ]
+    }
+   }
   },
   {
    "name": "성북동",
@@ -606,7 +2175,63 @@
      "level": "high",
      "students": 380
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "성북동1가",
@@ -621,7 +2246,63 @@
     "math": 0,
     "english": 0
    },
-   "schools": []
+   "schools": [],
+   "fees": {
+    "all": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "안암동",
@@ -642,7 +2323,63 @@
      "level": "high",
      "students": 781
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "안암동1가",
@@ -657,7 +2394,63 @@
     "math": 1,
     "english": 0
    },
-   "schools": []
+   "schools": [],
+   "fees": {
+    "all": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "안암동2가",
@@ -683,7 +2476,63 @@
      "level": "middle",
      "students": 155
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "안암동5가",
@@ -698,7 +2547,63 @@
     "math": 0,
     "english": 0
    },
-   "schools": []
+   "schools": [],
+   "fees": {
+    "all": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "math": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "english": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    }
+   }
   },
   {
    "name": "장위동",
@@ -749,7 +2654,63 @@
      "level": "middle",
      "students": 533
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      180000,
+      22
+     ],
+     "middle": [
+      220000,
+      18
+     ],
+     "high": [
+      280000,
+      11
+     ],
+     "total": [
+      210000,
+      53
+     ]
+    },
+    "math": {
+     "elem": [
+      170000,
+      12
+     ],
+     "middle": [
+      200000,
+      11
+     ],
+     "high": [
+      270000,
+      9
+     ],
+     "total": [
+      200000,
+      32
+     ]
+    },
+    "english": {
+     "elem": [
+      180000,
+      9
+     ],
+     "middle": [
+      250000,
+      6
+     ],
+     "high": [
+      null,
+      2
+     ],
+     "total": [
+      220000,
+      18
+     ]
+    }
+   }
   },
   {
    "name": "정릉동",
@@ -805,7 +2766,63 @@
      "level": "high",
      "students": 738
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      180000,
+      47
+     ],
+     "middle": [
+      250000,
+      50
+     ],
+     "high": [
+      320000,
+      30
+     ],
+     "total": [
+      210000,
+      155
+     ]
+    },
+    "math": {
+     "elem": [
+      190000,
+      19
+     ],
+     "middle": [
+      280000,
+      21
+     ],
+     "high": [
+      400000,
+      14
+     ],
+     "total": [
+      250000,
+      56
+     ]
+    },
+    "english": {
+     "elem": [
+      190000,
+      16
+     ],
+     "middle": [
+      250000,
+      20
+     ],
+     "high": [
+      320000,
+      8
+     ],
+     "total": [
+      230000,
+      49
+     ]
+    }
+   }
   },
   {
    "name": "종암동",
@@ -846,7 +2863,63 @@
      "level": "high",
      "students": 686
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      200000,
+      54
+     ],
+     "middle": [
+      260000,
+      31
+     ],
+     "high": [
+      330000,
+      6
+     ],
+     "total": [
+      220000,
+      97
+     ]
+    },
+    "math": {
+     "elem": [
+      210000,
+      39
+     ],
+     "middle": [
+      280000,
+      15
+     ],
+     "high": [
+      330000,
+      5
+     ],
+     "total": [
+      230000,
+      59
+     ]
+    },
+    "english": {
+     "elem": [
+      200000,
+      10
+     ],
+     "middle": [
+      250000,
+      13
+     ],
+     "high": [
+      null,
+      1
+     ],
+     "total": [
+      230000,
+      25
+     ]
+    }
+   }
   },
   {
    "name": "하월곡동",
@@ -882,7 +2955,63 @@
      "level": "high",
      "students": 338
     }
-   ]
+   ],
+   "fees": {
+    "all": {
+     "elem": [
+      180000,
+      43
+     ],
+     "middle": [
+      240000,
+      54
+     ],
+     "high": [
+      305000,
+      33
+     ],
+     "total": [
+      220000,
+      135
+     ]
+    },
+    "math": {
+     "elem": [
+      200000,
+      16
+     ],
+     "middle": [
+      270000,
+      28
+     ],
+     "high": [
+      350000,
+      20
+     ],
+     "total": [
+      260000,
+      64
+     ]
+    },
+    "english": {
+     "elem": [
+      185000,
+      13
+     ],
+     "middle": [
+      240000,
+      16
+     ],
+     "high": [
+      300000,
+      8
+     ],
+     "total": [
+      220000,
+      37
+     ]
+    }
+   }
   }
  ]
 }
