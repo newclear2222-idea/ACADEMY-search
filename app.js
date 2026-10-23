@@ -12,7 +12,12 @@ const els = {
   ranking: document.getElementById("ranking"),
   dongBody: document.querySelector("#dong-table tbody"),
   sources: document.getElementById("sources"),
+  compareHead: document.querySelector("#compare thead"),
+  compareBody: document.querySelector("#compare tbody"),
 };
+
+let current = null;
+let sortKey = "ratio";
 
 const cache = {};
 const fmt = (n) => n.toLocaleString("ko-KR");
@@ -79,8 +84,10 @@ function reasonsFor(r, ctx) {
 }
 
 // 서울 상권분석 추정매출은 분기 합계라 3으로 나눠 한 달로 봅니다. 과목과 상관없이 입시·보습 학원 전체로 나눕니다.
+// 학원이 적은 동은 매출 집계(행정동)와 학원 주소(법정동)의 경계 차이에 크게 흔들려 보여주지 않습니다.
+const MIN_ACADEMIES_FOR_SALES = 20;
 function monthlyPerAcademy(area) {
-  return area.sales && area.academies.all ? area.sales / 3 / area.academies.all : 0;
+  return area.sales && area.academies.all >= MIN_ACADEMIES_FOR_SALES ? area.sales / 3 / area.academies.all : 0;
 }
 
 // 정원이 큰 순서. 유명도·평판이 아니라 교육청에 등록한 규모입니다.
@@ -119,7 +126,7 @@ function render(data) {
   const average = perAcademy(totalStudents, totalAcademies);
 
   const regionFee = feeOf(data.fees, subject, level);
-  const withSales = data.areas.filter((a) => a.sales && a.academies.all);
+  const withSales = data.areas.filter((a) => monthlyPerAcademy(a));
   const regionPerMonth = withSales.length
     ? withSales.reduce((t, a) => t + a.sales, 0) / 3 / withSales.reduce((t, a) => t + a.academies.all, 0)
     : 0;
@@ -131,6 +138,8 @@ function render(data) {
     <div><div class="label">지역 평균, 학원 1곳당 학생</div><div class="value">${Number.isFinite(average) ? fmt(Math.round(average)) + "명" : "-"}</div></div>
     <div><div class="label">보통 수강료 (1인당, 등록 기준)</div><div class="value">${regionFee ? won(regionFee.median) : "-"}</div></div>${regionPerMonth ? `
     <div><div class="label">학원 1곳당 월 카드매출 (추정, 평균)</div><div class="value">${bigWon(regionPerMonth)}</div></div>` : ""}`;
+
+  renderCompare(rows, data, subject, level);
 
   const finite = rows.filter((r) => Number.isFinite(r.ratio)).map((r) => r.ratio);
   const max = Math.max(...finite, 1);
@@ -188,8 +197,50 @@ function render(data) {
   els.sources.textContent = `${base}출처: ${data.sources.join(" / ")}.${skipped}`;
 }
 
+const COLUMNS = [
+  { key: "name", label: "동", value: (r) => r.area.name, text: (r) => r.area.name },
+  { key: "students", label: "학생", value: (r) => r.students, text: (r) => `${fmt(r.students)}명` },
+  { key: "academies", label: "학원", value: (r) => r.academies, text: (r) => `${fmt(r.academies)}곳` },
+  {
+    key: "ratio", label: "학원 1곳당 학생",
+    value: (r) => (Number.isFinite(r.ratio) ? r.ratio : 1e9),
+    text: (r) => (Number.isFinite(r.ratio) ? `${fmt(Math.round(r.ratio))}명` : "학원 없음"),
+  },
+  {
+    key: "fee", label: "보통 수강료",
+    value: (r) => r.fee?.median || 0,
+    text: (r) => (r.fee ? won(r.fee.median) : "-"),
+  },
+  {
+    key: "sales", label: "학원 1곳당 월매출", salesOnly: true,
+    value: (r) => r.perMonth,
+    text: (r) => (r.perMonth ? bigWon(r.perMonth) : r.area.sales ? "학원 적음" : "-"),
+  },
+];
+
+function renderCompare(rows, data, subject, level) {
+  const hasSales = Boolean(data.salesPeriod);
+  // 휴대폰에서도 바로 보이도록 매출과 경쟁 지표를 동 이름 옆에 둡니다.
+  const order = ["name", "sales", "ratio", "fee", "students", "academies"];
+  const cols = COLUMNS.filter((c) => hasSales || !c.salesOnly).sort((a, b) => order.indexOf(a.key) - order.indexOf(b.key));
+  if (!cols.some((c) => c.key === sortKey)) sortKey = "ratio";
+  const list = rows.map((r) => ({ ...r, fee: feeOf(r.area.fees, subject, level), perMonth: monthlyPerAcademy(r.area) }));
+  const col = cols.find((c) => c.key === sortKey);
+  list.sort((a, b) => {
+    const x = col.value(a), y = col.value(b);
+    return typeof x === "string" ? x.localeCompare(y, "ko") : y - x;
+  });
+  els.compareHead.innerHTML = `<tr>${cols
+    .map((c) => `<th scope="col"${c.key === "name" ? "" : ' class="num"'} aria-sort="${c.key === sortKey ? (c.key === "name" ? "ascending" : "descending") : "none"}"><button type="button" data-key="${c.key}">${c.label}${c.key === sortKey ? " ▼" : ""}</button></th>`)
+    .join("")}</tr>`;
+  els.compareBody.innerHTML = list
+    .map((r) => `<tr>${cols.map((c) => `<td${c.key === "name" ? "" : ' class="num"'}>${c.text(r)}</td>`).join("")}</tr>`)
+    .join("");
+}
+
 async function update() {
   const data = await loadRegion(els.region.value);
+  current = data;
   render(data);
 }
 
@@ -221,6 +272,12 @@ async function init() {
   });
   els.result.hidden = false;
   for (const el of [els.region, els.subject, els.level]) el.addEventListener("change", update);
+  els.compareHead.addEventListener("click", (e) => {
+    const key = e.target.closest("button")?.dataset.key;
+    if (!key || !current) return;
+    sortKey = key;
+    render(current);
+  });
   await update();
 }
 
