@@ -57,6 +57,12 @@ PROVINCES = {
 
 PROVINCE_ALIASES = {"서울": "서울특별시", "서울시": "서울특별시", "경기": "경기도"}
 
+# 옛 이름으로 남은 주소를 지금 이름으로 맞춥니다.
+REGION_RENAMES = {"여주군": "여주시", "포천군": "포천시"}
+
+# 도로명주소 괄호 안의 건물 이름이 동 이름처럼 보이는 경우를 거릅니다. 예: (OO아파트상가동)
+NOT_AREA_WORDS = ("상가", "아파트", "빌딩", "타운", "프라자", "플라자", "센터", "오피스")
+
 # 학교알리미 학교급 코드
 SCHOOL_KINDS = {"elem": "02", "middle": "03", "high": "04"}
 
@@ -115,8 +121,10 @@ def fetch_schools(key, province):
     올해 공시가 아직 없으면 작년 공시를 씁니다.
     """
     config = PROVINCES[province]
+    # 시군구 코드 없이 시도 전체도 한 번 요청합니다. 코드가 바뀐 지역(예: 2026년 화성시 구 신설)을 놓치지 않기 위해서입니다.
+    sgg_codes = [""] + config["sgg"]
     address_of = {}
-    for sgg in config["sgg"]:
+    for sgg in sgg_codes:
         for kind in SCHOOL_KINDS.values():
             for row in schoolinfo_list(key, {
                 "apiType": "0", "sidoCode": config["sido"], "sggCode": sgg, "schulKndCode": kind,
@@ -126,7 +134,8 @@ def fetch_schools(key, province):
     this_year = datetime.date.today().year
     for year in (this_year, this_year - 1):
         schools = {}
-        for sgg in config["sgg"]:
+        for sgg in sgg_codes:
+            before = len(schools)
             for level, kind in SCHOOL_KINDS.items():
                 for row in schoolinfo_list(key, {
                     "apiType": "09", "pbanYr": year,
@@ -142,6 +151,7 @@ def fetch_schools(key, province):
                         "address": address_of.get(code) or row.get("ADRCD_NM", ""),
                         "students": students,
                     }
+            print(f"    {year}년 {sgg or '시도 전체'}: 새 학교 {len(schools) - before}곳")
         if schools:
             print(f"  {year}년 공시 기준 학교 {len(schools)}곳을 받았습니다.")
             return list(schools.values()), year
@@ -161,13 +171,18 @@ def region_of(address):
     tokens = (address or "").split()
     if len(tokens) < 2:
         return None
-    return PROVINCE_ALIASES.get(tokens[0], tokens[0]), tokens[1]
+    name = re.sub(r"^(.+시).+구$", r"\1", tokens[1])  # 성남시수정구 -> 성남시
+    return PROVINCE_ALIASES.get(tokens[0], tokens[0]), REGION_RENAMES.get(name, name)
 
 
 def legal_dong(dong):
     """행정동 이름을 법정동 이름으로 묶습니다. 예: 중계2·3동 -> 중계동, 중계본동 -> 중계동"""
     base = re.sub(r"(본동|[0-9·.,제]+동)$", "", dong)
     return base + "동" if base and base != dong else dong
+
+
+def is_area_name(name):
+    return len(name) <= 7 and not any(word in name for word in NOT_AREA_WORDS)
 
 
 def area_of(address):
@@ -182,11 +197,11 @@ def area_of(address):
     for token in tokens[2:5]:
         if re.fullmatch(r"[가-힣0-9]+[읍면]", token):
             return token
-    paren = re.search(r"\(([가-힣0-9·.]+(?:동|가))[,)\s]", address)
-    if paren:
+    paren = re.search(r"\(([가-힣0-9·.]+(?:동|[0-9]가))[,)\s]", address)
+    if paren and is_area_name(paren.group(1)):
         return legal_dong(paren.group(1))
     for token in tokens[2:5]:
-        if re.fullmatch(r"[가-힣0-9·.]+동|[가-힣]+[0-9]*가", token):
+        if re.fullmatch(r"[가-힣0-9·.]+동|[가-힣]+[0-9]+가", token) and is_area_name(token):
             return legal_dong(token)
     return ""
 
