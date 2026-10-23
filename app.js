@@ -113,7 +113,16 @@ async function init() {
     document.querySelector(".controls").hidden = true;
     return;
   }
-  els.region.innerHTML = regions.map((r) => `<option value="${r.id}">${r.name}</option>`).join("");
+  const provinces = [...new Set(regions.map((r) => r.province))];
+  els.region.innerHTML = provinces
+    .map((p) => {
+      const options = regions
+        .filter((r) => r.province === p)
+        .map((r) => `<option value="${r.id}">${r.name.replace(p + " ", "")}</option>`)
+        .join("");
+      return `<optgroup label="${p}">${options}</optgroup>`;
+    })
+    .join("");
   els.result.hidden = false;
   for (const el of [els.region, els.subject, els.level]) el.addEventListener("change", update);
   await update();

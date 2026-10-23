@@ -1,14 +1,15 @@
-"""공공데이터 API에서 학원 목록과 학교별 학생 수를 받아 data/<지역>.json 을 새로 만듭니다.
+"""공공데이터 API에서 서울·경기 전체의 학원 목록과 학교별 학생 수를 받아
+data/<지역>.json (구·시·군마다 하나)과 data/regions.json 을 새로 만듭니다.
 
 필요한 환경변수 (GitHub 저장소 Secrets에 넣어 둡니다. 코드에는 절대 적지 않습니다):
   NEIS_API_KEY        나이스 교육정보 개방포털 인증키 (학원교습소정보)
-  SCHOOLINFO_API_KEY  학교알리미 OpenAPI 인증키 (학년별·학급별 학생수)
+  SCHOOLINFO_API_KEY  학교알리미 OpenAPI 인증키 (학교기본정보, 학년별·학급별 학생수)
 
 사용 예:
-  python3 scripts/update_data.py --gu 노원구 --office B10 --sido 11 --sgg 11350
+  python3 scripts/update_data.py              # 서울, 경기 모두
+  python3 scripts/update_data.py 서울특별시   # 서울만
 """
 
-import argparse
 import datetime
 import json
 import os
@@ -20,9 +21,41 @@ import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+DATA_DIR = ROOT / "data"
 
 NEIS_URL = "https://open.neis.go.kr/hub/acaInsTiInfo"
 SCHOOLINFO_URL = "https://www.schoolinfo.go.kr/openApi.do"
+
+# office: 나이스 시도교육청 코드, sido/sgg: 학교알리미 시도·시군구 코드
+# 구가 있는 시는 시 코드와 구 코드를 모두 넣습니다. 같은 학교는 한 번만 셉니다.
+PROVINCES = {
+    "서울특별시": {
+        "short": "서울",
+        "office": "B10",
+        "sido": "11",
+        "sgg": [
+            "11110", "11140", "11170", "11200", "11215", "11230", "11260", "11290", "11305",
+            "11320", "11350", "11380", "11410", "11440", "11470", "11500", "11530", "11545",
+            "11560", "11590", "11620", "11650", "11680", "11710", "11740",
+        ],
+    },
+    "경기도": {
+        "short": "경기",
+        "office": "J10",
+        "sido": "41",
+        "sgg": [
+            "41110", "41111", "41113", "41115", "41117", "41130", "41131", "41133", "41135",
+            "41150", "41170", "41171", "41173", "41190", "41192", "41194", "41196", "41210",
+            "41220", "41250", "41270", "41271", "41273", "41280", "41281", "41285", "41287",
+            "41290", "41310", "41360", "41370", "41390", "41410", "41430", "41450", "41460",
+            "41461", "41463", "41465", "41480", "41500", "41550", "41570", "41590", "41591",
+            "41593", "41595", "41597", "41610", "41630", "41650", "41670", "41800", "41820",
+            "41830",
+        ],
+    },
+}
+
+PROVINCE_ALIASES = {"서울": "서울특별시", "서울시": "서울특별시", "경기": "경기도"}
 
 # 학교알리미 학교급 코드
 SCHOOL_KINDS = {"elem": "02", "middle": "03", "high": "04"}
@@ -38,7 +71,7 @@ def get_json(url, params, tries=4):
     request = urllib.request.Request(f"{url}?{query}", headers={"User-Agent": "academy-search"})
     for attempt in range(tries):
         try:
-            with urllib.request.urlopen(request, timeout=30) as res:
+            with urllib.request.urlopen(request, timeout=60) as res:
                 return json.loads(res.read().decode("utf-8"))
         except Exception as error:  # 네트워크 오류는 잠시 쉬고 다시 시도
             if attempt == tries - 1:
@@ -47,14 +80,14 @@ def get_json(url, params, tries=4):
             time.sleep(2 ** (attempt + 1))
 
 
-def fetch_academies(key, office, gu):
-    """나이스 학원교습소정보에서 해당 구의 학원·교습소 전체를 받습니다."""
+def fetch_academies(key, office):
+    """나이스 학원교습소정보에서 시도교육청 관할 학원·교습소 전체를 받습니다."""
     rows = []
     page = 1
     while True:
         data = get_json(NEIS_URL, {
             "KEY": key, "Type": "json", "pIndex": page, "pSize": 1000,
-            "ATPT_OFCDC_SC_CODE": office, "ADMST_ZONE_NM": gu,
+            "ATPT_OFCDC_SC_CODE": office,
         })
         if "acaInsTiInfo" not in data:
             result = data.get("RESULT", {})
@@ -67,54 +100,52 @@ def fetch_academies(key, office, gu):
         if len(rows) >= total:
             break
         page += 1
-    print(f"학원·교습소 {len(rows)}곳을 받았습니다.")
+    print(f"  학원·교습소 {len(rows)}곳을 받았습니다.")
     return rows
 
 
-def fetch_schools(key, sido, sgg):
-    """학교알리미 '학년별·학급별 학생수'(apiType 09)로 학교별 학생 수를 받습니다.
+def schoolinfo_list(key, params):
+    data = get_json(SCHOOLINFO_URL, {"apiKey": key, **params})
+    return data.get("list", []) if data.get("resultCode") == "success" else []
+
+
+def fetch_schools(key, province):
+    """학교알리미에서 학교 주소(apiType 0)와 학교별 학생 수(apiType 09)를 받습니다.
 
     올해 공시가 아직 없으면 작년 공시를 씁니다.
     """
-    # 학교기본정보(apiType 0)의 지번 주소에서 법정동을 얻습니다. 예: 서울특별시 노원구 중계동 123
-    dong_of = {}
-    for kind in SCHOOL_KINDS.values():
-        data = get_json(SCHOOLINFO_URL, {
-            "apiKey": key, "apiType": "0",
-            "sidoCode": sido, "sggCode": sgg, "schulKndCode": kind,
-        })
-        for row in data.get("list", []):
-            dong_of[row.get("SCHUL_CODE")] = (
-                last_dong(row.get("ADRES_BRKDN", ""))
-                or academy_dong(row.get("SCHUL_RDNMA", "") + " " + (row.get("SCHUL_RDNDA") or ""), [])
-            )
+    config = PROVINCES[province]
+    address_of = {}
+    for sgg in config["sgg"]:
+        for kind in SCHOOL_KINDS.values():
+            for row in schoolinfo_list(key, {
+                "apiType": "0", "sidoCode": config["sido"], "sggCode": sgg, "schulKndCode": kind,
+            }):
+                address_of[row.get("SCHUL_CODE")] = row.get("ADRES_BRKDN") or row.get("SCHUL_RDNMA") or ""
 
     this_year = datetime.date.today().year
     for year in (this_year, this_year - 1):
-        schools = []
-        for level, kind in SCHOOL_KINDS.items():
-            data = get_json(SCHOOLINFO_URL, {
-                "apiKey": key, "apiType": "09", "pbanYr": year,
-                "sidoCode": sido, "sggCode": sgg, "schulKndCode": kind,
-            })
-            if data.get("resultCode") != "success":
-                print(f"  {year}년 {level}: {data.get('resultMsg')}", file=sys.stderr)
-                continue
-            for row in data.get("list", []):
-                students = to_int(row.get("COL_S_SUM") or row.get("COL_SUM_S4"))
-                if not students:
-                    continue
-                schools.append({
-                    "name": row.get("SCHUL_NM", ""),
-                    "level": level,
-                    "dong": legal_dong(dong_of.get(row.get("SCHUL_CODE")) or last_dong(row.get("ADRCD_NM", ""))),
-                    "students": students,
-                })
+        schools = {}
+        for sgg in config["sgg"]:
+            for level, kind in SCHOOL_KINDS.items():
+                for row in schoolinfo_list(key, {
+                    "apiType": "09", "pbanYr": year,
+                    "sidoCode": config["sido"], "sggCode": sgg, "schulKndCode": kind,
+                }):
+                    code = row.get("SCHUL_CODE")
+                    students = to_int(row.get("COL_S_SUM") or row.get("COL_SUM_S4"))
+                    if code in schools or not students:
+                        continue
+                    schools[code] = {
+                        "name": row.get("SCHUL_NM", ""),
+                        "level": level,
+                        "address": address_of.get(code) or row.get("ADRCD_NM", ""),
+                        "students": students,
+                    }
         if schools:
-            located = sum(1 for s in schools if s["dong"])
-            print(f"{year}년 공시 기준 학교 {len(schools)}곳을 받았습니다 (동을 찾은 학교 {located}곳).")
-            return schools, year
-    sys.exit("학교알리미에서 학생 수를 받지 못했습니다. 인증키와 지역 코드를 확인해 주세요.")
+            print(f"  {year}년 공시 기준 학교 {len(schools)}곳을 받았습니다.")
+            return list(schools.values()), year
+    sys.exit(f"{province}: 학교알리미에서 학생 수를 받지 못했습니다. 인증키를 확인해 주세요.")
 
 
 def to_int(value):
@@ -125,10 +156,12 @@ def to_int(value):
         return 0
 
 
-def last_dong(text):
-    """'서울특별시 노원구 중계동' 같은 주소에서 마지막 동 이름을 꺼냅니다."""
-    names = re.findall(r"[가-힣]+[0-9]*가?동(?=[\s\d,)]|$)", text or "")
-    return names[-1] if names else ""
+def region_of(address):
+    """주소 앞부분에서 (시도, 구·시·군)을 꺼냅니다. 예: '경기도 수원시 영통구 ...' -> ('경기도', '수원시')"""
+    tokens = (address or "").split()
+    if len(tokens) < 2:
+        return None
+    return PROVINCE_ALIASES.get(tokens[0], tokens[0]), tokens[1]
 
 
 def legal_dong(dong):
@@ -137,12 +170,25 @@ def legal_dong(dong):
     return base + "동" if base and base != dong else dong
 
 
-def academy_dong(address, known):
-    """도로명주소 끝 괄호의 법정동을 꺼냅니다. 예: '... 2층 (중계동, OO빌딩)' -> 중계동"""
-    paren = re.search(r"\(([가-힣0-9]+동)[,)]", address or "")
+def area_of(address):
+    """주소에서 동·읍·면을 꺼냅니다.
+
+    - 읍·면: '경기도 화성시 봉담읍 동화길 1' -> 봉담읍
+    - 도로명주소 괄호: '... 2층 (중계동, OO빌딩)' -> 중계동
+    - 지번주소: '서울특별시 노원구 중계동 123' -> 중계동
+    """
+    address = address or ""
+    tokens = address.split()
+    for token in tokens[2:5]:
+        if re.fullmatch(r"[가-힣0-9]+[읍면]", token):
+            return token
+    paren = re.search(r"\(([가-힣0-9·.]+(?:동|가))[,)\s]", address)
     if paren:
-        return paren.group(1)
-    return next((name for name in known if name in (address or "")), "")
+        return legal_dong(paren.group(1))
+    for token in tokens[2:5]:
+        if re.fullmatch(r"[가-힣0-9·.]+동|[가-힣]+[0-9]*가", token):
+            return legal_dong(token)
+    return ""
 
 
 def is_open_tutoring(row):
@@ -152,97 +198,124 @@ def is_open_tutoring(row):
     return status in ("", "개원", "등록") and ("보습" in realm or "입시" in realm)
 
 
-def build(gu, province, academies, schools, year):
-    areas = {}
+def new_region(province, name):
+    return {"province": province, "name": name, "areas": {}, "unmatched": 0}
 
-    def area(name):
-        return areas.setdefault(name, {
-            "name": name,
-            "students": {"elem": 0, "middle": 0, "high": 0, "total": 0},
-            "academies": {"all": 0, "math": 0, "english": 0},
-            "schools": [],
-        })
+
+def new_area(name):
+    return {
+        "name": name,
+        "students": {"elem": 0, "middle": 0, "high": 0, "total": 0},
+        "academies": {"all": 0, "math": 0, "english": 0},
+        "schools": [],
+    }
+
+
+def build(province, academies, schools, year):
+    """시도 하나의 학원·학교를 구·시·군 > 동·읍·면으로 묶습니다."""
+    regions = {}
+
+    def region(address):
+        found = region_of(address)
+        if not found or found[0] != province:
+            return None
+        return regions.setdefault(found[1], new_region(province, found[1]))
 
     for school in schools:
-        if not school["dong"]:
+        r = region(school["address"])
+        name = area_of(school["address"])
+        if r is None or not name:
             continue
-        a = area(school["dong"])
+        a = r["areas"].setdefault(name, new_area(name))
         a["students"][school["level"]] += school["students"]
         a["students"]["total"] += school["students"]
         a["schools"].append({k: school[k] for k in ("name", "level", "students")})
 
-    unmatched = 0
     for row in academies:
         if not is_open_tutoring(row):
             continue
-        address = f"{row.get('FA_RDNMA') or ''} {row.get('FA_RDNDA') or ''}"
-        dong = legal_dong(academy_dong(address, list(areas)))
-        if not dong:
-            unmatched += 1
-            if unmatched <= 3:
-                print(f"  동을 못 찾은 주소 예: {address.strip()}", file=sys.stderr)
+        address = f"{row.get('FA_RDNMA') or ''} {row.get('FA_RDNDA') or ''}".strip()
+        r = region(address)
+        if r is None:
             continue
-        a = area(dong)
+        name = area_of(address)
+        if not name:
+            r["unmatched"] += 1
+            continue
+        a = r["areas"].setdefault(name, new_area(name))
         text = " ".join(row.get(k, "") or "" for k in ("ACA_NM", "LE_CRSE_LIST_NM", "LE_CRSE_NM"))
         a["academies"]["all"] += 1
         for subject, keywords in SUBJECT_KEYWORDS.items():
             if any(k in text for k in keywords):
                 a["academies"][subject] += 1
 
-    for a in areas.values():
-        a["schools"].sort(key=lambda s: ("elem", "middle", "high").index(s["level"]))
+    today = datetime.date.today()
+    outputs = []
+    for r in regions.values():
+        areas = sorted(r["areas"].values(), key=lambda a: a["name"])
+        if not any(a["students"]["total"] for a in areas):
+            continue
+        for a in areas:
+            a["schools"].sort(key=lambda s: ("elem", "middle", "high").index(s["level"]))
+        outputs.append({
+            "id": f"{PROVINCES[province]['short']}-{r['name']}",
+            "province": province,
+            "region": f"{province} {r['name']}",
+            "baseDate": f"학생 수 {year}년 학교알리미 공시, 학원 {today:%Y년 %m월} 기준",
+            "builtAt": today.isoformat(),
+            "sources": [
+                "학원: 나이스 교육정보 개방포털 학원교습소정보",
+                "학생 수: 학교알리미 학년별·학급별 학생수",
+            ],
+            "unmatchedAcademies": r["unmatched"],
+            "areas": areas,
+        })
+    return outputs
 
-    return {
-        "id": gu,
-        "region": f"{province} {gu}",
-        "baseDate": f"학생 수 {year}년 학교알리미 공시, 학원 {datetime.date.today():%Y년 %m월} 기준",
-        "builtAt": datetime.date.today().isoformat(),
-        "sources": [
-            "학원: 나이스 교육정보 개방포털 학원교습소정보",
-            "학생 수: 학교알리미 학년별·학급별 학생수",
-        ],
-        "unmatchedAcademies": unmatched,
-        "areas": sorted(areas.values(), key=lambda a: a["name"]),
-    }
 
+def save(outputs, provinces):
+    """처리한 시도의 지역 파일만 새로 쓰고, 나머지 시도 파일은 그대로 둡니다."""
+    DATA_DIR.mkdir(exist_ok=True)
+    index_path = DATA_DIR / "regions.json"
+    index = json.loads(index_path.read_text(encoding="utf-8")) if index_path.exists() else []
+    index = [r for r in index if r.get("province") in PROVINCES and r["province"] not in provinces]
 
-def save(output):
-    data_dir = ROOT / "data"
-    data_dir.mkdir(exist_ok=True)
-    (data_dir / f"{output['id']}.json").write_text(
-        json.dumps(output, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    keep = {f"{r['id']}.json" for r in index} | {f"{o['id']}.json" for o in outputs} | {"regions.json"}
+    for old in DATA_DIR.glob("*.json"):
+        if old.name not in keep:
+            old.unlink()
+    for o in outputs:
+        (DATA_DIR / f"{o['id']}.json").write_text(
+            json.dumps(o, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
-    index_path = data_dir / "regions.json"
-    regions = json.loads(index_path.read_text(encoding="utf-8")) if index_path.exists() else []
-    regions = [r for r in regions if r["id"] != output["id"]]
-    regions.append({"id": output["id"], "name": output["region"]})
-    index_path.write_text(json.dumps(regions, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    index += [{"id": o["id"], "name": o["region"], "province": o["province"]} for o in outputs]
+    order = list(PROVINCES)
+    index.sort(key=lambda r: (order.index(r["province"]), r["name"]))
+    index_path.write_text(json.dumps(index, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
 
 def main():
-    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--gu", required=True, help="구 이름, 예: 노원구")
-    parser.add_argument("--province", default="서울특별시")
-    parser.add_argument("--office", required=True, help="나이스 시도교육청 코드, 서울은 B10")
-    parser.add_argument("--sido", required=True, help="학교알리미 시도 코드, 서울은 11")
-    parser.add_argument("--sgg", required=True, help="학교알리미 시군구 코드, 노원구는 11350")
-    args = parser.parse_args()
-
     neis_key = os.environ.get("NEIS_API_KEY")
     schoolinfo_key = os.environ.get("SCHOOLINFO_API_KEY")
     if not neis_key or not schoolinfo_key:
         sys.exit("NEIS_API_KEY와 SCHOOLINFO_API_KEY 환경변수가 필요합니다.")
 
-    academies = fetch_academies(neis_key, args.office, args.gu)
-    schools, year = fetch_schools(schoolinfo_key, args.sido, args.sgg)
-    output = build(args.gu, args.province, academies, schools, year)
-    if not output["areas"] or not any(a["students"]["total"] for a in output["areas"]):
-        sys.exit("동별로 묶인 결과가 없어 저장하지 않습니다. 주소 형식을 확인해 주세요.")
-    save(output)
-
-    total = sum(a["academies"]["all"] for a in output["areas"])
-    print(f"data/{args.gu}.json: 동 {len(output['areas'])}개, 입시·보습 학원 {total}곳 "
-          f"(주소로 동을 못 찾은 학원 {output['unmatchedAcademies']}곳)")
+    provinces = [PROVINCE_ALIASES.get(p, p) for p in sys.argv[1:]] or list(PROVINCES)
+    outputs = []
+    for province in provinces:
+        print(f"{province}")
+        academies = fetch_academies(neis_key, PROVINCES[province]["office"])
+        schools, year = fetch_schools(schoolinfo_key, province)
+        built = build(province, academies, schools, year)
+        if not built:
+            sys.exit(f"{province}: 지역별로 묶인 결과가 없어 저장하지 않습니다. 주소 형식을 확인해 주세요.")
+        for o in built:
+            total = sum(a["academies"]["all"] for a in o["areas"])
+            print(f"  {o['region']}: 동·읍·면 {len(o['areas'])}개, 입시·보습 학원 {total}곳, "
+                  f"동을 못 찾은 학원 {o['unmatchedAcademies']}곳")
+        outputs.extend(built)
+    save(outputs, provinces)
+    print(f"지역 {len(outputs)}곳을 저장했습니다.")
 
 
 if __name__ == "__main__":
