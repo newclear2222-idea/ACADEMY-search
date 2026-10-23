@@ -158,7 +158,6 @@ function render(data) {
         <div class="bar"><span style="width:${width.toFixed(1)}%"></span></div>
         <div class="rank-sub">${LEVEL_LABELS[level]} ${fmt(r.students)}명 · ${SUBJECT_LABELS[subject]} ${fmt(r.academies)}곳 · 학교 ${schoolCount}곳${feeText}</div>
         ${salesText}
-        ${topAcademies(r.area, subject)}
         ${why}
       </li>`;
     })
