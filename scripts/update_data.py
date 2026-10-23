@@ -107,7 +107,7 @@ def fetch_schools(key, sido, sgg):
                 schools.append({
                     "name": row.get("SCHUL_NM", ""),
                     "level": level,
-                    "dong": dong_of.get(row.get("SCHUL_CODE")) or last_dong(row.get("ADRCD_NM", "")),
+                    "dong": legal_dong(dong_of.get(row.get("SCHUL_CODE")) or last_dong(row.get("ADRCD_NM", ""))),
                     "students": students,
                 })
         if schools:
@@ -129,6 +129,12 @@ def last_dong(text):
     """'서울특별시 노원구 중계동' 같은 주소에서 마지막 동 이름을 꺼냅니다."""
     names = re.findall(r"[가-힣]+[0-9]*가?동(?=[\s\d,)]|$)", text or "")
     return names[-1] if names else ""
+
+
+def legal_dong(dong):
+    """행정동 이름을 법정동 이름으로 묶습니다. 예: 중계2·3동 -> 중계동, 중계본동 -> 중계동"""
+    base = re.sub(r"(본동|[0-9·.,제]+동)$", "", dong)
+    return base + "동" if base and base != dong else dong
 
 
 def academy_dong(address, known):
@@ -170,7 +176,7 @@ def build(gu, province, academies, schools, year):
         if not is_open_tutoring(row):
             continue
         address = f"{row.get('FA_RDNMA') or ''} {row.get('FA_RDNDA') or ''}"
-        dong = academy_dong(address, list(areas))
+        dong = legal_dong(academy_dong(address, list(areas)))
         if not dong:
             unmatched += 1
             if unmatched <= 3:

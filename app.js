@@ -92,7 +92,8 @@ function render(data) {
     .join("");
 
   const base = data.baseDate ? `${data.baseDate}. ` : "";
-  els.sources.textContent = `${base}출처: ${data.sources.join(" / ")}.`;
+  const skipped = data.unmatchedAcademies ? ` 주소에 동 이름이 없어 빠진 학원 ${fmt(data.unmatchedAcademies)}곳.` : "";
+  els.sources.textContent = `${base}출처: ${data.sources.join(" / ")}.${skipped}`;
 }
 
 async function update() {
