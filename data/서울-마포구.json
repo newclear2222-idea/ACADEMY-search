@@ -1,0 +1,542 @@
+{
+ "id": "서울-마포구",
+ "province": "서울특별시",
+ "region": "서울특별시 마포구",
+ "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 10월 기준",
+ "builtAt": "2026-10-23",
+ "sources": [
+  "학원: 나이스 교육정보 개방포털 학원교습소정보",
+  "학생 수: 학교알리미 학년별·학급별 학생수"
+ ],
+ "unmatchedAcademies": 4,
+ "areas": [
+  {
+   "name": "공덕동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 27,
+    "math": 5,
+    "english": 12
+   },
+   "schools": []
+  },
+  {
+   "name": "구수동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 3,
+    "math": 0,
+    "english": 1
+   },
+   "schools": []
+  },
+  {
+   "name": "노고산동",
+   "students": {
+    "elem": 140,
+    "middle": 335,
+    "high": 0,
+    "total": 475
+   },
+   "academies": {
+    "all": 7,
+    "math": 2,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "서울창천초등학교",
+     "level": "elem",
+     "students": 140
+    },
+    {
+     "name": "창천중학교",
+     "level": "middle",
+     "students": 335
+    }
+   ]
+  },
+  {
+   "name": "대흥동",
+   "students": {
+    "elem": 499,
+    "middle": 508,
+    "high": 603,
+    "total": 1610
+   },
+   "academies": {
+    "all": 77,
+    "math": 23,
+    "english": 19
+   },
+   "schools": [
+    {
+     "name": "서울용강초등학교",
+     "level": "elem",
+     "students": 499
+    },
+    {
+     "name": "숭문중학교",
+     "level": "middle",
+     "students": 508
+    },
+    {
+     "name": "숭문고등학교",
+     "level": "high",
+     "students": 603
+    }
+   ]
+  },
+  {
+   "name": "도화동",
+   "students": {
+    "elem": 626,
+    "middle": 0,
+    "high": 0,
+    "total": 626
+   },
+   "academies": {
+    "all": 26,
+    "math": 9,
+    "english": 8
+   },
+   "schools": [
+    {
+     "name": "서울마포초등학교",
+     "level": "elem",
+     "students": 626
+    }
+   ]
+  },
+  {
+   "name": "동교동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 3,
+    "math": 0,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "망원동",
+   "students": {
+    "elem": 700,
+    "middle": 0,
+    "high": 0,
+    "total": 700
+   },
+   "academies": {
+    "all": 36,
+    "math": 14,
+    "english": 11
+   },
+   "schools": [
+    {
+     "name": "서울동교초등학교",
+     "level": "elem",
+     "students": 544
+    },
+    {
+     "name": "서울망원초등학교",
+     "level": "elem",
+     "students": 156
+    }
+   ]
+  },
+  {
+   "name": "상수동",
+   "students": {
+    "elem": 943,
+    "middle": 0,
+    "high": 0,
+    "total": 943
+   },
+   "academies": {
+    "all": 4,
+    "math": 1,
+    "english": 1
+   },
+   "schools": [
+    {
+     "name": "서울서강초등학교",
+     "level": "elem",
+     "students": 943
+    }
+   ]
+  },
+  {
+   "name": "상암동",
+   "students": {
+    "elem": 1163,
+    "middle": 806,
+    "high": 767,
+    "total": 2736
+   },
+   "academies": {
+    "all": 66,
+    "math": 32,
+    "english": 18
+   },
+   "schools": [
+    {
+     "name": "서울상암초등학교",
+     "level": "elem",
+     "students": 405
+    },
+    {
+     "name": "서울상지초등학교",
+     "level": "elem",
+     "students": 464
+    },
+    {
+     "name": "서울하늘초등학교",
+     "level": "elem",
+     "students": 294
+    },
+    {
+     "name": "상암중학교",
+     "level": "middle",
+     "students": 806
+    },
+    {
+     "name": "상암고등학교",
+     "level": "high",
+     "students": 767
+    }
+   ]
+  },
+  {
+   "name": "서교동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 7,
+    "math": 2,
+    "english": 1
+   },
+   "schools": []
+  },
+  {
+   "name": "성산동",
+   "students": {
+    "elem": 1437,
+    "middle": 905,
+    "high": 734,
+    "total": 3076
+   },
+   "academies": {
+    "all": 49,
+    "math": 16,
+    "english": 12
+   },
+   "schools": [
+    {
+     "name": "서울성서초등학교",
+     "level": "elem",
+     "students": 376
+    },
+    {
+     "name": "서울성원초등학교",
+     "level": "elem",
+     "students": 212
+    },
+    {
+     "name": "서울중동초등학교",
+     "level": "elem",
+     "students": 378
+    },
+    {
+     "name": "홍익대학교사범대학부속초등학교",
+     "level": "elem",
+     "students": 471
+    },
+    {
+     "name": "성사중학교",
+     "level": "middle",
+     "students": 248
+    },
+    {
+     "name": "성서중학교",
+     "level": "middle",
+     "students": 352
+    },
+    {
+     "name": "홍익대학교사범대학부속여자중학교",
+     "level": "middle",
+     "students": 305
+    },
+    {
+     "name": "홍익대학교사범대학부속여자고등학교",
+     "level": "high",
+     "students": 734
+    }
+   ]
+  },
+  {
+   "name": "신공덕동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 5,
+    "math": 2,
+    "english": 3
+   },
+   "schools": []
+  },
+  {
+   "name": "신수동",
+   "students": {
+    "elem": 503,
+    "middle": 477,
+    "high": 709,
+    "total": 1689
+   },
+   "academies": {
+    "all": 44,
+    "math": 15,
+    "english": 7
+   },
+   "schools": [
+    {
+     "name": "서울신석초등학교",
+     "level": "elem",
+     "students": 503
+    },
+    {
+     "name": "신수중학교",
+     "level": "middle",
+     "students": 477
+    },
+    {
+     "name": "광성고등학교",
+     "level": "high",
+     "students": 709
+    }
+   ]
+  },
+  {
+   "name": "아현동",
+   "students": {
+    "elem": 969,
+    "middle": 671,
+    "high": 172,
+    "total": 1812
+   },
+   "academies": {
+    "all": 43,
+    "math": 9,
+    "english": 11
+   },
+   "schools": [
+    {
+     "name": "서울소의초등학교",
+     "level": "elem",
+     "students": 352
+    },
+    {
+     "name": "서울아현초등학교",
+     "level": "elem",
+     "students": 617
+    },
+    {
+     "name": "아현중학교",
+     "level": "middle",
+     "students": 671
+    },
+    {
+     "name": "한세사이버보안고등학교",
+     "level": "high",
+     "students": 172
+    }
+   ]
+  },
+  {
+   "name": "연남동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 866,
+    "total": 866
+   },
+   "academies": {
+    "all": 5,
+    "math": 0,
+    "english": 1
+   },
+   "schools": [
+    {
+     "name": "경성고등학교",
+     "level": "high",
+     "students": 575
+    },
+    {
+     "name": "홍익디자인고등학교",
+     "level": "high",
+     "students": 291
+    }
+   ]
+  },
+  {
+   "name": "염리동",
+   "students": {
+    "elem": 2121,
+    "middle": 666,
+    "high": 1578,
+    "total": 4365
+   },
+   "academies": {
+    "all": 51,
+    "math": 22,
+    "english": 11
+   },
+   "schools": [
+    {
+     "name": "서울염리초등학교",
+     "level": "elem",
+     "students": 1295
+    },
+    {
+     "name": "서울한서초등학교",
+     "level": "elem",
+     "students": 826
+    },
+    {
+     "name": "서울여자중학교",
+     "level": "middle",
+     "students": 666
+    },
+    {
+     "name": "서울여자고등학교",
+     "level": "high",
+     "students": 782
+    },
+    {
+     "name": "서울디자인고등학교",
+     "level": "high",
+     "students": 796
+    }
+   ]
+  },
+  {
+   "name": "용강동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 9,
+    "math": 3,
+    "english": 1
+   },
+   "schools": []
+  },
+  {
+   "name": "중동",
+   "students": {
+    "elem": 530,
+    "middle": 530,
+    "high": 0,
+    "total": 1060
+   },
+   "academies": {
+    "all": 11,
+    "math": 3,
+    "english": 3
+   },
+   "schools": [
+    {
+     "name": "서울신북초등학교",
+     "level": "elem",
+     "students": 530
+    },
+    {
+     "name": "중암중학교",
+     "level": "middle",
+     "students": 530
+    }
+   ]
+  },
+  {
+   "name": "창전동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 21,
+    "math": 6,
+    "english": 6
+   },
+   "schools": []
+  },
+  {
+   "name": "합정동",
+   "students": {
+    "elem": 539,
+    "middle": 391,
+    "high": 0,
+    "total": 930
+   },
+   "academies": {
+    "all": 8,
+    "math": 1,
+    "english": 2
+   },
+   "schools": [
+    {
+     "name": "서울성산초등학교",
+     "level": "elem",
+     "students": 539
+    },
+    {
+     "name": "성산중학교",
+     "level": "middle",
+     "students": 391
+    }
+   ]
+  },
+  {
+   "name": "현석동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 4,
+    "math": 1,
+    "english": 2
+   },
+   "schools": []
+  }
+ ]
+}

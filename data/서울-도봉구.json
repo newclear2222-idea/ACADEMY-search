@@ -1,0 +1,299 @@
+{
+ "id": "서울-도봉구",
+ "province": "서울특별시",
+ "region": "서울특별시 도봉구",
+ "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 10월 기준",
+ "builtAt": "2026-10-23",
+ "sources": [
+  "학원: 나이스 교육정보 개방포털 학원교습소정보",
+  "학생 수: 학교알리미 학년별·학급별 학생수"
+ ],
+ "unmatchedAcademies": 0,
+ "areas": [
+  {
+   "name": "2동",
+   "students": {
+    "elem": 681,
+    "middle": 0,
+    "high": 0,
+    "total": 681
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "서울창림초등학교",
+     "level": "elem",
+     "students": 681
+    }
+   ]
+  },
+  {
+   "name": "도봉동",
+   "students": {
+    "elem": 1068,
+    "middle": 583,
+    "high": 351,
+    "total": 2002
+   },
+   "academies": {
+    "all": 19,
+    "math": 7,
+    "english": 6
+   },
+   "schools": [
+    {
+     "name": "서울누원초등학교",
+     "level": "elem",
+     "students": 602
+    },
+    {
+     "name": "서울도봉초등학교",
+     "level": "elem",
+     "students": 243
+    },
+    {
+     "name": "서울오봉초등학교",
+     "level": "elem",
+     "students": 223
+    },
+    {
+     "name": "도봉중학교",
+     "level": "middle",
+     "students": 259
+    },
+    {
+     "name": "북서울중학교",
+     "level": "middle",
+     "students": 324
+    },
+    {
+     "name": "누원고등학교",
+     "level": "high",
+     "students": 351
+    }
+   ]
+  },
+  {
+   "name": "방학동",
+   "students": {
+    "elem": 1606,
+    "middle": 1345,
+    "high": 257,
+    "total": 3208
+   },
+   "academies": {
+    "all": 86,
+    "math": 33,
+    "english": 24
+   },
+   "schools": [
+    {
+     "name": "서울방학초등학교",
+     "level": "elem",
+     "students": 394
+    },
+    {
+     "name": "서울신방학초등학교",
+     "level": "elem",
+     "students": 239
+    },
+    {
+     "name": "서울신학초등학교",
+     "level": "elem",
+     "students": 312
+    },
+    {
+     "name": "서울초당초등학교",
+     "level": "elem",
+     "students": 661
+    },
+    {
+     "name": "방학중학교",
+     "level": "middle",
+     "students": 339
+    },
+    {
+     "name": "신방학중학교",
+     "level": "middle",
+     "students": 437
+    },
+    {
+     "name": "창동중학교",
+     "level": "middle",
+     "students": 569
+    },
+    {
+     "name": "서울문화고등학교",
+     "level": "high",
+     "students": 257
+    }
+   ]
+  },
+  {
+   "name": "쌍문동",
+   "students": {
+    "elem": 3018,
+    "middle": 2056,
+    "high": 2451,
+    "total": 7525
+   },
+   "academies": {
+    "all": 132,
+    "math": 38,
+    "english": 35
+   },
+   "schools": [
+    {
+     "name": "동북초등학교",
+     "level": "elem",
+     "students": 767
+    },
+    {
+     "name": "서울백운초등학교",
+     "level": "elem",
+     "students": 602
+    },
+    {
+     "name": "서울숭미초등학교",
+     "level": "elem",
+     "students": 487
+    },
+    {
+     "name": "서울쌍문초등학교",
+     "level": "elem",
+     "students": 480
+    },
+    {
+     "name": "서울창경초등학교",
+     "level": "elem",
+     "students": 682
+    },
+    {
+     "name": "백운중학교",
+     "level": "middle",
+     "students": 397
+    },
+    {
+     "name": "선덕중학교",
+     "level": "middle",
+     "students": 691
+    },
+    {
+     "name": "신도봉중학교",
+     "level": "middle",
+     "students": 390
+    },
+    {
+     "name": "정의여자중학교",
+     "level": "middle",
+     "students": 293
+    },
+    {
+     "name": "효문중학교",
+     "level": "middle",
+     "students": 285
+    },
+    {
+     "name": "선덕고등학교",
+     "level": "high",
+     "students": 1099
+    },
+    {
+     "name": "정의여자고등학교",
+     "level": "high",
+     "students": 550
+    },
+    {
+     "name": "세그루패션디자인고등학교",
+     "level": "high",
+     "students": 380
+    },
+    {
+     "name": "효문고등학교",
+     "level": "high",
+     "students": 422
+    }
+   ]
+  },
+  {
+   "name": "창동",
+   "students": {
+    "elem": 2218,
+    "middle": 1352,
+    "high": 2471,
+    "total": 6041
+   },
+   "academies": {
+    "all": 141,
+    "math": 54,
+    "english": 33
+   },
+   "schools": [
+    {
+     "name": "서울신창초등학교",
+     "level": "elem",
+     "students": 190
+    },
+    {
+     "name": "서울신화초등학교",
+     "level": "elem",
+     "students": 292
+    },
+    {
+     "name": "서울월천초등학교",
+     "level": "elem",
+     "students": 280
+    },
+    {
+     "name": "서울자운초등학교",
+     "level": "elem",
+     "students": 555
+    },
+    {
+     "name": "서울창동초등학교",
+     "level": "elem",
+     "students": 289
+    },
+    {
+     "name": "서울창일초등학교",
+     "level": "elem",
+     "students": 612
+    },
+    {
+     "name": "노곡중학교",
+     "level": "middle",
+     "students": 333
+    },
+    {
+     "name": "창북중학교",
+     "level": "middle",
+     "students": 442
+    },
+    {
+     "name": "창일중학교",
+     "level": "middle",
+     "students": 577
+    },
+    {
+     "name": "창동고등학교",
+     "level": "high",
+     "students": 1039
+    },
+    {
+     "name": "서울외국어고등학교",
+     "level": "high",
+     "students": 683
+    },
+    {
+     "name": "자운고등학교",
+     "level": "high",
+     "students": 749
+    }
+   ]
+  }
+ ]
+}

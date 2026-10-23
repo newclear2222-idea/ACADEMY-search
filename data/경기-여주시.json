@@ -1,0 +1,484 @@
+{
+ "id": "경기-여주시",
+ "province": "경기도",
+ "region": "경기도 여주시",
+ "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 10월 기준",
+ "builtAt": "2026-10-23",
+ "sources": [
+  "학원: 나이스 교육정보 개방포털 학원교습소정보",
+  "학생 수: 학교알리미 학년별·학급별 학생수"
+ ],
+ "unmatchedAcademies": 3,
+ "areas": [
+  {
+   "name": "가남읍",
+   "students": {
+    "elem": 445,
+    "middle": 264,
+    "high": 406,
+    "total": 1115
+   },
+   "academies": {
+    "all": 11,
+    "math": 4,
+    "english": 2
+   },
+   "schools": [
+    {
+     "name": "가남초등학교",
+     "level": "elem",
+     "students": 348
+    },
+    {
+     "name": "금당초등학교",
+     "level": "elem",
+     "students": 25
+    },
+    {
+     "name": "송삼초등학교",
+     "level": "elem",
+     "students": 39
+    },
+    {
+     "name": "오산초등학교",
+     "level": "elem",
+     "students": 33
+    },
+    {
+     "name": "여주제일중학교",
+     "level": "middle",
+     "students": 264
+    },
+    {
+     "name": "여주제일고등학교",
+     "level": "high",
+     "students": 406
+    }
+   ]
+  },
+  {
+   "name": "강천면",
+   "students": {
+    "elem": 56,
+    "middle": 0,
+    "high": 0,
+    "total": 56
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "강천초등학교",
+     "level": "elem",
+     "students": 48
+    },
+    {
+     "name": "북내초등학교도전분교장",
+     "level": "elem",
+     "students": 8
+    }
+   ]
+  },
+  {
+   "name": "교동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 34,
+    "math": 12,
+    "english": 14
+   },
+   "schools": []
+  },
+  {
+   "name": "금사면",
+   "students": {
+    "elem": 18,
+    "middle": 0,
+    "high": 0,
+    "total": 18
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "이포초등학교",
+     "level": "elem",
+     "students": 18
+    }
+   ]
+  },
+  {
+   "name": "능서면",
+   "students": {
+    "elem": 0,
+    "middle": 447,
+    "high": 365,
+    "total": 812
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "세정중학교",
+     "level": "middle",
+     "students": 53
+    },
+    {
+     "name": "여주중학교",
+     "level": "middle",
+     "students": 394
+    },
+    {
+     "name": "여주자영농업고등학교",
+     "level": "high",
+     "students": 365
+    }
+   ]
+  },
+  {
+   "name": "대신면",
+   "students": {
+    "elem": 26,
+    "middle": 94,
+    "high": 266,
+    "total": 386
+   },
+   "academies": {
+    "all": 1,
+    "math": 1,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "송촌초등학교",
+     "level": "elem",
+     "students": 26
+    },
+    {
+     "name": "대신중학교",
+     "level": "middle",
+     "students": 56
+    },
+    {
+     "name": "창명여자중학교",
+     "level": "middle",
+     "students": 38
+    },
+    {
+     "name": "경기관광고등학교",
+     "level": "high",
+     "students": 266
+    }
+   ]
+  },
+  {
+   "name": "북내면",
+   "students": {
+    "elem": 0,
+    "middle": 213,
+    "high": 241,
+    "total": 454
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "여강중학교",
+     "level": "middle",
+     "students": 213
+    },
+    {
+     "name": "여강고등학교",
+     "level": "high",
+     "students": 241
+    }
+   ]
+  },
+  {
+   "name": "산북면",
+   "students": {
+    "elem": 44,
+    "middle": 48,
+    "high": 0,
+    "total": 92
+   },
+   "academies": {
+    "all": 2,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "상품초등학교",
+     "level": "elem",
+     "students": 44
+    },
+    {
+     "name": "상품중학교",
+     "level": "middle",
+     "students": 48
+    }
+   ]
+  },
+  {
+   "name": "상동",
+   "students": {
+    "elem": 0,
+    "middle": 520,
+    "high": 0,
+    "total": 520
+   },
+   "academies": {
+    "all": 6,
+    "math": 3,
+    "english": 1
+   },
+   "schools": [
+    {
+     "name": "여흥중학교",
+     "level": "middle",
+     "students": 520
+    }
+   ]
+  },
+  {
+   "name": "세종대왕면",
+   "students": {
+    "elem": 52,
+    "middle": 0,
+    "high": 0,
+    "total": 52
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "능서초등학교",
+     "level": "elem",
+     "students": 52
+    }
+   ]
+  },
+  {
+   "name": "오학동",
+   "students": {
+    "elem": 734,
+    "middle": 0,
+    "high": 0,
+    "total": 734
+   },
+   "academies": {
+    "all": 16,
+    "math": 7,
+    "english": 5
+   },
+   "schools": [
+    {
+     "name": "오학초등학교",
+     "level": "elem",
+     "students": 734
+    }
+   ]
+  },
+  {
+   "name": "월송동",
+   "students": {
+    "elem": 92,
+    "middle": 0,
+    "high": 0,
+    "total": 92
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "연라초등학교",
+     "level": "elem",
+     "students": 92
+    }
+   ]
+  },
+  {
+   "name": "점동면",
+   "students": {
+    "elem": 0,
+    "middle": 67,
+    "high": 0,
+    "total": 67
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "점동중학교",
+     "level": "middle",
+     "students": 67
+    }
+   ]
+  },
+  {
+   "name": "점봉동",
+   "students": {
+    "elem": 251,
+    "middle": 0,
+    "high": 0,
+    "total": 251
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "점봉초등학교",
+     "level": "elem",
+     "students": 251
+    }
+   ]
+  },
+  {
+   "name": "창동",
+   "students": {
+    "elem": 443,
+    "middle": 0,
+    "high": 0,
+    "total": 443
+   },
+   "academies": {
+    "all": 4,
+    "math": 2,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "여주초등학교",
+     "level": "elem",
+     "students": 443
+    }
+   ]
+  },
+  {
+   "name": "하거동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "하동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 5,
+    "math": 2,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "현암동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 5,
+    "math": 3,
+    "english": 1
+   },
+   "schools": []
+  },
+  {
+   "name": "홍문동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 16,
+    "math": 6,
+    "english": 4
+   },
+   "schools": []
+  },
+  {
+   "name": "흥천면",
+   "students": {
+    "elem": 57,
+    "middle": 65,
+    "high": 0,
+    "total": 122
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "문장초등학교",
+     "level": "elem",
+     "students": 29
+    },
+    {
+     "name": "흥천초등학교",
+     "level": "elem",
+     "students": 28
+    },
+    {
+     "name": "이포중학교",
+     "level": "middle",
+     "students": 37
+    },
+    {
+     "name": "흥천중학교",
+     "level": "middle",
+     "students": 28
+    }
+   ]
+  }
+ ]
+}

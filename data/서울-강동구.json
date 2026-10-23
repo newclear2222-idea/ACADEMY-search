@@ -1,0 +1,468 @@
+{
+ "id": "서울-강동구",
+ "province": "서울특별시",
+ "region": "서울특별시 강동구",
+ "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 10월 기준",
+ "builtAt": "2026-10-23",
+ "sources": [
+  "학원: 나이스 교육정보 개방포털 학원교습소정보",
+  "학생 수: 학교알리미 학년별·학급별 학생수"
+ ],
+ "unmatchedAcademies": 0,
+ "areas": [
+  {
+   "name": "강일동",
+   "students": {
+    "elem": 1107,
+    "middle": 1512,
+    "high": 554,
+    "total": 3173
+   },
+   "academies": {
+    "all": 65,
+    "math": 19,
+    "english": 22
+   },
+   "schools": [
+    {
+     "name": "서울강일초등학교",
+     "level": "elem",
+     "students": 492
+    },
+    {
+     "name": "서울강솔초등학교",
+     "level": "elem",
+     "students": 615
+    },
+    {
+     "name": "강명중학교",
+     "level": "middle",
+     "students": 677
+    },
+    {
+     "name": "강동중학교",
+     "level": "middle",
+     "students": 486
+    },
+    {
+     "name": "강빛중학교",
+     "level": "middle",
+     "students": 349
+    },
+    {
+     "name": "강일고등학교",
+     "level": "high",
+     "students": 554
+    }
+   ]
+  },
+  {
+   "name": "고덕동",
+   "students": {
+    "elem": 4678,
+    "middle": 3535,
+    "high": 3089,
+    "total": 11302
+   },
+   "academies": {
+    "all": 103,
+    "math": 31,
+    "english": 26
+   },
+   "schools": [
+    {
+     "name": "서울강덕초등학교",
+     "level": "elem",
+     "students": 1102
+    },
+    {
+     "name": "서울고덕초등학교",
+     "level": "elem",
+     "students": 704
+    },
+    {
+     "name": "서울명덕초등학교",
+     "level": "elem",
+     "students": 1613
+    },
+    {
+     "name": "서울묘곡초등학교",
+     "level": "elem",
+     "students": 1259
+    },
+    {
+     "name": "고덕중학교",
+     "level": "middle",
+     "students": 1502
+    },
+    {
+     "name": "명일중학교",
+     "level": "middle",
+     "students": 1148
+    },
+    {
+     "name": "배재중학교",
+     "level": "middle",
+     "students": 885
+    },
+    {
+     "name": "광문고등학교",
+     "level": "high",
+     "students": 1237
+    },
+    {
+     "name": "배재고등학교",
+     "level": "high",
+     "students": 1298
+    },
+    {
+     "name": "서울컨벤션고등학교",
+     "level": "high",
+     "students": 554
+    }
+   ]
+  },
+  {
+   "name": "길동",
+   "students": {
+    "elem": 1570,
+    "middle": 503,
+    "high": 0,
+    "total": 2073
+   },
+   "academies": {
+    "all": 46,
+    "math": 18,
+    "english": 12
+   },
+   "schools": [
+    {
+     "name": "서울길동초등학교",
+     "level": "elem",
+     "students": 513
+    },
+    {
+     "name": "서울신명초등학교",
+     "level": "elem",
+     "students": 478
+    },
+    {
+     "name": "서울천동초등학교",
+     "level": "elem",
+     "students": 579
+    },
+    {
+     "name": "신명중학교",
+     "level": "middle",
+     "students": 503
+    }
+   ]
+  },
+  {
+   "name": "둔촌동",
+   "students": {
+    "elem": 3062,
+    "middle": 1561,
+    "high": 1467,
+    "total": 6090
+   },
+   "academies": {
+    "all": 58,
+    "math": 23,
+    "english": 15
+   },
+   "schools": [
+    {
+     "name": "서울둔촌초등학교",
+     "level": "elem",
+     "students": 1020
+    },
+    {
+     "name": "서울선린초등학교",
+     "level": "elem",
+     "students": 443
+    },
+    {
+     "name": "서울위례초등학교",
+     "level": "elem",
+     "students": 1084
+    },
+    {
+     "name": "서울한산초등학교",
+     "level": "elem",
+     "students": 515
+    },
+    {
+     "name": "동북중학교",
+     "level": "middle",
+     "students": 442
+    },
+    {
+     "name": "둔촌중학교",
+     "level": "middle",
+     "students": 323
+    },
+    {
+     "name": "한산중학교",
+     "level": "middle",
+     "students": 796
+    },
+    {
+     "name": "동북고등학교",
+     "level": "high",
+     "students": 751
+    },
+    {
+     "name": "둔촌고등학교",
+     "level": "high",
+     "students": 716
+    }
+   ]
+  },
+  {
+   "name": "명일동",
+   "students": {
+    "elem": 2198,
+    "middle": 0,
+    "high": 557,
+    "total": 2755
+   },
+   "academies": {
+    "all": 268,
+    "math": 94,
+    "english": 57
+   },
+   "schools": [
+    {
+     "name": "서울고명초등학교",
+     "level": "elem",
+     "students": 842
+    },
+    {
+     "name": "서울대명초등학교",
+     "level": "elem",
+     "students": 701
+    },
+    {
+     "name": "서울명원초등학교",
+     "level": "elem",
+     "students": 655
+    },
+    {
+     "name": "명일여자고등학교",
+     "level": "high",
+     "students": 557
+    }
+   ]
+  },
+  {
+   "name": "상동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "상일동",
+   "students": {
+    "elem": 3687,
+    "middle": 1383,
+    "high": 4055,
+    "total": 9125
+   },
+   "academies": {
+    "all": 36,
+    "math": 11,
+    "english": 11
+   },
+   "schools": [
+    {
+     "name": "서울고일초등학교",
+     "level": "elem",
+     "students": 1887
+    },
+    {
+     "name": "서울상일초등학교",
+     "level": "elem",
+     "students": 168
+    },
+    {
+     "name": "서울강명초등학교",
+     "level": "elem",
+     "students": 412
+    },
+    {
+     "name": "서울고현초등학교",
+     "level": "elem",
+     "students": 1220
+    },
+    {
+     "name": "상일중학교",
+     "level": "middle",
+     "students": 554
+    },
+    {
+     "name": "한영중학교",
+     "level": "middle",
+     "students": 829
+    },
+    {
+     "name": "강동고등학교",
+     "level": "high",
+     "students": 761
+    },
+    {
+     "name": "상일여자고등학교",
+     "level": "high",
+     "students": 886
+    },
+    {
+     "name": "한영고등학교",
+     "level": "high",
+     "students": 1252
+    },
+    {
+     "name": "한영외국어고등학교",
+     "level": "high",
+     "students": 702
+    },
+    {
+     "name": "상일미디어고등학교",
+     "level": "high",
+     "students": 454
+    }
+   ]
+  },
+  {
+   "name": "성내동",
+   "students": {
+    "elem": 1465,
+    "middle": 554,
+    "high": 0,
+    "total": 2019
+   },
+   "academies": {
+    "all": 113,
+    "math": 37,
+    "english": 30
+   },
+   "schools": [
+    {
+     "name": "서울성내초등학교",
+     "level": "elem",
+     "students": 702
+    },
+    {
+     "name": "서울성일초등학교",
+     "level": "elem",
+     "students": 763
+    },
+    {
+     "name": "성내중학교",
+     "level": "middle",
+     "students": 554
+    }
+   ]
+  },
+  {
+   "name": "암사동",
+   "students": {
+    "elem": 987,
+    "middle": 1255,
+    "high": 0,
+    "total": 2242
+   },
+   "academies": {
+    "all": 109,
+    "math": 42,
+    "english": 25
+   },
+   "schools": [
+    {
+     "name": "서울선사초등학교",
+     "level": "elem",
+     "students": 395
+    },
+    {
+     "name": "서울신암초등학교",
+     "level": "elem",
+     "students": 592
+    },
+    {
+     "name": "강일중학교",
+     "level": "middle",
+     "students": 717
+    },
+    {
+     "name": "신암중학교",
+     "level": "middle",
+     "students": 538
+    }
+   ]
+  },
+  {
+   "name": "천호동",
+   "students": {
+    "elem": 1306,
+    "middle": 1811,
+    "high": 772,
+    "total": 3889
+   },
+   "academies": {
+    "all": 51,
+    "math": 18,
+    "english": 12
+   },
+   "schools": [
+    {
+     "name": "서울강동초등학교",
+     "level": "elem",
+     "students": 473
+    },
+    {
+     "name": "서울천일초등학교",
+     "level": "elem",
+     "students": 306
+    },
+    {
+     "name": "서울천호초등학교",
+     "level": "elem",
+     "students": 527
+    },
+    {
+     "name": "동신중학교",
+     "level": "middle",
+     "students": 465
+    },
+    {
+     "name": "성덕여자중학교",
+     "level": "middle",
+     "students": 477
+    },
+    {
+     "name": "천일중학교",
+     "level": "middle",
+     "students": 456
+    },
+    {
+     "name": "천호중학교",
+     "level": "middle",
+     "students": 413
+    },
+    {
+     "name": "성덕고등학교",
+     "level": "high",
+     "students": 772
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,486 @@
+{
+ "id": "서울-서대문구",
+ "province": "서울특별시",
+ "region": "서울특별시 서대문구",
+ "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 10월 기준",
+ "builtAt": "2026-10-23",
+ "sources": [
+  "학원: 나이스 교육정보 개방포털 학원교습소정보",
+  "학생 수: 학교알리미 학년별·학급별 학생수"
+ ],
+ "unmatchedAcademies": 14,
+ "areas": [
+  {
+   "name": "남가좌동",
+   "students": {
+    "elem": 2831,
+    "middle": 801,
+    "high": 0,
+    "total": 3632
+   },
+   "academies": {
+    "all": 72,
+    "math": 22,
+    "english": 22
+   },
+   "schools": [
+    {
+     "name": "서울연가초등학교",
+     "level": "elem",
+     "students": 1340
+    },
+    {
+     "name": "서울가재울초등학교",
+     "level": "elem",
+     "students": 1491
+    },
+    {
+     "name": "연희중학교",
+     "level": "middle",
+     "students": 801
+    }
+   ]
+  },
+  {
+   "name": "냉천동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 5,
+    "math": 1,
+    "english": 1
+   },
+   "schools": []
+  },
+  {
+   "name": "대신동",
+   "students": {
+    "elem": 623,
+    "middle": 497,
+    "high": 1024,
+    "total": 2144
+   },
+   "academies": {
+    "all": 3,
+    "math": 2,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "이화여자대학교사범대학부속초등학교",
+     "level": "elem",
+     "students": 623
+    },
+    {
+     "name": "이화여자대학교사범대학부속이화·금란중학교",
+     "level": "middle",
+     "students": 497
+    },
+    {
+     "name": "이화여자대학교사범대학부속이화금란고등학교",
+     "level": "high",
+     "students": 1024
+    }
+   ]
+  },
+  {
+   "name": "대현동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 1,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "미근동",
+   "students": {
+    "elem": 215,
+    "middle": 0,
+    "high": 0,
+    "total": 215
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "서울미동초등학교",
+     "level": "elem",
+     "students": 215
+    }
+   ]
+  },
+  {
+   "name": "북가좌동",
+   "students": {
+    "elem": 872,
+    "middle": 664,
+    "high": 647,
+    "total": 2183
+   },
+   "academies": {
+    "all": 84,
+    "math": 34,
+    "english": 19
+   },
+   "schools": [
+    {
+     "name": "서울북가좌초등학교",
+     "level": "elem",
+     "students": 872
+    },
+    {
+     "name": "가재울중학교",
+     "level": "middle",
+     "students": 664
+    },
+    {
+     "name": "가재울고등학교",
+     "level": "high",
+     "students": 647
+    }
+   ]
+  },
+  {
+   "name": "북가좌삼호아파트상가동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "북아현동",
+   "students": {
+    "elem": 1170,
+    "middle": 471,
+    "high": 808,
+    "total": 2449
+   },
+   "academies": {
+    "all": 27,
+    "math": 8,
+    "english": 6
+   },
+   "schools": [
+    {
+     "name": "서울북성초등학교",
+     "level": "elem",
+     "students": 811
+    },
+    {
+     "name": "추계초등학교",
+     "level": "elem",
+     "students": 359
+    },
+    {
+     "name": "중앙여자중학교",
+     "level": "middle",
+     "students": 258
+    },
+    {
+     "name": "한성중학교",
+     "level": "middle",
+     "students": 213
+    },
+    {
+     "name": "중앙여자고등학교",
+     "level": "high",
+     "students": 491
+    },
+    {
+     "name": "한성고등학교",
+     "level": "high",
+     "students": 317
+    }
+   ]
+  },
+  {
+   "name": "상가동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "연희동",
+   "students": {
+    "elem": 561,
+    "middle": 798,
+    "high": 0,
+    "total": 1359
+   },
+   "academies": {
+    "all": 27,
+    "math": 5,
+    "english": 7
+   },
+   "schools": [
+    {
+     "name": "서울연희초등학교",
+     "level": "elem",
+     "students": 561
+    },
+    {
+     "name": "서연중학교",
+     "level": "middle",
+     "students": 307
+    },
+    {
+     "name": "신연중학교",
+     "level": "middle",
+     "students": 298
+    },
+    {
+     "name": "연북중학교",
+     "level": "middle",
+     "students": 193
+    }
+   ]
+  },
+  {
+   "name": "영천동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 7,
+    "math": 0,
+    "english": 2
+   },
+   "schools": []
+  },
+  {
+   "name": "우측.홍동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 1
+   },
+   "schools": []
+  },
+  {
+   "name": "창천동",
+   "students": {
+    "elem": 166,
+    "middle": 0,
+    "high": 0,
+    "total": 166
+   },
+   "academies": {
+    "all": 4,
+    "math": 2,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "서울창서초등학교",
+     "level": "elem",
+     "students": 166
+    }
+   ]
+  },
+  {
+   "name": "천연동",
+   "students": {
+    "elem": 402,
+    "middle": 244,
+    "high": 0,
+    "total": 646
+   },
+   "academies": {
+    "all": 3,
+    "math": 1,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "서울금화초등학교",
+     "level": "elem",
+     "students": 402
+    },
+    {
+     "name": "동명여자중학교",
+     "level": "middle",
+     "students": 244
+    }
+   ]
+  },
+  {
+   "name": "충정로2가",
+   "students": {
+    "elem": 582,
+    "middle": 290,
+    "high": 331,
+    "total": 1203
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "경기초등학교",
+     "level": "elem",
+     "students": 582
+    },
+    {
+     "name": "인창중학교",
+     "level": "middle",
+     "students": 290
+    },
+    {
+     "name": "인창고등학교",
+     "level": "high",
+     "students": 331
+    }
+   ]
+  },
+  {
+   "name": "현저동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 375,
+    "total": 375
+   },
+   "academies": {
+    "all": 6,
+    "math": 0,
+    "english": 2
+   },
+   "schools": [
+    {
+     "name": "한성과학고등학교",
+     "level": "high",
+     "students": 375
+    }
+   ]
+  },
+  {
+   "name": "홍동",
+   "students": {
+    "elem": 1563,
+    "middle": 366,
+    "high": 0,
+    "total": 1929
+   },
+   "academies": {
+    "all": 72,
+    "math": 28,
+    "english": 21
+   },
+   "schools": [
+    {
+     "name": "서울고은초등학교",
+     "level": "elem",
+     "students": 180
+    },
+    {
+     "name": "서울안산초등학교",
+     "level": "elem",
+     "students": 535
+    },
+    {
+     "name": "서울인왕초등학교",
+     "level": "elem",
+     "students": 537
+    },
+    {
+     "name": "서울홍은초등학교",
+     "level": "elem",
+     "students": 311
+    },
+    {
+     "name": "인왕중학교",
+     "level": "middle",
+     "students": 366
+    }
+   ]
+  },
+  {
+   "name": "홍은동",
+   "students": {
+    "elem": 1130,
+    "middle": 1360,
+    "high": 1223,
+    "total": 3713
+   },
+   "academies": {
+    "all": 88,
+    "math": 23,
+    "english": 23
+   },
+   "schools": [
+    {
+     "name": "명지초등학교",
+     "level": "elem",
+     "students": 724
+    },
+    {
+     "name": "서울홍연초등학교",
+     "level": "elem",
+     "students": 406
+    },
+    {
+     "name": "명지중학교",
+     "level": "middle",
+     "students": 780
+    },
+    {
+     "name": "정원여자중학교",
+     "level": "middle",
+     "students": 281
+    },
+    {
+     "name": "홍은중학교",
+     "level": "middle",
+     "students": 299
+    },
+    {
+     "name": "명지고등학교",
+     "level": "high",
+     "students": 1223
+    }
+   ]
+  }
+ ]
+}

@@ -1,5 +1,6 @@
 {
- "id": "노원구",
+ "id": "서울-노원구",
+ "province": "서울특별시",
  "region": "서울특별시 노원구",
  "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 10월 기준",
  "builtAt": "2026-10-23",
@@ -7,15 +8,15 @@
   "학원: 나이스 교육정보 개방포털 학원교습소정보",
   "학생 수: 학교알리미 학년별·학급별 학생수"
  ],
- "unmatchedAcademies": 92,
+ "unmatchedAcademies": 90,
  "areas": [
   {
    "name": "공릉동",
    "students": {
     "elem": 3868,
     "middle": 1726,
-    "high": 1301,
-    "total": 6895
+    "high": 458,
+    "total": 6052
    },
    "academies": {
     "all": 85,
@@ -77,21 +78,46 @@
      "name": "한국삼육고등학교",
      "level": "high",
      "students": 458
-    },
-    {
-     "name": "서울동산고등학교",
-     "level": "high",
-     "students": 843
     }
    ]
   },
   {
+   "name": "롯데캐슬루나상가동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 2,
+    "math": 0,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "보람상가",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
    "name": "상계동",
    "students": {
-    "elem": 6206,
-    "middle": 3335,
-    "high": 4013,
-    "total": 13554
+    "elem": 4236,
+    "middle": 2908,
+    "high": 3317,
+    "total": 10461
    },
    "academies": {
     "all": 209,
@@ -108,11 +134,6 @@
      "name": "서울노원초등학교",
      "level": "elem",
      "students": 199
-    },
-    {
-     "name": "서울노일초등학교",
-     "level": "elem",
-     "students": 373
     },
     {
      "name": "서울당현초등학교",
@@ -133,11 +154,6 @@
      "name": "서울상계초등학교",
      "level": "elem",
      "students": 170
-    },
-    {
-     "name": "서울상곡초등학교",
-     "level": "elem",
-     "students": 430
     },
     {
      "name": "서울상수초등학교",
@@ -168,16 +184,6 @@
      "name": "서울신상계초등학교",
      "level": "elem",
      "students": 343
-    },
-    {
-     "name": "서울온곡초등학교",
-     "level": "elem",
-     "students": 449
-    },
-    {
-     "name": "청원초등학교",
-     "level": "elem",
-     "students": 718
     },
     {
      "name": "서울덕암초등학교",
@@ -220,11 +226,6 @@
      "students": 272
     },
     {
-     "name": "온곡중학교",
-     "level": "middle",
-     "students": 427
-    },
-    {
      "name": "청원중학교",
      "level": "middle",
      "students": 491
@@ -245,11 +246,6 @@
      "students": 490
     },
     {
-     "name": "용화여자고등학교",
-     "level": "high",
-     "students": 696
-    },
-    {
      "name": "청원고등학교",
      "level": "high",
      "students": 984
@@ -264,10 +260,10 @@
   {
    "name": "월계동",
    "students": {
-    "elem": 1834,
-    "middle": 1495,
-    "high": 2326,
-    "total": 5655
+    "elem": 1433,
+    "middle": 918,
+    "high": 1887,
+    "total": 4238
    },
    "academies": {
     "all": 53,
@@ -286,19 +282,9 @@
      "students": 531
     },
     {
-     "name": "서울신계초등학교",
-     "level": "elem",
-     "students": 134
-    },
-    {
      "name": "서울연지초등학교",
      "level": "elem",
      "students": 209
-    },
-    {
-     "name": "서울월계초등학교",
-     "level": "elem",
-     "students": 267
     },
     {
      "name": "서울한천초등학교",
@@ -306,19 +292,9 @@
      "students": 559
     },
     {
-     "name": "광운중학교",
-     "level": "middle",
-     "students": 312
-    },
-    {
      "name": "녹천중학교",
      "level": "middle",
      "students": 341
-    },
-    {
-     "name": "신창중학교",
-     "level": "middle",
-     "students": 265
     },
     {
      "name": "염광중학교",
@@ -334,11 +310,6 @@
      "name": "염광고등학교",
      "level": "high",
      "students": 626
-    },
-    {
-     "name": "광운인공지능고등학교",
-     "level": "high",
-     "students": 439
     },
     {
      "name": "인덕과학기술고등학교",
@@ -360,13 +331,13 @@
   {
    "name": "중계동",
    "students": {
-    "elem": 5234,
-    "middle": 3645,
+    "elem": 5057,
+    "middle": 3116,
     "high": 5823,
-    "total": 14702
+    "total": 13996
    },
    "academies": {
-    "all": 402,
+    "all": 401,
     "math": 136,
     "english": 90
    },
@@ -385,11 +356,6 @@
      "name": "서울수암초등학교",
      "level": "elem",
      "students": 441
-    },
-    {
-     "name": "서울용동초등학교",
-     "level": "elem",
-     "students": 177
     },
     {
      "name": "서울원광초등학교",
@@ -425,11 +391,6 @@
      "name": "상명중학교",
      "level": "middle",
      "students": 786
-    },
-    {
-     "name": "재현중학교",
-     "level": "middle",
-     "students": 529
     },
     {
      "name": "중계중학교",
@@ -497,9 +458,9 @@
    "name": "하계동",
    "students": {
     "elem": 1628,
-    "middle": 2289,
+    "middle": 1568,
     "high": 2150,
-    "total": 6067
+    "total": 5346
    },
    "academies": {
     "all": 38,
@@ -526,11 +487,6 @@
      "name": "불암중학교",
      "level": "middle",
      "students": 957
-    },
-    {
-     "name": "중평중학교",
-     "level": "middle",
-     "students": 721
     },
     {
      "name": "하계중학교",

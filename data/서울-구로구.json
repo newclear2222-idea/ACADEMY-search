@@ -1,0 +1,549 @@
+{
+ "id": "서울-구로구",
+ "province": "서울특별시",
+ "region": "서울특별시 구로구",
+ "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 10월 기준",
+ "builtAt": "2026-10-23",
+ "sources": [
+  "학원: 나이스 교육정보 개방포털 학원교습소정보",
+  "학생 수: 학교알리미 학년별·학급별 학생수"
+ ],
+ "unmatchedAcademies": 42,
+ "areas": [
+  {
+   "name": "1차상가",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 2,
+    "math": 1,
+    "english": 1
+   },
+   "schools": []
+  },
+  {
+   "name": "2차상가",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "가리봉동",
+   "students": {
+    "elem": 248,
+    "middle": 0,
+    "high": 0,
+    "total": 248
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "서울영일초등학교",
+     "level": "elem",
+     "students": 248
+    }
+   ]
+  },
+  {
+   "name": "개봉동",
+   "students": {
+    "elem": 1583,
+    "middle": 1413,
+    "high": 0,
+    "total": 2996
+   },
+   "academies": {
+    "all": 75,
+    "math": 21,
+    "english": 25
+   },
+   "schools": [
+    {
+     "name": "서울개명초등학교",
+     "level": "elem",
+     "students": 252
+    },
+    {
+     "name": "서울개봉초등학교",
+     "level": "elem",
+     "students": 807
+    },
+    {
+     "name": "서울개웅초등학교",
+     "level": "elem",
+     "students": 357
+    },
+    {
+     "name": "서울매봉초등학교",
+     "level": "elem",
+     "students": 167
+    },
+    {
+     "name": "개봉중학교",
+     "level": "middle",
+     "students": 375
+    },
+    {
+     "name": "개웅중학교",
+     "level": "middle",
+     "students": 449
+    },
+    {
+     "name": "경인중학교",
+     "level": "middle",
+     "students": 589
+    }
+   ]
+  },
+  {
+   "name": "고척동",
+   "students": {
+    "elem": 2369,
+    "middle": 1102,
+    "high": 1869,
+    "total": 5340
+   },
+   "academies": {
+    "all": 55,
+    "math": 16,
+    "english": 19
+   },
+   "schools": [
+    {
+     "name": "서울고산초등학교",
+     "level": "elem",
+     "students": 334
+    },
+    {
+     "name": "서울고척초등학교",
+     "level": "elem",
+     "students": 548
+    },
+    {
+     "name": "서울덕의초등학교",
+     "level": "elem",
+     "students": 659
+    },
+    {
+     "name": "서울세곡초등학교",
+     "level": "elem",
+     "students": 348
+    },
+    {
+     "name": "서울고원초등학교",
+     "level": "elem",
+     "students": 480
+    },
+    {
+     "name": "고척중학교",
+     "level": "middle",
+     "students": 810
+    },
+    {
+     "name": "오류중학교",
+     "level": "middle",
+     "students": 292
+    },
+    {
+     "name": "경인고등학교",
+     "level": "high",
+     "students": 1105
+    },
+    {
+     "name": "고척고등학교",
+     "level": "high",
+     "students": 764
+    }
+   ]
+  },
+  {
+   "name": "구로동",
+   "students": {
+    "elem": 2297,
+    "middle": 1930,
+    "high": 2422,
+    "total": 6649
+   },
+   "academies": {
+    "all": 81,
+    "math": 27,
+    "english": 24
+   },
+   "schools": [
+    {
+     "name": "서울구로남초등학교",
+     "level": "elem",
+     "students": 337
+    },
+    {
+     "name": "서울구로초등학교",
+     "level": "elem",
+     "students": 348
+    },
+    {
+     "name": "서울동구로초등학교",
+     "level": "elem",
+     "students": 319
+    },
+    {
+     "name": "서울미래초등학교",
+     "level": "elem",
+     "students": 419
+    },
+    {
+     "name": "서울신구로초등학교",
+     "level": "elem",
+     "students": 389
+    },
+    {
+     "name": "서울영서초등학교",
+     "level": "elem",
+     "students": 485
+    },
+    {
+     "name": "구로중학교",
+     "level": "middle",
+     "students": 396
+    },
+    {
+     "name": "구일중학교",
+     "level": "middle",
+     "students": 514
+    },
+    {
+     "name": "영림중학교",
+     "level": "middle",
+     "students": 504
+    },
+    {
+     "name": "영서중학교",
+     "level": "middle",
+     "students": 516
+    },
+    {
+     "name": "구로고등학교",
+     "level": "high",
+     "students": 918
+    },
+    {
+     "name": "구일고등학교",
+     "level": "high",
+     "students": 762
+    },
+    {
+     "name": "구현고등학교",
+     "level": "high",
+     "students": 742
+    }
+   ]
+  },
+  {
+   "name": "궁동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 3188,
+    "total": 3188
+   },
+   "academies": {
+    "all": 11,
+    "math": 3,
+    "english": 1
+   },
+   "schools": [
+    {
+     "name": "오류고등학교",
+     "level": "high",
+     "students": 457
+    },
+    {
+     "name": "우신고등학교",
+     "level": "high",
+     "students": 755
+    },
+    {
+     "name": "예림디자인고등학교",
+     "level": "high",
+     "students": 356
+    },
+    {
+     "name": "서서울생활과학고등학교",
+     "level": "high",
+     "students": 436
+    },
+    {
+     "name": "세종과학고등학교",
+     "level": "high",
+     "students": 438
+    },
+    {
+     "name": "서울공연예술고등학교",
+     "level": "high",
+     "students": 746
+    }
+   ]
+  },
+  {
+   "name": "극동상가",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 1,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "다원그린빌상가",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "대림아파트상가동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "동부골든아파트상가동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "신도림동",
+   "students": {
+    "elem": 1793,
+    "middle": 1063,
+    "high": 560,
+    "total": 3416
+   },
+   "academies": {
+    "all": 66,
+    "math": 27,
+    "english": 14
+   },
+   "schools": [
+    {
+     "name": "서울신도림초등학교",
+     "level": "elem",
+     "students": 1048
+    },
+    {
+     "name": "서울신미림초등학교",
+     "level": "elem",
+     "students": 745
+    },
+    {
+     "name": "신도림중학교",
+     "level": "middle",
+     "students": 1063
+    },
+    {
+     "name": "신도림고등학교",
+     "level": "high",
+     "students": 560
+    }
+   ]
+  },
+  {
+   "name": "신도림태영타운상가",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 1,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "신영상가",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 1,
+    "english": 1
+   },
+   "schools": []
+  },
+  {
+   "name": "오류동",
+   "students": {
+    "elem": 1269,
+    "middle": 540,
+    "high": 140,
+    "total": 1949
+   },
+   "academies": {
+    "all": 29,
+    "math": 6,
+    "english": 5
+   },
+   "schools": [
+    {
+     "name": "서울오류남초등학교",
+     "level": "elem",
+     "students": 460
+    },
+    {
+     "name": "서울오류초등학교",
+     "level": "elem",
+     "students": 538
+    },
+    {
+     "name": "서울오정초등학교",
+     "level": "elem",
+     "students": 271
+    },
+    {
+     "name": "오남중학교",
+     "level": "middle",
+     "students": 540
+    },
+    {
+     "name": "덕일전자공업고등학교",
+     "level": "high",
+     "students": 140
+    }
+   ]
+  },
+  {
+   "name": "온수동",
+   "students": {
+    "elem": 558,
+    "middle": 0,
+    "high": 0,
+    "total": 558
+   },
+   "academies": {
+    "all": 6,
+    "math": 0,
+    "english": 2
+   },
+   "schools": [
+    {
+     "name": "서울온수초등학교",
+     "level": "elem",
+     "students": 558
+    }
+   ]
+  },
+  {
+   "name": "천왕동",
+   "students": {
+    "elem": 676,
+    "middle": 728,
+    "high": 0,
+    "total": 1404
+   },
+   "academies": {
+    "all": 24,
+    "math": 9,
+    "english": 7
+   },
+   "schools": [
+    {
+     "name": "서울천왕초등학교",
+     "level": "elem",
+     "students": 405
+    },
+    {
+     "name": "서울하늘숲초등학교",
+     "level": "elem",
+     "students": 271
+    },
+    {
+     "name": "천왕중학교",
+     "level": "middle",
+     "students": 728
+    }
+   ]
+  },
+  {
+   "name": "항동",
+   "students": {
+    "elem": 0,
+    "middle": 572,
+    "high": 442,
+    "total": 1014
+   },
+   "academies": {
+    "all": 39,
+    "math": 10,
+    "english": 11
+   },
+   "schools": [
+    {
+     "name": "항동중학교",
+     "level": "middle",
+     "students": 572
+    },
+    {
+     "name": "유한공업고등학교",
+     "level": "high",
+     "students": 442
+    }
+   ]
+  }
+ ]
+}

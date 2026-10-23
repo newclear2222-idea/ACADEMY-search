@@ -1,0 +1,642 @@
+{
+ "id": "경기-화성시",
+ "province": "경기도",
+ "region": "경기도 화성시",
+ "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 10월 기준",
+ "builtAt": "2026-10-23",
+ "sources": [
+  "학원: 나이스 교육정보 개방포털 학원교습소정보",
+  "학생 수: 학교알리미 학년별·학급별 학생수"
+ ],
+ "unmatchedAcademies": 6,
+ "areas": [
+  {
+   "name": "금곡동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 1,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "기산동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 19,
+    "math": 11,
+    "english": 7
+   },
+   "schools": []
+  },
+  {
+   "name": "기안동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 16,
+    "math": 6,
+    "english": 4
+   },
+   "schools": []
+  },
+  {
+   "name": "남양동",
+   "students": {
+    "elem": 311,
+    "middle": 62,
+    "high": 0,
+    "total": 373
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "새동초등학교",
+     "level": "elem",
+     "students": 311
+    },
+    {
+     "name": "새동중학교",
+     "level": "middle",
+     "students": 62
+    }
+   ]
+  },
+  {
+   "name": "남양읍",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 67,
+    "math": 20,
+    "english": 13
+   },
+   "schools": []
+  },
+  {
+   "name": "능동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 95,
+    "math": 34,
+    "english": 30
+   },
+   "schools": []
+  },
+  {
+   "name": "동탄면",
+   "students": {
+    "elem": 930,
+    "middle": 0,
+    "high": 0,
+    "total": 930
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "아인초등학교",
+     "level": "elem",
+     "students": 930
+    }
+   ]
+  },
+  {
+   "name": "마도면",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 1,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "매송면",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "목동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 99,
+    "math": 47,
+    "english": 28
+   },
+   "schools": []
+  },
+  {
+   "name": "반송동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 590,
+    "total": 590
+   },
+   "academies": {
+    "all": 295,
+    "math": 110,
+    "english": 58
+   },
+   "schools": [
+    {
+     "name": "동탄국제고등학교",
+     "level": "high",
+     "students": 590
+    }
+   ]
+  },
+  {
+   "name": "반월동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 56,
+    "math": 19,
+    "english": 21
+   },
+   "schools": []
+  },
+  {
+   "name": "반정동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 8,
+    "math": 4,
+    "english": 2
+   },
+   "schools": []
+  },
+  {
+   "name": "병점동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 128,
+    "math": 45,
+    "english": 31
+   },
+   "schools": []
+  },
+  {
+   "name": "봉담읍",
+   "students": {
+    "elem": 0,
+    "middle": 625,
+    "high": 0,
+    "total": 625
+   },
+   "academies": {
+    "all": 208,
+    "math": 71,
+    "english": 62
+   },
+   "schools": [
+    {
+     "name": "화담중학교",
+     "level": "middle",
+     "students": 625
+    }
+   ]
+  },
+  {
+   "name": "비봉면",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 10,
+    "math": 5,
+    "english": 3
+   },
+   "schools": []
+  },
+  {
+   "name": "산척동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 209,
+    "math": 85,
+    "english": 52
+   },
+   "schools": []
+  },
+  {
+   "name": "상가동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "새솔동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 85,
+    "math": 32,
+    "english": 24
+   },
+   "schools": []
+  },
+  {
+   "name": "서신면",
+   "students": {
+    "elem": 0,
+    "middle": 57,
+    "high": 0,
+    "total": 57
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "서신중학교",
+     "level": "middle",
+     "students": 57
+    }
+   ]
+  },
+  {
+   "name": "석우동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 3,
+    "math": 2,
+    "english": 2
+   },
+   "schools": []
+  },
+  {
+   "name": "송동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 40,
+    "math": 20,
+    "english": 8
+   },
+   "schools": []
+  },
+  {
+   "name": "송산동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 18,
+    "math": 6,
+    "english": 4
+   },
+   "schools": []
+  },
+  {
+   "name": "송산면",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 10,
+    "math": 4,
+    "english": 4
+   },
+   "schools": []
+  },
+  {
+   "name": "신동",
+   "students": {
+    "elem": 0,
+    "middle": 319,
+    "high": 0,
+    "total": 319
+   },
+   "academies": {
+    "all": 22,
+    "math": 11,
+    "english": 8
+   },
+   "schools": [
+    {
+     "name": "바른중학교",
+     "level": "middle",
+     "students": 319
+    }
+   ]
+  },
+  {
+   "name": "신영통현대아파트상가동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "안녕동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 3,
+    "math": 2,
+    "english": 1
+   },
+   "schools": []
+  },
+  {
+   "name": "여울동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 16,
+    "math": 9,
+    "english": 6
+   },
+   "schools": []
+  },
+  {
+   "name": "영천동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 118,
+    "math": 45,
+    "english": 29
+   },
+   "schools": []
+  },
+  {
+   "name": "오산동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 98,
+    "math": 39,
+    "english": 27
+   },
+   "schools": []
+  },
+  {
+   "name": "우정읍",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 20,
+    "math": 4,
+    "english": 3
+   },
+   "schools": []
+  },
+  {
+   "name": "장지동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 63,
+    "math": 31,
+    "english": 18
+   },
+   "schools": []
+  },
+  {
+   "name": "정남면",
+   "students": {
+    "elem": 0,
+    "middle": 125,
+    "high": 0,
+    "total": 125
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "정남중학교",
+     "level": "middle",
+     "students": 125
+    }
+   ]
+  },
+  {
+   "name": "주상가",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 1,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "진안동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 28,
+    "math": 11,
+    "english": 11
+   },
+   "schools": []
+  },
+  {
+   "name": "청계동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 197,
+    "math": 81,
+    "english": 43
+   },
+   "schools": []
+  },
+  {
+   "name": "테라스더모스트상가동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "향남읍",
+   "students": {
+    "elem": 0,
+    "middle": 1149,
+    "high": 861,
+    "total": 2010
+   },
+   "academies": {
+    "all": 148,
+    "math": 41,
+    "english": 30
+   },
+   "schools": [
+    {
+     "name": "하길중학교",
+     "level": "middle",
+     "students": 1149
+    },
+    {
+     "name": "향남고등학교",
+     "level": "high",
+     "students": 861
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,816 @@
+{
+ "id": "경기-남양주시",
+ "province": "경기도",
+ "region": "경기도 남양주시",
+ "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 10월 기준",
+ "builtAt": "2026-10-23",
+ "sources": [
+  "학원: 나이스 교육정보 개방포털 학원교습소정보",
+  "학생 수: 학교알리미 학년별·학급별 학생수"
+ ],
+ "unmatchedAcademies": 16,
+ "areas": [
+  {
+   "name": "가운동",
+   "students": {
+    "elem": 250,
+    "middle": 0,
+    "high": 1011,
+    "total": 1261
+   },
+   "academies": {
+    "all": 3,
+    "math": 0,
+    "english": 1
+   },
+   "schools": [
+    {
+     "name": "가운초등학교",
+     "level": "elem",
+     "students": 250
+    },
+    {
+     "name": "가운고등학교",
+     "level": "high",
+     "students": 1011
+    }
+   ]
+  },
+  {
+   "name": "금곡동",
+   "students": {
+    "elem": 156,
+    "middle": 183,
+    "high": 642,
+    "total": 981
+   },
+   "academies": {
+    "all": 8,
+    "math": 2,
+    "english": 1
+   },
+   "schools": [
+    {
+     "name": "남양주금곡초등학교",
+     "level": "elem",
+     "students": 156
+    },
+    {
+     "name": "금곡중학교",
+     "level": "middle",
+     "students": 183
+    },
+    {
+     "name": "금곡고등학교",
+     "level": "high",
+     "students": 642
+    }
+   ]
+  },
+  {
+   "name": "다산동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 434,
+    "math": 162,
+    "english": 123
+   },
+   "schools": []
+  },
+  {
+   "name": "도농동",
+   "students": {
+    "elem": 1010,
+    "middle": 0,
+    "high": 1385,
+    "total": 2395
+   },
+   "academies": {
+    "all": 9,
+    "math": 2,
+    "english": 5
+   },
+   "schools": [
+    {
+     "name": "금교초등학교",
+     "level": "elem",
+     "students": 502
+    },
+    {
+     "name": "도농초등학교",
+     "level": "elem",
+     "students": 508
+    },
+    {
+     "name": "동화고등학교",
+     "level": "high",
+     "students": 1385
+    }
+   ]
+  },
+  {
+   "name": "별내동",
+   "students": {
+    "elem": 2112,
+    "middle": 1376,
+    "high": 910,
+    "total": 4398
+   },
+   "academies": {
+    "all": 153,
+    "math": 52,
+    "english": 40
+   },
+   "schools": [
+    {
+     "name": "화접초등학교",
+     "level": "elem",
+     "students": 636
+    },
+    {
+     "name": "별가람초등학교",
+     "level": "elem",
+     "students": 545
+    },
+    {
+     "name": "남양주샛별초등학교",
+     "level": "elem",
+     "students": 931
+    },
+    {
+     "name": "화접중학교",
+     "level": "middle",
+     "students": 719
+    },
+    {
+     "name": "한별중학교",
+     "level": "middle",
+     "students": 657
+    },
+    {
+     "name": "별내고등학교",
+     "level": "high",
+     "students": 910
+    }
+   ]
+  },
+  {
+   "name": "별내면",
+   "students": {
+    "elem": 532,
+    "middle": 418,
+    "high": 416,
+    "total": 1366
+   },
+   "academies": {
+    "all": 19,
+    "math": 7,
+    "english": 6
+   },
+   "schools": [
+    {
+     "name": "별내초등학교",
+     "level": "elem",
+     "students": 532
+    },
+    {
+     "name": "별내중학교",
+     "level": "middle",
+     "students": 418
+    },
+    {
+     "name": "청학고등학교",
+     "level": "high",
+     "students": 416
+    }
+   ]
+  },
+  {
+   "name": "수동면",
+   "students": {
+    "elem": 144,
+    "middle": 103,
+    "high": 0,
+    "total": 247
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "가양초등학교",
+     "level": "elem",
+     "students": 40
+    },
+    {
+     "name": "수동초등학교",
+     "level": "elem",
+     "students": 65
+    },
+    {
+     "name": "수동초등학교송천분교장",
+     "level": "elem",
+     "students": 39
+    },
+    {
+     "name": "수동중학교",
+     "level": "middle",
+     "students": 103
+    }
+   ]
+  },
+  {
+   "name": "오남읍",
+   "students": {
+    "elem": 1763,
+    "middle": 1435,
+    "high": 1133,
+    "total": 4331
+   },
+   "academies": {
+    "all": 55,
+    "math": 10,
+    "english": 13
+   },
+   "schools": [
+    {
+     "name": "남양주양지초등학교",
+     "level": "elem",
+     "students": 280
+    },
+    {
+     "name": "오남초등학교",
+     "level": "elem",
+     "students": 234
+    },
+    {
+     "name": "양오초등학교",
+     "level": "elem",
+     "students": 574
+    },
+    {
+     "name": "어람초등학교",
+     "level": "elem",
+     "students": 675
+    },
+    {
+     "name": "오남중학교",
+     "level": "middle",
+     "students": 346
+    },
+    {
+     "name": "양오중학교",
+     "level": "middle",
+     "students": 502
+    },
+    {
+     "name": "어람중학교",
+     "level": "middle",
+     "students": 587
+    },
+    {
+     "name": "오남고등학교",
+     "level": "high",
+     "students": 1133
+    }
+   ]
+  },
+  {
+   "name": "와부읍",
+   "students": {
+    "elem": 2204,
+    "middle": 1829,
+    "high": 1864,
+    "total": 5897
+   },
+   "academies": {
+    "all": 116,
+    "math": 37,
+    "english": 34
+   },
+   "schools": [
+    {
+     "name": "도심초등학교",
+     "level": "elem",
+     "students": 337
+    },
+    {
+     "name": "남양주도곡초등학교",
+     "level": "elem",
+     "students": 459
+    },
+    {
+     "name": "남양주월문초등학교",
+     "level": "elem",
+     "students": 87
+    },
+    {
+     "name": "덕소초등학교",
+     "level": "elem",
+     "students": 256
+    },
+    {
+     "name": "와부초등학교",
+     "level": "elem",
+     "students": 635
+    },
+    {
+     "name": "예봉초등학교",
+     "level": "elem",
+     "students": 430
+    },
+    {
+     "name": "덕소중학교",
+     "level": "middle",
+     "students": 551
+    },
+    {
+     "name": "와부중학교",
+     "level": "middle",
+     "students": 638
+    },
+    {
+     "name": "예봉중학교",
+     "level": "middle",
+     "students": 640
+    },
+    {
+     "name": "덕소고등학교",
+     "level": "high",
+     "students": 1104
+    },
+    {
+     "name": "와부고등학교",
+     "level": "high",
+     "students": 760
+    }
+   ]
+  },
+  {
+   "name": "우남상가동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "조안면",
+   "students": {
+    "elem": 102,
+    "middle": 55,
+    "high": 0,
+    "total": 157
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "남양주송촌초등학교",
+     "level": "elem",
+     "students": 51
+    },
+    {
+     "name": "조안초등학교",
+     "level": "elem",
+     "students": 51
+    },
+    {
+     "name": "연세중학교",
+     "level": "middle",
+     "students": 55
+    }
+   ]
+  },
+  {
+   "name": "지금동",
+   "students": {
+    "elem": 401,
+    "middle": 365,
+    "high": 0,
+    "total": 766
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "남양주양정초등학교",
+     "level": "elem",
+     "students": 401
+    },
+    {
+     "name": "미금중학교",
+     "level": "middle",
+     "students": 365
+    }
+   ]
+  },
+  {
+   "name": "진건읍",
+   "students": {
+    "elem": 462,
+    "middle": 366,
+    "high": 1046,
+    "total": 1874
+   },
+   "academies": {
+    "all": 11,
+    "math": 3,
+    "english": 3
+   },
+   "schools": [
+    {
+     "name": "용신초등학교",
+     "level": "elem",
+     "students": 110
+    },
+    {
+     "name": "진건초등학교",
+     "level": "elem",
+     "students": 293
+    },
+    {
+     "name": "사능초등학교",
+     "level": "elem",
+     "students": 59
+    },
+    {
+     "name": "진건중학교",
+     "level": "middle",
+     "students": 366
+    },
+    {
+     "name": "진건고등학교",
+     "level": "high",
+     "students": 1046
+    }
+   ]
+  },
+  {
+   "name": "진접읍",
+   "students": {
+    "elem": 4354,
+    "middle": 3173,
+    "high": 2279,
+    "total": 9806
+   },
+   "academies": {
+    "all": 132,
+    "math": 38,
+    "english": 35
+   },
+   "schools": [
+    {
+     "name": "광릉초등학교",
+     "level": "elem",
+     "students": 198
+    },
+    {
+     "name": "장승초등학교",
+     "level": "elem",
+     "students": 555
+    },
+    {
+     "name": "장현초등학교",
+     "level": "elem",
+     "students": 448
+    },
+    {
+     "name": "풍양초등학교",
+     "level": "elem",
+     "students": 147
+    },
+    {
+     "name": "진접초등학교",
+     "level": "elem",
+     "students": 572
+    },
+    {
+     "name": "부평초등학교",
+     "level": "elem",
+     "students": 812
+    },
+    {
+     "name": "주곡초등학교",
+     "level": "elem",
+     "students": 575
+    },
+    {
+     "name": "화봉초등학교",
+     "level": "elem",
+     "students": 578
+    },
+    {
+     "name": "해밀초등학교",
+     "level": "elem",
+     "students": 469
+    },
+    {
+     "name": "광동중학교",
+     "level": "middle",
+     "students": 608
+    },
+    {
+     "name": "진접중학교",
+     "level": "middle",
+     "students": 622
+    },
+    {
+     "name": "광릉중학교",
+     "level": "middle",
+     "students": 208
+    },
+    {
+     "name": "풍양중학교",
+     "level": "middle",
+     "students": 1078
+    },
+    {
+     "name": "주곡중학교",
+     "level": "middle",
+     "students": 657
+    },
+    {
+     "name": "광동고등학교",
+     "level": "high",
+     "students": 1116
+    },
+    {
+     "name": "진접고등학교",
+     "level": "high",
+     "students": 1163
+    }
+   ]
+  },
+  {
+   "name": "퇴계원면",
+   "students": {
+    "elem": 713,
+    "middle": 544,
+    "high": 0,
+    "total": 1257
+   },
+   "academies": {
+    "all": 12,
+    "math": 2,
+    "english": 2
+   },
+   "schools": [
+    {
+     "name": "도제원초등학교",
+     "level": "elem",
+     "students": 399
+    },
+    {
+     "name": "퇴계원초등학교",
+     "level": "elem",
+     "students": 314
+    },
+    {
+     "name": "퇴계원중학교",
+     "level": "middle",
+     "students": 544
+    }
+   ]
+  },
+  {
+   "name": "퇴계원읍",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 790,
+    "total": 790
+   },
+   "academies": {
+    "all": 8,
+    "math": 4,
+    "english": 1
+   },
+   "schools": [
+    {
+     "name": "퇴계원고등학교",
+     "level": "high",
+     "students": 790
+    }
+   ]
+  },
+  {
+   "name": "평내동",
+   "students": {
+    "elem": 1377,
+    "middle": 1227,
+    "high": 0,
+    "total": 2604
+   },
+   "academies": {
+    "all": 93,
+    "math": 35,
+    "english": 22
+   },
+   "schools": [
+    {
+     "name": "남양주신촌초등학교",
+     "level": "elem",
+     "students": 665
+    },
+    {
+     "name": "장내초등학교",
+     "level": "elem",
+     "students": 377
+    },
+    {
+     "name": "남양주백봉초등학교",
+     "level": "elem",
+     "students": 335
+    },
+    {
+     "name": "장내중학교",
+     "level": "middle",
+     "students": 696
+    },
+    {
+     "name": "평내중학교",
+     "level": "middle",
+     "students": 531
+    }
+   ]
+  },
+  {
+   "name": "호평동",
+   "students": {
+    "elem": 1285,
+    "middle": 1722,
+    "high": 1128,
+    "total": 4135
+   },
+   "academies": {
+    "all": 105,
+    "math": 36,
+    "english": 32
+   },
+   "schools": [
+    {
+     "name": "호평초등학교",
+     "level": "elem",
+     "students": 583
+    },
+    {
+     "name": "판곡초등학교",
+     "level": "elem",
+     "students": 702
+    },
+    {
+     "name": "호평중학교",
+     "level": "middle",
+     "students": 798
+    },
+    {
+     "name": "판곡중학교",
+     "level": "middle",
+     "students": 924
+    },
+    {
+     "name": "판곡고등학교",
+     "level": "high",
+     "students": 1128
+    }
+   ]
+  },
+  {
+   "name": "화도읍",
+   "students": {
+    "elem": 5346,
+    "middle": 3473,
+    "high": 2633,
+    "total": 11452
+   },
+   "academies": {
+    "all": 103,
+    "math": 35,
+    "english": 16
+   },
+   "schools": [
+    {
+     "name": "가곡초등학교",
+     "level": "elem",
+     "students": 398
+    },
+    {
+     "name": "금남초등학교",
+     "level": "elem",
+     "students": 64
+    },
+    {
+     "name": "남양주송라초등학교",
+     "level": "elem",
+     "students": 659
+    },
+    {
+     "name": "답내초등학교",
+     "level": "elem",
+     "students": 52
+    },
+    {
+     "name": "마석초등학교",
+     "level": "elem",
+     "students": 501
+    },
+    {
+     "name": "심석초등학교",
+     "level": "elem",
+     "students": 509
+    },
+    {
+     "name": "창현초등학교",
+     "level": "elem",
+     "students": 562
+    },
+    {
+     "name": "천마초등학교",
+     "level": "elem",
+     "students": 507
+    },
+    {
+     "name": "차산초등학교",
+     "level": "elem",
+     "students": 329
+    },
+    {
+     "name": "화도초등학교",
+     "level": "elem",
+     "students": 611
+    },
+    {
+     "name": "남양주월산초등학교",
+     "level": "elem",
+     "students": 536
+    },
+    {
+     "name": "은솔초등학교",
+     "level": "elem",
+     "students": 618
+    },
+    {
+     "name": "마석중학교",
+     "level": "middle",
+     "students": 984
+    },
+    {
+     "name": "심석중학교",
+     "level": "middle",
+     "students": 773
+    },
+    {
+     "name": "화광중학교",
+     "level": "middle",
+     "students": 378
+    },
+    {
+     "name": "송라중학교",
+     "level": "middle",
+     "students": 794
+    },
+    {
+     "name": "천마중학교",
+     "level": "middle",
+     "students": 544
+    },
+    {
+     "name": "남양주고등학교",
+     "level": "high",
+     "students": 392
+    },
+    {
+     "name": "심석고등학교",
+     "level": "high",
+     "students": 1158
+    },
+    {
+     "name": "마석고등학교",
+     "level": "high",
+     "students": 1083
+    }
+   ]
+  }
+ ]
+}

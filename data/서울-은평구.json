@@ -1,0 +1,505 @@
+{
+ "id": "서울-은평구",
+ "province": "서울특별시",
+ "region": "서울특별시 은평구",
+ "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 10월 기준",
+ "builtAt": "2026-10-23",
+ "sources": [
+  "학원: 나이스 교육정보 개방포털 학원교습소정보",
+  "학생 수: 학교알리미 학년별·학급별 학생수"
+ ],
+ "unmatchedAcademies": 4,
+ "areas": [
+  {
+   "name": "120동상가",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 1,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "갈현동",
+   "students": {
+    "elem": 1133,
+    "middle": 1179,
+    "high": 2526,
+    "total": 4838
+   },
+   "academies": {
+    "all": 97,
+    "math": 30,
+    "english": 24
+   },
+   "schools": [
+    {
+     "name": "서울갈현초등학교",
+     "level": "elem",
+     "students": 659
+    },
+    {
+     "name": "선일초등학교",
+     "level": "elem",
+     "students": 474
+    },
+    {
+     "name": "대성중학교",
+     "level": "middle",
+     "students": 350
+    },
+    {
+     "name": "선일여자중학교",
+     "level": "middle",
+     "students": 320
+    },
+    {
+     "name": "선정중학교",
+     "level": "middle",
+     "students": 509
+    },
+    {
+     "name": "대성고등학교",
+     "level": "high",
+     "students": 694
+    },
+    {
+     "name": "선일여자고등학교",
+     "level": "high",
+     "students": 570
+    },
+    {
+     "name": "선정고등학교",
+     "level": "high",
+     "students": 1056
+    },
+    {
+     "name": "선정국제관광고등학교",
+     "level": "high",
+     "students": 206
+    }
+   ]
+  },
+  {
+   "name": "구산동",
+   "students": {
+    "elem": 1517,
+    "middle": 1557,
+    "high": 1193,
+    "total": 4267
+   },
+   "academies": {
+    "all": 45,
+    "math": 20,
+    "english": 11
+   },
+   "schools": [
+    {
+     "name": "서울구산초등학교",
+     "level": "elem",
+     "students": 654
+    },
+    {
+     "name": "예일초등학교",
+     "level": "elem",
+     "students": 464
+    },
+    {
+     "name": "서울구현초등학교",
+     "level": "elem",
+     "students": 399
+    },
+    {
+     "name": "구산중학교",
+     "level": "middle",
+     "students": 534
+    },
+    {
+     "name": "예일여자중학교",
+     "level": "middle",
+     "students": 539
+    },
+    {
+     "name": "은평중학교",
+     "level": "middle",
+     "students": 484
+    },
+    {
+     "name": "예일여자고등학교",
+     "level": "high",
+     "students": 759
+    },
+    {
+     "name": "예일디자인고등학교",
+     "level": "high",
+     "students": 434
+    }
+   ]
+  },
+  {
+   "name": "녹번동",
+   "students": {
+    "elem": 1705,
+    "middle": 0,
+    "high": 0,
+    "total": 1705
+   },
+   "academies": {
+    "all": 35,
+    "math": 16,
+    "english": 9
+   },
+   "schools": [
+    {
+     "name": "서울녹번초등학교",
+     "level": "elem",
+     "students": 576
+    },
+    {
+     "name": "서울은평초등학교",
+     "level": "elem",
+     "students": 755
+    },
+    {
+     "name": "서울어울초등학교",
+     "level": "elem",
+     "students": 374
+    }
+   ]
+  },
+  {
+   "name": "대조동",
+   "students": {
+    "elem": 708,
+    "middle": 0,
+    "high": 1061,
+    "total": 1769
+   },
+   "academies": {
+    "all": 34,
+    "math": 7,
+    "english": 7
+   },
+   "schools": [
+    {
+     "name": "서울대은초등학교",
+     "level": "elem",
+     "students": 117
+    },
+    {
+     "name": "서울대조초등학교",
+     "level": "elem",
+     "students": 591
+    },
+    {
+     "name": "동명여자고등학교",
+     "level": "high",
+     "students": 835
+    },
+    {
+     "name": "동명생활경영고등학교",
+     "level": "high",
+     "students": 226
+    }
+   ]
+  },
+  {
+   "name": "불광동",
+   "students": {
+    "elem": 1069,
+    "middle": 1121,
+    "high": 368,
+    "total": 2558
+   },
+   "academies": {
+    "all": 51,
+    "math": 19,
+    "english": 7
+   },
+   "schools": [
+    {
+     "name": "서울불광초등학교",
+     "level": "elem",
+     "students": 483
+    },
+    {
+     "name": "서울연천초등학교",
+     "level": "elem",
+     "students": 157
+    },
+    {
+     "name": "서울연광초등학교",
+     "level": "elem",
+     "students": 152
+    },
+    {
+     "name": "서울수리초등학교",
+     "level": "elem",
+     "students": 277
+    },
+    {
+     "name": "불광중학교",
+     "level": "middle",
+     "students": 496
+    },
+    {
+     "name": "연신중학교",
+     "level": "middle",
+     "students": 346
+    },
+    {
+     "name": "연천중학교",
+     "level": "middle",
+     "students": 279
+    },
+    {
+     "name": "세명컴퓨터고등학교",
+     "level": "high",
+     "students": 368
+    }
+   ]
+  },
+  {
+   "name": "수색동",
+   "students": {
+    "elem": 709,
+    "middle": 0,
+    "high": 0,
+    "total": 709
+   },
+   "academies": {
+    "all": 11,
+    "math": 4,
+    "english": 4
+   },
+   "schools": [
+    {
+     "name": "서울수색초등학교",
+     "level": "elem",
+     "students": 709
+    }
+   ]
+  },
+  {
+   "name": "신사동",
+   "students": {
+    "elem": 1137,
+    "middle": 1182,
+    "high": 1067,
+    "total": 3386
+   },
+   "academies": {
+    "all": 36,
+    "math": 14,
+    "english": 7
+   },
+   "schools": [
+    {
+     "name": "서울상신초등학교",
+     "level": "elem",
+     "students": 497
+    },
+    {
+     "name": "서울신사초등학교",
+     "level": "elem",
+     "students": 277
+    },
+    {
+     "name": "서울서신초등학교",
+     "level": "elem",
+     "students": 363
+    },
+    {
+     "name": "덕산중학교",
+     "level": "middle",
+     "students": 372
+    },
+    {
+     "name": "상신중학교",
+     "level": "middle",
+     "students": 408
+    },
+    {
+     "name": "숭실중학교",
+     "level": "middle",
+     "students": 402
+    },
+    {
+     "name": "숭실고등학교",
+     "level": "high",
+     "students": 1067
+    }
+   ]
+  },
+  {
+   "name": "역촌동",
+   "students": {
+    "elem": 930,
+    "middle": 0,
+    "high": 0,
+    "total": 930
+   },
+   "academies": {
+    "all": 68,
+    "math": 24,
+    "english": 15
+   },
+   "schools": [
+    {
+     "name": "서울역촌초등학교",
+     "level": "elem",
+     "students": 930
+    }
+   ]
+  },
+  {
+   "name": "응암동",
+   "students": {
+    "elem": 2941,
+    "middle": 1513,
+    "high": 1439,
+    "total": 5893
+   },
+   "academies": {
+    "all": 119,
+    "math": 41,
+    "english": 32
+   },
+   "schools": [
+    {
+     "name": "서울연은초등학교",
+     "level": "elem",
+     "students": 592
+    },
+    {
+     "name": "서울응암초등학교",
+     "level": "elem",
+     "students": 741
+    },
+    {
+     "name": "충암초등학교",
+     "level": "elem",
+     "students": 668
+    },
+    {
+     "name": "서울은명초등학교",
+     "level": "elem",
+     "students": 940
+    },
+    {
+     "name": "영락중학교",
+     "level": "middle",
+     "students": 678
+    },
+    {
+     "name": "충암중학교",
+     "level": "middle",
+     "students": 835
+    },
+    {
+     "name": "충암고등학교",
+     "level": "high",
+     "students": 1036
+    },
+    {
+     "name": "신진과학기술고등학교",
+     "level": "high",
+     "students": 403
+    }
+   ]
+  },
+  {
+   "name": "증산동",
+   "students": {
+    "elem": 587,
+    "middle": 501,
+    "high": 0,
+    "total": 1088
+   },
+   "academies": {
+    "all": 20,
+    "math": 10,
+    "english": 5
+   },
+   "schools": [
+    {
+     "name": "서울증산초등학교",
+     "level": "elem",
+     "students": 587
+    },
+    {
+     "name": "증산중학교",
+     "level": "middle",
+     "students": 501
+    }
+   ]
+  },
+  {
+   "name": "진관동",
+   "students": {
+    "elem": 2227,
+    "middle": 1857,
+    "high": 1224,
+    "total": 5308
+   },
+   "academies": {
+    "all": 129,
+    "math": 44,
+    "english": 47
+   },
+   "schools": [
+    {
+     "name": "서울북한산초등학교",
+     "level": "elem",
+     "students": 75
+    },
+    {
+     "name": "서울신도초등학교",
+     "level": "elem",
+     "students": 774
+    },
+    {
+     "name": "서울진관초등학교",
+     "level": "elem",
+     "students": 496
+    },
+    {
+     "name": "서울은빛초등학교",
+     "level": "elem",
+     "students": 396
+    },
+    {
+     "name": "서울은진초등학교",
+     "level": "elem",
+     "students": 486
+    },
+    {
+     "name": "진관중학교",
+     "level": "middle",
+     "students": 870
+    },
+    {
+     "name": "신도중학교",
+     "level": "middle",
+     "students": 987
+    },
+    {
+     "name": "신도고등학교",
+     "level": "high",
+     "students": 603
+    },
+    {
+     "name": "하나고등학교",
+     "level": "high",
+     "students": 621
+    }
+   ]
+  }
+ ]
+}

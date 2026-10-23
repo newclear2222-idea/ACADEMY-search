@@ -1,0 +1,381 @@
+{
+ "id": "서울-서초구",
+ "province": "서울특별시",
+ "region": "서울특별시 서초구",
+ "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 10월 기준",
+ "builtAt": "2026-10-23",
+ "sources": [
+  "학원: 나이스 교육정보 개방포털 학원교습소정보",
+  "학생 수: 학교알리미 학년별·학급별 학생수"
+ ],
+ "unmatchedAcademies": 6,
+ "areas": [
+  {
+   "name": "7동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 1
+   },
+   "schools": []
+  },
+  {
+   "name": "내곡동",
+   "students": {
+    "elem": 732,
+    "middle": 0,
+    "high": 0,
+    "total": 732
+   },
+   "academies": {
+    "all": 9,
+    "math": 3,
+    "english": 2
+   },
+   "schools": [
+    {
+     "name": "서울언남초등학교",
+     "level": "elem",
+     "students": 732
+    }
+   ]
+  },
+  {
+   "name": "반포동",
+   "students": {
+    "elem": 6496,
+    "middle": 3513,
+    "high": 2962,
+    "total": 12971
+   },
+   "academies": {
+    "all": 230,
+    "math": 64,
+    "english": 37
+   },
+   "schools": [
+    {
+     "name": "서울반원초등학교",
+     "level": "elem",
+     "students": 1247
+    },
+    {
+     "name": "서울서원초등학교",
+     "level": "elem",
+     "students": 1614
+    },
+    {
+     "name": "서울원촌초등학교",
+     "level": "elem",
+     "students": 1095
+    },
+    {
+     "name": "서울잠원초등학교",
+     "level": "elem",
+     "students": 1924
+    },
+    {
+     "name": "계성초등학교",
+     "level": "elem",
+     "students": 616
+    },
+    {
+     "name": "방배중학교",
+     "level": "middle",
+     "students": 771
+    },
+    {
+     "name": "세화여자중학교",
+     "level": "middle",
+     "students": 584
+    },
+    {
+     "name": "신반포중학교",
+     "level": "middle",
+     "students": 921
+    },
+    {
+     "name": "원촌중학교",
+     "level": "middle",
+     "students": 1237
+    },
+    {
+     "name": "반포고등학교",
+     "level": "high",
+     "students": 754
+    },
+    {
+     "name": "세화고등학교",
+     "level": "high",
+     "students": 1112
+    },
+    {
+     "name": "세화여자고등학교",
+     "level": "high",
+     "students": 1096
+    }
+   ]
+  },
+  {
+   "name": "방배동",
+   "students": {
+    "elem": 2564,
+    "middle": 1643,
+    "high": 3275,
+    "total": 7482
+   },
+   "academies": {
+    "all": 226,
+    "math": 73,
+    "english": 53
+   },
+   "schools": [
+    {
+     "name": "서울방배초등학교",
+     "level": "elem",
+     "students": 843
+    },
+    {
+     "name": "서울방현초등학교",
+     "level": "elem",
+     "students": 141
+    },
+    {
+     "name": "서울서래초등학교",
+     "level": "elem",
+     "students": 1131
+    },
+    {
+     "name": "서울이수초등학교",
+     "level": "elem",
+     "students": 449
+    },
+    {
+     "name": "동덕여자중학교",
+     "level": "middle",
+     "students": 383
+    },
+    {
+     "name": "서문여자중학교",
+     "level": "middle",
+     "students": 637
+    },
+    {
+     "name": "이수중학교",
+     "level": "middle",
+     "students": 623
+    },
+    {
+     "name": "동덕여자고등학교",
+     "level": "high",
+     "students": 844
+    },
+    {
+     "name": "상문고등학교",
+     "level": "high",
+     "students": 1225
+    },
+    {
+     "name": "서문여자고등학교",
+     "level": "high",
+     "students": 920
+    },
+    {
+     "name": "서울웹툰애니메이션고등학교",
+     "level": "high",
+     "students": 286
+    }
+   ]
+  },
+  {
+   "name": "서초동",
+   "students": {
+    "elem": 4902,
+    "middle": 1766,
+    "high": 2874,
+    "total": 9542
+   },
+   "academies": {
+    "all": 200,
+    "math": 58,
+    "english": 39
+   },
+   "schools": [
+    {
+     "name": "서울교육대학교부설초등학교",
+     "level": "elem",
+     "students": 616
+    },
+    {
+     "name": "서울서이초등학교",
+     "level": "elem",
+     "students": 1201
+    },
+    {
+     "name": "서울서일초등학교",
+     "level": "elem",
+     "students": 407
+    },
+    {
+     "name": "서울서초초등학교",
+     "level": "elem",
+     "students": 837
+    },
+    {
+     "name": "서울신중초등학교",
+     "level": "elem",
+     "students": 749
+    },
+    {
+     "name": "서울원명초등학교",
+     "level": "elem",
+     "students": 1092
+    },
+    {
+     "name": "서운중학교",
+     "level": "middle",
+     "students": 1128
+    },
+    {
+     "name": "서초중학교",
+     "level": "middle",
+     "students": 638
+    },
+    {
+     "name": "서울고등학교",
+     "level": "high",
+     "students": 1221
+    },
+    {
+     "name": "서초고등학교",
+     "level": "high",
+     "students": 833
+    },
+    {
+     "name": "양재고등학교",
+     "level": "high",
+     "students": 820
+    }
+   ]
+  },
+  {
+   "name": "신원동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 2,
+    "math": 1,
+    "english": 1
+   },
+   "schools": []
+  },
+  {
+   "name": "양재동",
+   "students": {
+    "elem": 717,
+    "middle": 345,
+    "high": 0,
+    "total": 1062
+   },
+   "academies": {
+    "all": 36,
+    "math": 9,
+    "english": 6
+   },
+   "schools": [
+    {
+     "name": "서울양재초등학교",
+     "level": "elem",
+     "students": 308
+    },
+    {
+     "name": "서울매헌초등학교",
+     "level": "elem",
+     "students": 409
+    },
+    {
+     "name": "언남중학교",
+     "level": "middle",
+     "students": 345
+    }
+   ]
+  },
+  {
+   "name": "우면동",
+   "students": {
+    "elem": 953,
+    "middle": 937,
+    "high": 0,
+    "total": 1890
+   },
+   "academies": {
+    "all": 44,
+    "math": 16,
+    "english": 13
+   },
+   "schools": [
+    {
+     "name": "서울우암초등학교",
+     "level": "elem",
+     "students": 193
+    },
+    {
+     "name": "서울우면초등학교",
+     "level": "elem",
+     "students": 395
+    },
+    {
+     "name": "서울우솔초등학교",
+     "level": "elem",
+     "students": 365
+    },
+    {
+     "name": "영동중학교",
+     "level": "middle",
+     "students": 937
+    }
+   ]
+  },
+  {
+   "name": "잠원동",
+   "students": {
+    "elem": 1201,
+    "middle": 1905,
+    "high": 0,
+    "total": 3106
+   },
+   "academies": {
+    "all": 173,
+    "math": 58,
+    "english": 30
+   },
+   "schools": [
+    {
+     "name": "서울신동초등학교",
+     "level": "elem",
+     "students": 1201
+    },
+    {
+     "name": "경원중학교",
+     "level": "middle",
+     "students": 1059
+    },
+    {
+     "name": "신동중학교",
+     "level": "middle",
+     "students": 846
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,683 @@
+{
+ "id": "서울-강남구",
+ "province": "서울특별시",
+ "region": "서울특별시 강남구",
+ "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 10월 기준",
+ "builtAt": "2026-10-23",
+ "sources": [
+  "학원: 나이스 교육정보 개방포털 학원교습소정보",
+  "학생 수: 학교알리미 학년별·학급별 학생수"
+ ],
+ "unmatchedAcademies": 12,
+ "areas": [
+  {
+   "name": "개포동",
+   "students": {
+    "elem": 4695,
+    "middle": 2990,
+    "high": 2708,
+    "total": 10393
+   },
+   "academies": {
+    "all": 107,
+    "math": 38,
+    "english": 18
+   },
+   "schools": [
+    {
+     "name": "서울개원초등학교",
+     "level": "elem",
+     "students": 934
+    },
+    {
+     "name": "서울개일초등학교",
+     "level": "elem",
+     "students": 785
+    },
+    {
+     "name": "서울개포초등학교",
+     "level": "elem",
+     "students": 827
+    },
+    {
+     "name": "서울구룡초등학교",
+     "level": "elem",
+     "students": 557
+    },
+    {
+     "name": "서울대진초등학교",
+     "level": "elem",
+     "students": 161
+    },
+    {
+     "name": "서울양전초등학교",
+     "level": "elem",
+     "students": 207
+    },
+    {
+     "name": "서울포이초등학교",
+     "level": "elem",
+     "students": 401
+    },
+    {
+     "name": "서울개현초등학교",
+     "level": "elem",
+     "students": 823
+    },
+    {
+     "name": "개원중학교",
+     "level": "middle",
+     "students": 966
+    },
+    {
+     "name": "개포중학교",
+     "level": "middle",
+     "students": 1091
+    },
+    {
+     "name": "구룡중학교",
+     "level": "middle",
+     "students": 933
+    },
+    {
+     "name": "국립국악고등학교",
+     "level": "high",
+     "students": 422
+    },
+    {
+     "name": "개포고등학교",
+     "level": "high",
+     "students": 632
+    },
+    {
+     "name": "경기여자고등학교",
+     "level": "high",
+     "students": 1104
+    },
+    {
+     "name": "수도전기공업고등학교",
+     "level": "high",
+     "students": 550
+    }
+   ]
+  },
+  {
+   "name": "논현동",
+   "students": {
+    "elem": 561,
+    "middle": 304,
+    "high": 0,
+    "total": 865
+   },
+   "academies": {
+    "all": 15,
+    "math": 2,
+    "english": 5
+   },
+   "schools": [
+    {
+     "name": "서울논현초등학교",
+     "level": "elem",
+     "students": 185
+    },
+    {
+     "name": "서울학동초등학교",
+     "level": "elem",
+     "students": 376
+    },
+    {
+     "name": "언북중학교",
+     "level": "middle",
+     "students": 304
+    }
+   ]
+  },
+  {
+   "name": "대치동",
+   "students": {
+    "elem": 4393,
+    "middle": 3485,
+    "high": 2540,
+    "total": 10418
+   },
+   "academies": {
+    "all": 1229,
+    "math": 314,
+    "english": 129
+   },
+   "schools": [
+    {
+     "name": "서울대곡초등학교",
+     "level": "elem",
+     "students": 1174
+    },
+    {
+     "name": "서울대치초등학교",
+     "level": "elem",
+     "students": 1316
+    },
+    {
+     "name": "서울대현초등학교",
+     "level": "elem",
+     "students": 1117
+    },
+    {
+     "name": "서울도곡초등학교",
+     "level": "elem",
+     "students": 786
+    },
+    {
+     "name": "단국대학교사범대학부속중학교",
+     "level": "middle",
+     "students": 598
+    },
+    {
+     "name": "대명중학교",
+     "level": "middle",
+     "students": 1011
+    },
+    {
+     "name": "대청중학교",
+     "level": "middle",
+     "students": 1063
+    },
+    {
+     "name": "휘문중학교",
+     "level": "middle",
+     "students": 813
+    },
+    {
+     "name": "단국대학교사범대학부속고등학교",
+     "level": "high",
+     "students": 1120
+    },
+    {
+     "name": "휘문고등학교",
+     "level": "high",
+     "students": 1121
+    },
+    {
+     "name": "단국대학교부속소프트웨어고등학교",
+     "level": "high",
+     "students": 299
+    }
+   ]
+  },
+  {
+   "name": "도곡동",
+   "students": {
+    "elem": 3016,
+    "middle": 2873,
+    "high": 2903,
+    "total": 8792
+   },
+   "academies": {
+    "all": 67,
+    "math": 19,
+    "english": 20
+   },
+   "schools": [
+    {
+     "name": "서울대도초등학교",
+     "level": "elem",
+     "students": 1818
+    },
+    {
+     "name": "서울언주초등학교",
+     "level": "elem",
+     "students": 1198
+    },
+    {
+     "name": "대치중학교",
+     "level": "middle",
+     "students": 656
+    },
+    {
+     "name": "도곡중학교",
+     "level": "middle",
+     "students": 803
+    },
+    {
+     "name": "숙명여자중학교",
+     "level": "middle",
+     "students": 913
+    },
+    {
+     "name": "은성중학교",
+     "level": "middle",
+     "students": 501
+    },
+    {
+     "name": "숙명여자고등학교",
+     "level": "high",
+     "students": 1181
+    },
+    {
+     "name": "은광여자고등학교",
+     "level": "high",
+     "students": 720
+    },
+    {
+     "name": "중앙대학교사범대학부속고등학교",
+     "level": "high",
+     "students": 1002
+    }
+   ]
+  },
+  {
+   "name": "미도상가",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "삼성동",
+   "students": {
+    "elem": 887,
+    "middle": 1266,
+    "high": 976,
+    "total": 3129
+   },
+   "academies": {
+    "all": 60,
+    "math": 15,
+    "english": 11
+   },
+   "schools": [
+    {
+     "name": "서울봉은초등학교",
+     "level": "elem",
+     "students": 471
+    },
+    {
+     "name": "서울삼릉초등학교",
+     "level": "elem",
+     "students": 416
+    },
+    {
+     "name": "봉은중학교",
+     "level": "middle",
+     "students": 300
+    },
+    {
+     "name": "언주중학교",
+     "level": "middle",
+     "students": 966
+    },
+    {
+     "name": "경기고등학교",
+     "level": "high",
+     "students": 976
+    }
+   ]
+  },
+  {
+   "name": "상가동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 1
+   },
+   "schools": []
+  },
+  {
+   "name": "세곡동",
+   "students": {
+    "elem": 986,
+    "middle": 0,
+    "high": 0,
+    "total": 986
+   },
+   "academies": {
+    "all": 19,
+    "math": 7,
+    "english": 8
+   },
+   "schools": [
+    {
+     "name": "서울대왕초등학교",
+     "level": "elem",
+     "students": 418
+    },
+    {
+     "name": "서울세명초등학교",
+     "level": "elem",
+     "students": 568
+    }
+   ]
+  },
+  {
+   "name": "수서동",
+   "students": {
+    "elem": 865,
+    "middle": 1478,
+    "high": 952,
+    "total": 3295
+   },
+   "academies": {
+    "all": 9,
+    "math": 4,
+    "english": 2
+   },
+   "schools": [
+    {
+     "name": "서울수서초등학교",
+     "level": "elem",
+     "students": 114
+    },
+    {
+     "name": "서울왕북초등학교",
+     "level": "elem",
+     "students": 751
+    },
+    {
+     "name": "대왕중학교",
+     "level": "middle",
+     "students": 910
+    },
+    {
+     "name": "수서중학교",
+     "level": "middle",
+     "students": 568
+    },
+    {
+     "name": "대진디자인고등학교",
+     "level": "high",
+     "students": 404
+    },
+    {
+     "name": "서울세종고등학교",
+     "level": "high",
+     "students": 548
+    }
+   ]
+  },
+  {
+   "name": "신사동",
+   "students": {
+    "elem": 421,
+    "middle": 253,
+    "high": 0,
+    "total": 674
+   },
+   "academies": {
+    "all": 169,
+    "math": 29,
+    "english": 21
+   },
+   "schools": [
+    {
+     "name": "서울신구초등학교",
+     "level": "elem",
+     "students": 421
+    },
+    {
+     "name": "신구중학교",
+     "level": "middle",
+     "students": 253
+    }
+   ]
+  },
+  {
+   "name": "압구정동",
+   "students": {
+    "elem": 738,
+    "middle": 718,
+    "high": 2147,
+    "total": 3603
+   },
+   "academies": {
+    "all": 19,
+    "math": 7,
+    "english": 5
+   },
+   "schools": [
+    {
+     "name": "서울압구정초등학교",
+     "level": "elem",
+     "students": 738
+    },
+    {
+     "name": "압구정중학교",
+     "level": "middle",
+     "students": 418
+    },
+    {
+     "name": "신사중학교",
+     "level": "middle",
+     "students": 300
+    },
+    {
+     "name": "청담고등학교",
+     "level": "high",
+     "students": 501
+    },
+    {
+     "name": "압구정고등학교",
+     "level": "high",
+     "students": 518
+    },
+    {
+     "name": "현대고등학교",
+     "level": "high",
+     "students": 1128
+    }
+   ]
+  },
+  {
+   "name": "역삼동",
+   "students": {
+    "elem": 1836,
+    "middle": 2201,
+    "high": 873,
+    "total": 4910
+   },
+   "academies": {
+    "all": 85,
+    "math": 18,
+    "english": 10
+   },
+   "schools": [
+    {
+     "name": "서울도성초등학교",
+     "level": "elem",
+     "students": 1559
+    },
+    {
+     "name": "서울역삼초등학교",
+     "level": "elem",
+     "students": 277
+    },
+    {
+     "name": "역삼중학교",
+     "level": "middle",
+     "students": 1203
+    },
+    {
+     "name": "진선여자중학교",
+     "level": "middle",
+     "students": 998
+    },
+    {
+     "name": "진선여자고등학교",
+     "level": "high",
+     "students": 873
+    }
+   ]
+  },
+  {
+   "name": "율현동",
+   "students": {
+    "elem": 795,
+    "middle": 0,
+    "high": 0,
+    "total": 795
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "서울율현초등학교",
+     "level": "elem",
+     "students": 795
+    }
+   ]
+  },
+  {
+   "name": "일원동",
+   "students": {
+    "elem": 2328,
+    "middle": 983,
+    "high": 2384,
+    "total": 5695
+   },
+   "academies": {
+    "all": 60,
+    "math": 22,
+    "english": 17
+   },
+   "schools": [
+    {
+     "name": "서울대모초등학교",
+     "level": "elem",
+     "students": 758
+    },
+    {
+     "name": "서울대청초등학교",
+     "level": "elem",
+     "students": 66
+    },
+    {
+     "name": "서울영희초등학교",
+     "level": "elem",
+     "students": 227
+    },
+    {
+     "name": "서울일원초등학교",
+     "level": "elem",
+     "students": 1277
+    },
+    {
+     "name": "중동중학교",
+     "level": "middle",
+     "students": 983
+    },
+    {
+     "name": "중동고등학교",
+     "level": "high",
+     "students": 1115
+    },
+    {
+     "name": "중산고등학교",
+     "level": "high",
+     "students": 886
+    },
+    {
+     "name": "서울로봇고등학교",
+     "level": "high",
+     "students": 383
+    }
+   ]
+  },
+  {
+   "name": "자곡동",
+   "students": {
+    "elem": 509,
+    "middle": 1004,
+    "high": 948,
+    "total": 2461
+   },
+   "academies": {
+    "all": 45,
+    "math": 20,
+    "english": 11
+   },
+   "schools": [
+    {
+     "name": "서울자곡초등학교",
+     "level": "elem",
+     "students": 509
+    },
+    {
+     "name": "세곡중학교",
+     "level": "middle",
+     "students": 1004
+    },
+    {
+     "name": "풍문고등학교",
+     "level": "high",
+     "students": 948
+    }
+   ]
+  },
+  {
+   "name": "청담동",
+   "students": {
+    "elem": 1692,
+    "middle": 331,
+    "high": 826,
+    "total": 2849
+   },
+   "academies": {
+    "all": 25,
+    "math": 8,
+    "english": 5
+   },
+   "schools": [
+    {
+     "name": "서울언북초등학교",
+     "level": "elem",
+     "students": 1273
+    },
+    {
+     "name": "서울청담초등학교",
+     "level": "elem",
+     "students": 419
+    },
+    {
+     "name": "청담중학교",
+     "level": "middle",
+     "students": 331
+    },
+    {
+     "name": "영동고등학교",
+     "level": "high",
+     "students": 826
+    }
+   ]
+  },
+  {
+   "name": "청실상가동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 1,
+    "english": 0
+   },
+   "schools": []
+  }
+ ]
+}

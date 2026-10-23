@@ -1,0 +1,421 @@
+{
+ "id": "경기-양평군",
+ "province": "경기도",
+ "region": "경기도 양평군",
+ "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 10월 기준",
+ "builtAt": "2026-10-23",
+ "sources": [
+  "학원: 나이스 교육정보 개방포털 학원교습소정보",
+  "학생 수: 학교알리미 학년별·학급별 학생수"
+ ],
+ "unmatchedAcademies": 0,
+ "areas": [
+  {
+   "name": "강상면",
+   "students": {
+    "elem": 409,
+    "middle": 0,
+    "high": 0,
+    "total": 409
+   },
+   "academies": {
+    "all": 2,
+    "math": 1,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "강상초등학교",
+     "level": "elem",
+     "students": 334
+    },
+    {
+     "name": "세월초등학교",
+     "level": "elem",
+     "students": 75
+    }
+   ]
+  },
+  {
+   "name": "강하면",
+   "students": {
+    "elem": 54,
+    "middle": 42,
+    "high": 0,
+    "total": 96
+   },
+   "academies": {
+    "all": 3,
+    "math": 1,
+    "english": 1
+   },
+   "schools": [
+    {
+     "name": "강하초등학교",
+     "level": "elem",
+     "students": 54
+    },
+    {
+     "name": "강하중학교",
+     "level": "middle",
+     "students": 42
+    }
+   ]
+  },
+  {
+   "name": "개군면",
+   "students": {
+    "elem": 92,
+    "middle": 121,
+    "high": 0,
+    "total": 213
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "개군초등학교",
+     "level": "elem",
+     "students": 92
+    },
+    {
+     "name": "개군중학교",
+     "level": "middle",
+     "students": 121
+    }
+   ]
+  },
+  {
+   "name": "단월면",
+   "students": {
+    "elem": 45,
+    "middle": 96,
+    "high": 0,
+    "total": 141
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "양평단월초등학교",
+     "level": "elem",
+     "students": 45
+    },
+    {
+     "name": "단월중학교",
+     "level": "middle",
+     "students": 96
+    }
+   ]
+  },
+  {
+   "name": "서종면",
+   "students": {
+    "elem": 357,
+    "middle": 242,
+    "high": 0,
+    "total": 599
+   },
+   "academies": {
+    "all": 19,
+    "math": 7,
+    "english": 7
+   },
+   "schools": [
+    {
+     "name": "서종초등학교",
+     "level": "elem",
+     "students": 249
+    },
+    {
+     "name": "수입초등학교",
+     "level": "elem",
+     "students": 68
+    },
+    {
+     "name": "정배초등학교",
+     "level": "elem",
+     "students": 40
+    },
+    {
+     "name": "서종중학교",
+     "level": "middle",
+     "students": 242
+    }
+   ]
+  },
+  {
+   "name": "양동면",
+   "students": {
+    "elem": 58,
+    "middle": 44,
+    "high": 191,
+    "total": 293
+   },
+   "academies": {
+    "all": 3,
+    "math": 2,
+    "english": 1
+   },
+   "schools": [
+    {
+     "name": "양동초등학교",
+     "level": "elem",
+     "students": 49
+    },
+    {
+     "name": "양동초등학교고송분교장",
+     "level": "elem",
+     "students": 9
+    },
+    {
+     "name": "양동중학교",
+     "level": "middle",
+     "students": 44
+    },
+    {
+     "name": "양동고등학교",
+     "level": "high",
+     "students": 191
+    }
+   ]
+  },
+  {
+   "name": "양서면",
+   "students": {
+    "elem": 344,
+    "middle": 233,
+    "high": 840,
+    "total": 1417
+   },
+   "academies": {
+    "all": 11,
+    "math": 3,
+    "english": 2
+   },
+   "schools": [
+    {
+     "name": "대아초등학교",
+     "level": "elem",
+     "students": 87
+    },
+    {
+     "name": "양서초등학교",
+     "level": "elem",
+     "students": 58
+    },
+    {
+     "name": "양수초등학교",
+     "level": "elem",
+     "students": 199
+    },
+    {
+     "name": "국수중학교",
+     "level": "middle",
+     "students": 67
+    },
+    {
+     "name": "양수중학교",
+     "level": "middle",
+     "students": 166
+    },
+    {
+     "name": "양서고등학교",
+     "level": "high",
+     "students": 752
+    },
+    {
+     "name": "양평전자과학고등학교",
+     "level": "high",
+     "students": 88
+    }
+   ]
+  },
+  {
+   "name": "양평읍",
+   "students": {
+    "elem": 1644,
+    "middle": 1473,
+    "high": 1197,
+    "total": 4314
+   },
+   "academies": {
+    "all": 80,
+    "math": 21,
+    "english": 24
+   },
+   "schools": [
+    {
+     "name": "양평동초등학교",
+     "level": "elem",
+     "students": 491
+    },
+    {
+     "name": "양평초등학교",
+     "level": "elem",
+     "students": 1118
+    },
+    {
+     "name": "원덕초등학교",
+     "level": "elem",
+     "students": 35
+    },
+    {
+     "name": "양일중학교",
+     "level": "middle",
+     "students": 636
+    },
+    {
+     "name": "양평중학교",
+     "level": "middle",
+     "students": 837
+    },
+    {
+     "name": "양일고등학교",
+     "level": "high",
+     "students": 651
+    },
+    {
+     "name": "양평고등학교",
+     "level": "high",
+     "students": 546
+    }
+   ]
+  },
+  {
+   "name": "옥천면",
+   "students": {
+    "elem": 265,
+    "middle": 0,
+    "high": 0,
+    "total": 265
+   },
+   "academies": {
+    "all": 3,
+    "math": 2,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "옥천초등학교",
+     "level": "elem",
+     "students": 265
+    }
+   ]
+  },
+  {
+   "name": "용문면",
+   "students": {
+    "elem": 673,
+    "middle": 447,
+    "high": 472,
+    "total": 1592
+   },
+   "academies": {
+    "all": 24,
+    "math": 3,
+    "english": 7
+   },
+   "schools": [
+    {
+     "name": "다문초등학교",
+     "level": "elem",
+     "students": 485
+    },
+    {
+     "name": "용문초등학교",
+     "level": "elem",
+     "students": 55
+    },
+    {
+     "name": "조현초등학교",
+     "level": "elem",
+     "students": 133
+    },
+    {
+     "name": "용문중학교",
+     "level": "middle",
+     "students": 447
+    },
+    {
+     "name": "용문고등학교",
+     "level": "high",
+     "students": 472
+    }
+   ]
+  },
+  {
+   "name": "지평면",
+   "students": {
+    "elem": 105,
+    "middle": 54,
+    "high": 124,
+    "total": 283
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "곡수초등학교",
+     "level": "elem",
+     "students": 39
+    },
+    {
+     "name": "지평초등학교",
+     "level": "elem",
+     "students": 66
+    },
+    {
+     "name": "지평중학교",
+     "level": "middle",
+     "students": 54
+    },
+    {
+     "name": "지평고등학교",
+     "level": "high",
+     "students": 124
+    }
+   ]
+  },
+  {
+   "name": "청운면",
+   "students": {
+    "elem": 50,
+    "middle": 34,
+    "high": 52,
+    "total": 136
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "청운초등학교",
+     "level": "elem",
+     "students": 50
+    },
+    {
+     "name": "청운중학교",
+     "level": "middle",
+     "students": 34
+    },
+    {
+     "name": "청운고등학교",
+     "level": "high",
+     "students": 52
+    }
+   ]
+  }
+ ]
+}

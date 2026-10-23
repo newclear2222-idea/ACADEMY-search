@@ -1,0 +1,424 @@
+{
+ "id": "서울-중구",
+ "province": "서울특별시",
+ "region": "서울특별시 중구",
+ "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 10월 기준",
+ "builtAt": "2026-10-23",
+ "sources": [
+  "학원: 나이스 교육정보 개방포털 학원교습소정보",
+  "학생 수: 학교알리미 학년별·학급별 학생수"
+ ],
+ "unmatchedAcademies": 0,
+ "areas": [
+  {
+   "name": "남산동",
+   "students": {
+    "elem": 185,
+    "middle": 0,
+    "high": 0,
+    "total": 185
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "서울남산초등학교",
+     "level": "elem",
+     "students": 185
+    }
+   ]
+  },
+  {
+   "name": "만리동1가",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 290,
+    "total": 290
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "서울의료보건고등학교",
+     "level": "high",
+     "students": 290
+    }
+   ]
+  },
+  {
+   "name": "만리동2가",
+   "students": {
+    "elem": 359,
+    "middle": 157,
+    "high": 329,
+    "total": 845
+   },
+   "academies": {
+    "all": 1,
+    "math": 1,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "서울봉래초등학교",
+     "level": "elem",
+     "students": 359
+    },
+    {
+     "name": "환일중학교",
+     "level": "middle",
+     "students": 157
+    },
+    {
+     "name": "환일고등학교",
+     "level": "high",
+     "students": 329
+    }
+   ]
+  },
+  {
+   "name": "묵정동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 3,
+    "math": 1,
+    "english": 1
+   },
+   "schools": []
+  },
+  {
+   "name": "수표동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "순화동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 417,
+    "total": 417
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "이화여자외국어고등학교",
+     "level": "high",
+     "students": 417
+    }
+   ]
+  },
+  {
+   "name": "신당동",
+   "students": {
+    "elem": 1742,
+    "middle": 930,
+    "high": 1636,
+    "total": 4308
+   },
+   "academies": {
+    "all": 38,
+    "math": 10,
+    "english": 6
+   },
+   "schools": [
+    {
+     "name": "동산초등학교",
+     "level": "elem",
+     "students": 530
+    },
+    {
+     "name": "서울장충초등학교",
+     "level": "elem",
+     "students": 301
+    },
+    {
+     "name": "서울청구초등학교",
+     "level": "elem",
+     "students": 366
+    },
+    {
+     "name": "서울흥인초등학교",
+     "level": "elem",
+     "students": 312
+    },
+    {
+     "name": "서울신당초등학교",
+     "level": "elem",
+     "students": 233
+    },
+    {
+     "name": "금호중학교",
+     "level": "middle",
+     "students": 109
+    },
+    {
+     "name": "대경중학교",
+     "level": "middle",
+     "students": 290
+    },
+    {
+     "name": "장원중학교",
+     "level": "middle",
+     "students": 175
+    },
+    {
+     "name": "장충중학교",
+     "level": "middle",
+     "students": 203
+    },
+    {
+     "name": "한양중학교",
+     "level": "middle",
+     "students": 153
+    },
+    {
+     "name": "성동고등학교",
+     "level": "high",
+     "students": 428
+    },
+    {
+     "name": "한양과학기술고등학교",
+     "level": "high",
+     "students": 497
+    },
+    {
+     "name": "성동글로벌경영고등학교",
+     "level": "high",
+     "students": 338
+    },
+    {
+     "name": "대경생활과학고등학교",
+     "level": "high",
+     "students": 373
+    }
+   ]
+  },
+  {
+   "name": "예장동",
+   "students": {
+    "elem": 1004,
+    "middle": 0,
+    "high": 358,
+    "total": 1362
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "리라초등학교",
+     "level": "elem",
+     "students": 500
+    },
+    {
+     "name": "숭의초등학교",
+     "level": "elem",
+     "students": 504
+    },
+    {
+     "name": "리라아트고등학교",
+     "level": "high",
+     "students": 358
+    }
+   ]
+  },
+  {
+   "name": "을지로2가",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "인현동2가",
+   "students": {
+    "elem": 0,
+    "middle": 229,
+    "high": 0,
+    "total": 229
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "덕수중학교",
+     "level": "middle",
+     "students": 229
+    }
+   ]
+  },
+  {
+   "name": "장충동2가",
+   "students": {
+    "elem": 119,
+    "middle": 0,
+    "high": 0,
+    "total": 119
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "서울충무초등학교",
+     "level": "elem",
+     "students": 119
+    }
+   ]
+  },
+  {
+   "name": "정동",
+   "students": {
+    "elem": 326,
+    "middle": 171,
+    "high": 1207,
+    "total": 1704
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "서울덕수초등학교",
+     "level": "elem",
+     "students": 326
+    },
+    {
+     "name": "창덕여자중학교",
+     "level": "middle",
+     "students": 171
+    },
+    {
+     "name": "이화여자고등학교",
+     "level": "high",
+     "students": 1207
+    }
+   ]
+  },
+  {
+   "name": "중림동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 3,
+    "math": 2,
+    "english": 2
+   },
+   "schools": []
+  },
+  {
+   "name": "충정로1가",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 2,
+    "math": 0,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "필동1가",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "황학동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 1,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "흥인동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 463,
+    "total": 463
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "성동공업고등학교",
+     "level": "high",
+     "students": 463
+    }
+   ]
+  }
+ ]
+}

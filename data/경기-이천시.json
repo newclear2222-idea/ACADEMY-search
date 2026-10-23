@@ -1,0 +1,639 @@
+{
+ "id": "경기-이천시",
+ "province": "경기도",
+ "region": "경기도 이천시",
+ "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 10월 기준",
+ "builtAt": "2026-10-23",
+ "sources": [
+  "학원: 나이스 교육정보 개방포털 학원교습소정보",
+  "학생 수: 학교알리미 학년별·학급별 학생수"
+ ],
+ "unmatchedAcademies": 6,
+ "areas": [
+  {
+   "name": "갈산동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 826,
+    "total": 826
+   },
+   "academies": {
+    "all": 61,
+    "math": 19,
+    "english": 18
+   },
+   "schools": [
+    {
+     "name": "이현고등학교",
+     "level": "high",
+     "students": 826
+    }
+   ]
+  },
+  {
+   "name": "관고동",
+   "students": {
+    "elem": 0,
+    "middle": 437,
+    "high": 0,
+    "total": 437
+   },
+   "academies": {
+    "all": 7,
+    "math": 3,
+    "english": 1
+   },
+   "schools": [
+    {
+     "name": "이천양정여자중학교",
+     "level": "middle",
+     "students": 437
+    }
+   ]
+  },
+  {
+   "name": "단월동",
+   "students": {
+    "elem": 85,
+    "middle": 0,
+    "high": 0,
+    "total": 85
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "이천단월초등학교",
+     "level": "elem",
+     "students": 85
+    }
+   ]
+  },
+  {
+   "name": "대월면",
+   "students": {
+    "elem": 637,
+    "middle": 815,
+    "high": 0,
+    "total": 1452
+   },
+   "academies": {
+    "all": 9,
+    "math": 2,
+    "english": 1
+   },
+   "schools": [
+    {
+     "name": "대월초등학교",
+     "level": "elem",
+     "students": 109
+    },
+    {
+     "name": "이천사동초등학교",
+     "level": "elem",
+     "students": 528
+    },
+    {
+     "name": "대월중학교",
+     "level": "middle",
+     "students": 65
+    },
+    {
+     "name": "이천사동중학교",
+     "level": "middle",
+     "students": 750
+    }
+   ]
+  },
+  {
+   "name": "마장면",
+   "students": {
+    "elem": 877,
+    "middle": 397,
+    "high": 246,
+    "total": 1520
+   },
+   "academies": {
+    "all": 27,
+    "math": 7,
+    "english": 10
+   },
+   "schools": [
+    {
+     "name": "마장초등학교",
+     "level": "elem",
+     "students": 824
+    },
+    {
+     "name": "표교초등학교",
+     "level": "elem",
+     "students": 53
+    },
+    {
+     "name": "마장중학교",
+     "level": "middle",
+     "students": 397
+    },
+    {
+     "name": "마장고등학교",
+     "level": "high",
+     "students": 246
+    }
+   ]
+  },
+  {
+   "name": "모가면",
+   "students": {
+    "elem": 65,
+    "middle": 39,
+    "high": 0,
+    "total": 104
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "송곡초등학교",
+     "level": "elem",
+     "students": 26
+    },
+    {
+     "name": "진가초등학교",
+     "level": "elem",
+     "students": 39
+    },
+    {
+     "name": "모가중학교",
+     "level": "middle",
+     "students": 39
+    }
+   ]
+  },
+  {
+   "name": "백사면",
+   "students": {
+    "elem": 372,
+    "middle": 141,
+    "high": 0,
+    "total": 513
+   },
+   "academies": {
+    "all": 6,
+    "math": 3,
+    "english": 4
+   },
+   "schools": [
+    {
+     "name": "도지초등학교",
+     "level": "elem",
+     "students": 275
+    },
+    {
+     "name": "백사초등학교",
+     "level": "elem",
+     "students": 97
+    },
+    {
+     "name": "백사중학교",
+     "level": "middle",
+     "students": 141
+    }
+   ]
+  },
+  {
+   "name": "부발읍",
+   "students": {
+    "elem": 1641,
+    "middle": 768,
+    "high": 805,
+    "total": 3214
+   },
+   "academies": {
+    "all": 49,
+    "math": 16,
+    "english": 12
+   },
+   "schools": [
+    {
+     "name": "부발초등학교",
+     "level": "elem",
+     "students": 323
+    },
+    {
+     "name": "신하초등학교",
+     "level": "elem",
+     "students": 501
+    },
+    {
+     "name": "아미초등학교",
+     "level": "elem",
+     "students": 698
+    },
+    {
+     "name": "이천가산초등학교",
+     "level": "elem",
+     "students": 119
+    },
+    {
+     "name": "부발중학교",
+     "level": "middle",
+     "students": 232
+    },
+    {
+     "name": "효양중학교",
+     "level": "middle",
+     "students": 536
+    },
+    {
+     "name": "효양고등학교",
+     "level": "high",
+     "students": 805
+    }
+   ]
+  },
+  {
+   "name": "사음동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 576,
+    "total": 576
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "다산고등학교",
+     "level": "high",
+     "students": 576
+    }
+   ]
+  },
+  {
+   "name": "설성면",
+   "students": {
+    "elem": 60,
+    "middle": 37,
+    "high": 110,
+    "total": 207
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "설성초등학교",
+     "level": "elem",
+     "students": 22
+    },
+    {
+     "name": "장천초등학교",
+     "level": "elem",
+     "students": 38
+    },
+    {
+     "name": "이천경남중학교",
+     "level": "middle",
+     "students": 37
+    },
+    {
+     "name": "이천세무고등학교",
+     "level": "high",
+     "students": 110
+    }
+   ]
+  },
+  {
+   "name": "송정동",
+   "students": {
+    "elem": 1143,
+    "middle": 653,
+    "high": 0,
+    "total": 1796
+   },
+   "academies": {
+    "all": 35,
+    "math": 12,
+    "english": 8
+   },
+   "schools": [
+    {
+     "name": "이천송정초등학교",
+     "level": "elem",
+     "students": 1143
+    },
+    {
+     "name": "이천송정중학교",
+     "level": "middle",
+     "students": 653
+    }
+   ]
+  },
+  {
+   "name": "신둔면",
+   "students": {
+    "elem": 536,
+    "middle": 0,
+    "high": 185,
+    "total": 721
+   },
+   "academies": {
+    "all": 7,
+    "math": 2,
+    "english": 4
+   },
+   "schools": [
+    {
+     "name": "도암초등학교",
+     "level": "elem",
+     "students": 286
+    },
+    {
+     "name": "신둔초등학교",
+     "level": "elem",
+     "students": 250
+    },
+    {
+     "name": "한국도예고등학교",
+     "level": "high",
+     "students": 185
+    }
+   ]
+  },
+  {
+   "name": "신한아파트상가",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 1
+   },
+   "schools": []
+  },
+  {
+   "name": "안흥동",
+   "students": {
+    "elem": 877,
+    "middle": 856,
+    "high": 970,
+    "total": 2703
+   },
+   "academies": {
+    "all": 12,
+    "math": 2,
+    "english": 4
+   },
+   "schools": [
+    {
+     "name": "안흥초등학교",
+     "level": "elem",
+     "students": 877
+    },
+    {
+     "name": "이천중학교",
+     "level": "middle",
+     "students": 856
+    },
+    {
+     "name": "이천제일고등학교",
+     "level": "high",
+     "students": 970
+    }
+   ]
+  },
+  {
+   "name": "율면",
+   "students": {
+    "elem": 18,
+    "middle": 15,
+    "high": 64,
+    "total": 97
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "율면초등학교",
+     "level": "elem",
+     "students": 18
+    },
+    {
+     "name": "율면중학교",
+     "level": "middle",
+     "students": 15
+    },
+    {
+     "name": "율면고등학교",
+     "level": "high",
+     "students": 64
+    }
+   ]
+  },
+  {
+   "name": "장호원읍",
+   "students": {
+    "elem": 505,
+    "middle": 337,
+    "high": 624,
+    "total": 1466
+   },
+   "academies": {
+    "all": 14,
+    "math": 0,
+    "english": 3
+   },
+   "schools": [
+    {
+     "name": "나래초등학교",
+     "level": "elem",
+     "students": 106
+    },
+    {
+     "name": "대서초등학교",
+     "level": "elem",
+     "students": 24
+    },
+    {
+     "name": "이황초등학교",
+     "level": "elem",
+     "students": 39
+    },
+    {
+     "name": "장호원초등학교",
+     "level": "elem",
+     "students": 336
+    },
+    {
+     "name": "장호원중학교",
+     "level": "middle",
+     "students": 337
+    },
+    {
+     "name": "부원고등학교",
+     "level": "high",
+     "students": 278
+    },
+    {
+     "name": "장호원고등학교",
+     "level": "high",
+     "students": 346
+    }
+   ]
+  },
+  {
+   "name": "중리동",
+   "students": {
+    "elem": 318,
+    "middle": 0,
+    "high": 0,
+    "total": 318
+   },
+   "academies": {
+    "all": 12,
+    "math": 3,
+    "english": 5
+   },
+   "schools": [
+    {
+     "name": "이천남초등학교",
+     "level": "elem",
+     "students": 318
+    }
+   ]
+  },
+  {
+   "name": "증일동",
+   "students": {
+    "elem": 249,
+    "middle": 0,
+    "high": 0,
+    "total": 249
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "이천중리초등학교",
+     "level": "elem",
+     "students": 249
+    }
+   ]
+  },
+  {
+   "name": "증포동",
+   "students": {
+    "elem": 1257,
+    "middle": 960,
+    "high": 807,
+    "total": 3024
+   },
+   "academies": {
+    "all": 70,
+    "math": 26,
+    "english": 25
+   },
+   "schools": [
+    {
+     "name": "한내초등학교",
+     "level": "elem",
+     "students": 584
+    },
+    {
+     "name": "증포초등학교",
+     "level": "elem",
+     "students": 673
+    },
+    {
+     "name": "증포중학교",
+     "level": "middle",
+     "students": 960
+    },
+    {
+     "name": "이천고등학교",
+     "level": "high",
+     "students": 807
+    }
+   ]
+  },
+  {
+   "name": "창전동",
+   "students": {
+    "elem": 1474,
+    "middle": 853,
+    "high": 0,
+    "total": 2327
+   },
+   "academies": {
+    "all": 49,
+    "math": 13,
+    "english": 15
+   },
+   "schools": [
+    {
+     "name": "설봉초등학교",
+     "level": "elem",
+     "students": 822
+    },
+    {
+     "name": "이천초등학교",
+     "level": "elem",
+     "students": 652
+    },
+    {
+     "name": "설봉중학교",
+     "level": "middle",
+     "students": 853
+    }
+   ]
+  },
+  {
+   "name": "호법면",
+   "students": {
+    "elem": 136,
+    "middle": 0,
+    "high": 0,
+    "total": 136
+   },
+   "academies": {
+    "all": 2,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "이천매곡초등학교",
+     "level": "elem",
+     "students": 48
+    },
+    {
+     "name": "호법초등학교",
+     "level": "elem",
+     "students": 88
+    }
+   ]
+  }
+ ]
+}

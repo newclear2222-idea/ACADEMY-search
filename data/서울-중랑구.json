@@ -1,0 +1,345 @@
+{
+ "id": "서울-중랑구",
+ "province": "서울특별시",
+ "region": "서울특별시 중랑구",
+ "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 10월 기준",
+ "builtAt": "2026-10-23",
+ "sources": [
+  "학원: 나이스 교육정보 개방포털 학원교습소정보",
+  "학생 수: 학교알리미 학년별·학급별 학생수"
+ ],
+ "unmatchedAcademies": 2,
+ "areas": [
+  {
+   "name": "201동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "망우동",
+   "students": {
+    "elem": 1993,
+    "middle": 1603,
+    "high": 2557,
+    "total": 6153
+   },
+   "academies": {
+    "all": 45,
+    "math": 12,
+    "english": 12
+   },
+   "schools": [
+    {
+     "name": "서울동원초등학교",
+     "level": "elem",
+     "students": 279
+    },
+    {
+     "name": "서울망우초등학교",
+     "level": "elem",
+     "students": 271
+    },
+    {
+     "name": "서울면북초등학교",
+     "level": "elem",
+     "students": 114
+    },
+    {
+     "name": "서울면일초등학교",
+     "level": "elem",
+     "students": 507
+    },
+    {
+     "name": "서울양원숲초등학교",
+     "level": "elem",
+     "students": 822
+    },
+    {
+     "name": "동원중학교",
+     "level": "middle",
+     "students": 487
+    },
+    {
+     "name": "봉화중학교",
+     "level": "middle",
+     "students": 246
+    },
+    {
+     "name": "송곡중학교",
+     "level": "middle",
+     "students": 244
+    },
+    {
+     "name": "영란여자중학교",
+     "level": "middle",
+     "students": 285
+    },
+    {
+     "name": "혜원여자중학교",
+     "level": "middle",
+     "students": 341
+    },
+    {
+     "name": "송곡고등학교",
+     "level": "high",
+     "students": 652
+    },
+    {
+     "name": "송곡여자고등학교",
+     "level": "high",
+     "students": 625
+    },
+    {
+     "name": "혜원여자고등학교",
+     "level": "high",
+     "students": 541
+    },
+    {
+     "name": "송곡관광고등학교",
+     "level": "high",
+     "students": 279
+    },
+    {
+     "name": "이화여자대학교병설미디어고등학교",
+     "level": "high",
+     "students": 460
+    }
+   ]
+  },
+  {
+   "name": "면목동",
+   "students": {
+    "elem": 2566,
+    "middle": 1343,
+    "high": 0,
+    "total": 3909
+   },
+   "academies": {
+    "all": 81,
+    "math": 31,
+    "english": 17
+   },
+   "schools": [
+    {
+     "name": "서울면남초등학교",
+     "level": "elem",
+     "students": 353
+    },
+    {
+     "name": "서울면동초등학교",
+     "level": "elem",
+     "students": 921
+    },
+    {
+     "name": "서울면목초등학교",
+     "level": "elem",
+     "students": 479
+    },
+    {
+     "name": "서울중랑초등학교",
+     "level": "elem",
+     "students": 470
+    },
+    {
+     "name": "서울중목초등학교",
+     "level": "elem",
+     "students": 343
+    },
+    {
+     "name": "면목중학교",
+     "level": "middle",
+     "students": 448
+    },
+    {
+     "name": "용마중학교",
+     "level": "middle",
+     "students": 462
+    },
+    {
+     "name": "중화중학교",
+     "level": "middle",
+     "students": 433
+    }
+   ]
+  },
+  {
+   "name": "묵동",
+   "students": {
+    "elem": 1245,
+    "middle": 1070,
+    "high": 1339,
+    "total": 3654
+   },
+   "academies": {
+    "all": 33,
+    "math": 11,
+    "english": 3
+   },
+   "schools": [
+    {
+     "name": "서울원묵초등학교",
+     "level": "elem",
+     "students": 840
+    },
+    {
+     "name": "서울묵현초등학교",
+     "level": "elem",
+     "students": 405
+    },
+    {
+     "name": "원묵중학교",
+     "level": "middle",
+     "students": 727
+    },
+    {
+     "name": "태릉중학교",
+     "level": "middle",
+     "students": 343
+    },
+    {
+     "name": "태릉고등학교",
+     "level": "high",
+     "students": 701
+    },
+    {
+     "name": "원묵고등학교",
+     "level": "high",
+     "students": 638
+    }
+   ]
+  },
+  {
+   "name": "상봉동",
+   "students": {
+    "elem": 485,
+    "middle": 1249,
+    "high": 577,
+    "total": 2311
+   },
+   "academies": {
+    "all": 17,
+    "math": 7,
+    "english": 4
+   },
+   "schools": [
+    {
+     "name": "서울상봉초등학교",
+     "level": "elem",
+     "students": 485
+    },
+    {
+     "name": "상봉중학교",
+     "level": "middle",
+     "students": 632
+    },
+    {
+     "name": "신현중학교",
+     "level": "middle",
+     "students": 617
+    },
+    {
+     "name": "신현고등학교",
+     "level": "high",
+     "students": 577
+    }
+   ]
+  },
+  {
+   "name": "신내동",
+   "students": {
+    "elem": 3173,
+    "middle": 0,
+    "high": 0,
+    "total": 3173
+   },
+   "academies": {
+    "all": 96,
+    "math": 34,
+    "english": 25
+   },
+   "schools": [
+    {
+     "name": "금성초등학교",
+     "level": "elem",
+     "students": 673
+    },
+    {
+     "name": "서울봉화초등학교",
+     "level": "elem",
+     "students": 352
+    },
+    {
+     "name": "서울신내초등학교",
+     "level": "elem",
+     "students": 502
+    },
+    {
+     "name": "서울신현초등학교",
+     "level": "elem",
+     "students": 349
+    },
+    {
+     "name": "서울중화초등학교",
+     "level": "elem",
+     "students": 876
+    },
+    {
+     "name": "서울새솔초등학교",
+     "level": "elem",
+     "students": 421
+    }
+   ]
+  },
+  {
+   "name": "중화동",
+   "students": {
+    "elem": 493,
+    "middle": 793,
+    "high": 569,
+    "total": 1855
+   },
+   "academies": {
+    "all": 30,
+    "math": 8,
+    "english": 6
+   },
+   "schools": [
+    {
+     "name": "서울묵동초등학교",
+     "level": "elem",
+     "students": 281
+    },
+    {
+     "name": "서울중흥초등학교",
+     "level": "elem",
+     "students": 212
+    },
+    {
+     "name": "장안중학교",
+     "level": "middle",
+     "students": 436
+    },
+    {
+     "name": "중랑중학교",
+     "level": "middle",
+     "students": 357
+    },
+    {
+     "name": "중화고등학교",
+     "level": "high",
+     "students": 569
+    }
+   ]
+  }
+ ]
+}

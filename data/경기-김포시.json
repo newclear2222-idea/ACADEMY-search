@@ -1,0 +1,670 @@
+{
+ "id": "경기-김포시",
+ "province": "경기도",
+ "region": "경기도 김포시",
+ "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 10월 기준",
+ "builtAt": "2026-10-23",
+ "sources": [
+  "학원: 나이스 교육정보 개방포털 학원교습소정보",
+  "학생 수: 학교알리미 학년별·학급별 학생수"
+ ],
+ "unmatchedAcademies": 14,
+ "areas": [
+  {
+   "name": "308동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 1,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "감정동",
+   "students": {
+    "elem": 1996,
+    "middle": 794,
+    "high": 0,
+    "total": 2790
+   },
+   "academies": {
+    "all": 27,
+    "math": 7,
+    "english": 9
+   },
+   "schools": [
+    {
+     "name": "감정초등학교",
+     "level": "elem",
+     "students": 634
+    },
+    {
+     "name": "김포금빛초등학교",
+     "level": "elem",
+     "students": 1362
+    },
+    {
+     "name": "감정중학교",
+     "level": "middle",
+     "students": 794
+    }
+   ]
+  },
+  {
+   "name": "걸포동",
+   "students": {
+    "elem": 393,
+    "middle": 0,
+    "high": 0,
+    "total": 393
+   },
+   "academies": {
+    "all": 21,
+    "math": 8,
+    "english": 8
+   },
+   "schools": [
+    {
+     "name": "걸포초등학교",
+     "level": "elem",
+     "students": 393
+    }
+   ]
+  },
+  {
+   "name": "고촌면",
+   "students": {
+    "elem": 1809,
+    "middle": 0,
+    "high": 0,
+    "total": 1809
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "보름초등학교",
+     "level": "elem",
+     "students": 1809
+    }
+   ]
+  },
+  {
+   "name": "고촌읍",
+   "students": {
+    "elem": 2352,
+    "middle": 2308,
+    "high": 1006,
+    "total": 5666
+   },
+   "academies": {
+    "all": 115,
+    "math": 47,
+    "english": 30
+   },
+   "schools": [
+    {
+     "name": "고촌초등학교",
+     "level": "elem",
+     "students": 501
+    },
+    {
+     "name": "금란초등학교",
+     "level": "elem",
+     "students": 99
+    },
+    {
+     "name": "신곡초등학교",
+     "level": "elem",
+     "students": 707
+    },
+    {
+     "name": "향산초등학교",
+     "level": "elem",
+     "students": 1045
+    },
+    {
+     "name": "고촌중학교",
+     "level": "middle",
+     "students": 850
+    },
+    {
+     "name": "김포신곡중학교",
+     "level": "middle",
+     "students": 932
+    },
+    {
+     "name": "향산중학교",
+     "level": "middle",
+     "students": 526
+    },
+    {
+     "name": "고촌고등학교",
+     "level": "high",
+     "students": 1006
+    }
+   ]
+  },
+  {
+   "name": "구래동",
+   "students": {
+    "elem": 2626,
+    "middle": 989,
+    "high": 0,
+    "total": 3615
+   },
+   "academies": {
+    "all": 131,
+    "math": 47,
+    "english": 41
+   },
+   "schools": [
+    {
+     "name": "김포한가람초등학교",
+     "level": "elem",
+     "students": 557
+    },
+    {
+     "name": "나비초등학교",
+     "level": "elem",
+     "students": 848
+    },
+    {
+     "name": "김포호수초등학교",
+     "level": "elem",
+     "students": 1221
+    },
+    {
+     "name": "김포한가람중학교",
+     "level": "middle",
+     "students": 989
+    }
+   ]
+  },
+  {
+   "name": "대곶면",
+   "students": {
+    "elem": 354,
+    "middle": 131,
+    "high": 0,
+    "total": 485
+   },
+   "academies": {
+    "all": 2,
+    "math": 0,
+    "english": 2
+   },
+   "schools": [
+    {
+     "name": "김포대명초등학교",
+     "level": "elem",
+     "students": 65
+    },
+    {
+     "name": "대곶초등학교",
+     "level": "elem",
+     "students": 160
+    },
+    {
+     "name": "석정초등학교",
+     "level": "elem",
+     "students": 68
+    },
+    {
+     "name": "수남초등학교",
+     "level": "elem",
+     "students": 61
+    },
+    {
+     "name": "대곶중학교",
+     "level": "middle",
+     "students": 131
+    }
+   ]
+  },
+  {
+   "name": "마산동",
+   "students": {
+    "elem": 1785,
+    "middle": 0,
+    "high": 995,
+    "total": 2780
+   },
+   "academies": {
+    "all": 60,
+    "math": 27,
+    "english": 17
+   },
+   "schools": [
+    {
+     "name": "은여울초등학교",
+     "level": "elem",
+     "students": 1785
+    },
+    {
+     "name": "솔터고등학교",
+     "level": "high",
+     "students": 995
+    }
+   ]
+  },
+  {
+   "name": "북변동",
+   "students": {
+    "elem": 917,
+    "middle": 1010,
+    "high": 461,
+    "total": 2388
+   },
+   "academies": {
+    "all": 92,
+    "math": 26,
+    "english": 21
+   },
+   "schools": [
+    {
+     "name": "금파초등학교",
+     "level": "elem",
+     "students": 358
+    },
+    {
+     "name": "김포서초등학교",
+     "level": "elem",
+     "students": 358
+    },
+    {
+     "name": "김포초등학교",
+     "level": "elem",
+     "students": 201
+    },
+    {
+     "name": "금파중학교",
+     "level": "middle",
+     "students": 1010
+    },
+    {
+     "name": "김포과학기술고등학교",
+     "level": "high",
+     "students": 461
+    }
+   ]
+  },
+  {
+   "name": "사우동",
+   "students": {
+    "elem": 520,
+    "middle": 170,
+    "high": 1112,
+    "total": 1802
+   },
+   "academies": {
+    "all": 39,
+    "math": 10,
+    "english": 7
+   },
+   "schools": [
+    {
+     "name": "사우초등학교",
+     "level": "elem",
+     "students": 520
+    },
+    {
+     "name": "김포여자중학교",
+     "level": "middle",
+     "students": 170
+    },
+    {
+     "name": "사우고등학교",
+     "level": "high",
+     "students": 1112
+    }
+   ]
+  },
+  {
+   "name": "상가동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 2,
+    "math": 1,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "양도마을상가동",
+   "students": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "academies": {
+    "all": 1,
+    "math": 1,
+    "english": 0
+   },
+   "schools": []
+  },
+  {
+   "name": "양촌읍",
+   "students": {
+    "elem": 1161,
+    "middle": 729,
+    "high": 1118,
+    "total": 3008
+   },
+   "academies": {
+    "all": 15,
+    "math": 2,
+    "english": 3
+   },
+   "schools": [
+    {
+     "name": "양곡초등학교",
+     "level": "elem",
+     "students": 329
+    },
+    {
+     "name": "학운초등학교",
+     "level": "elem",
+     "students": 194
+    },
+    {
+     "name": "신양초등학교",
+     "level": "elem",
+     "students": 638
+    },
+    {
+     "name": "양곡중학교",
+     "level": "middle",
+     "students": 404
+    },
+    {
+     "name": "신양중학교",
+     "level": "middle",
+     "students": 325
+    },
+    {
+     "name": "양곡고등학교",
+     "level": "high",
+     "students": 779
+    },
+    {
+     "name": "신양고등학교",
+     "level": "high",
+     "students": 339
+    }
+   ]
+  },
+  {
+   "name": "운양동",
+   "students": {
+    "elem": 94,
+    "middle": 1051,
+    "high": 996,
+    "total": 2141
+   },
+   "academies": {
+    "all": 144,
+    "math": 48,
+    "english": 34
+   },
+   "schools": [
+    {
+     "name": "모담초등학교",
+     "level": "elem",
+     "students": 94
+    },
+    {
+     "name": "하늘빛중학교",
+     "level": "middle",
+     "students": 1051
+    },
+    {
+     "name": "운양고등학교",
+     "level": "high",
+     "students": 996
+    }
+   ]
+  },
+  {
+   "name": "월곶면",
+   "students": {
+    "elem": 133,
+    "middle": 47,
+    "high": 582,
+    "total": 762
+   },
+   "academies": {
+    "all": 0,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "개곡초등학교",
+     "level": "elem",
+     "students": 81
+    },
+    {
+     "name": "월곶초등학교",
+     "level": "elem",
+     "students": 52
+    },
+    {
+     "name": "분진중학교",
+     "level": "middle",
+     "students": 47
+    },
+    {
+     "name": "김포외국어고등학교",
+     "level": "high",
+     "students": 582
+    }
+   ]
+  },
+  {
+   "name": "장기동",
+   "students": {
+    "elem": 2715,
+    "middle": 2185,
+    "high": 1041,
+    "total": 5941
+   },
+   "academies": {
+    "all": 230,
+    "math": 83,
+    "english": 68
+   },
+   "schools": [
+    {
+     "name": "고창초등학교",
+     "level": "elem",
+     "students": 594
+    },
+    {
+     "name": "푸른솔초등학교",
+     "level": "elem",
+     "students": 998
+    },
+    {
+     "name": "운유초등학교",
+     "level": "elem",
+     "students": 1123
+    },
+    {
+     "name": "고창중학교",
+     "level": "middle",
+     "students": 1011
+    },
+    {
+     "name": "운양중학교",
+     "level": "middle",
+     "students": 1174
+    },
+    {
+     "name": "장기고등학교",
+     "level": "high",
+     "students": 1041
+    }
+   ]
+  },
+  {
+   "name": "통진읍",
+   "students": {
+    "elem": 1315,
+    "middle": 806,
+    "high": 1423,
+    "total": 3544
+   },
+   "academies": {
+    "all": 21,
+    "math": 5,
+    "english": 5
+   },
+   "schools": [
+    {
+     "name": "마송초등학교",
+     "level": "elem",
+     "students": 314
+    },
+    {
+     "name": "서암초등학교",
+     "level": "elem",
+     "students": 152
+    },
+    {
+     "name": "옹정초등학교",
+     "level": "elem",
+     "students": 55
+    },
+    {
+     "name": "통진초등학교",
+     "level": "elem",
+     "students": 300
+    },
+    {
+     "name": "마송중앙초등학교",
+     "level": "elem",
+     "students": 494
+    },
+    {
+     "name": "통진중학교",
+     "level": "middle",
+     "students": 492
+    },
+    {
+     "name": "마송중학교",
+     "level": "middle",
+     "students": 314
+    },
+    {
+     "name": "통진고등학교",
+     "level": "high",
+     "students": 864
+    },
+    {
+     "name": "마송고등학교",
+     "level": "high",
+     "students": 559
+    }
+   ]
+  },
+  {
+   "name": "풍무동",
+   "students": {
+    "elem": 3409,
+    "middle": 1905,
+    "high": 0,
+    "total": 5314
+   },
+   "academies": {
+    "all": 141,
+    "math": 49,
+    "english": 28
+   },
+   "schools": [
+    {
+     "name": "양도초등학교",
+     "level": "elem",
+     "students": 473
+    },
+    {
+     "name": "유현초등학교",
+     "level": "elem",
+     "students": 1207
+    },
+    {
+     "name": "풍무초등학교",
+     "level": "elem",
+     "students": 777
+    },
+    {
+     "name": "김포신풍초등학교",
+     "level": "elem",
+     "students": 952
+    },
+    {
+     "name": "풍무중학교",
+     "level": "middle",
+     "students": 1062
+    },
+    {
+     "name": "양도중학교",
+     "level": "middle",
+     "students": 843
+    }
+   ]
+  },
+  {
+   "name": "하성면",
+   "students": {
+    "elem": 155,
+    "middle": 123,
+    "high": 284,
+    "total": 562
+   },
+   "academies": {
+    "all": 1,
+    "math": 0,
+    "english": 0
+   },
+   "schools": [
+    {
+     "name": "금성초등학교",
+     "level": "elem",
+     "students": 36
+    },
+    {
+     "name": "하성초등학교",
+     "level": "elem",
+     "students": 119
+    },
+    {
+     "name": "하성중학교",
+     "level": "middle",
+     "students": 123
+    },
+    {
+     "name": "하성고등학교",
+     "level": "high",
+     "students": 284
+    }
+   ]
+  }
+ ]
+}
