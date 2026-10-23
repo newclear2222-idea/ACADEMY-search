@@ -92,6 +92,65 @@ SUBJECT_KEYWORDS = {
     "english": ["영어"],
 }
 
+# 교습과정 이름으로 학교급을 가립니다. 예: '고등수학', '중등부', '영어 초1~3', '국어(중)'
+LEVEL_PATTERNS = {
+    "elem": re.compile(r"초등|초[0-9]|(^|[(\s])초([)\s~]|$)"),
+    "middle": re.compile(r"중등|중학|중[0-9]|(^|[(\s])중([)\s~]|$)"),
+    "high": re.compile(r"고등|고교|고[0-9]|(^|[(\s])고([)\s~]|$)|수능"),
+}
+
+# 1인당 교습비로 보기 어려운 값(입력 실수 등)은 뺍니다.
+FEE_MIN, FEE_MAX = 30_000, 2_000_000
+
+
+def parse_fees(text):
+    """'고등수학:500000, 중등수학:350000' -> [('고등수학', 500000), ('중등수학', 350000)]"""
+    fees = []
+    for part in re.split(r",\s*(?=[^,]*:)", text or ""):
+        name, sep, amount = part.rpartition(":")
+        amount = re.sub(r"[^0-9]", "", amount)
+        if sep and amount and FEE_MIN <= int(amount) <= FEE_MAX:
+            fees.append((name.strip(), int(amount)))
+    return fees
+
+
+def course_subjects(name, academy_subjects):
+    """과정 이름에 과목이 있으면 그 과목, 없으면 학원이 한 과목만 가르칠 때 그 과목."""
+    found = {s for s, words in SUBJECT_KEYWORDS.items() if any(w in name for w in words)}
+    if found:
+        return found
+    other_subject = re.search(r"국어|논술|과학|사회|코딩|한자|중국어|일본어|독서", name)
+    return set() if other_subject or len(academy_subjects) != 1 else set(academy_subjects)
+
+
+def course_levels(name):
+    return {level for level, pattern in LEVEL_PATTERNS.items() if pattern.search(name)}
+
+
+def new_fee_table():
+    return {subject: {level: [] for level in ("elem", "middle", "high", "total")}
+            for subject in ("all", "math", "english")}
+
+
+def add_fees(table, row, academy_subjects):
+    for name, amount in parse_fees(row.get("PSNBY_THCC_CNTNT")):
+        levels = course_levels(name) | {"total"}
+        for subject in course_subjects(name, academy_subjects) | {"all"}:
+            for level in levels:
+                table[subject][level].append(amount)
+
+
+def summarize_fees(table):
+    """과목·학교급별 [중간값, 과정 수]. 과정이 3개 미만이면 중간값을 내지 않습니다."""
+    out = {}
+    for subject, levels in table.items():
+        out[subject] = {}
+        for level, amounts in levels.items():
+            amounts = sorted(amounts)
+            median = amounts[len(amounts) // 2] if len(amounts) >= 3 else None
+            out[subject][level] = [median, len(amounts)]
+    return out
+
 
 def get_json(url, params, tries=4):
     query = urllib.parse.urlencode(params)
@@ -262,7 +321,7 @@ def is_open_tutoring(row):
 
 
 def new_region(province, name):
-    return {"province": province, "name": name, "areas": {}, "unmatched": 0}
+    return {"province": province, "name": name, "areas": {}, "unmatched": 0, "fees": new_fee_table()}
 
 
 def new_area(name):
@@ -271,6 +330,7 @@ def new_area(name):
         "students": {"elem": 0, "middle": 0, "high": 0, "total": 0},
         "academies": {"all": 0, "math": 0, "english": 0},
         "schools": [],
+        "fees": new_fee_table(),
     }
 
 
@@ -308,9 +368,11 @@ def build(province, academies, schools, year):
         a = r["areas"].setdefault(name, new_area(name))
         text = " ".join(row.get(k, "") or "" for k in ("ACA_NM", "LE_CRSE_LIST_NM", "LE_CRSE_NM"))
         a["academies"]["all"] += 1
-        for subject, keywords in SUBJECT_KEYWORDS.items():
-            if any(k in text for k in keywords):
-                a["academies"][subject] += 1
+        subjects = {s for s, words in SUBJECT_KEYWORDS.items() if any(w in text for w in words)}
+        for subject in subjects:
+            a["academies"][subject] += 1
+        add_fees(a["fees"], row, subjects)
+        add_fees(r["fees"], row, subjects)
 
     for old, targets in SPLIT_REGIONS.get(province, {}).items():
         if old not in regions:
@@ -326,6 +388,10 @@ def build(province, academies, schools, year):
                 for k, v in area[key].items():
                     merged[key][k] += v
             merged["schools"] += area["schools"]
+            for subject, levels in area["fees"].items():
+                for level, amounts in levels.items():
+                    merged["fees"][subject][level] += amounts
+                    regions[target]["fees"][subject][level] += amounts
 
     today = datetime.date.today()
     outputs = []
@@ -335,6 +401,7 @@ def build(province, academies, schools, year):
             continue
         for a in areas:
             a["schools"].sort(key=lambda s: ("elem", "middle", "high").index(s["level"]))
+            a["fees"] = summarize_fees(a["fees"])
         outputs.append({
             "id": f"{PROVINCES[province]['short']}-{r['name']}",
             "province": province,
@@ -344,8 +411,10 @@ def build(province, academies, schools, year):
             "sources": [
                 "학원: 나이스 교육정보 개방포털 학원교습소정보",
                 "학생 수: 학교알리미 학년별·학급별 학생수",
+                "수강료: 학원이 교육청에 등록한 1인당 교습비",
             ],
             "unmatchedAcademies": r["unmatched"],
+            "fees": summarize_fees(r["fees"]),
             "areas": areas,
         })
     return outputs

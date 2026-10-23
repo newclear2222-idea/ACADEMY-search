@@ -28,6 +28,55 @@ async function loadRegion(id) {
   return cache[id];
 }
 
+const LEVEL_NAMES = { elem: "초등학생", middle: "중학생", high: "고등학생" };
+const pct = (x) => `${Math.round(x * 100)}%`;
+const won = (n) => `${fmt(Math.round(n / 1000) / 10)}만원`;
+
+function feeOf(fees, subject, level) {
+  const cell = fees && fees[subject] && fees[subject][level];
+  return cell && cell[0] ? { median: cell[0], count: cell[1] } : null;
+}
+
+// 숫자에서 읽을 수 있는 이유만 적습니다. 현장 조사나 설문이 아닙니다.
+function reasonsFor(r, ctx) {
+  const { subject, level } = ctx;
+  const label = SUBJECT_LABELS[subject];
+  const reasons = [];
+  const shareS = ctx.totalStudents ? r.students / ctx.totalStudents : 0;
+  const shareA = ctx.totalAcademies ? r.academies / ctx.totalAcademies : 0;
+
+  if (r.students === 0) {
+    reasons.push("이 동에는 해당 학교가 없어 학생 수가 0으로 잡힙니다. 학원이 있다면 주변 동 학생들이 찾아오는 곳입니다.");
+  } else if (r.academies === 0) {
+    reasons.push(`등록된 ${label}이 없습니다. 아직 비어 있는 시장일 수도, 수요가 작아 아무도 들어오지 않은 곳일 수도 있어 현장 확인이 필요합니다.`);
+  } else if (shareA >= 0.15 && shareA >= shareS * 1.5) {
+    reasons.push(`지역 ${label}의 ${pct(shareA)}가 이 동에 몰린 학원가입니다 (학생은 지역의 ${pct(shareS)}). 다른 동 학생도 찾아와서 실제 경쟁은 숫자보다 덜할 수 있지만, 새 학원이 눈에 띄기는 어렵습니다.`);
+  } else if (shareA >= shareS * 1.3) {
+    reasons.push(`학원 비중(지역의 ${pct(shareA)})이 학생 비중(${pct(shareS)})보다 높습니다.`);
+  } else if (shareS >= shareA * 1.3) {
+    reasons.push(`학생은 지역의 ${pct(shareS)}인데 ${label}은 ${pct(shareA)}뿐입니다. 학생들이 근처 학원가로 다니고 있을 수 있으니, 그 학원가와의 거리도 함께 보세요.`);
+  }
+
+  if (r.students > 0 && level === "total") {
+    const st = r.area.students;
+    const top = ["elem", "middle", "high"].sort((a, b) => st[b] - st[a])[0];
+    if (st[top] / st.total >= 0.45) reasons.push(`학생 중 ${LEVEL_NAMES[top]}이 ${pct(st[top] / st.total)}로 가장 많습니다.`);
+    if (!r.area.schools.some((sc) => sc.level === "high")) reasons.push("이 동에는 고등학교가 없어 고등부 수요는 다른 동으로 빠질 수 있습니다.");
+  }
+  if (r.students > 0 && r.area.schools.length === 1) {
+    reasons.push("학교가 1곳뿐이라 숫자가 그 학교 하나에 크게 좌우됩니다.");
+  }
+
+  const areaFee = feeOf(r.area.fees, subject, level);
+  if (areaFee && ctx.regionFee) {
+    const diff = areaFee.median / ctx.regionFee.median - 1;
+    if (Math.abs(diff) >= 0.1) {
+      reasons.push(`등록 수강료가 지역 보통(${won(ctx.regionFee.median)})보다 ${pct(Math.abs(diff))} ${diff > 0 ? "높습니다" : "낮습니다"}.`);
+    }
+  }
+  return reasons;
+}
+
 // 학원 1곳당 학생 수. 학원이 없으면 Infinity로 두고 맨 위에 보여줍니다.
 function perAcademy(students, academies) {
   return academies === 0 ? Infinity : students / academies;
@@ -48,10 +97,14 @@ function render(data) {
   const totalAcademies = rows.reduce((s, r) => s + r.academies, 0);
   const average = perAcademy(totalStudents, totalAcademies);
 
+  const regionFee = feeOf(data.fees, subject, level);
+  const ctx = { subject, level, totalStudents, totalAcademies, regionFee };
+
   els.summary.innerHTML = `
     <div><div class="label">${data.region} ${LEVEL_LABELS[level]}</div><div class="value">${fmt(totalStudents)}명</div></div>
     <div><div class="label">${SUBJECT_LABELS[subject]}</div><div class="value">${fmt(totalAcademies)}곳</div></div>
-    <div><div class="label">지역 평균, 학원 1곳당 학생</div><div class="value">${Number.isFinite(average) ? fmt(Math.round(average)) + "명" : "-"}</div></div>`;
+    <div><div class="label">지역 평균, 학원 1곳당 학생</div><div class="value">${Number.isFinite(average) ? fmt(Math.round(average)) + "명" : "-"}</div></div>
+    <div><div class="label">보통 수강료 (1인당, 등록 기준)</div><div class="value">${regionFee ? won(regionFee.median) : "-"}</div></div>`;
 
   const finite = rows.filter((r) => Number.isFinite(r.ratio)).map((r) => r.ratio);
   const max = Math.max(...finite, 1);
@@ -72,13 +125,20 @@ function render(data) {
         width = (r.ratio / max) * 100;
       }
       const schoolCount = r.area.schools.length;
+      const fee = feeOf(r.area.fees, subject, level);
+      const feeText = fee ? ` · 보통 수강료 ${won(fee.median)} (${fmt(fee.count)}개 과정)` : "";
+      const reasons = reasonsFor(r, ctx);
+      const why = reasons.length
+        ? `<details class="why"><summary>왜 이런 결과일까?</summary><ul>${reasons.map((t) => `<li>${t}</li>`).join("")}</ul></details>`
+        : "";
       return `<li>
         <div class="rank-head">
           <span class="rank-name"><span class="no">${i + 1}</span>${r.area.name}${tag}</span>
           <span class="rank-metric">${metric}</span>
         </div>
         <div class="bar"><span style="width:${width.toFixed(1)}%"></span></div>
-        <div class="rank-sub">${LEVEL_LABELS[level]} ${fmt(r.students)}명 · ${SUBJECT_LABELS[subject]} ${fmt(r.academies)}곳 · 학교 ${schoolCount}곳</div>
+        <div class="rank-sub">${LEVEL_LABELS[level]} ${fmt(r.students)}명 · ${SUBJECT_LABELS[subject]} ${fmt(r.academies)}곳 · 학교 ${schoolCount}곳${feeText}</div>
+        ${why}
       </li>`;
     })
     .join("");
