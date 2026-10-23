@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: 서울·경기 데이터 받기
+      - name: 서울·경기·인천 데이터 받기
         env:
           NEIS_API_KEY: ${{ secrets.NEIS_API_KEY }}
           SCHOOLINFO_API_KEY: ${{ secrets.SCHOOLINFO_API_KEY }}
