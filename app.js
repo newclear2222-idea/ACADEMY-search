@@ -87,7 +87,7 @@ function topAcademies(area, subject) {
     const bits = [];
     if (x.capacity) bits.push(`정원 ${fmt(x.capacity)}명`);
     if (x.since) bits.push(`${Math.max(year - x.since, 0)}년째`);
-    if (x.branches >= 2) bits.push(`같은 이름 ${fmt(x.branches)}곳`);
+    if (x.branches >= 2) bits.push(`이름 비슷한 곳 ${fmt(x.branches)}곳`);
     return `<li><strong>${x.name}</strong>${bits.length ? ` <span class="muted">${bits.join(" · ")}</span>` : ""}</li>`;
   });
   return `<div class="top"><span class="top-label">규모 큰 학원</span><ul>${items.join("")}</ul></div>`;

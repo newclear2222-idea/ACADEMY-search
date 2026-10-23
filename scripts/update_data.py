@@ -117,6 +117,7 @@ LEVEL_PATTERNS = {
 # 학원 이름에서 지점 표시를 떼어 같은 브랜드를 묶습니다. 예: 'OO수학학원 중계점', 'OO학원(대치관)'
 BRANCH_SUFFIX = re.compile(r"\s*(\([^)]*\)|[가-힣A-Za-z0-9]+(점|캠퍼스|관|분원|본원))$")
 TOP_ACADEMIES = 5
+BRAND_MIN_LEN = 4
 
 # 1인당 교습비로 보기 어려운 값(입력 실수 등)은 뺍니다.
 FEE_MIN, FEE_MAX = 30_000, 2_000_000
@@ -391,11 +392,28 @@ def brand_of(name):
     return re.sub(r"(학원|교습소|어학원)$", "", name).replace(" ", "")
 
 
+def count_branches(names):
+    """이름 앞부분이 4글자 이상 같은 학원끼리 같은 브랜드로 봅니다.
+
+    예: '눈높이러닝센터마들', '눈높이러닝센터상계' -> '눈높이러닝센터' 2곳
+    """
+    keys = sorted({brand_of(n) for n in names})
+    starts = {}
+    for k in keys:
+        for i in range(BRAND_MIN_LEN, len(k) + 1):
+            starts[k[:i]] = starts.get(k[:i], 0) + 1
+    counts = {}
+    for k in keys:
+        shared = [starts[k[:i]] for i in range(BRAND_MIN_LEN, len(k) + 1) if starts[k[:i]] >= 2]
+        counts[k] = shared[-1] if shared else 1
+    return counts
+
+
 def pick_top_academies(academies):
     """과목별로 정원이 큰 학원을 몇 곳씩 남깁니다. 유명도가 아니라 규모 기준입니다."""
     keep = {}
     for subject in ("all", "math", "english"):
-        pool = [x for x in academies if subject == "all" or subject in x["subjects"]]
+        pool = [x for x in academies if (subject == "all" or subject in x["subjects"]) and "원격" not in x["name"]]
         pool.sort(key=lambda x: (-x["capacity"], -x["branches"], x["name"]))
         for x in pool[:TOP_ACADEMIES]:
             keep[x["name"] + x["kind"]] = x
@@ -422,11 +440,7 @@ def build(province, academies, schools, year, sales=None, sales_label=""):
     regions = {}
     if academies:
         print(f"  학원 항목: {', '.join(sorted(academies[0]))}")
-    brand_counts = {}
-    for row in academies:
-        if is_open_tutoring(row):
-            brand = brand_of(row.get("ACA_NM"))
-            brand_counts[brand] = brand_counts.get(brand, 0) + 1
+    brand_counts = count_branches(r.get("ACA_NM") for r in academies if is_open_tutoring(r))
 
     def region(address):
         found = region_of(address)
