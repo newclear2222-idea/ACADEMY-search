@@ -7,7 +7,8 @@
  "sources": [
   "학원: 나이스 교육정보 개방포털 학원교습소정보",
   "학생 수: 학교알리미 학년별·학급별 학생수",
-  "수강료: 학원이 교육청에 등록한 1인당 교습비"
+  "수강료: 학원이 교육청에 등록한 1인당 교습비",
+  "대표 학원: 교육청에 등록한 정원이 큰 순서"
  ],
  "unmatchedAcademies": 0,
  "fees": {
@@ -152,7 +153,8 @@
       0
      ]
     }
-   }
+   },
+   "top": []
   },
   {
    "name": "미산면",
@@ -229,7 +231,8 @@
       0
      ]
     }
-   }
+   },
+   "top": []
   },
   {
    "name": "백학면",
@@ -316,7 +319,8 @@
       0
      ]
     }
-   }
+   },
+   "top": []
   },
   {
    "name": "신서면",
@@ -398,7 +402,8 @@
       0
      ]
     }
-   }
+   },
+   "top": []
   },
   {
    "name": "연천읍",
@@ -490,7 +495,17 @@
       0
      ]
     }
-   }
+   },
+   "top": [
+    {
+     "name": "우리학원",
+     "kind": "학원",
+     "capacity": 40,
+     "since": 2025,
+     "branches": 4,
+     "subjects": []
+    }
+   ]
   },
   {
    "name": "전곡읍",
@@ -582,7 +597,104 @@
       3
      ]
     }
-   }
+   },
+   "top": [
+    {
+     "name": "위드학원",
+     "kind": "학원",
+     "capacity": 221,
+     "since": 2018,
+     "branches": 7,
+     "subjects": []
+    },
+    {
+     "name": "위드고등부학원",
+     "kind": "학원",
+     "capacity": 196,
+     "since": 2020,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "밈스잉글리시영어학원",
+     "kind": "학원",
+     "capacity": 102,
+     "since": 2022,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "윤선생영어숲전곡학원",
+     "kind": "학원",
+     "capacity": 94,
+     "since": 2009,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "예랑보습학원",
+     "kind": "학원",
+     "capacity": 90,
+     "since": 2013,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "할앤스티브(Hal & Steve)영어학원",
+     "kind": "학원",
+     "capacity": 90,
+     "since": 2017,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "뮤엠영어학원",
+     "kind": "학원",
+     "capacity": 80,
+     "since": 2006,
+     "branches": 8,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "공감수학학원",
+     "kind": "학원",
+     "capacity": 56,
+     "since": 2022,
+     "branches": 16,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "오름수학스마트해법영어학원",
+     "kind": "학원",
+     "capacity": 52,
+     "since": 2022,
+     "branches": 1,
+     "subjects": [
+      "english",
+      "math"
+     ]
+    },
+    {
+     "name": "이젠수학교습소",
+     "kind": "교습소",
+     "capacity": 27,
+     "since": 2015,
+     "branches": 4,
+     "subjects": [
+      "math"
+     ]
+    }
+   ]
   },
   {
    "name": "청산면",
@@ -674,7 +786,8 @@
       0
      ]
     }
-   }
+   },
+   "top": []
   }
  ]
 }

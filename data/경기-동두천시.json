@@ -7,7 +7,8 @@
  "sources": [
   "학원: 나이스 교육정보 개방포털 학원교습소정보",
   "학생 수: 학교알리미 학년별·학급별 학생수",
-  "수강료: 학원이 교육청에 등록한 1인당 교습비"
+  "수강료: 학원이 교육청에 등록한 1인당 교습비",
+  "대표 학원: 교육청에 등록한 정원이 큰 순서"
  ],
  "unmatchedAcademies": 1,
  "fees": {
@@ -142,7 +143,8 @@
       0
      ]
     }
-   }
+   },
+   "top": []
   },
   {
    "name": "상봉암동",
@@ -219,7 +221,8 @@
       0
      ]
     }
-   }
+   },
+   "top": []
   },
   {
    "name": "생연동",
@@ -346,7 +349,52 @@
       0
      ]
     }
-   }
+   },
+   "top": [
+    {
+     "name": "에이스프라임학원",
+     "kind": "학원",
+     "capacity": 71,
+     "since": 2013,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "드림투학원",
+     "kind": "학원",
+     "capacity": 60,
+     "since": 2025,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "생연화랑엠베스트SE학원",
+     "kind": "학원",
+     "capacity": 48,
+     "since": 2006,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "정성하이스트학원",
+     "kind": "학원",
+     "capacity": 40,
+     "since": 2016,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "해바라기수학영어학원",
+     "kind": "학원",
+     "capacity": 24,
+     "since": 2022,
+     "branches": 1,
+     "subjects": [
+      "english",
+      "math"
+     ]
+    }
+   ]
   },
   {
    "name": "송내동",
@@ -428,7 +476,8 @@
       0
      ]
     }
-   }
+   },
+   "top": []
   },
   {
    "name": "안흥동",
@@ -510,7 +559,8 @@
       0
      ]
     }
-   }
+   },
+   "top": []
   },
   {
    "name": "지행동",
@@ -607,7 +657,122 @@
       0
      ]
     }
-   }
+   },
+   "top": [
+    {
+     "name": "눈높이러닝센터지행학원",
+     "kind": "학원",
+     "capacity": 810,
+     "since": 2010,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "웅진프라임지행학원",
+     "kind": "학원",
+     "capacity": 320,
+     "since": 2021,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "재능스스로학습센터동두천직영학원",
+     "kind": "학원",
+     "capacity": 270,
+     "since": 2020,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "웅진씽크빅학습센터지행학원",
+     "kind": "학원",
+     "capacity": 180,
+     "since": 2018,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "송내엘리트보습제1학원",
+     "kind": "학원",
+     "capacity": 165,
+     "since": 2009,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "영어숲아소비큐미르동두천학원",
+     "kind": "학원",
+     "capacity": 165,
+     "since": 2005,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "GPS수학영어전문학원",
+     "kind": "학원",
+     "capacity": 150,
+     "since": 2019,
+     "branches": 1,
+     "subjects": [
+      "english",
+      "math"
+     ]
+    },
+    {
+     "name": "쎈수학러닝센터지행학원",
+     "kind": "학원",
+     "capacity": 104,
+     "since": 2007,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "삼성영어지행학원",
+     "kind": "학원",
+     "capacity": 100,
+     "since": 2020,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "수학영어아이학원",
+     "kind": "학원",
+     "capacity": 77,
+     "since": 2022,
+     "branches": 1,
+     "subjects": [
+      "english",
+      "math"
+     ]
+    },
+    {
+     "name": "MH수학전문학원",
+     "kind": "학원",
+     "capacity": 65,
+     "since": 2024,
+     "branches": 2,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "공터영어최상위수학학원",
+     "kind": "학원",
+     "capacity": 40,
+     "since": 2009,
+     "branches": 1,
+     "subjects": [
+      "english",
+      "math"
+     ]
+    }
+   ]
   },
   {
    "name": "탑동동",
@@ -684,7 +849,8 @@
       0
      ]
     }
-   }
+   },
+   "top": []
   }
  ]
 }

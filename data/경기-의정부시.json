@@ -7,7 +7,8 @@
  "sources": [
   "학원: 나이스 교육정보 개방포털 학원교습소정보",
   "학생 수: 학교알리미 학년별·학급별 학생수",
-  "수강료: 학원이 교육청에 등록한 1인당 교습비"
+  "수강료: 학원이 교육청에 등록한 1인당 교습비",
+  "대표 학원: 교육청에 등록한 정원이 큰 순서"
  ],
  "unmatchedAcademies": 5,
  "fees": {
@@ -207,7 +208,133 @@
       30
      ]
     }
-   }
+   },
+   "top": [
+    {
+     "name": "이엠학원",
+     "kind": "학원",
+     "capacity": 2115,
+     "since": 1998,
+     "branches": 5,
+     "subjects": []
+    },
+    {
+     "name": "윤선생IGSE가능학원",
+     "kind": "학원",
+     "capacity": 390,
+     "since": 2009,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "한솔주니어랩학원",
+     "kind": "학원",
+     "capacity": 300,
+     "since": 2007,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "애플영어학원",
+     "kind": "학원",
+     "capacity": 180,
+     "since": 2008,
+     "branches": 2,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "인베스트영어학원",
+     "kind": "학원",
+     "capacity": 180,
+     "since": 2008,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "더웨이영어교습소",
+     "kind": "교습소",
+     "capacity": 144,
+     "since": 2020,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "수학의숲2관학원",
+     "kind": "학원",
+     "capacity": 82,
+     "since": 2025,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "앤수학교습소",
+     "kind": "교습소",
+     "capacity": 81,
+     "since": 2019,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "밍샘수학전문학원",
+     "kind": "학원",
+     "capacity": 80,
+     "since": 2022,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "씨에나영어학원",
+     "kind": "학원",
+     "capacity": 72,
+     "since": 2017,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "카이로스수학학원",
+     "kind": "학원",
+     "capacity": 70,
+     "since": 1993,
+     "branches": 5,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "수학의숲학원",
+     "kind": "학원",
+     "capacity": 63,
+     "since": 2024,
+     "branches": 3,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "외대영어학원",
+     "kind": "학원",
+     "capacity": 30,
+     "since": 2007,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    }
+   ]
   },
   {
    "name": "고산동",
@@ -294,7 +421,99 @@
       9
      ]
     }
-   }
+   },
+   "top": [
+    {
+     "name": "삼성영어셀레나훈민학원",
+     "kind": "학원",
+     "capacity": 210,
+     "since": 2021,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "천재해법수학영어학원",
+     "kind": "학원",
+     "capacity": 160,
+     "since": 2021,
+     "branches": 1,
+     "subjects": [
+      "english",
+      "math"
+     ]
+    },
+    {
+     "name": "엠베스트SE훈민캠퍼스학원",
+     "kind": "학원",
+     "capacity": 131,
+     "since": 2024,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "더오름영어수학학원",
+     "kind": "학원",
+     "capacity": 96,
+     "since": 2022,
+     "branches": 1,
+     "subjects": [
+      "english",
+      "math"
+     ]
+    },
+    {
+     "name": "뮤엠영어훈민영어교습소",
+     "kind": "교습소",
+     "capacity": 72,
+     "since": 2022,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "뮤엠영어이룸학원",
+     "kind": "학원",
+     "capacity": 62,
+     "since": 2026,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "공감수학고산학원",
+     "kind": "학원",
+     "capacity": 61,
+     "since": 2020,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "다해수학교습소",
+     "kind": "교습소",
+     "capacity": 18,
+     "since": 2022,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "이지수학교습소",
+     "kind": "교습소",
+     "capacity": 7,
+     "since": 2024,
+     "branches": 12,
+     "subjects": [
+      "math"
+     ]
+    }
+   ]
   },
   {
    "name": "금오동",
@@ -386,7 +605,133 @@
       0
      ]
     }
-   }
+   },
+   "top": [
+    {
+     "name": "에셀학원",
+     "kind": "학원",
+     "capacity": 550,
+     "since": 2004,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "박상현영어학원",
+     "kind": "학원",
+     "capacity": 280,
+     "since": 2015,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "웅진씽크빅학습센터금오학원",
+     "kind": "학원",
+     "capacity": 260,
+     "since": 2022,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "대치감성수학의정부직영점학원",
+     "kind": "학원",
+     "capacity": 236,
+     "since": 2021,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "런앤탑학원",
+     "kind": "학원",
+     "capacity": 228,
+     "since": 1993,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "백배공감수학학원",
+     "kind": "학원",
+     "capacity": 213,
+     "since": 2019,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "필수학전문학원",
+     "kind": "학원",
+     "capacity": 188,
+     "since": 2013,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "공감수학금오학원",
+     "kind": "학원",
+     "capacity": 108,
+     "since": 2018,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "수학시간학원",
+     "kind": "학원",
+     "capacity": 104,
+     "since": 2017,
+     "branches": 3,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "뮤엠영어퍼플캣금오점학원",
+     "kind": "학원",
+     "capacity": 99,
+     "since": 2023,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "아이비스마트해법영어학원",
+     "kind": "학원",
+     "capacity": 67,
+     "since": 2007,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "엘.이.에이.피(L.E.A.P)영어학원",
+     "kind": "학원",
+     "capacity": 44,
+     "since": 2007,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "금오수(Soo)영어학원",
+     "kind": "학원",
+     "capacity": 42,
+     "since": 2012,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    }
+   ]
   },
   {
    "name": "낙양동",
@@ -473,7 +818,122 @@
       17
      ]
     }
-   }
+   },
+   "top": [
+    {
+     "name": "팬더쌤영어수학전문학원",
+     "kind": "학원",
+     "capacity": 160,
+     "since": 2014,
+     "branches": 1,
+     "subjects": [
+      "english",
+      "math"
+     ]
+    },
+    {
+     "name": "블루검학원",
+     "kind": "학원",
+     "capacity": 148,
+     "since": 2018,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "탑(TOP)학원",
+     "kind": "학원",
+     "capacity": 110,
+     "since": 2023,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "위더스해법학원",
+     "kind": "학원",
+     "capacity": 98,
+     "since": 2016,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "맨투맨학원",
+     "kind": "학원",
+     "capacity": 80,
+     "since": 2017,
+     "branches": 2,
+     "subjects": []
+    },
+    {
+     "name": "매쓰코드수학학원",
+     "kind": "학원",
+     "capacity": 48,
+     "since": 2021,
+     "branches": 2,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "페이스수학교습소",
+     "kind": "교습소",
+     "capacity": 45,
+     "since": 2021,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "고쌤수학교습소",
+     "kind": "교습소",
+     "capacity": 34,
+     "since": 2020,
+     "branches": 2,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "매스원수학교습소",
+     "kind": "교습소",
+     "capacity": 20,
+     "since": 2017,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "이플영어교습소",
+     "kind": "교습소",
+     "capacity": 16,
+     "since": 2017,
+     "branches": 2,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "삼성영어셀레나송양초영어교습소",
+     "kind": "교습소",
+     "capacity": 6,
+     "since": 2024,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "새플링영어교습소",
+     "kind": "교습소",
+     "capacity": 6,
+     "since": 2020,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    }
+   ]
   },
   {
    "name": "녹양동",
@@ -565,7 +1025,140 @@
       2
      ]
     }
-   }
+   },
+   "top": [
+    {
+     "name": "눈높이러닝센터녹양학원",
+     "kind": "학원",
+     "capacity": 915,
+     "since": 2010,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "웅진씽크빅학습센터녹양학원",
+     "kind": "학원",
+     "capacity": 240,
+     "since": 2012,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "잉글리쉬블러썸학원",
+     "kind": "학원",
+     "capacity": 200,
+     "since": 2018,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "탑아이네트학원",
+     "kind": "학원",
+     "capacity": 180,
+     "since": 2008,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "웨이크브레인(wakeBRAIN)학원",
+     "kind": "학원",
+     "capacity": 122,
+     "since": 2022,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "녹양노크영어학원",
+     "kind": "학원",
+     "capacity": 110,
+     "since": 2023,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "레벨업수학학원",
+     "kind": "학원",
+     "capacity": 68,
+     "since": 2009,
+     "branches": 6,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "미래엔영어생각하는수학학원",
+     "kind": "학원",
+     "capacity": 61,
+     "since": 2026,
+     "branches": 1,
+     "subjects": [
+      "english",
+      "math"
+     ]
+    },
+    {
+     "name": "삼성영어셀레나녹양학원",
+     "kind": "학원",
+     "capacity": 60,
+     "since": 2005,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "팍스영어학원",
+     "kind": "학원",
+     "capacity": 55,
+     "since": 2015,
+     "branches": 2,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "지플러스수학교습소",
+     "kind": "교습소",
+     "capacity": 24,
+     "since": 2011,
+     "branches": 2,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "녹양해법영어교습소",
+     "kind": "교습소",
+     "capacity": 12,
+     "since": 2013,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "녹양매쓰프로수학교습소",
+     "kind": "교습소",
+     "capacity": 8,
+     "since": 2024,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "노크수학학원",
+     "kind": "학원",
+     "capacity": 0,
+     "since": 2025,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    }
+   ]
   },
   {
    "name": "민락동",
@@ -687,7 +1280,131 @@
       32
      ]
     }
-   }
+   },
+   "top": [
+    {
+     "name": "눈높이러닝센터송산학원",
+     "kind": "학원",
+     "capacity": 795,
+     "since": 2018,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "골드클래스학원",
+     "kind": "학원",
+     "capacity": 750,
+     "since": 2001,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "아소비루미북클럽용현센터점학원",
+     "kind": "학원",
+     "capacity": 480,
+     "since": 2022,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "탑클래스학원",
+     "kind": "학원",
+     "capacity": 400,
+     "since": 2010,
+     "branches": 8,
+     "subjects": []
+    },
+    {
+     "name": "대치명인학원",
+     "kind": "학원",
+     "capacity": 286,
+     "since": 2023,
+     "branches": 5,
+     "subjects": []
+    },
+    {
+     "name": "제니영어학원",
+     "kind": "학원",
+     "capacity": 220,
+     "since": 2015,
+     "branches": 2,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "삼성영어감동수학학원",
+     "kind": "학원",
+     "capacity": 215,
+     "since": 2007,
+     "branches": 1,
+     "subjects": [
+      "english",
+      "math"
+     ]
+    },
+    {
+     "name": "플렉스에듀영어수학학원",
+     "kind": "학원",
+     "capacity": 210,
+     "since": 2020,
+     "branches": 1,
+     "subjects": [
+      "english",
+      "math"
+     ]
+    },
+    {
+     "name": "삼성영어셀레나삼현학원",
+     "kind": "학원",
+     "capacity": 210,
+     "since": 2018,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "삼성영어송산학원",
+     "kind": "학원",
+     "capacity": 192,
+     "since": 2015,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "양예나국어수학학원",
+     "kind": "학원",
+     "capacity": 189,
+     "since": 2022,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "FM수학전문학원",
+     "kind": "학원",
+     "capacity": 176,
+     "since": 2016,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "국대수학전문학원",
+     "kind": "학원",
+     "capacity": 140,
+     "since": 2016,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    }
+   ]
   },
   {
    "name": "산곡동",
@@ -758,7 +1475,124 @@
       34
      ]
     }
-   }
+   },
+   "top": [
+    {
+     "name": "엠베스트SE고산캠퍼스학원",
+     "kind": "학원",
+     "capacity": 353,
+     "since": 2023,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "함수정수학과학학원",
+     "kind": "학원",
+     "capacity": 345,
+     "since": 2023,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "고산원탑학원",
+     "kind": "학원",
+     "capacity": 272,
+     "since": 2021,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "웅진씽크빅스마트올클래스고산학원",
+     "kind": "학원",
+     "capacity": 250,
+     "since": 2023,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "원탑학원",
+     "kind": "학원",
+     "capacity": 240,
+     "since": 2022,
+     "branches": 8,
+     "subjects": []
+    },
+    {
+     "name": "윤스수학학원",
+     "kind": "학원",
+     "capacity": 85,
+     "since": 2024,
+     "branches": 2,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "핏클래스수학고래영어학원",
+     "kind": "학원",
+     "capacity": 83,
+     "since": 2026,
+     "branches": 1,
+     "subjects": [
+      "english",
+      "math"
+     ]
+    },
+    {
+     "name": "초이영어교습소",
+     "kind": "교습소",
+     "capacity": 64,
+     "since": 2023,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "삼성영어셀레나고산학원",
+     "kind": "학원",
+     "capacity": 63,
+     "since": 2024,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "메가영어수학학원",
+     "kind": "학원",
+     "capacity": 60,
+     "since": 2023,
+     "branches": 1,
+     "subjects": [
+      "english",
+      "math"
+     ]
+    },
+    {
+     "name": "허쌤수학교습소",
+     "kind": "교습소",
+     "capacity": 54,
+     "since": 2023,
+     "branches": 2,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "스마트해법영어수학고산해법학원",
+     "kind": "학원",
+     "capacity": 48,
+     "since": 2021,
+     "branches": 1,
+     "subjects": [
+      "english",
+      "math"
+     ]
+    }
+   ]
   },
   {
    "name": "신곡동",
@@ -895,7 +1729,134 @@
       39
      ]
     }
-   }
+   },
+   "top": [
+    {
+     "name": "절대영수학원",
+     "kind": "학원",
+     "capacity": 1360,
+     "since": 2006,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "2월31일(이월삼십일일)학원",
+     "kind": "학원",
+     "capacity": 1310,
+     "since": 2007,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "의정부에이닷영어학원",
+     "kind": "학원",
+     "capacity": 1080,
+     "since": 2014,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "엔탑학원",
+     "kind": "학원",
+     "capacity": 576,
+     "since": 1996,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "프라임아이네트학원",
+     "kind": "학원",
+     "capacity": 540,
+     "since": 1998,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "런업내신수능입시영어전문학원",
+     "kind": "학원",
+     "capacity": 234,
+     "since": 1996,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "비엠티(BMT)수학학원",
+     "kind": "학원",
+     "capacity": 186,
+     "since": 2018,
+     "branches": 2,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "뮤엠영어발곡학원",
+     "kind": "학원",
+     "capacity": 164,
+     "since": 2015,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "비컨영어학원",
+     "kind": "학원",
+     "capacity": 150,
+     "since": 2013,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "삼성영어셀레나파크비스타학원",
+     "kind": "학원",
+     "capacity": 140,
+     "since": 2021,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "정수학원",
+     "kind": "학원",
+     "capacity": 128,
+     "since": 2011,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "EMI영어수학학원",
+     "kind": "학원",
+     "capacity": 120,
+     "since": 2006,
+     "branches": 1,
+     "subjects": [
+      "english",
+      "math"
+     ]
+    },
+    {
+     "name": "리더수학과학학원",
+     "kind": "학원",
+     "capacity": 120,
+     "since": 2009,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    }
+   ]
   },
   {
    "name": "용현동",
@@ -992,7 +1953,115 @@
       0
      ]
     }
-   }
+   },
+   "top": [
+    {
+     "name": "홍쌤학원",
+     "kind": "학원",
+     "capacity": 400,
+     "since": 1995,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "해법송산솔뫼학원",
+     "kind": "학원",
+     "capacity": 300,
+     "since": 2009,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "삼성영어셀레나비상수학용현학원",
+     "kind": "학원",
+     "capacity": 280,
+     "since": 2008,
+     "branches": 1,
+     "subjects": [
+      "english",
+      "math"
+     ]
+    },
+    {
+     "name": "에듀카토뮤엠학원",
+     "kind": "학원",
+     "capacity": 180,
+     "since": 2008,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "디에이블학원",
+     "kind": "학원",
+     "capacity": 164,
+     "since": 2022,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "해법영어한솔플러스수학학원",
+     "kind": "학원",
+     "capacity": 80,
+     "since": 2007,
+     "branches": 1,
+     "subjects": [
+      "english",
+      "math"
+     ]
+    },
+    {
+     "name": "영어의봄학원",
+     "kind": "학원",
+     "capacity": 73,
+     "since": 2024,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "삼성영어셀레나더쎈수학더하이학원",
+     "kind": "학원",
+     "capacity": 71,
+     "since": 2024,
+     "branches": 1,
+     "subjects": [
+      "english",
+      "math"
+     ]
+    },
+    {
+     "name": "차올라3030영어학원",
+     "kind": "학원",
+     "capacity": 60,
+     "since": 2022,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "미래엔영어수학송산캠퍼스학원",
+     "kind": "학원",
+     "capacity": 55,
+     "since": 2015,
+     "branches": 1,
+     "subjects": [
+      "english",
+      "math"
+     ]
+    },
+    {
+     "name": "또와스터디수학교습소",
+     "kind": "교습소",
+     "capacity": 36,
+     "since": 2019,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    }
+   ]
   },
   {
    "name": "의정부동",
@@ -1084,7 +2153,116 @@
       23
      ]
     }
-   }
+   },
+   "top": [
+    {
+     "name": "삼성영어셀레나경의학원",
+     "kind": "학원",
+     "capacity": 315,
+     "since": 2022,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "삼성영어셀레나이룸수학이룸학원",
+     "kind": "학원",
+     "capacity": 270,
+     "since": 2011,
+     "branches": 1,
+     "subjects": [
+      "english",
+      "math"
+     ]
+    },
+    {
+     "name": "이츠학원",
+     "kind": "학원",
+     "capacity": 240,
+     "since": 2009,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "에듀넷학원",
+     "kind": "학원",
+     "capacity": 190,
+     "since": 2007,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "에듀잉글리쉬학원",
+     "kind": "학원",
+     "capacity": 185,
+     "since": 2001,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "노크영어학원",
+     "kind": "학원",
+     "capacity": 150,
+     "since": 2021,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "쌤영어수학학원",
+     "kind": "학원",
+     "capacity": 130,
+     "since": 2019,
+     "branches": 1,
+     "subjects": [
+      "english",
+      "math"
+     ]
+    },
+    {
+     "name": "샤론영어보습학원",
+     "kind": "학원",
+     "capacity": 74,
+     "since": 2023,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "리즈수학학원",
+     "kind": "학원",
+     "capacity": 71,
+     "since": 2025,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "창의랑수학이학원",
+     "kind": "학원",
+     "capacity": 70,
+     "since": 2024,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "제이지에듀테인먼트(JG Edutainment)영어수학학원",
+     "kind": "학원",
+     "capacity": 60,
+     "since": 2015,
+     "branches": 1,
+     "subjects": [
+      "english",
+      "math"
+     ]
+    }
+   ]
   },
   {
    "name": "장암동",
@@ -1171,7 +2349,117 @@
       21
      ]
     }
-   }
+   },
+   "top": [
+    {
+     "name": "눈높이러닝센터장암학원",
+     "kind": "학원",
+     "capacity": 915,
+     "since": 2009,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "멘토수학학원",
+     "kind": "학원",
+     "capacity": 140,
+     "since": 2018,
+     "branches": 11,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "키위영어플러스학원",
+     "kind": "학원",
+     "capacity": 115,
+     "since": 2017,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "장암몬스터영수학원",
+     "kind": "학원",
+     "capacity": 92,
+     "since": 2014,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "연세씨엠수학학원장암점",
+     "kind": "학원",
+     "capacity": 90,
+     "since": 2021,
+     "branches": 43,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "잉글리쉬MTM영어학원",
+     "kind": "학원",
+     "capacity": 88,
+     "since": 2024,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "연세씨엠(CM)수학학원",
+     "kind": "학원",
+     "capacity": 81,
+     "since": 2015,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "유니온&삼성영어학원",
+     "kind": "학원",
+     "capacity": 80,
+     "since": 2017,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "고트수학학원",
+     "kind": "학원",
+     "capacity": 61,
+     "since": 2025,
+     "branches": 2,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "스카이영어교습소",
+     "kind": "교습소",
+     "capacity": 56,
+     "since": 2021,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "이룸영어학원",
+     "kind": "학원",
+     "capacity": 40,
+     "since": 2015,
+     "branches": 5,
+     "subjects": [
+      "english"
+     ]
+    }
+   ]
   },
   {
    "name": "호원동",
@@ -1283,7 +2571,140 @@
       23
      ]
     }
-   }
+   },
+   "top": [
+    {
+     "name": "하이클래스학원",
+     "kind": "학원",
+     "capacity": 750,
+     "since": 2019,
+     "branches": 5,
+     "subjects": []
+    },
+    {
+     "name": "브레스학원",
+     "kind": "학원",
+     "capacity": 520,
+     "since": 2006,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "엠베스트호원점학원",
+     "kind": "학원",
+     "capacity": 420,
+     "since": 2009,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "유림학원",
+     "kind": "학원",
+     "capacity": 400,
+     "since": 2006,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "장현에듀온라인학원",
+     "kind": "학원",
+     "capacity": 300,
+     "since": 2021,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "회룡지앤비(GNB)영어수학학원",
+     "kind": "학원",
+     "capacity": 200,
+     "since": 2008,
+     "branches": 1,
+     "subjects": [
+      "english",
+      "math"
+     ]
+    },
+    {
+     "name": "삼성영어호동학원",
+     "kind": "학원",
+     "capacity": 175,
+     "since": 2019,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "에이플수학학원",
+     "kind": "학원",
+     "capacity": 164,
+     "since": 2015,
+     "branches": 3,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "수학원",
+     "kind": "학원",
+     "capacity": 120,
+     "since": 2007,
+     "branches": 3,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "유투엠수학전문학원",
+     "kind": "학원",
+     "capacity": 120,
+     "since": 2007,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "삼성영어호원학원",
+     "kind": "학원",
+     "capacity": 120,
+     "since": 2016,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "생각수학학원",
+     "kind": "학원",
+     "capacity": 99,
+     "since": 2024,
+     "branches": 6,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "LNS영어학원",
+     "kind": "학원",
+     "capacity": 72,
+     "since": 2023,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "호원베스트미래엔영어학원",
+     "kind": "학원",
+     "capacity": 60,
+     "since": 2009,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    }
+   ]
   }
  ]
 }

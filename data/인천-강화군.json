@@ -7,7 +7,8 @@
  "sources": [
   "학원: 나이스 교육정보 개방포털 학원교습소정보",
   "학생 수: 학교알리미 학년별·학급별 학생수",
-  "수강료: 학원이 교육청에 등록한 1인당 교습비"
+  "수강료: 학원이 교육청에 등록한 1인당 교습비",
+  "대표 학원: 교육청에 등록한 정원이 큰 순서"
  ],
  "unmatchedAcademies": 0,
  "fees": {
@@ -182,7 +183,132 @@
       0
      ]
     }
-   }
+   },
+   "top": [
+    {
+     "name": "학사모아카데미학원",
+     "kind": "학원",
+     "capacity": 860,
+     "since": 2005,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "계명의숙학원",
+     "kind": "학원",
+     "capacity": 768,
+     "since": 2015,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "대한영어보습학원",
+     "kind": "학원",
+     "capacity": 720,
+     "since": 1998,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "솔터학원",
+     "kind": "학원",
+     "capacity": 450,
+     "since": 2010,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "윙스학원",
+     "kind": "학원",
+     "capacity": 372,
+     "since": 2023,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "나스영어전문학원",
+     "kind": "학원",
+     "capacity": 240,
+     "since": 2015,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "정결한수학학원",
+     "kind": "학원",
+     "capacity": 82,
+     "since": 2026,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "영어수학의정원학원",
+     "kind": "학원",
+     "capacity": 67,
+     "since": 1996,
+     "branches": 1,
+     "subjects": [
+      "english",
+      "math"
+     ]
+    },
+    {
+     "name": "사유와공감수학학원",
+     "kind": "학원",
+     "capacity": 60,
+     "since": 2026,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "A+수학교습소",
+     "kind": "교습소",
+     "capacity": 54,
+     "since": 2009,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "원수학교습소",
+     "kind": "교습소",
+     "capacity": 36,
+     "since": 2023,
+     "branches": 2,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "강화퍼스트영어교습소",
+     "kind": "교습소",
+     "capacity": 9,
+     "since": 2025,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "제니쌤 영어교습소",
+     "kind": "교습소",
+     "capacity": 9,
+     "since": 2024,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    }
+   ]
   },
   {
    "name": "교동면",
@@ -269,7 +395,8 @@
       0
      ]
     }
-   }
+   },
+   "top": []
   },
   {
    "name": "길상면",
@@ -356,7 +483,37 @@
       2
      ]
     }
-   }
+   },
+   "top": [
+    {
+     "name": "선율종합학원",
+     "kind": "학원",
+     "capacity": 656,
+     "since": 2008,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "톡톡수학교습소",
+     "kind": "교습소",
+     "capacity": 27,
+     "since": 2012,
+     "branches": 2,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "권쌤영어교습소",
+     "kind": "교습소",
+     "capacity": 12,
+     "since": 2017,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    }
+   ]
   },
   {
    "name": "내가면",
@@ -438,7 +595,8 @@
       0
      ]
     }
-   }
+   },
+   "top": []
   },
   {
    "name": "불은면",
@@ -520,7 +678,8 @@
       0
      ]
     }
-   }
+   },
+   "top": []
   },
   {
    "name": "삼산면",
@@ -607,7 +766,8 @@
       0
      ]
     }
-   }
+   },
+   "top": []
   },
   {
    "name": "서도면",
@@ -694,7 +854,8 @@
       0
      ]
     }
-   }
+   },
+   "top": []
   },
   {
    "name": "선원면",
@@ -771,7 +932,57 @@
       2
      ]
     }
-   }
+   },
+   "top": [
+    {
+     "name": "한솔플러스수학교습소",
+     "kind": "교습소",
+     "capacity": 27,
+     "since": 2009,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "영어원서교실 영어교습소",
+     "kind": "교습소",
+     "capacity": 9,
+     "since": 2020,
+     "branches": 1,
+     "subjects": [
+      "english"
+     ]
+    },
+    {
+     "name": "창의융합독서논술교습소",
+     "kind": "교습소",
+     "capacity": 9,
+     "since": 2026,
+     "branches": 1,
+     "subjects": []
+    },
+    {
+     "name": "모여봐요초등수학교습소",
+     "kind": "교습소",
+     "capacity": 7,
+     "since": 2025,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    },
+    {
+     "name": "수학의숲중등수학교습소",
+     "kind": "교습소",
+     "capacity": 0,
+     "since": 2025,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
+    }
+   ]
   },
   {
    "name": "송해면",
@@ -848,7 +1059,8 @@
       0
      ]
     }
-   }
+   },
+   "top": []
   },
   {
    "name": "양도면",
@@ -940,7 +1152,8 @@
       0
      ]
     }
-   }
+   },
+   "top": []
   },
   {
    "name": "양사면",
@@ -1017,7 +1230,8 @@
       0
      ]
     }
-   }
+   },
+   "top": []
   },
   {
    "name": "하점면",
@@ -1104,7 +1318,8 @@
       0
      ]
     }
-   }
+   },
+   "top": []
   },
   {
    "name": "화도면",
@@ -1186,7 +1401,8 @@
       0
      ]
     }
-   }
+   },
+   "top": []
   }
  ]
 }
