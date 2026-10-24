@@ -126,7 +126,12 @@ function reasonsFor(r, ctx) {
   if (change !== null && change >= 0.1) reasons.push(`학생 수가 ${ctx.pastYear}년보다 ${signedPct(change)} 늘었습니다. 수요가 커지는 동네입니다.`);
   if (change !== null && change <= -0.1) reasons.push(`학생 수가 ${ctx.pastYear}년보다 ${signedPct(change)} 줄었습니다. 지금 숫자보다 앞으로 수요가 작아질 수 있습니다.`);
   const opened = r.area.opened?.["1y"][subject] || 0;
-  const risk = riskReason(r.area, ctx.data);
+  let risk = riskReason(r.area, ctx.data);
+  // '경쟁 낮음'(지금 학원 1곳당 학생이 많음)과 위험·주의(앞으로 줄어듦)가 함께 붙는 동은 둘의 관계를 적습니다.
+  const rk = risk && riskOf(r.area, ctx.data);
+  if (rk && (rk.risky || rk.caution) && Number.isFinite(r.ratio) && r.ratio >= ctx.average * 1.2) {
+    risk += ` 지금은 학원 1곳당 학생이 ${ctx.regionName} 평균보다 많아 '경쟁 낮음'으로 나오지만, 이 속도면 그 여유가 해마다 줄어듭니다.`;
+  }
   if (risk) reasons.push(risk);
   else if (r.academies >= 5 && opened / r.academies >= 0.2) reasons.push(`지금 ${label} ${fmt(r.academies)}곳 중 ${fmt(opened)}곳이 최근 1년 안에 문을 열었습니다. 새로 들어오는 학원이 많습니다(문 닫은 학원 수는 이 동 자료가 없습니다).`);
   const bigApts = (r.area.newApts || []).filter((x) => x.households >= 500 && x.moveIn >= thisMonth());
@@ -322,8 +327,11 @@ function trendText(area, data, subject, level) {
 //   1순위 교육청 등록 학원 수를 달마다 쌓아 본 실제 변화(6개월 이상 쌓인 뒤부터)
 //   2순위 서울시 상권분석 개업 점포 − 폐업 점포 (서울, 최근 4분기)
 //   3순위 교육청 '최근 1년 새로 연 학원' − 서울 학원 평균 폐업률 (경기·인천은 폐업 자료가 없어 빌려 씁니다)
-const RISK_GAP = 0.05; // 학원 순증가율 − 학생 증감률(1년)이 이만큼(5%p) 넘으면 위험지역
-const RISK_MIN_ACADEMIES = 10;
+// 학원 순증가율 − 학생 증감률(1년)이 8%p 이상이면 위험지역, 4%p 이상이면 주의.
+// 서울·경기·인천 동의 가운데값이 약 +4%p(학생은 해마다 3%쯤 줄고 학원은 그대로)라, 그보다 확실히 나쁜 곳만 빨갛게 칠합니다.
+const RISK_GAP = 0.08;
+const CAUTION_GAP = 0.04;
+const RISK_MIN_ACADEMIES = 20;
 const RISK_MIN_STUDENTS = 500;
 function academyGrowth(area, data) {
   const h = area.historyChange;
@@ -359,13 +367,13 @@ function riskOf(area, data) {
   const st = studentRate(area, "total", data);
   if (!g || !st) return null;
   const gap = g.rate - st.rate;
-  return { growth: g, students: st, gap, risky: gap >= RISK_GAP };
+  return { growth: g, students: st, gap, risky: gap >= RISK_GAP, caution: gap >= CAUTION_GAP && gap < RISK_GAP };
 }
 const pp = (x) => `${x >= 0 ? "+" : "−"}${(Math.round(Math.abs(x) * 1000) / 10).toFixed(1)}%`;
 function riskText(area, data) {
   const k = riskOf(area, data);
   if (!k) return "";
-  const head = k.risky ? '<strong class="risk-text">위험지역</strong>: ' : "";
+  const head = k.risky ? '<strong class="risk-text">위험지역</strong>: ' : k.caution ? '<strong class="caution-text">주의</strong>: ' : "";
   return `<div class="rank-sub">${head}학원 1년 순증가 <strong>${pp(k.growth.rate)}</strong> vs 학생 1년 <strong>${pp(k.students.rate)}</strong> (차이 ${pp(k.gap)}p)</div>`;
 }
 function riskReason(area, data) {
@@ -376,14 +384,17 @@ function riskReason(area, data) {
   const aca = `학원은 ${k.growth.text}, 1년 순증가율 ${pp(k.growth.rate)}입니다`;
   const read = k.risky
     ? `학원이 학생보다 1년에 ${pp(k.gap).slice(1)}p 더 빨리 늘어 위험지역으로 표시했습니다. 학원 1곳이 나눠 가질 학생이 해마다 줄어, 지금 매출을 유지하거나 올리기 어려워지는 곳입니다.`
-    : k.gap > 0
-      ? `학원이 학생보다 조금 더 빨리 늘지만 차이(${pp(k.gap)}p)가 위험 기준(+${RISK_GAP * 100}%p)보다 작습니다.`
+    : k.caution
+      ? `학원이 학생보다 1년에 ${pp(k.gap).slice(1)}p 더 빨리 늘어 주의로 표시했습니다(위험 기준은 +${RISK_GAP * 100}%p). 학원 1곳당 학생이 서서히 줄어드는 곳입니다.`
+      : k.gap > 0
+      ? `학원이 학생보다 조금 더 빨리 늘지만 차이(${pp(k.gap)}p)가 서울·경기·인천의 보통 수준(약 +4%p)보다 작습니다.`
       : `학생보다 학원이 덜 늘어(차이 ${pp(k.gap)}p) 학원 1곳당 학생은 유지되거나 늘어나는 쪽입니다.`;
   const caveat = k.growth.source === "estimate" ? " 폐업은 추정이라 매달 쌓는 학원 수 기록이 6개월 모이면 실제 값으로 바뀝니다." : "";
   return `학원과 학생 증가 속도: ${stu}. ${aca}. ${read}${caveat}`;
 }
 function riskTag(area, data) {
-  return riskOf(area, data)?.risky ? '<span class="tag risk">위험지역</span>' : "";
+  const k = riskOf(area, data);
+  return k?.risky ? '<span class="tag risk">위험지역</span>' : k?.caution ? '<span class="tag caution">주의</span>' : "";
 }
 
 function thisMonth() {
@@ -530,7 +541,7 @@ function render(data) {
     : 0;
   // 다른 동 학생이 가장 많이 찾아오는 곳. 경계 오차가 큰 동은 뺍니다.
   // 비율이 아니라 '기대보다 더 들어온 매출 금액'이 가장 큰 곳입니다. 학생이 적은 동은 비율만 커 보여서입니다.
-  const ctx = { subject, level, regionName: shortRegion(data.region), totalStudents, totalAcademies, regionFee, regionId: data.id, salesPeriod: data.salesPeriod, pastYear: data.pastYear, data };
+  const ctx = { subject, level, regionName: shortRegion(data.region), totalStudents, totalAcademies, regionFee, regionId: data.id, salesPeriod: data.salesPeriod, pastYear: data.pastYear, data, average };
 
   els.summary.innerHTML = `
     <div><div class="label">${data.region} ${LEVEL_LABELS[level]}</div><div class="value">${fmt(totalStudents)}명</div></div>
@@ -631,7 +642,7 @@ const COLUMNS = [
   {
     key: "risk", label: "학원−학생 증가(1년)",
     value: (r) => riskOf(r.area, r.data)?.gap ?? -9,
-    text: (r) => { const k = riskOf(r.area, r.data); return k ? `${k.risky ? '<span class="risk-text">' : ""}${pp(k.gap)}p${k.risky ? " 위험</span>" : ""}` : "-"; },
+    text: (r) => { const k = riskOf(r.area, r.data); return k ? (k.risky ? `<span class="risk-text">${pp(k.gap)}p 위험</span>` : k.caution ? `<span class="caution-text">${pp(k.gap)}p 주의</span>` : `${pp(k.gap)}p`) : "-"; },
   },
   {
     key: "newApts", label: "새 아파트",
@@ -693,7 +704,7 @@ function renderCompare(rows, data, subject, level) {
 // 학생이 학원보다 빨리 느는 동(위 위험지역의 반대)을 먼저, 그다음 학원 1곳당 학생이 많은 동을 올립니다.
 //   점수 = (학생 1년 증감률 − 학원 1년 순증가율) × 100 + 5 × log2(학원 1곳당 학생 ÷ 범위 평균)
 // 경력·예산은 아래 규칙으로 후보를 거릅니다. 임대료 자료가 아직 없어 예산은 대형 학원가 제외 여부로만 씁니다.
-const REC_MIN_STUDENTS = 300;
+const REC_MIN_STUDENTS = 500;
 const REC_TOP = 10;
 let allRegions = [];
 const recEls = {
@@ -716,7 +727,7 @@ function recommend(regionsData, opts) {
       const students = area.students[level];
       if (students < REC_MIN_STUDENTS) { skipped.small += 1; continue; }
       const st = studentRate(area, level, data);
-      const g = academyGrowth(area, data);
+      const g = academyGrowth(area, data) || regionGrowth(data);
       if (!st || !g) { skipped.nodata += 1; continue; }
       const risk = riskOf(area, data);
       if (risk?.risky) { skipped.risk += 1; continue; }
@@ -726,7 +737,7 @@ function recommend(regionsData, opts) {
       if (bigHub && (years < 3 || budget === "small")) { skipped.hub += 1; continue; }
       if (kind === "in" && years < 3) { skipped.flowIn += 1; continue; }
       const nearby = area.nearby ? hubText(area, subject, data.id) : "";
-      pool.push({ data, area, students, st, g, kind, flow, bigHub, nearby, academies: area.academies[subject] });
+      pool.push({ data, area, students, st, g, risk, kind, flow, bigHub, nearby, academies: area.academies[subject] });
     }
   }
   const sumS = pool.reduce((t, x) => t + x.students, 0);
@@ -742,7 +753,24 @@ function recommend(regionsData, opts) {
   return { top: pool.slice(0, REC_TOP), avg, skipped, total: pool.length };
 }
 
+// 학원이 20곳 미만인 동은 증가율이 크게 흔들려, 구·시 전체 학원의 증가율을 대신 씁니다.
+const regionGrowthCache = new WeakMap();
+function regionGrowth(data) {
+  if (regionGrowthCache.has(data)) return regionGrowthCache.get(data);
+  const sum = (f) => data.areas.reduce((t, a) => t + f(a), 0);
+  let g = null;
+  const base = sum((a) => a.storeFlow?.base || 0);
+  if (base >= RISK_MIN_ACADEMIES) {
+    g = { rate: (sum((a) => a.storeFlow?.open || 0) - sum((a) => a.storeFlow?.close || 0)) / base, source: "region" };
+  } else if (data.seoulStoreRate && sum((a) => a.academies.all) >= RISK_MIN_ACADEMIES) {
+    g = { rate: sum((a) => a.opened?.["1y"].all || 0) / sum((a) => a.academies.all) - data.seoulStoreRate.close, source: "region" };
+  }
+  regionGrowthCache.set(data, g);
+  return g;
+}
+
 function growthShort(g) {
+  if (g.source === "region") return "이 동은 학원이 적어 구·시 전체 값";
   if (g.source === "history") return "교육청 등록 학원 수 실제 변화";
   if (g.source === "store") return `개업 ${fmt(g.open)}곳·폐업 ${fmt(g.close)}곳, 서울시 상권분석`;
   return "새로 연 학원 − 폐업 추정";
@@ -755,8 +783,10 @@ function recItem(x, i, opts, scopeName) {
   const place = `${shortRegion(x.data.region)} ${x.area.name}${townTag(x.data.id, x.area.name)}`;
   const past = x.area.studentsPast[level];
   const lines = [];
-  lines.push(`${L} ${x.data.pastYear}년 ${fmt(past)}명 → ${fmt(x.students)}명 (1년 <strong>${pp(x.st.rate)}</strong>) · 학원 1년 순증가 <strong>${pp(x.g.rate)}</strong> (입시·보습 전체, ${growthShort(x.g)})`);
-  lines.push(`학원 1곳당 ${L} <strong>${fmt(Math.round(x.perAcademy))}명</strong> (${scopeName} 후보 평균 ${fmt(Math.round(opts.avg))}명의 ${(Math.round(x.perAcademy / opts.avg * 10) / 10).toFixed(1)}배) · ${S} ${fmt(x.academies)}곳, 최근 1년 새로 연 곳 ${fmt(x.area.opened?.["1y"][subject] || 0)}곳`);
+  lines.push(`${L} ${x.data.pastYear}년 ${fmt(past)}명 → ${fmt(x.students)}명 (${x.st.years}년 ${signedPct(x.st.change)}, 1년으로는 <strong>${pp(x.st.rate)}</strong>) · 학원 1년 순증가 <strong>${pp(x.g.rate)}</strong> (입시·보습 전체, ${growthShort(x.g)})`);
+  lines.push(x.academies
+    ? `${S} 1곳당 ${L} <strong>${fmt(Math.round(x.perAcademy))}명</strong> (${scopeName} 후보 평균 ${fmt(Math.round(opts.avg))}명의 ${(Math.round(x.perAcademy / opts.avg * 10) / 10).toFixed(1)}배) · ${S} ${fmt(x.academies)}곳, 최근 1년 새로 연 곳 ${fmt(x.area.opened?.["1y"][subject] || 0)}곳`
+    : `등록된 ${S}이 없습니다. 비어 있는 시장일 수도, 수요가 작아 아무도 들어오지 않은 곳일 수도 있어 현장 확인이 필요합니다.`);
   const fee = feeOf(x.area.fees, subject, level);
   if (fee && fee.count >= 3 && fee.median <= MAX_FEE) lines.push(`이 동 ${feeName(subject, level)} 중간값 ${won(fee.median)} (${fmt(fee.count)}개 과정)`);
   if (x.kind === "out" || x.kind === "someOut") lines.push(`매출로 보면 동네 학생이 다른 동 학원으로 많이 다닙니다(기대치의 ${pct(x.flow.use)}). 동네에서 붙잡을 수 있다면 기회지만, 이미 다니는 학원에서 옮겨 오게 만들어야 합니다.`);
@@ -765,6 +795,7 @@ function recItem(x, i, opts, scopeName) {
   const warn = [];
   if (x.bigHub && budget === "mid") warn.push(`입시·보습 학원 ${fmt(x.area.academies.all)}곳이 모인 대형 학원가라 임대료와 시설 경쟁이 셀 수 있습니다. 예산 3천만~1억원이면 현장 임대료를 먼저 확인하세요.`);
   if (x.bigHub && years >= 10) warn.push("경력이 길어 대형 학원가도 후보에 넣었습니다. 이름난 학원과 겨룰 강점(실적·커리큘럼)이 있는지가 관건입니다.");
+  if (x.risk?.caution) warn.push(`학원이 학생보다 1년에 ${pp(x.risk.gap).slice(1)}p 더 빨리 늘어 '주의' 동입니다(초·중·고 전체 기준).`);
   if (x.area.students[level] < 500) warn.push(`${L}이 ${fmt(x.area.students[level])}명뿐이라 몇 명만 바뀌어도 증감률이 크게 흔들립니다.`);
   return `<li>
     <div class="rec-head"><span>${i + 1}. ${place}</span><span class="score">학생이 학원보다 1년 ${pp(x.gap)}p</span></div>
@@ -791,7 +822,7 @@ async function runRecommend(e) {
   const rules = [`${LEVEL_LABELS[opts.level]} ${REC_MIN_STUDENTS}명 미만인 동 ${fmt(res.skipped.small)}곳`, `위험지역 ${fmt(res.skipped.risk)}곳`];
   if (res.skipped.hub) rules.push(`대형 학원가 ${fmt(res.skipped.hub)}곳(${opts.years < 3 ? "경력 3년 미만" : "예산 3천만원 미만"})`);
   if (res.skipped.flowIn) rules.push(`다른 동 학생이 찾아오는 학원가 ${fmt(res.skipped.flowIn)}곳(경력 3년 미만)`);
-  if (res.skipped.nodata) rules.push(`학원이 10곳 미만이거나 비교 자료가 없는 동 ${fmt(res.skipped.nodata)}곳`);
+  if (res.skipped.nodata) rules.push(`학생 증감 비교 자료가 없는 동 ${fmt(res.skipped.nodata)}곳`);
   recEls.result.innerHTML = res.top.length
     ? `<p class="rec-note"><strong>${scopeName}</strong>에서 ${LEVEL_LABELS[opts.level]} 수가 학원보다 빨리 느는(덜 주는) 순서로 고르고, 학원 1곳당 학생이 많을수록 조금 더 올렸습니다. 후보 ${fmt(res.total)}곳 중 상위 ${res.top.length}곳입니다.</p>
        <ol class="rec-list">${res.top.map((x, i) => recItem(x, i, opts, scopeName)).join("")}</ol>
