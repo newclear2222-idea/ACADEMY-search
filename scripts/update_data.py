@@ -778,7 +778,8 @@ def main():
     neis_key = (os.environ.get("NEIS_API_KEY") or "").strip()
     schoolinfo_key = (os.environ.get("SCHOOLINFO_API_KEY") or "").strip()
     seoul_key = (os.environ.get("SEOUL_API_KEY") or "").strip()
-    apt_key = (os.environ.get("DATA_GO_KR_KEY") or "").strip()
+    # 공공데이터포털 키는 '인코딩' 키(%2B 등)를 넣어도 되도록 한 번 풀어 둡니다. 주소에 넣을 때 다시 인코딩합니다.
+    apt_key = urllib.parse.unquote((os.environ.get("DATA_GO_KR_KEY") or "").strip())
     if not neis_key or not schoolinfo_key:
         sys.exit("NEIS_API_KEY와 SCHOOLINFO_API_KEY 환경변수가 필요합니다.")
 
@@ -790,8 +791,13 @@ def main():
         academies = fetch_academies(neis_key, PROVINCES[province]["office"])
         neis_addresses = fetch_neis_school_addresses(neis_key, PROVINCES[province]["office"])
         schools, year = fetch_schools(schoolinfo_key, province, neis_addresses)
-        past_year = year - TREND_YEARS
-        past = fetch_past_students(schoolinfo_key, province, past_year)
+        # 학교알리미가 오래된 공시를 주지 않을 수 있어, 3년 전부터 차례로 있는 해를 찾습니다.
+        past, past_year = {}, None
+        for back in range(TREND_YEARS, 0, -1):
+            past = fetch_past_students(schoolinfo_key, province, year - back)
+            if past:
+                past_year = year - back
+                break
         sales, sales_label = {}, ""
         if province == "서울특별시" and seoul_key:
             sales, sales_label = fetch_seoul_sales(seoul_key)
