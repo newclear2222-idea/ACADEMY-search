@@ -42,6 +42,9 @@ APT_MONTHS = 6  # 최근 몇 달 거래로 평당가를 낼지
 PYEONG = 3.305785  # 1평(m²)
 SEOUL_URL = "http://openapi.seoul.go.kr:8088"
 SEOUL_SALES_SERVICE = "VwsmAdstrdSelngW"  # 상권분석서비스(추정매출-행정동)
+SEOUL_STORE_SERVICE = "VwsmAdstrdStorW"  # 상권분석서비스(점포-행정동): 개업·폐업 점포 수
+STORE_QUARTERS = 4  # 개업·폐업을 최근 몇 분기 더할지 (1년)
+HISTORY_MIN_MONTHS = 6  # 달마다 쌓은 학원 수가 이만큼 모이면 실제 순증감을 씁니다.
 
 # 상권분석서비스 업종 코드: 일반교습학원, 외국어학원
 ACADEMY_INDUSTRIES = {"CS200001", "CS200002"}
@@ -431,6 +434,65 @@ def fetch_seoul_sales(key):
     return {}, ""
 
 
+def fetch_seoul_stores(key):
+    """서울 행정동별 학원 개업·폐업 점포 수를 최근 1년(4분기) 더해 받습니다.
+
+    나이스 학원 자료에는 문 닫은 학원이 남지 않아, 폐업은 이 자료로만 셉니다.
+    돌려주는 값: ({(자치구, 법정동): {"open", "close", "base"}}, '2025년 3분기~2026년 2분기')
+    base는 분기마다 '유사업종 점포 수'의 평균이라, (open - close) / base가 1년 순증가율입니다.
+    """
+    today = datetime.date.today()
+    found, quarters = {}, []
+    for back in range(1, 10):
+        if len(quarters) == STORE_QUARTERS:
+            break
+        q = (today.year * 4 + (today.month - 1) // 3) - back
+        quarter = f"{q // 4}{q % 4 + 1}"
+        rows_of_quarter, start, total = {}, 1, None
+        while total is None or start <= total:
+            url = f"{SEOUL_URL}/{key}/json/{SEOUL_STORE_SERVICE}/{start}/{start + 999}/{quarter}"
+            try:
+                data = get_json(url, {}).get(SEOUL_STORE_SERVICE) or {}
+            except Exception as e:  # 폐업은 덤이라 실패해도 나머지는 그대로 만듭니다.
+                print(f"  서울 학원 개업·폐업을 받지 못했습니다: {e}")
+                return {}, ""
+            total = to_int(data.get("list_total_count"))
+            rows = data.get("row") or []
+            if not rows or total > 200_000:
+                break
+            if start == 1:
+                print(f"  서울 점포 {quarter}: {total}줄, 항목 {', '.join(sorted(rows[0]))}")
+            for row in rows:
+                if str(row.get("STDR_YYQU_CD")) != quarter or row.get("SVC_INDUTY_CD") not in ACADEMY_INDUSTRIES:
+                    continue
+                gu = SEOUL_GU.get(str(row.get("ADSTRD_CD") or "")[:5])
+                dong = legal_dong(str(row.get("ADSTRD_CD_NM") or "").strip())
+                if gu and dong:
+                    v = rows_of_quarter.setdefault((gu, dong), {"open": 0, "close": 0, "base": 0})
+                    v["open"] += to_int(row.get("OPBIZ_STOR_CO"))
+                    v["close"] += to_int(row.get("CLSBIZ_STOR_CO"))
+                    v["base"] += to_int(row.get("SIMILR_INDUTY_STOR_CO")) or to_int(row.get("STOR_CO"))
+            start += 1000
+        if rows_of_quarter:
+            quarters.append(quarter)
+            for k, v in rows_of_quarter.items():
+                f = found.setdefault(k, {"open": 0, "close": 0, "base": 0})
+                f["open"] += v["open"]
+                f["close"] += v["close"]
+                f["base"] += v["base"]
+    if not quarters:
+        print("  서울 학원 개업·폐업 자료를 찾지 못했습니다.")
+        return {}, ""
+    for v in found.values():
+        v["base"] = round(v["base"] / len(quarters))
+    first, last = min(quarters), max(quarters)
+    label = f"{first[:4]}년 {first[4]}분기~{last[:4]}년 {last[4]}분기"
+    opened = sum(v["open"] for v in found.values())
+    closed = sum(v["close"] for v in found.values())
+    print(f"  서울 학원 개업·폐업: {label} ({len(quarters)}분기), 동 {len(found)}곳, 개업 {opened}, 폐업 {closed}")
+    return found, label
+
+
 def fetch_presales(key):
     """청약홈 아파트 분양 공고 중 아직 입주 전이거나 최근 1년 안에 입주한 단지를 받습니다.
 
@@ -591,7 +653,7 @@ def new_area(name):
 
 
 def build(province, academies, schools, year, sales=None, sales_label="", apt_rows=None, past=None, past_year=None,
-          presales=None):
+          presales=None, stores=None, stores_label=""):
     """시도 하나의 학원·학교를 구·시·군 > 동·읍·면으로 묶습니다."""
     regions = {}
     sgg_regions = {}  # 학교알리미 시군구 코드 -> {구·시·군: 학교 수}. 아파트 거래를 구·시·군에 붙일 때 씁니다.
@@ -721,6 +783,8 @@ def build(province, academies, schools, year, sales=None, sales_label="", apt_ro
             a["top"] = pick_top_academies(a["top"])
             if sales:
                 a["sales"] = sales.get((r["name"], a["name"]))
+            if stores and stores.get((r["name"], a["name"])):
+                a["storeFlow"] = stores[(r["name"], a["name"])]
             a["newApts"].sort(key=lambda x: x["moveIn"])
             prices = sorted(apt.get((r["name"], a["name"]), []))
             if len(prices) >= 3:
@@ -737,8 +801,10 @@ def build(province, academies, schools, year, sales=None, sales_label="", apt_ro
                 "수강료: 학원이 교육청에 등록한 1인당 교습비",
                 "대표 학원: 교육청에 등록한 정원이 큰 순서",
             ] + (["학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)"] if sales else [])
+              + (["학원 개업·폐업: 서울시 상권분석서비스 점포 (일반교습학원·외국어학원)"] if stores else [])
               + (["아파트 가격: 국토교통부 아파트 매매 실거래가"] if apt else []),
             "salesPeriod": sales_label if sales else "",
+            "storePeriod": stores_label if stores else "",
             "pastYear": past_year if past else None,
             "aptPeriod": f"최근 {APT_MONTHS}개월 매매" if apt else "",
             "unmatchedAcademies": r["unmatched"],
@@ -781,6 +847,43 @@ def add_fervor(outputs):
             a["fervor"] = {"score": round(sum(p[1] for p in parts.values()) / len(parts)), "parts": parts}
 
 
+def add_close_rate(outputs):
+    """서울 밖은 폐업 자료가 없어, 서울 학원의 1년 폐업률(점포 수 대비)을 그대로 빌려 씁니다."""
+    seoul = [a for o in outputs if o["province"] == "서울특별시" for a in o["areas"]]
+    if not seoul:  # 이번에 서울을 안 받았으면 저장된 서울 파일에서 읽습니다.
+        for path in DATA_DIR.glob("서울-*.json"):
+            seoul += json.loads(path.read_text(encoding="utf-8"))["areas"]
+    flows = [a["storeFlow"] for a in seoul if a.get("storeFlow")]
+    base = sum(f["base"] for f in flows)
+    if not base:
+        return
+    rate = {"close": round(sum(f["close"] for f in flows) / base, 4),
+            "open": round(sum(f["open"] for f in flows) / base, 4)}
+    print(f"  서울 학원 1년 개업률 {rate['open']:.1%}, 폐업률 {rate['close']:.1%}")
+    for o in outputs:
+        o["seoulStoreRate"] = rate
+
+
+def add_history_change(outputs, history, month):
+    """달마다 쌓은 동별 학원 수로 실제 순증감(개원 - 폐원)을 붙입니다. 6개월 이상 쌓인 뒤부터 나옵니다."""
+    y, m = map(int, month.split("-"))
+    for past_month in sorted(history):
+        py, pm = map(int, past_month.split("-"))
+        months = (y - py) * 12 + (m - pm)
+        if months < HISTORY_MIN_MONTHS:
+            continue
+        for o in outputs:
+            then = history[past_month].get(o["id"])
+            if not then:
+                continue
+            for a in o["areas"]:
+                before = then.get(a["name"])
+                if before and before.get("all") and "historyChange" not in a:
+                    a["historyChange"] = {"months": months, "from": past_month, "before": before["all"],
+                                          "change": a["academies"]["all"] - before["all"]}
+        break  # 가장 오래된 기록 한 달만 씁니다.
+
+
 def save(outputs, provinces):
     """처리한 시도의 지역 파일만 새로 쓰고, 나머지 시도 파일은 그대로 둡니다."""
     DATA_DIR.mkdir(exist_ok=True)
@@ -788,13 +891,11 @@ def save(outputs, provinces):
     index = json.loads(index_path.read_text(encoding="utf-8")) if index_path.exists() else []
     index = [r for r in index if r.get("province") in PROVINCES and r["province"] not in provinces]
 
+    add_close_rate(outputs)
     keep = {f"{r['id']}.json" for r in index} | {f"{o['id']}.json" for o in outputs} | {"regions.json", "history.json", "centroids.json"}
     for old in DATA_DIR.glob("*.json"):
         if old.name not in keep:
             old.unlink()
-    for o in outputs:
-        (DATA_DIR / f"{o['id']}.json").write_text(
-            json.dumps(o, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
     # 문 닫은 학원은 나이스 자료에 남지 않아, 달마다 동별 학원 수를 쌓아 두고 순증감을 계산합니다.
     history_path = DATA_DIR / "history.json"
@@ -803,6 +904,10 @@ def save(outputs, provinces):
     snapshot = history.setdefault(month, {})
     for o in outputs:
         snapshot[o["id"]] = {a["name"]: a["academies"] for a in o["areas"]}
+    add_history_change(outputs, history, month)
+    for o in outputs:
+        (DATA_DIR / f"{o['id']}.json").write_text(
+            json.dumps(o, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     history_path.write_text(json.dumps(dict(sorted(history.items())), ensure_ascii=False) + "\n", encoding="utf-8")
 
     index += [{"id": o["id"], "name": o["region"], "province": o["province"]} for o in outputs]
@@ -837,11 +942,13 @@ def main():
             if past:
                 past_year = year - back
                 break
-        sales, sales_label = {}, ""
+        sales, sales_label, stores, stores_label = {}, "", {}, ""
         if province == "서울특별시" and seoul_key:
             sales, sales_label = fetch_seoul_sales(seoul_key)
+            stores, stores_label = fetch_seoul_stores(seoul_key)
         apt_rows = fetch_apartment_prices(apt_key, province) if apt_key else []
-        built = build(province, academies, schools, year, sales, sales_label, apt_rows, past, past_year, presales)
+        built = build(province, academies, schools, year, sales, sales_label, apt_rows, past, past_year, presales,
+                      stores, stores_label)
         if not built:
             sys.exit(f"{province}: 지역별로 묶인 결과가 없어 저장하지 않습니다. 주소 형식을 확인해 주세요.")
         for o in built:
