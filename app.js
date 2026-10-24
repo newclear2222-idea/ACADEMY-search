@@ -76,9 +76,9 @@ function reasonsFor(r, ctx) {
   // 학생 1명당 월 카드매출을 그 동 수강료와 견줍니다. 카드 결제만 잡혀 원래 낮게 나오므로 지역 전체 비율과 비교합니다.
   const flow = flowOf(r.area, ctx.regionFlow);
   if (flow) {
-    const base = `학생 1명당 월 학원 카드매출 ${won(flow.spend)}, 보통 수강료 ${won(flow.fee)}`;
-    if (flow.relative <= 0.6) reasons.push(`${base}입니다. 수강료에 비해 매출이 적습니다. 이 동 학생들이 다른 동 학원(근처 학원가)으로 많이 다니는 곳일 가능성이 큽니다. 카드 결제만 잡힌 숫자라 지역 평균과 비교해 판단했습니다.`);
-    else if (flow.relative >= 1.6) reasons.push(`${base}입니다. 수강료에 비해 매출이 많습니다. 다른 동 학생들이 이 동 학원으로 찾아오는 곳일 가능성이 큽니다.`);
+    const base = `학생 1명당 월 학원 카드매출(국영수과 등 전 과목 합계)이 ${won(Math.round(flow.spend))}으로 지역 평균 ${won(Math.round(flow.avg))}의 ${pct(flow.relative)}입니다`;
+    if (flow.relative <= 0.6) reasons.push(`${base}. 이 동 학생들이 다른 동 학원(근처 학원가)으로 많이 다니는 곳일 가능성이 큽니다. 한 과목 수강료와 바로 비교하면 과대평가되므로, 같은 지역의 다른 동과만 비교했습니다.`);
+    else if (flow.relative >= 1.6) reasons.push(`${base}. 다른 동 학생들이 이 동 학원으로 찾아오는 곳일 가능성이 큽니다.`);
   }
 
   const change = studentChange(r.area, level);
@@ -99,12 +99,11 @@ function reasonsFor(r, ctx) {
   return reasons;
 }
 
-// 학생 1명당 월 카드매출 / 보통 수강료. relative는 지역 전체 같은 비율 대비 배수.
+// 학생 1명당 월 카드매출(전 과목 합계)을 지역 평균과 견준 배수. 한 과목 수강료와는 비교하지 않습니다.
 function flowOf(area, regionFlow) {
-  const fee = area.fees?.all?.total?.[0];
-  if (!area.sales || !fee || area.students.total < 500 || !regionFlow) return null;
+  if (!area.sales || area.students.total < 500 || !regionFlow) return null;
   const spend = area.sales / 3 / area.students.total;
-  return { spend, fee, relative: spend / fee / regionFlow };
+  return { spend, avg: regionFlow, relative: spend / regionFlow };
 }
 
 // 학생 수 변화율 (몇 년 전 공시 대비). 그때 자료가 없으면 null.
@@ -168,7 +167,7 @@ function perStudent(area, subject) {
   const sales = subject === "english" ? area.salesEnglish : area.sales;
   return sales && area.students.total >= 500 ? sales / 3 / area.students.total : 0;
 }
-const perStudentLabel = (subject) => (subject === "english" ? "영어(외국어학원)" : "전 과목");
+const perStudentLabel = (subject) => (subject === "english" ? "영어(외국어학원)" : "전 과목 합계");
 function monthlyPerAcademy(area) {
   return area.sales && area.academies.all >= MIN_ACADEMIES_FOR_SALES ? area.sales / 3 / area.academies.all : 0;
 }
@@ -214,9 +213,8 @@ function render(data) {
     ? withSales.reduce((t, a) => t + a.sales, 0) / 3 / withSales.reduce((t, a) => t + a.academies.all, 0)
     : 0;
   const salesAreas = data.areas.filter((a) => a.sales && a.students.total);
-  const allFee = data.fees?.all?.total?.[0];
-  const regionFlow = salesAreas.length && allFee
-    ? salesAreas.reduce((t, a) => t + a.sales, 0) / 3 / salesAreas.reduce((t, a) => t + a.students.total, 0) / allFee
+  const regionFlow = salesAreas.length
+    ? salesAreas.reduce((t, a) => t + a.sales, 0) / 3 / salesAreas.reduce((t, a) => t + a.students.total, 0)
     : 0;
   const ctx = { subject, level, totalStudents, totalAcademies, regionFee, regionFlow, pastYear: data.pastYear };
 
