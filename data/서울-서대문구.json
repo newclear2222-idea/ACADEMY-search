@@ -29,11 +29,11 @@
    ],
    "high": [
     328000,
-    104
+    105
    ],
    "total": [
     250000,
-    530
+    531
    ]
   },
   "math": {
@@ -47,11 +47,11 @@
    ],
    "high": [
     350000,
-    58
+    59
    ],
    "total": [
     265000,
-    239
+    240
    ]
   },
   "english": {
@@ -119,10 +119,10 @@
     "total": 3632
    },
    "academies": {
-    "all": 72,
-    "math": 22,
-    "english": 22,
-    "korean": 21,
+    "all": 74,
+    "math": 23,
+    "english": 23,
+    "korean": 22,
     "science": 1
    },
    "schools": [
@@ -423,17 +423,17 @@
    },
    "opened": {
     "1y": {
-     "all": 13,
-     "math": 3,
-     "english": 5,
-     "korean": 5,
+     "all": 15,
+     "math": 4,
+     "english": 6,
+     "korean": 6,
      "science": 0
     },
     "3y": {
-     "all": 21,
-     "math": 4,
-     "english": 6,
-     "korean": 10,
+     "all": 23,
+     "math": 5,
+     "english": 7,
+     "korean": 11,
      "science": 0
     }
    },
@@ -445,14 +445,14 @@
    "storeFlow": {
     "open": 18,
     "close": 14,
-    "base": 140
+    "base": 141
    },
    "fervor": {
-    "score": 59,
+    "score": 60,
     "parts": {
      "density": [
       2.0,
-      69
+      71
      ],
      "fee": [
       270000,
@@ -460,7 +460,7 @@
      ],
      "spend": [
       204165.1,
-      40
+      41
      ]
     }
    },
@@ -470,7 +470,7 @@
      "region": "서울-서대문구",
      "km": 0.8,
      "academies": {
-      "all": 84,
+      "all": 83,
       "math": 34,
       "english": 19,
       "korean": 22,
@@ -554,7 +554,7 @@
      "region": "서울-마포구",
      "km": 1.6,
      "academies": {
-      "all": 5,
+      "all": 4,
       "math": 0,
       "english": 1,
       "korean": 0,
@@ -568,7 +568,7 @@
      "region": "서울-마포구",
      "km": 1.7,
      "academies": {
-      "all": 49,
+      "all": 48,
       "math": 16,
       "english": 12,
       "korean": 9,
@@ -610,7 +610,7 @@
      "region": "서울-마포구",
      "km": 2.5,
      "academies": {
-      "all": 36,
+      "all": 35,
       "math": 14,
       "english": 11,
       "korean": 5,
@@ -645,7 +645,7 @@
       "science": 1
      },
      "students": 166,
-     "sales": null
+     "sales": 119548849
     },
     {
      "name": "역촌동",
@@ -673,7 +673,7 @@
       "science": 0
      },
      "students": 2144,
-     "sales": null
+     "sales": 1544052607
     },
     {
      "name": "상암동",
@@ -743,7 +743,7 @@
       "science": 2
      },
      "students": 2449,
-     "sales": 698008793
+     "sales": 785176985
     },
     {
      "name": "구산동",
@@ -778,8 +778,8 @@
      "region": "서울-마포구",
      "km": 3.8,
      "academies": {
-      "all": 77,
-      "math": 23,
+      "all": 76,
+      "math": 22,
       "english": 19,
       "korean": 25,
       "science": 2
@@ -1250,7 +1250,12 @@
     37.56332,
     126.94487
    ],
-   "sales": null,
+   "sales": 1544052607,
+   "storeFlow": {
+    "open": 6,
+    "close": 4,
+    "base": 68
+   },
    "nearby": [
     {
      "name": "대현동",
@@ -1264,7 +1269,7 @@
       "science": 0
      },
      "students": 139,
-     "sales": null
+     "sales": 100104157
     },
     {
      "name": "북아현동",
@@ -1278,7 +1283,7 @@
       "science": 2
      },
      "students": 2449,
-     "sales": 698008793
+     "sales": 785176985
     },
     {
      "name": "노고산동",
@@ -1306,15 +1311,15 @@
       "science": 1
      },
      "students": 166,
-     "sales": null
+     "sales": 119548849
     },
     {
      "name": "대흥동",
      "region": "서울-마포구",
      "km": 1.4,
      "academies": {
-      "all": 77,
-      "math": 23,
+      "all": 76,
+      "math": 22,
       "english": 19,
       "korean": 25,
       "science": 2
@@ -1376,7 +1381,7 @@
       "science": 0
      },
      "students": 1203,
-     "sales": null
+     "sales": 94641999
     },
     {
      "name": "천연동",
@@ -1432,7 +1437,7 @@
       "science": 0
      },
      "students": 215,
-     "sales": null
+     "sales": 16914405
     },
     {
      "name": "만리동2가",
@@ -1565,7 +1570,7 @@
      "region": "서울-마포구",
      "km": 2.2,
      "academies": {
-      "all": 5,
+      "all": 4,
       "math": 0,
       "english": 1,
       "korean": 0,
@@ -1600,7 +1605,7 @@
       "science": 0
      },
      "students": 507,
-     "sales": null
+     "sales": 4668588
     },
     {
      "name": "상수동",
@@ -1614,7 +1619,7 @@
       "science": 0
      },
      "students": 943,
-     "sales": null
+     "sales": 87000000
     },
     {
      "name": "정동",
@@ -1642,7 +1647,7 @@
       "science": 0
      },
      "students": 303,
-     "sales": null
+     "sales": 2790103
     },
     {
      "name": "필운동",
@@ -1656,7 +1661,7 @@
       "science": 0
      },
      "students": 913,
-     "sales": null
+     "sales": 1085547691
     },
     {
      "name": "도화동",
@@ -1827,7 +1832,12 @@
     37.55797,
     126.94809
    ],
-   "sales": null,
+   "sales": 100104157,
+   "storeFlow": {
+    "open": 0,
+    "close": 0,
+    "base": 4
+   },
    "nearby": [
     {
      "name": "북아현동",
@@ -1841,7 +1851,7 @@
       "science": 2
      },
      "students": 2449,
-     "sales": 698008793
+     "sales": 785176985
     },
     {
      "name": "대신동",
@@ -1855,7 +1865,7 @@
       "science": 0
      },
      "students": 2144,
-     "sales": null
+     "sales": 1544052607
     },
     {
      "name": "노고산동",
@@ -1890,8 +1900,8 @@
      "region": "서울-마포구",
      "km": 0.9,
      "academies": {
-      "all": 77,
-      "math": 23,
+      "all": 76,
+      "math": 22,
       "english": 19,
       "korean": 25,
       "science": 2
@@ -1925,7 +1935,7 @@
       "science": 1
      },
      "students": 166,
-     "sales": null
+     "sales": 119548849
     },
     {
      "name": "만리동2가",
@@ -1981,7 +1991,7 @@
       "science": 0
      },
      "students": 1203,
-     "sales": null
+     "sales": 94641999
     },
     {
      "name": "신수동",
@@ -2023,7 +2033,7 @@
       "science": 0
      },
      "students": 507,
-     "sales": null
+     "sales": 4668588
     },
     {
      "name": "미근동",
@@ -2037,7 +2047,7 @@
       "science": 0
      },
      "students": 215,
-     "sales": null
+     "sales": 16914405
     },
     {
      "name": "용강동",
@@ -2079,7 +2089,7 @@
       "science": 0
      },
      "students": 303,
-     "sales": null
+     "sales": 2790103
     },
     {
      "name": "순화동",
@@ -2177,7 +2187,7 @@
       "science": 0
      },
      "students": 943,
-     "sales": null
+     "sales": 87000000
     },
     {
      "name": "도화동",
@@ -2402,7 +2412,12 @@
     37.56342,
     126.96591
    ],
-   "sales": null,
+   "sales": 16914405,
+   "storeFlow": {
+    "open": 0,
+    "close": 0,
+    "base": 3
+   },
    "nearby": [
     {
      "name": "충정로2가",
@@ -2416,7 +2431,7 @@
       "science": 0
      },
      "students": 1203,
-     "sales": null
+     "sales": 94641999
     },
     {
      "name": "순화동",
@@ -2528,7 +2543,7 @@
       "science": 2
      },
      "students": 2449,
-     "sales": 698008793
+     "sales": 785176985
     },
     {
      "name": "행촌동",
@@ -2584,7 +2599,7 @@
       "science": 0
      },
      "students": 507,
-     "sales": null
+     "sales": 4668588
     },
     {
      "name": "필운동",
@@ -2598,7 +2613,7 @@
       "science": 0
      },
      "students": 913,
-     "sales": null
+     "sales": 1085547691
     },
     {
      "name": "대현동",
@@ -2612,7 +2627,7 @@
       "science": 0
      },
      "students": 139,
-     "sales": null
+     "sales": 100104157
     },
     {
      "name": "청파동2가",
@@ -2626,7 +2641,7 @@
       "science": 0
      },
      "students": 303,
-     "sales": null
+     "sales": 2790103
     },
     {
      "name": "현저동",
@@ -2654,7 +2669,7 @@
       "science": 0
      },
      "students": 2144,
-     "sales": null
+     "sales": 1544052607
     },
     {
      "name": "남산동",
@@ -2668,7 +2683,7 @@
       "science": 0
      },
      "students": 185,
-     "sales": null
+     "sales": 257591898
     },
     {
      "name": "후암동",
@@ -2752,7 +2767,7 @@
       "science": 0
      },
      "students": 1776,
-     "sales": null
+     "sales": 16353869
     },
     {
      "name": "염리동",
@@ -2780,15 +2795,15 @@
       "science": 0
      },
      "students": 151,
-     "sales": null
+     "sales": 1259671271
     },
     {
      "name": "대흥동",
      "region": "서울-마포구",
      "km": 2.3,
      "academies": {
-      "all": 77,
-      "math": 23,
+      "all": 76,
+      "math": 22,
       "english": 19,
       "korean": 25,
       "science": 2
@@ -2808,7 +2823,7 @@
       "science": 0
      },
      "students": 167,
-     "sales": null
+     "sales": 1393146372
     },
     {
      "name": "노고산동",
@@ -2835,7 +2850,7 @@
     "total": 2183
    },
    "academies": {
-    "all": 84,
+    "all": 83,
     "math": 34,
     "english": 19,
     "korean": 22,
@@ -3160,7 +3175,7 @@
      ],
      "fee": [
       250000,
-      53
+      54
      ],
      "spend": [
       1058431.7,
@@ -3188,10 +3203,10 @@
      "region": "서울-서대문구",
      "km": 0.8,
      "academies": {
-      "all": 72,
-      "math": 22,
-      "english": 22,
-      "korean": 21,
+      "all": 74,
+      "math": 23,
+      "english": 23,
+      "korean": 22,
       "science": 1
      },
      "students": 3632,
@@ -3216,7 +3231,7 @@
      "region": "서울-마포구",
      "km": 1.4,
      "academies": {
-      "all": 49,
+      "all": 48,
       "math": 16,
       "english": 12,
       "korean": 9,
@@ -3244,7 +3259,7 @@
      "region": "서울-마포구",
      "km": 1.7,
      "academies": {
-      "all": 5,
+      "all": 4,
       "math": 0,
       "english": 1,
       "korean": 0,
@@ -3258,7 +3273,7 @@
      "region": "서울-마포구",
      "km": 1.9,
      "academies": {
-      "all": 36,
+      "all": 35,
       "math": 14,
       "english": 11,
       "korean": 5,
@@ -3377,7 +3392,7 @@
       "science": 1
      },
      "students": 166,
-     "sales": null
+     "sales": 119548849
     },
     {
      "name": "역촌동",
@@ -3503,15 +3518,15 @@
       "science": 2
      },
      "students": 2449,
-     "sales": 698008793
+     "sales": 785176985
     },
     {
      "name": "대흥동",
      "region": "서울-마포구",
      "km": 4.2,
      "academies": {
-      "all": 77,
-      "math": 23,
+      "all": 76,
+      "math": 22,
       "english": 19,
       "korean": 25,
       "science": 2
@@ -3927,11 +3942,11 @@
     37.56134,
     126.95333
    ],
-   "sales": 698008793,
+   "sales": 785176985,
    "storeFlow": {
     "open": 3,
     "close": 2,
-    "base": 29
+    "base": 42
    },
    "fervor": {
     "score": 29,
@@ -3942,11 +3957,11 @@
      ],
      "fee": [
       230000,
-      42
+      41
      ],
      "spend": [
-      95006.0,
-      13
+      106870.4,
+      14
      ]
     }
    },
@@ -3963,7 +3978,7 @@
       "science": 0
      },
      "students": 139,
-     "sales": null
+     "sales": 100104157
     },
     {
      "name": "대신동",
@@ -3977,7 +3992,7 @@
       "science": 0
      },
      "students": 2144,
-     "sales": null
+     "sales": 1544052607
     },
     {
      "name": "아현동",
@@ -4005,7 +4020,7 @@
       "science": 0
      },
      "students": 1203,
-     "sales": null
+     "sales": 94641999
     },
     {
      "name": "중림동",
@@ -4047,7 +4062,7 @@
       "science": 0
      },
      "students": 215,
-     "sales": null
+     "sales": 16914405
     },
     {
      "name": "천연동",
@@ -4096,8 +4111,8 @@
      "region": "서울-마포구",
      "km": 1.4,
      "academies": {
-      "all": 77,
-      "math": 23,
+      "all": 76,
+      "math": 22,
       "english": 19,
       "korean": 25,
       "science": 2
@@ -4187,7 +4202,7 @@
       "science": 0
      },
      "students": 507,
-     "sales": null
+     "sales": 4668588
     },
     {
      "name": "현저동",
@@ -4243,7 +4258,7 @@
       "science": 0
      },
      "students": 303,
-     "sales": null
+     "sales": 2790103
     },
     {
      "name": "창천동",
@@ -4257,7 +4272,7 @@
       "science": 1
      },
      "students": 166,
-     "sales": null
+     "sales": 119548849
     },
     {
      "name": "용강동",
@@ -4313,7 +4328,7 @@
       "science": 0
      },
      "students": 913,
-     "sales": null
+     "sales": 1085547691
     },
     {
      "name": "효창동",
@@ -4341,7 +4356,7 @@
       "science": 0
      },
      "students": 1776,
-     "sales": null
+     "sales": 16353869
     },
     {
      "name": "도화동",
@@ -4733,10 +4748,10 @@
      "region": "서울-서대문구",
      "km": 1.5,
      "academies": {
-      "all": 72,
-      "math": 22,
-      "english": 22,
-      "korean": 21,
+      "all": 74,
+      "math": 23,
+      "english": 23,
+      "korean": 22,
       "science": 1
      },
      "students": 3632,
@@ -4754,7 +4769,7 @@
       "science": 0
      },
      "students": 2144,
-     "sales": null
+     "sales": 1544052607
     },
     {
      "name": "현저동",
@@ -4775,7 +4790,7 @@
      "region": "서울-마포구",
      "km": 1.8,
      "academies": {
-      "all": 5,
+      "all": 4,
       "math": 0,
       "english": 1,
       "korean": 0,
@@ -4796,7 +4811,7 @@
       "science": 1
      },
      "students": 166,
-     "sales": null
+     "sales": 119548849
     },
     {
      "name": "홍동",
@@ -4838,7 +4853,7 @@
       "science": 0
      },
      "students": 139,
-     "sales": null
+     "sales": 100104157
     },
     {
      "name": "북아현동",
@@ -4852,7 +4867,7 @@
       "science": 2
      },
      "students": 2449,
-     "sales": 698008793
+     "sales": 785176985
     },
     {
      "name": "노고산동",
@@ -4887,7 +4902,7 @@
      "region": "서울-서대문구",
      "km": 2.3,
      "academies": {
-      "all": 84,
+      "all": 83,
       "math": 34,
       "english": 19,
       "korean": 22,
@@ -4929,7 +4944,7 @@
      "region": "서울-마포구",
      "km": 2.4,
      "academies": {
-      "all": 49,
+      "all": 48,
       "math": 16,
       "english": 12,
       "korean": 9,
@@ -4978,7 +4993,7 @@
       "science": 0
      },
      "students": 1203,
-     "sales": null
+     "sales": 94641999
     },
     {
      "name": "교남동",
@@ -4999,8 +5014,8 @@
      "region": "서울-마포구",
      "km": 2.8,
      "academies": {
-      "all": 77,
-      "math": 23,
+      "all": 76,
+      "math": 22,
       "english": 19,
       "korean": 25,
       "science": 2
@@ -5034,7 +5049,7 @@
       "science": 0
      },
      "students": 913,
-     "sales": null
+     "sales": 1085547691
     },
     {
      "name": "아현동",
@@ -5062,7 +5077,7 @@
       "science": 0
      },
      "students": 943,
-     "sales": null
+     "sales": 87000000
     },
     {
      "name": "미근동",
@@ -5076,7 +5091,7 @@
       "science": 0
      },
      "students": 215,
-     "sales": null
+     "sales": 16914405
     },
     {
      "name": "신수동",
@@ -5650,7 +5665,12 @@
     37.55771,
     126.93358
    ],
-   "sales": null,
+   "sales": 119548849,
+   "storeFlow": {
+    "open": 0,
+    "close": 0,
+    "base": 5
+   },
    "nearby": [
     {
      "name": "노고산동",
@@ -5692,7 +5712,7 @@
       "science": 0
      },
      "students": 2144,
-     "sales": null
+     "sales": 1544052607
     },
     {
      "name": "상수동",
@@ -5706,7 +5726,7 @@
       "science": 0
      },
      "students": 943,
-     "sales": null
+     "sales": 87000000
     },
     {
      "name": "신수동",
@@ -5734,15 +5754,15 @@
       "science": 0
      },
      "students": 139,
-     "sales": null
+     "sales": 100104157
     },
     {
      "name": "대흥동",
      "region": "서울-마포구",
      "km": 1.3,
      "academies": {
-      "all": 77,
-      "math": 23,
+      "all": 76,
+      "math": 22,
       "english": 19,
       "korean": 25,
       "science": 2
@@ -5755,7 +5775,7 @@
      "region": "서울-마포구",
      "km": 1.4,
      "academies": {
-      "all": 5,
+      "all": 4,
       "math": 0,
       "english": 1,
       "korean": 0,
@@ -5790,7 +5810,7 @@
       "science": 2
      },
      "students": 2449,
-     "sales": 698008793
+     "sales": 785176985
     },
     {
      "name": "연희동",
@@ -5853,7 +5873,7 @@
      "region": "서울-마포구",
      "km": 2.1,
      "academies": {
-      "all": 49,
+      "all": 48,
       "math": 16,
       "english": 12,
       "korean": 9,
@@ -5895,10 +5915,10 @@
      "region": "서울-서대문구",
      "km": 2.6,
      "academies": {
-      "all": 72,
-      "math": 22,
-      "english": 22,
-      "korean": 21,
+      "all": 74,
+      "math": 23,
+      "english": 23,
+      "korean": 22,
       "science": 1
      },
      "students": 3632,
@@ -5958,14 +5978,14 @@
       "science": 0
      },
      "students": 1203,
-     "sales": null
+     "sales": 94641999
     },
     {
      "name": "망원동",
      "region": "서울-마포구",
      "km": 2.8,
      "academies": {
-      "all": 36,
+      "all": 35,
       "math": 14,
       "english": 11,
       "korean": 5,
@@ -5986,7 +6006,7 @@
       "science": 0
      },
      "students": 507,
-     "sales": null
+     "sales": 4668588
     },
     {
      "name": "천연동",
@@ -6014,7 +6034,7 @@
       "science": 0
      },
      "students": 385,
-     "sales": null
+     "sales": 405783383
     },
     {
      "name": "청파동2가",
@@ -6028,7 +6048,7 @@
       "science": 0
      },
      "students": 303,
-     "sales": null
+     "sales": 2790103
     },
     {
      "name": "미근동",
@@ -6042,14 +6062,14 @@
       "science": 0
      },
      "students": 215,
-     "sales": null
+     "sales": 16914405
     },
     {
      "name": "북가좌동",
      "region": "서울-서대문구",
      "km": 2.9,
      "academies": {
-      "all": 84,
+      "all": 83,
       "math": 34,
       "english": 19,
       "korean": 22,
@@ -6113,11 +6133,11 @@
      ],
      "high": [
       null,
-      0
+      1
      ],
      "total": [
       210000,
-      6
+      7
      ]
     },
     "math": {
@@ -6131,11 +6151,11 @@
      ],
      "high": [
       null,
-      0
+      1
      ],
      "total": [
-      null,
-      2
+      290000,
+      3
      ]
     },
     "english": {
@@ -6296,7 +6316,7 @@
       "science": 0
      },
      "students": 1203,
-     "sales": null
+     "sales": 94641999
     },
     {
      "name": "행촌동",
@@ -6352,7 +6372,7 @@
       "science": 0
      },
      "students": 215,
-     "sales": null
+     "sales": 16914405
     },
     {
      "name": "정동",
@@ -6380,7 +6400,7 @@
       "science": 0
      },
      "students": 913,
-     "sales": null
+     "sales": 1085547691
     },
     {
      "name": "북아현동",
@@ -6394,7 +6414,7 @@
       "science": 2
      },
      "students": 2449,
-     "sales": 698008793
+     "sales": 785176985
     },
     {
      "name": "현저동",
@@ -6464,7 +6484,7 @@
       "science": 0
      },
      "students": 2144,
-     "sales": null
+     "sales": 1544052607
     },
     {
      "name": "아현동",
@@ -6492,7 +6512,7 @@
       "science": 0
      },
      "students": 139,
-     "sales": null
+     "sales": 100104157
     },
     {
      "name": "송현동",
@@ -6534,7 +6554,7 @@
       "science": 0
      },
      "students": 507,
-     "sales": null
+     "sales": 4668588
     },
     {
      "name": "청운동",
@@ -6548,7 +6568,7 @@
       "science": 0
      },
      "students": 1568,
-     "sales": null
+     "sales": 437492016
     },
     {
      "name": "청파동2가",
@@ -6562,7 +6582,7 @@
       "science": 0
      },
      "students": 303,
-     "sales": null
+     "sales": 2790103
     },
     {
      "name": "남산동",
@@ -6576,7 +6596,7 @@
       "science": 0
      },
      "students": 185,
-     "sales": null
+     "sales": 257591898
     },
     {
      "name": "경운동",
@@ -6590,7 +6610,7 @@
       "science": 0
      },
      "students": 151,
-     "sales": null
+     "sales": 1259671271
     },
     {
      "name": "가회동",
@@ -6618,7 +6638,7 @@
       "science": 0
      },
      "students": 167,
-     "sales": null
+     "sales": 1393146372
     },
     {
      "name": "연희동",
@@ -6653,8 +6673,8 @@
      "region": "서울-마포구",
      "km": 2.6,
      "academies": {
-      "all": 77,
-      "math": 23,
+      "all": 76,
+      "math": 22,
       "english": 19,
       "korean": 25,
       "science": 2
@@ -6844,7 +6864,12 @@
     37.56531,
     126.9635
    ],
-   "sales": null,
+   "sales": 94641999,
+   "storeFlow": {
+    "open": 0,
+    "close": 0,
+    "base": 14
+   },
    "nearby": [
     {
      "name": "미근동",
@@ -6858,7 +6883,7 @@
       "science": 0
      },
      "students": 215,
-     "sales": null
+     "sales": 16914405
     },
     {
      "name": "천연동",
@@ -6970,7 +6995,7 @@
       "science": 2
      },
      "students": 2449,
-     "sales": 698008793
+     "sales": 785176985
     },
     {
      "name": "무악동",
@@ -7026,7 +7051,7 @@
       "science": 0
      },
      "students": 913,
-     "sales": null
+     "sales": 1085547691
     },
     {
      "name": "현저동",
@@ -7054,7 +7079,7 @@
       "science": 0
      },
      "students": 139,
-     "sales": null
+     "sales": 100104157
     },
     {
      "name": "대신동",
@@ -7068,7 +7093,7 @@
       "science": 0
      },
      "students": 2144,
-     "sales": null
+     "sales": 1544052607
     },
     {
      "name": "서계동",
@@ -7082,7 +7107,7 @@
       "science": 0
      },
      "students": 507,
-     "sales": null
+     "sales": 4668588
     },
     {
      "name": "청파동2가",
@@ -7096,7 +7121,7 @@
       "science": 0
      },
      "students": 303,
-     "sales": null
+     "sales": 2790103
     },
     {
      "name": "송현동",
@@ -7124,7 +7149,7 @@
       "science": 0
      },
      "students": 185,
-     "sales": null
+     "sales": 257591898
     },
     {
      "name": "안국동",
@@ -7173,8 +7198,8 @@
      "region": "서울-마포구",
      "km": 2.3,
      "academies": {
-      "all": 77,
-      "math": 23,
+      "all": 76,
+      "math": 22,
       "english": 19,
       "korean": 25,
       "science": 2
@@ -7236,7 +7261,7 @@
       "science": 0
      },
      "students": 151,
-     "sales": null
+     "sales": 1259671271
     },
     {
      "name": "운니동",
@@ -7250,7 +7275,7 @@
       "science": 0
      },
      "students": 167,
-     "sales": null
+     "sales": 1393146372
     },
     {
      "name": "청파동3가",
@@ -7264,7 +7289,7 @@
       "science": 0
      },
      "students": 1776,
-     "sales": null
+     "sales": 16353869
     }
    ]
   },
@@ -7523,7 +7548,7 @@
       "science": 0
      },
      "students": 913,
-     "sales": null
+     "sales": 1085547691
     },
     {
      "name": "교남동",
@@ -7565,7 +7590,7 @@
       "science": 0
      },
      "students": 1203,
-     "sales": null
+     "sales": 94641999
     },
     {
      "name": "연희동",
@@ -7593,7 +7618,7 @@
       "science": 0
      },
      "students": 2144,
-     "sales": null
+     "sales": 1544052607
     },
     {
      "name": "북아현동",
@@ -7607,7 +7632,7 @@
       "science": 2
      },
      "students": 2449,
-     "sales": 698008793
+     "sales": 785176985
     },
     {
      "name": "미근동",
@@ -7621,7 +7646,7 @@
       "science": 0
      },
      "students": 215,
-     "sales": null
+     "sales": 16914405
     },
     {
      "name": "순화동",
@@ -7663,7 +7688,7 @@
       "science": 0
      },
      "students": 139,
-     "sales": null
+     "sales": 100104157
     },
     {
      "name": "청운동",
@@ -7677,7 +7702,7 @@
       "science": 0
      },
      "students": 1568,
-     "sales": null
+     "sales": 437492016
     },
     {
      "name": "홍은동",
@@ -7803,7 +7828,7 @@
       "science": 1
      },
      "students": 166,
-     "sales": null
+     "sales": 119548849
     },
     {
      "name": "안국동",
@@ -7838,8 +7863,8 @@
      "region": "서울-마포구",
      "km": 2.9,
      "academies": {
-      "all": 77,
-      "math": 23,
+      "all": 76,
+      "math": 22,
       "english": 19,
       "korean": 25,
       "science": 2
@@ -7866,10 +7891,10 @@
      "region": "서울-서대문구",
      "km": 3.0,
      "academies": {
-      "all": 72,
-      "math": 22,
-      "english": 22,
-      "korean": 21,
+      "all": 74,
+      "math": 23,
+      "english": 23,
+      "korean": 22,
       "science": 1
      },
      "students": 3632,
@@ -8213,7 +8238,7 @@
     "base": 127
    },
    "fervor": {
-    "score": 71,
+    "score": 70,
     "parts": {
      "density": [
       3.7,
@@ -8221,7 +8246,7 @@
      ],
      "fee": [
       224640,
-      41
+      40
      ],
      "spend": [
       541948.7,
@@ -8326,7 +8351,7 @@
       "science": 0
      },
      "students": 1568,
-     "sales": null
+     "sales": 437492016
     },
     {
      "name": "연희동",
@@ -8354,7 +8379,7 @@
       "science": 0
      },
      "students": 913,
-     "sales": null
+     "sales": 1085547691
     },
     {
      "name": "행촌동",
@@ -8452,17 +8477,17 @@
       "science": 0
      },
      "students": 2144,
-     "sales": null
+     "sales": 1544052607
     },
     {
      "name": "남가좌동",
      "region": "서울-서대문구",
      "km": 2.9,
      "academies": {
-      "all": 72,
-      "math": 22,
-      "english": 22,
-      "korean": 21,
+      "all": 74,
+      "math": 23,
+      "english": 23,
+      "korean": 22,
       "science": 1
      },
      "students": 3632,
@@ -8480,7 +8505,7 @@
       "science": 0
      },
      "students": 1203,
-     "sales": null
+     "sales": 94641999
     },
     {
      "name": "북아현동",
@@ -8494,7 +8519,7 @@
       "science": 2
      },
      "students": 2449,
-     "sales": 698008793
+     "sales": 785176985
     },
     {
      "name": "역촌동",
@@ -8543,7 +8568,7 @@
      "region": "서울-서대문구",
      "km": 3.8,
      "academies": {
-      "all": 84,
+      "all": 83,
       "math": 34,
       "english": 19,
       "korean": 22,
@@ -8613,8 +8638,8 @@
      "region": "서울-마포구",
      "km": 4.3,
      "academies": {
-      "all": 77,
-      "math": 23,
+      "all": 76,
+      "math": 22,
       "english": 19,
       "korean": 25,
       "science": 2
@@ -8627,7 +8652,7 @@
      "region": "서울-마포구",
      "km": 4.3,
      "academies": {
-      "all": 49,
+      "all": 48,
       "math": 16,
       "english": 12,
       "korean": 9,
@@ -9041,7 +9066,7 @@
     "parts": {
      "density": [
       2.0,
-      70
+      69
      ],
      "fee": [
       220000,
@@ -9049,7 +9074,7 @@
      ],
      "spend": [
       449005.8,
-      67
+      68
      ]
     }
    },
@@ -9101,10 +9126,10 @@
      "region": "서울-서대문구",
      "km": 1.6,
      "academies": {
-      "all": 72,
-      "math": 22,
-      "english": 22,
-      "korean": 21,
+      "all": 74,
+      "math": 23,
+      "english": 23,
+      "korean": 22,
       "science": 1
      },
      "students": 3632,
@@ -9157,7 +9182,7 @@
      "region": "서울-서대문구",
      "km": 2.4,
      "academies": {
-      "all": 84,
+      "all": 83,
       "math": 34,
       "english": 19,
       "korean": 22,
@@ -9234,7 +9259,7 @@
       "science": 0
      },
      "students": 2144,
-     "sales": null
+     "sales": 1544052607
     },
     {
      "name": "무악동",
@@ -9255,7 +9280,7 @@
      "region": "서울-마포구",
      "km": 2.8,
      "academies": {
-      "all": 5,
+      "all": 4,
       "math": 0,
       "english": 1,
       "korean": 0,
@@ -9311,7 +9336,7 @@
      "region": "서울-마포구",
      "km": 3.2,
      "academies": {
-      "all": 49,
+      "all": 48,
       "math": 16,
       "english": 12,
       "korean": 9,
@@ -9346,7 +9371,7 @@
       "science": 2
      },
      "students": 2449,
-     "sales": 698008793
+     "sales": 785176985
     },
     {
      "name": "향동동",
@@ -9367,7 +9392,7 @@
      "region": "서울-마포구",
      "km": 4.0,
      "academies": {
-      "all": 36,
+      "all": 35,
       "math": 14,
       "english": 11,
       "korean": 5,
@@ -9409,8 +9434,8 @@
      "region": "서울-마포구",
      "km": 4.2,
      "academies": {
-      "all": 77,
-      "math": 23,
+      "all": 76,
+      "math": 22,
       "english": 19,
       "korean": 25,
       "science": 2
@@ -9478,7 +9503,7 @@
   }
  ],
  "seoulStoreRate": {
-  "close": 0.0905,
-  "open": 0.086
+  "close": 0.0906,
+  "open": 0.0869
  }
 }

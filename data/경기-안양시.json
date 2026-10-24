@@ -4888,20 +4888,6 @@
      "sales": null
     },
     {
-     "name": "신림동",
-     "region": "서울-관악구",
-     "km": 6.4,
-     "academies": {
-      "all": 122,
-      "math": 45,
-      "english": 26,
-      "korean": 24,
-      "science": 1
-     },
-     "students": 6360,
-     "sales": null
-    },
-    {
      "name": "평촌동",
      "region": "경기-안양시",
      "km": 6.5,
@@ -4930,6 +4916,20 @@
      "sales": null
     },
     {
+     "name": "신림동",
+     "region": "서울-관악구",
+     "km": 6.5,
+     "academies": {
+      "all": 122,
+      "math": 45,
+      "english": 26,
+      "korean": 24,
+      "science": 1
+     },
+     "students": 9925,
+     "sales": 5474692239
+    },
+    {
      "name": "원문동",
      "region": "경기-과천시",
      "km": 6.6,
@@ -4950,8 +4950,8 @@
      "academies": {
       "all": 535,
       "math": 178,
-      "english": 114,
-      "korean": 155,
+      "english": 113,
+      "korean": 156,
       "science": 28
      },
      "students": 19194,
@@ -7205,7 +7205,7 @@
   }
  ],
  "seoulStoreRate": {
-  "close": 0.0905,
-  "open": 0.086
+  "close": 0.0906,
+  "open": 0.0869
  }
 }

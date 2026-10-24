@@ -353,20 +353,6 @@
      "sales": 1175404361
     },
     {
-     "name": "미성동",
-     "region": "서울-관악구",
-     "km": 2.8,
-     "academies": {
-      "all": 0,
-      "math": 0,
-      "english": 0,
-      "korean": 0,
-      "science": 0
-     },
-     "students": 1580,
-     "sales": 1602584142
-    },
-    {
      "name": "광명동",
      "region": "경기-광명시",
      "km": 3.1,
@@ -385,28 +371,14 @@
      "region": "서울-동작구",
      "km": 3.3,
      "academies": {
-      "all": 51,
+      "all": 50,
       "math": 19,
-      "english": 12,
+      "english": 11,
       "korean": 11,
       "science": 2
      },
      "students": 3087,
      "sales": 1121265721
-    },
-    {
-     "name": "신림동",
-     "region": "서울-관악구",
-     "km": 3.5,
-     "academies": {
-      "all": 122,
-      "math": 45,
-      "english": 26,
-      "korean": 24,
-      "science": 1
-     },
-     "students": 6360,
-     "sales": null
     },
     {
      "name": "개봉동",
@@ -421,6 +393,20 @@
      },
      "students": 2996,
      "sales": 1979709635
+    },
+    {
+     "name": "신림동",
+     "region": "서울-관악구",
+     "km": 3.6,
+     "academies": {
+      "all": 122,
+      "math": 45,
+      "english": 26,
+      "korean": 24,
+      "science": 1
+     },
+     "students": 9925,
+     "sales": 5474692239
     },
     {
      "name": "고척동",
@@ -532,7 +518,7 @@
       "science": 3
      },
      "students": 1534,
-     "sales": null
+     "sales": 1130207550
     },
     {
      "name": "신정동",
@@ -541,8 +527,8 @@
      "academies": {
       "all": 535,
       "math": 178,
-      "english": 114,
-      "korean": 155,
+      "english": 113,
+      "korean": 156,
       "science": 28
      },
      "students": 19194,
@@ -567,23 +553,37 @@
      "region": "서울-구로구",
      "km": 5.6,
      "academies": {
-      "all": 39,
+      "all": 40,
       "math": 10,
       "english": 11,
-      "korean": 8,
+      "korean": 9,
       "science": 0
      },
      "students": 2419,
      "sales": null
     },
     {
+     "name": "봉천동",
+     "region": "서울-관악구",
+     "km": 5.7,
+     "academies": {
+      "all": 173,
+      "math": 47,
+      "english": 44,
+      "korean": 33,
+      "science": 6
+     },
+     "students": 12066,
+     "sales": 6875088364
+    },
+    {
      "name": "상도동",
      "region": "서울-동작구",
      "km": 5.8,
      "academies": {
-      "all": 106,
-      "math": 43,
-      "english": 26,
+      "all": 107,
+      "math": 42,
+      "english": 27,
       "korean": 23,
       "science": 4
      },
@@ -602,20 +602,6 @@
       "science": 4
      },
      "students": 3615,
-     "sales": null
-    },
-    {
-     "name": "봉천동",
-     "region": "서울-관악구",
-     "km": 5.9,
-     "academies": {
-      "all": 173,
-      "math": 47,
-      "english": 44,
-      "korean": 33,
-      "science": 6
-     },
-     "students": 8789,
      "sales": null
     },
     {
@@ -644,15 +630,15 @@
       "science": 0
      },
      "students": 3146,
-     "sales": null
+     "sales": 5628377127
     },
     {
      "name": "목동",
      "region": "서울-양천구",
      "km": 6.5,
      "academies": {
-      "all": 730,
-      "math": 244,
+      "all": 731,
+      "math": 245,
       "english": 139,
       "korean": 262,
       "science": 48
@@ -686,6 +672,20 @@
       "science": 0
      },
      "students": 1653,
+     "sales": null
+    },
+    {
+     "name": "범박동",
+     "region": "경기-부천시",
+     "km": 6.8,
+     "academies": {
+      "all": 61,
+      "math": 23,
+      "english": 18,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 5130,
      "sales": null
     }
    ]
@@ -1043,7 +1043,7 @@
     "base": 147
    },
    "fervor": {
-    "score": 22,
+    "score": 21,
     "parts": {
      "density": [
       1.3,
@@ -1055,7 +1055,7 @@
      ],
      "spend": [
       69369.0,
-      10
+      8
      ]
     }
    },
@@ -1075,48 +1075,6 @@
      "sales": 871900739
     },
     {
-     "name": "미성동",
-     "region": "서울-관악구",
-     "km": 1.8,
-     "academies": {
-      "all": 0,
-      "math": 0,
-      "english": 0,
-      "korean": 0,
-      "science": 0
-     },
-     "students": 1580,
-     "sales": 1602584142
-    },
-    {
-     "name": "신림동",
-     "region": "서울-관악구",
-     "km": 2.1,
-     "academies": {
-      "all": 122,
-      "math": 45,
-      "english": 26,
-      "korean": 24,
-      "science": 1
-     },
-     "students": 6360,
-     "sales": null
-    },
-    {
-     "name": "난곡동",
-     "region": "서울-관악구",
-     "km": 2.2,
-     "academies": {
-      "all": 0,
-      "math": 0,
-      "english": 0,
-      "korean": 0,
-      "science": 0
-     },
-     "students": 530,
-     "sales": 756185658
-    },
-    {
      "name": "하안동",
      "region": "경기-광명시",
      "km": 2.2,
@@ -1129,6 +1087,20 @@
      },
      "students": 4663,
      "sales": null
+    },
+    {
+     "name": "신림동",
+     "region": "서울-관악구",
+     "km": 2.3,
+     "academies": {
+      "all": 122,
+      "math": 45,
+      "english": 26,
+      "korean": 24,
+      "science": 1
+     },
+     "students": 9925,
+     "sales": 5474692239
     },
     {
      "name": "시흥동",
@@ -1159,20 +1131,6 @@
      "sales": null
     },
     {
-     "name": "신사동",
-     "region": "서울-관악구",
-     "km": 2.6,
-     "academies": {
-      "all": 0,
-      "math": 0,
-      "english": 0,
-      "korean": 0,
-      "science": 0
-     },
-     "students": 381,
-     "sales": 1062485059
-    },
-    {
      "name": "대림동",
      "region": "서울-영등포구",
      "km": 2.8,
@@ -1191,9 +1149,9 @@
      "region": "서울-동작구",
      "km": 3.0,
      "academies": {
-      "all": 51,
+      "all": 50,
       "math": 19,
-      "english": 12,
+      "english": 11,
       "korean": 11,
       "science": 2
      },
@@ -1273,7 +1231,7 @@
     {
      "name": "봉천동",
      "region": "서울-관악구",
-     "km": 4.7,
+     "km": 4.6,
      "academies": {
       "all": 173,
       "math": 47,
@@ -1281,8 +1239,8 @@
       "korean": 33,
       "science": 6
      },
-     "students": 8789,
-     "sales": null
+     "students": 12066,
+     "sales": 6875088364
     },
     {
      "name": "대방동",
@@ -1317,9 +1275,9 @@
      "region": "서울-동작구",
      "km": 5.2,
      "academies": {
-      "all": 106,
-      "math": 43,
-      "english": 26,
+      "all": 107,
+      "math": 42,
+      "english": 27,
       "korean": 23,
       "science": 4
      },
@@ -1366,7 +1324,7 @@
       "science": 3
      },
      "students": 1534,
-     "sales": null
+     "sales": 1130207550
     },
     {
      "name": "천왕동",
@@ -1431,8 +1389,8 @@
      "academies": {
       "all": 535,
       "math": 178,
-      "english": 114,
-      "korean": 155,
+      "english": 113,
+      "korean": 156,
       "science": 28
      },
      "students": 19194,
@@ -1464,7 +1422,7 @@
       "science": 0
      },
      "students": 3146,
-     "sales": null
+     "sales": 5628377127
     },
     {
      "name": "일직동",
@@ -1479,6 +1437,48 @@
      },
      "students": 1936,
      "sales": null
+    },
+    {
+     "name": "흑석동",
+     "region": "서울-동작구",
+     "km": 6.7,
+     "academies": {
+      "all": 36,
+      "math": 14,
+      "english": 11,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 2848,
+     "sales": 1269251688
+    },
+    {
+     "name": "당산동5가",
+     "region": "서울-영등포구",
+     "km": 7.0,
+     "academies": {
+      "all": 32,
+      "math": 9,
+      "english": 6,
+      "korean": 8,
+      "science": 1
+     },
+     "students": 1643,
+     "sales": null
+    },
+    {
+     "name": "목동",
+     "region": "서울-양천구",
+     "km": 7.7,
+     "academies": {
+      "all": 731,
+      "math": 245,
+      "english": 139,
+      "korean": 262,
+      "science": 48
+     },
+     "students": 16505,
+     "sales": 60445870754
     }
    ]
   },
@@ -1934,7 +1934,7 @@
     {
      "name": "신림동",
      "region": "서울-관악구",
-     "km": 2.8,
+     "km": 2.9,
      "academies": {
       "all": 122,
       "math": 45,
@@ -1942,22 +1942,8 @@
       "korean": 24,
       "science": 1
      },
-     "students": 6360,
-     "sales": null
-    },
-    {
-     "name": "난곡동",
-     "region": "서울-관악구",
-     "km": 2.9,
-     "academies": {
-      "all": 0,
-      "math": 0,
-      "english": 0,
-      "korean": 0,
-      "science": 0
-     },
-     "students": 530,
-     "sales": 756185658
+     "students": 9925,
+     "sales": 5474692239
     },
     {
      "name": "하안동",
@@ -2020,9 +2006,9 @@
      "region": "서울-동작구",
      "km": 4.9,
      "academies": {
-      "all": 51,
+      "all": 50,
       "math": 19,
-      "english": 12,
+      "english": 11,
       "korean": 11,
       "science": 2
      },
@@ -2046,7 +2032,7 @@
     {
      "name": "봉천동",
      "region": "서울-관악구",
-     "km": 5.2,
+     "km": 5.1,
      "academies": {
       "all": 173,
       "math": 47,
@@ -2054,8 +2040,8 @@
       "korean": 33,
       "science": 6
      },
-     "students": 8789,
-     "sales": null
+     "students": 12066,
+     "sales": 6875088364
     },
     {
      "name": "구로동",
@@ -2146,9 +2132,9 @@
      "region": "서울-동작구",
      "km": 6.4,
      "academies": {
-      "all": 106,
-      "math": 43,
-      "english": 26,
+      "all": 107,
+      "math": 42,
+      "english": 27,
       "korean": 23,
       "science": 4
      },
@@ -2218,8 +2204,8 @@
      "academies": {
       "all": 535,
       "math": 178,
-      "english": 114,
-      "korean": 155,
+      "english": 113,
+      "korean": 156,
       "science": 28
      },
      "students": 19194,
@@ -2244,8 +2230,8 @@
      "region": "서울-양천구",
      "km": 9.9,
      "academies": {
-      "all": 730,
-      "math": 244,
+      "all": 731,
+      "math": 245,
       "english": 139,
       "korean": 262,
       "science": 48
@@ -2257,7 +2243,7 @@
   }
  ],
  "seoulStoreRate": {
-  "close": 0.0905,
-  "open": 0.086
+  "close": 0.0906,
+  "open": 0.0869
  }
 }
