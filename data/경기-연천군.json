@@ -258,6 +258,36 @@
    "center": [
     38.05535,
     127.02389
+   ],
+   "nearby": [
+    {
+     "name": "미산면",
+     "region": "경기-연천군",
+     "km": 1.1,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 35,
+     "sales": null
+    },
+    {
+     "name": "전곡읍",
+     "region": "경기-연천군",
+     "km": 4.4,
+     "academies": {
+      "all": 22,
+      "math": 3,
+      "english": 6,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 1787,
+     "sales": null
+    }
    ]
   },
   {
@@ -401,6 +431,36 @@
    "center": [
     38.05634,
     127.01109
+   ],
+   "nearby": [
+    {
+     "name": "군남면",
+     "region": "경기-연천군",
+     "km": 1.1,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 135,
+     "sales": null
+    },
+    {
+     "name": "전곡읍",
+     "region": "경기-연천군",
+     "km": 5.4,
+     "academies": {
+      "all": 22,
+      "math": 3,
+      "english": 6,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 1787,
+     "sales": null
+    }
    ]
   },
   {
@@ -554,7 +614,8 @@
    "center": [
     38.01913,
     126.91557
-   ]
+   ],
+   "nearby": []
   },
   {
    "name": "신서면",
@@ -702,7 +763,8 @@
    "center": [
     38.18298,
     127.10549
-   ]
+   ],
+   "nearby": []
   },
   {
    "name": "연천읍",
@@ -869,7 +931,8 @@
    "center": [
     38.11238,
     127.07623
-   ]
+   ],
+   "nearby": []
   },
   {
    "name": "전곡읍",
@@ -1147,7 +1210,8 @@
       19
      ]
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "청산면",
@@ -1305,6 +1369,22 @@
    "center": [
     38.02098,
     127.10499
+   ],
+   "nearby": [
+    {
+     "name": "전곡읍",
+     "region": "경기-연천군",
+     "km": 3.7,
+     "academies": {
+      "all": 22,
+      "math": 3,
+      "english": 6,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 1787,
+     "sales": null
+    }
    ]
   }
  ]

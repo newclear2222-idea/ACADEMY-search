@@ -788,7 +788,7 @@ def save(outputs, provinces):
     index = json.loads(index_path.read_text(encoding="utf-8")) if index_path.exists() else []
     index = [r for r in index if r.get("province") in PROVINCES and r["province"] not in provinces]
 
-    keep = {f"{r['id']}.json" for r in index} | {f"{o['id']}.json" for o in outputs} | {"regions.json", "history.json"}
+    keep = {f"{r['id']}.json" for r in index} | {f"{o['id']}.json" for o in outputs} | {"regions.json", "history.json", "centroids.json"}
     for old in DATA_DIR.glob("*.json"):
         if old.name not in keep:
             old.unlink()

@@ -397,7 +397,135 @@
       46
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "증포동",
+     "region": "경기-이천시",
+     "km": 0.6,
+     "academies": {
+      "all": 70,
+      "math": 26,
+      "english": 25,
+      "korean": 3,
+      "science": 3
+     },
+     "students": 3024,
+     "sales": null
+    },
+    {
+     "name": "안흥동",
+     "region": "경기-이천시",
+     "km": 0.7,
+     "academies": {
+      "all": 12,
+      "math": 2,
+      "english": 4,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 2703,
+     "sales": null
+    },
+    {
+     "name": "창전동",
+     "region": "경기-이천시",
+     "km": 0.8,
+     "academies": {
+      "all": 49,
+      "math": 13,
+      "english": 15,
+      "korean": 7,
+      "science": 0
+     },
+     "students": 2327,
+     "sales": null
+    },
+    {
+     "name": "중리동",
+     "region": "경기-이천시",
+     "km": 1.5,
+     "academies": {
+      "all": 12,
+      "math": 3,
+      "english": 5,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 318,
+     "sales": null
+    },
+    {
+     "name": "관고동",
+     "region": "경기-이천시",
+     "km": 1.9,
+     "academies": {
+      "all": 7,
+      "math": 3,
+      "english": 1,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 1217,
+     "sales": null
+    },
+    {
+     "name": "증일동",
+     "region": "경기-이천시",
+     "km": 2.2,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 249,
+     "sales": null
+    },
+    {
+     "name": "송정동",
+     "region": "경기-이천시",
+     "km": 2.3,
+     "academies": {
+      "all": 35,
+      "math": 12,
+      "english": 8,
+      "korean": 4,
+      "science": 2
+     },
+     "students": 1796,
+     "sales": null
+    },
+    {
+     "name": "사음동",
+     "region": "경기-이천시",
+     "km": 2.6,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 576,
+     "sales": null
+    },
+    {
+     "name": "부발읍",
+     "region": "경기-이천시",
+     "km": 3.6,
+     "academies": {
+      "all": 49,
+      "math": 16,
+      "english": 12,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 3214,
+     "sales": null
+    }
+   ]
   },
   {
    "name": "관고동",
@@ -610,6 +738,148 @@
    "center": [
     37.28434,
     127.43632
+   ],
+   "nearby": [
+    {
+     "name": "사음동",
+     "region": "경기-이천시",
+     "km": 1.0,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 576,
+     "sales": null
+    },
+    {
+     "name": "송정동",
+     "region": "경기-이천시",
+     "km": 1.1,
+     "academies": {
+      "all": 35,
+      "math": 12,
+      "english": 8,
+      "korean": 4,
+      "science": 2
+     },
+     "students": 1796,
+     "sales": null
+    },
+    {
+     "name": "창전동",
+     "region": "경기-이천시",
+     "km": 1.1,
+     "academies": {
+      "all": 49,
+      "math": 13,
+      "english": 15,
+      "korean": 7,
+      "science": 0
+     },
+     "students": 2327,
+     "sales": null
+    },
+    {
+     "name": "중리동",
+     "region": "경기-이천시",
+     "km": 1.1,
+     "academies": {
+      "all": 12,
+      "math": 3,
+      "english": 5,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 318,
+     "sales": null
+    },
+    {
+     "name": "증일동",
+     "region": "경기-이천시",
+     "km": 1.4,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 249,
+     "sales": null
+    },
+    {
+     "name": "증포동",
+     "region": "경기-이천시",
+     "km": 1.8,
+     "academies": {
+      "all": 70,
+      "math": 26,
+      "english": 25,
+      "korean": 3,
+      "science": 3
+     },
+     "students": 3024,
+     "sales": null
+    },
+    {
+     "name": "안흥동",
+     "region": "경기-이천시",
+     "km": 1.9,
+     "academies": {
+      "all": 12,
+      "math": 2,
+      "english": 4,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 2703,
+     "sales": null
+    },
+    {
+     "name": "갈산동",
+     "region": "경기-이천시",
+     "km": 1.9,
+     "academies": {
+      "all": 61,
+      "math": 19,
+      "english": 18,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 826,
+     "sales": null
+    },
+    {
+     "name": "부발읍",
+     "region": "경기-이천시",
+     "km": 5.2,
+     "academies": {
+      "all": 49,
+      "math": 16,
+      "english": 12,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 3214,
+     "sales": null
+    },
+    {
+     "name": "마장면",
+     "region": "경기-이천시",
+     "km": 6.9,
+     "academies": {
+      "all": 27,
+      "math": 7,
+      "english": 10,
+      "korean": 6,
+      "science": 0
+     },
+     "students": 1520,
+     "sales": null
+    }
    ]
   },
   {
@@ -753,6 +1023,64 @@
    "center": [
     37.22757,
     127.45171
+   ],
+   "nearby": [
+    {
+     "name": "부발읍",
+     "region": "경기-이천시",
+     "km": 5.5,
+     "academies": {
+      "all": 49,
+      "math": 16,
+      "english": 12,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 3214,
+     "sales": null
+    },
+    {
+     "name": "창전동",
+     "region": "경기-이천시",
+     "km": 6.3,
+     "academies": {
+      "all": 49,
+      "math": 13,
+      "english": 15,
+      "korean": 7,
+      "science": 0
+     },
+     "students": 2327,
+     "sales": null
+    },
+    {
+     "name": "갈산동",
+     "region": "경기-이천시",
+     "km": 6.5,
+     "academies": {
+      "all": 61,
+      "math": 19,
+      "english": 18,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 826,
+     "sales": null
+    },
+    {
+     "name": "증포동",
+     "region": "경기-이천시",
+     "km": 7.0,
+     "academies": {
+      "all": 70,
+      "math": 26,
+      "english": 25,
+      "korean": 3,
+      "science": 3
+     },
+     "students": 3024,
+     "sales": null
+    }
    ]
   },
   {
@@ -988,7 +1316,65 @@
       99
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "부발읍",
+     "region": "경기-이천시",
+     "km": 3.5,
+     "academies": {
+      "all": 49,
+      "math": 16,
+      "english": 12,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 3214,
+     "sales": null
+    },
+    {
+     "name": "갈산동",
+     "region": "경기-이천시",
+     "km": 6.4,
+     "academies": {
+      "all": 61,
+      "math": 19,
+      "english": 18,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 826,
+     "sales": null
+    },
+    {
+     "name": "창전동",
+     "region": "경기-이천시",
+     "km": 6.7,
+     "academies": {
+      "all": 49,
+      "math": 13,
+      "english": 15,
+      "korean": 7,
+      "science": 0
+     },
+     "students": 2327,
+     "sales": null
+    },
+    {
+     "name": "증포동",
+     "region": "경기-이천시",
+     "km": 7.0,
+     "academies": {
+      "all": 70,
+      "math": 26,
+      "english": 25,
+      "korean": 3,
+      "science": 3
+     },
+     "students": 3024,
+     "sales": null
+    }
+   ]
   },
   {
    "name": "마장면",
@@ -1343,7 +1729,8 @@
       12
      ]
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "모가면",
@@ -1505,7 +1892,8 @@
    "center": [
     37.1678,
     127.47877
-   ]
+   ],
+   "nearby": []
   },
   {
    "name": "백사면",
@@ -1732,7 +2120,79 @@
       88
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "증포동",
+     "region": "경기-이천시",
+     "km": 4.4,
+     "academies": {
+      "all": 70,
+      "math": 26,
+      "english": 25,
+      "korean": 3,
+      "science": 3
+     },
+     "students": 3024,
+     "sales": null
+    },
+    {
+     "name": "갈산동",
+     "region": "경기-이천시",
+     "km": 4.7,
+     "academies": {
+      "all": 61,
+      "math": 19,
+      "english": 18,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 826,
+     "sales": null
+    },
+    {
+     "name": "창전동",
+     "region": "경기-이천시",
+     "km": 5.2,
+     "academies": {
+      "all": 49,
+      "math": 13,
+      "english": 15,
+      "korean": 7,
+      "science": 0
+     },
+     "students": 2327,
+     "sales": null
+    },
+    {
+     "name": "송정동",
+     "region": "경기-이천시",
+     "km": 5.4,
+     "academies": {
+      "all": 35,
+      "math": 12,
+      "english": 8,
+      "korean": 4,
+      "science": 2
+     },
+     "students": 1796,
+     "sales": null
+    },
+    {
+     "name": "부발읍",
+     "region": "경기-이천시",
+     "km": 6.4,
+     "academies": {
+      "all": 49,
+      "math": 16,
+      "english": 12,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 3214,
+     "sales": null
+    }
+   ]
   },
   {
    "name": "부발읍",
@@ -2038,7 +2498,65 @@
       67
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "갈산동",
+     "region": "경기-이천시",
+     "km": 3.6,
+     "academies": {
+      "all": 61,
+      "math": 19,
+      "english": 18,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 826,
+     "sales": null
+    },
+    {
+     "name": "증포동",
+     "region": "경기-이천시",
+     "km": 4.1,
+     "academies": {
+      "all": 70,
+      "math": 26,
+      "english": 25,
+      "korean": 3,
+      "science": 3
+     },
+     "students": 3024,
+     "sales": null
+    },
+    {
+     "name": "창전동",
+     "region": "경기-이천시",
+     "km": 4.2,
+     "academies": {
+      "all": 49,
+      "math": 13,
+      "english": 15,
+      "korean": 7,
+      "science": 0
+     },
+     "students": 2327,
+     "sales": null
+    },
+    {
+     "name": "송정동",
+     "region": "경기-이천시",
+     "km": 5.9,
+     "academies": {
+      "all": 35,
+      "math": 12,
+      "english": 8,
+      "korean": 4,
+      "science": 2
+     },
+     "students": 1796,
+     "sales": null
+    }
+   ]
   },
   {
    "name": "사음동",
@@ -2181,6 +2699,162 @@
    "center": [
     37.29104,
     127.42892
+   ],
+   "nearby": [
+    {
+     "name": "송정동",
+     "region": "경기-이천시",
+     "km": 0.5,
+     "academies": {
+      "all": 35,
+      "math": 12,
+      "english": 8,
+      "korean": 4,
+      "science": 2
+     },
+     "students": 1796,
+     "sales": null
+    },
+    {
+     "name": "관고동",
+     "region": "경기-이천시",
+     "km": 1.0,
+     "academies": {
+      "all": 7,
+      "math": 3,
+      "english": 1,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 1217,
+     "sales": null
+    },
+    {
+     "name": "창전동",
+     "region": "경기-이천시",
+     "km": 1.9,
+     "academies": {
+      "all": 49,
+      "math": 13,
+      "english": 15,
+      "korean": 7,
+      "science": 0
+     },
+     "students": 2327,
+     "sales": null
+    },
+    {
+     "name": "신둔면",
+     "region": "경기-이천시",
+     "km": 2.1,
+     "academies": {
+      "all": 7,
+      "math": 2,
+      "english": 4,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 721,
+     "sales": null
+    },
+    {
+     "name": "중리동",
+     "region": "경기-이천시",
+     "km": 2.1,
+     "academies": {
+      "all": 12,
+      "math": 3,
+      "english": 5,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 318,
+     "sales": null
+    },
+    {
+     "name": "증포동",
+     "region": "경기-이천시",
+     "km": 2.3,
+     "academies": {
+      "all": 70,
+      "math": 26,
+      "english": 25,
+      "korean": 3,
+      "science": 3
+     },
+     "students": 3024,
+     "sales": null
+    },
+    {
+     "name": "증일동",
+     "region": "경기-이천시",
+     "km": 2.3,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 249,
+     "sales": null
+    },
+    {
+     "name": "갈산동",
+     "region": "경기-이천시",
+     "km": 2.6,
+     "academies": {
+      "all": 61,
+      "math": 19,
+      "english": 18,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 826,
+     "sales": null
+    },
+    {
+     "name": "안흥동",
+     "region": "경기-이천시",
+     "km": 2.8,
+     "academies": {
+      "all": 12,
+      "math": 2,
+      "english": 4,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 2703,
+     "sales": null
+    },
+    {
+     "name": "부발읍",
+     "region": "경기-이천시",
+     "km": 6.1,
+     "academies": {
+      "all": 49,
+      "math": 16,
+      "english": 12,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 3214,
+     "sales": null
+    },
+    {
+     "name": "마장면",
+     "region": "경기-이천시",
+     "km": 6.8,
+     "academies": {
+      "all": 27,
+      "math": 7,
+      "english": 10,
+      "korean": 6,
+      "science": 0
+     },
+     "students": 1520,
+     "sales": null
+    }
    ]
   },
   {
@@ -2348,7 +3022,8 @@
    "center": [
     37.13199,
     127.52586
-   ]
+   ],
+   "nearby": []
   },
   {
    "name": "송정동",
@@ -2703,7 +3378,149 @@
       37
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "사음동",
+     "region": "경기-이천시",
+     "km": 0.5,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 576,
+     "sales": null
+    },
+    {
+     "name": "관고동",
+     "region": "경기-이천시",
+     "km": 1.1,
+     "academies": {
+      "all": 7,
+      "math": 3,
+      "english": 1,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 1217,
+     "sales": null
+    },
+    {
+     "name": "창전동",
+     "region": "경기-이천시",
+     "km": 1.7,
+     "academies": {
+      "all": 49,
+      "math": 13,
+      "english": 15,
+      "korean": 7,
+      "science": 0
+     },
+     "students": 2327,
+     "sales": null
+    },
+    {
+     "name": "증포동",
+     "region": "경기-이천시",
+     "km": 2.0,
+     "academies": {
+      "all": 70,
+      "math": 26,
+      "english": 25,
+      "korean": 3,
+      "science": 3
+     },
+     "students": 3024,
+     "sales": null
+    },
+    {
+     "name": "신둔면",
+     "region": "경기-이천시",
+     "km": 2.1,
+     "academies": {
+      "all": 7,
+      "math": 2,
+      "english": 4,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 721,
+     "sales": null
+    },
+    {
+     "name": "중리동",
+     "region": "경기-이천시",
+     "km": 2.1,
+     "academies": {
+      "all": 12,
+      "math": 3,
+      "english": 5,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 318,
+     "sales": null
+    },
+    {
+     "name": "갈산동",
+     "region": "경기-이천시",
+     "km": 2.3,
+     "academies": {
+      "all": 61,
+      "math": 19,
+      "english": 18,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 826,
+     "sales": null
+    },
+    {
+     "name": "증일동",
+     "region": "경기-이천시",
+     "km": 2.5,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 249,
+     "sales": null
+    },
+    {
+     "name": "안흥동",
+     "region": "경기-이천시",
+     "km": 2.6,
+     "academies": {
+      "all": 12,
+      "math": 2,
+      "english": 4,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 2703,
+     "sales": null
+    },
+    {
+     "name": "부발읍",
+     "region": "경기-이천시",
+     "km": 5.9,
+     "academies": {
+      "all": 49,
+      "math": 16,
+      "english": 12,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 3214,
+     "sales": null
+    }
+   ]
   },
   {
    "name": "신둔면",
@@ -2929,7 +3746,79 @@
       67
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "사음동",
+     "region": "경기-이천시",
+     "km": 2.1,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 576,
+     "sales": null
+    },
+    {
+     "name": "송정동",
+     "region": "경기-이천시",
+     "km": 2.1,
+     "academies": {
+      "all": 35,
+      "math": 12,
+      "english": 8,
+      "korean": 4,
+      "science": 2
+     },
+     "students": 1796,
+     "sales": null
+    },
+    {
+     "name": "창전동",
+     "region": "경기-이천시",
+     "km": 3.8,
+     "academies": {
+      "all": 49,
+      "math": 13,
+      "english": 15,
+      "korean": 7,
+      "science": 0
+     },
+     "students": 2327,
+     "sales": null
+    },
+    {
+     "name": "증포동",
+     "region": "경기-이천시",
+     "km": 4.0,
+     "academies": {
+      "all": 70,
+      "math": 26,
+      "english": 25,
+      "korean": 3,
+      "science": 3
+     },
+     "students": 3024,
+     "sales": null
+    },
+    {
+     "name": "갈산동",
+     "region": "경기-이천시",
+     "km": 4.4,
+     "academies": {
+      "all": 61,
+      "math": 19,
+      "english": 18,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 826,
+     "sales": null
+    }
+   ]
   },
   {
    "name": "안흥동",
@@ -3198,7 +4087,135 @@
       58
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "갈산동",
+     "region": "경기-이천시",
+     "km": 0.7,
+     "academies": {
+      "all": 61,
+      "math": 19,
+      "english": 18,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 826,
+     "sales": null
+    },
+    {
+     "name": "창전동",
+     "region": "경기-이천시",
+     "km": 0.9,
+     "academies": {
+      "all": 49,
+      "math": 13,
+      "english": 15,
+      "korean": 7,
+      "science": 0
+     },
+     "students": 2327,
+     "sales": null
+    },
+    {
+     "name": "중리동",
+     "region": "경기-이천시",
+     "km": 1.2,
+     "academies": {
+      "all": 12,
+      "math": 3,
+      "english": 5,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 318,
+     "sales": null
+    },
+    {
+     "name": "증포동",
+     "region": "경기-이천시",
+     "km": 1.2,
+     "academies": {
+      "all": 70,
+      "math": 26,
+      "english": 25,
+      "korean": 3,
+      "science": 3
+     },
+     "students": 3024,
+     "sales": null
+    },
+    {
+     "name": "증일동",
+     "region": "경기-이천시",
+     "km": 1.8,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 249,
+     "sales": null
+    },
+    {
+     "name": "관고동",
+     "region": "경기-이천시",
+     "km": 1.9,
+     "academies": {
+      "all": 7,
+      "math": 3,
+      "english": 1,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 1217,
+     "sales": null
+    },
+    {
+     "name": "송정동",
+     "region": "경기-이천시",
+     "km": 2.6,
+     "academies": {
+      "all": 35,
+      "math": 12,
+      "english": 8,
+      "korean": 4,
+      "science": 2
+     },
+     "students": 1796,
+     "sales": null
+    },
+    {
+     "name": "사음동",
+     "region": "경기-이천시",
+     "km": 2.8,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 576,
+     "sales": null
+    },
+    {
+     "name": "부발읍",
+     "region": "경기-이천시",
+     "km": 3.3,
+     "academies": {
+      "all": 49,
+      "math": 16,
+      "english": 12,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 3214,
+     "sales": null
+    }
+   ]
   },
   {
    "name": "율면",
@@ -3351,7 +4368,8 @@
    "center": [
     37.0877,
     127.54272
-   ]
+   ],
+   "nearby": []
   },
   {
    "name": "장호원읍",
@@ -3618,7 +4636,8 @@
       2
      ]
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "중리동",
@@ -3863,6 +4882,134 @@
    "center": [
     37.27679,
     127.44423
+   ],
+   "nearby": [
+    {
+     "name": "증일동",
+     "region": "경기-이천시",
+     "km": 0.7,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 249,
+     "sales": null
+    },
+    {
+     "name": "창전동",
+     "region": "경기-이천시",
+     "km": 0.9,
+     "academies": {
+      "all": 49,
+      "math": 13,
+      "english": 15,
+      "korean": 7,
+      "science": 0
+     },
+     "students": 2327,
+     "sales": null
+    },
+    {
+     "name": "관고동",
+     "region": "경기-이천시",
+     "km": 1.1,
+     "academies": {
+      "all": 7,
+      "math": 3,
+      "english": 1,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 1217,
+     "sales": null
+    },
+    {
+     "name": "안흥동",
+     "region": "경기-이천시",
+     "km": 1.2,
+     "academies": {
+      "all": 12,
+      "math": 2,
+      "english": 4,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 2703,
+     "sales": null
+    },
+    {
+     "name": "갈산동",
+     "region": "경기-이천시",
+     "km": 1.5,
+     "academies": {
+      "all": 61,
+      "math": 19,
+      "english": 18,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 826,
+     "sales": null
+    },
+    {
+     "name": "증포동",
+     "region": "경기-이천시",
+     "km": 1.8,
+     "academies": {
+      "all": 70,
+      "math": 26,
+      "english": 25,
+      "korean": 3,
+      "science": 3
+     },
+     "students": 3024,
+     "sales": null
+    },
+    {
+     "name": "사음동",
+     "region": "경기-이천시",
+     "km": 2.1,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 576,
+     "sales": null
+    },
+    {
+     "name": "송정동",
+     "region": "경기-이천시",
+     "km": 2.1,
+     "academies": {
+      "all": 35,
+      "math": 12,
+      "english": 8,
+      "korean": 4,
+      "science": 2
+     },
+     "students": 1796,
+     "sales": null
+    },
+    {
+     "name": "부발읍",
+     "region": "경기-이천시",
+     "km": 4.2,
+     "academies": {
+      "all": 49,
+      "math": 16,
+      "english": 12,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 3214,
+     "sales": null
+    }
    ]
   },
   {
@@ -4006,6 +5153,148 @@
    "center": [
     37.27171,
     127.43957
+   ],
+   "nearby": [
+    {
+     "name": "중리동",
+     "region": "경기-이천시",
+     "km": 0.7,
+     "academies": {
+      "all": 12,
+      "math": 3,
+      "english": 5,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 318,
+     "sales": null
+    },
+    {
+     "name": "관고동",
+     "region": "경기-이천시",
+     "km": 1.4,
+     "academies": {
+      "all": 7,
+      "math": 3,
+      "english": 1,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 1217,
+     "sales": null
+    },
+    {
+     "name": "창전동",
+     "region": "경기-이천시",
+     "km": 1.6,
+     "academies": {
+      "all": 49,
+      "math": 13,
+      "english": 15,
+      "korean": 7,
+      "science": 0
+     },
+     "students": 2327,
+     "sales": null
+    },
+    {
+     "name": "안흥동",
+     "region": "경기-이천시",
+     "km": 1.8,
+     "academies": {
+      "all": 12,
+      "math": 2,
+      "english": 4,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 2703,
+     "sales": null
+    },
+    {
+     "name": "갈산동",
+     "region": "경기-이천시",
+     "km": 2.2,
+     "academies": {
+      "all": 61,
+      "math": 19,
+      "english": 18,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 826,
+     "sales": null
+    },
+    {
+     "name": "사음동",
+     "region": "경기-이천시",
+     "km": 2.3,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 576,
+     "sales": null
+    },
+    {
+     "name": "증포동",
+     "region": "경기-이천시",
+     "km": 2.5,
+     "academies": {
+      "all": 70,
+      "math": 26,
+      "english": 25,
+      "korean": 3,
+      "science": 3
+     },
+     "students": 3024,
+     "sales": null
+    },
+    {
+     "name": "송정동",
+     "region": "경기-이천시",
+     "km": 2.5,
+     "academies": {
+      "all": 35,
+      "math": 12,
+      "english": 8,
+      "korean": 4,
+      "science": 2
+     },
+     "students": 1796,
+     "sales": null
+    },
+    {
+     "name": "부발읍",
+     "region": "경기-이천시",
+     "km": 4.5,
+     "academies": {
+      "all": 49,
+      "math": 16,
+      "english": 12,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 3214,
+     "sales": null
+    },
+    {
+     "name": "마장면",
+     "region": "경기-이천시",
+     "km": 6.6,
+     "academies": {
+      "all": 27,
+      "math": 7,
+      "english": 10,
+      "korean": 6,
+      "science": 0
+     },
+     "students": 1520,
+     "sales": null
+    }
    ]
   },
   {
@@ -4355,7 +5644,135 @@
       19
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "갈산동",
+     "region": "경기-이천시",
+     "km": 0.6,
+     "academies": {
+      "all": 61,
+      "math": 19,
+      "english": 18,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 826,
+     "sales": null
+    },
+    {
+     "name": "창전동",
+     "region": "경기-이천시",
+     "km": 0.9,
+     "academies": {
+      "all": 49,
+      "math": 13,
+      "english": 15,
+      "korean": 7,
+      "science": 0
+     },
+     "students": 2327,
+     "sales": null
+    },
+    {
+     "name": "안흥동",
+     "region": "경기-이천시",
+     "km": 1.2,
+     "academies": {
+      "all": 12,
+      "math": 2,
+      "english": 4,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 2703,
+     "sales": null
+    },
+    {
+     "name": "중리동",
+     "region": "경기-이천시",
+     "km": 1.8,
+     "academies": {
+      "all": 12,
+      "math": 3,
+      "english": 5,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 318,
+     "sales": null
+    },
+    {
+     "name": "관고동",
+     "region": "경기-이천시",
+     "km": 1.8,
+     "academies": {
+      "all": 7,
+      "math": 3,
+      "english": 1,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 1217,
+     "sales": null
+    },
+    {
+     "name": "송정동",
+     "region": "경기-이천시",
+     "km": 2.0,
+     "academies": {
+      "all": 35,
+      "math": 12,
+      "english": 8,
+      "korean": 4,
+      "science": 2
+     },
+     "students": 1796,
+     "sales": null
+    },
+    {
+     "name": "사음동",
+     "region": "경기-이천시",
+     "km": 2.3,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 576,
+     "sales": null
+    },
+    {
+     "name": "증일동",
+     "region": "경기-이천시",
+     "km": 2.5,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 249,
+     "sales": null
+    },
+    {
+     "name": "부발읍",
+     "region": "경기-이천시",
+     "km": 4.1,
+     "academies": {
+      "all": 49,
+      "math": 16,
+      "english": 12,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 3214,
+     "sales": null
+    }
+   ]
   },
   {
    "name": "창전동",
@@ -4673,7 +6090,135 @@
       16
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "갈산동",
+     "region": "경기-이천시",
+     "km": 0.8,
+     "academies": {
+      "all": 61,
+      "math": 19,
+      "english": 18,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 826,
+     "sales": null
+    },
+    {
+     "name": "증포동",
+     "region": "경기-이천시",
+     "km": 0.9,
+     "academies": {
+      "all": 70,
+      "math": 26,
+      "english": 25,
+      "korean": 3,
+      "science": 3
+     },
+     "students": 3024,
+     "sales": null
+    },
+    {
+     "name": "안흥동",
+     "region": "경기-이천시",
+     "km": 0.9,
+     "academies": {
+      "all": 12,
+      "math": 2,
+      "english": 4,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 2703,
+     "sales": null
+    },
+    {
+     "name": "중리동",
+     "region": "경기-이천시",
+     "km": 0.9,
+     "academies": {
+      "all": 12,
+      "math": 3,
+      "english": 5,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 318,
+     "sales": null
+    },
+    {
+     "name": "관고동",
+     "region": "경기-이천시",
+     "km": 1.1,
+     "academies": {
+      "all": 7,
+      "math": 3,
+      "english": 1,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 1217,
+     "sales": null
+    },
+    {
+     "name": "증일동",
+     "region": "경기-이천시",
+     "km": 1.6,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 249,
+     "sales": null
+    },
+    {
+     "name": "송정동",
+     "region": "경기-이천시",
+     "km": 1.7,
+     "academies": {
+      "all": 35,
+      "math": 12,
+      "english": 8,
+      "korean": 4,
+      "science": 2
+     },
+     "students": 1796,
+     "sales": null
+    },
+    {
+     "name": "사음동",
+     "region": "경기-이천시",
+     "km": 1.9,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 576,
+     "sales": null
+    },
+    {
+     "name": "부발읍",
+     "region": "경기-이천시",
+     "km": 4.2,
+     "academies": {
+      "all": 49,
+      "math": 16,
+      "english": 12,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 3214,
+     "sales": null
+    }
+   ]
   },
   {
    "name": "호법면",
@@ -4830,6 +6375,22 @@
    "center": [
     37.21948,
     127.41089
+   ],
+   "nearby": [
+    {
+     "name": "마장면",
+     "region": "경기-이천시",
+     "km": 5.4,
+     "academies": {
+      "all": 27,
+      "math": 7,
+      "english": 10,
+      "korean": 6,
+      "science": 0
+     },
+     "students": 1520,
+     "sales": null
+    }
    ]
   }
  ]

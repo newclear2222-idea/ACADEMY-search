@@ -251,7 +251,429 @@
      "science": 0
     }
    },
-   "sales": 2854260080
+   "sales": 2854260080,
+   "nearby": [
+    {
+     "name": "영등포동7가",
+     "region": "서울-영등포구",
+     "km": 0.4,
+     "academies": {
+      "all": 4,
+      "math": 1,
+      "english": 1,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 353,
+     "sales": null
+    },
+    {
+     "name": "당산동6가",
+     "region": "서울-영등포구",
+     "km": 0.6,
+     "academies": {
+      "all": 1,
+      "math": 1,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 776,
+     "sales": null
+    },
+    {
+     "name": "당산동5가",
+     "region": "서울-영등포구",
+     "km": 0.6,
+     "academies": {
+      "all": 32,
+      "math": 9,
+      "english": 6,
+      "korean": 8,
+      "science": 1
+     },
+     "students": 1643,
+     "sales": null
+    },
+    {
+     "name": "양평동3가",
+     "region": "서울-영등포구",
+     "km": 1.0,
+     "academies": {
+      "all": 15,
+      "math": 5,
+      "english": 2,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 600,
+     "sales": null
+    },
+    {
+     "name": "양평동",
+     "region": "서울-영등포구",
+     "km": 1.0,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 534,
+     "sales": 703938562
+    },
+    {
+     "name": "문래동3가",
+     "region": "서울-영등포구",
+     "km": 1.1,
+     "academies": {
+      "all": 34,
+      "math": 10,
+      "english": 6,
+      "korean": 12,
+      "science": 3
+     },
+     "students": 1534,
+     "sales": null
+    },
+    {
+     "name": "양평동4가",
+     "region": "서울-영등포구",
+     "km": 1.3,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 1348,
+     "sales": null
+    },
+    {
+     "name": "문래동6가",
+     "region": "서울-영등포구",
+     "km": 1.6,
+     "academies": {
+      "all": 15,
+      "math": 6,
+      "english": 5,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 1608,
+     "sales": null
+    },
+    {
+     "name": "문래동1가",
+     "region": "서울-영등포구",
+     "km": 1.6,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 262,
+     "sales": null
+    },
+    {
+     "name": "영등포동",
+     "region": "서울-영등포구",
+     "km": 1.6,
+     "academies": {
+      "all": 9,
+      "math": 2,
+      "english": 3,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 873,
+     "sales": 401316797
+    },
+    {
+     "name": "양평동2가",
+     "region": "서울-영등포구",
+     "km": 1.7,
+     "academies": {
+      "all": 4,
+      "math": 3,
+      "english": 1,
+      "korean": 1,
+      "science": 1
+     },
+     "students": 687,
+     "sales": null
+    },
+    {
+     "name": "도림동",
+     "region": "서울-영등포구",
+     "km": 1.9,
+     "academies": {
+      "all": 12,
+      "math": 3,
+      "english": 1,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 833780241
+    },
+    {
+     "name": "신도림동",
+     "region": "서울-구로구",
+     "km": 2.4,
+     "academies": {
+      "all": 69,
+      "math": 28,
+      "english": 15,
+      "korean": 21,
+      "science": 2
+     },
+     "students": 3416,
+     "sales": 5521012975
+    },
+    {
+     "name": "목동",
+     "region": "서울-양천구",
+     "km": 2.5,
+     "academies": {
+      "all": 730,
+      "math": 244,
+      "english": 139,
+      "korean": 262,
+      "science": 48
+     },
+     "students": 16505,
+     "sales": 60445870754
+    },
+    {
+     "name": "신길동",
+     "region": "서울-영등포구",
+     "km": 2.5,
+     "academies": {
+      "all": 137,
+      "math": 47,
+      "english": 40,
+      "korean": 27,
+      "science": 6
+     },
+     "students": 7432,
+     "sales": 5898982454
+    },
+    {
+     "name": "여의도동",
+     "region": "서울-영등포구",
+     "km": 2.7,
+     "academies": {
+      "all": 43,
+      "math": 10,
+      "english": 7,
+      "korean": 11,
+      "science": 0
+     },
+     "students": 3146,
+     "sales": null
+    },
+    {
+     "name": "합정동",
+     "region": "서울-마포구",
+     "km": 2.8,
+     "academies": {
+      "all": 8,
+      "math": 1,
+      "english": 2,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 930,
+     "sales": 891955141
+    },
+    {
+     "name": "대방동",
+     "region": "서울-동작구",
+     "km": 3.3,
+     "academies": {
+      "all": 102,
+      "math": 41,
+      "english": 20,
+      "korean": 27,
+      "science": 3
+     },
+     "students": 5937,
+     "sales": 9536007389
+    },
+    {
+     "name": "대림동",
+     "region": "서울-영등포구",
+     "km": 3.6,
+     "academies": {
+      "all": 28,
+      "math": 3,
+      "english": 2,
+      "korean": 7,
+      "science": 1
+     },
+     "students": 2192,
+     "sales": 1175404361
+    },
+    {
+     "name": "망원동",
+     "region": "서울-마포구",
+     "km": 3.6,
+     "academies": {
+      "all": 36,
+      "math": 14,
+      "english": 11,
+      "korean": 5,
+      "science": 1
+     },
+     "students": 700,
+     "sales": 1095743722
+    },
+    {
+     "name": "구로동",
+     "region": "서울-구로구",
+     "km": 3.8,
+     "academies": {
+      "all": 82,
+      "math": 28,
+      "english": 24,
+      "korean": 14,
+      "science": 1
+     },
+     "students": 7491,
+     "sales": 3038001195
+    },
+    {
+     "name": "신수동",
+     "region": "서울-마포구",
+     "km": 3.8,
+     "academies": {
+      "all": 44,
+      "math": 15,
+      "english": 7,
+      "korean": 20,
+      "science": 5
+     },
+     "students": 2045,
+     "sales": 1496385265
+    },
+    {
+     "name": "신대방동",
+     "region": "서울-동작구",
+     "km": 3.9,
+     "academies": {
+      "all": 51,
+      "math": 19,
+      "english": 12,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 3087,
+     "sales": 1121265721
+    },
+    {
+     "name": "염창동",
+     "region": "서울-강서구",
+     "km": 4.0,
+     "academies": {
+      "all": 86,
+      "math": 30,
+      "english": 20,
+      "korean": 27,
+      "science": 1
+     },
+     "students": 3573,
+     "sales": 2890908605
+    },
+    {
+     "name": "성산동",
+     "region": "서울-마포구",
+     "km": 4.1,
+     "academies": {
+      "all": 49,
+      "math": 16,
+      "english": 12,
+      "korean": 9,
+      "science": 0
+     },
+     "students": 3076,
+     "sales": 2642921814
+    },
+    {
+     "name": "신정동",
+     "region": "서울-양천구",
+     "km": 4.2,
+     "academies": {
+      "all": 535,
+      "math": 178,
+      "english": 114,
+      "korean": 155,
+      "science": 28
+     },
+     "students": 19194,
+     "sales": 41067141471
+    },
+    {
+     "name": "노량진동",
+     "region": "서울-동작구",
+     "km": 4.4,
+     "academies": {
+      "all": 22,
+      "math": 7,
+      "english": 4,
+      "korean": 9,
+      "science": 0
+     },
+     "students": 231,
+     "sales": 12419797289
+    },
+    {
+     "name": "도화동",
+     "region": "서울-마포구",
+     "km": 4.4,
+     "academies": {
+      "all": 26,
+      "math": 9,
+      "english": 8,
+      "korean": 4,
+      "science": 1
+     },
+     "students": 626,
+     "sales": 903123468
+    },
+    {
+     "name": "대흥동",
+     "region": "서울-마포구",
+     "km": 4.6,
+     "academies": {
+      "all": 77,
+      "math": 23,
+      "english": 19,
+      "korean": 25,
+      "science": 2
+     },
+     "students": 1610,
+     "sales": 4610372236
+    },
+    {
+     "name": "염리동",
+     "region": "서울-마포구",
+     "km": 4.7,
+     "academies": {
+      "all": 51,
+      "math": 22,
+      "english": 11,
+      "korean": 19,
+      "science": 2
+     },
+     "students": 4365,
+     "sales": 3593853243
+    }
+   ]
   },
   {
    "name": "당산동1가",
@@ -1318,7 +1740,429 @@
       53
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "양평동3가",
+     "region": "서울-영등포구",
+     "km": 0.5,
+     "academies": {
+      "all": 15,
+      "math": 5,
+      "english": 2,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 600,
+     "sales": null
+    },
+    {
+     "name": "당산동",
+     "region": "서울-영등포구",
+     "km": 0.6,
+     "academies": {
+      "all": 1,
+      "math": 1,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 2854260080
+    },
+    {
+     "name": "양평동4가",
+     "region": "서울-영등포구",
+     "km": 0.6,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 1348,
+     "sales": null
+    },
+    {
+     "name": "당산동6가",
+     "region": "서울-영등포구",
+     "km": 0.8,
+     "academies": {
+      "all": 1,
+      "math": 1,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 776,
+     "sales": null
+    },
+    {
+     "name": "양평동",
+     "region": "서울-영등포구",
+     "km": 1.0,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 534,
+     "sales": 703938562
+    },
+    {
+     "name": "영등포동7가",
+     "region": "서울-영등포구",
+     "km": 1.0,
+     "academies": {
+      "all": 4,
+      "math": 1,
+      "english": 1,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 353,
+     "sales": null
+    },
+    {
+     "name": "문래동3가",
+     "region": "서울-영등포구",
+     "km": 1.5,
+     "academies": {
+      "all": 34,
+      "math": 10,
+      "english": 6,
+      "korean": 12,
+      "science": 3
+     },
+     "students": 1534,
+     "sales": null
+    },
+    {
+     "name": "문래동6가",
+     "region": "서울-영등포구",
+     "km": 1.8,
+     "academies": {
+      "all": 15,
+      "math": 6,
+      "english": 5,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 1608,
+     "sales": null
+    },
+    {
+     "name": "양평동2가",
+     "region": "서울-영등포구",
+     "km": 1.8,
+     "academies": {
+      "all": 4,
+      "math": 3,
+      "english": 1,
+      "korean": 1,
+      "science": 1
+     },
+     "students": 687,
+     "sales": null
+    },
+    {
+     "name": "목동",
+     "region": "서울-양천구",
+     "km": 2.1,
+     "academies": {
+      "all": 730,
+      "math": 244,
+      "english": 139,
+      "korean": 262,
+      "science": 48
+     },
+     "students": 16505,
+     "sales": 60445870754
+    },
+    {
+     "name": "문래동1가",
+     "region": "서울-영등포구",
+     "km": 2.1,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 262,
+     "sales": null
+    },
+    {
+     "name": "영등포동",
+     "region": "서울-영등포구",
+     "km": 2.3,
+     "academies": {
+      "all": 9,
+      "math": 2,
+      "english": 3,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 873,
+     "sales": 401316797
+    },
+    {
+     "name": "합정동",
+     "region": "서울-마포구",
+     "km": 2.4,
+     "academies": {
+      "all": 8,
+      "math": 1,
+      "english": 2,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 930,
+     "sales": 891955141
+    },
+    {
+     "name": "도림동",
+     "region": "서울-영등포구",
+     "km": 2.5,
+     "academies": {
+      "all": 12,
+      "math": 3,
+      "english": 1,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 833780241
+    },
+    {
+     "name": "신도림동",
+     "region": "서울-구로구",
+     "km": 2.8,
+     "academies": {
+      "all": 69,
+      "math": 28,
+      "english": 15,
+      "korean": 21,
+      "science": 2
+     },
+     "students": 3416,
+     "sales": 5521012975
+    },
+    {
+     "name": "망원동",
+     "region": "서울-마포구",
+     "km": 3.0,
+     "academies": {
+      "all": 36,
+      "math": 14,
+      "english": 11,
+      "korean": 5,
+      "science": 1
+     },
+     "students": 700,
+     "sales": 1095743722
+    },
+    {
+     "name": "여의도동",
+     "region": "서울-영등포구",
+     "km": 3.1,
+     "academies": {
+      "all": 43,
+      "math": 10,
+      "english": 7,
+      "korean": 11,
+      "science": 0
+     },
+     "students": 3146,
+     "sales": null
+    },
+    {
+     "name": "신길동",
+     "region": "서울-영등포구",
+     "km": 3.2,
+     "academies": {
+      "all": 137,
+      "math": 47,
+      "english": 40,
+      "korean": 27,
+      "science": 6
+     },
+     "students": 7432,
+     "sales": 5898982454
+    },
+    {
+     "name": "염창동",
+     "region": "서울-강서구",
+     "km": 3.5,
+     "academies": {
+      "all": 86,
+      "math": 30,
+      "english": 20,
+      "korean": 27,
+      "science": 1
+     },
+     "students": 3573,
+     "sales": 2890908605
+    },
+    {
+     "name": "성산동",
+     "region": "서울-마포구",
+     "km": 3.6,
+     "academies": {
+      "all": 49,
+      "math": 16,
+      "english": 12,
+      "korean": 9,
+      "science": 0
+     },
+     "students": 3076,
+     "sales": 2642921814
+    },
+    {
+     "name": "신수동",
+     "region": "서울-마포구",
+     "km": 3.7,
+     "academies": {
+      "all": 44,
+      "math": 15,
+      "english": 7,
+      "korean": 20,
+      "science": 5
+     },
+     "students": 2045,
+     "sales": 1496385265
+    },
+    {
+     "name": "대방동",
+     "region": "서울-동작구",
+     "km": 3.9,
+     "academies": {
+      "all": 102,
+      "math": 41,
+      "english": 20,
+      "korean": 27,
+      "science": 3
+     },
+     "students": 5937,
+     "sales": 9536007389
+    },
+    {
+     "name": "대림동",
+     "region": "서울-영등포구",
+     "km": 4.2,
+     "academies": {
+      "all": 28,
+      "math": 3,
+      "english": 2,
+      "korean": 7,
+      "science": 1
+     },
+     "students": 2192,
+     "sales": 1175404361
+    },
+    {
+     "name": "신정동",
+     "region": "서울-양천구",
+     "km": 4.2,
+     "academies": {
+      "all": 535,
+      "math": 178,
+      "english": 114,
+      "korean": 155,
+      "science": 28
+     },
+     "students": 19194,
+     "sales": 41067141471
+    },
+    {
+     "name": "구로동",
+     "region": "서울-구로구",
+     "km": 4.2,
+     "academies": {
+      "all": 82,
+      "math": 28,
+      "english": 24,
+      "korean": 14,
+      "science": 1
+     },
+     "students": 7491,
+     "sales": 3038001195
+    },
+    {
+     "name": "화곡동",
+     "region": "서울-강서구",
+     "km": 4.5,
+     "academies": {
+      "all": 188,
+      "math": 60,
+      "english": 44,
+      "korean": 47,
+      "science": 2
+     },
+     "students": 6321,
+     "sales": 5316460178
+    },
+    {
+     "name": "대흥동",
+     "region": "서울-마포구",
+     "km": 4.5,
+     "academies": {
+      "all": 77,
+      "math": 23,
+      "english": 19,
+      "korean": 25,
+      "science": 2
+     },
+     "students": 1610,
+     "sales": 4610372236
+    },
+    {
+     "name": "신대방동",
+     "region": "서울-동작구",
+     "km": 4.5,
+     "academies": {
+      "all": 51,
+      "math": 19,
+      "english": 12,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 3087,
+     "sales": 1121265721
+    },
+    {
+     "name": "도화동",
+     "region": "서울-마포구",
+     "km": 4.5,
+     "academies": {
+      "all": 26,
+      "math": 9,
+      "english": 8,
+      "korean": 4,
+      "science": 1
+     },
+     "students": 626,
+     "sales": 903123468
+    },
+    {
+     "name": "염리동",
+     "region": "서울-마포구",
+     "km": 4.6,
+     "academies": {
+      "all": 51,
+      "math": 22,
+      "english": 11,
+      "korean": 19,
+      "science": 2
+     },
+     "students": 4365,
+     "sales": 3593853243
+    }
+   ]
   },
   {
    "name": "당산동6가",
@@ -1467,7 +2311,429 @@
     37.52947,
     126.90764
    ],
-   "sales": null
+   "sales": null,
+   "nearby": [
+    {
+     "name": "당산동",
+     "region": "서울-영등포구",
+     "km": 0.6,
+     "academies": {
+      "all": 1,
+      "math": 1,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 2854260080
+    },
+    {
+     "name": "영등포동7가",
+     "region": "서울-영등포구",
+     "km": 0.7,
+     "academies": {
+      "all": 4,
+      "math": 1,
+      "english": 1,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 353,
+     "sales": null
+    },
+    {
+     "name": "당산동5가",
+     "region": "서울-영등포구",
+     "km": 0.8,
+     "academies": {
+      "all": 32,
+      "math": 9,
+      "english": 6,
+      "korean": 8,
+      "science": 1
+     },
+     "students": 1643,
+     "sales": null
+    },
+    {
+     "name": "양평동3가",
+     "region": "서울-영등포구",
+     "km": 1.3,
+     "academies": {
+      "all": 15,
+      "math": 5,
+      "english": 2,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 600,
+     "sales": null
+    },
+    {
+     "name": "양평동4가",
+     "region": "서울-영등포구",
+     "km": 1.4,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 1348,
+     "sales": null
+    },
+    {
+     "name": "양평동",
+     "region": "서울-영등포구",
+     "km": 1.6,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 534,
+     "sales": 703938562
+    },
+    {
+     "name": "문래동3가",
+     "region": "서울-영등포구",
+     "km": 1.6,
+     "academies": {
+      "all": 34,
+      "math": 10,
+      "english": 6,
+      "korean": 12,
+      "science": 3
+     },
+     "students": 1534,
+     "sales": null
+    },
+    {
+     "name": "영등포동",
+     "region": "서울-영등포구",
+     "km": 1.8,
+     "academies": {
+      "all": 9,
+      "math": 2,
+      "english": 3,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 873,
+     "sales": 401316797
+    },
+    {
+     "name": "문래동1가",
+     "region": "서울-영등포구",
+     "km": 2.0,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 262,
+     "sales": null
+    },
+    {
+     "name": "문래동6가",
+     "region": "서울-영등포구",
+     "km": 2.2,
+     "academies": {
+      "all": 15,
+      "math": 6,
+      "english": 5,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 1608,
+     "sales": null
+    },
+    {
+     "name": "도림동",
+     "region": "서울-영등포구",
+     "km": 2.2,
+     "academies": {
+      "all": 12,
+      "math": 3,
+      "english": 1,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 833780241
+    },
+    {
+     "name": "여의도동",
+     "region": "서울-영등포구",
+     "km": 2.2,
+     "academies": {
+      "all": 43,
+      "math": 10,
+      "english": 7,
+      "korean": 11,
+      "science": 0
+     },
+     "students": 3146,
+     "sales": null
+    },
+    {
+     "name": "양평동2가",
+     "region": "서울-영등포구",
+     "km": 2.3,
+     "academies": {
+      "all": 4,
+      "math": 3,
+      "english": 1,
+      "korean": 1,
+      "science": 1
+     },
+     "students": 687,
+     "sales": null
+    },
+    {
+     "name": "합정동",
+     "region": "서울-마포구",
+     "km": 2.4,
+     "academies": {
+      "all": 8,
+      "math": 1,
+      "english": 2,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 930,
+     "sales": 891955141
+    },
+    {
+     "name": "신길동",
+     "region": "서울-영등포구",
+     "km": 2.7,
+     "academies": {
+      "all": 137,
+      "math": 47,
+      "english": 40,
+      "korean": 27,
+      "science": 6
+     },
+     "students": 7432,
+     "sales": 5898982454
+    },
+    {
+     "name": "상수동",
+     "region": "서울-마포구",
+     "km": 2.7,
+     "academies": {
+      "all": 4,
+      "math": 1,
+      "english": 1,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 943,
+     "sales": null
+    },
+    {
+     "name": "목동",
+     "region": "서울-양천구",
+     "km": 2.9,
+     "academies": {
+      "all": 730,
+      "math": 244,
+      "english": 139,
+      "korean": 262,
+      "science": 48
+     },
+     "students": 16505,
+     "sales": 60445870754
+    },
+    {
+     "name": "신도림동",
+     "region": "서울-구로구",
+     "km": 3.0,
+     "academies": {
+      "all": 69,
+      "math": 28,
+      "english": 15,
+      "korean": 21,
+      "science": 2
+     },
+     "students": 3416,
+     "sales": 5521012975
+    },
+    {
+     "name": "대방동",
+     "region": "서울-동작구",
+     "km": 3.2,
+     "academies": {
+      "all": 102,
+      "math": 41,
+      "english": 20,
+      "korean": 27,
+      "science": 3
+     },
+     "students": 5937,
+     "sales": 9536007389
+    },
+    {
+     "name": "신수동",
+     "region": "서울-마포구",
+     "km": 3.2,
+     "academies": {
+      "all": 44,
+      "math": 15,
+      "english": 7,
+      "korean": 20,
+      "science": 5
+     },
+     "students": 2045,
+     "sales": 1496385265
+    },
+    {
+     "name": "망원동",
+     "region": "서울-마포구",
+     "km": 3.4,
+     "academies": {
+      "all": 36,
+      "math": 14,
+      "english": 11,
+      "korean": 5,
+      "science": 1
+     },
+     "students": 700,
+     "sales": 1095743722
+    },
+    {
+     "name": "성산동",
+     "region": "서울-마포구",
+     "km": 3.8,
+     "academies": {
+      "all": 49,
+      "math": 16,
+      "english": 12,
+      "korean": 9,
+      "science": 0
+     },
+     "students": 3076,
+     "sales": 2642921814
+    },
+    {
+     "name": "도화동",
+     "region": "서울-마포구",
+     "km": 3.8,
+     "academies": {
+      "all": 26,
+      "math": 9,
+      "english": 8,
+      "korean": 4,
+      "science": 1
+     },
+     "students": 626,
+     "sales": 903123468
+    },
+    {
+     "name": "대림동",
+     "region": "서울-영등포구",
+     "km": 3.9,
+     "academies": {
+      "all": 28,
+      "math": 3,
+      "english": 2,
+      "korean": 7,
+      "science": 1
+     },
+     "students": 2192,
+     "sales": 1175404361
+    },
+    {
+     "name": "신대방동",
+     "region": "서울-동작구",
+     "km": 4.0,
+     "academies": {
+      "all": 51,
+      "math": 19,
+      "english": 12,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 3087,
+     "sales": 1121265721
+    },
+    {
+     "name": "대흥동",
+     "region": "서울-마포구",
+     "km": 4.0,
+     "academies": {
+      "all": 77,
+      "math": 23,
+      "english": 19,
+      "korean": 25,
+      "science": 2
+     },
+     "students": 1610,
+     "sales": 4610372236
+    },
+    {
+     "name": "노량진동",
+     "region": "서울-동작구",
+     "km": 4.0,
+     "academies": {
+      "all": 22,
+      "math": 7,
+      "english": 4,
+      "korean": 9,
+      "science": 0
+     },
+     "students": 231,
+     "sales": 12419797289
+    },
+    {
+     "name": "염리동",
+     "region": "서울-마포구",
+     "km": 4.1,
+     "academies": {
+      "all": 51,
+      "math": 22,
+      "english": 11,
+      "korean": 19,
+      "science": 2
+     },
+     "students": 4365,
+     "sales": 3593853243
+    },
+    {
+     "name": "염창동",
+     "region": "서울-강서구",
+     "km": 4.2,
+     "academies": {
+      "all": 86,
+      "math": 30,
+      "english": 20,
+      "korean": 27,
+      "science": 1
+     },
+     "students": 3573,
+     "sales": 2890908605
+    },
+    {
+     "name": "구로동",
+     "region": "서울-구로구",
+     "km": 4.2,
+     "academies": {
+      "all": 82,
+      "math": 28,
+      "english": 24,
+      "korean": 14,
+      "science": 1
+     },
+     "students": 7491,
+     "sales": 3038001195
+    }
+   ]
   },
   {
    "name": "대림동",
@@ -1775,7 +3041,429 @@
       32
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "신대방동",
+     "region": "서울-동작구",
+     "km": 1.3,
+     "academies": {
+      "all": 51,
+      "math": 19,
+      "english": 12,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 3087,
+     "sales": 1121265721
+    },
+    {
+     "name": "구로동",
+     "region": "서울-구로구",
+     "km": 1.4,
+     "academies": {
+      "all": 82,
+      "math": 28,
+      "english": 24,
+      "korean": 14,
+      "science": 1
+     },
+     "students": 7491,
+     "sales": 3038001195
+    },
+    {
+     "name": "신길동",
+     "region": "서울-영등포구",
+     "km": 1.5,
+     "academies": {
+      "all": 137,
+      "math": 47,
+      "english": 40,
+      "korean": 27,
+      "science": 6
+     },
+     "students": 7432,
+     "sales": 5898982454
+    },
+    {
+     "name": "도림동",
+     "region": "서울-영등포구",
+     "km": 1.7,
+     "academies": {
+      "all": 12,
+      "math": 3,
+      "english": 1,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 833780241
+    },
+    {
+     "name": "가리봉동",
+     "region": "서울-구로구",
+     "km": 1.9,
+     "academies": {
+      "all": 1,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 248,
+     "sales": null
+    },
+    {
+     "name": "문래동1가",
+     "region": "서울-영등포구",
+     "km": 2.0,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 262,
+     "sales": null
+    },
+    {
+     "name": "신사동",
+     "region": "서울-관악구",
+     "km": 2.1,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 381,
+     "sales": 1062485059
+    },
+    {
+     "name": "영등포동",
+     "region": "서울-영등포구",
+     "km": 2.1,
+     "academies": {
+      "all": 9,
+      "math": 2,
+      "english": 3,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 873,
+     "sales": 401316797
+    },
+    {
+     "name": "미성동",
+     "region": "서울-관악구",
+     "km": 2.2,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 1580,
+     "sales": 1602584142
+    },
+    {
+     "name": "가산동",
+     "region": "서울-금천구",
+     "km": 2.3,
+     "academies": {
+      "all": 10,
+      "math": 0,
+      "english": 0,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 871900739
+    },
+    {
+     "name": "신도림동",
+     "region": "서울-구로구",
+     "km": 2.4,
+     "academies": {
+      "all": 69,
+      "math": 28,
+      "english": 15,
+      "korean": 21,
+      "science": 2
+     },
+     "students": 3416,
+     "sales": 5521012975
+    },
+    {
+     "name": "대방동",
+     "region": "서울-동작구",
+     "km": 2.7,
+     "academies": {
+      "all": 102,
+      "math": 41,
+      "english": 20,
+      "korean": 27,
+      "science": 3
+     },
+     "students": 5937,
+     "sales": 9536007389
+    },
+    {
+     "name": "문래동3가",
+     "region": "서울-영등포구",
+     "km": 2.8,
+     "academies": {
+      "all": 34,
+      "math": 10,
+      "english": 6,
+      "korean": 12,
+      "science": 3
+     },
+     "students": 1534,
+     "sales": null
+    },
+    {
+     "name": "독산동",
+     "region": "서울-금천구",
+     "km": 2.8,
+     "academies": {
+      "all": 73,
+      "math": 21,
+      "english": 21,
+      "korean": 12,
+      "science": 0
+     },
+     "students": 5779,
+     "sales": 1202649947
+    },
+    {
+     "name": "보라매동",
+     "region": "서울-관악구",
+     "km": 2.9,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 1165,
+     "sales": 330895990
+    },
+    {
+     "name": "철산동",
+     "region": "경기-광명시",
+     "km": 3.3,
+     "academies": {
+      "all": 164,
+      "math": 59,
+      "english": 41,
+      "korean": 45,
+      "science": 11
+     },
+     "students": 8844,
+     "sales": null
+    },
+    {
+     "name": "신림동",
+     "region": "서울-관악구",
+     "km": 3.3,
+     "academies": {
+      "all": 122,
+      "math": 45,
+      "english": 26,
+      "korean": 24,
+      "science": 1
+     },
+     "students": 6360,
+     "sales": null
+    },
+    {
+     "name": "상도동",
+     "region": "서울-동작구",
+     "km": 3.9,
+     "academies": {
+      "all": 106,
+      "math": 43,
+      "english": 26,
+      "korean": 23,
+      "science": 4
+     },
+     "students": 4643,
+     "sales": 6765190736
+    },
+    {
+     "name": "고척동",
+     "region": "서울-구로구",
+     "km": 3.9,
+     "academies": {
+      "all": 55,
+      "math": 16,
+      "english": 19,
+      "korean": 11,
+      "science": 0
+     },
+     "students": 5340,
+     "sales": 2388064498
+    },
+    {
+     "name": "하안동",
+     "region": "경기-광명시",
+     "km": 4.0,
+     "academies": {
+      "all": 119,
+      "math": 48,
+      "english": 33,
+      "korean": 15,
+      "science": 5
+     },
+     "students": 4663,
+     "sales": null
+    },
+    {
+     "name": "여의도동",
+     "region": "서울-영등포구",
+     "km": 4.0,
+     "academies": {
+      "all": 43,
+      "math": 10,
+      "english": 7,
+      "korean": 11,
+      "science": 0
+     },
+     "students": 3146,
+     "sales": null
+    },
+    {
+     "name": "당산동5가",
+     "region": "서울-영등포구",
+     "km": 4.2,
+     "academies": {
+      "all": 32,
+      "math": 9,
+      "english": 6,
+      "korean": 8,
+      "science": 1
+     },
+     "students": 1643,
+     "sales": null
+    },
+    {
+     "name": "노량진동",
+     "region": "서울-동작구",
+     "km": 4.4,
+     "academies": {
+      "all": 22,
+      "math": 7,
+      "english": 4,
+      "korean": 9,
+      "science": 0
+     },
+     "students": 231,
+     "sales": 12419797289
+    },
+    {
+     "name": "개봉동",
+     "region": "서울-구로구",
+     "km": 4.5,
+     "academies": {
+      "all": 75,
+      "math": 21,
+      "english": 25,
+      "korean": 19,
+      "science": 0
+     },
+     "students": 2996,
+     "sales": 1979709635
+    },
+    {
+     "name": "신정동",
+     "region": "서울-양천구",
+     "km": 4.6,
+     "academies": {
+      "all": 535,
+      "math": 178,
+      "english": 114,
+      "korean": 155,
+      "science": 28
+     },
+     "students": 19194,
+     "sales": 41067141471
+    },
+    {
+     "name": "봉천동",
+     "region": "서울-관악구",
+     "km": 4.7,
+     "academies": {
+      "all": 173,
+      "math": 47,
+      "english": 44,
+      "korean": 33,
+      "science": 6
+     },
+     "students": 8789,
+     "sales": null
+    },
+    {
+     "name": "시흥동",
+     "region": "서울-금천구",
+     "km": 5.0,
+     "academies": {
+      "all": 89,
+      "math": 26,
+      "english": 27,
+      "korean": 12,
+      "science": 0
+     },
+     "students": 7098,
+     "sales": 3391812824
+    },
+    {
+     "name": "광명동",
+     "region": "경기-광명시",
+     "km": 5.1,
+     "academies": {
+      "all": 85,
+      "math": 35,
+      "english": 24,
+      "korean": 13,
+      "science": 1
+     },
+     "students": 6043,
+     "sales": null
+    },
+    {
+     "name": "목동",
+     "region": "서울-양천구",
+     "km": 5.1,
+     "academies": {
+      "all": 730,
+      "math": 244,
+      "english": 139,
+      "korean": 262,
+      "science": 48
+     },
+     "students": 16505,
+     "sales": 60445870754
+    },
+    {
+     "name": "흑석동",
+     "region": "서울-동작구",
+     "km": 5.5,
+     "academies": {
+      "all": 35,
+      "math": 14,
+      "english": 11,
+      "korean": 10,
+      "science": 2
+     },
+     "students": 2848,
+     "sales": 1269251688
+    }
+   ]
   },
   {
    "name": "도림동",
@@ -2022,7 +3710,429 @@
      "science": 0
     }
    },
-   "sales": 833780241
+   "sales": 833780241,
+   "nearby": [
+    {
+     "name": "영등포동",
+     "region": "서울-영등포구",
+     "km": 0.5,
+     "academies": {
+      "all": 9,
+      "math": 2,
+      "english": 3,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 873,
+     "sales": 401316797
+    },
+    {
+     "name": "문래동1가",
+     "region": "서울-영등포구",
+     "km": 0.6,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 262,
+     "sales": null
+    },
+    {
+     "name": "신길동",
+     "region": "서울-영등포구",
+     "km": 0.9,
+     "academies": {
+      "all": 137,
+      "math": 47,
+      "english": 40,
+      "korean": 27,
+      "science": 6
+     },
+     "students": 7432,
+     "sales": 5898982454
+    },
+    {
+     "name": "문래동3가",
+     "region": "서울-영등포구",
+     "km": 1.3,
+     "academies": {
+      "all": 34,
+      "math": 10,
+      "english": 6,
+      "korean": 12,
+      "science": 3
+     },
+     "students": 1534,
+     "sales": null
+    },
+    {
+     "name": "영등포동7가",
+     "region": "서울-영등포구",
+     "km": 1.5,
+     "academies": {
+      "all": 4,
+      "math": 1,
+      "english": 1,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 353,
+     "sales": null
+    },
+    {
+     "name": "대림동",
+     "region": "서울-영등포구",
+     "km": 1.7,
+     "academies": {
+      "all": 28,
+      "math": 3,
+      "english": 2,
+      "korean": 7,
+      "science": 1
+     },
+     "students": 2192,
+     "sales": 1175404361
+    },
+    {
+     "name": "신도림동",
+     "region": "서울-구로구",
+     "km": 1.8,
+     "academies": {
+      "all": 69,
+      "math": 28,
+      "english": 15,
+      "korean": 21,
+      "science": 2
+     },
+     "students": 3416,
+     "sales": 5521012975
+    },
+    {
+     "name": "당산동",
+     "region": "서울-영등포구",
+     "km": 1.9,
+     "academies": {
+      "all": 1,
+      "math": 1,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 2854260080
+    },
+    {
+     "name": "문래동6가",
+     "region": "서울-영등포구",
+     "km": 1.9,
+     "academies": {
+      "all": 15,
+      "math": 6,
+      "english": 5,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 1608,
+     "sales": null
+    },
+    {
+     "name": "신대방동",
+     "region": "서울-동작구",
+     "km": 2.1,
+     "academies": {
+      "all": 51,
+      "math": 19,
+      "english": 12,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 3087,
+     "sales": 1121265721
+    },
+    {
+     "name": "양평동",
+     "region": "서울-영등포구",
+     "km": 2.2,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 534,
+     "sales": 703938562
+    },
+    {
+     "name": "당산동6가",
+     "region": "서울-영등포구",
+     "km": 2.2,
+     "academies": {
+      "all": 1,
+      "math": 1,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 776,
+     "sales": null
+    },
+    {
+     "name": "대방동",
+     "region": "서울-동작구",
+     "km": 2.2,
+     "academies": {
+      "all": 102,
+      "math": 41,
+      "english": 20,
+      "korean": 27,
+      "science": 3
+     },
+     "students": 5937,
+     "sales": 9536007389
+    },
+    {
+     "name": "구로동",
+     "region": "서울-구로구",
+     "km": 2.2,
+     "academies": {
+      "all": 82,
+      "math": 28,
+      "english": 24,
+      "korean": 14,
+      "science": 1
+     },
+     "students": 7491,
+     "sales": 3038001195
+    },
+    {
+     "name": "양평동2가",
+     "region": "서울-영등포구",
+     "km": 2.2,
+     "academies": {
+      "all": 4,
+      "math": 3,
+      "english": 1,
+      "korean": 1,
+      "science": 1
+     },
+     "students": 687,
+     "sales": null
+    },
+    {
+     "name": "당산동5가",
+     "region": "서울-영등포구",
+     "km": 2.5,
+     "academies": {
+      "all": 32,
+      "math": 9,
+      "english": 6,
+      "korean": 8,
+      "science": 1
+     },
+     "students": 1643,
+     "sales": null
+    },
+    {
+     "name": "양평동3가",
+     "region": "서울-영등포구",
+     "km": 2.7,
+     "academies": {
+      "all": 15,
+      "math": 5,
+      "english": 2,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 600,
+     "sales": null
+    },
+    {
+     "name": "여의도동",
+     "region": "서울-영등포구",
+     "km": 2.8,
+     "academies": {
+      "all": 43,
+      "math": 10,
+      "english": 7,
+      "korean": 11,
+      "science": 0
+     },
+     "students": 3146,
+     "sales": null
+    },
+    {
+     "name": "목동",
+     "region": "서울-양천구",
+     "km": 3.8,
+     "academies": {
+      "all": 730,
+      "math": 244,
+      "english": 139,
+      "korean": 262,
+      "science": 48
+     },
+     "students": 16505,
+     "sales": 60445870754
+    },
+    {
+     "name": "노량진동",
+     "region": "서울-동작구",
+     "km": 3.8,
+     "academies": {
+      "all": 22,
+      "math": 7,
+      "english": 4,
+      "korean": 9,
+      "science": 0
+     },
+     "students": 231,
+     "sales": 12419797289
+    },
+    {
+     "name": "상도동",
+     "region": "서울-동작구",
+     "km": 3.9,
+     "academies": {
+      "all": 106,
+      "math": 43,
+      "english": 26,
+      "korean": 23,
+      "science": 4
+     },
+     "students": 4643,
+     "sales": 6765190736
+    },
+    {
+     "name": "고척동",
+     "region": "서울-구로구",
+     "km": 4.1,
+     "academies": {
+      "all": 55,
+      "math": 16,
+      "english": 19,
+      "korean": 11,
+      "science": 0
+     },
+     "students": 5340,
+     "sales": 2388064498
+    },
+    {
+     "name": "신정동",
+     "region": "서울-양천구",
+     "km": 4.2,
+     "academies": {
+      "all": 535,
+      "math": 178,
+      "english": 114,
+      "korean": 155,
+      "science": 28
+     },
+     "students": 19194,
+     "sales": 41067141471
+    },
+    {
+     "name": "독산동",
+     "region": "서울-금천구",
+     "km": 4.5,
+     "academies": {
+      "all": 73,
+      "math": 21,
+      "english": 21,
+      "korean": 12,
+      "science": 0
+     },
+     "students": 5779,
+     "sales": 1202649947
+    },
+    {
+     "name": "철산동",
+     "region": "경기-광명시",
+     "km": 4.5,
+     "academies": {
+      "all": 164,
+      "math": 59,
+      "english": 41,
+      "korean": 45,
+      "science": 11
+     },
+     "students": 8844,
+     "sales": null
+    },
+    {
+     "name": "신림동",
+     "region": "서울-관악구",
+     "km": 4.7,
+     "academies": {
+      "all": 122,
+      "math": 45,
+      "english": 26,
+      "korean": 24,
+      "science": 1
+     },
+     "students": 6360,
+     "sales": null
+    },
+    {
+     "name": "신수동",
+     "region": "서울-마포구",
+     "km": 5.0,
+     "academies": {
+      "all": 44,
+      "math": 15,
+      "english": 7,
+      "korean": 20,
+      "science": 5
+     },
+     "students": 2045,
+     "sales": 1496385265
+    },
+    {
+     "name": "개봉동",
+     "region": "서울-구로구",
+     "km": 5.0,
+     "academies": {
+      "all": 75,
+      "math": 21,
+      "english": 25,
+      "korean": 19,
+      "science": 0
+     },
+     "students": 2996,
+     "sales": 1979709635
+    },
+    {
+     "name": "도화동",
+     "region": "서울-마포구",
+     "km": 5.2,
+     "academies": {
+      "all": 26,
+      "math": 9,
+      "english": 8,
+      "korean": 4,
+      "science": 1
+     },
+     "students": 626,
+     "sales": 903123468
+    },
+    {
+     "name": "흑석동",
+     "region": "서울-동작구",
+     "km": 5.2,
+     "academies": {
+      "all": 35,
+      "math": 14,
+      "english": 11,
+      "korean": 10,
+      "science": 2
+     },
+     "students": 2848,
+     "sales": 1269251688
+    }
+   ]
   },
   {
    "name": "문래동1가",
@@ -2166,7 +4276,429 @@
     37.51291,
     126.89827
    ],
-   "sales": null
+   "sales": null,
+   "nearby": [
+    {
+     "name": "도림동",
+     "region": "서울-영등포구",
+     "km": 0.6,
+     "academies": {
+      "all": 12,
+      "math": 3,
+      "english": 1,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 833780241
+    },
+    {
+     "name": "문래동3가",
+     "region": "서울-영등포구",
+     "km": 0.7,
+     "academies": {
+      "all": 34,
+      "math": 10,
+      "english": 6,
+      "korean": 12,
+      "science": 3
+     },
+     "students": 1534,
+     "sales": null
+    },
+    {
+     "name": "영등포동",
+     "region": "서울-영등포구",
+     "km": 0.9,
+     "academies": {
+      "all": 9,
+      "math": 2,
+      "english": 3,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 873,
+     "sales": 401316797
+    },
+    {
+     "name": "영등포동7가",
+     "region": "서울-영등포구",
+     "km": 1.3,
+     "academies": {
+      "all": 4,
+      "math": 1,
+      "english": 1,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 353,
+     "sales": null
+    },
+    {
+     "name": "문래동6가",
+     "region": "서울-영등포구",
+     "km": 1.3,
+     "academies": {
+      "all": 15,
+      "math": 6,
+      "english": 5,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 1608,
+     "sales": null
+    },
+    {
+     "name": "신도림동",
+     "region": "서울-구로구",
+     "km": 1.4,
+     "academies": {
+      "all": 69,
+      "math": 28,
+      "english": 15,
+      "korean": 21,
+      "science": 2
+     },
+     "students": 3416,
+     "sales": 5521012975
+    },
+    {
+     "name": "신길동",
+     "region": "서울-영등포구",
+     "km": 1.4,
+     "academies": {
+      "all": 137,
+      "math": 47,
+      "english": 40,
+      "korean": 27,
+      "science": 6
+     },
+     "students": 7432,
+     "sales": 5898982454
+    },
+    {
+     "name": "당산동",
+     "region": "서울-영등포구",
+     "km": 1.6,
+     "academies": {
+      "all": 1,
+      "math": 1,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 2854260080
+    },
+    {
+     "name": "양평동",
+     "region": "서울-영등포구",
+     "km": 1.7,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 534,
+     "sales": 703938562
+    },
+    {
+     "name": "양평동2가",
+     "region": "서울-영등포구",
+     "km": 1.7,
+     "academies": {
+      "all": 4,
+      "math": 3,
+      "english": 1,
+      "korean": 1,
+      "science": 1
+     },
+     "students": 687,
+     "sales": null
+    },
+    {
+     "name": "당산동6가",
+     "region": "서울-영등포구",
+     "km": 2.0,
+     "academies": {
+      "all": 1,
+      "math": 1,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 776,
+     "sales": null
+    },
+    {
+     "name": "대림동",
+     "region": "서울-영등포구",
+     "km": 2.0,
+     "academies": {
+      "all": 28,
+      "math": 3,
+      "english": 2,
+      "korean": 7,
+      "science": 1
+     },
+     "students": 2192,
+     "sales": 1175404361
+    },
+    {
+     "name": "당산동5가",
+     "region": "서울-영등포구",
+     "km": 2.1,
+     "academies": {
+      "all": 32,
+      "math": 9,
+      "english": 6,
+      "korean": 8,
+      "science": 1
+     },
+     "students": 1643,
+     "sales": null
+    },
+    {
+     "name": "구로동",
+     "region": "서울-구로구",
+     "km": 2.2,
+     "academies": {
+      "all": 82,
+      "math": 28,
+      "english": 24,
+      "korean": 14,
+      "science": 1
+     },
+     "students": 7491,
+     "sales": 3038001195
+    },
+    {
+     "name": "양평동3가",
+     "region": "서울-영등포구",
+     "km": 2.3,
+     "academies": {
+      "all": 15,
+      "math": 5,
+      "english": 2,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 600,
+     "sales": null
+    },
+    {
+     "name": "신대방동",
+     "region": "서울-동작구",
+     "km": 2.6,
+     "academies": {
+      "all": 51,
+      "math": 19,
+      "english": 12,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 3087,
+     "sales": 1121265721
+    },
+    {
+     "name": "대방동",
+     "region": "서울-동작구",
+     "km": 2.7,
+     "academies": {
+      "all": 102,
+      "math": 41,
+      "english": 20,
+      "korean": 27,
+      "science": 3
+     },
+     "students": 5937,
+     "sales": 9536007389
+    },
+    {
+     "name": "양평동4가",
+     "region": "서울-영등포구",
+     "km": 2.7,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 1348,
+     "sales": null
+    },
+    {
+     "name": "여의도동",
+     "region": "서울-영등포구",
+     "km": 3.1,
+     "academies": {
+      "all": 43,
+      "math": 10,
+      "english": 7,
+      "korean": 11,
+      "science": 0
+     },
+     "students": 3146,
+     "sales": null
+    },
+    {
+     "name": "목동",
+     "region": "서울-양천구",
+     "km": 3.2,
+     "academies": {
+      "all": 730,
+      "math": 244,
+      "english": 139,
+      "korean": 262,
+      "science": 48
+     },
+     "students": 16505,
+     "sales": 60445870754
+    },
+    {
+     "name": "신정동",
+     "region": "서울-양천구",
+     "km": 3.7,
+     "academies": {
+      "all": 535,
+      "math": 178,
+      "english": 114,
+      "korean": 155,
+      "science": 28
+     },
+     "students": 19194,
+     "sales": 41067141471
+    },
+    {
+     "name": "고척동",
+     "region": "서울-구로구",
+     "km": 3.8,
+     "academies": {
+      "all": 55,
+      "math": 16,
+      "english": 19,
+      "korean": 11,
+      "science": 0
+     },
+     "students": 5340,
+     "sales": 2388064498
+    },
+    {
+     "name": "노량진동",
+     "region": "서울-동작구",
+     "km": 4.3,
+     "academies": {
+      "all": 22,
+      "math": 7,
+      "english": 4,
+      "korean": 9,
+      "science": 0
+     },
+     "students": 231,
+     "sales": 12419797289
+    },
+    {
+     "name": "상도동",
+     "region": "서울-동작구",
+     "km": 4.4,
+     "academies": {
+      "all": 106,
+      "math": 43,
+      "english": 26,
+      "korean": 23,
+      "science": 4
+     },
+     "students": 4643,
+     "sales": 6765190736
+    },
+    {
+     "name": "철산동",
+     "region": "경기-광명시",
+     "km": 4.5,
+     "academies": {
+      "all": 164,
+      "math": 59,
+      "english": 41,
+      "korean": 45,
+      "science": 11
+     },
+     "students": 8844,
+     "sales": null
+    },
+    {
+     "name": "개봉동",
+     "region": "서울-구로구",
+     "km": 4.8,
+     "academies": {
+      "all": 75,
+      "math": 21,
+      "english": 25,
+      "korean": 19,
+      "science": 0
+     },
+     "students": 2996,
+     "sales": 1979709635
+    },
+    {
+     "name": "독산동",
+     "region": "서울-금천구",
+     "km": 4.8,
+     "academies": {
+      "all": 73,
+      "math": 21,
+      "english": 21,
+      "korean": 12,
+      "science": 0
+     },
+     "students": 5779,
+     "sales": 1202649947
+    },
+    {
+     "name": "신수동",
+     "region": "서울-마포구",
+     "km": 5.1,
+     "academies": {
+      "all": 44,
+      "math": 15,
+      "english": 7,
+      "korean": 20,
+      "science": 5
+     },
+     "students": 2045,
+     "sales": 1496385265
+    },
+    {
+     "name": "염창동",
+     "region": "서울-강서구",
+     "km": 5.1,
+     "academies": {
+      "all": 86,
+      "math": 30,
+      "english": 20,
+      "korean": 27,
+      "science": 1
+     },
+     "students": 3573,
+     "sales": 2890908605
+    },
+    {
+     "name": "신림동",
+     "region": "서울-관악구",
+     "km": 5.2,
+     "academies": {
+      "all": 122,
+      "math": 45,
+      "english": 26,
+      "korean": 24,
+      "science": 1
+     },
+     "students": 6360,
+     "sales": null
+    }
+   ]
   },
   {
    "name": "문래동2가",
@@ -2624,7 +5156,429 @@
       49
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "문래동1가",
+     "region": "서울-영등포구",
+     "km": 0.7,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 262,
+     "sales": null
+    },
+    {
+     "name": "문래동6가",
+     "region": "서울-영등포구",
+     "km": 0.8,
+     "academies": {
+      "all": 15,
+      "math": 6,
+      "english": 5,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 1608,
+     "sales": null
+    },
+    {
+     "name": "양평동",
+     "region": "서울-영등포구",
+     "km": 0.9,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 534,
+     "sales": 703938562
+    },
+    {
+     "name": "영등포동7가",
+     "region": "서울-영등포구",
+     "km": 1.0,
+     "academies": {
+      "all": 4,
+      "math": 1,
+      "english": 1,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 353,
+     "sales": null
+    },
+    {
+     "name": "당산동",
+     "region": "서울-영등포구",
+     "km": 1.1,
+     "academies": {
+      "all": 1,
+      "math": 1,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 2854260080
+    },
+    {
+     "name": "양평동2가",
+     "region": "서울-영등포구",
+     "km": 1.1,
+     "academies": {
+      "all": 4,
+      "math": 3,
+      "english": 1,
+      "korean": 1,
+      "science": 1
+     },
+     "students": 687,
+     "sales": null
+    },
+    {
+     "name": "도림동",
+     "region": "서울-영등포구",
+     "km": 1.3,
+     "academies": {
+      "all": 12,
+      "math": 3,
+      "english": 1,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 833780241
+    },
+    {
+     "name": "영등포동",
+     "region": "서울-영등포구",
+     "km": 1.3,
+     "academies": {
+      "all": 9,
+      "math": 2,
+      "english": 3,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 873,
+     "sales": 401316797
+    },
+    {
+     "name": "신도림동",
+     "region": "서울-구로구",
+     "km": 1.4,
+     "academies": {
+      "all": 69,
+      "math": 28,
+      "english": 15,
+      "korean": 21,
+      "science": 2
+     },
+     "students": 3416,
+     "sales": 5521012975
+    },
+    {
+     "name": "당산동5가",
+     "region": "서울-영등포구",
+     "km": 1.5,
+     "academies": {
+      "all": 32,
+      "math": 9,
+      "english": 6,
+      "korean": 8,
+      "science": 1
+     },
+     "students": 1643,
+     "sales": null
+    },
+    {
+     "name": "양평동3가",
+     "region": "서울-영등포구",
+     "km": 1.6,
+     "academies": {
+      "all": 15,
+      "math": 5,
+      "english": 2,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 600,
+     "sales": null
+    },
+    {
+     "name": "당산동6가",
+     "region": "서울-영등포구",
+     "km": 1.6,
+     "academies": {
+      "all": 1,
+      "math": 1,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 776,
+     "sales": null
+    },
+    {
+     "name": "양평동4가",
+     "region": "서울-영등포구",
+     "km": 2.1,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 1348,
+     "sales": null
+    },
+    {
+     "name": "신길동",
+     "region": "서울-영등포구",
+     "km": 2.1,
+     "academies": {
+      "all": 137,
+      "math": 47,
+      "english": 40,
+      "korean": 27,
+      "science": 6
+     },
+     "students": 7432,
+     "sales": 5898982454
+    },
+    {
+     "name": "목동",
+     "region": "서울-양천구",
+     "km": 2.5,
+     "academies": {
+      "all": 730,
+      "math": 244,
+      "english": 139,
+      "korean": 262,
+      "science": 48
+     },
+     "students": 16505,
+     "sales": 60445870754
+    },
+    {
+     "name": "구로동",
+     "region": "서울-구로구",
+     "km": 2.7,
+     "academies": {
+      "all": 82,
+      "math": 28,
+      "english": 24,
+      "korean": 14,
+      "science": 1
+     },
+     "students": 7491,
+     "sales": 3038001195
+    },
+    {
+     "name": "대림동",
+     "region": "서울-영등포구",
+     "km": 2.8,
+     "academies": {
+      "all": 28,
+      "math": 3,
+      "english": 2,
+      "korean": 7,
+      "science": 1
+     },
+     "students": 2192,
+     "sales": 1175404361
+    },
+    {
+     "name": "여의도동",
+     "region": "서울-영등포구",
+     "km": 3.3,
+     "academies": {
+      "all": 43,
+      "math": 10,
+      "english": 7,
+      "korean": 11,
+      "science": 0
+     },
+     "students": 3146,
+     "sales": null
+    },
+    {
+     "name": "대방동",
+     "region": "서울-동작구",
+     "km": 3.3,
+     "academies": {
+      "all": 102,
+      "math": 41,
+      "english": 20,
+      "korean": 27,
+      "science": 3
+     },
+     "students": 5937,
+     "sales": 9536007389
+    },
+    {
+     "name": "신대방동",
+     "region": "서울-동작구",
+     "km": 3.4,
+     "academies": {
+      "all": 51,
+      "math": 19,
+      "english": 12,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 3087,
+     "sales": 1121265721
+    },
+    {
+     "name": "신정동",
+     "region": "서울-양천구",
+     "km": 3.4,
+     "academies": {
+      "all": 535,
+      "math": 178,
+      "english": 114,
+      "korean": 155,
+      "science": 28
+     },
+     "students": 19194,
+     "sales": 41067141471
+    },
+    {
+     "name": "고척동",
+     "region": "서울-구로구",
+     "km": 3.7,
+     "academies": {
+      "all": 55,
+      "math": 16,
+      "english": 19,
+      "korean": 11,
+      "science": 0
+     },
+     "students": 5340,
+     "sales": 2388064498
+    },
+    {
+     "name": "염창동",
+     "region": "서울-강서구",
+     "km": 4.4,
+     "academies": {
+      "all": 86,
+      "math": 30,
+      "english": 20,
+      "korean": 27,
+      "science": 1
+     },
+     "students": 3573,
+     "sales": 2890908605
+    },
+    {
+     "name": "망원동",
+     "region": "서울-마포구",
+     "km": 4.5,
+     "academies": {
+      "all": 36,
+      "math": 14,
+      "english": 11,
+      "korean": 5,
+      "science": 1
+     },
+     "students": 700,
+     "sales": 1095743722
+    },
+    {
+     "name": "화곡동",
+     "region": "서울-강서구",
+     "km": 4.6,
+     "academies": {
+      "all": 188,
+      "math": 60,
+      "english": 44,
+      "korean": 47,
+      "science": 2
+     },
+     "students": 6321,
+     "sales": 5316460178
+    },
+    {
+     "name": "노량진동",
+     "region": "서울-동작구",
+     "km": 4.7,
+     "academies": {
+      "all": 22,
+      "math": 7,
+      "english": 4,
+      "korean": 9,
+      "science": 0
+     },
+     "students": 231,
+     "sales": 12419797289
+    },
+    {
+     "name": "신수동",
+     "region": "서울-마포구",
+     "km": 4.8,
+     "academies": {
+      "all": 44,
+      "math": 15,
+      "english": 7,
+      "korean": 20,
+      "science": 5
+     },
+     "students": 2045,
+     "sales": 1496385265
+    },
+    {
+     "name": "개봉동",
+     "region": "서울-구로구",
+     "km": 4.8,
+     "academies": {
+      "all": 75,
+      "math": 21,
+      "english": 25,
+      "korean": 19,
+      "science": 0
+     },
+     "students": 2996,
+     "sales": 1979709635
+    },
+    {
+     "name": "철산동",
+     "region": "경기-광명시",
+     "km": 4.9,
+     "academies": {
+      "all": 164,
+      "math": 59,
+      "english": 41,
+      "korean": 45,
+      "science": 11
+     },
+     "students": 8844,
+     "sales": null
+    },
+    {
+     "name": "상도동",
+     "region": "서울-동작구",
+     "km": 5.0,
+     "academies": {
+      "all": 106,
+      "math": 43,
+      "english": 26,
+      "korean": 23,
+      "science": 4
+     },
+     "students": 4643,
+     "sales": 6765190736
+    }
+   ]
   },
   {
    "name": "문래동5가",
@@ -3107,7 +6061,429 @@
       32
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "양평동2가",
+     "region": "서울-영등포구",
+     "km": 0.3,
+     "academies": {
+      "all": 4,
+      "math": 3,
+      "english": 1,
+      "korean": 1,
+      "science": 1
+     },
+     "students": 687,
+     "sales": null
+    },
+    {
+     "name": "문래동3가",
+     "region": "서울-영등포구",
+     "km": 0.8,
+     "academies": {
+      "all": 34,
+      "math": 10,
+      "english": 6,
+      "korean": 12,
+      "science": 3
+     },
+     "students": 1534,
+     "sales": null
+    },
+    {
+     "name": "양평동",
+     "region": "서울-영등포구",
+     "km": 0.8,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 534,
+     "sales": 703938562
+    },
+    {
+     "name": "신도림동",
+     "region": "서울-구로구",
+     "km": 1.0,
+     "academies": {
+      "all": 69,
+      "math": 28,
+      "english": 15,
+      "korean": 21,
+      "science": 2
+     },
+     "students": 3416,
+     "sales": 5521012975
+    },
+    {
+     "name": "문래동1가",
+     "region": "서울-영등포구",
+     "km": 1.3,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 262,
+     "sales": null
+    },
+    {
+     "name": "당산동",
+     "region": "서울-영등포구",
+     "km": 1.6,
+     "academies": {
+      "all": 1,
+      "math": 1,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 2854260080
+    },
+    {
+     "name": "양평동3가",
+     "region": "서울-영등포구",
+     "km": 1.6,
+     "academies": {
+      "all": 15,
+      "math": 5,
+      "english": 2,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 600,
+     "sales": null
+    },
+    {
+     "name": "영등포동7가",
+     "region": "서울-영등포구",
+     "km": 1.6,
+     "academies": {
+      "all": 4,
+      "math": 1,
+      "english": 1,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 353,
+     "sales": null
+    },
+    {
+     "name": "당산동5가",
+     "region": "서울-영등포구",
+     "km": 1.8,
+     "academies": {
+      "all": 32,
+      "math": 9,
+      "english": 6,
+      "korean": 8,
+      "science": 1
+     },
+     "students": 1643,
+     "sales": null
+    },
+    {
+     "name": "도림동",
+     "region": "서울-영등포구",
+     "km": 1.9,
+     "academies": {
+      "all": 12,
+      "math": 3,
+      "english": 1,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 833780241
+    },
+    {
+     "name": "목동",
+     "region": "서울-양천구",
+     "km": 1.9,
+     "academies": {
+      "all": 730,
+      "math": 244,
+      "english": 139,
+      "korean": 262,
+      "science": 48
+     },
+     "students": 16505,
+     "sales": 60445870754
+    },
+    {
+     "name": "영등포동",
+     "region": "서울-영등포구",
+     "km": 2.1,
+     "academies": {
+      "all": 9,
+      "math": 2,
+      "english": 3,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 873,
+     "sales": 401316797
+    },
+    {
+     "name": "양평동4가",
+     "region": "서울-영등포구",
+     "km": 2.1,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 1348,
+     "sales": null
+    },
+    {
+     "name": "당산동6가",
+     "region": "서울-영등포구",
+     "km": 2.2,
+     "academies": {
+      "all": 1,
+      "math": 1,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 776,
+     "sales": null
+    },
+    {
+     "name": "신정동",
+     "region": "서울-양천구",
+     "km": 2.6,
+     "academies": {
+      "all": 535,
+      "math": 178,
+      "english": 114,
+      "korean": 155,
+      "science": 28
+     },
+     "students": 19194,
+     "sales": 41067141471
+    },
+    {
+     "name": "구로동",
+     "region": "서울-구로구",
+     "km": 2.7,
+     "academies": {
+      "all": 82,
+      "math": 28,
+      "english": 24,
+      "korean": 14,
+      "science": 1
+     },
+     "students": 7491,
+     "sales": 3038001195
+    },
+    {
+     "name": "신길동",
+     "region": "서울-영등포구",
+     "km": 2.8,
+     "academies": {
+      "all": 137,
+      "math": 47,
+      "english": 40,
+      "korean": 27,
+      "science": 6
+     },
+     "students": 7432,
+     "sales": 5898982454
+    },
+    {
+     "name": "대림동",
+     "region": "서울-영등포구",
+     "km": 3.1,
+     "academies": {
+      "all": 28,
+      "math": 3,
+      "english": 2,
+      "korean": 7,
+      "science": 1
+     },
+     "students": 2192,
+     "sales": 1175404361
+    },
+    {
+     "name": "고척동",
+     "region": "서울-구로구",
+     "km": 3.2,
+     "academies": {
+      "all": 55,
+      "math": 16,
+      "english": 19,
+      "korean": 11,
+      "science": 0
+     },
+     "students": 5340,
+     "sales": 2388064498
+    },
+    {
+     "name": "화곡동",
+     "region": "서울-강서구",
+     "km": 3.9,
+     "academies": {
+      "all": 188,
+      "math": 60,
+      "english": 44,
+      "korean": 47,
+      "science": 2
+     },
+     "students": 6321,
+     "sales": 5316460178
+    },
+    {
+     "name": "신대방동",
+     "region": "서울-동작구",
+     "km": 3.9,
+     "academies": {
+      "all": 51,
+      "math": 19,
+      "english": 12,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 3087,
+     "sales": 1121265721
+    },
+    {
+     "name": "염창동",
+     "region": "서울-강서구",
+     "km": 4.0,
+     "academies": {
+      "all": 86,
+      "math": 30,
+      "english": 20,
+      "korean": 27,
+      "science": 1
+     },
+     "students": 3573,
+     "sales": 2890908605
+    },
+    {
+     "name": "여의도동",
+     "region": "서울-영등포구",
+     "km": 4.0,
+     "academies": {
+      "all": 43,
+      "math": 10,
+      "english": 7,
+      "korean": 11,
+      "science": 0
+     },
+     "students": 3146,
+     "sales": null
+    },
+    {
+     "name": "대방동",
+     "region": "서울-동작구",
+     "km": 4.0,
+     "academies": {
+      "all": 102,
+      "math": 41,
+      "english": 20,
+      "korean": 27,
+      "science": 3
+     },
+     "students": 5937,
+     "sales": 9536007389
+    },
+    {
+     "name": "개봉동",
+     "region": "서울-구로구",
+     "km": 4.3,
+     "academies": {
+      "all": 75,
+      "math": 21,
+      "english": 25,
+      "korean": 19,
+      "science": 0
+     },
+     "students": 2996,
+     "sales": 1979709635
+    },
+    {
+     "name": "망원동",
+     "region": "서울-마포구",
+     "km": 4.6,
+     "academies": {
+      "all": 36,
+      "math": 14,
+      "english": 11,
+      "korean": 5,
+      "science": 1
+     },
+     "students": 700,
+     "sales": 1095743722
+    },
+    {
+     "name": "신월동",
+     "region": "서울-양천구",
+     "km": 4.7,
+     "academies": {
+      "all": 150,
+      "math": 41,
+      "english": 40,
+      "korean": 33,
+      "science": 2
+     },
+     "students": 9495,
+     "sales": 6122411311
+    },
+    {
+     "name": "철산동",
+     "region": "경기-광명시",
+     "km": 4.7,
+     "academies": {
+      "all": 164,
+      "math": 59,
+      "english": 41,
+      "korean": 45,
+      "science": 11
+     },
+     "students": 8844,
+     "sales": null
+    },
+    {
+     "name": "등촌동",
+     "region": "서울-강서구",
+     "km": 4.9,
+     "academies": {
+      "all": 104,
+      "math": 35,
+      "english": 32,
+      "korean": 32,
+      "science": 4
+     },
+     "students": 8328,
+     "sales": 4677598292
+    },
+    {
+     "name": "성산동",
+     "region": "서울-마포구",
+     "km": 5.3,
+     "academies": {
+      "all": 49,
+      "math": 16,
+      "english": 12,
+      "korean": 9,
+      "science": 0
+     },
+     "students": 3076,
+     "sales": 2642921814
+    }
+   ]
   },
   {
    "name": "신길동",
@@ -3531,7 +6907,429 @@
       47
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "도림동",
+     "region": "서울-영등포구",
+     "km": 0.9,
+     "academies": {
+      "all": 12,
+      "math": 3,
+      "english": 1,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 833780241
+    },
+    {
+     "name": "영등포동",
+     "region": "서울-영등포구",
+     "km": 0.9,
+     "academies": {
+      "all": 9,
+      "math": 2,
+      "english": 3,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 873,
+     "sales": 401316797
+    },
+    {
+     "name": "신대방동",
+     "region": "서울-동작구",
+     "km": 1.3,
+     "academies": {
+      "all": 51,
+      "math": 19,
+      "english": 12,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 3087,
+     "sales": 1121265721
+    },
+    {
+     "name": "대방동",
+     "region": "서울-동작구",
+     "km": 1.4,
+     "academies": {
+      "all": 102,
+      "math": 41,
+      "english": 20,
+      "korean": 27,
+      "science": 3
+     },
+     "students": 5937,
+     "sales": 9536007389
+    },
+    {
+     "name": "문래동1가",
+     "region": "서울-영등포구",
+     "km": 1.4,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 262,
+     "sales": null
+    },
+    {
+     "name": "대림동",
+     "region": "서울-영등포구",
+     "km": 1.5,
+     "academies": {
+      "all": 28,
+      "math": 3,
+      "english": 2,
+      "korean": 7,
+      "science": 1
+     },
+     "students": 2192,
+     "sales": 1175404361
+    },
+    {
+     "name": "문래동3가",
+     "region": "서울-영등포구",
+     "km": 2.1,
+     "academies": {
+      "all": 34,
+      "math": 10,
+      "english": 6,
+      "korean": 12,
+      "science": 3
+     },
+     "students": 1534,
+     "sales": null
+    },
+    {
+     "name": "영등포동7가",
+     "region": "서울-영등포구",
+     "km": 2.1,
+     "academies": {
+      "all": 4,
+      "math": 1,
+      "english": 1,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 353,
+     "sales": null
+    },
+    {
+     "name": "신사동",
+     "region": "서울-관악구",
+     "km": 2.4,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 381,
+     "sales": 1062485059
+    },
+    {
+     "name": "보라매동",
+     "region": "서울-관악구",
+     "km": 2.5,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 1165,
+     "sales": 330895990
+    },
+    {
+     "name": "여의도동",
+     "region": "서울-영등포구",
+     "km": 2.5,
+     "academies": {
+      "all": 43,
+      "math": 10,
+      "english": 7,
+      "korean": 11,
+      "science": 0
+     },
+     "students": 3146,
+     "sales": null
+    },
+    {
+     "name": "당산동",
+     "region": "서울-영등포구",
+     "km": 2.5,
+     "academies": {
+      "all": 1,
+      "math": 1,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 2854260080
+    },
+    {
+     "name": "구로동",
+     "region": "서울-구로구",
+     "km": 2.5,
+     "academies": {
+      "all": 82,
+      "math": 28,
+      "english": 24,
+      "korean": 14,
+      "science": 1
+     },
+     "students": 7491,
+     "sales": 3038001195
+    },
+    {
+     "name": "신도림동",
+     "region": "서울-구로구",
+     "km": 2.6,
+     "academies": {
+      "all": 69,
+      "math": 28,
+      "english": 15,
+      "korean": 21,
+      "science": 2
+     },
+     "students": 3416,
+     "sales": 5521012975
+    },
+    {
+     "name": "당산동6가",
+     "region": "서울-영등포구",
+     "km": 2.7,
+     "academies": {
+      "all": 1,
+      "math": 1,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 776,
+     "sales": null
+    },
+    {
+     "name": "문래동6가",
+     "region": "서울-영등포구",
+     "km": 2.8,
+     "academies": {
+      "all": 15,
+      "math": 6,
+      "english": 5,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 1608,
+     "sales": null
+    },
+    {
+     "name": "미성동",
+     "region": "서울-관악구",
+     "km": 3.0,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 1580,
+     "sales": 1602584142
+    },
+    {
+     "name": "양평동",
+     "region": "서울-영등포구",
+     "km": 3.0,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 534,
+     "sales": 703938562
+    },
+    {
+     "name": "상도동",
+     "region": "서울-동작구",
+     "km": 3.0,
+     "academies": {
+      "all": 106,
+      "math": 43,
+      "english": 26,
+      "korean": 23,
+      "science": 4
+     },
+     "students": 4643,
+     "sales": 6765190736
+    },
+    {
+     "name": "당산동5가",
+     "region": "서울-영등포구",
+     "km": 3.2,
+     "academies": {
+      "all": 32,
+      "math": 9,
+      "english": 6,
+      "korean": 8,
+      "science": 1
+     },
+     "students": 1643,
+     "sales": null
+    },
+    {
+     "name": "노량진동",
+     "region": "서울-동작구",
+     "km": 3.2,
+     "academies": {
+      "all": 22,
+      "math": 7,
+      "english": 4,
+      "korean": 9,
+      "science": 0
+     },
+     "students": 231,
+     "sales": 12419797289
+    },
+    {
+     "name": "신림동",
+     "region": "서울-관악구",
+     "km": 3.9,
+     "academies": {
+      "all": 122,
+      "math": 45,
+      "english": 26,
+      "korean": 24,
+      "science": 1
+     },
+     "students": 6360,
+     "sales": null
+    },
+    {
+     "name": "독산동",
+     "region": "서울-금천구",
+     "km": 4.1,
+     "academies": {
+      "all": 73,
+      "math": 21,
+      "english": 21,
+      "korean": 12,
+      "science": 0
+     },
+     "students": 5779,
+     "sales": 1202649947
+    },
+    {
+     "name": "봉천동",
+     "region": "서울-관악구",
+     "km": 4.4,
+     "academies": {
+      "all": 173,
+      "math": 47,
+      "english": 44,
+      "korean": 33,
+      "science": 6
+     },
+     "students": 8789,
+     "sales": null
+    },
+    {
+     "name": "흑석동",
+     "region": "서울-동작구",
+     "km": 4.4,
+     "academies": {
+      "all": 35,
+      "math": 14,
+      "english": 11,
+      "korean": 10,
+      "science": 2
+     },
+     "students": 2848,
+     "sales": 1269251688
+    },
+    {
+     "name": "목동",
+     "region": "서울-양천구",
+     "km": 4.6,
+     "academies": {
+      "all": 730,
+      "math": 244,
+      "english": 139,
+      "korean": 262,
+      "science": 48
+     },
+     "students": 16505,
+     "sales": 60445870754
+    },
+    {
+     "name": "철산동",
+     "region": "경기-광명시",
+     "km": 4.7,
+     "academies": {
+      "all": 164,
+      "math": 59,
+      "english": 41,
+      "korean": 45,
+      "science": 11
+     },
+     "students": 8844,
+     "sales": null
+    },
+    {
+     "name": "고척동",
+     "region": "서울-구로구",
+     "km": 4.8,
+     "academies": {
+      "all": 55,
+      "math": 16,
+      "english": 19,
+      "korean": 11,
+      "science": 0
+     },
+     "students": 5340,
+     "sales": 2388064498
+    },
+    {
+     "name": "도화동",
+     "region": "서울-마포구",
+     "km": 5.0,
+     "academies": {
+      "all": 26,
+      "math": 9,
+      "english": 8,
+      "korean": 4,
+      "science": 1
+     },
+     "students": 626,
+     "sales": 903123468
+    },
+    {
+     "name": "신정동",
+     "region": "서울-양천구",
+     "km": 5.0,
+     "academies": {
+      "all": 535,
+      "math": 178,
+      "english": 114,
+      "korean": 155,
+      "science": 28
+     },
+     "students": 19194,
+     "sales": 41067141471
+    }
+   ]
   },
   {
    "name": "양평동",
@@ -3675,7 +7473,429 @@
     37.52643,
     126.89023
    ],
-   "sales": 703938562
+   "sales": 703938562,
+   "nearby": [
+    {
+     "name": "양평동3가",
+     "region": "서울-영등포구",
+     "km": 0.8,
+     "academies": {
+      "all": 15,
+      "math": 5,
+      "english": 2,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 600,
+     "sales": null
+    },
+    {
+     "name": "문래동6가",
+     "region": "서울-영등포구",
+     "km": 0.8,
+     "academies": {
+      "all": 15,
+      "math": 6,
+      "english": 5,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 1608,
+     "sales": null
+    },
+    {
+     "name": "양평동2가",
+     "region": "서울-영등포구",
+     "km": 0.8,
+     "academies": {
+      "all": 4,
+      "math": 3,
+      "english": 1,
+      "korean": 1,
+      "science": 1
+     },
+     "students": 687,
+     "sales": null
+    },
+    {
+     "name": "문래동3가",
+     "region": "서울-영등포구",
+     "km": 0.9,
+     "academies": {
+      "all": 34,
+      "math": 10,
+      "english": 6,
+      "korean": 12,
+      "science": 3
+     },
+     "students": 1534,
+     "sales": null
+    },
+    {
+     "name": "당산동",
+     "region": "서울-영등포구",
+     "km": 1.0,
+     "academies": {
+      "all": 1,
+      "math": 1,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 2854260080
+    },
+    {
+     "name": "당산동5가",
+     "region": "서울-영등포구",
+     "km": 1.0,
+     "academies": {
+      "all": 32,
+      "math": 9,
+      "english": 6,
+      "korean": 8,
+      "science": 1
+     },
+     "students": 1643,
+     "sales": null
+    },
+    {
+     "name": "영등포동7가",
+     "region": "서울-영등포구",
+     "km": 1.2,
+     "academies": {
+      "all": 4,
+      "math": 1,
+      "english": 1,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 353,
+     "sales": null
+    },
+    {
+     "name": "양평동4가",
+     "region": "서울-영등포구",
+     "km": 1.3,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 1348,
+     "sales": null
+    },
+    {
+     "name": "당산동6가",
+     "region": "서울-영등포구",
+     "km": 1.6,
+     "academies": {
+      "all": 1,
+      "math": 1,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 776,
+     "sales": null
+    },
+    {
+     "name": "목동",
+     "region": "서울-양천구",
+     "km": 1.6,
+     "academies": {
+      "all": 730,
+      "math": 244,
+      "english": 139,
+      "korean": 262,
+      "science": 48
+     },
+     "students": 16505,
+     "sales": 60445870754
+    },
+    {
+     "name": "문래동1가",
+     "region": "서울-영등포구",
+     "km": 1.7,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 262,
+     "sales": null
+    },
+    {
+     "name": "신도림동",
+     "region": "서울-구로구",
+     "km": 1.8,
+     "academies": {
+      "all": 69,
+      "math": 28,
+      "english": 15,
+      "korean": 21,
+      "science": 2
+     },
+     "students": 3416,
+     "sales": 5521012975
+    },
+    {
+     "name": "영등포동",
+     "region": "서울-영등포구",
+     "km": 2.2,
+     "academies": {
+      "all": 9,
+      "math": 2,
+      "english": 3,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 873,
+     "sales": 401316797
+    },
+    {
+     "name": "도림동",
+     "region": "서울-영등포구",
+     "km": 2.2,
+     "academies": {
+      "all": 12,
+      "math": 3,
+      "english": 1,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 833780241
+    },
+    {
+     "name": "신길동",
+     "region": "서울-영등포구",
+     "km": 3.0,
+     "academies": {
+      "all": 137,
+      "math": 47,
+      "english": 40,
+      "korean": 27,
+      "science": 6
+     },
+     "students": 7432,
+     "sales": 5898982454
+    },
+    {
+     "name": "신정동",
+     "region": "서울-양천구",
+     "km": 3.2,
+     "academies": {
+      "all": 535,
+      "math": 178,
+      "english": 114,
+      "korean": 155,
+      "science": 28
+     },
+     "students": 19194,
+     "sales": 41067141471
+    },
+    {
+     "name": "구로동",
+     "region": "서울-구로구",
+     "km": 3.5,
+     "academies": {
+      "all": 82,
+      "math": 28,
+      "english": 24,
+      "korean": 14,
+      "science": 1
+     },
+     "students": 7491,
+     "sales": 3038001195
+    },
+    {
+     "name": "염창동",
+     "region": "서울-강서구",
+     "km": 3.5,
+     "academies": {
+      "all": 86,
+      "math": 30,
+      "english": 20,
+      "korean": 27,
+      "science": 1
+     },
+     "students": 3573,
+     "sales": 2890908605
+    },
+    {
+     "name": "대림동",
+     "region": "서울-영등포구",
+     "km": 3.7,
+     "academies": {
+      "all": 28,
+      "math": 3,
+      "english": 2,
+      "korean": 7,
+      "science": 1
+     },
+     "students": 2192,
+     "sales": 1175404361
+    },
+    {
+     "name": "여의도동",
+     "region": "서울-영등포구",
+     "km": 3.7,
+     "academies": {
+      "all": 43,
+      "math": 10,
+      "english": 7,
+      "korean": 11,
+      "science": 0
+     },
+     "students": 3146,
+     "sales": null
+    },
+    {
+     "name": "망원동",
+     "region": "서울-마포구",
+     "km": 3.8,
+     "academies": {
+      "all": 36,
+      "math": 14,
+      "english": 11,
+      "korean": 5,
+      "science": 1
+     },
+     "students": 700,
+     "sales": 1095743722
+    },
+    {
+     "name": "고척동",
+     "region": "서울-구로구",
+     "km": 3.9,
+     "academies": {
+      "all": 55,
+      "math": 16,
+      "english": 19,
+      "korean": 11,
+      "science": 0
+     },
+     "students": 5340,
+     "sales": 2388064498
+    },
+    {
+     "name": "화곡동",
+     "region": "서울-강서구",
+     "km": 3.9,
+     "academies": {
+      "all": 188,
+      "math": 60,
+      "english": 44,
+      "korean": 47,
+      "science": 2
+     },
+     "students": 6321,
+     "sales": 5316460178
+    },
+    {
+     "name": "대방동",
+     "region": "서울-동작구",
+     "km": 4.0,
+     "academies": {
+      "all": 102,
+      "math": 41,
+      "english": 20,
+      "korean": 27,
+      "science": 3
+     },
+     "students": 5937,
+     "sales": 9536007389
+    },
+    {
+     "name": "신대방동",
+     "region": "서울-동작구",
+     "km": 4.3,
+     "academies": {
+      "all": 51,
+      "math": 19,
+      "english": 12,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 3087,
+     "sales": 1121265721
+    },
+    {
+     "name": "성산동",
+     "region": "서울-마포구",
+     "km": 4.5,
+     "academies": {
+      "all": 49,
+      "math": 16,
+      "english": 12,
+      "korean": 9,
+      "science": 0
+     },
+     "students": 3076,
+     "sales": 2642921814
+    },
+    {
+     "name": "등촌동",
+     "region": "서울-강서구",
+     "km": 4.6,
+     "academies": {
+      "all": 104,
+      "math": 35,
+      "english": 32,
+      "korean": 32,
+      "science": 4
+     },
+     "students": 8328,
+     "sales": 4677598292
+    },
+    {
+     "name": "신수동",
+     "region": "서울-마포구",
+     "km": 4.7,
+     "academies": {
+      "all": 44,
+      "math": 15,
+      "english": 7,
+      "korean": 20,
+      "science": 5
+     },
+     "students": 2045,
+     "sales": 1496385265
+    },
+    {
+     "name": "신월동",
+     "region": "서울-양천구",
+     "km": 5.0,
+     "academies": {
+      "all": 150,
+      "math": 41,
+      "english": 40,
+      "korean": 33,
+      "science": 2
+     },
+     "students": 9495,
+     "sales": 6122411311
+    },
+    {
+     "name": "개봉동",
+     "region": "서울-구로구",
+     "km": 5.1,
+     "academies": {
+      "all": 75,
+      "math": 21,
+      "english": 25,
+      "korean": 19,
+      "science": 0
+     },
+     "students": 2996,
+     "sales": 1979709635
+    }
+   ]
   },
   {
    "name": "양평동1가",
@@ -4051,7 +8271,429 @@
     37.5218,
     126.88293
    ],
-   "sales": null
+   "sales": null,
+   "nearby": [
+    {
+     "name": "문래동6가",
+     "region": "서울-영등포구",
+     "km": 0.3,
+     "academies": {
+      "all": 15,
+      "math": 6,
+      "english": 5,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 1608,
+     "sales": null
+    },
+    {
+     "name": "양평동",
+     "region": "서울-영등포구",
+     "km": 0.8,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 534,
+     "sales": 703938562
+    },
+    {
+     "name": "문래동3가",
+     "region": "서울-영등포구",
+     "km": 1.1,
+     "academies": {
+      "all": 34,
+      "math": 10,
+      "english": 6,
+      "korean": 12,
+      "science": 3
+     },
+     "students": 1534,
+     "sales": null
+    },
+    {
+     "name": "신도림동",
+     "region": "서울-구로구",
+     "km": 1.2,
+     "academies": {
+      "all": 69,
+      "math": 28,
+      "english": 15,
+      "korean": 21,
+      "science": 2
+     },
+     "students": 3416,
+     "sales": 5521012975
+    },
+    {
+     "name": "양평동3가",
+     "region": "서울-영등포구",
+     "km": 1.6,
+     "academies": {
+      "all": 15,
+      "math": 5,
+      "english": 2,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 600,
+     "sales": null
+    },
+    {
+     "name": "목동",
+     "region": "서울-양천구",
+     "km": 1.7,
+     "academies": {
+      "all": 730,
+      "math": 244,
+      "english": 139,
+      "korean": 262,
+      "science": 48
+     },
+     "students": 16505,
+     "sales": 60445870754
+    },
+    {
+     "name": "문래동1가",
+     "region": "서울-영등포구",
+     "km": 1.7,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 262,
+     "sales": null
+    },
+    {
+     "name": "당산동",
+     "region": "서울-영등포구",
+     "km": 1.7,
+     "academies": {
+      "all": 1,
+      "math": 1,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 2854260080
+    },
+    {
+     "name": "당산동5가",
+     "region": "서울-영등포구",
+     "km": 1.8,
+     "academies": {
+      "all": 32,
+      "math": 9,
+      "english": 6,
+      "korean": 8,
+      "science": 1
+     },
+     "students": 1643,
+     "sales": null
+    },
+    {
+     "name": "영등포동7가",
+     "region": "서울-영등포구",
+     "km": 1.9,
+     "academies": {
+      "all": 4,
+      "math": 1,
+      "english": 1,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 353,
+     "sales": null
+    },
+    {
+     "name": "양평동4가",
+     "region": "서울-영등포구",
+     "km": 2.1,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 1348,
+     "sales": null
+    },
+    {
+     "name": "도림동",
+     "region": "서울-영등포구",
+     "km": 2.2,
+     "academies": {
+      "all": 12,
+      "math": 3,
+      "english": 1,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 833780241
+    },
+    {
+     "name": "당산동6가",
+     "region": "서울-영등포구",
+     "km": 2.3,
+     "academies": {
+      "all": 1,
+      "math": 1,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 776,
+     "sales": null
+    },
+    {
+     "name": "영등포동",
+     "region": "서울-영등포구",
+     "km": 2.4,
+     "academies": {
+      "all": 9,
+      "math": 2,
+      "english": 3,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 873,
+     "sales": 401316797
+    },
+    {
+     "name": "신정동",
+     "region": "서울-양천구",
+     "km": 2.4,
+     "academies": {
+      "all": 535,
+      "math": 178,
+      "english": 114,
+      "korean": 155,
+      "science": 28
+     },
+     "students": 19194,
+     "sales": 41067141471
+    },
+    {
+     "name": "구로동",
+     "region": "서울-구로구",
+     "km": 2.9,
+     "academies": {
+      "all": 82,
+      "math": 28,
+      "english": 24,
+      "korean": 14,
+      "science": 1
+     },
+     "students": 7491,
+     "sales": 3038001195
+    },
+    {
+     "name": "고척동",
+     "region": "서울-구로구",
+     "km": 3.1,
+     "academies": {
+      "all": 55,
+      "math": 16,
+      "english": 19,
+      "korean": 11,
+      "science": 0
+     },
+     "students": 5340,
+     "sales": 2388064498
+    },
+    {
+     "name": "신길동",
+     "region": "서울-영등포구",
+     "km": 3.1,
+     "academies": {
+      "all": 137,
+      "math": 47,
+      "english": 40,
+      "korean": 27,
+      "science": 6
+     },
+     "students": 7432,
+     "sales": 5898982454
+    },
+    {
+     "name": "대림동",
+     "region": "서울-영등포구",
+     "km": 3.4,
+     "academies": {
+      "all": 28,
+      "math": 3,
+      "english": 2,
+      "korean": 7,
+      "science": 1
+     },
+     "students": 2192,
+     "sales": 1175404361
+    },
+    {
+     "name": "화곡동",
+     "region": "서울-강서구",
+     "km": 3.6,
+     "academies": {
+      "all": 188,
+      "math": 60,
+      "english": 44,
+      "korean": 47,
+      "science": 2
+     },
+     "students": 6321,
+     "sales": 5316460178
+    },
+    {
+     "name": "염창동",
+     "region": "서울-강서구",
+     "km": 3.7,
+     "academies": {
+      "all": 86,
+      "math": 30,
+      "english": 20,
+      "korean": 27,
+      "science": 1
+     },
+     "students": 3573,
+     "sales": 2890908605
+    },
+    {
+     "name": "개봉동",
+     "region": "서울-구로구",
+     "km": 4.3,
+     "academies": {
+      "all": 75,
+      "math": 21,
+      "english": 25,
+      "korean": 19,
+      "science": 0
+     },
+     "students": 2996,
+     "sales": 1979709635
+    },
+    {
+     "name": "신대방동",
+     "region": "서울-동작구",
+     "km": 4.3,
+     "academies": {
+      "all": 51,
+      "math": 19,
+      "english": 12,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 3087,
+     "sales": 1121265721
+    },
+    {
+     "name": "여의도동",
+     "region": "서울-영등포구",
+     "km": 4.3,
+     "academies": {
+      "all": 43,
+      "math": 10,
+      "english": 7,
+      "korean": 11,
+      "science": 0
+     },
+     "students": 3146,
+     "sales": null
+    },
+    {
+     "name": "대방동",
+     "region": "서울-동작구",
+     "km": 4.3,
+     "academies": {
+      "all": 102,
+      "math": 41,
+      "english": 20,
+      "korean": 27,
+      "science": 3
+     },
+     "students": 5937,
+     "sales": 9536007389
+    },
+    {
+     "name": "신월동",
+     "region": "서울-양천구",
+     "km": 4.4,
+     "academies": {
+      "all": 150,
+      "math": 41,
+      "english": 40,
+      "korean": 33,
+      "science": 2
+     },
+     "students": 9495,
+     "sales": 6122411311
+    },
+    {
+     "name": "망원동",
+     "region": "서울-마포구",
+     "km": 4.5,
+     "academies": {
+      "all": 36,
+      "math": 14,
+      "english": 11,
+      "korean": 5,
+      "science": 1
+     },
+     "students": 700,
+     "sales": 1095743722
+    },
+    {
+     "name": "등촌동",
+     "region": "서울-강서구",
+     "km": 4.6,
+     "academies": {
+      "all": 104,
+      "math": 35,
+      "english": 32,
+      "korean": 32,
+      "science": 4
+     },
+     "students": 8328,
+     "sales": 4677598292
+    },
+    {
+     "name": "철산동",
+     "region": "경기-광명시",
+     "km": 4.8,
+     "academies": {
+      "all": 164,
+      "math": 59,
+      "english": 41,
+      "korean": 45,
+      "science": 11
+     },
+     "students": 8844,
+     "sales": null
+    },
+    {
+     "name": "성산동",
+     "region": "서울-마포구",
+     "km": 5.2,
+     "academies": {
+      "all": 49,
+      "math": 16,
+      "english": 12,
+      "korean": 9,
+      "science": 0
+     },
+     "students": 3076,
+     "sales": 2642921814
+    }
+   ]
   },
   {
    "name": "양평동3가",
@@ -4318,7 +8960,429 @@
       1
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "당산동5가",
+     "region": "서울-영등포구",
+     "km": 0.5,
+     "academies": {
+      "all": 32,
+      "math": 9,
+      "english": 6,
+      "korean": 8,
+      "science": 1
+     },
+     "students": 1643,
+     "sales": null
+    },
+    {
+     "name": "양평동4가",
+     "region": "서울-영등포구",
+     "km": 0.6,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 1348,
+     "sales": null
+    },
+    {
+     "name": "양평동",
+     "region": "서울-영등포구",
+     "km": 0.8,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 534,
+     "sales": 703938562
+    },
+    {
+     "name": "당산동",
+     "region": "서울-영등포구",
+     "km": 1.0,
+     "academies": {
+      "all": 1,
+      "math": 1,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 2854260080
+    },
+    {
+     "name": "당산동6가",
+     "region": "서울-영등포구",
+     "km": 1.3,
+     "academies": {
+      "all": 1,
+      "math": 1,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 776,
+     "sales": null
+    },
+    {
+     "name": "영등포동7가",
+     "region": "서울-영등포구",
+     "km": 1.4,
+     "academies": {
+      "all": 4,
+      "math": 1,
+      "english": 1,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 353,
+     "sales": null
+    },
+    {
+     "name": "문래동3가",
+     "region": "서울-영등포구",
+     "km": 1.6,
+     "academies": {
+      "all": 34,
+      "math": 10,
+      "english": 6,
+      "korean": 12,
+      "science": 3
+     },
+     "students": 1534,
+     "sales": null
+    },
+    {
+     "name": "양평동2가",
+     "region": "서울-영등포구",
+     "km": 1.6,
+     "academies": {
+      "all": 4,
+      "math": 3,
+      "english": 1,
+      "korean": 1,
+      "science": 1
+     },
+     "students": 687,
+     "sales": null
+    },
+    {
+     "name": "문래동6가",
+     "region": "서울-영등포구",
+     "km": 1.6,
+     "academies": {
+      "all": 15,
+      "math": 6,
+      "english": 5,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 1608,
+     "sales": null
+    },
+    {
+     "name": "목동",
+     "region": "서울-양천구",
+     "km": 1.6,
+     "academies": {
+      "all": 730,
+      "math": 244,
+      "english": 139,
+      "korean": 262,
+      "science": 48
+     },
+     "students": 16505,
+     "sales": 60445870754
+    },
+    {
+     "name": "문래동1가",
+     "region": "서울-영등포구",
+     "km": 2.3,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 262,
+     "sales": null
+    },
+    {
+     "name": "영등포동",
+     "region": "서울-영등포구",
+     "km": 2.5,
+     "academies": {
+      "all": 9,
+      "math": 2,
+      "english": 3,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 873,
+     "sales": 401316797
+    },
+    {
+     "name": "합정동",
+     "region": "서울-마포구",
+     "km": 2.6,
+     "academies": {
+      "all": 8,
+      "math": 1,
+      "english": 2,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 930,
+     "sales": 891955141
+    },
+    {
+     "name": "신도림동",
+     "region": "서울-구로구",
+     "km": 2.6,
+     "academies": {
+      "all": 69,
+      "math": 28,
+      "english": 15,
+      "korean": 21,
+      "science": 2
+     },
+     "students": 3416,
+     "sales": 5521012975
+    },
+    {
+     "name": "도림동",
+     "region": "서울-영등포구",
+     "km": 2.7,
+     "academies": {
+      "all": 12,
+      "math": 3,
+      "english": 1,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 833780241
+    },
+    {
+     "name": "망원동",
+     "region": "서울-마포구",
+     "km": 3.0,
+     "academies": {
+      "all": 36,
+      "math": 14,
+      "english": 11,
+      "korean": 5,
+      "science": 1
+     },
+     "students": 700,
+     "sales": 1095743722
+    },
+    {
+     "name": "염창동",
+     "region": "서울-강서구",
+     "km": 3.1,
+     "academies": {
+      "all": 86,
+      "math": 30,
+      "english": 20,
+      "korean": 27,
+      "science": 1
+     },
+     "students": 3573,
+     "sales": 2890908605
+    },
+    {
+     "name": "신길동",
+     "region": "서울-영등포구",
+     "km": 3.4,
+     "academies": {
+      "all": 137,
+      "math": 47,
+      "english": 40,
+      "korean": 27,
+      "science": 6
+     },
+     "students": 7432,
+     "sales": 5898982454
+    },
+    {
+     "name": "여의도동",
+     "region": "서울-영등포구",
+     "km": 3.5,
+     "academies": {
+      "all": 43,
+      "math": 10,
+      "english": 7,
+      "korean": 11,
+      "science": 0
+     },
+     "students": 3146,
+     "sales": null
+    },
+    {
+     "name": "성산동",
+     "region": "서울-마포구",
+     "km": 3.7,
+     "academies": {
+      "all": 49,
+      "math": 16,
+      "english": 12,
+      "korean": 9,
+      "science": 0
+     },
+     "students": 3076,
+     "sales": 2642921814
+    },
+    {
+     "name": "신정동",
+     "region": "서울-양천구",
+     "km": 3.8,
+     "academies": {
+      "all": 535,
+      "math": 178,
+      "english": 114,
+      "korean": 155,
+      "science": 28
+     },
+     "students": 19194,
+     "sales": 41067141471
+    },
+    {
+     "name": "화곡동",
+     "region": "서울-강서구",
+     "km": 4.0,
+     "academies": {
+      "all": 188,
+      "math": 60,
+      "english": 44,
+      "korean": 47,
+      "science": 2
+     },
+     "students": 6321,
+     "sales": 5316460178
+    },
+    {
+     "name": "신수동",
+     "region": "서울-마포구",
+     "km": 4.1,
+     "academies": {
+      "all": 44,
+      "math": 15,
+      "english": 7,
+      "korean": 20,
+      "science": 5
+     },
+     "students": 2045,
+     "sales": 1496385265
+    },
+    {
+     "name": "구로동",
+     "region": "서울-구로구",
+     "km": 4.2,
+     "academies": {
+      "all": 82,
+      "math": 28,
+      "english": 24,
+      "korean": 14,
+      "science": 1
+     },
+     "students": 7491,
+     "sales": 3038001195
+    },
+    {
+     "name": "대방동",
+     "region": "서울-동작구",
+     "km": 4.3,
+     "academies": {
+      "all": 102,
+      "math": 41,
+      "english": 20,
+      "korean": 27,
+      "science": 3
+     },
+     "students": 5937,
+     "sales": 9536007389
+    },
+    {
+     "name": "대림동",
+     "region": "서울-영등포구",
+     "km": 4.3,
+     "academies": {
+      "all": 28,
+      "math": 3,
+      "english": 2,
+      "korean": 7,
+      "science": 1
+     },
+     "students": 2192,
+     "sales": 1175404361
+    },
+    {
+     "name": "등촌동",
+     "region": "서울-강서구",
+     "km": 4.4,
+     "academies": {
+      "all": 104,
+      "math": 35,
+      "english": 32,
+      "korean": 32,
+      "science": 4
+     },
+     "students": 8328,
+     "sales": 4677598292
+    },
+    {
+     "name": "고척동",
+     "region": "서울-구로구",
+     "km": 4.6,
+     "academies": {
+      "all": 55,
+      "math": 16,
+      "english": 19,
+      "korean": 11,
+      "science": 0
+     },
+     "students": 5340,
+     "sales": 2388064498
+    },
+    {
+     "name": "신대방동",
+     "region": "서울-동작구",
+     "km": 4.8,
+     "academies": {
+      "all": 51,
+      "math": 19,
+      "english": 12,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 3087,
+     "sales": 1121265721
+    },
+    {
+     "name": "대흥동",
+     "region": "서울-마포구",
+     "km": 4.9,
+     "academies": {
+      "all": 77,
+      "math": 23,
+      "english": 19,
+      "korean": 25,
+      "science": 2
+     },
+     "students": 1610,
+     "sales": 4610372236
+    }
+   ]
   },
   {
    "name": "양평동4가",
@@ -4472,7 +9536,429 @@
     37.53753,
     126.89612
    ],
-   "sales": null
+   "sales": null,
+   "nearby": [
+    {
+     "name": "양평동3가",
+     "region": "서울-영등포구",
+     "km": 0.6,
+     "academies": {
+      "all": 15,
+      "math": 5,
+      "english": 2,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 600,
+     "sales": null
+    },
+    {
+     "name": "당산동5가",
+     "region": "서울-영등포구",
+     "km": 0.6,
+     "academies": {
+      "all": 32,
+      "math": 9,
+      "english": 6,
+      "korean": 8,
+      "science": 1
+     },
+     "students": 1643,
+     "sales": null
+    },
+    {
+     "name": "당산동",
+     "region": "서울-영등포구",
+     "km": 1.3,
+     "academies": {
+      "all": 1,
+      "math": 1,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 2854260080
+    },
+    {
+     "name": "양평동",
+     "region": "서울-영등포구",
+     "km": 1.3,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 534,
+     "sales": 703938562
+    },
+    {
+     "name": "당산동6가",
+     "region": "서울-영등포구",
+     "km": 1.4,
+     "academies": {
+      "all": 1,
+      "math": 1,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 776,
+     "sales": null
+    },
+    {
+     "name": "영등포동7가",
+     "region": "서울-영등포구",
+     "km": 1.7,
+     "academies": {
+      "all": 4,
+      "math": 1,
+      "english": 1,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 353,
+     "sales": null
+    },
+    {
+     "name": "목동",
+     "region": "서울-양천구",
+     "km": 1.8,
+     "academies": {
+      "all": 730,
+      "math": 244,
+      "english": 139,
+      "korean": 262,
+      "science": 48
+     },
+     "students": 16505,
+     "sales": 60445870754
+    },
+    {
+     "name": "문래동3가",
+     "region": "서울-영등포구",
+     "km": 2.1,
+     "academies": {
+      "all": 34,
+      "math": 10,
+      "english": 6,
+      "korean": 12,
+      "science": 3
+     },
+     "students": 1534,
+     "sales": null
+    },
+    {
+     "name": "양평동2가",
+     "region": "서울-영등포구",
+     "km": 2.1,
+     "academies": {
+      "all": 4,
+      "math": 3,
+      "english": 1,
+      "korean": 1,
+      "science": 1
+     },
+     "students": 687,
+     "sales": null
+    },
+    {
+     "name": "합정동",
+     "region": "서울-마포구",
+     "km": 2.1,
+     "academies": {
+      "all": 8,
+      "math": 1,
+      "english": 2,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 930,
+     "sales": 891955141
+    },
+    {
+     "name": "문래동6가",
+     "region": "서울-영등포구",
+     "km": 2.1,
+     "academies": {
+      "all": 15,
+      "math": 6,
+      "english": 5,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 1608,
+     "sales": null
+    },
+    {
+     "name": "망원동",
+     "region": "서울-마포구",
+     "km": 2.5,
+     "academies": {
+      "all": 36,
+      "math": 14,
+      "english": 11,
+      "korean": 5,
+      "science": 1
+     },
+     "students": 700,
+     "sales": 1095743722
+    },
+    {
+     "name": "문래동1가",
+     "region": "서울-영등포구",
+     "km": 2.7,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 262,
+     "sales": null
+    },
+    {
+     "name": "염창동",
+     "region": "서울-강서구",
+     "km": 2.9,
+     "academies": {
+      "all": 86,
+      "math": 30,
+      "english": 20,
+      "korean": 27,
+      "science": 1
+     },
+     "students": 3573,
+     "sales": 2890908605
+    },
+    {
+     "name": "영등포동",
+     "region": "서울-영등포구",
+     "km": 2.9,
+     "academies": {
+      "all": 9,
+      "math": 2,
+      "english": 3,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 873,
+     "sales": 401316797
+    },
+    {
+     "name": "상수동",
+     "region": "서울-마포구",
+     "km": 3.0,
+     "academies": {
+      "all": 4,
+      "math": 1,
+      "english": 1,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 943,
+     "sales": null
+    },
+    {
+     "name": "성산동",
+     "region": "서울-마포구",
+     "km": 3.1,
+     "academies": {
+      "all": 49,
+      "math": 16,
+      "english": 12,
+      "korean": 9,
+      "science": 0
+     },
+     "students": 3076,
+     "sales": 2642921814
+    },
+    {
+     "name": "신도림동",
+     "region": "서울-구로구",
+     "km": 3.2,
+     "academies": {
+      "all": 69,
+      "math": 28,
+      "english": 15,
+      "korean": 21,
+      "science": 2
+     },
+     "students": 3416,
+     "sales": 5521012975
+    },
+    {
+     "name": "여의도동",
+     "region": "서울-영등포구",
+     "km": 3.5,
+     "academies": {
+      "all": 43,
+      "math": 10,
+      "english": 7,
+      "korean": 11,
+      "science": 0
+     },
+     "students": 3146,
+     "sales": null
+    },
+    {
+     "name": "신수동",
+     "region": "서울-마포구",
+     "km": 3.7,
+     "academies": {
+      "all": 44,
+      "math": 15,
+      "english": 7,
+      "korean": 20,
+      "science": 5
+     },
+     "students": 2045,
+     "sales": 1496385265
+    },
+    {
+     "name": "신길동",
+     "region": "서울-영등포구",
+     "km": 3.8,
+     "academies": {
+      "all": 137,
+      "math": 47,
+      "english": 40,
+      "korean": 27,
+      "science": 6
+     },
+     "students": 7432,
+     "sales": 5898982454
+    },
+    {
+     "name": "화곡동",
+     "region": "서울-강서구",
+     "km": 4.1,
+     "academies": {
+      "all": 188,
+      "math": 60,
+      "english": 44,
+      "korean": 47,
+      "science": 2
+     },
+     "students": 6321,
+     "sales": 5316460178
+    },
+    {
+     "name": "등촌동",
+     "region": "서울-강서구",
+     "km": 4.3,
+     "academies": {
+      "all": 104,
+      "math": 35,
+      "english": 32,
+      "korean": 32,
+      "science": 4
+     },
+     "students": 8328,
+     "sales": 4677598292
+    },
+    {
+     "name": "신정동",
+     "region": "서울-양천구",
+     "km": 4.3,
+     "academies": {
+      "all": 535,
+      "math": 178,
+      "english": 114,
+      "korean": 155,
+      "science": 28
+     },
+     "students": 19194,
+     "sales": 41067141471
+    },
+    {
+     "name": "북가좌동",
+     "region": "서울-서대문구",
+     "km": 4.4,
+     "academies": {
+      "all": 84,
+      "math": 34,
+      "english": 19,
+      "korean": 22,
+      "science": 4
+     },
+     "students": 2183,
+     "sales": 6931668946
+    },
+    {
+     "name": "대방동",
+     "region": "서울-동작구",
+     "km": 4.5,
+     "academies": {
+      "all": 102,
+      "math": 41,
+      "english": 20,
+      "korean": 27,
+      "science": 3
+     },
+     "students": 5937,
+     "sales": 9536007389
+    },
+    {
+     "name": "대흥동",
+     "region": "서울-마포구",
+     "km": 4.5,
+     "academies": {
+      "all": 77,
+      "math": 23,
+      "english": 19,
+      "korean": 25,
+      "science": 2
+     },
+     "students": 1610,
+     "sales": 4610372236
+    },
+    {
+     "name": "염리동",
+     "region": "서울-마포구",
+     "km": 4.7,
+     "academies": {
+      "all": 51,
+      "math": 22,
+      "english": 11,
+      "korean": 19,
+      "science": 2
+     },
+     "students": 4365,
+     "sales": 3593853243
+    },
+    {
+     "name": "도화동",
+     "region": "서울-마포구",
+     "km": 4.7,
+     "academies": {
+      "all": 26,
+      "math": 9,
+      "english": 8,
+      "korean": 4,
+      "science": 1
+     },
+     "students": 626,
+     "sales": 903123468
+    },
+    {
+     "name": "구로동",
+     "region": "서울-구로구",
+     "km": 4.8,
+     "academies": {
+      "all": 82,
+      "math": 28,
+      "english": 24,
+      "korean": 14,
+      "science": 1
+     },
+     "students": 7491,
+     "sales": 3038001195
+    }
+   ]
   },
   {
    "name": "양평동5가",
@@ -5041,7 +10527,429 @@
       86
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "대방동",
+     "region": "서울-동작구",
+     "km": 1.8,
+     "academies": {
+      "all": 102,
+      "math": 41,
+      "english": 20,
+      "korean": 27,
+      "science": 3
+     },
+     "students": 5937,
+     "sales": 9536007389
+    },
+    {
+     "name": "노량진동",
+     "region": "서울-동작구",
+     "km": 1.9,
+     "academies": {
+      "all": 22,
+      "math": 7,
+      "english": 4,
+      "korean": 9,
+      "science": 0
+     },
+     "students": 231,
+     "sales": 12419797289
+    },
+    {
+     "name": "당산동6가",
+     "region": "서울-영등포구",
+     "km": 2.2,
+     "academies": {
+      "all": 1,
+      "math": 1,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 776,
+     "sales": null
+    },
+    {
+     "name": "본동",
+     "region": "서울-동작구",
+     "km": 2.3,
+     "academies": {
+      "all": 11,
+      "math": 5,
+      "english": 2,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 894,
+     "sales": null
+    },
+    {
+     "name": "영등포동",
+     "region": "서울-영등포구",
+     "km": 2.3,
+     "academies": {
+      "all": 9,
+      "math": 2,
+      "english": 3,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 873,
+     "sales": 401316797
+    },
+    {
+     "name": "산천동",
+     "region": "서울-용산구",
+     "km": 2.3,
+     "academies": {
+      "all": 12,
+      "math": 5,
+      "english": 4,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 385,
+     "sales": null
+    },
+    {
+     "name": "원효로4가",
+     "region": "서울-용산구",
+     "km": 2.4,
+     "academies": {
+      "all": 1,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 507,
+     "sales": null
+    },
+    {
+     "name": "영등포동7가",
+     "region": "서울-영등포구",
+     "km": 2.4,
+     "academies": {
+      "all": 4,
+      "math": 1,
+      "english": 1,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 353,
+     "sales": null
+    },
+    {
+     "name": "도화동",
+     "region": "서울-마포구",
+     "km": 2.4,
+     "academies": {
+      "all": 26,
+      "math": 9,
+      "english": 8,
+      "korean": 4,
+      "science": 1
+     },
+     "students": 626,
+     "sales": 903123468
+    },
+    {
+     "name": "신길동",
+     "region": "서울-영등포구",
+     "km": 2.5,
+     "academies": {
+      "all": 137,
+      "math": 47,
+      "english": 40,
+      "korean": 27,
+      "science": 6
+     },
+     "students": 7432,
+     "sales": 5898982454
+    },
+    {
+     "name": "용강동",
+     "region": "서울-마포구",
+     "km": 2.6,
+     "academies": {
+      "all": 9,
+      "math": 3,
+      "english": 1,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 4506283703
+    },
+    {
+     "name": "당산동",
+     "region": "서울-영등포구",
+     "km": 2.7,
+     "academies": {
+      "all": 1,
+      "math": 1,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 2854260080
+    },
+    {
+     "name": "신수동",
+     "region": "서울-마포구",
+     "km": 2.8,
+     "academies": {
+      "all": 44,
+      "math": 15,
+      "english": 7,
+      "korean": 20,
+      "science": 5
+     },
+     "students": 2045,
+     "sales": 1496385265
+    },
+    {
+     "name": "상도동",
+     "region": "서울-동작구",
+     "km": 2.8,
+     "academies": {
+      "all": 106,
+      "math": 43,
+      "english": 26,
+      "korean": 23,
+      "science": 4
+     },
+     "students": 4643,
+     "sales": 6765190736
+    },
+    {
+     "name": "도림동",
+     "region": "서울-영등포구",
+     "km": 2.8,
+     "academies": {
+      "all": 12,
+      "math": 3,
+      "english": 1,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 833780241
+    },
+    {
+     "name": "상수동",
+     "region": "서울-마포구",
+     "km": 2.9,
+     "academies": {
+      "all": 4,
+      "math": 1,
+      "english": 1,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 943,
+     "sales": null
+    },
+    {
+     "name": "당산동5가",
+     "region": "서울-영등포구",
+     "km": 3.1,
+     "academies": {
+      "all": 32,
+      "math": 9,
+      "english": 6,
+      "korean": 8,
+      "science": 1
+     },
+     "students": 1643,
+     "sales": null
+    },
+    {
+     "name": "염리동",
+     "region": "서울-마포구",
+     "km": 3.2,
+     "academies": {
+      "all": 51,
+      "math": 22,
+      "english": 11,
+      "korean": 19,
+      "science": 2
+     },
+     "students": 4365,
+     "sales": 3593853243
+    },
+    {
+     "name": "문래동3가",
+     "region": "서울-영등포구",
+     "km": 3.3,
+     "academies": {
+      "all": 34,
+      "math": 10,
+      "english": 6,
+      "korean": 12,
+      "science": 3
+     },
+     "students": 1534,
+     "sales": null
+    },
+    {
+     "name": "공덕동",
+     "region": "서울-마포구",
+     "km": 3.3,
+     "academies": {
+      "all": 27,
+      "math": 5,
+      "english": 12,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 650,
+     "sales": 369408847
+    },
+    {
+     "name": "흑석동",
+     "region": "서울-동작구",
+     "km": 3.3,
+     "academies": {
+      "all": 35,
+      "math": 14,
+      "english": 11,
+      "korean": 10,
+      "science": 2
+     },
+     "students": 2848,
+     "sales": 1269251688
+    },
+    {
+     "name": "대흥동",
+     "region": "서울-마포구",
+     "km": 3.4,
+     "academies": {
+      "all": 77,
+      "math": 23,
+      "english": 19,
+      "korean": 25,
+      "science": 2
+     },
+     "students": 1610,
+     "sales": 4610372236
+    },
+    {
+     "name": "신대방동",
+     "region": "서울-동작구",
+     "km": 3.4,
+     "academies": {
+      "all": 51,
+      "math": 19,
+      "english": 12,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 3087,
+     "sales": 1121265721
+    },
+    {
+     "name": "이촌동",
+     "region": "서울-용산구",
+     "km": 3.9,
+     "academies": {
+      "all": 23,
+      "math": 6,
+      "english": 4,
+      "korean": 9,
+      "science": 1
+     },
+     "students": 2426,
+     "sales": 1652187473
+    },
+    {
+     "name": "대림동",
+     "region": "서울-영등포구",
+     "km": 4.0,
+     "academies": {
+      "all": 28,
+      "math": 3,
+      "english": 2,
+      "korean": 7,
+      "science": 1
+     },
+     "students": 2192,
+     "sales": 1175404361
+    },
+    {
+     "name": "아현동",
+     "region": "서울-마포구",
+     "km": 4.2,
+     "academies": {
+      "all": 43,
+      "math": 9,
+      "english": 11,
+      "korean": 13,
+      "science": 0
+     },
+     "students": 2073,
+     "sales": 1220393456
+    },
+    {
+     "name": "신도림동",
+     "region": "서울-구로구",
+     "km": 4.5,
+     "academies": {
+      "all": 69,
+      "math": 28,
+      "english": 15,
+      "korean": 21,
+      "science": 2
+     },
+     "students": 3416,
+     "sales": 5521012975
+    },
+    {
+     "name": "북아현동",
+     "region": "서울-서대문구",
+     "km": 4.8,
+     "academies": {
+      "all": 27,
+      "math": 8,
+      "english": 6,
+      "korean": 8,
+      "science": 2
+     },
+     "students": 2449,
+     "sales": 698008793
+    },
+    {
+     "name": "봉천동",
+     "region": "서울-관악구",
+     "km": 4.9,
+     "academies": {
+      "all": 173,
+      "math": 47,
+      "english": 44,
+      "korean": 33,
+      "science": 6
+     },
+     "students": 8789,
+     "sales": null
+    },
+    {
+     "name": "성산동",
+     "region": "서울-마포구",
+     "km": 4.9,
+     "academies": {
+      "all": 49,
+      "math": 16,
+      "english": 12,
+      "korean": 9,
+      "science": 0
+     },
+     "students": 3076,
+     "sales": 2642921814
+    }
+   ]
   },
   {
    "name": "영등포동",
@@ -5280,7 +11188,429 @@
       53
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "도림동",
+     "region": "서울-영등포구",
+     "km": 0.5,
+     "academies": {
+      "all": 12,
+      "math": 3,
+      "english": 1,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 833780241
+    },
+    {
+     "name": "문래동1가",
+     "region": "서울-영등포구",
+     "km": 0.9,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 262,
+     "sales": null
+    },
+    {
+     "name": "신길동",
+     "region": "서울-영등포구",
+     "km": 0.9,
+     "academies": {
+      "all": 137,
+      "math": 47,
+      "english": 40,
+      "korean": 27,
+      "science": 6
+     },
+     "students": 7432,
+     "sales": 5898982454
+    },
+    {
+     "name": "영등포동7가",
+     "region": "서울-영등포구",
+     "km": 1.2,
+     "academies": {
+      "all": 4,
+      "math": 1,
+      "english": 1,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 353,
+     "sales": null
+    },
+    {
+     "name": "문래동3가",
+     "region": "서울-영등포구",
+     "km": 1.3,
+     "academies": {
+      "all": 34,
+      "math": 10,
+      "english": 6,
+      "korean": 12,
+      "science": 3
+     },
+     "students": 1534,
+     "sales": null
+    },
+    {
+     "name": "당산동",
+     "region": "서울-영등포구",
+     "km": 1.6,
+     "academies": {
+      "all": 1,
+      "math": 1,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 2854260080
+    },
+    {
+     "name": "당산동6가",
+     "region": "서울-영등포구",
+     "km": 1.8,
+     "academies": {
+      "all": 1,
+      "math": 1,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 776,
+     "sales": null
+    },
+    {
+     "name": "대방동",
+     "region": "서울-동작구",
+     "km": 1.9,
+     "academies": {
+      "all": 102,
+      "math": 41,
+      "english": 20,
+      "korean": 27,
+      "science": 3
+     },
+     "students": 5937,
+     "sales": 9536007389
+    },
+    {
+     "name": "문래동6가",
+     "region": "서울-영등포구",
+     "km": 2.1,
+     "academies": {
+      "all": 15,
+      "math": 6,
+      "english": 5,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 1608,
+     "sales": null
+    },
+    {
+     "name": "대림동",
+     "region": "서울-영등포구",
+     "km": 2.1,
+     "academies": {
+      "all": 28,
+      "math": 3,
+      "english": 2,
+      "korean": 7,
+      "science": 1
+     },
+     "students": 2192,
+     "sales": 1175404361
+    },
+    {
+     "name": "양평동",
+     "region": "서울-영등포구",
+     "km": 2.2,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 534,
+     "sales": 703938562
+    },
+    {
+     "name": "신도림동",
+     "region": "서울-구로구",
+     "km": 2.2,
+     "academies": {
+      "all": 69,
+      "math": 28,
+      "english": 15,
+      "korean": 21,
+      "science": 2
+     },
+     "students": 3416,
+     "sales": 5521012975
+    },
+    {
+     "name": "당산동5가",
+     "region": "서울-영등포구",
+     "km": 2.3,
+     "academies": {
+      "all": 32,
+      "math": 9,
+      "english": 6,
+      "korean": 8,
+      "science": 1
+     },
+     "students": 1643,
+     "sales": null
+    },
+    {
+     "name": "신대방동",
+     "region": "서울-동작구",
+     "km": 2.3,
+     "academies": {
+      "all": 51,
+      "math": 19,
+      "english": 12,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 3087,
+     "sales": 1121265721
+    },
+    {
+     "name": "여의도동",
+     "region": "서울-영등포구",
+     "km": 2.3,
+     "academies": {
+      "all": 43,
+      "math": 10,
+      "english": 7,
+      "korean": 11,
+      "science": 0
+     },
+     "students": 3146,
+     "sales": null
+    },
+    {
+     "name": "양평동2가",
+     "region": "서울-영등포구",
+     "km": 2.4,
+     "academies": {
+      "all": 4,
+      "math": 3,
+      "english": 1,
+      "korean": 1,
+      "science": 1
+     },
+     "students": 687,
+     "sales": null
+    },
+    {
+     "name": "양평동3가",
+     "region": "서울-영등포구",
+     "km": 2.5,
+     "academies": {
+      "all": 15,
+      "math": 5,
+      "english": 2,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 600,
+     "sales": null
+    },
+    {
+     "name": "구로동",
+     "region": "서울-구로구",
+     "km": 2.8,
+     "academies": {
+      "all": 82,
+      "math": 28,
+      "english": 24,
+      "korean": 14,
+      "science": 1
+     },
+     "students": 7491,
+     "sales": 3038001195
+    },
+    {
+     "name": "양평동4가",
+     "region": "서울-영등포구",
+     "km": 2.9,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 1348,
+     "sales": null
+    },
+    {
+     "name": "노량진동",
+     "region": "서울-동작구",
+     "km": 3.5,
+     "academies": {
+      "all": 22,
+      "math": 7,
+      "english": 4,
+      "korean": 9,
+      "science": 0
+     },
+     "students": 231,
+     "sales": 12419797289
+    },
+    {
+     "name": "상도동",
+     "region": "서울-동작구",
+     "km": 3.6,
+     "academies": {
+      "all": 106,
+      "math": 43,
+      "english": 26,
+      "korean": 23,
+      "science": 4
+     },
+     "students": 4643,
+     "sales": 6765190736
+    },
+    {
+     "name": "목동",
+     "region": "서울-양천구",
+     "km": 3.8,
+     "academies": {
+      "all": 730,
+      "math": 244,
+      "english": 139,
+      "korean": 262,
+      "science": 48
+     },
+     "students": 16505,
+     "sales": 60445870754
+    },
+    {
+     "name": "신수동",
+     "region": "서울-마포구",
+     "km": 4.5,
+     "academies": {
+      "all": 44,
+      "math": 15,
+      "english": 7,
+      "korean": 20,
+      "science": 5
+     },
+     "students": 2045,
+     "sales": 1496385265
+    },
+    {
+     "name": "신정동",
+     "region": "서울-양천구",
+     "km": 4.5,
+     "academies": {
+      "all": 535,
+      "math": 178,
+      "english": 114,
+      "korean": 155,
+      "science": 28
+     },
+     "students": 19194,
+     "sales": 41067141471
+    },
+    {
+     "name": "고척동",
+     "region": "서울-구로구",
+     "km": 4.6,
+     "academies": {
+      "all": 55,
+      "math": 16,
+      "english": 19,
+      "korean": 11,
+      "science": 0
+     },
+     "students": 5340,
+     "sales": 2388064498
+    },
+    {
+     "name": "도화동",
+     "region": "서울-마포구",
+     "km": 4.6,
+     "academies": {
+      "all": 26,
+      "math": 9,
+      "english": 8,
+      "korean": 4,
+      "science": 1
+     },
+     "students": 626,
+     "sales": 903123468
+    },
+    {
+     "name": "흑석동",
+     "region": "서울-동작구",
+     "km": 4.9,
+     "academies": {
+      "all": 35,
+      "math": 14,
+      "english": 11,
+      "korean": 10,
+      "science": 2
+     },
+     "students": 2848,
+     "sales": 1269251688
+    },
+    {
+     "name": "신림동",
+     "region": "서울-관악구",
+     "km": 4.9,
+     "academies": {
+      "all": 122,
+      "math": 45,
+      "english": 26,
+      "korean": 24,
+      "science": 1
+     },
+     "students": 6360,
+     "sales": null
+    },
+    {
+     "name": "독산동",
+     "region": "서울-금천구",
+     "km": 4.9,
+     "academies": {
+      "all": 73,
+      "math": 21,
+      "english": 21,
+      "korean": 12,
+      "science": 0
+     },
+     "students": 5779,
+     "sales": 1202649947
+    },
+    {
+     "name": "철산동",
+     "region": "경기-광명시",
+     "km": 5.1,
+     "academies": {
+      "all": 164,
+      "math": 59,
+      "english": 41,
+      "korean": 45,
+      "science": 11
+     },
+     "students": 8844,
+     "sales": null
+    }
+   ]
   },
   {
    "name": "영등포동5가",
@@ -5761,7 +12091,429 @@
     37.52385,
     126.90393
    ],
-   "sales": null
+   "sales": null,
+   "nearby": [
+    {
+     "name": "당산동",
+     "region": "서울-영등포구",
+     "km": 0.4,
+     "academies": {
+      "all": 1,
+      "math": 1,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 2854260080
+    },
+    {
+     "name": "당산동6가",
+     "region": "서울-영등포구",
+     "km": 0.7,
+     "academies": {
+      "all": 1,
+      "math": 1,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 776,
+     "sales": null
+    },
+    {
+     "name": "문래동3가",
+     "region": "서울-영등포구",
+     "km": 1.0,
+     "academies": {
+      "all": 34,
+      "math": 10,
+      "english": 6,
+      "korean": 12,
+      "science": 3
+     },
+     "students": 1534,
+     "sales": null
+    },
+    {
+     "name": "당산동5가",
+     "region": "서울-영등포구",
+     "km": 1.0,
+     "academies": {
+      "all": 32,
+      "math": 9,
+      "english": 6,
+      "korean": 8,
+      "science": 1
+     },
+     "students": 1643,
+     "sales": null
+    },
+    {
+     "name": "영등포동",
+     "region": "서울-영등포구",
+     "km": 1.2,
+     "academies": {
+      "all": 9,
+      "math": 2,
+      "english": 3,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 873,
+     "sales": 401316797
+    },
+    {
+     "name": "양평동",
+     "region": "서울-영등포구",
+     "km": 1.2,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 534,
+     "sales": 703938562
+    },
+    {
+     "name": "문래동1가",
+     "region": "서울-영등포구",
+     "km": 1.3,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 262,
+     "sales": null
+    },
+    {
+     "name": "양평동3가",
+     "region": "서울-영등포구",
+     "km": 1.4,
+     "academies": {
+      "all": 15,
+      "math": 5,
+      "english": 2,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 600,
+     "sales": null
+    },
+    {
+     "name": "도림동",
+     "region": "서울-영등포구",
+     "km": 1.5,
+     "academies": {
+      "all": 12,
+      "math": 3,
+      "english": 1,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 0,
+     "sales": 833780241
+    },
+    {
+     "name": "문래동6가",
+     "region": "서울-영등포구",
+     "km": 1.6,
+     "academies": {
+      "all": 15,
+      "math": 6,
+      "english": 5,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 1608,
+     "sales": null
+    },
+    {
+     "name": "양평동4가",
+     "region": "서울-영등포구",
+     "km": 1.7,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 1348,
+     "sales": null
+    },
+    {
+     "name": "양평동2가",
+     "region": "서울-영등포구",
+     "km": 1.9,
+     "academies": {
+      "all": 4,
+      "math": 3,
+      "english": 1,
+      "korean": 1,
+      "science": 1
+     },
+     "students": 687,
+     "sales": null
+    },
+    {
+     "name": "신길동",
+     "region": "서울-영등포구",
+     "km": 2.1,
+     "academies": {
+      "all": 137,
+      "math": 47,
+      "english": 40,
+      "korean": 27,
+      "science": 6
+     },
+     "students": 7432,
+     "sales": 5898982454
+    },
+    {
+     "name": "신도림동",
+     "region": "서울-구로구",
+     "km": 2.4,
+     "academies": {
+      "all": 69,
+      "math": 28,
+      "english": 15,
+      "korean": 21,
+      "science": 2
+     },
+     "students": 3416,
+     "sales": 5521012975
+    },
+    {
+     "name": "여의도동",
+     "region": "서울-영등포구",
+     "km": 2.4,
+     "academies": {
+      "all": 43,
+      "math": 10,
+      "english": 7,
+      "korean": 11,
+      "science": 0
+     },
+     "students": 3146,
+     "sales": null
+    },
+    {
+     "name": "목동",
+     "region": "서울-양천구",
+     "km": 2.8,
+     "academies": {
+      "all": 730,
+      "math": 244,
+      "english": 139,
+      "korean": 262,
+      "science": 48
+     },
+     "students": 16505,
+     "sales": 60445870754
+    },
+    {
+     "name": "대방동",
+     "region": "서울-동작구",
+     "km": 2.9,
+     "academies": {
+      "all": 102,
+      "math": 41,
+      "english": 20,
+      "korean": 27,
+      "science": 3
+     },
+     "students": 5937,
+     "sales": 9536007389
+    },
+    {
+     "name": "대림동",
+     "region": "서울-영등포구",
+     "km": 3.2,
+     "academies": {
+      "all": 28,
+      "math": 3,
+      "english": 2,
+      "korean": 7,
+      "science": 1
+     },
+     "students": 2192,
+     "sales": 1175404361
+    },
+    {
+     "name": "신대방동",
+     "region": "서울-동작구",
+     "km": 3.5,
+     "academies": {
+      "all": 51,
+      "math": 19,
+      "english": 12,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 3087,
+     "sales": 1121265721
+    },
+    {
+     "name": "구로동",
+     "region": "서울-구로구",
+     "km": 3.5,
+     "academies": {
+      "all": 82,
+      "math": 28,
+      "english": 24,
+      "korean": 14,
+      "science": 1
+     },
+     "students": 7491,
+     "sales": 3038001195
+    },
+    {
+     "name": "신수동",
+     "region": "서울-마포구",
+     "km": 3.8,
+     "academies": {
+      "all": 44,
+      "math": 15,
+      "english": 7,
+      "korean": 20,
+      "science": 5
+     },
+     "students": 2045,
+     "sales": 1496385265
+    },
+    {
+     "name": "망원동",
+     "region": "서울-마포구",
+     "km": 4.0,
+     "academies": {
+      "all": 36,
+      "math": 14,
+      "english": 11,
+      "korean": 5,
+      "science": 1
+     },
+     "students": 700,
+     "sales": 1095743722
+    },
+    {
+     "name": "노량진동",
+     "region": "서울-동작구",
+     "km": 4.1,
+     "academies": {
+      "all": 22,
+      "math": 7,
+      "english": 4,
+      "korean": 9,
+      "science": 0
+     },
+     "students": 231,
+     "sales": 12419797289
+    },
+    {
+     "name": "신정동",
+     "region": "서울-양천구",
+     "km": 4.3,
+     "academies": {
+      "all": 535,
+      "math": 178,
+      "english": 114,
+      "korean": 155,
+      "science": 28
+     },
+     "students": 19194,
+     "sales": 41067141471
+    },
+    {
+     "name": "도화동",
+     "region": "서울-마포구",
+     "km": 4.4,
+     "academies": {
+      "all": 26,
+      "math": 9,
+      "english": 8,
+      "korean": 4,
+      "science": 1
+     },
+     "students": 626,
+     "sales": 903123468
+    },
+    {
+     "name": "성산동",
+     "region": "서울-마포구",
+     "km": 4.4,
+     "academies": {
+      "all": 49,
+      "math": 16,
+      "english": 12,
+      "korean": 9,
+      "science": 0
+     },
+     "students": 3076,
+     "sales": 2642921814
+    },
+    {
+     "name": "염창동",
+     "region": "서울-강서구",
+     "km": 4.4,
+     "academies": {
+      "all": 86,
+      "math": 30,
+      "english": 20,
+      "korean": 27,
+      "science": 1
+     },
+     "students": 3573,
+     "sales": 2890908605
+    },
+    {
+     "name": "상도동",
+     "region": "서울-동작구",
+     "km": 4.5,
+     "academies": {
+      "all": 106,
+      "math": 43,
+      "english": 26,
+      "korean": 23,
+      "science": 4
+     },
+     "students": 4643,
+     "sales": 6765190736
+    },
+    {
+     "name": "대흥동",
+     "region": "서울-마포구",
+     "km": 4.7,
+     "academies": {
+      "all": 77,
+      "math": 23,
+      "english": 19,
+      "korean": 25,
+      "science": 2
+     },
+     "students": 1610,
+     "sales": 4610372236
+    },
+    {
+     "name": "고척동",
+     "region": "서울-구로구",
+     "km": 4.7,
+     "academies": {
+      "all": 55,
+      "math": 16,
+      "english": 19,
+      "korean": 11,
+      "science": 0
+     },
+     "students": 5340,
+     "sales": 2388064498
+    }
+   ]
   },
   {
    "name": "영등포동8가",

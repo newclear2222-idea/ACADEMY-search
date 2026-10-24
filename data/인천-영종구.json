@@ -253,7 +253,8 @@
    "center": [
     37.44814,
     126.41263
-   ]
+   ],
+   "nearby": []
   },
   {
    "name": "운남동",
@@ -591,7 +592,51 @@
       4
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "중산동",
+     "region": "인천-영종구",
+     "km": 2.6,
+     "academies": {
+      "all": 139,
+      "math": 45,
+      "english": 33,
+      "korean": 21,
+      "science": 3
+     },
+     "students": 6191,
+     "sales": null
+    },
+    {
+     "name": "운서동",
+     "region": "인천-영종구",
+     "km": 3.5,
+     "academies": {
+      "all": 39,
+      "math": 13,
+      "english": 9,
+      "korean": 12,
+      "science": 1
+     },
+     "students": 5507,
+     "sales": null
+    },
+    {
+     "name": "청라동",
+     "region": "인천-서해구",
+     "km": 10.6,
+     "academies": {
+      "all": 383,
+      "math": 137,
+      "english": 114,
+      "korean": 55,
+      "science": 20
+     },
+     "students": 5921,
+     "sales": null
+    }
+   ]
   },
   {
    "name": "운북동",
@@ -734,6 +779,64 @@
    "center": [
     37.51345,
     126.52149
+   ],
+   "nearby": [
+    {
+     "name": "운서동",
+     "region": "인천-영종구",
+     "km": 3.2,
+     "academies": {
+      "all": 39,
+      "math": 13,
+      "english": 9,
+      "korean": 12,
+      "science": 1
+     },
+     "students": 5507,
+     "sales": null
+    },
+    {
+     "name": "운남동",
+     "region": "인천-영종구",
+     "km": 3.2,
+     "academies": {
+      "all": 23,
+      "math": 7,
+      "english": 5,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 4197,
+     "sales": null
+    },
+    {
+     "name": "중산동",
+     "region": "인천-영종구",
+     "km": 4.3,
+     "academies": {
+      "all": 139,
+      "math": 45,
+      "english": 33,
+      "korean": 21,
+      "science": 3
+     },
+     "students": 6191,
+     "sales": null
+    },
+    {
+     "name": "청라동",
+     "region": "인천-서해구",
+     "km": 10.6,
+     "academies": {
+      "all": 383,
+      "math": 137,
+      "english": 114,
+      "korean": 55,
+      "science": 20
+     },
+     "students": 5921,
+     "sales": null
+    }
    ]
   },
   {
@@ -1094,7 +1197,37 @@
       18
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "운남동",
+     "region": "인천-영종구",
+     "km": 3.5,
+     "academies": {
+      "all": 23,
+      "math": 7,
+      "english": 5,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 4197,
+     "sales": null
+    },
+    {
+     "name": "중산동",
+     "region": "인천-영종구",
+     "km": 5.9,
+     "academies": {
+      "all": 139,
+      "math": 45,
+      "english": 33,
+      "korean": 21,
+      "science": 3
+     },
+     "students": 6191,
+     "sales": null
+    }
+   ]
   },
   {
    "name": "중산동",
@@ -1472,7 +1605,51 @@
       67
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "운남동",
+     "region": "인천-영종구",
+     "km": 2.6,
+     "academies": {
+      "all": 23,
+      "math": 7,
+      "english": 5,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 4197,
+     "sales": null
+    },
+    {
+     "name": "운서동",
+     "region": "인천-영종구",
+     "km": 5.9,
+     "academies": {
+      "all": 39,
+      "math": 13,
+      "english": 9,
+      "korean": 12,
+      "science": 1
+     },
+     "students": 5507,
+     "sales": null
+    },
+    {
+     "name": "청라동",
+     "region": "인천-서해구",
+     "km": 8.0,
+     "academies": {
+      "all": 383,
+      "math": 137,
+      "english": 114,
+      "korean": 55,
+      "science": 20
+     },
+     "students": 5921,
+     "sales": null
+    }
+   ]
   }
  ]
 }

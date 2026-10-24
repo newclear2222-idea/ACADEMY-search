@@ -466,7 +466,8 @@
       31
      ]
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "교동면",
@@ -619,7 +620,8 @@
    "center": [
     37.77992,
     126.28324
-   ]
+   ],
+   "nearby": []
   },
   {
    "name": "길상면",
@@ -801,7 +803,8 @@
    "center": [
     37.64143,
     126.48304
-   ]
+   ],
+   "nearby": []
   },
   {
    "name": "내가면",
@@ -949,7 +952,8 @@
    "center": [
     37.71665,
     126.39141
-   ]
+   ],
+   "nearby": []
   },
   {
    "name": "불은면",
@@ -1097,6 +1101,36 @@
    "center": [
     37.69556,
     126.4683
+   ],
+   "nearby": [
+    {
+     "name": "선원면",
+     "region": "인천-강화군",
+     "km": 2.4,
+     "academies": {
+      "all": 5,
+      "math": 3,
+      "english": 1,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 227,
+     "sales": null
+    },
+    {
+     "name": "강화읍",
+     "region": "인천-강화군",
+     "km": 6.1,
+     "academies": {
+      "all": 30,
+      "math": 10,
+      "english": 6,
+      "korean": 6,
+      "science": 0
+     },
+     "students": 2945,
+     "sales": null
+    }
    ]
   },
   {
@@ -1250,7 +1284,8 @@
    "center": [
     37.69136,
     126.33414
-   ]
+   ],
+   "nearby": []
   },
   {
    "name": "서도면",
@@ -1403,7 +1438,8 @@
    "center": [
     37.64796,
     126.2523
-   ]
+   ],
+   "nearby": []
   },
   {
    "name": "선원면",
@@ -1597,6 +1633,36 @@
    "center": [
     37.71464,
     126.47996
+   ],
+   "nearby": [
+    {
+     "name": "불은면",
+     "region": "인천-강화군",
+     "km": 2.4,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 75,
+     "sales": null
+    },
+    {
+     "name": "강화읍",
+     "region": "인천-강화군",
+     "km": 3.9,
+     "academies": {
+      "all": 30,
+      "math": 10,
+      "english": 6,
+      "korean": 6,
+      "science": 0
+     },
+     "students": 2945,
+     "sales": null
+    }
    ]
   },
   {
@@ -1740,6 +1806,22 @@
    "center": [
     37.76974,
     126.46012
+   ],
+   "nearby": [
+    {
+     "name": "강화읍",
+     "region": "인천-강화군",
+     "km": 3.2,
+     "academies": {
+      "all": 30,
+      "math": 10,
+      "english": 6,
+      "korean": 6,
+      "science": 0
+     },
+     "students": 2945,
+     "sales": null
+    }
    ]
   },
   {
@@ -1898,7 +1980,8 @@
    "center": [
     37.6727,
     126.42651
-   ]
+   ],
+   "nearby": []
   },
   {
    "name": "양사면",
@@ -2041,7 +2124,8 @@
    "center": [
     37.80402,
     126.42177
-   ]
+   ],
+   "nearby": []
   },
   {
    "name": "하점면",
@@ -2194,7 +2278,8 @@
    "center": [
     37.76379,
     126.3975
-   ]
+   ],
+   "nearby": []
   },
   {
    "name": "화도면",
@@ -2342,7 +2427,8 @@
    "center": [
     37.63169,
     126.42002
-   ]
+   ],
+   "nearby": []
   }
  ]
 }

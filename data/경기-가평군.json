@@ -396,7 +396,8 @@
       58
      ]
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "북면",
@@ -544,6 +545,22 @@
    "center": [
     37.87938,
     127.54807
+   ],
+   "nearby": [
+    {
+     "name": "가평읍",
+     "region": "경기-가평군",
+     "km": 6.8,
+     "academies": {
+      "all": 22,
+      "math": 3,
+      "english": 6,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 1860,
+     "sales": null
+    }
    ]
   },
   {
@@ -697,6 +714,50 @@
    "center": [
     37.80583,
     127.33407
+   ],
+   "nearby": [
+    {
+     "name": "하면",
+     "region": "경기-가평군",
+     "km": 1.5,
+     "academies": {
+      "all": 1,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 179,
+     "sales": null
+    },
+    {
+     "name": "조종면",
+     "region": "경기-가평군",
+     "km": 1.8,
+     "academies": {
+      "all": 7,
+      "math": 3,
+      "english": 1,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 448,
+     "sales": null
+    },
+    {
+     "name": "이동면",
+     "region": "경기-포천시",
+     "km": 2.0,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 226,
+     "sales": null
+    }
    ]
   },
   {
@@ -936,7 +997,8 @@
       100
      ]
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "조종면",
@@ -1141,6 +1203,50 @@
    "center": [
     37.81788,
     127.34748
+   ],
+   "nearby": [
+    {
+     "name": "하면",
+     "region": "경기-가평군",
+     "km": 0.4,
+     "academies": {
+      "all": 1,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 179,
+     "sales": null
+    },
+    {
+     "name": "상면",
+     "region": "경기-가평군",
+     "km": 1.8,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 151,
+     "sales": null
+    },
+    {
+     "name": "이동면",
+     "region": "경기-포천시",
+     "km": 2.2,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 226,
+     "sales": null
+    }
    ]
   },
   {
@@ -1389,7 +1495,8 @@
    "center": [
     37.7331,
     127.41871
-   ]
+   ],
+   "nearby": []
   },
   {
    "name": "하면",
@@ -1541,6 +1648,50 @@
    "center": [
     37.81437,
     127.34681
+   ],
+   "nearby": [
+    {
+     "name": "조종면",
+     "region": "경기-가평군",
+     "km": 0.4,
+     "academies": {
+      "all": 7,
+      "math": 3,
+      "english": 1,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 448,
+     "sales": null
+    },
+    {
+     "name": "상면",
+     "region": "경기-가평군",
+     "km": 1.5,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 151,
+     "sales": null
+    },
+    {
+     "name": "이동면",
+     "region": "경기-포천시",
+     "km": 2.2,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 226,
+     "sales": null
+    }
    ]
   }
  ]

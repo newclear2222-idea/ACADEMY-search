@@ -359,7 +359,8 @@
    "center": [
     37.20518,
     127.57623
-   ]
+   ],
+   "nearby": []
   },
   {
    "name": "강천면",
@@ -512,7 +513,8 @@
    "center": [
     37.29239,
     127.72783
-   ]
+   ],
+   "nearby": []
   },
   {
    "name": "교동",
@@ -797,7 +799,79 @@
       77
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "여주읍",
+     "region": "경기-여주시",
+     "km": 0.5,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 946,
+     "sales": null
+    },
+    {
+     "name": "창동",
+     "region": "경기-여주시",
+     "km": 0.7,
+     "academies": {
+      "all": 4,
+      "math": 2,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 443,
+     "sales": null
+    },
+    {
+     "name": "월송동",
+     "region": "경기-여주시",
+     "km": 2.0,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 92,
+     "sales": null
+    },
+    {
+     "name": "상동",
+     "region": "경기-여주시",
+     "km": 2.0,
+     "academies": {
+      "all": 6,
+      "math": 3,
+      "english": 1,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 1014,
+     "sales": null
+    },
+    {
+     "name": "점봉동",
+     "region": "경기-여주시",
+     "km": 2.7,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 251,
+     "sales": null
+    }
+   ]
   },
   {
    "name": "금사면",
@@ -940,7 +1014,8 @@
    "center": [
     37.38884,
     127.5299
-   ]
+   ],
+   "nearby": []
   },
   {
    "name": "능서면",
@@ -1103,6 +1178,50 @@
    "center": [
     37.2963,
     127.59109
+   ],
+   "nearby": [
+    {
+     "name": "세종대왕면",
+     "region": "경기-여주시",
+     "km": 1.7,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 52,
+     "sales": null
+    },
+    {
+     "name": "월송동",
+     "region": "경기-여주시",
+     "km": 2.7,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 92,
+     "sales": null
+    },
+    {
+     "name": "교동",
+     "region": "경기-여주시",
+     "km": 4.2,
+     "academies": {
+      "all": 34,
+      "math": 12,
+      "english": 14,
+      "korean": 6,
+      "science": 0
+     },
+     "students": 1659,
+     "sales": null
+    }
    ]
   },
   {
@@ -1287,7 +1406,8 @@
    "center": [
     37.37339,
     127.59748
-   ]
+   ],
+   "nearby": []
   },
   {
    "name": "북내면",
@@ -1440,7 +1560,8 @@
    "center": [
     37.33027,
     127.68278
-   ]
+   ],
+   "nearby": []
   },
   {
    "name": "산북면",
@@ -1605,7 +1726,8 @@
    "center": [
     37.40379,
     127.44274
-   ]
+   ],
+   "nearby": []
   },
   {
    "name": "상동",
@@ -1823,7 +1945,65 @@
       67
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "여주읍",
+     "region": "경기-여주시",
+     "km": 1.6,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 946,
+     "sales": null
+    },
+    {
+     "name": "창동",
+     "region": "경기-여주시",
+     "km": 1.7,
+     "academies": {
+      "all": 4,
+      "math": 2,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 443,
+     "sales": null
+    },
+    {
+     "name": "오학동",
+     "region": "경기-여주시",
+     "km": 1.9,
+     "academies": {
+      "all": 16,
+      "math": 7,
+      "english": 5,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 734,
+     "sales": null
+    },
+    {
+     "name": "교동",
+     "region": "경기-여주시",
+     "km": 2.0,
+     "academies": {
+      "all": 34,
+      "math": 12,
+      "english": 14,
+      "korean": 6,
+      "science": 0
+     },
+     "students": 1659,
+     "sales": null
+    }
+   ]
   },
   {
    "name": "세종대왕면",
@@ -1966,6 +2146,36 @@
    "center": [
     37.29854,
     127.5722
+   ],
+   "nearby": [
+    {
+     "name": "능서면",
+     "region": "경기-여주시",
+     "km": 1.7,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 881,
+     "sales": null
+    },
+    {
+     "name": "교동",
+     "region": "경기-여주시",
+     "km": 5.8,
+     "academies": {
+      "all": 34,
+      "math": 12,
+      "english": 14,
+      "korean": 6,
+      "science": 0
+     },
+     "students": 1659,
+     "sales": null
+    }
    ]
   },
   {
@@ -2114,6 +2324,78 @@
    "center": [
     37.28257,
     127.63831
+   ],
+   "nearby": [
+    {
+     "name": "교동",
+     "region": "경기-여주시",
+     "km": 0.5,
+     "academies": {
+      "all": 34,
+      "math": 12,
+      "english": 14,
+      "korean": 6,
+      "science": 0
+     },
+     "students": 1659,
+     "sales": null
+    },
+    {
+     "name": "창동",
+     "region": "경기-여주시",
+     "km": 0.7,
+     "academies": {
+      "all": 4,
+      "math": 2,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 443,
+     "sales": null
+    },
+    {
+     "name": "상동",
+     "region": "경기-여주시",
+     "km": 1.6,
+     "academies": {
+      "all": 6,
+      "math": 3,
+      "english": 1,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 1014,
+     "sales": null
+    },
+    {
+     "name": "월송동",
+     "region": "경기-여주시",
+     "km": 2.4,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 92,
+     "sales": null
+    },
+    {
+     "name": "점봉동",
+     "region": "경기-여주시",
+     "km": 2.9,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 251,
+     "sales": null
+    }
    ]
   },
   {
@@ -2390,7 +2672,37 @@
       67
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "상동",
+     "region": "경기-여주시",
+     "km": 1.9,
+     "academies": {
+      "all": 6,
+      "math": 3,
+      "english": 1,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 1014,
+     "sales": null
+    },
+    {
+     "name": "교동",
+     "region": "경기-여주시",
+     "km": 3.9,
+     "academies": {
+      "all": 34,
+      "math": 12,
+      "english": 14,
+      "korean": 6,
+      "science": 0
+     },
+     "students": 1659,
+     "sales": null
+    }
+   ]
   },
   {
    "name": "월송동",
@@ -2533,6 +2845,64 @@
    "center": [
     37.278,
     127.61133
+   ],
+   "nearby": [
+    {
+     "name": "창동",
+     "region": "경기-여주시",
+     "km": 1.9,
+     "academies": {
+      "all": 4,
+      "math": 2,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 443,
+     "sales": null
+    },
+    {
+     "name": "교동",
+     "region": "경기-여주시",
+     "km": 2.0,
+     "academies": {
+      "all": 34,
+      "math": 12,
+      "english": 14,
+      "korean": 6,
+      "science": 0
+     },
+     "students": 1659,
+     "sales": null
+    },
+    {
+     "name": "여주읍",
+     "region": "경기-여주시",
+     "km": 2.4,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 946,
+     "sales": null
+    },
+    {
+     "name": "능서면",
+     "region": "경기-여주시",
+     "km": 2.7,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 881,
+     "sales": null
+    }
    ]
   },
   {
@@ -2686,7 +3056,8 @@
    "center": [
     37.20586,
     127.66344
-   ]
+   ],
+   "nearby": []
   },
   {
    "name": "점봉동",
@@ -2829,6 +3200,36 @@
    "center": [
     37.25719,
     127.64486
+   ],
+   "nearby": [
+    {
+     "name": "교동",
+     "region": "경기-여주시",
+     "km": 2.7,
+     "academies": {
+      "all": 34,
+      "math": 12,
+      "english": 14,
+      "korean": 6,
+      "science": 0
+     },
+     "students": 1659,
+     "sales": null
+    },
+    {
+     "name": "여주읍",
+     "region": "경기-여주시",
+     "km": 2.9,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 946,
+     "sales": null
+    }
    ]
   },
   {
@@ -3009,6 +3410,64 @@
    "center": [
     37.28533,
     127.6309
+   ],
+   "nearby": [
+    {
+     "name": "교동",
+     "region": "경기-여주시",
+     "km": 0.7,
+     "academies": {
+      "all": 34,
+      "math": 12,
+      "english": 14,
+      "korean": 6,
+      "science": 0
+     },
+     "students": 1659,
+     "sales": null
+    },
+    {
+     "name": "여주읍",
+     "region": "경기-여주시",
+     "km": 0.7,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 946,
+     "sales": null
+    },
+    {
+     "name": "상동",
+     "region": "경기-여주시",
+     "km": 1.7,
+     "academies": {
+      "all": 6,
+      "math": 3,
+      "english": 1,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 1014,
+     "sales": null
+    },
+    {
+     "name": "월송동",
+     "region": "경기-여주시",
+     "km": 1.9,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 92,
+     "sales": null
+    }
    ]
   },
   {
@@ -3901,7 +4360,8 @@
    "center": [
     37.35471,
     127.52906
-   ]
+   ],
+   "nearby": []
   }
  ]
 }

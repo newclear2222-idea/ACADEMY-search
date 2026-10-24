@@ -7,7 +7,8 @@
 
 2) 이웃 동 붙이기 (자료를 새로 만들 때마다 update_data.py가 부릅니다):
    python3 scripts/nearby.py apply
-   구·시 경계를 넘어서도 동 중심끼리 4km 안에 있는 동을 가까운 순으로 붙입니다.
+   구·시 경계를 넘어서도 동 중심끼리 3km 안의 동, 7km 안의 학원 20곳 이상인 동,
+   12km 안의 대형 학원가(학원 250곳 이상)를 가까운 순으로 붙입니다.
 """
 import json
 import math
@@ -18,8 +19,11 @@ from pathlib import Path
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 CENTROIDS = DATA_DIR / "centroids.json"
 PROVINCES = {"서울특별시", "경기도", "인천광역시"}
-NEARBY_KM = 4.0
-NEARBY_MAX = 12
+NEARBY_KM = 7.0  # 학원 20곳 이상인 동은 이 안까지
+BIG_HUB = 250   # 대형 학원가(대치동, 목동, 중계동, 평촌 등)는 멀어도 찾아가서
+BIG_HUB_KM = 12.0
+NEAR_KM = 3.0   # 이 안은 학원이 적은 동도 남깁니다.
+NEARBY_MAX = 30
 
 
 def legal_dong(dong):
@@ -105,11 +109,14 @@ def apply_nearby():
     missing = sum(len(d["areas"]) for _, d in regions) - len(places)
     for pt, data, a in places:
         near = sorted(
-            ((km(pt, pt2), d2, a2) for pt2, d2, a2 in places if a2 is not a and km(pt, pt2) <= NEARBY_KM),
+            ((km(pt, pt2), d2, a2) for pt2, d2, a2 in places
+             if a2 is not a and (km(pt, pt2) <= NEAR_KM
+                                 or (km(pt, pt2) <= NEARBY_KM and a2["academies"]["all"] >= 20)
+                                 or (km(pt, pt2) <= BIG_HUB_KM and a2["academies"]["all"] >= BIG_HUB))),
             key=lambda x: x[0],
         )[:NEARBY_MAX]
         a["nearby"] = [{"name": a2["name"], "region": d2["id"], "km": round(dist, 1),
-                        "academies": a2["academies"], "students": a2["students"]["total"]}
+                        "academies": a2["academies"], "students": a2["students"]["total"], "sales": a2.get("sales")}
                        for dist, d2, a2 in near]
     for path, data in regions:
         path.write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")

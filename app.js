@@ -75,7 +75,7 @@ function reasonsFor(r, ctx) {
       ? "다만 아래 매출을 보면 학원 수에 비해 매출이 커서, 있는 학원들이 규모 있게 운영되는 곳으로 보입니다."
       : kind
         ? "아래 매출을 보면 실제로 많은 학생이 다른 동 학원에 다니는 것으로 보입니다."
-        : `학생들이 근처 학원가로 다니고 있을 수 있습니다.${hubText(r.area, subject, ctx.regionId) || " 다만 4km 안에 학원이 크게 몰린 동은 보이지 않습니다."}`;
+        : `학생들이 근처 학원가로 다니고 있을 수 있습니다${r.area.nearby ? "(아래 근처 학원가 참고)" : ""}.`;
     reasons.push(`${LEVEL_LABELS[level]}은 ${R}의 ${pct(shareS)}인데 ${label}은 ${R}의 ${pct(shareA)}뿐입니다. ${tail}`);
   }
 
@@ -91,6 +91,7 @@ function reasonsFor(r, ctx) {
 
   const sales = salesReason(r.area, ctx);
   if (sales) reasons.push(sales);
+  if (r.area.nearby) reasons.push(hubText(r.area, subject, ctx.regionId));
 
   const change = studentChange(r.area, level);
   if (change !== null && change >= 0.1) reasons.push(`학생 수가 ${ctx.pastYear}년보다 ${signedPct(change)} 늘었습니다. 수요가 커지는 동네입니다.`);
@@ -162,22 +163,45 @@ const feeSource = (fee, regionName) => {
   return `${where} ${feeName(fee.subject, "total")} 중간값 ${won(fee.base)}에 학년별 자료가 부족해 전국 ${LEVEL_LABELS[fee.level]} 비율(×${fee.factor.toFixed(2)})을 곱한 ${won(fee.median)}`;
 };
 
-// 가까운 학원 밀집 동: 동 중심 사이 거리 4km 안에서, 고른 과목 학원이 이 동의 3배 이상이고 20곳 이상인 동을
-// 가까운 순으로 3곳까지. 학생은 멀리 있는 큰 학원가보다 가까운 학원가로 먼저 가기 때문입니다.
-// 조건에 맞는 동이 없으면 지목하지 않습니다.
+// 근처 학원가. 원장 기준대로 두 가지를 따로 보여줍니다.
+//   ① 가까운 학원 밀집 동: 동 중심 사이 4km 안에서 그 과목 학원이 20곳 이상이고 이 동의 1.5배 이상인 동,
+//      끌어당기는 힘(학원 수 ÷ 거리², 1km 미만은 1km로) 큰 순으로 최대 2곳. 없으면 0~1곳.
+//   ② 이 일대 최대 학원가: 입시·보습 학원 250곳 이상인 대형 학원가(대치동, 목동, 중계동, 평촌 등) 중
+//      가장 가까운 곳(8km 안). ①과 겹치면 ①에서 빼고 ②로만 보여줍니다. 이 동이 대형 학원가면 생략합니다.
+// 매출로 '다른 동 학생이 찾아오는 곳'이 확인되면(서울, 학생 1명당 매출이 이 동 기대치의 1.3배 이상) 함께 적습니다.
 const HUB_KM = 4;
+const BIG_HUB = 250;
+const BIG_HUB_KM = 8;
+function hubDraws(n, area) {
+  if (!n.sales || n.students < 500 || !regionSalesPerAcademy) return false;
+  const perAcademy = n.sales / 3 / Math.max(n.academies.all, 1) / regionSalesPerAcademy;
+  if (perAcademy > 3 || perAcademy < 0.25) return false; // 매출 구역이 어긋난 동은 판단하지 않습니다.
+  const own = localUse(area, "all", "total");
+  return Boolean(own) && n.sales / 3 / n.students >= own.expected * FLOW_IN;
+}
 function nearbyHubs(area, subject) {
+  const nearby = area.nearby || [];
+  const big = area.academies.all >= BIG_HUB ? null
+    : nearby.find((n) => n.academies.all >= BIG_HUB && n.km <= BIG_HUB_KM) || null;
   const own = area.academies[subject] || 0;
-  return (area.nearby || [])
-    .filter((n) => n.km <= HUB_KM && (n.academies[subject] || 0) >= Math.max(20, own * 3))
-    .sort((a, b) => a.km - b.km)
-    .slice(0, 3);
+  const pull = (n) => (n.academies[subject] || 0) / Math.max(n.km, 1) ** 2;
+  const near = nearby
+    .filter((n) => n !== big && n.km <= HUB_KM && (n.academies[subject] || 0) >= Math.max(20, own * 1.5))
+    .sort((a, b) => pull(b) - pull(a))
+    .slice(0, 2);
+  return { near, big };
 }
 function hubText(area, subject, regionId) {
-  const hubs = nearbyHubs(area, subject);
-  if (!hubs.length) return "";
-  const list = hubs.map((n) => `${n.region === regionId ? "" : `${n.region.split("-").slice(1).join("-")} `}${n.name}(약 ${n.km}km, ${SUBJECT_LABELS[subject]} ${fmt(n.academies[subject])}곳)`).join(", ");
-  return ` 가까운 학원 밀집 동은 ${list}입니다(가까운 순. 동 중심 사이 ${HUB_KM}km 안에서 ${SUBJECT_LABELS[subject]}이 20곳 이상이고 이 동의 3배 이상인 곳).`;
+  const { near, big } = nearbyHubs(area, subject);
+  const label = SUBJECT_LABELS[subject];
+  const show = (n) => `${n.region === regionId ? "" : `${n.region.split("-").slice(1).join("-")} `}${n.name}(약 ${n.km}km, ${label} ${fmt(n.academies[subject] || 0)}곳${hubDraws(n, area) ? ", 매출로 다른 동 학생이 찾아오는 곳" : ""})`;
+  const parts = [];
+  parts.push(near.length
+    ? `4km 안의 가까운 학원 밀집 동은 ${near.map(show).join(", ")}입니다.`
+    : `4km 안에는 이 동보다 ${label}이 크게 많은 동이 없습니다.`);
+  if (big) parts.push(`이 일대 최대 학원가는 ${show(big)}입니다.`);
+  else if (area.academies.all >= BIG_HUB) parts.push(`이 동 자체가 입시·보습 학원 ${fmt(area.academies.all)}곳이 모인 대형 학원가입니다.`);
+  return `근처 학원가: ${parts.join(" ")}`;
 }
 
 // 동네 학원 이용도(추정).
@@ -223,7 +247,6 @@ function salesReason(area, ctx) {
   if (!f) return "";
   const who = f.level === "total" ? "학생" : LEVEL_LABELS[f.level];
   const pre = f.level !== level ? `이 동에는 ${LEVEL_LABELS[level]}이 다니는 학교가 없어 초·중·고 전체로 봤습니다. ` : "";
-  const hubs = hubText(area, subject, ctx.regionId);
   const amount = subject === "all"
     ? `${who} 1명당 학원 카드매출(전 과목 합계)은 월 ${won(Math.round(f.v))}입니다.`
     : `${who} 1명당 ${SUBJECT_SHORT[subject]} 학원 매출(추정)은 월 ${won(Math.round(f.v))}입니다.`;
@@ -232,8 +255,8 @@ function salesReason(area, ctx) {
   const sources = [...new Set(f.parts.map((x) => feeSource(x.fee, ctx.regionName)))];
   const basis = `${amount} 동네 학생이 모두 이 동 학원에 다닌다면 기대되는 값은 수강료 × 전국 ${who} 참여율 = ${formula} = 월 ${won(Math.round(f.expected))}입니다(수강료: ${sources.join(", ")}).`;
   const read = {
-    out: `실제는 그 기대치의 ${pct(f.use)}뿐이라, 이 동 학생 대부분이 다른 동 학원에 다니는 것으로 보입니다.${hubs} 새 학원은 가까운 거리를 내세워 이 학생들을 붙잡을 여지가 있습니다.`,
-    someOut: `실제는 그 기대치의 ${pct(f.use)}라, 일부 학생이 다른 동 학원으로 나가는 것으로 보입니다.${hubs}`,
+    out: `실제는 그 기대치의 ${pct(f.use)}뿐이라, 이 동 학생 대부분이 다른 동 학원에 다니는 것으로 보입니다${area.nearby ? "(아래 근처 학원가 참고)" : ""}. 새 학원은 가까운 거리를 내세워 이 학생들을 붙잡을 여지가 있습니다.`,
+    someOut: `실제는 그 기대치의 ${pct(f.use)}라, 일부 학생이 다른 동 학원으로 나가는 것으로 보입니다${area.nearby ? "(아래 근처 학원가 참고)" : ""}.`,
     local: `실제는 그 기대치의 ${pct(f.use)}로, 대체로 동네 학생이 동네 학원에 다니는 곳입니다.`,
     in: `실제는 그 기대치의 ${pct(f.use)}라, 다른 동 학생들이 이 동 학원으로 찾아오는 곳입니다. 수요는 크지만 이름난 학원들과 경쟁해야 합니다.`,
   }[flowKind(f.use)];
