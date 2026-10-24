@@ -9,9 +9,11 @@
   "학생 수: 학교알리미 학년별·학급별 학생수",
   "수강료: 학원이 교육청에 등록한 1인당 교습비",
   "대표 학원: 교육청에 등록한 정원이 큰 순서",
-  "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)"
+  "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)",
+  "학원 개업·폐업: 서울시 상권분석서비스 점포 (일반교습학원·외국어학원)"
  ],
  "salesPeriod": "2026년 2분기",
+ "storePeriod": "2025년 3분기~2026년 2분기",
  "pastYear": 2024,
  "aptPeriod": "",
  "unmatchedAcademies": 7,
@@ -335,6 +337,11 @@
     127.06177
    ],
    "sales": 79669763,
+   "storeFlow": {
+    "open": 1,
+    "close": 2,
+    "base": 43
+   },
    "fervor": {
     "score": 34,
     "parts": {
@@ -606,10 +613,10 @@
      "region": "경기-성남시",
      "km": 10.7,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -620,9 +627,9 @@
      "region": "경기-성남시",
      "km": 10.8,
      "academies": {
-      "all": 285,
+      "all": 286,
       "math": 81,
-      "english": 42,
+      "english": 43,
       "korean": 42,
       "science": 9
      },
@@ -634,8 +641,8 @@
      "region": "경기-안양시",
      "km": 11.0,
      "academies": {
-      "all": 277,
-      "math": 95,
+      "all": 278,
+      "math": 96,
       "english": 73,
       "korean": 66,
       "science": 12
@@ -1047,6 +1054,11 @@
     127.00257
    ],
    "sales": 69597926913,
+   "storeFlow": {
+    "open": 57,
+    "close": 57,
+    "base": 634
+   },
    "fervor": {
     "score": 81,
     "parts": {
@@ -1892,6 +1904,11 @@
     126.9905
    ],
    "sales": 14789244322,
+   "storeFlow": {
+    "open": 37,
+    "close": 31,
+    "base": 396
+   },
    "fervor": {
     "score": 73,
     "parts": {
@@ -2321,8 +2338,8 @@
      "region": "경기-안양시",
      "km": 10.6,
      "academies": {
-      "all": 277,
-      "math": 95,
+      "all": 278,
+      "math": 96,
       "english": 73,
       "korean": 66,
       "science": 12
@@ -2739,6 +2756,11 @@
     127.01778
    ],
    "sales": 19633402471,
+   "storeFlow": {
+    "open": 49,
+    "close": 74,
+    "base": 628
+   },
    "fervor": {
     "score": 77,
     "parts": {
@@ -3489,8 +3511,8 @@
      "region": "경기-안양시",
      "km": 10.4,
      "academies": {
-      "all": 277,
-      "math": 95,
+      "all": 278,
+      "math": 96,
       "english": 73,
       "korean": 66,
       "science": 12
@@ -3503,10 +3525,10 @@
      "region": "경기-성남시",
      "km": 10.8,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -3517,9 +3539,9 @@
      "region": "경기-성남시",
      "km": 10.9,
      "academies": {
-      "all": 285,
+      "all": 286,
       "math": 81,
-      "english": 42,
+      "english": 43,
       "korean": 42,
       "science": 9
      },
@@ -3833,6 +3855,11 @@
     127.0402
    ],
    "sales": 2474022955,
+   "storeFlow": {
+    "open": 17,
+    "close": 22,
+    "base": 204
+   },
    "fervor": {
     "score": 76,
     "parts": {
@@ -4164,8 +4191,8 @@
      "region": "경기-안양시",
      "km": 11.3,
      "academies": {
-      "all": 277,
-      "math": 95,
+      "all": 278,
+      "math": 96,
       "english": 73,
       "korean": 66,
       "science": 12
@@ -4782,8 +4809,8 @@
      "region": "경기-안양시",
      "km": 9.8,
      "academies": {
-      "all": 277,
-      "math": 95,
+      "all": 278,
+      "math": 96,
       "english": 73,
       "korean": 66,
       "science": 12
@@ -5179,6 +5206,11 @@
     127.01146
    ],
    "sales": 6318932444,
+   "storeFlow": {
+    "open": 25,
+    "close": 15,
+    "base": 107
+   },
    "fervor": {
     "score": 90,
     "parts": {
@@ -5619,5 +5651,9 @@
     }
    ]
   }
- ]
+ ],
+ "seoulStoreRate": {
+  "close": 0.0905,
+  "open": 0.086
+ }
 }

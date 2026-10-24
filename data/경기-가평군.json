@@ -11,6 +11,7 @@
   "대표 학원: 교육청에 등록한 정원이 큰 순서"
  ],
  "salesPeriod": "",
+ "storePeriod": "",
  "pastYear": 2024,
  "aptPeriod": "",
  "unmatchedAcademies": 0,
@@ -341,7 +342,7 @@
      "kind": "학원",
      "capacity": 0,
      "since": 2026,
-     "branches": 66,
+     "branches": 65,
      "subjects": [
       "math"
      ]
@@ -1694,5 +1695,9 @@
     }
    ]
   }
- ]
+ ],
+ "seoulStoreRate": {
+  "close": 0.0905,
+  "open": 0.086
+ }
 }

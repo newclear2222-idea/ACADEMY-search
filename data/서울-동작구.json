@@ -9,9 +9,11 @@
   "학생 수: 학교알리미 학년별·학급별 학생수",
   "수강료: 학원이 교육청에 등록한 1인당 교습비",
   "대표 학원: 교육청에 등록한 정원이 큰 순서",
-  "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)"
+  "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)",
+  "학원 개업·폐업: 서울시 상권분석서비스 점포 (일반교습학원·외국어학원)"
  ],
  "salesPeriod": "2026년 2분기",
+ "storePeriod": "2025년 3분기~2026년 2분기",
  "pastYear": 2024,
  "aptPeriod": "",
  "unmatchedAcademies": 45,
@@ -404,6 +406,11 @@
     126.94721
    ],
    "sales": 12419797289,
+   "storeFlow": {
+    "open": 8,
+    "close": 16,
+    "base": 146
+   },
    "nearby": [
     {
      "name": "본동",
@@ -1177,6 +1184,11 @@
     126.92812
    ],
    "sales": 9536007389,
+   "storeFlow": {
+    "open": 13,
+    "close": 9,
+    "base": 172
+   },
    "fervor": {
     "score": 59,
     "parts": {
@@ -3258,6 +3270,11 @@
     126.97051
    ],
    "sales": 3710241994,
+   "storeFlow": {
+    "open": 20,
+    "close": 21,
+    "base": 226
+   },
    "fervor": {
     "score": 60,
     "parts": {
@@ -4060,6 +4077,11 @@
     126.94544
    ],
    "sales": 6765190736,
+   "storeFlow": {
+    "open": 15,
+    "close": 28,
+    "base": 265
+   },
    "fervor": {
     "score": 55,
     "parts": {
@@ -4849,6 +4871,11 @@
     126.91624
    ],
    "sales": 1121265721,
+   "storeFlow": {
+    "open": 9,
+    "close": 9,
+    "base": 98
+   },
    "fervor": {
     "score": 28,
     "parts": {
@@ -5166,8 +5193,8 @@
      "region": "경기-광명시",
      "km": 4.5,
      "academies": {
-      "all": 164,
-      "math": 59,
+      "all": 165,
+      "math": 60,
       "english": 41,
       "korean": 45,
       "science": 11
@@ -5194,11 +5221,11 @@
      "region": "경기-광명시",
      "km": 4.8,
      "academies": {
-      "all": 119,
+      "all": 120,
       "math": 48,
       "english": 33,
       "korean": 15,
-      "science": 5
+      "science": 6
      },
      "students": 4663,
      "sales": null
@@ -5740,6 +5767,11 @@
     126.9622
    ],
    "sales": 1269251688,
+   "storeFlow": {
+    "open": 12,
+    "close": 6,
+    "base": 84
+   },
    "fervor": {
     "score": 22,
     "parts": {
@@ -6180,5 +6212,9 @@
     }
    ]
   }
- ]
+ ],
+ "seoulStoreRate": {
+  "close": 0.0905,
+  "open": 0.086
+ }
 }

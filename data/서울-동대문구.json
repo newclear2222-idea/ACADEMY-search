@@ -9,9 +9,11 @@
   "학생 수: 학교알리미 학년별·학급별 학생수",
   "수강료: 학원이 교육청에 등록한 1인당 교습비",
   "대표 학원: 교육청에 등록한 정원이 큰 순서",
-  "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)"
+  "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)",
+  "학원 개업·폐업: 서울시 상권분석서비스 점포 (일반교습학원·외국어학원)"
  ],
  "salesPeriod": "2026년 2분기",
+ "storePeriod": "2025년 3분기~2026년 2분기",
  "pastYear": 2024,
  "aptPeriod": "",
  "unmatchedAcademies": 4,
@@ -433,6 +435,11 @@
     127.05171
    ],
    "sales": 3181863131,
+   "storeFlow": {
+    "open": 12,
+    "close": 10,
+    "base": 119
+   },
    "fervor": {
     "score": 66,
     "parts": {
@@ -2490,6 +2497,11 @@
     127.05961
    ],
    "sales": 1458698530,
+   "storeFlow": {
+    "open": 26,
+    "close": 12,
+    "base": 93
+   },
    "fervor": {
     "score": 61,
     "parts": {
@@ -3270,6 +3282,11 @@
     127.07199
    ],
    "sales": 10742175667,
+   "storeFlow": {
+    "open": 22,
+    "close": 24,
+    "base": 227
+   },
    "fervor": {
     "score": 59,
     "parts": {
@@ -4028,6 +4045,11 @@
     127.05818
    ],
    "sales": 2407858588,
+   "storeFlow": {
+    "open": 14,
+    "close": 11,
+    "base": 148
+   },
    "fervor": {
     "score": 46,
     "parts": {
@@ -4746,6 +4768,11 @@
     127.03727
    ],
    "sales": 227959029,
+   "storeFlow": {
+    "open": 1,
+    "close": 2,
+    "base": 35
+   },
    "fervor": {
     "score": 42,
     "parts": {
@@ -5408,6 +5435,11 @@
     127.04976
    ],
    "sales": 9544912,
+   "storeFlow": {
+    "open": 0,
+    "close": 0,
+    "base": 13
+   },
    "fervor": {
     "score": 8,
     "parts": {
@@ -6057,6 +6089,11 @@
     127.05169
    ],
    "sales": 137008094,
+   "storeFlow": {
+    "open": 1,
+    "close": 1,
+    "base": 14
+   },
    "fervor": {
     "score": 48,
     "parts": {
@@ -6828,6 +6865,11 @@
     127.06691
    ],
    "sales": 2745019992,
+   "storeFlow": {
+    "open": 4,
+    "close": 8,
+    "base": 73
+   },
    "fervor": {
     "score": 43,
     "parts": {
@@ -7268,5 +7310,9 @@
     }
    ]
   }
- ]
+ ],
+ "seoulStoreRate": {
+  "close": 0.0905,
+  "open": 0.086
+ }
 }

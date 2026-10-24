@@ -9,9 +9,11 @@
   "학생 수: 학교알리미 학년별·학급별 학생수",
   "수강료: 학원이 교육청에 등록한 1인당 교습비",
   "대표 학원: 교육청에 등록한 정원이 큰 순서",
-  "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)"
+  "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)",
+  "학원 개업·폐업: 서울시 상권분석서비스 점포 (일반교습학원·외국어학원)"
  ],
  "salesPeriod": "2026년 2분기",
+ "storePeriod": "2025년 3분기~2026년 2분기",
  "pastYear": 2024,
  "aptPeriod": "",
  "unmatchedAcademies": 93,
@@ -491,6 +493,11 @@
     127.08569
    ],
    "sales": 3176963476,
+   "storeFlow": {
+    "open": 13,
+    "close": 15,
+    "base": 202
+   },
    "fervor": {
     "score": 26,
     "parts": {
@@ -836,8 +843,8 @@
      "region": "경기-구리시",
      "km": 5.9,
      "academies": {
-      "all": 22,
-      "math": 8,
+      "all": 21,
+      "math": 7,
       "english": 8,
       "korean": 6,
       "science": 0
@@ -920,9 +927,9 @@
      "region": "경기-구리시",
      "km": 6.6,
      "academies": {
-      "all": 113,
+      "all": 112,
       "math": 35,
-      "english": 22,
+      "english": 21,
       "korean": 15,
       "science": 5
      },
@@ -1416,6 +1423,11 @@
     127.06055
    ],
    "sales": 10953382738,
+   "storeFlow": {
+    "open": 35,
+    "close": 65,
+    "base": 605
+   },
    "fervor": {
     "score": 41,
     "parts": {
@@ -1719,9 +1731,9 @@
      "region": "경기-남양주시",
      "km": 10.2,
      "academies": {
-      "all": 434,
+      "all": 433,
       "math": 162,
-      "english": 123,
+      "english": 122,
       "korean": 53,
       "science": 12
      },
@@ -2134,6 +2146,11 @@
     127.05507
    ],
    "sales": 782037775,
+   "storeFlow": {
+    "open": 7,
+    "close": 12,
+    "base": 144
+   },
    "fervor": {
     "score": 15,
     "parts": {
@@ -3021,6 +3038,11 @@
     127.07371
    ],
    "sales": 21568691687,
+   "storeFlow": {
+    "open": 66,
+    "close": 83,
+    "base": 879
+   },
    "fervor": {
     "score": 77,
     "parts": {
@@ -3366,9 +3388,9 @@
      "region": "경기-남양주시",
      "km": 8.5,
      "academies": {
-      "all": 434,
+      "all": 433,
       "math": 162,
-      "english": 123,
+      "english": 122,
       "korean": 53,
       "science": 12
      },
@@ -3685,6 +3707,11 @@
     127.07045
    ],
    "sales": 2672265978,
+   "storeFlow": {
+    "open": 9,
+    "close": 15,
+    "base": 108
+   },
    "fervor": {
     "score": 27,
     "parts": {
@@ -4100,9 +4127,9 @@
      "region": "경기-남양주시",
      "km": 8.2,
      "academies": {
-      "all": 434,
+      "all": 433,
       "math": 162,
-      "english": 123,
+      "english": 122,
       "korean": 53,
       "science": 12
      },
@@ -4125,5 +4152,9 @@
     }
    ]
   }
- ]
+ ],
+ "seoulStoreRate": {
+  "close": 0.0905,
+  "open": 0.086
+ }
 }

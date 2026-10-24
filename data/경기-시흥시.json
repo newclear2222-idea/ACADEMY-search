@@ -11,6 +11,7 @@
   "대표 학원: 교육청에 등록한 정원이 큰 순서"
  ],
  "salesPeriod": "",
+ "storePeriod": "",
  "pastYear": 2024,
  "aptPeriod": "",
  "unmatchedAcademies": 8,
@@ -116,7 +117,7 @@
     "total": 1770
    },
    "academies": {
-    "all": 13,
+    "all": 12,
     "math": 4,
     "english": 3,
     "korean": 1,
@@ -272,14 +273,6 @@
      ]
     },
     {
-     "name": "푸르넷거모동학원",
-     "kind": "학원",
-     "capacity": 110,
-     "since": 2017,
-     "branches": 1,
-     "subjects": []
-    },
-    {
      "name": "에스엔티고등전문학원",
      "kind": "학원",
      "capacity": 80,
@@ -374,7 +367,7 @@
      "region": "경기-안산시",
      "km": 1.4,
      "academies": {
-      "all": 12,
+      "all": 11,
       "math": 3,
       "english": 1,
       "korean": 0,
@@ -430,7 +423,7 @@
      "region": "경기-시흥시",
      "km": 2.6,
      "academies": {
-      "all": 7,
+      "all": 8,
       "math": 3,
       "english": 4,
       "korean": 1,
@@ -458,10 +451,10 @@
      "region": "경기-시흥시",
      "km": 3.4,
      "academies": {
-      "all": 33,
+      "all": 32,
       "math": 9,
       "english": 9,
-      "korean": 6,
+      "korean": 5,
       "science": 2
      },
      "students": 2088,
@@ -475,7 +468,7 @@
       "all": 108,
       "math": 34,
       "english": 30,
-      "korean": 20,
+      "korean": 19,
       "science": 1
      },
      "students": 3741,
@@ -503,7 +496,7 @@
       "all": 169,
       "math": 69,
       "english": 42,
-      "korean": 17,
+      "korean": 16,
       "science": 2
      },
      "students": 21825,
@@ -514,10 +507,10 @@
      "region": "경기-안산시",
      "km": 5.4,
      "academies": {
-      "all": 220,
+      "all": 219,
       "math": 63,
       "english": 49,
-      "korean": 49,
+      "korean": 48,
       "science": 8
      },
      "students": 9202,
@@ -528,10 +521,10 @@
      "region": "경기-안산시",
      "km": 5.7,
      "academies": {
-      "all": 29,
+      "all": 30,
       "math": 13,
       "english": 7,
-      "korean": 4,
+      "korean": 5,
       "science": 1
      },
      "students": 1487,
@@ -542,8 +535,8 @@
      "region": "경기-시흥시",
      "km": 6.0,
      "academies": {
-      "all": 168,
-      "math": 59,
+      "all": 167,
+      "math": 58,
       "english": 49,
       "korean": 31,
       "science": 4
@@ -571,7 +564,7 @@
      "km": 7.0,
      "academies": {
       "all": 61,
-      "math": 23,
+      "math": 24,
       "english": 17,
       "korean": 2,
       "science": 1
@@ -734,10 +727,10 @@
      "region": "경기-시흥시",
      "km": 1.6,
      "academies": {
-      "all": 173,
+      "all": 174,
       "math": 53,
-      "english": 52,
-      "korean": 26,
+      "english": 53,
+      "korean": 27,
       "science": 2
      },
      "students": 8789,
@@ -804,8 +797,8 @@
      "region": "경기-부천시",
      "km": 2.3,
      "academies": {
-      "all": 60,
-      "math": 22,
+      "all": 61,
+      "math": 23,
       "english": 18,
       "korean": 11,
       "science": 2
@@ -891,7 +884,7 @@
       "all": 85,
       "math": 35,
       "english": 24,
-      "korean": 13,
+      "korean": 14,
       "science": 1
      },
      "students": 6043,
@@ -958,9 +951,9 @@
      "region": "경기-부천시",
      "km": 5.6,
      "academies": {
-      "all": 51,
+      "all": 52,
       "math": 23,
-      "english": 14,
+      "english": 15,
       "korean": 8,
       "science": 0
      },
@@ -1000,11 +993,11 @@
      "region": "경기-광명시",
      "km": 6.0,
      "academies": {
-      "all": 119,
+      "all": 120,
       "math": 48,
       "english": 33,
       "korean": 15,
-      "science": 5
+      "science": 6
      },
      "students": 4663,
      "sales": null
@@ -1014,8 +1007,8 @@
      "region": "경기-광명시",
      "km": 6.1,
      "academies": {
-      "all": 164,
-      "math": 59,
+      "all": 165,
+      "math": 60,
       "english": 41,
       "korean": 45,
       "science": 11
@@ -1042,9 +1035,9 @@
      "region": "경기-부천시",
      "km": 6.6,
      "academies": {
-      "all": 288,
-      "math": 102,
-      "english": 78,
+      "all": 289,
+      "math": 103,
+      "english": 80,
       "korean": 40,
       "science": 10
      },
@@ -1070,11 +1063,11 @@
      "region": "경기-부천시",
      "km": 7.4,
      "academies": {
-      "all": 269,
-      "math": 76,
-      "english": 82,
-      "korean": 35,
-      "science": 12
+      "all": 271,
+      "math": 77,
+      "english": 83,
+      "korean": 36,
+      "science": 11
      },
      "students": 9414,
      "sales": null
@@ -1293,7 +1286,7 @@
       "all": 85,
       "math": 35,
       "english": 24,
-      "korean": 13,
+      "korean": 14,
       "science": 1
      },
      "students": 6043,
@@ -1332,8 +1325,8 @@
      "region": "경기-부천시",
      "km": 2.5,
      "academies": {
-      "all": 60,
-      "math": 22,
+      "all": 61,
+      "math": 23,
       "english": 18,
       "korean": 11,
       "science": 2
@@ -1402,10 +1395,10 @@
      "region": "경기-시흥시",
      "km": 3.7,
      "academies": {
-      "all": 173,
+      "all": 174,
       "math": 53,
-      "english": 52,
-      "korean": 26,
+      "english": 53,
+      "korean": 27,
       "science": 2
      },
      "students": 8789,
@@ -1416,11 +1409,11 @@
      "region": "경기-광명시",
      "km": 3.8,
      "academies": {
-      "all": 119,
+      "all": 120,
       "math": 48,
       "english": 33,
       "korean": 15,
-      "science": 5
+      "science": 6
      },
      "students": 4663,
      "sales": null
@@ -1430,8 +1423,8 @@
      "region": "경기-광명시",
      "km": 3.9,
      "academies": {
-      "all": 164,
-      "math": 59,
+      "all": 165,
+      "math": 60,
       "english": 41,
       "korean": 45,
       "science": 11
@@ -1598,10 +1591,10 @@
      "region": "경기-광명시",
      "km": 6.8,
      "academies": {
-      "all": 72,
+      "all": 73,
       "math": 26,
       "english": 23,
-      "korean": 13,
+      "korean": 14,
       "science": 5
      },
      "students": 1936,
@@ -1612,9 +1605,9 @@
      "region": "경기-부천시",
      "km": 6.8,
      "academies": {
-      "all": 51,
+      "all": 52,
       "math": 23,
-      "english": 14,
+      "english": 15,
       "korean": 8,
       "science": 0
      },
@@ -1626,9 +1619,9 @@
      "region": "경기-부천시",
      "km": 7.2,
      "academies": {
-      "all": 288,
-      "math": 102,
-      "english": 78,
+      "all": 289,
+      "math": 103,
+      "english": 80,
       "korean": 40,
       "science": 10
      },
@@ -1640,11 +1633,11 @@
      "region": "경기-부천시",
      "km": 8.4,
      "academies": {
-      "all": 269,
-      "math": 76,
-      "english": 82,
-      "korean": 35,
-      "science": 12
+      "all": 271,
+      "math": 77,
+      "english": 83,
+      "korean": 36,
+      "science": 11
      },
      "students": 9414,
      "sales": null
@@ -1841,10 +1834,10 @@
      "region": "경기-시흥시",
      "km": 2.1,
      "academies": {
-      "all": 33,
+      "all": 32,
       "math": 9,
       "english": 9,
-      "korean": 6,
+      "korean": 5,
       "science": 2
      },
      "students": 2088,
@@ -1886,7 +1879,7 @@
       "all": 7,
       "math": 2,
       "english": 1,
-      "korean": 1,
+      "korean": 0,
       "science": 0
      },
      "students": 0,
@@ -1897,7 +1890,7 @@
      "region": "경기-시흥시",
      "km": 2.7,
      "academies": {
-      "all": 7,
+      "all": 8,
       "math": 3,
       "english": 4,
       "korean": 1,
@@ -1928,7 +1921,7 @@
       "all": 108,
       "math": 34,
       "english": 30,
-      "korean": 20,
+      "korean": 19,
       "science": 1
      },
      "students": 3741,
@@ -1940,7 +1933,7 @@
      "km": 3.7,
      "academies": {
       "all": 61,
-      "math": 23,
+      "math": 24,
       "english": 17,
       "korean": 2,
       "science": 1
@@ -1967,10 +1960,10 @@
      "region": "경기-시흥시",
      "km": 6.0,
      "academies": {
-      "all": 173,
+      "all": 174,
       "math": 53,
-      "english": 52,
-      "korean": 26,
+      "english": 53,
+      "korean": 27,
       "science": 2
      },
      "students": 8789,
@@ -1981,10 +1974,10 @@
      "region": "경기-광명시",
      "km": 6.3,
      "academies": {
-      "all": 72,
+      "all": 73,
       "math": 26,
       "english": 23,
-      "korean": 13,
+      "korean": 14,
       "science": 5
      },
      "students": 1936,
@@ -2009,10 +2002,10 @@
      "region": "경기-안산시",
      "km": 6.4,
      "academies": {
-      "all": 29,
+      "all": 30,
       "math": 13,
       "english": 7,
-      "korean": 4,
+      "korean": 5,
       "science": 1
      },
      "students": 1487,
@@ -2029,7 +2022,7 @@
     "total": 773
    },
    "academies": {
-    "all": 7,
+    "all": 8,
     "math": 3,
     "english": 4,
     "korean": 1,
@@ -2136,6 +2129,14 @@
    },
    "top": [
     {
+     "name": "그로잉포레스트잉글리쉬학원",
+     "kind": "학원",
+     "capacity": 60,
+     "since": 2026,
+     "branches": 1,
+     "subjects": []
+    },
+    {
      "name": "해법영어신안인스빌교습소",
      "kind": "교습소",
      "capacity": 27,
@@ -2177,16 +2178,6 @@
      ]
     },
     {
-     "name": "삼성영어셀레나한여울학원",
-     "kind": "학원",
-     "capacity": 0,
-     "since": 2024,
-     "branches": 4,
-     "subjects": [
-      "english"
-     ]
-    },
-    {
      "name": "필수학스마트해법영어학원",
      "kind": "학원",
      "capacity": 0,
@@ -2195,6 +2186,16 @@
      "subjects": [
       "english",
       "math"
+     ]
+    },
+    {
+     "name": "삼성영어셀레나한여울학원",
+     "kind": "학원",
+     "capacity": 0,
+     "since": 2024,
+     "branches": 4,
+     "subjects": [
+      "english"
      ]
     }
    ],
@@ -2207,14 +2208,14 @@
    },
    "opened": {
     "1y": {
-     "all": 3,
+     "all": 4,
      "math": 1,
      "english": 0,
      "korean": 1,
      "science": 0
     },
     "3y": {
-     "all": 6,
+     "all": 7,
      "math": 3,
      "english": 3,
      "korean": 1,
@@ -2226,11 +2227,11 @@
     126.80536
    ],
    "fervor": {
-    "score": 23,
+    "score": 26,
     "parts": {
      "density": [
-      0.9,
-      27
+      1.0,
+      34
      ],
      "fee": [
       200000,
@@ -2244,10 +2245,10 @@
      "region": "경기-시흥시",
      "km": 0.8,
      "academies": {
-      "all": 33,
+      "all": 32,
       "math": 9,
       "english": 9,
-      "korean": 6,
+      "korean": 5,
       "science": 2
      },
      "students": 2088,
@@ -2275,7 +2276,7 @@
       "all": 108,
       "math": 34,
       "english": 30,
-      "korean": 20,
+      "korean": 19,
       "science": 1
      },
      "students": 3741,
@@ -2286,7 +2287,7 @@
      "region": "경기-시흥시",
      "km": 2.6,
      "academies": {
-      "all": 13,
+      "all": 12,
       "math": 4,
       "english": 3,
       "korean": 1,
@@ -2357,7 +2358,7 @@
      "km": 4.7,
      "academies": {
       "all": 61,
-      "math": 23,
+      "math": 24,
       "english": 17,
       "korean": 2,
       "science": 1
@@ -2370,10 +2371,10 @@
      "region": "경기-안산시",
      "km": 5.1,
      "academies": {
-      "all": 29,
+      "all": 30,
       "math": 13,
       "english": 7,
-      "korean": 4,
+      "korean": 5,
       "science": 1
      },
      "students": 1487,
@@ -2398,10 +2399,10 @@
      "region": "경기-안산시",
      "km": 5.9,
      "academies": {
-      "all": 220,
+      "all": 219,
       "math": 63,
       "english": 49,
-      "korean": 49,
+      "korean": 48,
       "science": 8
      },
      "students": 9202,
@@ -2429,7 +2430,7 @@
       "all": 169,
       "math": 69,
       "english": 42,
-      "korean": 17,
+      "korean": 16,
       "science": 2
      },
      "students": 21825,
@@ -2593,7 +2594,7 @@
       "all": 7,
       "math": 2,
       "english": 1,
-      "korean": 1,
+      "korean": 0,
       "science": 0
      },
      "students": 0,
@@ -2605,7 +2606,7 @@
      "km": 1.4,
      "academies": {
       "all": 61,
-      "math": 23,
+      "math": 24,
       "english": 17,
       "korean": 2,
       "science": 1
@@ -2646,10 +2647,10 @@
      "region": "경기-광명시",
      "km": 3.5,
      "academies": {
-      "all": 72,
+      "all": 73,
       "math": 26,
       "english": 23,
-      "korean": 13,
+      "korean": 14,
       "science": 5
      },
      "students": 1936,
@@ -2674,10 +2675,10 @@
      "region": "경기-시흥시",
      "km": 4.5,
      "academies": {
-      "all": 33,
+      "all": 32,
       "math": 9,
       "english": 9,
-      "korean": 6,
+      "korean": 5,
       "science": 2
      },
      "students": 2088,
@@ -2730,10 +2731,10 @@
      "region": "경기-안산시",
      "km": 6.0,
      "academies": {
-      "all": 29,
+      "all": 30,
       "math": 13,
       "english": 7,
-      "korean": 4,
+      "korean": 5,
       "science": 1
      },
      "students": 1487,
@@ -2761,7 +2762,7 @@
       "all": 108,
       "math": 34,
       "english": 30,
-      "korean": 20,
+      "korean": 19,
       "science": 1
      },
      "students": 3741,
@@ -2828,8 +2829,8 @@
      "region": "경기-안양시",
      "km": 9.6,
      "academies": {
-      "all": 277,
-      "math": 95,
+      "all": 278,
+      "math": 96,
       "english": 73,
       "korean": 66,
       "science": 12
@@ -2848,10 +2849,10 @@
     "total": 2088
    },
    "academies": {
-    "all": 33,
+    "all": 32,
     "math": 9,
     "english": 9,
-    "korean": 6,
+    "korean": 5,
     "science": 2
    },
    "schools": [
@@ -2975,9 +2976,7 @@
      "capacity": 468,
      "since": 2010,
      "branches": 2,
-     "subjects": [
-      "korean"
-     ]
+     "subjects": []
     },
     {
      "name": "대치프라임학원",
@@ -3103,7 +3102,7 @@
      "kind": "학원",
      "capacity": 36,
      "since": 2020,
-     "branches": 16,
+     "branches": 15,
      "subjects": [
       "english"
      ]
@@ -3138,6 +3137,16 @@
      "subjects": [
       "korean"
      ]
+    },
+    {
+     "name": "책나무능곡독서논술학원",
+     "kind": "학원",
+     "capacity": 0,
+     "since": 2024,
+     "branches": 2,
+     "subjects": [
+      "korean"
+     ]
     }
    ],
    "newApts": [],
@@ -3168,11 +3177,11 @@
     126.81308
    ],
    "fervor": {
-    "score": 60,
+    "score": 58,
     "parts": {
      "density": [
-      1.6,
-      61
+      1.5,
+      58
      ],
      "fee": [
       230000,
@@ -3186,7 +3195,7 @@
      "region": "경기-시흥시",
      "km": 0.8,
      "academies": {
-      "all": 7,
+      "all": 8,
       "math": 3,
       "english": 4,
       "korean": 1,
@@ -3259,7 +3268,7 @@
       "all": 108,
       "math": 34,
       "english": 30,
-      "korean": 20,
+      "korean": 19,
       "science": 1
      },
      "students": 3741,
@@ -3299,7 +3308,7 @@
      "km": 3.9,
      "academies": {
       "all": 61,
-      "math": 23,
+      "math": 24,
       "english": 17,
       "korean": 2,
       "science": 1
@@ -3326,10 +3335,10 @@
      "region": "경기-안산시",
      "km": 4.9,
      "academies": {
-      "all": 29,
+      "all": 30,
       "math": 13,
       "english": 7,
-      "korean": 4,
+      "korean": 5,
       "science": 1
      },
      "students": 1487,
@@ -3354,10 +3363,10 @@
      "region": "경기-안산시",
      "km": 6.1,
      "academies": {
-      "all": 220,
+      "all": 219,
       "math": 63,
       "english": 49,
-      "korean": 49,
+      "korean": 48,
       "science": 8
      },
      "students": 9202,
@@ -3699,11 +3708,11 @@
     126.79062
    ],
    "fervor": {
-    "score": 80,
+    "score": 81,
     "parts": {
      "density": [
       3.3,
-      94
+      95
      ],
      "fee": [
       239000,
@@ -3717,10 +3726,10 @@
      "region": "경기-시흥시",
      "km": 1.2,
      "academies": {
-      "all": 173,
+      "all": 174,
       "math": 53,
-      "english": 52,
-      "korean": 26,
+      "english": 53,
+      "korean": 27,
       "science": 2
      },
      "students": 8789,
@@ -3787,8 +3796,8 @@
      "region": "경기-부천시",
      "km": 3.1,
      "academies": {
-      "all": 60,
-      "math": 22,
+      "all": 61,
+      "math": 23,
       "english": 18,
       "korean": 11,
       "science": 2
@@ -3871,9 +3880,9 @@
      "region": "경기-부천시",
      "km": 4.6,
      "academies": {
-      "all": 51,
+      "all": 52,
       "math": 23,
-      "english": 14,
+      "english": 15,
       "korean": 8,
       "science": 0
      },
@@ -3944,7 +3953,7 @@
       "all": 85,
       "math": 35,
       "english": 24,
-      "korean": 13,
+      "korean": 14,
       "science": 1
      },
      "students": 6043,
@@ -3955,9 +3964,9 @@
      "region": "경기-부천시",
      "km": 6.2,
      "academies": {
-      "all": 288,
-      "math": 102,
-      "english": 78,
+      "all": 289,
+      "math": 103,
+      "english": 80,
       "korean": 40,
       "science": 10
      },
@@ -3983,11 +3992,11 @@
      "region": "경기-부천시",
      "km": 6.6,
      "academies": {
-      "all": 269,
-      "math": 76,
-      "english": 82,
-      "korean": 35,
-      "science": 12
+      "all": 271,
+      "math": 77,
+      "english": 83,
+      "korean": 36,
+      "science": 11
      },
      "students": 9414,
      "sales": null
@@ -4240,10 +4249,10 @@
      "region": "경기-시흥시",
      "km": 4.2,
      "academies": {
-      "all": 173,
+      "all": 174,
       "math": 53,
-      "english": 52,
-      "korean": 26,
+      "english": 53,
+      "korean": 27,
       "science": 2
      },
      "students": 8789,
@@ -4254,10 +4263,10 @@
      "region": "경기-시흥시",
      "km": 4.3,
      "academies": {
-      "all": 33,
+      "all": 32,
       "math": 9,
       "english": 9,
-      "korean": 6,
+      "korean": 5,
       "science": 2
      },
      "students": 2088,
@@ -4271,7 +4280,7 @@
       "all": 108,
       "math": 34,
       "english": 30,
-      "korean": 20,
+      "korean": 19,
       "science": 1
      },
      "students": 3741,
@@ -4283,7 +4292,7 @@
      "km": 4.6,
      "academies": {
       "all": 61,
-      "math": 23,
+      "math": 24,
       "english": 17,
       "korean": 2,
       "science": 1
@@ -4296,10 +4305,10 @@
      "region": "경기-광명시",
      "km": 5.2,
      "academies": {
-      "all": 72,
+      "all": 73,
       "math": 26,
       "english": 23,
-      "korean": 13,
+      "korean": 14,
       "science": 5
      },
      "students": 1936,
@@ -4380,9 +4389,9 @@
      "region": "경기-부천시",
      "km": 11.4,
      "academies": {
-      "all": 288,
-      "math": 102,
-      "english": 78,
+      "all": 289,
+      "math": 103,
+      "english": 80,
       "korean": 40,
       "science": 10
      },
@@ -4394,11 +4403,11 @@
      "region": "경기-부천시",
      "km": 11.9,
      "academies": {
-      "all": 269,
-      "math": 76,
-      "english": 82,
-      "korean": 35,
-      "science": 12
+      "all": 271,
+      "math": 77,
+      "english": 83,
+      "korean": 36,
+      "science": 11
      },
      "students": 9414,
      "sales": null
@@ -4677,10 +4686,10 @@
      "region": "경기-시흥시",
      "km": 2.9,
      "academies": {
-      "all": 173,
+      "all": 174,
       "math": 53,
-      "english": 52,
-      "korean": 26,
+      "english": 53,
+      "korean": 27,
       "science": 2
      },
      "students": 8789,
@@ -4722,7 +4731,7 @@
       "all": 108,
       "math": 34,
       "english": 30,
-      "korean": 20,
+      "korean": 19,
       "science": 1
      },
      "students": 3741,
@@ -4733,10 +4742,10 @@
      "region": "경기-시흥시",
      "km": 5.1,
      "academies": {
-      "all": 33,
+      "all": 32,
       "math": 9,
       "english": 9,
-      "korean": 6,
+      "korean": 5,
       "science": 2
      },
      "students": 2088,
@@ -4776,7 +4785,7 @@
      "km": 5.9,
      "academies": {
       "all": 61,
-      "math": 23,
+      "math": 24,
       "english": 17,
       "korean": 2,
       "science": 1
@@ -4789,10 +4798,10 @@
      "region": "경기-광명시",
      "km": 6.1,
      "academies": {
-      "all": 72,
+      "all": 73,
       "math": 26,
       "english": 23,
-      "korean": 13,
+      "korean": 14,
       "science": 5
      },
      "students": 1936,
@@ -4803,8 +4812,8 @@
      "region": "경기-부천시",
      "km": 6.2,
      "academies": {
-      "all": 60,
-      "math": 22,
+      "all": 61,
+      "math": 23,
       "english": 18,
       "korean": 11,
       "science": 2
@@ -4831,9 +4840,9 @@
      "region": "경기-부천시",
      "km": 10.2,
      "academies": {
-      "all": 288,
-      "math": 102,
-      "english": 78,
+      "all": 289,
+      "math": 103,
+      "english": 80,
       "korean": 40,
       "science": 10
      },
@@ -4845,11 +4854,11 @@
      "region": "경기-부천시",
      "km": 10.7,
      "academies": {
-      "all": 269,
-      "math": 76,
-      "english": 82,
-      "korean": 35,
-      "science": 12
+      "all": 271,
+      "math": 77,
+      "english": 83,
+      "korean": 36,
+      "science": 11
      },
      "students": 9414,
      "sales": null
@@ -4882,7 +4891,7 @@
     "all": 7,
     "math": 2,
     "english": 1,
-    "korean": 1,
+    "korean": 0,
     "science": 0
    },
    "schools": [],
@@ -4985,9 +4994,7 @@
      "capacity": 458,
      "since": 2017,
      "branches": 2,
-     "subjects": [
-      "korean"
-     ]
+     "subjects": []
     },
     {
      "name": "서경학원",
@@ -5030,7 +5037,7 @@
      "kind": "학원",
      "capacity": 32,
      "since": 2017,
-     "branches": 194,
+     "branches": 192,
      "subjects": [
       "english"
      ]
@@ -5080,7 +5087,7 @@
      "km": 1.1,
      "academies": {
       "all": 61,
-      "math": 23,
+      "math": 24,
       "english": 17,
       "korean": 2,
       "science": 1
@@ -5121,10 +5128,10 @@
      "region": "경기-시흥시",
      "km": 3.3,
      "academies": {
-      "all": 33,
+      "all": 32,
       "math": 9,
       "english": 9,
-      "korean": 6,
+      "korean": 5,
       "science": 2
      },
      "students": 2088,
@@ -5149,10 +5156,10 @@
      "region": "경기-광명시",
      "km": 4.6,
      "academies": {
-      "all": 72,
+      "all": 73,
       "math": 26,
       "english": 23,
-      "korean": 13,
+      "korean": 14,
       "science": 5
      },
      "students": 1936,
@@ -5177,10 +5184,10 @@
      "region": "경기-안산시",
      "km": 5.2,
      "academies": {
-      "all": 29,
+      "all": 30,
       "math": 13,
       "english": 7,
-      "korean": 4,
+      "korean": 5,
       "science": 1
      },
      "students": 1487,
@@ -5194,7 +5201,7 @@
       "all": 108,
       "math": 34,
       "english": 30,
-      "korean": 20,
+      "korean": 19,
       "science": 1
      },
      "students": 3741,
@@ -5275,8 +5282,8 @@
      "region": "경기-안양시",
      "km": 10.7,
      "academies": {
-      "all": 277,
-      "math": 95,
+      "all": 278,
+      "math": 96,
       "english": 73,
       "korean": 66,
       "science": 12
@@ -5462,10 +5469,10 @@
      "region": "경기-광명시",
      "km": 3.9,
      "academies": {
-      "all": 72,
+      "all": 73,
       "math": 26,
       "english": 23,
-      "korean": 13,
+      "korean": 14,
       "science": 5
      },
      "students": 1936,
@@ -5476,10 +5483,10 @@
      "region": "경기-시흥시",
      "km": 4.5,
      "academies": {
-      "all": 173,
+      "all": 174,
       "math": 53,
-      "english": 52,
-      "korean": 26,
+      "english": 53,
+      "korean": 27,
       "science": 2
      },
      "students": 8789,
@@ -5491,7 +5498,7 @@
      "km": 4.5,
      "academies": {
       "all": 61,
-      "math": 23,
+      "math": 24,
       "english": 17,
       "korean": 2,
       "science": 1
@@ -5518,10 +5525,10 @@
      "region": "경기-시흥시",
      "km": 5.4,
      "academies": {
-      "all": 33,
+      "all": 32,
       "math": 9,
       "english": 9,
-      "korean": 6,
+      "korean": 5,
       "science": 2
      },
      "students": 2088,
@@ -5605,7 +5612,7 @@
       "all": 108,
       "math": 34,
       "english": 30,
-      "korean": 20,
+      "korean": 19,
       "science": 1
      },
      "students": 3741,
@@ -5616,11 +5623,11 @@
      "region": "경기-광명시",
      "km": 6.6,
      "academies": {
-      "all": 119,
+      "all": 120,
       "math": 48,
       "english": 33,
       "korean": 15,
-      "science": 5
+      "science": 6
      },
      "students": 4663,
      "sales": null
@@ -5633,7 +5640,7 @@
       "all": 85,
       "math": 35,
       "english": 24,
-      "korean": 13,
+      "korean": 14,
       "science": 1
      },
      "students": 6043,
@@ -5644,8 +5651,8 @@
      "region": "경기-부천시",
      "km": 6.9,
      "academies": {
-      "all": 60,
-      "math": 22,
+      "all": 61,
+      "math": 23,
       "english": 18,
       "korean": 11,
       "science": 2
@@ -5686,9 +5693,9 @@
      "region": "경기-부천시",
      "km": 11.4,
      "academies": {
-      "all": 288,
-      "math": 102,
-      "english": 78,
+      "all": 289,
+      "math": 103,
+      "english": 80,
       "korean": 40,
       "science": 10
      },
@@ -5700,8 +5707,8 @@
      "region": "경기-안양시",
      "km": 11.7,
      "academies": {
-      "all": 277,
-      "math": 95,
+      "all": 278,
+      "math": 96,
       "english": 73,
       "korean": 66,
       "science": 12
@@ -5720,8 +5727,8 @@
     "total": 2445
    },
    "academies": {
-    "all": 168,
-    "math": 59,
+    "all": 167,
+    "math": 58,
     "english": 49,
     "korean": 31,
     "science": 4
@@ -5909,7 +5916,7 @@
      "kind": "학원",
      "capacity": 180,
      "since": 2018,
-     "branches": 194,
+     "branches": 192,
      "subjects": [
       "english",
       "math"
@@ -6060,15 +6067,15 @@
     126.72088
    ],
    "fervor": {
-    "score": 94,
+    "score": 93,
     "parts": {
      "density": [
-      6.9,
+      6.8,
       99
      ],
      "fee": [
       260000,
-      88
+      87
      ]
     }
    },
@@ -6081,7 +6088,7 @@
       "all": 169,
       "math": 69,
       "english": 42,
-      "korean": 17,
+      "korean": 16,
       "science": 2
      },
      "students": 21825,
@@ -6123,7 +6130,7 @@
       "all": 108,
       "math": 34,
       "english": 30,
-      "korean": 20,
+      "korean": 19,
       "science": 1
      },
      "students": 3741,
@@ -6148,7 +6155,7 @@
      "region": "인천-연수구",
      "km": 6.7,
      "academies": {
-      "all": 41,
+      "all": 42,
       "math": 9,
       "english": 12,
       "korean": 7,
@@ -6179,7 +6186,7 @@
       "all": 601,
       "math": 196,
       "english": 149,
-      "korean": 132,
+      "korean": 133,
       "science": 34
      },
      "students": 29681,
@@ -6479,7 +6486,7 @@
       "all": 7,
       "math": 2,
       "english": 1,
-      "korean": 1,
+      "korean": 0,
       "science": 0
      },
      "students": 0,
@@ -6491,7 +6498,7 @@
      "km": 1.0,
      "academies": {
       "all": 61,
-      "math": 23,
+      "math": 24,
       "english": 17,
       "korean": 2,
       "science": 1
@@ -6532,10 +6539,10 @@
      "region": "경기-시흥시",
      "km": 2.9,
      "academies": {
-      "all": 33,
+      "all": 32,
       "math": 9,
       "english": 9,
-      "korean": 6,
+      "korean": 5,
       "science": 2
      },
      "students": 2088,
@@ -6574,10 +6581,10 @@
      "region": "경기-안산시",
      "km": 4.5,
      "academies": {
-      "all": 29,
+      "all": 30,
       "math": 13,
       "english": 7,
-      "korean": 4,
+      "korean": 5,
       "science": 1
      },
      "students": 1487,
@@ -6602,10 +6609,10 @@
      "region": "경기-광명시",
      "km": 5.3,
      "academies": {
-      "all": 72,
+      "all": 73,
       "math": 26,
       "english": 23,
-      "korean": 13,
+      "korean": 14,
       "science": 5
      },
      "students": 1936,
@@ -6619,7 +6626,7 @@
       "all": 108,
       "math": 34,
       "english": 30,
-      "korean": 20,
+      "korean": 19,
       "science": 1
      },
      "students": 3741,
@@ -6672,10 +6679,10 @@
      "region": "경기-안산시",
      "km": 6.6,
      "academies": {
-      "all": 220,
+      "all": 219,
       "math": 63,
       "english": 49,
-      "korean": 49,
+      "korean": 48,
       "science": 8
      },
      "students": 9202,
@@ -6728,8 +6735,8 @@
      "region": "경기-안양시",
      "km": 10.9,
      "academies": {
-      "all": 277,
-      "math": 95,
+      "all": 278,
+      "math": 96,
       "english": 73,
       "korean": 66,
       "science": 12
@@ -6996,7 +7003,7 @@
     "parts": {
      "density": [
       0.7,
-      17
+      18
      ],
      "fee": [
       200000,
@@ -7024,10 +7031,10 @@
      "region": "경기-시흥시",
      "km": 1.5,
      "academies": {
-      "all": 173,
+      "all": 174,
       "math": 53,
-      "english": 52,
-      "korean": 26,
+      "english": 53,
+      "korean": 27,
       "science": 2
      },
      "students": 8789,
@@ -7066,8 +7073,8 @@
      "region": "경기-부천시",
      "km": 4.4,
      "academies": {
-      "all": 60,
-      "math": 22,
+      "all": 61,
+      "math": 23,
       "english": 18,
       "korean": 11,
       "science": 2
@@ -7150,9 +7157,9 @@
      "region": "경기-부천시",
      "km": 5.3,
      "academies": {
-      "all": 51,
+      "all": 52,
       "math": 23,
-      "english": 14,
+      "english": 15,
       "korean": 8,
       "science": 0
      },
@@ -7181,7 +7188,7 @@
       "all": 108,
       "math": 34,
       "english": 30,
-      "korean": 20,
+      "korean": 19,
       "science": 1
      },
      "students": 3741,
@@ -7220,9 +7227,9 @@
      "region": "인천-남동구",
      "km": 6.5,
      "academies": {
-      "all": 153,
-      "math": 55,
-      "english": 39,
+      "all": 152,
+      "math": 54,
+      "english": 37,
       "korean": 26,
       "science": 4
      },
@@ -7248,9 +7255,9 @@
      "region": "경기-부천시",
      "km": 7.2,
      "academies": {
-      "all": 288,
-      "math": 102,
-      "english": 78,
+      "all": 289,
+      "math": 103,
+      "english": 80,
       "korean": 40,
       "science": 10
      },
@@ -7262,11 +7269,11 @@
      "region": "경기-부천시",
      "km": 7.3,
      "academies": {
-      "all": 269,
-      "math": 76,
-      "english": 82,
-      "korean": 35,
-      "science": 12
+      "all": 271,
+      "math": 77,
+      "english": 83,
+      "korean": 36,
+      "science": 11
      },
      "students": 9414,
      "sales": null
@@ -7471,7 +7478,7 @@
      ]
     },
     {
-     "name": "이보영의토킹클럽EYB영어학원",
+     "name": "이보영의토킹클럽EBY영어학원",
      "kind": "학원",
      "capacity": 71,
      "since": 2025,
@@ -7561,11 +7568,11 @@
     126.73934
    ],
    "fervor": {
-    "score": 28,
+    "score": 29,
     "parts": {
      "density": [
       1.5,
-      56
+      57
      ],
      "fee": [
       100000,
@@ -7607,8 +7614,8 @@
      "region": "경기-시흥시",
      "km": 3.2,
      "academies": {
-      "all": 168,
-      "math": 59,
+      "all": 167,
+      "math": 58,
       "english": 49,
       "korean": 31,
       "science": 4
@@ -7624,7 +7631,7 @@
       "all": 169,
       "math": 69,
       "english": 42,
-      "korean": 17,
+      "korean": 16,
       "science": 2
      },
      "students": 21825,
@@ -7638,7 +7645,7 @@
       "all": 108,
       "math": 34,
       "english": 30,
-      "korean": 20,
+      "korean": 19,
       "science": 1
      },
      "students": 3741,
@@ -7677,7 +7684,7 @@
      "region": "인천-연수구",
      "km": 5.8,
      "academies": {
-      "all": 41,
+      "all": 42,
       "math": 9,
       "english": 12,
       "korean": 7,
@@ -7705,10 +7712,10 @@
      "region": "경기-시흥시",
      "km": 6.9,
      "academies": {
-      "all": 33,
+      "all": 32,
       "math": 9,
       "english": 9,
-      "korean": 6,
+      "korean": 5,
       "science": 2
      },
      "students": 2088,
@@ -7736,7 +7743,7 @@
       "all": 601,
       "math": 196,
       "english": 149,
-      "korean": 132,
+      "korean": 133,
       "science": 34
      },
      "students": 29681,
@@ -7747,11 +7754,11 @@
      "region": "경기-부천시",
      "km": 12.0,
      "academies": {
-      "all": 269,
-      "math": 76,
-      "english": 82,
-      "korean": 35,
-      "science": 12
+      "all": 271,
+      "math": 77,
+      "english": 83,
+      "korean": 36,
+      "science": 11
      },
      "students": 9414,
      "sales": null
@@ -7767,10 +7774,10 @@
     "total": 8789
    },
    "academies": {
-    "all": 173,
+    "all": 174,
     "math": 53,
-    "english": 52,
-    "korean": 26,
+    "english": 53,
+    "korean": 27,
     "science": 2
    },
    "schools": [
@@ -8192,8 +8199,8 @@
      "region": "경기-부천시",
      "km": 3.6,
      "academies": {
-      "all": 60,
-      "math": 22,
+      "all": 61,
+      "math": 23,
       "english": 18,
       "korean": 11,
       "science": 2
@@ -8290,9 +8297,9 @@
      "region": "경기-부천시",
      "km": 5.8,
      "academies": {
-      "all": 51,
+      "all": 52,
       "math": 23,
-      "english": 14,
+      "english": 15,
       "korean": 8,
       "science": 0
      },
@@ -8307,7 +8314,7 @@
       "all": 85,
       "math": 35,
       "english": 24,
-      "korean": 13,
+      "korean": 14,
       "science": 1
      },
      "students": 6043,
@@ -8363,7 +8370,7 @@
       "all": 108,
       "math": 34,
       "english": 30,
-      "korean": 20,
+      "korean": 19,
       "science": 1
      },
      "students": 3741,
@@ -8388,9 +8395,9 @@
      "region": "경기-부천시",
      "km": 7.3,
      "academies": {
-      "all": 288,
-      "math": 102,
-      "english": 78,
+      "all": 289,
+      "math": 103,
+      "english": 80,
       "korean": 40,
       "science": 10
      },
@@ -8402,11 +8409,11 @@
      "region": "경기-부천시",
      "km": 7.8,
      "academies": {
-      "all": 269,
-      "math": 76,
-      "english": 82,
-      "korean": 35,
-      "science": 12
+      "all": 271,
+      "math": 77,
+      "english": 83,
+      "korean": 36,
+      "science": 11
      },
      "students": 9414,
      "sales": null
@@ -8439,7 +8446,7 @@
     "all": 108,
     "math": 34,
     "english": 30,
-    "korean": 20,
+    "korean": 19,
     "science": 1
    },
    "schools": [
@@ -8576,9 +8583,7 @@
      "capacity": 458,
      "since": 2016,
      "branches": 4,
-     "subjects": [
-      "korean"
-     ]
+     "subjects": []
     },
     {
      "name": "장현최상위수학학원",
@@ -8693,6 +8698,16 @@
      ]
     },
     {
+     "name": "아이비스국어입시관학원",
+     "kind": "학원",
+     "capacity": 93,
+     "since": 2024,
+     "branches": 7,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
      "name": "베리타스영어전문학원",
      "kind": "학원",
      "capacity": 90,
@@ -8742,7 +8757,7 @@
     126.78457
    ],
    "fervor": {
-    "score": 52,
+    "score": 51,
     "parts": {
      "density": [
       2.9,
@@ -8750,7 +8765,7 @@
      ],
      "fee": [
       180000,
-      12
+      11
      ]
     }
    },
@@ -8788,7 +8803,7 @@
      "region": "경기-시흥시",
      "km": 2.5,
      "academies": {
-      "all": 7,
+      "all": 8,
       "math": 3,
       "english": 4,
       "korean": 1,
@@ -8802,10 +8817,10 @@
      "region": "경기-시흥시",
      "km": 2.8,
      "academies": {
-      "all": 33,
+      "all": 32,
       "math": 9,
       "english": 9,
-      "korean": 6,
+      "korean": 5,
       "science": 2
      },
      "students": 2088,
@@ -8861,7 +8876,7 @@
       "all": 169,
       "math": 69,
       "english": 42,
-      "korean": 17,
+      "korean": 16,
       "science": 2
      },
      "students": 21825,
@@ -8886,8 +8901,8 @@
      "region": "경기-시흥시",
      "km": 5.8,
      "academies": {
-      "all": 168,
-      "math": 59,
+      "all": 167,
+      "math": 58,
       "english": 49,
       "korean": 31,
       "science": 4
@@ -8915,7 +8930,7 @@
      "km": 6.4,
      "academies": {
       "all": 61,
-      "math": 23,
+      "math": 24,
       "english": 17,
       "korean": 2,
       "science": 1
@@ -8928,10 +8943,10 @@
      "region": "경기-시흥시",
      "km": 6.6,
      "academies": {
-      "all": 173,
+      "all": 174,
       "math": 53,
-      "english": 52,
-      "korean": 26,
+      "english": 53,
+      "korean": 27,
       "science": 2
      },
      "students": 8789,
@@ -9191,7 +9206,7 @@
      "kind": "교습소",
      "capacity": 0,
      "since": 2024,
-     "branches": 114,
+     "branches": 117,
      "subjects": [
       "english"
      ]
@@ -9201,7 +9216,7 @@
      "kind": "교습소",
      "capacity": 0,
      "since": 2024,
-     "branches": 69,
+     "branches": 70,
      "subjects": [
       "korean"
      ]
@@ -9266,7 +9281,7 @@
       "all": 108,
       "math": 34,
       "english": 30,
-      "korean": 20,
+      "korean": 19,
       "science": 1
      },
      "students": 3741,
@@ -9277,7 +9292,7 @@
      "region": "경기-시흥시",
      "km": 1.4,
      "academies": {
-      "all": 7,
+      "all": 8,
       "math": 3,
       "english": 4,
       "korean": 1,
@@ -9291,10 +9306,10 @@
      "region": "경기-시흥시",
      "km": 1.7,
      "academies": {
-      "all": 33,
+      "all": 32,
       "math": 9,
       "english": 9,
-      "korean": 6,
+      "korean": 5,
       "science": 2
      },
      "students": 2088,
@@ -9376,7 +9391,7 @@
      "km": 5.3,
      "academies": {
       "all": 61,
-      "math": 23,
+      "math": 24,
       "english": 17,
       "korean": 2,
       "science": 1
@@ -9392,7 +9407,7 @@
       "all": 169,
       "math": 69,
       "english": 42,
-      "korean": 17,
+      "korean": 16,
       "science": 2
      },
      "students": 21825,
@@ -9403,10 +9418,10 @@
      "region": "경기-안산시",
      "km": 6.5,
      "academies": {
-      "all": 29,
+      "all": 30,
       "math": 13,
       "english": 7,
-      "korean": 4,
+      "korean": 5,
       "science": 1
      },
      "students": 1487,
@@ -9417,8 +9432,8 @@
      "region": "경기-시흥시",
      "km": 6.8,
      "academies": {
-      "all": 168,
-      "math": 59,
+      "all": 167,
+      "math": 58,
       "english": 49,
       "korean": 31,
       "science": 4
@@ -9445,10 +9460,10 @@
      "region": "경기-시흥시",
      "km": 7.0,
      "academies": {
-      "all": 173,
+      "all": 174,
       "math": 53,
-      "english": 52,
-      "korean": 26,
+      "english": 53,
+      "korean": 27,
       "science": 2
      },
      "students": 8789,
@@ -9468,7 +9483,7 @@
     "all": 169,
     "math": 69,
     "english": 42,
-    "korean": 17,
+    "korean": 16,
     "science": 2
    },
    "schools": [
@@ -9730,9 +9745,7 @@
      "capacity": 662,
      "since": 2016,
      "branches": 159,
-     "subjects": [
-      "korean"
-     ]
+     "subjects": []
     },
     {
      "name": "리딩오션공터영어거북섬센터학원",
@@ -9860,6 +9873,17 @@
      ]
     },
     {
+     "name": "리딩비영어독서학원",
+     "kind": "학원",
+     "capacity": 90,
+     "since": 2018,
+     "branches": 2,
+     "subjects": [
+      "english",
+      "korean"
+     ]
+    },
+    {
      "name": "시화학원",
      "kind": "학원",
      "capacity": 75,
@@ -9916,8 +9940,8 @@
      "region": "경기-시흥시",
      "km": 1.5,
      "academies": {
-      "all": 168,
-      "math": 59,
+      "all": 167,
+      "math": 58,
       "english": 49,
       "korean": 31,
       "science": 4
@@ -9961,7 +9985,7 @@
       "all": 108,
       "math": 34,
       "english": 30,
-      "korean": 20,
+      "korean": 19,
       "science": 1
      },
      "students": 3741,
@@ -10017,7 +10041,7 @@
       "all": 601,
       "math": 196,
       "english": 149,
-      "korean": 132,
+      "korean": 133,
       "science": 34
      },
      "students": 29681,
@@ -10035,7 +10059,7 @@
    },
    "academies": {
     "all": 61,
-    "math": 23,
+    "math": 24,
     "english": 17,
     "korean": 2,
     "science": 1
@@ -10347,7 +10371,7 @@
       "all": 7,
       "math": 2,
       "english": 1,
-      "korean": 1,
+      "korean": 0,
       "science": 0
      },
      "students": 0,
@@ -10400,10 +10424,10 @@
      "region": "경기-시흥시",
      "km": 3.9,
      "academies": {
-      "all": 33,
+      "all": 32,
       "math": 9,
       "english": 9,
-      "korean": 6,
+      "korean": 5,
       "science": 2
      },
      "students": 2088,
@@ -10414,10 +10438,10 @@
      "region": "경기-안산시",
      "km": 4.6,
      "academies": {
-      "all": 29,
+      "all": 30,
       "math": 13,
       "english": 7,
-      "korean": 4,
+      "korean": 5,
       "science": 1
      },
      "students": 1487,
@@ -10428,10 +10452,10 @@
      "region": "경기-광명시",
      "km": 4.7,
      "academies": {
-      "all": 72,
+      "all": 73,
       "math": 26,
       "english": 23,
-      "korean": 13,
+      "korean": 14,
       "science": 5
      },
      "students": 1936,
@@ -10543,7 +10567,7 @@
       "all": 108,
       "math": 34,
       "english": 30,
-      "korean": 20,
+      "korean": 19,
       "science": 1
      },
      "students": 3741,
@@ -10554,10 +10578,10 @@
      "region": "경기-안산시",
      "km": 6.9,
      "academies": {
-      "all": 220,
+      "all": 219,
       "math": 63,
       "english": 49,
-      "korean": 49,
+      "korean": 48,
       "science": 8
      },
      "students": 9202,
@@ -10582,8 +10606,8 @@
      "region": "경기-안양시",
      "km": 9.9,
      "academies": {
-      "all": 277,
-      "math": 95,
+      "all": 278,
+      "math": 96,
       "english": 73,
       "korean": 66,
       "science": 12
@@ -10801,7 +10825,7 @@
      "region": "경기-시흥시",
      "km": 2.4,
      "academies": {
-      "all": 13,
+      "all": 12,
       "math": 4,
       "english": 3,
       "korean": 1,
@@ -10818,7 +10842,7 @@
       "all": 169,
       "math": 69,
       "english": 42,
-      "korean": 17,
+      "korean": 16,
       "science": 2
      },
      "students": 21825,
@@ -10829,7 +10853,7 @@
      "region": "경기-안산시",
      "km": 2.5,
      "academies": {
-      "all": 12,
+      "all": 11,
       "math": 3,
       "english": 1,
       "korean": 0,
@@ -10843,8 +10867,8 @@
      "region": "경기-시흥시",
      "km": 3.7,
      "academies": {
-      "all": 168,
-      "math": 59,
+      "all": 167,
+      "math": 58,
       "english": 49,
       "korean": 31,
       "science": 4
@@ -10874,7 +10898,7 @@
       "all": 108,
       "math": 34,
       "english": 30,
-      "korean": 20,
+      "korean": 19,
       "science": 1
      },
      "students": 3741,
@@ -10913,10 +10937,10 @@
      "region": "경기-시흥시",
      "km": 5.3,
      "academies": {
-      "all": 33,
+      "all": 32,
       "math": 9,
       "english": 9,
-      "korean": 6,
+      "korean": 5,
       "science": 2
      },
      "students": 2088,
@@ -10958,7 +10982,7 @@
       "all": 601,
       "math": 196,
       "english": 149,
-      "korean": 132,
+      "korean": 133,
       "science": 34
      },
      "students": 29681,
@@ -11144,7 +11168,7 @@
       "all": 108,
       "math": 34,
       "english": 30,
-      "korean": 20,
+      "korean": 19,
       "science": 1
      },
      "students": 3741,
@@ -11197,10 +11221,10 @@
      "region": "경기-시흥시",
      "km": 4.5,
      "academies": {
-      "all": 173,
+      "all": 174,
       "math": 53,
-      "english": 52,
-      "korean": 26,
+      "english": 53,
+      "korean": 27,
       "science": 2
      },
      "students": 8789,
@@ -11225,10 +11249,10 @@
      "region": "경기-시흥시",
      "km": 5.5,
      "academies": {
-      "all": 33,
+      "all": 32,
       "math": 9,
       "english": 9,
-      "korean": 6,
+      "korean": 5,
       "science": 2
      },
      "students": 2088,
@@ -11253,8 +11277,8 @@
      "region": "경기-시흥시",
      "km": 6.2,
      "academies": {
-      "all": 168,
-      "math": 59,
+      "all": 167,
+      "math": 58,
       "english": 49,
       "korean": 31,
       "science": 4
@@ -11270,7 +11294,7 @@
       "all": 169,
       "math": 69,
       "english": 42,
-      "korean": 17,
+      "korean": 16,
       "science": 2
      },
      "students": 21825,
@@ -11281,11 +11305,11 @@
      "region": "경기-부천시",
      "km": 10.4,
      "academies": {
-      "all": 269,
-      "math": 76,
-      "english": 82,
-      "korean": 35,
-      "science": 12
+      "all": 271,
+      "math": 77,
+      "english": 83,
+      "korean": 36,
+      "science": 11
      },
      "students": 9414,
      "sales": null
@@ -11295,9 +11319,9 @@
      "region": "경기-부천시",
      "km": 10.6,
      "academies": {
-      "all": 288,
-      "math": 102,
-      "english": 78,
+      "all": 289,
+      "math": 103,
+      "english": 80,
       "korean": 40,
       "science": 10
      },
@@ -11312,7 +11336,7 @@
       "all": 601,
       "math": 196,
       "english": 149,
-      "korean": 132,
+      "korean": 133,
       "science": 34
      },
      "students": 29681,
@@ -11650,10 +11674,10 @@
      "region": "경기-시흥시",
      "km": 2.4,
      "academies": {
-      "all": 33,
+      "all": 32,
       "math": 9,
       "english": 9,
-      "korean": 6,
+      "korean": 5,
       "science": 2
      },
      "students": 2088,
@@ -11681,7 +11705,7 @@
       "all": 108,
       "math": 34,
       "english": 30,
-      "korean": 20,
+      "korean": 19,
       "science": 1
      },
      "students": 3741,
@@ -11692,7 +11716,7 @@
      "region": "경기-시흥시",
      "km": 2.9,
      "academies": {
-      "all": 7,
+      "all": 8,
       "math": 3,
       "english": 4,
       "korean": 1,
@@ -11707,7 +11731,7 @@
      "km": 4.2,
      "academies": {
       "all": 61,
-      "math": 23,
+      "math": 24,
       "english": 17,
       "korean": 2,
       "science": 1
@@ -11720,10 +11744,10 @@
      "region": "경기-시흥시",
      "km": 5.5,
      "academies": {
-      "all": 173,
+      "all": 174,
       "math": 53,
-      "english": 52,
-      "korean": 26,
+      "english": 53,
+      "korean": 27,
       "science": 2
      },
      "students": 8789,
@@ -11748,10 +11772,10 @@
      "region": "경기-광명시",
      "km": 6.5,
      "academies": {
-      "all": 72,
+      "all": 73,
       "math": 26,
       "english": 23,
-      "korean": 13,
+      "korean": 14,
       "science": 5
      },
      "students": 1936,
@@ -11790,10 +11814,10 @@
      "region": "경기-안산시",
      "km": 7.0,
      "academies": {
-      "all": 29,
+      "all": 30,
       "math": 13,
       "english": 7,
-      "korean": 4,
+      "korean": 5,
       "science": 1
      },
      "students": 1487,
@@ -12087,7 +12111,7 @@
       "all": 108,
       "math": 34,
       "english": 30,
-      "korean": 20,
+      "korean": 19,
       "science": 1
      },
      "students": 3741,
@@ -12112,10 +12136,10 @@
      "region": "경기-시흥시",
      "km": 2.7,
      "academies": {
-      "all": 33,
+      "all": 32,
       "math": 9,
       "english": 9,
-      "korean": 6,
+      "korean": 5,
       "science": 2
      },
      "students": 2088,
@@ -12127,7 +12151,7 @@
      "km": 4.8,
      "academies": {
       "all": 61,
-      "math": 23,
+      "math": 24,
       "english": 17,
       "korean": 2,
       "science": 1
@@ -12140,10 +12164,10 @@
      "region": "경기-시흥시",
      "km": 5.1,
      "academies": {
-      "all": 173,
+      "all": 174,
       "math": 53,
-      "english": 52,
-      "korean": 26,
+      "english": 53,
+      "korean": 27,
       "science": 2
      },
      "students": 8789,
@@ -12210,10 +12234,10 @@
      "region": "경기-광명시",
      "km": 7.0,
      "academies": {
-      "all": 72,
+      "all": 73,
       "math": 26,
       "english": 23,
-      "korean": 13,
+      "korean": 14,
       "science": 5
      },
      "students": 1936,
@@ -12221,5 +12245,9 @@
     }
    ]
   }
- ]
+ ],
+ "seoulStoreRate": {
+  "close": 0.0905,
+  "open": 0.086
+ }
 }

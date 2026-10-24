@@ -9,9 +9,11 @@
   "학생 수: 학교알리미 학년별·학급별 학생수",
   "수강료: 학원이 교육청에 등록한 1인당 교습비",
   "대표 학원: 교육청에 등록한 정원이 큰 순서",
-  "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)"
+  "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)",
+  "학원 개업·폐업: 서울시 상권분석서비스 점포 (일반교습학원·외국어학원)"
  ],
  "salesPeriod": "2026년 2분기",
+ "storePeriod": "2025년 3분기~2026년 2분기",
  "pastYear": 2024,
  "aptPeriod": "",
  "unmatchedAcademies": 8,
@@ -482,6 +484,11 @@
     127.11877
    ],
    "sales": 9506591134,
+   "storeFlow": {
+    "open": 16,
+    "close": 23,
+    "base": 237
+   },
    "fervor": {
     "score": 76,
     "parts": {
@@ -1257,6 +1264,11 @@
     127.14639
    ],
    "sales": 2506405588,
+   "storeFlow": {
+    "open": 3,
+    "close": 8,
+    "base": 93
+   },
    "fervor": {
     "score": 54,
     "parts": {
@@ -1658,7 +1670,7 @@
      "region": "경기-성남시",
      "km": 6.6,
      "academies": {
-      "all": 24,
+      "all": 25,
       "math": 9,
       "english": 1,
       "korean": 4,
@@ -1944,6 +1956,11 @@
     127.15132
    ],
    "sales": 430730444,
+   "storeFlow": {
+    "open": 0,
+    "close": 3,
+    "base": 38
+   },
    "fervor": {
     "score": 66,
     "parts": {
@@ -2720,6 +2737,11 @@
     127.12503
    ],
    "sales": 1752919408,
+   "storeFlow": {
+    "open": 11,
+    "close": 12,
+    "base": 156
+   },
    "fervor": {
     "score": 73,
     "parts": {
@@ -3541,6 +3563,11 @@
     127.12805
    ],
    "sales": 20329224116,
+   "storeFlow": {
+    "open": 26,
+    "close": 26,
+    "base": 270
+   },
    "fervor": {
     "score": 90,
     "parts": {
@@ -4312,6 +4339,11 @@
     127.09481
    ],
    "sales": 12391054230,
+   "storeFlow": {
+    "open": 13,
+    "close": 10,
+    "base": 124
+   },
    "fervor": {
     "score": 87,
     "parts": {
@@ -5055,6 +5087,11 @@
     127.10451
    ],
    "sales": 4917854404,
+   "storeFlow": {
+    "open": 8,
+    "close": 6,
+    "base": 111
+   },
    "nearby": [
     {
      "name": "송파동",
@@ -5838,6 +5875,11 @@
     127.1145
    ],
    "sales": 6138444450,
+   "storeFlow": {
+    "open": 5,
+    "close": 13,
+    "base": 138
+   },
    "fervor": {
     "score": 68,
     "parts": {
@@ -7439,6 +7481,11 @@
     127.13499
    ],
    "sales": 10616841859,
+   "storeFlow": {
+    "open": 7,
+    "close": 10,
+    "base": 133
+   },
    "fervor": {
     "score": 77,
     "parts": {
@@ -8022,6 +8069,11 @@
     127.13882
    ],
    "sales": null,
+   "storeFlow": {
+    "open": 2,
+    "close": 3,
+    "base": 21
+   },
    "nearby": [
     {
      "name": "방이동",
@@ -8864,6 +8916,11 @@
     127.08563
    ],
    "sales": 20779313872,
+   "storeFlow": {
+    "open": 39,
+    "close": 39,
+    "base": 403
+   },
    "fervor": {
     "score": 61,
     "parts": {
@@ -9633,6 +9690,11 @@
     127.13493
    ],
    "sales": 4650574231,
+   "storeFlow": {
+    "open": 9,
+    "close": 3,
+    "base": 66
+   },
    "fervor": {
     "score": 67,
     "parts": {
@@ -10020,7 +10082,7 @@
      "region": "경기-성남시",
      "km": 5.7,
      "academies": {
-      "all": 24,
+      "all": 25,
       "math": 9,
       "english": 1,
       "korean": 4,
@@ -10409,6 +10471,11 @@
     127.11671
    ],
    "sales": 2980492419,
+   "storeFlow": {
+    "open": 4,
+    "close": 3,
+    "base": 74
+   },
    "fervor": {
     "score": 65,
     "parts": {
@@ -10849,5 +10916,9 @@
     }
    ]
   }
- ]
+ ],
+ "seoulStoreRate": {
+  "close": 0.0905,
+  "open": 0.086
+ }
 }

@@ -11,6 +11,7 @@
   "대표 학원: 교육청에 등록한 정원이 큰 순서"
  ],
  "salesPeriod": "",
+ "storePeriod": "",
  "pastYear": 2024,
  "aptPeriod": "",
  "unmatchedAcademies": 1,
@@ -1497,11 +1498,11 @@
     127.05625
    ],
    "fervor": {
-    "score": 40,
+    "score": 39,
     "parts": {
      "density": [
       2.0,
-      76
+      75
      ],
      "fee": [
       135000,
@@ -1727,5 +1728,9 @@
     }
    ]
   }
- ]
+ ],
+ "seoulStoreRate": {
+  "close": 0.0905,
+  "open": 0.086
+ }
 }

@@ -9,9 +9,11 @@
   "학생 수: 학교알리미 학년별·학급별 학생수",
   "수강료: 학원이 교육청에 등록한 1인당 교습비",
   "대표 학원: 교육청에 등록한 정원이 큰 순서",
-  "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)"
+  "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)",
+  "학원 개업·폐업: 서울시 상권분석서비스 점포 (일반교습학원·외국어학원)"
  ],
  "salesPeriod": "2026년 2분기",
+ "storePeriod": "2025년 3분기~2026년 2분기",
  "pastYear": 2024,
  "aptPeriod": "",
  "unmatchedAcademies": 3,
@@ -452,6 +454,11 @@
     127.10042
    ],
    "sales": 2810076507,
+   "storeFlow": {
+    "open": 10,
+    "close": 14,
+    "base": 108
+   },
    "fervor": {
     "score": 32,
     "parts": {
@@ -1294,6 +1301,11 @@
     127.09146
    ],
    "sales": 15978035134,
+   "storeFlow": {
+    "open": 38,
+    "close": 20,
+    "base": 264
+   },
    "fervor": {
     "score": 82,
     "parts": {
@@ -1982,6 +1994,11 @@
     127.07254
    ],
    "sales": 532643300,
+   "storeFlow": {
+    "open": 3,
+    "close": 2,
+    "base": 36
+   },
    "fervor": {
     "score": 34,
     "parts": {
@@ -2593,6 +2610,11 @@
     127.08723
    ],
    "sales": 164712255,
+   "storeFlow": {
+    "open": 1,
+    "close": 2,
+    "base": 20
+   },
    "fervor": {
     "score": 29,
     "parts": {
@@ -3443,6 +3465,11 @@
     127.07932
    ],
    "sales": 4766211415,
+   "storeFlow": {
+    "open": 10,
+    "close": 18,
+    "base": 190
+   },
    "fervor": {
     "score": 36,
     "parts": {
@@ -4248,6 +4275,11 @@
     127.08691
    ],
    "sales": 2322128020,
+   "storeFlow": {
+    "open": 9,
+    "close": 14,
+    "base": 140
+   },
    "fervor": {
     "score": 28,
     "parts": {
@@ -4579,8 +4611,8 @@
      "region": "경기-구리시",
      "km": 5.0,
      "academies": {
-      "all": 22,
-      "math": 8,
+      "all": 21,
+      "math": 7,
       "english": 8,
       "korean": 6,
       "science": 0
@@ -4855,6 +4887,11 @@
     127.08058
    ],
    "sales": 22288609,
+   "storeFlow": {
+    "open": 1,
+    "close": 1,
+    "base": 28
+   },
    "nearby": [
     {
      "name": "자양동",
@@ -5278,5 +5315,9 @@
     }
    ]
   }
- ]
+ ],
+ "seoulStoreRate": {
+  "close": 0.0905,
+  "open": 0.086
+ }
 }

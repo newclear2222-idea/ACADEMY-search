@@ -11,6 +11,7 @@
   "대표 학원: 교육청에 등록한 정원이 큰 순서"
  ],
  "salesPeriod": "",
+ "storePeriod": "",
  "pastYear": 2024,
  "aptPeriod": "",
  "unmatchedAcademies": 7,
@@ -245,7 +246,7 @@
      "kind": "학원",
      "capacity": 220,
      "since": 2008,
-     "branches": 66,
+     "branches": 65,
      "subjects": [
       "math"
      ]
@@ -706,7 +707,7 @@
      "kind": "교습소",
      "capacity": 9,
      "since": 2026,
-     "branches": 67,
+     "branches": 66,
      "subjects": [
       "english"
      ]
@@ -1726,7 +1727,7 @@
      ],
      "fee": [
       180000,
-      12
+      11
      ]
     }
    },
@@ -2033,7 +2034,7 @@
      "kind": "학원",
      "capacity": 45,
      "since": 2005,
-     "branches": 194,
+     "branches": 192,
      "subjects": [
       "english"
      ]
@@ -2064,7 +2065,7 @@
      "kind": "학원",
      "capacity": 0,
      "since": 2023,
-     "branches": 56,
+     "branches": 57,
      "subjects": [
       "english",
       "math"
@@ -2117,7 +2118,7 @@
      ],
      "fee": [
       260000,
-      88
+      87
      ]
     }
    },
@@ -3260,7 +3261,7 @@
      "kind": "학원",
      "capacity": 37,
      "since": 2017,
-     "branches": 56,
+     "branches": 57,
      "subjects": [
       "english",
       "math"
@@ -3367,7 +3368,7 @@
     127.4334
    ],
    "fervor": {
-    "score": 55,
+    "score": 56,
     "parts": {
      "density": [
       1.9,
@@ -3375,7 +3376,7 @@
      ],
      "fee": [
       210000,
-      37
+      38
      ]
     }
    },
@@ -3652,7 +3653,7 @@
      "kind": "학원",
      "capacity": 150,
      "since": 2020,
-     "branches": 66,
+     "branches": 65,
      "subjects": [
       "math"
      ]
@@ -3662,7 +3663,7 @@
      "kind": "학원",
      "capacity": 130,
      "since": 2020,
-     "branches": 114,
+     "branches": 117,
      "subjects": [
       "english"
      ]
@@ -4778,7 +4779,7 @@
      "kind": "학원",
      "capacity": 78,
      "since": 2026,
-     "branches": 69,
+     "branches": 70,
      "subjects": [
       "korean",
       "math"
@@ -5464,7 +5465,7 @@
      "kind": "학원",
      "capacity": 154,
      "since": 2009,
-     "branches": 66,
+     "branches": 65,
      "subjects": [
       "math"
      ]
@@ -5474,7 +5475,7 @@
      "kind": "학원",
      "capacity": 150,
      "since": 2014,
-     "branches": 194,
+     "branches": 192,
      "subjects": [
       "english"
      ]
@@ -5932,7 +5933,7 @@
      "kind": "학원",
      "capacity": 196,
      "since": 2025,
-     "branches": 56,
+     "branches": 57,
      "subjects": [
       "english",
       "math"
@@ -6393,5 +6394,9 @@
     }
    ]
   }
- ]
+ ],
+ "seoulStoreRate": {
+  "close": 0.0905,
+  "open": 0.086
+ }
 }

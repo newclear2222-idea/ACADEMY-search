@@ -11,6 +11,7 @@
   "대표 학원: 교육청에 등록한 정원이 큰 순서"
  ],
  "salesPeriod": "",
+ "storePeriod": "",
  "pastYear": 2024,
  "aptPeriod": "",
  "unmatchedAcademies": 0,
@@ -281,7 +282,7 @@
      "academies": {
       "all": 22,
       "math": 3,
-      "english": 6,
+      "english": 5,
       "korean": 2,
       "science": 0
      },
@@ -454,7 +455,7 @@
      "academies": {
       "all": 22,
       "math": 3,
-      "english": 6,
+      "english": 5,
       "korean": 2,
       "science": 0
      },
@@ -945,7 +946,7 @@
    "academies": {
     "all": 22,
     "math": 3,
-    "english": 6,
+    "english": 5,
     "korean": 2,
     "science": 0
    },
@@ -1109,13 +1110,12 @@
      "subjects": []
     },
     {
-     "name": "할앤스티브(Hal & Steve)영어학원",
+     "name": "지존학원",
      "kind": "학원",
      "capacity": 90,
      "since": 2017,
      "branches": 1,
      "subjects": [
-      "english",
       "korean"
      ]
     },
@@ -1168,6 +1168,16 @@
      "branches": 2,
      "subjects": [
       "math"
+     ]
+    },
+    {
+     "name": "정연쌤’잉글리쉬영어교습소",
+     "kind": "교습소",
+     "capacity": 9,
+     "since": 2026,
+     "branches": 1,
+     "subjects": [
+      "english"
      ]
     }
    ],
@@ -1378,7 +1388,7 @@
      "academies": {
       "all": 22,
       "math": 3,
-      "english": 6,
+      "english": 5,
       "korean": 2,
       "science": 0
      },
@@ -1387,5 +1397,9 @@
     }
    ]
   }
- ]
+ ],
+ "seoulStoreRate": {
+  "close": 0.0905,
+  "open": 0.086
+ }
 }

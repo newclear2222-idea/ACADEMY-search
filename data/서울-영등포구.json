@@ -9,9 +9,11 @@
   "학생 수: 학교알리미 학년별·학급별 학생수",
   "수강료: 학원이 교육청에 등록한 1인당 교습비",
   "대표 학원: 교육청에 등록한 정원이 큰 순서",
-  "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)"
+  "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)",
+  "학원 개업·폐업: 서울시 상권분석서비스 점포 (일반교습학원·외국어학원)"
  ],
  "salesPeriod": "2026년 2분기",
+ "storePeriod": "2025년 3분기~2026년 2분기",
  "pastYear": 2024,
  "aptPeriod": "",
  "unmatchedAcademies": 17,
@@ -252,6 +254,11 @@
     }
    },
    "sales": 2854260080,
+   "storeFlow": {
+    "open": 18,
+    "close": 20,
+    "base": 162
+   },
    "nearby": [
     {
      "name": "영등포동7가",
@@ -3025,6 +3032,11 @@
     126.90135
    ],
    "sales": 1175404361,
+   "storeFlow": {
+    "open": 1,
+    "close": 10,
+    "base": 61
+   },
    "fervor": {
     "score": 29,
     "parts": {
@@ -3258,8 +3270,8 @@
      "region": "경기-광명시",
      "km": 3.3,
      "academies": {
-      "all": 164,
-      "math": 59,
+      "all": 165,
+      "math": 60,
       "english": 41,
       "korean": 45,
       "science": 11
@@ -3314,11 +3326,11 @@
      "region": "경기-광명시",
      "km": 4.0,
      "academies": {
-      "all": 119,
+      "all": 120,
       "math": 48,
       "english": 33,
       "korean": 15,
-      "science": 5
+      "science": 6
      },
      "students": 4663,
      "sales": null
@@ -3429,7 +3441,7 @@
       "all": 85,
       "math": 35,
       "english": 24,
-      "korean": 13,
+      "korean": 14,
       "science": 1
      },
      "students": 6043,
@@ -3711,6 +3723,11 @@
     }
    },
    "sales": 833780241,
+   "storeFlow": {
+    "open": 5,
+    "close": 4,
+    "base": 24
+   },
    "nearby": [
     {
      "name": "영등포동",
@@ -4053,8 +4070,8 @@
      "region": "경기-광명시",
      "km": 4.5,
      "academies": {
-      "all": 164,
-      "math": 59,
+      "all": 165,
+      "math": 60,
       "english": 41,
       "korean": 45,
       "science": 11
@@ -4619,8 +4636,8 @@
      "region": "경기-광명시",
      "km": 4.5,
      "academies": {
-      "all": 164,
-      "math": 59,
+      "all": 165,
+      "math": 60,
       "english": 41,
       "korean": 45,
       "science": 11
@@ -5555,8 +5572,8 @@
      "region": "경기-광명시",
      "km": 4.9,
      "academies": {
-      "all": 164,
-      "math": 59,
+      "all": 165,
+      "math": 60,
       "english": 41,
       "korean": 45,
       "science": 11
@@ -6446,8 +6463,8 @@
      "region": "경기-광명시",
      "km": 4.7,
      "academies": {
-      "all": 164,
-      "math": 59,
+      "all": 165,
+      "math": 60,
       "english": 41,
       "korean": 45,
       "science": 11
@@ -6891,6 +6908,11 @@
     126.9118
    ],
    "sales": 5898982454,
+   "storeFlow": {
+    "open": 23,
+    "close": 18,
+    "base": 215
+   },
    "fervor": {
     "score": 50,
     "parts": {
@@ -7278,8 +7300,8 @@
      "region": "경기-광명시",
      "km": 4.7,
      "academies": {
-      "all": 164,
-      "math": 59,
+      "all": 165,
+      "math": 60,
       "english": 41,
       "korean": 45,
       "science": 11
@@ -7474,6 +7496,11 @@
     126.89023
    ],
    "sales": 703938562,
+   "storeFlow": {
+    "open": 7,
+    "close": 10,
+    "base": 90
+   },
    "nearby": [
     {
      "name": "양평동3가",
@@ -8670,8 +8697,8 @@
      "region": "경기-광명시",
      "km": 4.8,
      "academies": {
-      "all": 164,
-      "math": 59,
+      "all": 165,
+      "math": 60,
       "english": 41,
       "korean": 45,
       "science": 11
@@ -11176,6 +11203,11 @@
     126.90806
    ],
    "sales": 401316797,
+   "storeFlow": {
+    "open": 5,
+    "close": 14,
+    "base": 79
+   },
    "fervor": {
     "score": 41,
     "parts": {
@@ -11601,8 +11633,8 @@
      "region": "경기-광명시",
      "km": 5.1,
      "academies": {
-      "all": 164,
-      "math": 59,
+      "all": 165,
+      "math": 60,
       "english": 41,
       "korean": 45,
       "science": 11
@@ -12711,5 +12743,9 @@
    },
    "sales": null
   }
- ]
+ ],
+ "seoulStoreRate": {
+  "close": 0.0905,
+  "open": 0.086
+ }
 }

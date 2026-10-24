@@ -9,9 +9,11 @@
   "학생 수: 학교알리미 학년별·학급별 학생수",
   "수강료: 학원이 교육청에 등록한 1인당 교습비",
   "대표 학원: 교육청에 등록한 정원이 큰 순서",
-  "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)"
+  "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)",
+  "학원 개업·폐업: 서울시 상권분석서비스 점포 (일반교습학원·외국어학원)"
  ],
  "salesPeriod": "2026년 2분기",
+ "storePeriod": "2025년 3분기~2026년 2분기",
  "pastYear": 2024,
  "aptPeriod": "",
  "unmatchedAcademies": 16,
@@ -440,6 +442,11 @@
     126.91837
    ],
    "sales": 2224582389,
+   "storeFlow": {
+    "open": 18,
+    "close": 14,
+    "base": 140
+   },
    "fervor": {
     "score": 59,
     "parts": {
@@ -827,7 +834,7 @@
      "region": "경기-고양시",
      "km": 4.6,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 11,
       "english": 13,
       "korean": 4,
@@ -3139,6 +3146,11 @@
     126.90903
    ],
    "sales": 6931668946,
+   "storeFlow": {
+    "open": 18,
+    "close": 19,
+    "base": 140
+   },
    "fervor": {
     "score": 79,
     "parts": {
@@ -3428,7 +3440,7 @@
      "region": "경기-고양시",
      "km": 3.8,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 11,
       "english": 13,
       "korean": 4,
@@ -3916,6 +3928,11 @@
     126.95333
    ],
    "sales": 698008793,
+   "storeFlow": {
+    "open": 3,
+    "close": 2,
+    "base": 29
+   },
    "fervor": {
     "score": 29,
     "parts": {
@@ -4674,6 +4691,11 @@
     126.93485
    ],
    "sales": 1634465277,
+   "storeFlow": {
+    "open": 7,
+    "close": 10,
+    "base": 90
+   },
    "fervor": {
     "score": 70,
     "parts": {
@@ -6229,6 +6251,11 @@
     126.96267
    ],
    "sales": 359277921,
+   "storeFlow": {
+    "open": 6,
+    "close": 6,
+    "base": 33
+   },
    "fervor": {
     "score": 20,
     "parts": {
@@ -8180,6 +8207,11 @@
     126.94823
    ],
    "sales": 3136257080,
+   "storeFlow": {
+    "open": 8,
+    "close": 10,
+    "base": 127
+   },
    "fervor": {
     "score": 71,
     "parts": {
@@ -8999,6 +9031,11 @@
     126.9323
    ],
    "sales": 5953816245,
+   "storeFlow": {
+    "open": 21,
+    "close": 12,
+    "base": 134
+   },
    "fervor": {
     "score": 56,
     "parts": {
@@ -9439,5 +9476,9 @@
     }
    ]
   }
- ]
+ ],
+ "seoulStoreRate": {
+  "close": 0.0905,
+  "open": 0.086
+ }
 }

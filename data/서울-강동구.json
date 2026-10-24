@@ -9,9 +9,11 @@
   "학생 수: 학교알리미 학년별·학급별 학생수",
   "수강료: 학원이 교육청에 등록한 1인당 교습비",
   "대표 학원: 교육청에 등록한 정원이 큰 순서",
-  "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)"
+  "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)",
+  "학원 개업·폐업: 서울시 상권분석서비스 점포 (일반교습학원·외국어학원)"
  ],
  "salesPeriod": "2026년 2분기",
+ "storePeriod": "2025년 3분기~2026년 2분기",
  "pastYear": 2024,
  "aptPeriod": "",
  "unmatchedAcademies": 0,
@@ -450,6 +452,11 @@
     127.17585
    ],
    "sales": 2036276710,
+   "storeFlow": {
+    "open": 26,
+    "close": 29,
+    "base": 160
+   },
    "fervor": {
     "score": 57,
     "parts": {
@@ -473,10 +480,10 @@
      "region": "경기-하남시",
      "km": 1.2,
      "academies": {
-      "all": 222,
+      "all": 221,
       "math": 71,
       "english": 63,
-      "korean": 53,
+      "korean": 52,
       "science": 6
      },
      "students": 8737,
@@ -501,8 +508,8 @@
      "region": "경기-하남시",
      "km": 1.7,
      "academies": {
-      "all": 134,
-      "math": 51,
+      "all": 133,
+      "math": 50,
       "english": 27,
       "korean": 31,
       "science": 4
@@ -599,9 +606,9 @@
      "region": "경기-구리시",
      "km": 4.0,
      "academies": {
-      "all": 113,
+      "all": 112,
       "math": 35,
-      "english": 22,
+      "english": 21,
       "korean": 15,
       "science": 5
      },
@@ -641,8 +648,8 @@
      "region": "경기-구리시",
      "km": 4.7,
      "academies": {
-      "all": 22,
-      "math": 8,
+      "all": 21,
+      "math": 7,
       "english": 8,
       "korean": 6,
       "science": 0
@@ -683,9 +690,9 @@
      "region": "경기-남양주시",
      "km": 5.7,
      "academies": {
-      "all": 434,
+      "all": 433,
       "math": 162,
-      "english": 123,
+      "english": 122,
       "korean": 53,
       "science": 12
      },
@@ -1131,6 +1138,11 @@
     127.15531
    ],
    "sales": 1420934717,
+   "storeFlow": {
+    "open": 14,
+    "close": 16,
+    "base": 167
+   },
    "fervor": {
     "score": 37,
     "parts": {
@@ -1238,10 +1250,10 @@
      "region": "경기-하남시",
      "km": 3.1,
      "academies": {
-      "all": 222,
+      "all": 221,
       "math": 71,
       "english": 63,
-      "korean": 53,
+      "korean": 52,
       "science": 6
      },
      "students": 8737,
@@ -1252,8 +1264,8 @@
      "region": "경기-하남시",
      "km": 3.1,
      "academies": {
-      "all": 134,
-      "math": 51,
+      "all": 133,
+      "math": 50,
       "english": 27,
       "korean": 31,
       "science": 4
@@ -1280,9 +1292,9 @@
      "region": "경기-구리시",
      "km": 3.9,
      "academies": {
-      "all": 113,
+      "all": 112,
       "math": 35,
-      "english": 22,
+      "english": 21,
       "korean": 15,
       "science": 5
      },
@@ -1308,8 +1320,8 @@
      "region": "경기-구리시",
      "km": 4.2,
      "academies": {
-      "all": 22,
-      "math": 8,
+      "all": 21,
+      "math": 7,
       "english": 8,
       "korean": 6,
       "science": 0
@@ -1462,9 +1474,9 @@
      "region": "경기-남양주시",
      "km": 6.4,
      "academies": {
-      "all": 434,
+      "all": 433,
       "math": 162,
-      "english": 123,
+      "english": 122,
       "korean": 53,
       "science": 12
      },
@@ -1882,6 +1894,11 @@
     127.14558
    ],
    "sales": 1065692239,
+   "storeFlow": {
+    "open": 6,
+    "close": 9,
+    "base": 116
+   },
    "fervor": {
     "score": 60,
     "parts": {
@@ -2115,8 +2132,8 @@
      "region": "경기-하남시",
      "km": 4.3,
      "academies": {
-      "all": 134,
-      "math": 51,
+      "all": 133,
+      "math": 50,
       "english": 27,
       "korean": 31,
       "science": 4
@@ -2143,10 +2160,10 @@
      "region": "경기-하남시",
      "km": 4.7,
      "academies": {
-      "all": 222,
+      "all": 221,
       "math": 71,
       "english": 63,
-      "korean": 53,
+      "korean": 52,
       "science": 6
      },
      "students": 8737,
@@ -2241,8 +2258,8 @@
      "region": "경기-구리시",
      "km": 5.8,
      "academies": {
-      "all": 22,
-      "math": 8,
+      "all": 21,
+      "math": 7,
       "english": 8,
       "korean": 6,
       "science": 0
@@ -2269,9 +2286,9 @@
      "region": "경기-구리시",
      "km": 5.8,
      "academies": {
-      "all": 113,
+      "all": 112,
       "math": 35,
-      "english": 22,
+      "english": 21,
       "korean": 15,
       "science": 5
      },
@@ -2611,6 +2628,11 @@
     127.14191
    ],
    "sales": 2161403536,
+   "storeFlow": {
+    "open": 16,
+    "close": 11,
+    "base": 90
+   },
    "fervor": {
     "score": 46,
     "parts": {
@@ -2998,8 +3020,8 @@
      "region": "경기-하남시",
      "km": 5.4,
      "academies": {
-      "all": 134,
-      "math": 51,
+      "all": 133,
+      "math": 50,
       "english": 27,
       "korean": 31,
       "science": 4
@@ -3040,10 +3062,10 @@
      "region": "경기-하남시",
      "km": 6.0,
      "academies": {
-      "all": 222,
+      "all": 221,
       "math": 71,
       "english": 63,
-      "korean": 53,
+      "korean": 52,
       "science": 6
      },
      "students": 8737,
@@ -3384,6 +3406,11 @@
     127.15016
    ],
    "sales": 35657747698,
+   "storeFlow": {
+    "open": 34,
+    "close": 32,
+    "base": 428
+   },
    "fervor": {
     "score": 95,
     "parts": {
@@ -3519,8 +3546,8 @@
      "region": "경기-하남시",
      "km": 3.6,
      "academies": {
-      "all": 134,
-      "math": 51,
+      "all": 133,
+      "math": 50,
       "english": 27,
       "korean": 31,
       "science": 4
@@ -3547,10 +3574,10 @@
      "region": "경기-하남시",
      "km": 3.8,
      "academies": {
-      "all": 222,
+      "all": 221,
       "math": 71,
       "english": 63,
-      "korean": 53,
+      "korean": 52,
       "science": 6
      },
      "students": 8737,
@@ -3617,9 +3644,9 @@
      "region": "경기-구리시",
      "km": 4.7,
      "academies": {
-      "all": 113,
+      "all": 112,
       "math": 35,
-      "english": 22,
+      "english": 21,
       "korean": 15,
       "science": 5
      },
@@ -3631,8 +3658,8 @@
      "region": "경기-구리시",
      "km": 4.8,
      "academies": {
-      "all": 22,
-      "math": 8,
+      "all": 21,
+      "math": 7,
       "english": 8,
       "korean": 6,
       "science": 0
@@ -4348,6 +4375,11 @@
     127.1658
    ],
    "sales": 1307466105,
+   "storeFlow": {
+    "open": 13,
+    "close": 8,
+    "base": 76
+   },
    "fervor": {
     "score": 39,
     "parts": {
@@ -4427,8 +4459,8 @@
      "region": "경기-하남시",
      "km": 2.3,
      "academies": {
-      "all": 134,
-      "math": 51,
+      "all": 133,
+      "math": 50,
       "english": 27,
       "korean": 31,
       "science": 4
@@ -4441,10 +4473,10 @@
      "region": "경기-하남시",
      "km": 2.6,
      "academies": {
-      "all": 222,
+      "all": 221,
       "math": 71,
       "english": 63,
-      "korean": 53,
+      "korean": 52,
       "science": 6
      },
      "students": 8737,
@@ -4567,9 +4599,9 @@
      "region": "경기-구리시",
      "km": 5.1,
      "academies": {
-      "all": 113,
+      "all": 112,
       "math": 35,
-      "english": 22,
+      "english": 21,
       "korean": 15,
       "science": 5
      },
@@ -4609,8 +4641,8 @@
      "region": "경기-구리시",
      "km": 5.4,
      "academies": {
-      "all": 22,
-      "math": 8,
+      "all": 21,
+      "math": 7,
       "english": 8,
       "korean": 6,
       "science": 0
@@ -4707,9 +4739,9 @@
      "region": "경기-남양주시",
      "km": 7.3,
      "academies": {
-      "all": 434,
+      "all": 433,
       "math": 162,
-      "english": 123,
+      "english": 122,
       "korean": 53,
       "science": 12
      },
@@ -5112,6 +5144,11 @@
     127.12693
    ],
    "sales": 8992830019,
+   "storeFlow": {
+    "open": 22,
+    "close": 11,
+    "base": 203
+   },
    "fervor": {
     "score": 96,
     "parts": {
@@ -5541,8 +5578,8 @@
      "region": "경기-하남시",
      "km": 6.3,
      "academies": {
-      "all": 134,
-      "math": 51,
+      "all": 133,
+      "math": 50,
       "english": 27,
       "korean": 31,
       "science": 4
@@ -5901,6 +5938,11 @@
     127.13373
    ],
    "sales": 3943063626,
+   "storeFlow": {
+    "open": 12,
+    "close": 18,
+    "base": 207
+   },
    "fervor": {
     "score": 80,
     "parts": {
@@ -6078,8 +6120,8 @@
      "region": "경기-구리시",
      "km": 4.1,
      "academies": {
-      "all": 22,
-      "math": 8,
+      "all": 21,
+      "math": 7,
       "english": 8,
       "korean": 6,
       "science": 0
@@ -6106,9 +6148,9 @@
      "region": "경기-구리시",
      "km": 4.4,
      "academies": {
-      "all": 113,
+      "all": 112,
       "math": 35,
-      "english": 22,
+      "english": 21,
       "korean": 15,
       "science": 5
      },
@@ -6148,8 +6190,8 @@
      "region": "경기-하남시",
      "km": 5.0,
      "academies": {
-      "all": 134,
-      "math": 51,
+      "all": 133,
+      "math": 50,
       "english": 27,
       "korean": 31,
       "science": 4
@@ -6162,10 +6204,10 @@
      "region": "경기-하남시",
      "km": 5.0,
      "academies": {
-      "all": 222,
+      "all": 221,
       "math": 71,
       "english": 63,
-      "korean": 53,
+      "korean": 52,
       "science": 6
      },
      "students": 8737,
@@ -6673,6 +6715,11 @@
     127.13563
    ],
    "sales": 3480616281,
+   "storeFlow": {
+    "open": 15,
+    "close": 12,
+    "base": 144
+   },
    "fervor": {
     "score": 58,
     "parts": {
@@ -6920,8 +6967,8 @@
      "region": "경기-하남시",
      "km": 5.0,
      "academies": {
-      "all": 134,
-      "math": 51,
+      "all": 133,
+      "math": 50,
       "english": 27,
       "korean": 31,
       "science": 4
@@ -6934,8 +6981,8 @@
      "region": "경기-구리시",
      "km": 5.0,
      "academies": {
-      "all": 22,
-      "math": 8,
+      "all": 21,
+      "math": 7,
       "english": 8,
       "korean": 6,
       "science": 0
@@ -6976,10 +7023,10 @@
      "region": "경기-하남시",
      "km": 5.2,
      "academies": {
-      "all": 222,
+      "all": 221,
       "math": 71,
       "english": 63,
-      "korean": 53,
+      "korean": 52,
       "science": 6
      },
      "students": 8737,
@@ -7004,9 +7051,9 @@
      "region": "경기-구리시",
      "km": 5.3,
      "academies": {
-      "all": 113,
+      "all": 112,
       "math": 35,
-      "english": 22,
+      "english": 21,
       "korean": 15,
       "science": 5
      },
@@ -7113,5 +7160,9 @@
     }
    ]
   }
- ]
+ ],
+ "seoulStoreRate": {
+  "close": 0.0905,
+  "open": 0.086
+ }
 }

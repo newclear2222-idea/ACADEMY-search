@@ -11,18 +11,19 @@
   "대표 학원: 교육청에 등록한 정원이 큰 순서"
  ],
  "salesPeriod": "",
+ "storePeriod": "",
  "pastYear": 2024,
  "aptPeriod": "",
  "unmatchedAcademies": 0,
  "fees": {
   "all": {
    "elem": [
-    190000,
-    128
+    200000,
+    134
    ],
    "middle": [
     280000,
-    93
+    97
    ],
    "high": [
     370000,
@@ -30,7 +31,7 @@
    ],
    "total": [
     220000,
-    350
+    360
    ]
   },
   "math": {
@@ -54,11 +55,11 @@
   "english": {
    "elem": [
     220000,
-    29
+    35
    ],
    "middle": [
     280000,
-    32
+    36
    ],
    "high": [
     360000,
@@ -66,7 +67,7 @@
    ],
    "total": [
     250000,
-    88
+    98
    ]
   },
   "korean": {
@@ -599,8 +600,8 @@
      "region": "인천-영종구",
      "km": 2.6,
      "academies": {
-      "all": 139,
-      "math": 45,
+      "all": 140,
+      "math": 46,
       "english": 33,
       "korean": 21,
       "science": 3
@@ -627,10 +628,10 @@
      "region": "인천-서해구",
      "km": 10.6,
      "academies": {
-      "all": 383,
-      "math": 137,
+      "all": 382,
+      "math": 136,
       "english": 114,
-      "korean": 55,
+      "korean": 56,
       "science": 20
      },
      "students": 5921,
@@ -814,8 +815,8 @@
      "region": "인천-영종구",
      "km": 4.3,
      "academies": {
-      "all": 139,
-      "math": 45,
+      "all": 140,
+      "math": 46,
       "english": 33,
       "korean": 21,
       "science": 3
@@ -828,10 +829,10 @@
      "region": "인천-서해구",
      "km": 10.6,
      "academies": {
-      "all": 383,
-      "math": 137,
+      "all": 382,
+      "math": 136,
       "english": 114,
-      "korean": 55,
+      "korean": 56,
       "science": 20
      },
      "students": 5921,
@@ -1186,7 +1187,7 @@
     126.49792
    ],
    "fervor": {
-    "score": 26,
+    "score": 24,
     "parts": {
      "density": [
       0.7,
@@ -1194,7 +1195,7 @@
      ],
      "fee": [
       180000,
-      18
+      16
      ]
     }
    },
@@ -1218,8 +1219,8 @@
      "region": "인천-영종구",
      "km": 5.9,
      "academies": {
-      "all": 139,
-      "math": 45,
+      "all": 140,
+      "math": 46,
       "english": 33,
       "korean": 21,
       "science": 3
@@ -1238,8 +1239,8 @@
     "total": 6191
    },
    "academies": {
-    "all": 139,
-    "math": 45,
+    "all": 140,
+    "math": 46,
     "english": 33,
     "korean": 21,
     "science": 3
@@ -1280,11 +1281,11 @@
     "all": {
      "elem": [
       210000,
-      59
+      65
      ],
      "middle": [
       280000,
-      57
+      61
      ],
      "high": [
       390000,
@@ -1292,7 +1293,7 @@
      ],
      "total": [
       230000,
-      201
+      211
      ]
     },
     "math": {
@@ -1316,11 +1317,11 @@
     "english": {
      "elem": [
       210000,
-      25
+      31
      ],
      "middle": [
       280000,
-      27
+      31
      ],
      "high": [
       380000,
@@ -1328,7 +1329,7 @@
      ],
      "total": [
       250000,
-      76
+      86
      ]
     },
     "korean": {
@@ -1575,15 +1576,15 @@
    },
    "opened": {
     "1y": {
-     "all": 28,
-     "math": 10,
+     "all": 29,
+     "math": 11,
      "english": 7,
      "korean": 4,
      "science": 0
     },
     "3y": {
-     "all": 64,
-     "math": 17,
+     "all": 65,
+     "math": 18,
      "english": 16,
      "korean": 12,
      "science": 0
@@ -1597,7 +1598,7 @@
     "score": 81,
     "parts": {
      "density": [
-      2.2,
+      2.3,
       95
      ],
      "fee": [
@@ -1640,10 +1641,10 @@
      "region": "인천-서해구",
      "km": 8.0,
      "academies": {
-      "all": 383,
-      "math": 137,
+      "all": 382,
+      "math": 136,
       "english": 114,
-      "korean": 55,
+      "korean": 56,
       "science": 20
      },
      "students": 5921,
@@ -1651,5 +1652,9 @@
     }
    ]
   }
- ]
+ ],
+ "seoulStoreRate": {
+  "close": 0.0905,
+  "open": 0.086
+ }
 }

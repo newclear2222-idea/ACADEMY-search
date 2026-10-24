@@ -9,9 +9,11 @@
   "학생 수: 학교알리미 학년별·학급별 학생수",
   "수강료: 학원이 교육청에 등록한 1인당 교습비",
   "대표 학원: 교육청에 등록한 정원이 큰 순서",
-  "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)"
+  "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)",
+  "학원 개업·폐업: 서울시 상권분석서비스 점포 (일반교습학원·외국어학원)"
  ],
  "salesPeriod": "2026년 2분기",
+ "storePeriod": "2025년 3분기~2026년 2분기",
  "pastYear": 2024,
  "aptPeriod": "",
  "unmatchedAcademies": 0,
@@ -834,6 +836,11 @@
     126.99957
    ],
    "sales": 449622998,
+   "storeFlow": {
+    "open": 0,
+    "close": 1,
+    "base": 16
+   },
    "fervor": {
     "score": 46,
     "parts": {
@@ -2696,6 +2703,11 @@
     126.99217
    ],
    "sales": 69336312,
+   "storeFlow": {
+    "open": 0,
+    "close": 2,
+    "base": 20
+   },
    "nearby": [
     {
      "name": "보광동",
@@ -3261,6 +3273,11 @@
     }
    },
    "sales": null,
+   "storeFlow": {
+    "open": 2,
+    "close": 2,
+    "base": 22
+   },
    "nearby": [
     {
      "name": "효창동",
@@ -6005,6 +6022,11 @@
     126.97574
    ],
    "sales": 1652187473,
+   "storeFlow": {
+    "open": 5,
+    "close": 5,
+    "base": 75
+   },
    "fervor": {
     "score": 50,
     "parts": {
@@ -6604,6 +6626,11 @@
     126.9894
    ],
    "sales": null,
+   "storeFlow": {
+    "open": 1,
+    "close": 2,
+    "base": 29
+   },
    "nearby": [
     {
      "name": "용산동2가",
@@ -9681,6 +9708,11 @@
     127.00492
    ],
    "sales": 2018399618,
+   "storeFlow": {
+    "open": 1,
+    "close": 2,
+    "base": 38
+   },
    "nearby": [
     {
      "name": "옥수동",
@@ -10341,6 +10373,11 @@
     126.96112
    ],
    "sales": 762751219,
+   "storeFlow": {
+    "open": 1,
+    "close": 1,
+    "base": 25
+   },
    "fervor": {
     "score": 39,
     "parts": {
@@ -11050,6 +11087,11 @@
     126.97945
    ],
    "sales": 154196402,
+   "storeFlow": {
+    "open": 5,
+    "close": 3,
+    "base": 36
+   },
    "fervor": {
     "score": 71,
     "parts": {
@@ -11486,5 +11528,9 @@
     }
    ]
   }
- ]
+ ],
+ "seoulStoreRate": {
+  "close": 0.0905,
+  "open": 0.086
+ }
 }

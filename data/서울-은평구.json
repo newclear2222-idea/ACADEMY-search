@@ -9,9 +9,11 @@
   "학생 수: 학교알리미 학년별·학급별 학생수",
   "수강료: 학원이 교육청에 등록한 1인당 교습비",
   "대표 학원: 교육청에 등록한 정원이 큰 순서",
-  "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)"
+  "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)",
+  "학원 개업·폐업: 서울시 상권분석서비스 점포 (일반교습학원·외국어학원)"
  ],
  "salesPeriod": "2026년 2분기",
+ "storePeriod": "2025년 3분기~2026년 2분기",
  "pastYear": 2024,
  "aptPeriod": "",
  "unmatchedAcademies": 5,
@@ -484,6 +486,11 @@
     126.91125
    ],
    "sales": 7986670317,
+   "storeFlow": {
+    "open": 10,
+    "close": 17,
+    "base": 166
+   },
    "fervor": {
     "score": 69,
     "parts": {
@@ -661,7 +668,7 @@
      "region": "경기-고양시",
      "km": 3.6,
      "academies": {
-      "all": 57,
+      "all": 56,
       "math": 17,
       "english": 22,
       "korean": 9,
@@ -675,10 +682,10 @@
      "region": "경기-고양시",
      "km": 3.8,
      "academies": {
-      "all": 57,
+      "all": 59,
       "math": 17,
-      "english": 14,
-      "korean": 8,
+      "english": 15,
+      "korean": 10,
       "science": 1
      },
      "students": 3442,
@@ -801,10 +808,10 @@
      "region": "경기-고양시",
      "km": 5.7,
      "academies": {
-      "all": 62,
+      "all": 63,
       "math": 24,
       "english": 14,
-      "korean": 15,
+      "korean": 16,
       "science": 2
      },
      "students": 2908,
@@ -815,7 +822,7 @@
      "region": "경기-고양시",
      "km": 5.8,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 11,
       "english": 13,
       "korean": 4,
@@ -1210,6 +1217,11 @@
     126.91107
    ],
    "sales": 908934864,
+   "storeFlow": {
+    "open": 5,
+    "close": 7,
+    "base": 82
+   },
    "fervor": {
     "score": 22,
     "parts": {
@@ -1457,10 +1469,10 @@
      "region": "경기-고양시",
      "km": 4.2,
      "academies": {
-      "all": 57,
+      "all": 59,
       "math": 17,
-      "english": 14,
-      "korean": 8,
+      "english": 15,
+      "korean": 10,
       "science": 1
      },
      "students": 3442,
@@ -1499,7 +1511,7 @@
      "region": "경기-고양시",
      "km": 4.7,
      "academies": {
-      "all": 57,
+      "all": 56,
       "math": 17,
       "english": 22,
       "korean": 9,
@@ -1513,7 +1525,7 @@
      "region": "경기-고양시",
      "km": 5.1,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 11,
       "english": 13,
       "korean": 4,
@@ -1597,10 +1609,10 @@
      "region": "경기-고양시",
      "km": 6.7,
      "academies": {
-      "all": 62,
+      "all": 63,
       "math": 24,
       "english": 14,
-      "korean": 15,
+      "korean": 16,
       "science": 2
      },
      "students": 2908,
@@ -1950,6 +1962,11 @@
     126.93194
    ],
    "sales": 429007344,
+   "storeFlow": {
+    "open": 9,
+    "close": 7,
+    "base": 84
+   },
    "fervor": {
     "score": 38,
     "parts": {
@@ -2267,7 +2284,7 @@
      "region": "경기-고양시",
      "km": 5.4,
      "academies": {
-      "all": 57,
+      "all": 56,
       "math": 17,
       "english": 22,
       "korean": 9,
@@ -2337,10 +2354,10 @@
      "region": "경기-고양시",
      "km": 6.1,
      "academies": {
-      "all": 57,
+      "all": 59,
       "math": 17,
-      "english": 14,
-      "korean": 8,
+      "english": 15,
+      "korean": 10,
       "science": 1
      },
      "students": 3442,
@@ -2351,7 +2368,7 @@
      "region": "경기-고양시",
      "km": 6.3,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 11,
       "english": 13,
       "korean": 4,
@@ -2708,6 +2725,11 @@
     126.92338
    ],
    "sales": 2387086967,
+   "storeFlow": {
+    "open": 6,
+    "close": 2,
+    "base": 65
+   },
    "fervor": {
     "score": 49,
     "parts": {
@@ -2927,7 +2949,7 @@
      "region": "경기-고양시",
      "km": 4.3,
      "academies": {
-      "all": 57,
+      "all": 56,
       "math": 17,
       "english": 22,
       "korean": 9,
@@ -2997,10 +3019,10 @@
      "region": "경기-고양시",
      "km": 5.0,
      "academies": {
-      "all": 57,
+      "all": 59,
       "math": 17,
-      "english": 14,
-      "korean": 8,
+      "english": 15,
+      "korean": 10,
       "science": 1
      },
      "students": 3442,
@@ -3039,7 +3061,7 @@
      "region": "경기-고양시",
      "km": 6.1,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 11,
       "english": 13,
       "korean": 4,
@@ -3081,10 +3103,10 @@
      "region": "경기-고양시",
      "km": 6.8,
      "academies": {
-      "all": 62,
+      "all": 63,
       "math": 24,
       "english": 14,
-      "korean": 15,
+      "korean": 16,
       "science": 2
      },
      "students": 2908,
@@ -3451,6 +3473,11 @@
     126.9282
    ],
    "sales": 1545939558,
+   "storeFlow": {
+    "open": 6,
+    "close": 12,
+    "base": 115
+   },
    "fervor": {
     "score": 34,
     "parts": {
@@ -3558,7 +3585,7 @@
      "region": "경기-고양시",
      "km": 3.3,
      "academies": {
-      "all": 57,
+      "all": 56,
       "math": 17,
       "english": 22,
       "korean": 9,
@@ -3698,10 +3725,10 @@
      "region": "경기-고양시",
      "km": 5.1,
      "academies": {
-      "all": 57,
+      "all": 59,
       "math": 17,
-      "english": 14,
-      "korean": 8,
+      "english": 15,
+      "korean": 10,
       "science": 1
      },
      "students": 3442,
@@ -3754,10 +3781,10 @@
      "region": "경기-고양시",
      "km": 6.2,
      "academies": {
-      "all": 62,
+      "all": 63,
       "math": 24,
       "english": 14,
-      "korean": 15,
+      "korean": 16,
       "science": 2
      },
      "students": 2908,
@@ -4059,6 +4086,11 @@
     126.89545
    ],
    "sales": null,
+   "storeFlow": {
+    "open": 6,
+    "close": 4,
+    "base": 24
+   },
    "fervor": {
     "score": 38,
     "parts": {
@@ -4204,7 +4236,7 @@
      "region": "경기-고양시",
      "km": 2.6,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 11,
       "english": 13,
       "korean": 4,
@@ -4400,10 +4432,10 @@
      "region": "경기-고양시",
      "km": 5.5,
      "academies": {
-      "all": 57,
+      "all": 59,
       "math": 17,
-      "english": 14,
-      "korean": 8,
+      "english": 15,
+      "korean": 10,
       "science": 1
      },
      "students": 3442,
@@ -4791,6 +4823,11 @@
     126.90634
    ],
    "sales": 573736126,
+   "storeFlow": {
+    "open": 11,
+    "close": 12,
+    "base": 84
+   },
    "fervor": {
     "score": 23,
     "parts": {
@@ -5066,7 +5103,7 @@
      "region": "경기-고양시",
      "km": 3.8,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 11,
       "english": 13,
       "korean": 4,
@@ -5094,10 +5131,10 @@
      "region": "경기-고양시",
      "km": 5.1,
      "academies": {
-      "all": 57,
+      "all": 59,
       "math": 17,
-      "english": 14,
-      "korean": 8,
+      "english": 15,
+      "korean": 10,
       "science": 1
      },
      "students": 3442,
@@ -5524,6 +5561,11 @@
     126.91433
    ],
    "sales": 2265748198,
+   "storeFlow": {
+    "open": 6,
+    "close": 18,
+    "base": 107
+   },
    "fervor": {
     "score": 73,
     "parts": {
@@ -5813,7 +5855,7 @@
      "region": "경기-고양시",
      "km": 4.8,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 11,
       "english": 13,
       "korean": 4,
@@ -5841,10 +5883,10 @@
      "region": "경기-고양시",
      "km": 5.0,
      "academies": {
-      "all": 57,
+      "all": 59,
       "math": 17,
-      "english": 14,
-      "korean": 8,
+      "english": 15,
+      "korean": 10,
       "science": 1
      },
      "students": 3442,
@@ -5869,7 +5911,7 @@
      "region": "경기-고양시",
      "km": 5.5,
      "academies": {
-      "all": 57,
+      "all": 56,
       "math": 17,
       "english": 22,
       "korean": 9,
@@ -6346,6 +6388,11 @@
     126.92183
    ],
    "sales": 2263072994,
+   "storeFlow": {
+    "open": 30,
+    "close": 20,
+    "base": 189
+   },
    "fervor": {
     "score": 35,
     "parts": {
@@ -6663,7 +6710,7 @@
      "region": "경기-고양시",
      "km": 5.0,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 11,
       "english": 13,
       "korean": 4,
@@ -6761,10 +6808,10 @@
      "region": "경기-고양시",
      "km": 6.3,
      "academies": {
-      "all": 57,
+      "all": 59,
       "math": 17,
-      "english": 14,
-      "korean": 8,
+      "english": 15,
+      "korean": 10,
       "science": 1
      },
      "students": 3442,
@@ -7072,6 +7119,11 @@
     126.90434
    ],
    "sales": 336133375,
+   "storeFlow": {
+    "open": 4,
+    "close": 6,
+    "base": 48
+   },
    "fervor": {
     "score": 27,
     "parts": {
@@ -7305,7 +7357,7 @@
      "region": "경기-고양시",
      "km": 3.4,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 11,
       "english": 13,
       "korean": 4,
@@ -7888,6 +7940,11 @@
     126.9286
    ],
    "sales": 2539104205,
+   "storeFlow": {
+    "open": 16,
+    "close": 24,
+    "base": 217
+   },
    "fervor": {
     "score": 47,
     "parts": {
@@ -7911,7 +7968,7 @@
      "region": "경기-고양시",
      "km": 1.6,
      "academies": {
-      "all": 57,
+      "all": 56,
       "math": 17,
       "english": 22,
       "korean": 9,
@@ -8037,10 +8094,10 @@
      "region": "경기-고양시",
      "km": 4.8,
      "academies": {
-      "all": 62,
+      "all": 63,
       "math": 24,
       "english": 14,
-      "korean": 15,
+      "korean": 16,
       "science": 2
      },
      "students": 2908,
@@ -8051,10 +8108,10 @@
      "region": "경기-고양시",
      "km": 5.2,
      "academies": {
-      "all": 57,
+      "all": 59,
       "math": 17,
-      "english": 14,
-      "korean": 8,
+      "english": 15,
+      "korean": 10,
       "science": 1
      },
      "students": 3442,
@@ -8160,5 +8217,9 @@
     }
    ]
   }
- ]
+ ],
+ "seoulStoreRate": {
+  "close": 0.0905,
+  "open": 0.086
+ }
 }

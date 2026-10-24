@@ -11,6 +11,7 @@
   "대표 학원: 교육청에 등록한 정원이 큰 순서"
  ],
  "salesPeriod": "",
+ "storePeriod": "",
  "pastYear": 2024,
  "aptPeriod": "",
  "unmatchedAcademies": 1,
@@ -18,37 +19,37 @@
   "all": {
    "elem": [
     210000,
-    932
+    941
    ],
    "middle": [
     300000,
-    810
+    819
    ],
    "high": [
-    370000,
-    545
+    374000,
+    546
    ],
    "total": [
     260000,
-    2523
+    2543
    ]
   },
   "math": {
    "elem": [
     210000,
-    431
+    432
    ],
    "middle": [
     330000,
-    382
+    386
    ],
    "high": [
     420000,
-    253
+    254
    ],
    "total": [
     300000,
-    1124
+    1130
    ]
   },
   "english": {
@@ -72,11 +73,11 @@
   "korean": {
    "elem": [
     167000,
-    175
+    182
    ],
    "middle": [
     200000,
-    154
+    158
    ],
    "high": [
     280000,
@@ -84,17 +85,17 @@
    ],
    "total": [
     200000,
-    464
+    476
    ]
   },
   "science": {
    "elem": [
     53000,
-    19
+    20
    ],
    "middle": [
     185000,
-    37
+    38
    ],
    "high": [
     320000,
@@ -102,7 +103,7 @@
    ],
    "total": [
     220000,
-    95
+    97
    ]
   }
  },
@@ -237,7 +238,7 @@
      "kind": "학원",
      "capacity": 63,
      "since": 2025,
-     "branches": 5,
+     "branches": 4,
      "subjects": [
       "english",
       "korean"
@@ -436,9 +437,9 @@
      "region": "경기-성남시",
      "km": 3.4,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 13,
-      "english": 12,
+      "english": 11,
       "korean": 6,
       "science": 1
      },
@@ -464,7 +465,7 @@
      "region": "경기-성남시",
      "km": 3.9,
      "academies": {
-      "all": 91,
+      "all": 90,
       "math": 31,
       "english": 31,
       "korean": 19,
@@ -506,7 +507,7 @@
      "region": "경기-성남시",
      "km": 4.4,
      "academies": {
-      "all": 24,
+      "all": 25,
       "math": 9,
       "english": 1,
       "korean": 4,
@@ -674,10 +675,10 @@
      "region": "경기-성남시",
      "km": 6.7,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -716,9 +717,9 @@
      "region": "경기-성남시",
      "km": 7.1,
      "academies": {
-      "all": 285,
+      "all": 286,
       "math": 81,
-      "english": 42,
+      "english": 43,
       "korean": 42,
       "science": 9
      },
@@ -1143,7 +1144,7 @@
      "region": "경기-용인시",
      "km": 1.5,
      "academies": {
-      "all": 110,
+      "all": 109,
       "math": 46,
       "english": 30,
       "korean": 20,
@@ -1157,9 +1158,9 @@
      "region": "경기-성남시",
      "km": 2.4,
      "academies": {
-      "all": 285,
+      "all": 286,
       "math": 81,
-      "english": 42,
+      "english": 43,
       "korean": 42,
       "science": 9
      },
@@ -1171,9 +1172,9 @@
      "region": "경기-용인시",
      "km": 2.5,
      "academies": {
-      "all": 86,
+      "all": 87,
       "math": 34,
-      "english": 25,
+      "english": 26,
       "korean": 16,
       "science": 1
      },
@@ -1199,10 +1200,10 @@
      "region": "경기-성남시",
      "km": 3.0,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -1216,7 +1217,7 @@
       "all": 243,
       "math": 81,
       "english": 55,
-      "korean": 48,
+      "korean": 47,
       "science": 7
      },
      "students": 11954,
@@ -1395,9 +1396,9 @@
      "region": "경기-성남시",
      "km": 6.4,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 13,
-      "english": 12,
+      "english": 11,
       "korean": 6,
       "science": 1
      },
@@ -1785,9 +1786,9 @@
      "region": "경기-성남시",
      "km": 1.1,
      "academies": {
-      "all": 285,
+      "all": 286,
       "math": 81,
-      "english": 42,
+      "english": 43,
       "korean": 42,
       "science": 9
      },
@@ -1827,10 +1828,10 @@
      "region": "경기-성남시",
      "km": 2.0,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -1841,9 +1842,9 @@
      "region": "경기-용인시",
      "km": 2.6,
      "academies": {
-      "all": 86,
+      "all": 87,
       "math": 34,
-      "english": 25,
+      "english": 26,
       "korean": 16,
       "science": 1
      },
@@ -1855,7 +1856,7 @@
      "region": "경기-용인시",
      "km": 2.7,
      "academies": {
-      "all": 110,
+      "all": 109,
       "math": 46,
       "english": 30,
       "korean": 20,
@@ -1914,7 +1915,7 @@
       "all": 243,
       "math": 81,
       "english": 55,
-      "korean": 48,
+      "korean": 47,
       "science": 7
      },
      "students": 11954,
@@ -1981,9 +1982,9 @@
      "region": "경기-성남시",
      "km": 5.2,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 13,
-      "english": 12,
+      "english": 11,
       "korean": 6,
       "science": 1
      },
@@ -2051,7 +2052,7 @@
      "region": "경기-성남시",
      "km": 6.4,
      "academies": {
-      "all": 91,
+      "all": 90,
       "math": 31,
       "english": 31,
       "korean": 19,
@@ -2305,7 +2306,7 @@
      "kind": "학원",
      "capacity": 150,
      "since": 2022,
-     "branches": 2,
+     "branches": 192,
      "subjects": [
       "english"
      ]
@@ -2541,7 +2542,7 @@
      "region": "경기-성남시",
      "km": 2.7,
      "academies": {
-      "all": 24,
+      "all": 25,
       "math": 9,
       "english": 1,
       "korean": 4,
@@ -2653,7 +2654,7 @@
      "region": "경기-성남시",
      "km": 5.0,
      "academies": {
-      "all": 91,
+      "all": 90,
       "math": 31,
       "english": 31,
       "korean": 19,
@@ -2723,9 +2724,9 @@
      "region": "경기-성남시",
      "km": 6.8,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 13,
-      "english": 12,
+      "english": 11,
       "korean": 6,
       "science": 1
      },
@@ -2751,10 +2752,10 @@
      "region": "경기-성남시",
      "km": 9.3,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -2765,9 +2766,9 @@
      "region": "경기-성남시",
      "km": 10.3,
      "academies": {
-      "all": 285,
+      "all": 286,
       "math": 81,
-      "english": 42,
+      "english": 43,
       "korean": 42,
       "science": 9
      },
@@ -3284,7 +3285,7 @@
      "region": "경기-성남시",
      "km": 3.2,
      "academies": {
-      "all": 24,
+      "all": 25,
       "math": 9,
       "english": 1,
       "korean": 4,
@@ -3410,7 +3411,7 @@
      "region": "경기-성남시",
      "km": 5.5,
      "academies": {
-      "all": 91,
+      "all": 90,
       "math": 31,
       "english": 31,
       "korean": 19,
@@ -3494,10 +3495,10 @@
      "region": "경기-성남시",
      "km": 9.9,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -3522,9 +3523,9 @@
      "region": "경기-성남시",
      "km": 10.9,
      "academies": {
-      "all": 285,
+      "all": 286,
       "math": 81,
-      "english": 42,
+      "english": 43,
       "korean": 42,
       "science": 9
      },
@@ -3668,7 +3669,7 @@
      "kind": "학원",
      "capacity": 100,
      "since": 2022,
-     "branches": 69,
+     "branches": 70,
      "subjects": [
       "korean"
      ]
@@ -3819,11 +3820,11 @@
     "parts": {
      "density": [
       2.0,
-      77
+      78
      ],
      "fee": [
       260000,
-      88
+      87
      ]
     }
    },
@@ -3889,9 +3890,9 @@
      "region": "경기-성남시",
      "km": 3.8,
      "academies": {
-      "all": 285,
+      "all": 286,
       "math": 81,
-      "english": 42,
+      "english": 43,
       "korean": 42,
       "science": 9
      },
@@ -3903,9 +3904,9 @@
      "region": "경기-용인시",
      "km": 3.9,
      "academies": {
-      "all": 86,
+      "all": 87,
       "math": 34,
-      "english": 25,
+      "english": 26,
       "korean": 16,
       "science": 1
      },
@@ -3945,10 +3946,10 @@
      "region": "경기-성남시",
      "km": 4.7,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -4001,9 +4002,9 @@
      "region": "경기-성남시",
      "km": 5.5,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 13,
-      "english": 12,
+      "english": 11,
       "korean": 6,
       "science": 1
      },
@@ -4018,7 +4019,7 @@
       "all": 243,
       "math": 81,
       "english": 55,
-      "korean": 48,
+      "korean": 47,
       "science": 7
      },
      "students": 11954,
@@ -4057,7 +4058,7 @@
      "region": "경기-용인시",
      "km": 6.0,
      "academies": {
-      "all": 110,
+      "all": 109,
       "math": 46,
       "english": 30,
       "korean": 20,
@@ -4071,8 +4072,8 @@
      "region": "경기-안양시",
      "km": 9.3,
      "academies": {
-      "all": 277,
-      "math": 95,
+      "all": 278,
+      "math": 96,
       "english": 73,
       "korean": 66,
       "science": 12
@@ -4395,7 +4396,7 @@
      "region": "경기-성남시",
      "km": 1.7,
      "academies": {
-      "all": 24,
+      "all": 25,
       "math": 9,
       "english": 1,
       "korean": 4,
@@ -4409,7 +4410,7 @@
      "region": "경기-성남시",
      "km": 1.9,
      "academies": {
-      "all": 91,
+      "all": 90,
       "math": 31,
       "english": 31,
       "korean": 19,
@@ -4507,9 +4508,9 @@
      "region": "경기-성남시",
      "km": 3.8,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 13,
-      "english": 12,
+      "english": 11,
       "korean": 6,
       "science": 1
      },
@@ -4591,10 +4592,10 @@
      "region": "경기-성남시",
      "km": 5.7,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -4633,9 +4634,9 @@
      "region": "경기-성남시",
      "km": 6.8,
      "academies": {
-      "all": 285,
+      "all": 286,
       "math": 81,
-      "english": 42,
+      "english": 43,
       "korean": 42,
       "science": 9
      },
@@ -4811,9 +4812,9 @@
      "region": "경기-용인시",
      "km": 1.7,
      "academies": {
-      "all": 86,
+      "all": 87,
       "math": 34,
-      "english": 25,
+      "english": 26,
       "korean": 16,
       "science": 1
      },
@@ -4853,9 +4854,9 @@
      "region": "경기-성남시",
      "km": 2.3,
      "academies": {
-      "all": 285,
+      "all": 286,
       "math": 81,
-      "english": 42,
+      "english": 43,
       "korean": 42,
       "science": 9
      },
@@ -4912,7 +4913,7 @@
       "all": 243,
       "math": 81,
       "english": 55,
-      "korean": 48,
+      "korean": 47,
       "science": 7
      },
      "students": 11954,
@@ -4923,7 +4924,7 @@
      "region": "경기-용인시",
      "km": 3.4,
      "academies": {
-      "all": 110,
+      "all": 109,
       "math": 46,
       "english": 30,
       "korean": 20,
@@ -4937,10 +4938,10 @@
      "region": "경기-성남시",
      "km": 3.5,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -5063,9 +5064,9 @@
      "region": "경기-성남시",
      "km": 5.9,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 13,
-      "english": 12,
+      "english": 11,
       "korean": 6,
       "science": 1
      },
@@ -5105,8 +5106,8 @@
      "region": "경기-안양시",
      "km": 11.6,
      "academies": {
-      "all": 277,
-      "math": 95,
+      "all": 278,
+      "math": 96,
       "english": 73,
       "korean": 66,
       "science": 12
@@ -5471,9 +5472,9 @@
      "region": "경기-성남시",
      "km": 1.6,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 13,
-      "english": 12,
+      "english": 11,
       "korean": 6,
       "science": 1
      },
@@ -5499,10 +5500,10 @@
      "region": "경기-성남시",
      "km": 2.2,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -5527,9 +5528,9 @@
      "region": "경기-성남시",
      "km": 2.6,
      "academies": {
-      "all": 285,
+      "all": 286,
       "math": 81,
-      "english": 42,
+      "english": 43,
       "korean": 42,
       "science": 9
      },
@@ -5541,7 +5542,7 @@
      "region": "경기-성남시",
      "km": 3.2,
      "academies": {
-      "all": 91,
+      "all": 90,
       "math": 31,
       "english": 31,
       "korean": 19,
@@ -5639,7 +5640,7 @@
      "region": "경기-성남시",
      "km": 5.5,
      "academies": {
-      "all": 24,
+      "all": 25,
       "math": 9,
       "english": 1,
       "korean": 4,
@@ -5653,9 +5654,9 @@
      "region": "경기-용인시",
      "km": 5.9,
      "academies": {
-      "all": 86,
+      "all": 87,
       "math": 34,
-      "english": 25,
+      "english": 26,
       "korean": 16,
       "science": 1
      },
@@ -5681,7 +5682,7 @@
      "region": "경기-용인시",
      "km": 6.4,
      "academies": {
-      "all": 110,
+      "all": 109,
       "math": 46,
       "english": 30,
       "korean": 20,
@@ -6152,7 +6153,7 @@
      "region": "경기-성남시",
      "km": 3.7,
      "academies": {
-      "all": 24,
+      "all": 25,
       "math": 9,
       "english": 1,
       "korean": 4,
@@ -6292,7 +6293,7 @@
      "region": "경기-성남시",
      "km": 5.8,
      "academies": {
-      "all": 91,
+      "all": 90,
       "math": 31,
       "english": 31,
       "korean": 19,
@@ -6593,10 +6594,10 @@
      "region": "경기-성남시",
      "km": 1.5,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -6621,9 +6622,9 @@
      "region": "경기-성남시",
      "km": 2.6,
      "academies": {
-      "all": 285,
+      "all": 286,
       "math": 81,
-      "english": 42,
+      "english": 43,
       "korean": 42,
       "science": 9
      },
@@ -6691,9 +6692,9 @@
      "region": "경기-성남시",
      "km": 3.9,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 13,
-      "english": 12,
+      "english": 11,
       "korean": 6,
       "science": 1
      },
@@ -6705,7 +6706,7 @@
      "region": "경기-성남시",
      "km": 4.2,
      "academies": {
-      "all": 91,
+      "all": 90,
       "math": 31,
       "english": 31,
       "korean": 19,
@@ -6733,7 +6734,7 @@
      "region": "경기-용인시",
      "km": 4.9,
      "academies": {
-      "all": 110,
+      "all": 109,
       "math": 46,
       "english": 30,
       "korean": 20,
@@ -6789,9 +6790,9 @@
      "region": "경기-용인시",
      "km": 5.7,
      "academies": {
-      "all": 86,
+      "all": 87,
       "math": 34,
-      "english": 25,
+      "english": 26,
       "korean": 16,
       "science": 1
      },
@@ -6831,7 +6832,7 @@
      "region": "경기-성남시",
      "km": 6.4,
      "academies": {
-      "all": 24,
+      "all": 25,
       "math": 9,
       "english": 1,
       "korean": 4,
@@ -6848,7 +6849,7 @@
       "all": 243,
       "math": 81,
       "english": 55,
-      "korean": 48,
+      "korean": 47,
       "science": 7
      },
      "students": 11954,
@@ -7238,7 +7239,7 @@
      "region": "경기-성남시",
      "km": 3.0,
      "academies": {
-      "all": 24,
+      "all": 25,
       "math": 9,
       "english": 1,
       "korean": 4,
@@ -7336,7 +7337,7 @@
      "region": "경기-성남시",
      "km": 5.4,
      "academies": {
-      "all": 91,
+      "all": 90,
       "math": 31,
       "english": 31,
       "korean": 19,
@@ -7434,9 +7435,9 @@
      "region": "경기-성남시",
      "km": 6.8,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 13,
-      "english": 12,
+      "english": 11,
       "korean": 6,
       "science": 1
      },
@@ -7476,10 +7477,10 @@
      "region": "경기-성남시",
      "km": 9.8,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -7496,9 +7497,9 @@
     "total": 2870
    },
    "academies": {
-    "all": 39,
+    "all": 38,
     "math": 13,
-    "english": 12,
+    "english": 11,
     "korean": 6,
     "science": 1
    },
@@ -7800,16 +7801,16 @@
    },
    "opened": {
     "1y": {
-     "all": 3,
+     "all": 2,
      "math": 0,
-     "english": 1,
+     "english": 0,
      "korean": 2,
      "science": 0
     },
     "3y": {
-     "all": 7,
+     "all": 6,
      "math": 0,
-     "english": 3,
+     "english": 2,
      "korean": 2,
      "science": 0
     }
@@ -7819,11 +7820,11 @@
     127.11622
    ],
    "fervor": {
-    "score": 72,
+    "score": 70,
     "parts": {
      "density": [
-      1.4,
-      49
+      1.3,
+      47
      ],
      "fee": [
       288000,
@@ -7865,7 +7866,7 @@
      "region": "경기-성남시",
      "km": 1.9,
      "academies": {
-      "all": 91,
+      "all": 90,
       "math": 31,
       "english": 31,
       "korean": 19,
@@ -7921,10 +7922,10 @@
      "region": "경기-성남시",
      "km": 3.5,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -7963,9 +7964,9 @@
      "region": "경기-성남시",
      "km": 4.1,
      "academies": {
-      "all": 285,
+      "all": 286,
       "math": 81,
-      "english": 42,
+      "english": 43,
       "korean": 42,
       "science": 9
      },
@@ -7977,7 +7978,7 @@
      "region": "경기-성남시",
      "km": 4.1,
      "academies": {
-      "all": 24,
+      "all": 25,
       "math": 9,
       "english": 1,
       "korean": 4,
@@ -8316,7 +8317,7 @@
      "kind": "학원",
      "capacity": 30,
      "since": 2020,
-     "branches": 5,
+     "branches": 4,
      "subjects": [
       "english"
      ]
@@ -8448,7 +8449,7 @@
      "region": "경기-성남시",
      "km": 2.4,
      "academies": {
-      "all": 24,
+      "all": 25,
       "math": 9,
       "english": 1,
       "korean": 4,
@@ -8560,7 +8561,7 @@
      "region": "경기-성남시",
      "km": 4.6,
      "academies": {
-      "all": 91,
+      "all": 90,
       "math": 31,
       "english": 31,
       "korean": 19,
@@ -8630,9 +8631,9 @@
      "region": "경기-성남시",
      "km": 6.4,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 13,
-      "english": 12,
+      "english": 11,
       "korean": 6,
       "science": 1
      },
@@ -8672,10 +8673,10 @@
      "region": "경기-성남시",
      "km": 8.7,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -8686,9 +8687,9 @@
      "region": "경기-성남시",
      "km": 9.8,
      "academies": {
-      "all": 285,
+      "all": 286,
       "math": 81,
-      "english": 42,
+      "english": 43,
       "korean": 42,
       "science": 9
      },
@@ -9140,10 +9141,10 @@
      "region": "경기-성남시",
      "km": 1.2,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -9182,9 +9183,9 @@
      "region": "경기-성남시",
      "km": 2.3,
      "academies": {
-      "all": 285,
+      "all": 286,
       "math": 81,
-      "english": 42,
+      "english": 43,
       "korean": 42,
       "science": 9
      },
@@ -9196,9 +9197,9 @@
      "region": "경기-성남시",
      "km": 3.0,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 13,
-      "english": 12,
+      "english": 11,
       "korean": 6,
       "science": 1
      },
@@ -9224,7 +9225,7 @@
      "region": "경기-성남시",
      "km": 3.5,
      "academies": {
-      "all": 91,
+      "all": 90,
       "math": 31,
       "english": 31,
       "korean": 19,
@@ -9294,7 +9295,7 @@
      "region": "경기-용인시",
      "km": 5.4,
      "academies": {
-      "all": 110,
+      "all": 109,
       "math": 46,
       "english": 30,
       "korean": 20,
@@ -9336,7 +9337,7 @@
      "region": "경기-성남시",
      "km": 5.8,
      "academies": {
-      "all": 24,
+      "all": 25,
       "math": 9,
       "english": 1,
       "korean": 4,
@@ -9350,9 +9351,9 @@
      "region": "경기-용인시",
      "km": 5.8,
      "academies": {
-      "all": 86,
+      "all": 87,
       "math": 34,
-      "english": 25,
+      "english": 26,
       "korean": 16,
       "science": 1
      },
@@ -9722,7 +9723,7 @@
      "region": "경기-성남시",
      "km": 0.6,
      "academies": {
-      "all": 24,
+      "all": 25,
       "math": 9,
       "english": 1,
       "korean": 4,
@@ -9862,7 +9863,7 @@
      "region": "경기-성남시",
      "km": 2.9,
      "academies": {
-      "all": 91,
+      "all": 90,
       "math": 31,
       "english": 31,
       "korean": 19,
@@ -9890,9 +9891,9 @@
      "region": "경기-성남시",
      "km": 4.4,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 13,
-      "english": 12,
+      "english": 11,
       "korean": 6,
       "science": 1
      },
@@ -10030,10 +10031,10 @@
      "region": "경기-성남시",
      "km": 7.3,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -10044,9 +10045,9 @@
      "region": "경기-성남시",
      "km": 8.2,
      "academies": {
-      "all": 285,
+      "all": 286,
       "math": 81,
-      "english": 42,
+      "english": 43,
       "korean": 42,
       "science": 9
      },
@@ -10078,10 +10079,10 @@
     "total": 7205
    },
    "academies": {
-    "all": 309,
+    "all": 310,
     "math": 109,
     "english": 74,
-    "korean": 58,
+    "korean": 59,
     "science": 15
    },
    "schools": [
@@ -10130,19 +10131,19 @@
     "all": {
      "elem": [
       230000,
-      129
+      135
      ],
      "middle": [
       370000,
-      136
+      138
      ],
      "high": [
       400000,
       100
      ],
      "total": [
-      320000,
-      397
+      318000,
+      405
      ]
     },
     "math": {
@@ -10183,20 +10184,20 @@
     },
     "korean": {
      "elem": [
-      167000,
-      27
+      160000,
+      33
      ],
      "middle": [
       240000,
-      22
+      24
      ],
      "high": [
       320000,
       12
      ],
      "total": [
-      210000,
-      64
+      200000,
+      72
      ]
     },
     "science": {
@@ -10457,17 +10458,17 @@
    },
    "opened": {
     "1y": {
-     "all": 24,
+     "all": 25,
      "math": 6,
      "english": 8,
-     "korean": 6,
+     "korean": 7,
      "science": 2
     },
     "3y": {
-     "all": 65,
+     "all": 66,
      "math": 21,
      "english": 19,
-     "korean": 13,
+     "korean": 14,
      "science": 2
     }
    },
@@ -10480,10 +10481,10 @@
     "parts": {
      "density": [
       4.3,
-      97
+      98
      ],
      "fee": [
-      320000,
+      318000,
       98
      ]
     }
@@ -10494,9 +10495,9 @@
      "region": "경기-성남시",
      "km": 1.2,
      "academies": {
-      "all": 285,
+      "all": 286,
       "math": 81,
-      "english": 42,
+      "english": 43,
       "korean": 42,
       "science": 9
      },
@@ -10606,9 +10607,9 @@
      "region": "경기-성남시",
      "km": 3.5,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 13,
-      "english": 12,
+      "english": 11,
       "korean": 6,
       "science": 1
      },
@@ -10620,7 +10621,7 @@
      "region": "경기-성남시",
      "km": 4.4,
      "academies": {
-      "all": 91,
+      "all": 90,
       "math": 31,
       "english": 31,
       "korean": 19,
@@ -10634,7 +10635,7 @@
      "region": "경기-용인시",
      "km": 4.5,
      "academies": {
-      "all": 110,
+      "all": 109,
       "math": 46,
       "english": 30,
       "korean": 20,
@@ -10648,9 +10649,9 @@
      "region": "경기-용인시",
      "km": 4.7,
      "academies": {
-      "all": 86,
+      "all": 87,
       "math": 34,
-      "english": 25,
+      "english": 26,
       "korean": 16,
       "science": 1
      },
@@ -10721,7 +10722,7 @@
       "all": 243,
       "math": 81,
       "english": 55,
-      "korean": 48,
+      "korean": 47,
       "science": 7
      },
      "students": 11954,
@@ -10760,7 +10761,7 @@
      "region": "경기-성남시",
      "km": 6.8,
      "academies": {
-      "all": 24,
+      "all": 25,
       "math": 9,
       "english": 1,
       "korean": 4,
@@ -11096,7 +11097,7 @@
      "region": "경기-성남시",
      "km": 1.8,
      "academies": {
-      "all": 24,
+      "all": 25,
       "math": 9,
       "english": 1,
       "korean": 4,
@@ -11194,7 +11195,7 @@
      "region": "경기-성남시",
      "km": 3.0,
      "academies": {
-      "all": 91,
+      "all": 90,
       "math": 31,
       "english": 31,
       "korean": 19,
@@ -11250,9 +11251,9 @@
      "region": "경기-성남시",
      "km": 3.9,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 13,
-      "english": 12,
+      "english": 11,
       "korean": 6,
       "science": 1
      },
@@ -11432,10 +11433,10 @@
      "region": "경기-성남시",
      "km": 7.2,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -11446,9 +11447,9 @@
      "region": "경기-성남시",
      "km": 8.0,
      "academies": {
-      "all": 285,
+      "all": 286,
       "math": 81,
-      "english": 42,
+      "english": 43,
       "korean": 42,
       "science": 9
      },
@@ -11651,9 +11652,9 @@
      "region": "경기-성남시",
      "km": 3.2,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 13,
-      "english": 12,
+      "english": 11,
       "korean": 6,
       "science": 1
      },
@@ -11707,7 +11708,7 @@
      "region": "경기-성남시",
      "km": 4.6,
      "academies": {
-      "all": 91,
+      "all": 90,
       "math": 31,
       "english": 31,
       "korean": 19,
@@ -11763,7 +11764,7 @@
      "region": "경기-성남시",
      "km": 5.9,
      "academies": {
-      "all": 24,
+      "all": 25,
       "math": 9,
       "english": 1,
       "korean": 4,
@@ -11777,10 +11778,10 @@
      "region": "경기-성남시",
      "km": 5.9,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -11805,9 +11806,9 @@
      "region": "경기-성남시",
      "km": 6.0,
      "academies": {
-      "all": 285,
+      "all": 286,
       "math": 81,
-      "english": 42,
+      "english": 43,
       "korean": 42,
       "science": 9
      },
@@ -11889,8 +11890,8 @@
      "region": "경기-안양시",
      "km": 10.6,
      "academies": {
-      "all": 277,
-      "math": 95,
+      "all": 278,
+      "math": 96,
       "english": 73,
       "korean": 66,
       "science": 12
@@ -12097,7 +12098,7 @@
      "kind": "학원",
      "capacity": 120,
      "since": 2023,
-     "branches": 69,
+     "branches": 70,
      "subjects": [
       "korean"
      ]
@@ -12413,7 +12414,7 @@
      "region": "경기-성남시",
      "km": 2.3,
      "academies": {
-      "all": 24,
+      "all": 25,
       "math": 9,
       "english": 1,
       "korean": 4,
@@ -12511,7 +12512,7 @@
      "region": "경기-성남시",
      "km": 4.5,
      "academies": {
-      "all": 91,
+      "all": 90,
       "math": 31,
       "english": 31,
       "korean": 19,
@@ -12567,9 +12568,9 @@
      "region": "경기-성남시",
      "km": 5.9,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 13,
-      "english": 12,
+      "english": 11,
       "korean": 6,
       "science": 1
      },
@@ -12651,10 +12652,10 @@
      "region": "경기-성남시",
      "km": 8.9,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -12978,7 +12979,7 @@
      "region": "경기-성남시",
      "km": 4.4,
      "academies": {
-      "all": 24,
+      "all": 25,
       "math": 9,
       "english": 1,
       "korean": 4,
@@ -13034,7 +13035,7 @@
      "region": "경기-성남시",
      "km": 5.2,
      "academies": {
-      "all": 91,
+      "all": 90,
       "math": 31,
       "english": 31,
       "korean": 19,
@@ -13090,9 +13091,9 @@
      "region": "경기-성남시",
      "km": 5.4,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 13,
-      "english": 12,
+      "english": 11,
       "korean": 6,
       "science": 1
      },
@@ -13250,7 +13251,7 @@
     "total": 6431
    },
    "academies": {
-    "all": 91,
+    "all": 90,
     "math": 31,
     "english": 31,
     "korean": 19,
@@ -13658,9 +13659,9 @@
      "region": "경기-성남시",
      "km": 1.9,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 13,
-      "english": 12,
+      "english": 11,
       "korean": 6,
       "science": 1
      },
@@ -13672,7 +13673,7 @@
      "region": "경기-성남시",
      "km": 2.4,
      "academies": {
-      "all": 24,
+      "all": 25,
       "math": 9,
       "english": 1,
       "korean": 4,
@@ -13770,10 +13771,10 @@
      "region": "경기-성남시",
      "km": 4.4,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -13812,9 +13813,9 @@
      "region": "경기-성남시",
      "km": 5.4,
      "academies": {
-      "all": 285,
+      "all": 286,
       "math": 81,
-      "english": 42,
+      "english": 43,
       "korean": 42,
       "science": 9
      },
@@ -14286,7 +14287,7 @@
      "region": "경기-성남시",
      "km": 3.6,
      "academies": {
-      "all": 24,
+      "all": 25,
       "math": 9,
       "english": 1,
       "korean": 4,
@@ -14412,7 +14413,7 @@
      "region": "경기-성남시",
      "km": 6.0,
      "academies": {
-      "all": 91,
+      "all": 90,
       "math": 31,
       "english": 31,
       "korean": 19,
@@ -14496,10 +14497,10 @@
      "region": "경기-성남시",
      "km": 10.4,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -14796,7 +14797,7 @@
      "region": "경기-성남시",
      "km": 1.2,
      "academies": {
-      "all": 91,
+      "all": 90,
       "math": 31,
       "english": 31,
       "korean": 19,
@@ -14810,7 +14811,7 @@
      "region": "경기-성남시",
      "km": 1.7,
      "academies": {
-      "all": 24,
+      "all": 25,
       "math": 9,
       "english": 1,
       "korean": 4,
@@ -14866,9 +14867,9 @@
      "region": "경기-성남시",
      "km": 2.5,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 13,
-      "english": 12,
+      "english": 11,
       "korean": 6,
       "science": 1
      },
@@ -15006,10 +15007,10 @@
      "region": "경기-성남시",
      "km": 5.5,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -15048,9 +15049,9 @@
      "region": "경기-성남시",
      "km": 6.3,
      "academies": {
-      "all": 285,
+      "all": 286,
       "math": 81,
-      "english": 42,
+      "english": 43,
       "korean": 42,
       "science": 9
      },
@@ -15523,9 +15524,9 @@
      "region": "경기-성남시",
      "km": 3.9,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 13,
-      "english": 12,
+      "english": 11,
       "korean": 6,
       "science": 1
      },
@@ -15537,9 +15538,9 @@
      "region": "경기-성남시",
      "km": 4.5,
      "academies": {
-      "all": 285,
+      "all": 286,
       "math": 81,
-      "english": 42,
+      "english": 43,
       "korean": 42,
       "science": 9
      },
@@ -15565,10 +15566,10 @@
      "region": "경기-성남시",
      "km": 4.9,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -15607,7 +15608,7 @@
      "region": "경기-성남시",
      "km": 5.8,
      "academies": {
-      "all": 91,
+      "all": 90,
       "math": 31,
       "english": 31,
       "korean": 19,
@@ -15635,9 +15636,9 @@
      "region": "경기-용인시",
      "km": 6.2,
      "academies": {
-      "all": 86,
+      "all": 87,
       "math": 34,
-      "english": 25,
+      "english": 26,
       "korean": 16,
       "science": 1
      },
@@ -15663,8 +15664,8 @@
      "region": "경기-안양시",
      "km": 9.4,
      "academies": {
-      "all": 277,
-      "math": 95,
+      "all": 278,
+      "math": 96,
       "english": 73,
       "korean": 66,
       "science": 12
@@ -15970,11 +15971,11 @@
     "parts": {
      "density": [
       1.3,
-      48
+      49
      ],
      "fee": [
       180000,
-      12
+      11
      ]
     }
    },
@@ -16152,7 +16153,7 @@
      "region": "경기-성남시",
      "km": 3.5,
      "academies": {
-      "all": 24,
+      "all": 25,
       "math": 9,
       "english": 1,
       "korean": 4,
@@ -16250,7 +16251,7 @@
      "region": "경기-성남시",
      "km": 5.9,
      "academies": {
-      "all": 91,
+      "all": 90,
       "math": 31,
       "english": 31,
       "korean": 19,
@@ -16334,10 +16335,10 @@
      "region": "경기-성남시",
      "km": 10.2,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -16376,9 +16377,9 @@
      "region": "경기-성남시",
      "km": 11.2,
      "academies": {
-      "all": 285,
+      "all": 286,
       "math": 81,
-      "english": 42,
+      "english": 43,
       "korean": 42,
       "science": 9
      },
@@ -16793,9 +16794,9 @@
      "region": "경기-성남시",
      "km": 1.1,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 13,
-      "english": 12,
+      "english": 11,
       "korean": 6,
       "science": 1
      },
@@ -16821,7 +16822,7 @@
      "region": "경기-성남시",
      "km": 1.8,
      "academies": {
-      "all": 91,
+      "all": 90,
       "math": 31,
       "english": 31,
       "korean": 19,
@@ -16863,10 +16864,10 @@
      "region": "경기-성남시",
      "km": 2.7,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -16919,9 +16920,9 @@
      "region": "경기-성남시",
      "km": 3.6,
      "academies": {
-      "all": 285,
+      "all": 286,
       "math": 81,
-      "english": 42,
+      "english": 43,
       "korean": 42,
       "science": 9
      },
@@ -16933,7 +16934,7 @@
      "region": "경기-성남시",
      "km": 4.1,
      "academies": {
-      "all": 24,
+      "all": 25,
       "math": 9,
       "english": 1,
       "korean": 4,
@@ -17065,9 +17066,9 @@
     "total": 8970
    },
    "academies": {
-    "all": 285,
+    "all": 286,
     "math": 81,
-    "english": 42,
+    "english": 43,
     "korean": 42,
     "science": 9
    },
@@ -17485,16 +17486,16 @@
    },
    "opened": {
     "1y": {
-     "all": 23,
+     "all": 24,
      "math": 8,
-     "english": 6,
+     "english": 7,
      "korean": 3,
      "science": 1
     },
     "3y": {
-     "all": 55,
+     "all": 56,
      "math": 20,
-     "english": 8,
+     "english": 9,
      "korean": 7,
      "science": 1
     }
@@ -17536,10 +17537,10 @@
      "region": "경기-성남시",
      "km": 1.2,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -17634,9 +17635,9 @@
      "region": "경기-용인시",
      "km": 3.6,
      "academies": {
-      "all": 86,
+      "all": 87,
       "math": 34,
-      "english": 25,
+      "english": 26,
       "korean": 16,
       "science": 1
      },
@@ -17676,7 +17677,7 @@
      "region": "경기-용인시",
      "km": 3.8,
      "academies": {
-      "all": 110,
+      "all": 109,
       "math": 46,
       "english": 30,
       "korean": 20,
@@ -17690,9 +17691,9 @@
      "region": "경기-성남시",
      "km": 4.1,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 13,
-      "english": 12,
+      "english": 11,
       "korean": 6,
       "science": 1
      },
@@ -17721,7 +17722,7 @@
       "all": 243,
       "math": 81,
       "english": 55,
-      "korean": 48,
+      "korean": 47,
       "science": 7
      },
      "students": 11954,
@@ -17732,7 +17733,7 @@
      "region": "경기-성남시",
      "km": 5.4,
      "academies": {
-      "all": 91,
+      "all": 90,
       "math": 31,
       "english": 31,
       "korean": 19,
@@ -17960,9 +17961,9 @@
      "region": "경기-부천시",
      "km": 0.1,
      "academies": {
-      "all": 288,
-      "math": 102,
-      "english": 78,
+      "all": 289,
+      "math": 103,
+      "english": 80,
       "korean": 40,
       "science": 10
      },
@@ -17988,11 +17989,11 @@
      "region": "경기-부천시",
      "km": 1.5,
      "academies": {
-      "all": 269,
-      "math": 76,
-      "english": 82,
-      "korean": 35,
-      "science": 12
+      "all": 271,
+      "math": 77,
+      "english": 83,
+      "korean": 36,
+      "science": 11
      },
      "students": 9414,
      "sales": null
@@ -18044,9 +18045,9 @@
      "region": "경기-부천시",
      "km": 2.2,
      "academies": {
-      "all": 51,
+      "all": 52,
       "math": 23,
-      "english": 14,
+      "english": 15,
       "korean": 8,
       "science": 0
      },
@@ -18115,10 +18116,10 @@
      "km": 3.0,
      "academies": {
       "all": 130,
-      "math": 45,
+      "math": 44,
       "english": 34,
-      "korean": 31,
-      "science": 8
+      "korean": 32,
+      "science": 7
      },
      "students": 6238,
      "sales": null
@@ -18226,8 +18227,8 @@
      "region": "경기-부천시",
      "km": 4.9,
      "academies": {
-      "all": 60,
-      "math": 22,
+      "all": 61,
+      "math": 23,
       "english": 18,
       "korean": 11,
       "science": 2
@@ -18240,8 +18241,8 @@
      "region": "인천-계양구",
      "km": 5.1,
      "academies": {
-      "all": 48,
-      "math": 18,
+      "all": 49,
+      "math": 19,
       "english": 11,
       "korean": 7,
       "science": 1
@@ -18310,10 +18311,10 @@
      "region": "인천-부평구",
      "km": 5.9,
      "academies": {
-      "all": 143,
+      "all": 144,
       "math": 44,
       "english": 43,
-      "korean": 29,
+      "korean": 30,
       "science": 6
      },
      "students": 9290,
@@ -18352,9 +18353,9 @@
      "region": "인천-계양구",
      "km": 6.1,
      "academies": {
-      "all": 56,
+      "all": 57,
       "math": 16,
-      "english": 8,
+      "english": 9,
       "korean": 13,
       "science": 1
      },
@@ -18403,37 +18404,37 @@
     "all": {
      "elem": [
       230000,
-      28
+      31
      ],
      "middle": [
-      300000,
-      20
+      290000,
+      27
      ],
      "high": [
       350000,
-      14
+      15
      ],
      "total": [
-      258000,
-      69
+      260000,
+      81
      ]
     },
     "math": {
      "elem": [
       200000,
-      4
+      5
      ],
      "middle": [
-      null,
-      2
+      300000,
+      6
      ],
      "high": [
       null,
-      1
+      2
      ],
      "total": [
-      200000,
-      7
+      280000,
+      13
      ]
     },
     "english": {
@@ -18457,11 +18458,11 @@
     "korean": {
      "elem": [
       239000,
-      14
+      15
      ],
      "middle": [
-      290000,
-      13
+      280000,
+      15
      ],
      "high": [
       350000,
@@ -18469,17 +18470,17 @@
      ],
      "total": [
       280000,
-      39
+      43
      ]
     },
     "science": {
      "elem": [
       null,
-      0
+      1
      ],
      "middle": [
       null,
-      0
+      1
      ],
      "high": [
       null,
@@ -18487,7 +18488,7 @@
      ],
      "total": [
       null,
-      0
+      2
      ]
     }
    },
@@ -18621,7 +18622,7 @@
      "kind": "교습소",
      "capacity": 0,
      "since": 2024,
-     "branches": 67,
+     "branches": 66,
      "subjects": [
       "english"
      ]
@@ -18662,7 +18663,7 @@
       86
      ],
      "fee": [
-      258000,
+      260000,
       87
      ]
     }
@@ -18687,7 +18688,7 @@
      "region": "경기-성남시",
      "km": 1.1,
      "academies": {
-      "all": 24,
+      "all": 25,
       "math": 9,
       "english": 1,
       "korean": 4,
@@ -18869,7 +18870,7 @@
      "region": "경기-성남시",
      "km": 3.4,
      "academies": {
-      "all": 91,
+      "all": 90,
       "math": 31,
       "english": 31,
       "korean": 19,
@@ -18925,9 +18926,9 @@
      "region": "경기-성남시",
      "km": 5.0,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 13,
-      "english": 12,
+      "english": 11,
       "korean": 6,
       "science": 1
      },
@@ -19023,10 +19024,10 @@
      "region": "경기-성남시",
      "km": 7.8,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -19037,9 +19038,9 @@
      "region": "경기-성남시",
      "km": 8.8,
      "academies": {
-      "all": 285,
+      "all": 286,
       "math": 81,
-      "english": 42,
+      "english": 43,
       "korean": 42,
       "science": 9
      },
@@ -19719,7 +19720,7 @@
      "region": "경기-성남시",
      "km": 4.5,
      "academies": {
-      "all": 24,
+      "all": 25,
       "math": 9,
       "english": 1,
       "korean": 4,
@@ -19859,7 +19860,7 @@
      "region": "경기-성남시",
      "km": 6.7,
      "academies": {
-      "all": 91,
+      "all": 90,
       "math": 31,
       "english": 31,
       "korean": 19,
@@ -20305,7 +20306,7 @@
      "region": "경기-성남시",
      "km": 2.2,
      "academies": {
-      "all": 24,
+      "all": 25,
       "math": 9,
       "english": 1,
       "korean": 4,
@@ -20445,7 +20446,7 @@
      "region": "경기-성남시",
      "km": 4.1,
      "academies": {
-      "all": 91,
+      "all": 90,
       "math": 31,
       "english": 31,
       "korean": 19,
@@ -20501,9 +20502,9 @@
      "region": "경기-성남시",
      "km": 5.2,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 13,
-      "english": 12,
+      "english": 11,
       "korean": 6,
       "science": 1
      },
@@ -20952,11 +20953,11 @@
     127.09502
    ],
    "fervor": {
-    "score": 60,
+    "score": 59,
     "parts": {
      "density": [
       0.9,
-      28
+      27
      ],
      "fee": [
       280000,
@@ -20998,9 +20999,9 @@
      "region": "경기-성남시",
      "km": 2.2,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 13,
-      "english": 12,
+      "english": 11,
       "korean": 6,
       "science": 1
      },
@@ -21040,9 +21041,9 @@
      "region": "경기-성남시",
      "km": 3.2,
      "academies": {
-      "all": 285,
+      "all": 286,
       "math": 81,
-      "english": 42,
+      "english": 43,
       "korean": 42,
       "science": 9
      },
@@ -21054,10 +21055,10 @@
      "region": "경기-성남시",
      "km": 3.3,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -21096,7 +21097,7 @@
      "region": "경기-성남시",
      "km": 4.2,
      "academies": {
-      "all": 91,
+      "all": 90,
       "math": 31,
       "english": 31,
       "korean": 19,
@@ -21152,9 +21153,9 @@
      "region": "경기-용인시",
      "km": 5.9,
      "academies": {
-      "all": 86,
+      "all": 87,
       "math": 34,
-      "english": 25,
+      "english": 26,
       "korean": 16,
       "science": 1
      },
@@ -21180,7 +21181,7 @@
      "region": "경기-성남시",
      "km": 6.3,
      "academies": {
-      "all": 24,
+      "all": 25,
       "math": 9,
       "english": 1,
       "korean": 4,
@@ -21208,7 +21209,7 @@
      "region": "경기-용인시",
      "km": 7.0,
      "academies": {
-      "all": 110,
+      "all": 109,
       "math": 46,
       "english": 30,
       "korean": 20,
@@ -21222,8 +21223,8 @@
      "region": "경기-안양시",
      "km": 11.3,
      "academies": {
-      "all": 277,
-      "math": 95,
+      "all": 278,
+      "math": 96,
       "english": 73,
       "korean": 66,
       "science": 12
@@ -21242,7 +21243,7 @@
     "total": 1224
    },
    "academies": {
-    "all": 24,
+    "all": 25,
     "math": 9,
     "english": 1,
     "korean": 4,
@@ -21499,11 +21500,11 @@
     127.1475
    ],
    "fervor": {
-    "score": 76,
+    "score": 78,
     "parts": {
      "density": [
       2.0,
-      74
+      78
      ],
      "fee": [
       250000,
@@ -21629,7 +21630,7 @@
      "region": "경기-성남시",
      "km": 2.4,
      "academies": {
-      "all": 91,
+      "all": 90,
       "math": 31,
       "english": 31,
       "korean": 19,
@@ -21671,9 +21672,9 @@
      "region": "경기-성남시",
      "km": 4.1,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 13,
-      "english": 12,
+      "english": 11,
       "korean": 6,
       "science": 1
      },
@@ -21825,10 +21826,10 @@
      "region": "경기-성남시",
      "km": 6.8,
      "academies": {
-      "all": 309,
+      "all": 310,
       "math": 109,
       "english": 74,
-      "korean": 58,
+      "korean": 59,
       "science": 15
      },
      "students": 7205,
@@ -21839,9 +21840,9 @@
      "region": "경기-성남시",
      "km": 7.8,
      "academies": {
-      "all": 285,
+      "all": 286,
       "math": 81,
-      "english": 42,
+      "english": 43,
       "korean": 42,
       "science": 9
      },
@@ -21864,5 +21865,9 @@
     }
    ]
   }
- ]
+ ],
+ "seoulStoreRate": {
+  "close": 0.0905,
+  "open": 0.086
+ }
 }

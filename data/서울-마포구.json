@@ -9,9 +9,11 @@
   "학생 수: 학교알리미 학년별·학급별 학생수",
   "수강료: 학원이 교육청에 등록한 1인당 교습비",
   "대표 학원: 교육청에 등록한 정원이 큰 순서",
-  "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)"
+  "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)",
+  "학원 개업·폐업: 서울시 상권분석서비스 점포 (일반교습학원·외국어학원)"
  ],
  "salesPeriod": "2026년 2분기",
+ "storePeriod": "2025년 3분기~2026년 2분기",
  "pastYear": 2024,
  "aptPeriod": "",
  "unmatchedAcademies": 4,
@@ -399,6 +401,11 @@
     126.9536
    ],
    "sales": 369408847,
+   "storeFlow": {
+    "open": 4,
+    "close": 8,
+    "base": 70
+   },
    "fervor": {
     "score": 60,
     "parts": {
@@ -1926,6 +1933,11 @@
     126.94494
    ],
    "sales": 4610372236,
+   "storeFlow": {
+    "open": 14,
+    "close": 9,
+    "base": 128
+   },
    "fervor": {
     "score": 90,
     "parts": {
@@ -2667,6 +2679,11 @@
     126.94979
    ],
    "sales": 903123468,
+   "storeFlow": {
+    "open": 6,
+    "close": 7,
+    "base": 50
+   },
    "fervor": {
     "score": 72,
     "parts": {
@@ -3547,6 +3564,11 @@
     126.90166
    ],
    "sales": 1095743722,
+   "storeFlow": {
+    "open": 11,
+    "close": 15,
+    "base": 105
+   },
    "fervor": {
     "score": 75,
     "parts": {
@@ -3864,7 +3886,7 @@
      "region": "경기-고양시",
      "km": 4.0,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 11,
       "english": 13,
       "korean": 4,
@@ -4919,6 +4941,11 @@
     126.88551
    ],
    "sales": 1624080740,
+   "storeFlow": {
+    "open": 14,
+    "close": 14,
+    "base": 117
+   },
    "fervor": {
     "score": 58,
     "parts": {
@@ -4970,7 +4997,7 @@
      "region": "경기-고양시",
      "km": 1.7,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 11,
       "english": 13,
       "korean": 4,
@@ -5292,10 +5319,10 @@
      "region": "경기-고양시",
      "km": 5.7,
      "academies": {
-      "all": 57,
+      "all": 59,
       "math": 17,
-      "english": 14,
-      "korean": 8,
+      "english": 15,
+      "korean": 10,
       "science": 1
      },
      "students": 3442,
@@ -5548,6 +5575,11 @@
     126.9251
    ],
    "sales": 1085837782,
+   "storeFlow": {
+    "open": 19,
+    "close": 16,
+    "base": 200
+   },
    "nearby": [
     {
      "name": "상수동",
@@ -6315,6 +6347,11 @@
     126.91126
    ],
    "sales": 2642921814,
+   "storeFlow": {
+    "open": 12,
+    "close": 15,
+    "base": 152
+   },
    "fervor": {
     "score": 60,
     "parts": {
@@ -7282,6 +7319,11 @@
     126.93626
    ],
    "sales": 1496385265,
+   "storeFlow": {
+    "open": 8,
+    "close": 3,
+    "base": 64
+   },
    "fervor": {
     "score": 65,
     "parts": {
@@ -8054,6 +8096,11 @@
     126.95649
    ],
    "sales": 1220393456,
+   "storeFlow": {
+    "open": 6,
+    "close": 8,
+    "base": 76
+   },
    "fervor": {
     "score": 54,
     "parts": {
@@ -8682,6 +8729,11 @@
     126.91938
    ],
    "sales": 48814656,
+   "storeFlow": {
+    "open": 2,
+    "close": 4,
+    "base": 32
+   },
    "fervor": {
     "score": 14,
     "parts": {
@@ -9453,6 +9505,11 @@
     126.94803
    ],
    "sales": 3593853243,
+   "storeFlow": {
+    "open": 7,
+    "close": 4,
+    "base": 65
+   },
    "fervor": {
     "score": 53,
     "parts": {
@@ -10102,6 +10159,11 @@
     }
    },
    "sales": 4506283703,
+   "storeFlow": {
+    "open": 12,
+    "close": 17,
+    "base": 111
+   },
    "nearby": [
     {
      "name": "염리동",
@@ -11018,7 +11080,7 @@
      "region": "경기-고양시",
      "km": 3.6,
      "academies": {
-      "all": 39,
+      "all": 38,
       "math": 11,
       "english": 13,
       "korean": 4,
@@ -11681,6 +11743,11 @@
     126.9135
    ],
    "sales": 891955141,
+   "storeFlow": {
+    "open": 6,
+    "close": 2,
+    "base": 47
+   },
    "fervor": {
     "score": 45,
     "parts": {
@@ -12292,5 +12359,9 @@
    },
    "sales": null
   }
- ]
+ ],
+ "seoulStoreRate": {
+  "close": 0.0905,
+  "open": 0.086
+ }
 }
