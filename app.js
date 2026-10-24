@@ -73,13 +73,8 @@ function reasonsFor(r, ctx) {
     reasons.push("학교가 1곳뿐이라 숫자가 그 학교 하나에 크게 좌우됩니다.");
   }
 
-  // 학생 1명당 월 카드매출을 그 동 수강료와 견줍니다. 카드 결제만 잡혀 원래 낮게 나오므로 지역 전체 비율과 비교합니다.
-  const flow = flowOf(r.area, ctx.regionFlow);
-  if (flow) {
-    const base = `학생 1명당 월 학원 카드매출(국영수과 등 전 과목 합계)이 ${won(Math.round(flow.spend))}으로 지역 평균 ${won(Math.round(flow.avg))}의 ${pct(flow.relative)}입니다`;
-    if (flow.relative <= 0.6) reasons.push(`${base}. 이 동 학생들이 다른 동 학원(근처 학원가)으로 많이 다니는 곳일 가능성이 큽니다. 한 과목 수강료와 바로 비교하면 과대평가되므로, 같은 지역의 다른 동과만 비교했습니다.`);
-    else if (flow.relative >= 1.6) reasons.push(`${base}. 다른 동 학생들이 이 동 학원으로 찾아오는 곳일 가능성이 큽니다.`);
-  }
+  const sales = salesReason(r.area, ctx);
+  if (sales) reasons.push(sales);
 
   const change = studentChange(r.area, level);
   if (change !== null && change >= 0.1) reasons.push(`학생 수가 ${ctx.pastYear}년보다 ${signedPct(change)} 늘었습니다. 수요가 커지는 동네입니다.`);
@@ -97,6 +92,30 @@ function reasonsFor(r, ctx) {
     }
   }
   return reasons;
+}
+
+// 매출로 본 학생 흐름. 고른 과목·학년의 학생 1명당 추정 매출을 같은 지역(구·시) 평균과 견줍니다.
+function salesReason(area, ctx, subject = ctx.subject, level = ctx.level) {
+  const { hub } = ctx;
+  if (!ctx.salesPeriod) return "";
+  if (!area.sales) return "이 동은 서울시 상권분석 매출 집계에 학원 매출이 잡히지 않아 매출로는 판단할 수 없습니다.";
+  const v = perStudent(area, subject, level);
+  if (!v && level !== "total") {
+    return `이 동에는 ${LEVEL_LABELS[level]}이 다니는 학교가 없어, 초·중·고 전체로 봤습니다. ${salesReason(area, ctx, subject, "total")}`;
+  }
+  const regionPerStudent = ctx.regionAvg(subject, level);
+  if (!v || !regionPerStudent) return "";
+  const rel = v / regionPerStudent;
+  const what = isEstimate(subject, level) ? `${level === "total" ? "학생" : LEVEL_LABELS[level]} 1명당 ${SUBJECT_SHORT[subject]} 학원 매출(추정)` : "학생 1명당 학원 카드매출(전 과목 합계)";
+  const hubText = hub && hub !== area.name ? ` 이 지역에서 학생 1명당 매출이 가장 많이 몰리는 곳은 ${hub}입니다.` : "";
+  let read;
+  if (rel <= 0.6) read = `학생 수에 비해 동네 학원 매출이 아주 적습니다. 이 동 학생 상당수가 다른 동 학원가로 다니는 것으로 보입니다.${hubText} 새 학원은 '멀리 가지 않아도 되는 학원'으로 이 학생들을 붙잡을 여지가 있지만, 이미 굳은 이동 습관을 바꾸기는 쉽지 않습니다.`;
+  else if (rel <= 0.85) read = `보통 동보다 조금 적습니다. 일부 학생이 다른 동 학원으로 나가는 것으로 보입니다.${hubText}`;
+  else if (rel < 1.2) read = "보통 동과 비슷합니다. 대체로 동네 학생이 동네 학원에 다니는 곳으로 보입니다.";
+  else if (rel < 1.6) read = "보통 동보다 많습니다. 다른 동 학생도 일부 찾아오는 곳으로 보입니다.";
+  else read = "학생 수에 비해 학원 매출이 아주 많습니다. 다른 동 학생들이 찾아오는 학원가로 보입니다. 수요는 크지만 이름난 학원과 정면으로 경쟁해야 합니다.";
+  const rough = roughSales(area) ? " 다만 이 동은 학원이 적어 매출 집계 경계와 어긋나므로 오차가 큽니다." : "";
+  return `${what}이 ${won(Math.round(v))}으로, 이 지역 보통 동(중간값) ${won(Math.round(regionPerStudent))}의 ${pct(rel)}입니다. ${read}${rough}`;
 }
 
 // 학생 1명당 월 카드매출(전 과목 합계)을 지역 평균과 견준 배수. 한 과목 수강료와는 비교하지 않습니다.
@@ -246,7 +265,17 @@ function render(data) {
   const regionFlow = salesAreas.length
     ? salesAreas.reduce((t, a) => t + a.sales, 0) / 3 / salesAreas.reduce((t, a) => t + a.students.total, 0)
     : 0;
-  const ctx = { subject, level, totalStudents, totalAcademies, regionFee, regionFlow, pastYear: data.pastYear };
+  // 고른 과목·학년의 지역 평균 학생 1명당 매출. 경계 오차가 큰 동은 평균과 '학원가' 찾기에서 뺍니다.
+  const solid = data.areas.filter((a) => perStudent(a) && !roughSales(a));
+  // 평균은 대치동 같은 학원가 한 곳에 크게 끌려가서, 동들의 중간값을 기준으로 씁니다.
+  const regionAvg = (s, l) => {
+    const vals = solid.map((a) => perStudent(a, s, l)).filter(Boolean).sort((x, y) => x - y);
+    if (!vals.length) return 0;
+    const m = Math.floor(vals.length / 2);
+    return vals.length % 2 ? vals[m] : (vals[m - 1] + vals[m]) / 2;
+  };
+  const hub = solid.slice().sort((a, b) => perStudent(b) - perStudent(a))[0]?.name;
+  const ctx = { subject, level, totalStudents, totalAcademies, regionFee, regionFlow, regionAvg, hub, salesPeriod: data.salesPeriod, pastYear: data.pastYear };
 
   els.summary.innerHTML = `
     <div><div class="label">${data.region} ${LEVEL_LABELS[level]}</div><div class="value">${fmt(totalStudents)}명</div></div>
