@@ -355,7 +355,8 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "강천면",
@@ -504,7 +505,8 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "교동",
@@ -924,7 +926,8 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "능서면",
@@ -1263,7 +1266,8 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "북내면",
@@ -1412,7 +1416,8 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "산북면",
@@ -1573,7 +1578,8 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "상동",
@@ -1787,7 +1793,165 @@
       67
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "상동",
+     "region": "경기-부천시",
+     "km": 0.0,
+     "academies": {
+      "all": 269,
+      "math": 76,
+      "english": 82,
+      "korean": 35,
+      "science": 12
+     },
+     "students": 9414
+    },
+    {
+     "name": "하상동",
+     "region": "경기-시흥시",
+     "km": 0.0,
+     "academies": {
+      "all": 14,
+      "math": 6,
+      "english": 5,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 1324
+    },
+    {
+     "name": "중동",
+     "region": "경기-부천시",
+     "km": 1.5,
+     "academies": {
+      "all": 288,
+      "math": 102,
+      "english": 78,
+      "korean": 40,
+      "science": 10
+     },
+     "students": 16117
+    },
+    {
+     "name": "중동",
+     "region": "경기-성남시",
+     "km": 1.5,
+     "academies": {
+      "all": 1,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 0
+    },
+    {
+     "name": "하중동",
+     "region": "경기-시흥시",
+     "km": 1.5,
+     "academies": {
+      "all": 8,
+      "math": 2,
+      "english": 1,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 246
+    },
+    {
+     "name": "중동",
+     "region": "경기-용인시",
+     "km": 1.5,
+     "academies": {
+      "all": 104,
+      "math": 39,
+      "english": 22,
+      "korean": 20,
+      "science": 3
+     },
+     "students": 5439
+    },
+    {
+     "name": "부개동",
+     "region": "인천-부평구",
+     "km": 1.5,
+     "academies": {
+      "all": 75,
+      "math": 28,
+      "english": 21,
+      "korean": 12,
+      "science": 0
+     },
+     "students": 8295
+    },
+    {
+     "name": "삼산동",
+     "region": "인천-부평구",
+     "km": 2.1,
+     "academies": {
+      "all": 130,
+      "math": 45,
+      "english": 34,
+      "korean": 31,
+      "science": 8
+     },
+     "students": 6238
+    },
+    {
+     "name": "송내동",
+     "region": "경기-부천시",
+     "km": 2.2,
+     "academies": {
+      "all": 51,
+      "math": 23,
+      "english": 14,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 4050
+    },
+    {
+     "name": "약대동",
+     "region": "경기-부천시",
+     "km": 2.2,
+     "academies": {
+      "all": 15,
+      "math": 3,
+      "english": 7,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 620
+    },
+    {
+     "name": "일신동",
+     "region": "인천-부평구",
+     "km": 2.7,
+     "academies": {
+      "all": 11,
+      "math": 5,
+      "english": 6,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 254
+    },
+    {
+     "name": "부평동",
+     "region": "인천-부평구",
+     "km": 2.8,
+     "academies": {
+      "all": 72,
+      "math": 24,
+      "english": 20,
+      "korean": 9,
+      "science": 1
+     },
+     "students": 7662
+    }
+   ]
   },
   {
    "name": "세종대왕면",
@@ -1926,7 +2090,8 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "여주읍",
@@ -2342,7 +2507,8 @@
       67
      ]
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "월송동",
@@ -2630,7 +2796,8 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "점봉동",
@@ -3833,7 +4000,22 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "백사면",
+     "region": "경기-이천시",
+     "km": 3.8,
+     "academies": {
+      "all": 6,
+      "math": 3,
+      "english": 4,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 513
+    }
+   ]
   }
  ]
 }

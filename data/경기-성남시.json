@@ -369,7 +369,48 @@
       77
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "시흥동",
+     "region": "경기-성남시",
+     "km": 1.7,
+     "academies": {
+      "all": 1,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 0
+    },
+    {
+     "name": "내곡동",
+     "region": "서울-서초구",
+     "km": 2.9,
+     "academies": {
+      "all": 9,
+      "math": 3,
+      "english": 2,
+      "korean": 6,
+      "science": 0
+     },
+     "students": 732
+    },
+    {
+     "name": "삼평동",
+     "region": "경기-성남시",
+     "km": 3.8,
+     "academies": {
+      "all": 39,
+      "math": 13,
+      "english": 12,
+      "korean": 6,
+      "science": 1
+     },
+     "students": 2870
+    }
+   ]
   },
   {
    "name": "구미동",
@@ -748,7 +789,74 @@
       67
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "금곡동",
+     "region": "경기-성남시",
+     "km": 1.6,
+     "academies": {
+      "all": 54,
+      "math": 15,
+      "english": 13,
+      "korean": 9,
+      "science": 2
+     },
+     "students": 664
+    },
+    {
+     "name": "정자동",
+     "region": "경기-성남시",
+     "km": 2.2,
+     "academies": {
+      "all": 285,
+      "math": 81,
+      "english": 42,
+      "korean": 42,
+      "science": 9
+     },
+     "students": 8970
+    },
+    {
+     "name": "죽전동",
+     "region": "경기-용인시",
+     "km": 2.2,
+     "academies": {
+      "all": 110,
+      "math": 46,
+      "english": 30,
+      "korean": 20,
+      "science": 1
+     },
+     "students": 7923
+    },
+    {
+     "name": "풍덕천동",
+     "region": "경기-용인시",
+     "km": 2.9,
+     "academies": {
+      "all": 243,
+      "math": 81,
+      "english": 55,
+      "korean": 48,
+      "science": 7
+     },
+     "students": 11954
+    },
+    {
+     "name": "수내동",
+     "region": "경기-성남시",
+     "km": 3.3,
+     "academies": {
+      "all": 309,
+      "math": 109,
+      "english": 74,
+      "korean": 58,
+      "science": 15
+     },
+     "students": 7205
+    }
+   ]
   },
   {
    "name": "금곡동",
@@ -1090,7 +1198,113 @@
       91
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "정자동",
+     "region": "경기-성남시",
+     "km": 1.4,
+     "academies": {
+      "all": 285,
+      "math": 81,
+      "english": 42,
+      "korean": 42,
+      "science": 9
+     },
+     "students": 8970
+    },
+    {
+     "name": "구미동",
+     "region": "경기-성남시",
+     "km": 1.6,
+     "academies": {
+      "all": 64,
+      "math": 26,
+      "english": 18,
+      "korean": 7,
+      "science": 3
+     },
+     "students": 3314
+    },
+    {
+     "name": "수내동",
+     "region": "경기-성남시",
+     "km": 2.5,
+     "academies": {
+      "all": 309,
+      "math": 109,
+      "english": 74,
+      "korean": 58,
+      "science": 15
+     },
+     "students": 7205
+    },
+    {
+     "name": "판교동",
+     "region": "경기-성남시",
+     "km": 3.3,
+     "academies": {
+      "all": 34,
+      "math": 15,
+      "english": 13,
+      "korean": 6,
+      "science": 0
+     },
+     "students": 3719
+    },
+    {
+     "name": "백현동",
+     "region": "경기-성남시",
+     "km": 3.5,
+     "academies": {
+      "all": 29,
+      "math": 9,
+      "english": 10,
+      "korean": 2,
+      "science": 2
+     },
+     "students": 3203
+    },
+    {
+     "name": "동천동",
+     "region": "경기-용인시",
+     "km": 3.7,
+     "academies": {
+      "all": 86,
+      "math": 34,
+      "english": 25,
+      "korean": 16,
+      "science": 1
+     },
+     "students": 3574
+    },
+    {
+     "name": "죽전동",
+     "region": "경기-용인시",
+     "km": 3.8,
+     "academies": {
+      "all": 110,
+      "math": 46,
+      "english": 30,
+      "korean": 20,
+      "science": 1
+     },
+     "students": 7923
+    },
+    {
+     "name": "풍덕천동",
+     "region": "경기-용인시",
+     "km": 4.0,
+     "academies": {
+      "all": 243,
+      "math": 81,
+      "english": 55,
+      "korean": 48,
+      "science": 7
+     },
+     "students": 11954
+    }
+   ]
   },
   {
    "name": "금광동",
@@ -1434,7 +1648,165 @@
       58
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "상대원동",
+     "region": "경기-성남시",
+     "km": 1.1,
+     "academies": {
+      "all": 13,
+      "math": 6,
+      "english": 3,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 687
+    },
+    {
+     "name": "은행동",
+     "region": "경기-성남시",
+     "km": 1.2,
+     "academies": {
+      "all": 14,
+      "math": 4,
+      "english": 4,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 1042
+    },
+    {
+     "name": "단대동",
+     "region": "경기-성남시",
+     "km": 1.3,
+     "academies": {
+      "all": 21,
+      "math": 10,
+      "english": 8,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 2128
+    },
+    {
+     "name": "중앙동",
+     "region": "경기-성남시",
+     "km": 1.6,
+     "academies": {
+      "all": 14,
+      "math": 3,
+      "english": 5,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 577
+    },
+    {
+     "name": "양지동",
+     "region": "경기-성남시",
+     "km": 1.8,
+     "academies": {
+      "all": 5,
+      "math": 2,
+      "english": 2,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 201
+    },
+    {
+     "name": "산성동",
+     "region": "경기-성남시",
+     "km": 1.9,
+     "academies": {
+      "all": 5,
+      "math": 2,
+      "english": 1,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 438
+    },
+    {
+     "name": "신흥동",
+     "region": "경기-성남시",
+     "km": 2.0,
+     "academies": {
+      "all": 52,
+      "math": 16,
+      "english": 13,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 1676
+    },
+    {
+     "name": "도촌동",
+     "region": "경기-성남시",
+     "km": 3.1,
+     "academies": {
+      "all": 26,
+      "math": 8,
+      "english": 10,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 1045
+    },
+    {
+     "name": "하대원동",
+     "region": "경기-성남시",
+     "km": 3.1,
+     "academies": {
+      "all": 24,
+      "math": 9,
+      "english": 1,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 1224
+    },
+    {
+     "name": "태평동",
+     "region": "경기-성남시",
+     "km": 3.2,
+     "academies": {
+      "all": 37,
+      "math": 12,
+      "english": 9,
+      "korean": 3,
+      "science": 1
+     },
+     "students": 1877
+    },
+    {
+     "name": "수진동",
+     "region": "경기-성남시",
+     "km": 3.5,
+     "academies": {
+      "all": 17,
+      "math": 6,
+      "english": 6,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 1878
+    },
+    {
+     "name": "성남동",
+     "region": "경기-성남시",
+     "km": 3.7,
+     "academies": {
+      "all": 37,
+      "math": 12,
+      "english": 9,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 3917
+    }
+   ]
   },
   {
    "name": "단대동",
@@ -1737,7 +2109,165 @@
       19
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "산성동",
+     "region": "경기-성남시",
+     "km": 0.7,
+     "academies": {
+      "all": 5,
+      "math": 2,
+      "english": 1,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 438
+    },
+    {
+     "name": "금광동",
+     "region": "경기-성남시",
+     "km": 1.3,
+     "academies": {
+      "all": 67,
+      "math": 27,
+      "english": 21,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 3971
+    },
+    {
+     "name": "신흥동",
+     "region": "경기-성남시",
+     "km": 1.3,
+     "academies": {
+      "all": 52,
+      "math": 16,
+      "english": 13,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 1676
+    },
+    {
+     "name": "양지동",
+     "region": "경기-성남시",
+     "km": 1.4,
+     "academies": {
+      "all": 5,
+      "math": 2,
+      "english": 2,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 201
+    },
+    {
+     "name": "은행동",
+     "region": "경기-성남시",
+     "km": 1.5,
+     "academies": {
+      "all": 14,
+      "math": 4,
+      "english": 4,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 1042
+    },
+    {
+     "name": "중앙동",
+     "region": "경기-성남시",
+     "km": 1.6,
+     "academies": {
+      "all": 14,
+      "math": 3,
+      "english": 5,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 577
+    },
+    {
+     "name": "상대원동",
+     "region": "경기-성남시",
+     "km": 2.0,
+     "academies": {
+      "all": 13,
+      "math": 6,
+      "english": 3,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 687
+    },
+    {
+     "name": "태평동",
+     "region": "경기-성남시",
+     "km": 2.2,
+     "academies": {
+      "all": 37,
+      "math": 12,
+      "english": 9,
+      "korean": 3,
+      "science": 1
+     },
+     "students": 1877
+    },
+    {
+     "name": "복정동",
+     "region": "경기-성남시",
+     "km": 2.4,
+     "academies": {
+      "all": 4,
+      "math": 2,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 962
+    },
+    {
+     "name": "수진동",
+     "region": "경기-성남시",
+     "km": 2.9,
+     "academies": {
+      "all": 17,
+      "math": 6,
+      "english": 6,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 1878
+    },
+    {
+     "name": "하대원동",
+     "region": "경기-성남시",
+     "km": 3.1,
+     "academies": {
+      "all": 24,
+      "math": 9,
+      "english": 1,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 1224
+    },
+    {
+     "name": "성남동",
+     "region": "경기-성남시",
+     "km": 3.3,
+     "academies": {
+      "all": 37,
+      "math": 12,
+      "english": 9,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 3917
+    }
+   ]
   },
   {
    "name": "대장동",
@@ -2318,7 +2848,152 @@
       58
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "하대원동",
+     "region": "경기-성남시",
+     "km": 1.4,
+     "academies": {
+      "all": 24,
+      "math": 9,
+      "english": 1,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 1224
+    },
+    {
+     "name": "상대원동",
+     "region": "경기-성남시",
+     "km": 2.0,
+     "academies": {
+      "all": 13,
+      "math": 6,
+      "english": 3,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 687
+    },
+    {
+     "name": "중앙동",
+     "region": "경기-성남시",
+     "km": 2.1,
+     "academies": {
+      "all": 14,
+      "math": 3,
+      "english": 5,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 577
+    },
+    {
+     "name": "성남동",
+     "region": "경기-성남시",
+     "km": 2.4,
+     "academies": {
+      "all": 37,
+      "math": 12,
+      "english": 9,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 3917
+    },
+    {
+     "name": "야탑동",
+     "region": "경기-성남시",
+     "km": 2.5,
+     "academies": {
+      "all": 91,
+      "math": 31,
+      "english": 31,
+      "korean": 19,
+      "science": 3
+     },
+     "students": 6431
+    },
+    {
+     "name": "신흥동",
+     "region": "경기-성남시",
+     "km": 2.8,
+     "academies": {
+      "all": 52,
+      "math": 16,
+      "english": 13,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 1676
+    },
+    {
+     "name": "수진동",
+     "region": "경기-성남시",
+     "km": 3.0,
+     "academies": {
+      "all": 17,
+      "math": 6,
+      "english": 6,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 1878
+    },
+    {
+     "name": "금광동",
+     "region": "경기-성남시",
+     "km": 3.1,
+     "academies": {
+      "all": 67,
+      "math": 27,
+      "english": 21,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 3971
+    },
+    {
+     "name": "단대동",
+     "region": "경기-성남시",
+     "km": 3.7,
+     "academies": {
+      "all": 21,
+      "math": 10,
+      "english": 8,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 2128
+    },
+    {
+     "name": "태평동",
+     "region": "경기-성남시",
+     "km": 3.7,
+     "academies": {
+      "all": 37,
+      "math": 12,
+      "english": 9,
+      "korean": 3,
+      "science": 1
+     },
+     "students": 1877
+    },
+    {
+     "name": "이매동",
+     "region": "경기-성남시",
+     "km": 3.8,
+     "academies": {
+      "all": 100,
+      "math": 35,
+      "english": 28,
+      "korean": 13,
+      "science": 2
+     },
+     "students": 5622
+    }
+   ]
   },
   {
    "name": "동원동",
@@ -2794,7 +3469,139 @@
       89
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "삼평동",
+     "region": "경기-성남시",
+     "km": 1.4,
+     "academies": {
+      "all": 39,
+      "math": 13,
+      "english": 12,
+      "korean": 6,
+      "science": 1
+     },
+     "students": 2870
+    },
+    {
+     "name": "이매동",
+     "region": "경기-성남시",
+     "km": 1.7,
+     "academies": {
+      "all": 100,
+      "math": 35,
+      "english": 28,
+      "korean": 13,
+      "science": 2
+     },
+     "students": 5622
+    },
+    {
+     "name": "판교동",
+     "region": "경기-성남시",
+     "km": 1.8,
+     "academies": {
+      "all": 34,
+      "math": 15,
+      "english": 13,
+      "korean": 6,
+      "science": 0
+     },
+     "students": 3719
+    },
+    {
+     "name": "수내동",
+     "region": "경기-성남시",
+     "km": 2.4,
+     "academies": {
+      "all": 309,
+      "math": 109,
+      "english": 74,
+      "korean": 58,
+      "science": 15
+     },
+     "students": 7205
+    },
+    {
+     "name": "정자동",
+     "region": "경기-성남시",
+     "km": 2.9,
+     "academies": {
+      "all": 285,
+      "math": 81,
+      "english": 42,
+      "korean": 42,
+      "science": 9
+     },
+     "students": 8970
+    },
+    {
+     "name": "야탑동",
+     "region": "경기-성남시",
+     "km": 2.9,
+     "academies": {
+      "all": 91,
+      "math": 31,
+      "english": 31,
+      "korean": 19,
+      "science": 3
+     },
+     "students": 6431
+    },
+    {
+     "name": "서현동",
+     "region": "경기-성남시",
+     "km": 3.4,
+     "academies": {
+      "all": 165,
+      "math": 60,
+      "english": 40,
+      "korean": 25,
+      "science": 10
+     },
+     "students": 5121
+    },
+    {
+     "name": "시흥동",
+     "region": "경기-성남시",
+     "km": 3.5,
+     "academies": {
+      "all": 1,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 0
+    },
+    {
+     "name": "금곡동",
+     "region": "경기-성남시",
+     "km": 3.5,
+     "academies": {
+      "all": 54,
+      "math": 15,
+      "english": 13,
+      "korean": 9,
+      "science": 2
+     },
+     "students": 664
+    },
+    {
+     "name": "분당동",
+     "region": "경기-성남시",
+     "km": 3.8,
+     "academies": {
+      "all": 7,
+      "math": 5,
+      "english": 2,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 2483
+    }
+   ]
   },
   {
    "name": "복정동",
@@ -2993,7 +3800,165 @@
       99
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "태평동",
+     "region": "경기-성남시",
+     "km": 1.2,
+     "academies": {
+      "all": 37,
+      "math": 12,
+      "english": 9,
+      "korean": 3,
+      "science": 1
+     },
+     "students": 1877
+    },
+    {
+     "name": "산성동",
+     "region": "경기-성남시",
+     "km": 2.1,
+     "academies": {
+      "all": 5,
+      "math": 2,
+      "english": 1,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 438
+    },
+    {
+     "name": "신흥동",
+     "region": "경기-성남시",
+     "km": 2.2,
+     "academies": {
+      "all": 52,
+      "math": 16,
+      "english": 13,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 1676
+    },
+    {
+     "name": "수진동",
+     "region": "경기-성남시",
+     "km": 2.3,
+     "academies": {
+      "all": 17,
+      "math": 6,
+      "english": 6,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 1878
+    },
+    {
+     "name": "세곡동",
+     "region": "서울-강남구",
+     "km": 2.4,
+     "academies": {
+      "all": 19,
+      "math": 7,
+      "english": 8,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 986
+    },
+    {
+     "name": "단대동",
+     "region": "경기-성남시",
+     "km": 2.4,
+     "academies": {
+      "all": 21,
+      "math": 10,
+      "english": 8,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 2128
+    },
+    {
+     "name": "장지동",
+     "region": "서울-송파구",
+     "km": 2.7,
+     "academies": {
+      "all": 90,
+      "math": 35,
+      "english": 25,
+      "korean": 17,
+      "science": 1
+     },
+     "students": 5585
+    },
+    {
+     "name": "문정동",
+     "region": "서울-송파구",
+     "km": 2.9,
+     "academies": {
+      "all": 70,
+      "math": 24,
+      "english": 21,
+      "korean": 11,
+      "science": 2
+     },
+     "students": 2953
+    },
+    {
+     "name": "중앙동",
+     "region": "경기-성남시",
+     "km": 3.0,
+     "academies": {
+      "all": 14,
+      "math": 3,
+      "english": 5,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 577
+    },
+    {
+     "name": "성남동",
+     "region": "경기-성남시",
+     "km": 3.1,
+     "academies": {
+      "all": 37,
+      "math": 12,
+      "english": 9,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 3917
+    },
+    {
+     "name": "양지동",
+     "region": "경기-성남시",
+     "km": 3.3,
+     "academies": {
+      "all": 5,
+      "math": 2,
+      "english": 2,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 201
+    },
+    {
+     "name": "금광동",
+     "region": "경기-성남시",
+     "km": 3.7,
+     "academies": {
+      "all": 67,
+      "math": 27,
+      "english": 21,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 3971
+    }
+   ]
   },
   {
    "name": "분당동",
@@ -3232,7 +4197,100 @@
       7
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "서현동",
+     "region": "경기-성남시",
+     "km": 1.0,
+     "academies": {
+      "all": 165,
+      "math": 60,
+      "english": 40,
+      "korean": 25,
+      "science": 10
+     },
+     "students": 5121
+    },
+    {
+     "name": "신현동",
+     "region": "경기-광주시",
+     "km": 1.5,
+     "academies": {
+      "all": 14,
+      "math": 4,
+      "english": 7,
+      "korean": 1,
+      "science": 1
+     },
+     "students": 825
+    },
+    {
+     "name": "수내동",
+     "region": "경기-성남시",
+     "km": 1.9,
+     "academies": {
+      "all": 309,
+      "math": 109,
+      "english": 74,
+      "korean": 58,
+      "science": 15
+     },
+     "students": 7205
+    },
+    {
+     "name": "정자동",
+     "region": "경기-성남시",
+     "km": 2.8,
+     "academies": {
+      "all": 285,
+      "math": 81,
+      "english": 42,
+      "korean": 42,
+      "science": 9
+     },
+     "students": 8970
+    },
+    {
+     "name": "능평동",
+     "region": "경기-광주시",
+     "km": 3.0,
+     "academies": {
+      "all": 13,
+      "math": 3,
+      "english": 3,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 678
+    },
+    {
+     "name": "이매동",
+     "region": "경기-성남시",
+     "km": 3.2,
+     "academies": {
+      "all": 100,
+      "math": 35,
+      "english": 28,
+      "korean": 13,
+      "science": 2
+     },
+     "students": 5622
+    },
+    {
+     "name": "백현동",
+     "region": "경기-성남시",
+     "km": 3.8,
+     "academies": {
+      "all": 29,
+      "math": 9,
+      "english": 10,
+      "korean": 2,
+      "science": 2
+     },
+     "students": 3203
+    }
+   ]
   },
   {
    "name": "산성동",
@@ -3423,7 +4481,165 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "단대동",
+     "region": "경기-성남시",
+     "km": 0.7,
+     "academies": {
+      "all": 21,
+      "math": 10,
+      "english": 8,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 2128
+    },
+    {
+     "name": "양지동",
+     "region": "경기-성남시",
+     "km": 1.3,
+     "academies": {
+      "all": 5,
+      "math": 2,
+      "english": 2,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 201
+    },
+    {
+     "name": "은행동",
+     "region": "경기-성남시",
+     "km": 1.7,
+     "academies": {
+      "all": 14,
+      "math": 4,
+      "english": 4,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 1042
+    },
+    {
+     "name": "신흥동",
+     "region": "경기-성남시",
+     "km": 1.7,
+     "academies": {
+      "all": 52,
+      "math": 16,
+      "english": 13,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 1676
+    },
+    {
+     "name": "금광동",
+     "region": "경기-성남시",
+     "km": 1.9,
+     "academies": {
+      "all": 67,
+      "math": 27,
+      "english": 21,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 3971
+    },
+    {
+     "name": "복정동",
+     "region": "경기-성남시",
+     "km": 2.1,
+     "academies": {
+      "all": 4,
+      "math": 2,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 962
+    },
+    {
+     "name": "태평동",
+     "region": "경기-성남시",
+     "km": 2.2,
+     "academies": {
+      "all": 37,
+      "math": 12,
+      "english": 9,
+      "korean": 3,
+      "science": 1
+     },
+     "students": 1877
+    },
+    {
+     "name": "중앙동",
+     "region": "경기-성남시",
+     "km": 2.2,
+     "academies": {
+      "all": 14,
+      "math": 3,
+      "english": 5,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 577
+    },
+    {
+     "name": "상대원동",
+     "region": "경기-성남시",
+     "km": 2.7,
+     "academies": {
+      "all": 13,
+      "math": 6,
+      "english": 3,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 687
+    },
+    {
+     "name": "수진동",
+     "region": "경기-성남시",
+     "km": 3.1,
+     "academies": {
+      "all": 17,
+      "math": 6,
+      "english": 6,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 1878
+    },
+    {
+     "name": "장지동",
+     "region": "서울-송파구",
+     "km": 3.2,
+     "academies": {
+      "all": 90,
+      "math": 35,
+      "english": 25,
+      "korean": 17,
+      "science": 1
+     },
+     "students": 5585
+    },
+    {
+     "name": "성남동",
+     "region": "경기-성남시",
+     "km": 3.6,
+     "academies": {
+      "all": 37,
+      "math": 12,
+      "english": 9,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 3917
+    }
+   ]
   },
   {
    "name": "삼평동",
@@ -3764,7 +4980,113 @@
       94
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "백현동",
+     "region": "경기-성남시",
+     "km": 1.4,
+     "academies": {
+      "all": 29,
+      "math": 9,
+      "english": 10,
+      "korean": 2,
+      "science": 2
+     },
+     "students": 3203
+    },
+    {
+     "name": "이매동",
+     "region": "경기-성남시",
+     "km": 1.7,
+     "academies": {
+      "all": 100,
+      "math": 35,
+      "english": 28,
+      "korean": 13,
+      "science": 2
+     },
+     "students": 5622
+    },
+    {
+     "name": "야탑동",
+     "region": "경기-성남시",
+     "km": 2.2,
+     "academies": {
+      "all": 91,
+      "math": 31,
+      "english": 31,
+      "korean": 19,
+      "science": 3
+     },
+     "students": 6431
+    },
+    {
+     "name": "판교동",
+     "region": "경기-성남시",
+     "km": 2.5,
+     "academies": {
+      "all": 34,
+      "math": 15,
+      "english": 13,
+      "korean": 6,
+      "science": 0
+     },
+     "students": 3719
+    },
+    {
+     "name": "시흥동",
+     "region": "경기-성남시",
+     "km": 2.6,
+     "academies": {
+      "all": 1,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 0
+    },
+    {
+     "name": "수내동",
+     "region": "경기-성남시",
+     "km": 3.6,
+     "academies": {
+      "all": 309,
+      "math": 109,
+      "english": 74,
+      "korean": 58,
+      "science": 15
+     },
+     "students": 7205
+    },
+    {
+     "name": "성남동",
+     "region": "경기-성남시",
+     "km": 3.7,
+     "academies": {
+      "all": 37,
+      "math": 12,
+      "english": 9,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 3917
+    },
+    {
+     "name": "고등동",
+     "region": "경기-성남시",
+     "km": 3.8,
+     "academies": {
+      "all": 12,
+      "math": 5,
+      "english": 6,
+      "korean": 1,
+      "science": 1
+     },
+     "students": 573
+    }
+   ]
   },
   {
    "name": "상대원동",
@@ -4033,7 +5355,165 @@
       19
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "금광동",
+     "region": "경기-성남시",
+     "km": 1.1,
+     "academies": {
+      "all": 67,
+      "math": 27,
+      "english": 21,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 3971
+    },
+    {
+     "name": "중앙동",
+     "region": "경기-성남시",
+     "km": 1.1,
+     "academies": {
+      "all": 14,
+      "math": 3,
+      "english": 5,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 577
+    },
+    {
+     "name": "신흥동",
+     "region": "경기-성남시",
+     "km": 1.9,
+     "academies": {
+      "all": 52,
+      "math": 16,
+      "english": 13,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 1676
+    },
+    {
+     "name": "단대동",
+     "region": "경기-성남시",
+     "km": 2.0,
+     "academies": {
+      "all": 21,
+      "math": 10,
+      "english": 8,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 2128
+    },
+    {
+     "name": "도촌동",
+     "region": "경기-성남시",
+     "km": 2.0,
+     "academies": {
+      "all": 26,
+      "math": 8,
+      "english": 10,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 1045
+    },
+    {
+     "name": "하대원동",
+     "region": "경기-성남시",
+     "km": 2.3,
+     "academies": {
+      "all": 24,
+      "math": 9,
+      "english": 1,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 1224
+    },
+    {
+     "name": "은행동",
+     "region": "경기-성남시",
+     "km": 2.3,
+     "academies": {
+      "all": 14,
+      "math": 4,
+      "english": 4,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 1042
+    },
+    {
+     "name": "산성동",
+     "region": "경기-성남시",
+     "km": 2.7,
+     "academies": {
+      "all": 5,
+      "math": 2,
+      "english": 1,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 438
+    },
+    {
+     "name": "양지동",
+     "region": "경기-성남시",
+     "km": 2.8,
+     "academies": {
+      "all": 5,
+      "math": 2,
+      "english": 2,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 201
+    },
+    {
+     "name": "성남동",
+     "region": "경기-성남시",
+     "km": 3.1,
+     "academies": {
+      "all": 37,
+      "math": 12,
+      "english": 9,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 3917
+    },
+    {
+     "name": "수진동",
+     "region": "경기-성남시",
+     "km": 3.2,
+     "academies": {
+      "all": 17,
+      "math": 6,
+      "english": 6,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 1878
+    },
+    {
+     "name": "태평동",
+     "region": "경기-성남시",
+     "km": 3.2,
+     "academies": {
+      "all": 37,
+      "math": 12,
+      "english": 9,
+      "korean": 3,
+      "science": 1
+     },
+     "students": 1877
+    }
+   ]
   },
   {
    "name": "서현동",
@@ -4439,7 +5919,113 @@
       95
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "분당동",
+     "region": "경기-성남시",
+     "km": 1.0,
+     "academies": {
+      "all": 7,
+      "math": 5,
+      "english": 2,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 2483
+    },
+    {
+     "name": "수내동",
+     "region": "경기-성남시",
+     "km": 2.1,
+     "academies": {
+      "all": 309,
+      "math": 109,
+      "english": 74,
+      "korean": 58,
+      "science": 15
+     },
+     "students": 7205
+    },
+    {
+     "name": "신현동",
+     "region": "경기-광주시",
+     "km": 2.2,
+     "academies": {
+      "all": 14,
+      "math": 4,
+      "english": 7,
+      "korean": 1,
+      "science": 1
+     },
+     "students": 825
+    },
+    {
+     "name": "이매동",
+     "region": "경기-성남시",
+     "km": 2.5,
+     "academies": {
+      "all": 100,
+      "math": 35,
+      "english": 28,
+      "korean": 13,
+      "science": 2
+     },
+     "students": 5622
+    },
+    {
+     "name": "정자동",
+     "region": "경기-성남시",
+     "km": 3.2,
+     "academies": {
+      "all": 285,
+      "math": 81,
+      "english": 42,
+      "korean": 42,
+      "science": 9
+     },
+     "students": 8970
+    },
+    {
+     "name": "야탑동",
+     "region": "경기-성남시",
+     "km": 3.4,
+     "academies": {
+      "all": 91,
+      "math": 31,
+      "english": 31,
+      "korean": 19,
+      "science": 3
+     },
+     "students": 6431
+    },
+    {
+     "name": "백현동",
+     "region": "경기-성남시",
+     "km": 3.4,
+     "academies": {
+      "all": 29,
+      "math": 9,
+      "english": 10,
+      "korean": 2,
+      "science": 2
+     },
+     "students": 3203
+    },
+    {
+     "name": "능평동",
+     "region": "경기-광주시",
+     "km": 3.8,
+     "academies": {
+      "all": 13,
+      "math": 3,
+      "english": 3,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 678
+    }
+   ]
   },
   {
    "name": "성남동",
@@ -4749,7 +6335,165 @@
       5
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "수진동",
+     "region": "경기-성남시",
+     "km": 0.8,
+     "academies": {
+      "all": 17,
+      "math": 6,
+      "english": 6,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 1878
+    },
+    {
+     "name": "하대원동",
+     "region": "경기-성남시",
+     "km": 1.1,
+     "academies": {
+      "all": 24,
+      "math": 9,
+      "english": 1,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 1224
+    },
+    {
+     "name": "태평동",
+     "region": "경기-성남시",
+     "km": 1.9,
+     "academies": {
+      "all": 37,
+      "math": 12,
+      "english": 9,
+      "korean": 3,
+      "science": 1
+     },
+     "students": 1877
+    },
+    {
+     "name": "신흥동",
+     "region": "경기-성남시",
+     "km": 1.9,
+     "academies": {
+      "all": 52,
+      "math": 16,
+      "english": 13,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 1676
+    },
+    {
+     "name": "중앙동",
+     "region": "경기-성남시",
+     "km": 2.1,
+     "academies": {
+      "all": 14,
+      "math": 3,
+      "english": 5,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 577
+    },
+    {
+     "name": "도촌동",
+     "region": "경기-성남시",
+     "km": 2.4,
+     "academies": {
+      "all": 26,
+      "math": 8,
+      "english": 10,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 1045
+    },
+    {
+     "name": "야탑동",
+     "region": "경기-성남시",
+     "km": 2.5,
+     "academies": {
+      "all": 91,
+      "math": 31,
+      "english": 31,
+      "korean": 19,
+      "science": 3
+     },
+     "students": 6431
+    },
+    {
+     "name": "상대원동",
+     "region": "경기-성남시",
+     "km": 3.1,
+     "academies": {
+      "all": 13,
+      "math": 6,
+      "english": 3,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 687
+    },
+    {
+     "name": "복정동",
+     "region": "경기-성남시",
+     "km": 3.1,
+     "academies": {
+      "all": 4,
+      "math": 2,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 962
+    },
+    {
+     "name": "단대동",
+     "region": "경기-성남시",
+     "km": 3.3,
+     "academies": {
+      "all": 21,
+      "math": 10,
+      "english": 8,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 2128
+    },
+    {
+     "name": "산성동",
+     "region": "경기-성남시",
+     "km": 3.6,
+     "academies": {
+      "all": 5,
+      "math": 2,
+      "english": 1,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 438
+    },
+    {
+     "name": "삼평동",
+     "region": "경기-성남시",
+     "km": 3.7,
+     "academies": {
+      "all": 39,
+      "math": 13,
+      "english": 12,
+      "korean": 6,
+      "science": 1
+     },
+     "students": 2870
+    }
+   ]
   },
   {
    "name": "수내동",
@@ -5165,7 +6909,139 @@
       98
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "정자동",
+     "region": "경기-성남시",
+     "km": 1.1,
+     "academies": {
+      "all": 285,
+      "math": 81,
+      "english": 42,
+      "korean": 42,
+      "science": 9
+     },
+     "students": 8970
+    },
+    {
+     "name": "분당동",
+     "region": "경기-성남시",
+     "km": 1.9,
+     "academies": {
+      "all": 7,
+      "math": 5,
+      "english": 2,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 2483
+    },
+    {
+     "name": "서현동",
+     "region": "경기-성남시",
+     "km": 2.1,
+     "academies": {
+      "all": 165,
+      "math": 60,
+      "english": 40,
+      "korean": 25,
+      "science": 10
+     },
+     "students": 5121
+    },
+    {
+     "name": "백현동",
+     "region": "경기-성남시",
+     "km": 2.4,
+     "academies": {
+      "all": 29,
+      "math": 9,
+      "english": 10,
+      "korean": 2,
+      "science": 2
+     },
+     "students": 3203
+    },
+    {
+     "name": "금곡동",
+     "region": "경기-성남시",
+     "km": 2.5,
+     "academies": {
+      "all": 54,
+      "math": 15,
+      "english": 13,
+      "korean": 9,
+      "science": 2
+     },
+     "students": 664
+    },
+    {
+     "name": "이매동",
+     "region": "경기-성남시",
+     "km": 2.7,
+     "academies": {
+      "all": 100,
+      "math": 35,
+      "english": 28,
+      "korean": 13,
+      "science": 2
+     },
+     "students": 5622
+    },
+    {
+     "name": "구미동",
+     "region": "경기-성남시",
+     "km": 3.3,
+     "academies": {
+      "all": 64,
+      "math": 26,
+      "english": 18,
+      "korean": 7,
+      "science": 3
+     },
+     "students": 3314
+    },
+    {
+     "name": "신현동",
+     "region": "경기-광주시",
+     "km": 3.4,
+     "academies": {
+      "all": 14,
+      "math": 4,
+      "english": 7,
+      "korean": 1,
+      "science": 1
+     },
+     "students": 825
+    },
+    {
+     "name": "판교동",
+     "region": "경기-성남시",
+     "km": 3.5,
+     "academies": {
+      "all": 34,
+      "math": 15,
+      "english": 13,
+      "korean": 6,
+      "science": 0
+     },
+     "students": 3719
+    },
+    {
+     "name": "삼평동",
+     "region": "경기-성남시",
+     "km": 3.6,
+     "academies": {
+      "all": 39,
+      "math": 13,
+      "english": 12,
+      "korean": 6,
+      "science": 1
+     },
+     "students": 2870
+    }
+   ]
   },
   {
    "name": "수진동",
@@ -5453,7 +7329,165 @@
       77
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "성남동",
+     "region": "경기-성남시",
+     "km": 0.8,
+     "academies": {
+      "all": 37,
+      "math": 12,
+      "english": 9,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 3917
+    },
+    {
+     "name": "태평동",
+     "region": "경기-성남시",
+     "km": 1.2,
+     "academies": {
+      "all": 37,
+      "math": 12,
+      "english": 9,
+      "korean": 3,
+      "science": 1
+     },
+     "students": 1877
+    },
+    {
+     "name": "신흥동",
+     "region": "경기-성남시",
+     "km": 1.6,
+     "academies": {
+      "all": 52,
+      "math": 16,
+      "english": 13,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 1676
+    },
+    {
+     "name": "하대원동",
+     "region": "경기-성남시",
+     "km": 1.7,
+     "academies": {
+      "all": 24,
+      "math": 9,
+      "english": 1,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 1224
+    },
+    {
+     "name": "중앙동",
+     "region": "경기-성남시",
+     "km": 2.1,
+     "academies": {
+      "all": 14,
+      "math": 3,
+      "english": 5,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 577
+    },
+    {
+     "name": "복정동",
+     "region": "경기-성남시",
+     "km": 2.3,
+     "academies": {
+      "all": 4,
+      "math": 2,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 962
+    },
+    {
+     "name": "단대동",
+     "region": "경기-성남시",
+     "km": 2.9,
+     "academies": {
+      "all": 21,
+      "math": 10,
+      "english": 8,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 2128
+    },
+    {
+     "name": "도촌동",
+     "region": "경기-성남시",
+     "km": 3.0,
+     "academies": {
+      "all": 26,
+      "math": 8,
+      "english": 10,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 1045
+    },
+    {
+     "name": "산성동",
+     "region": "경기-성남시",
+     "km": 3.1,
+     "academies": {
+      "all": 5,
+      "math": 2,
+      "english": 1,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 438
+    },
+    {
+     "name": "상대원동",
+     "region": "경기-성남시",
+     "km": 3.2,
+     "academies": {
+      "all": 13,
+      "math": 6,
+      "english": 3,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 687
+    },
+    {
+     "name": "야탑동",
+     "region": "경기-성남시",
+     "km": 3.3,
+     "academies": {
+      "all": 91,
+      "math": 31,
+      "english": 31,
+      "korean": 19,
+      "science": 3
+     },
+     "students": 6431
+    },
+    {
+     "name": "금광동",
+     "region": "경기-성남시",
+     "km": 3.5,
+     "academies": {
+      "all": 67,
+      "math": 27,
+      "english": 21,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 3971
+    }
+   ]
   },
   {
    "name": "시흥동",
@@ -5586,7 +7620,61 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "고등동",
+     "region": "경기-성남시",
+     "km": 1.7,
+     "academies": {
+      "all": 12,
+      "math": 5,
+      "english": 6,
+      "korean": 1,
+      "science": 1
+     },
+     "students": 573
+    },
+    {
+     "name": "삼평동",
+     "region": "경기-성남시",
+     "km": 2.6,
+     "academies": {
+      "all": 39,
+      "math": 13,
+      "english": 12,
+      "korean": 6,
+      "science": 1
+     },
+     "students": 2870
+    },
+    {
+     "name": "판교동",
+     "region": "경기-성남시",
+     "km": 2.9,
+     "academies": {
+      "all": 34,
+      "math": 15,
+      "english": 13,
+      "korean": 6,
+      "science": 0
+     },
+     "students": 3719
+    },
+    {
+     "name": "백현동",
+     "region": "경기-성남시",
+     "km": 3.5,
+     "academies": {
+      "all": 29,
+      "math": 9,
+      "english": 10,
+      "korean": 2,
+      "science": 2
+     },
+     "students": 3203
+    }
+   ]
   },
   {
    "name": "신흥동",
@@ -5922,7 +8010,165 @@
       77
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "중앙동",
+     "region": "경기-성남시",
+     "km": 0.9,
+     "academies": {
+      "all": 14,
+      "math": 3,
+      "english": 5,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 577
+    },
+    {
+     "name": "태평동",
+     "region": "경기-성남시",
+     "km": 1.3,
+     "academies": {
+      "all": 37,
+      "math": 12,
+      "english": 9,
+      "korean": 3,
+      "science": 1
+     },
+     "students": 1877
+    },
+    {
+     "name": "단대동",
+     "region": "경기-성남시",
+     "km": 1.3,
+     "academies": {
+      "all": 21,
+      "math": 10,
+      "english": 8,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 2128
+    },
+    {
+     "name": "수진동",
+     "region": "경기-성남시",
+     "km": 1.6,
+     "academies": {
+      "all": 17,
+      "math": 6,
+      "english": 6,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 1878
+    },
+    {
+     "name": "산성동",
+     "region": "경기-성남시",
+     "km": 1.7,
+     "academies": {
+      "all": 5,
+      "math": 2,
+      "english": 1,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 438
+    },
+    {
+     "name": "상대원동",
+     "region": "경기-성남시",
+     "km": 1.9,
+     "academies": {
+      "all": 13,
+      "math": 6,
+      "english": 3,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 687
+    },
+    {
+     "name": "하대원동",
+     "region": "경기-성남시",
+     "km": 1.9,
+     "academies": {
+      "all": 24,
+      "math": 9,
+      "english": 1,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 1224
+    },
+    {
+     "name": "성남동",
+     "region": "경기-성남시",
+     "km": 1.9,
+     "academies": {
+      "all": 37,
+      "math": 12,
+      "english": 9,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 3917
+    },
+    {
+     "name": "금광동",
+     "region": "경기-성남시",
+     "km": 2.0,
+     "academies": {
+      "all": 67,
+      "math": 27,
+      "english": 21,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 3971
+    },
+    {
+     "name": "복정동",
+     "region": "경기-성남시",
+     "km": 2.2,
+     "academies": {
+      "all": 4,
+      "math": 2,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 962
+    },
+    {
+     "name": "양지동",
+     "region": "경기-성남시",
+     "km": 2.7,
+     "academies": {
+      "all": 5,
+      "math": 2,
+      "english": 2,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 201
+    },
+    {
+     "name": "은행동",
+     "region": "경기-성남시",
+     "km": 2.7,
+     "academies": {
+      "all": 14,
+      "math": 4,
+      "english": 4,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 1042
+    }
+   ]
   },
   {
    "name": "심곡동",
@@ -6061,7 +8307,165 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "심곡동",
+     "region": "경기-부천시",
+     "km": 0.0,
+     "academies": {
+      "all": 36,
+      "math": 7,
+      "english": 8,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 3075
+    },
+    {
+     "name": "원미동",
+     "region": "경기-부천시",
+     "km": 1.3,
+     "academies": {
+      "all": 16,
+      "math": 1,
+      "english": 1,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 1253
+    },
+    {
+     "name": "소사동",
+     "region": "경기-부천시",
+     "km": 1.3,
+     "academies": {
+      "all": 62,
+      "math": 20,
+      "english": 20,
+      "korean": 7,
+      "science": 1
+     },
+     "students": 2075
+    },
+    {
+     "name": "소사동",
+     "region": "경기-평택시",
+     "km": 1.3,
+     "academies": {
+      "all": 6,
+      "math": 3,
+      "english": 3,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 765
+    },
+    {
+     "name": "송내동",
+     "region": "경기-부천시",
+     "km": 1.9,
+     "academies": {
+      "all": 51,
+      "math": 23,
+      "english": 14,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 4050
+    },
+    {
+     "name": "중동",
+     "region": "경기-부천시",
+     "km": 1.9,
+     "academies": {
+      "all": 288,
+      "math": 102,
+      "english": 78,
+      "korean": 40,
+      "science": 10
+     },
+     "students": 16117
+    },
+    {
+     "name": "중동",
+     "region": "경기-성남시",
+     "km": 1.9,
+     "academies": {
+      "all": 1,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 0
+    },
+    {
+     "name": "하중동",
+     "region": "경기-시흥시",
+     "km": 1.9,
+     "academies": {
+      "all": 8,
+      "math": 2,
+      "english": 1,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 246
+    },
+    {
+     "name": "중동",
+     "region": "경기-용인시",
+     "km": 1.9,
+     "academies": {
+      "all": 104,
+      "math": 39,
+      "english": 22,
+      "korean": 20,
+      "science": 3
+     },
+     "students": 5439
+    },
+    {
+     "name": "역곡동",
+     "region": "경기-부천시",
+     "km": 2.4,
+     "academies": {
+      "all": 30,
+      "math": 5,
+      "english": 6,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 2412
+    },
+    {
+     "name": "춘의동",
+     "region": "경기-부천시",
+     "km": 2.5,
+     "academies": {
+      "all": 2,
+      "math": 1,
+      "english": 2,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 0
+    },
+    {
+     "name": "소사본동",
+     "region": "경기-부천시",
+     "km": 2.5,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 2353
+    }
+   ]
   },
   {
    "name": "야탑동",
@@ -6427,7 +8831,126 @@
       89
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "이매동",
+     "region": "경기-성남시",
+     "km": 1.5,
+     "academies": {
+      "all": 100,
+      "math": 35,
+      "english": 28,
+      "korean": 13,
+      "science": 2
+     },
+     "students": 5622
+    },
+    {
+     "name": "삼평동",
+     "region": "경기-성남시",
+     "km": 2.2,
+     "academies": {
+      "all": 39,
+      "math": 13,
+      "english": 12,
+      "korean": 6,
+      "science": 1
+     },
+     "students": 2870
+    },
+    {
+     "name": "하대원동",
+     "region": "경기-성남시",
+     "km": 2.3,
+     "academies": {
+      "all": 24,
+      "math": 9,
+      "english": 1,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 1224
+    },
+    {
+     "name": "성남동",
+     "region": "경기-성남시",
+     "km": 2.5,
+     "academies": {
+      "all": 37,
+      "math": 12,
+      "english": 9,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 3917
+    },
+    {
+     "name": "도촌동",
+     "region": "경기-성남시",
+     "km": 2.5,
+     "academies": {
+      "all": 26,
+      "math": 8,
+      "english": 10,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 1045
+    },
+    {
+     "name": "백현동",
+     "region": "경기-성남시",
+     "km": 2.9,
+     "academies": {
+      "all": 29,
+      "math": 9,
+      "english": 10,
+      "korean": 2,
+      "science": 2
+     },
+     "students": 3203
+    },
+    {
+     "name": "수진동",
+     "region": "경기-성남시",
+     "km": 3.3,
+     "academies": {
+      "all": 17,
+      "math": 6,
+      "english": 6,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 1878
+    },
+    {
+     "name": "서현동",
+     "region": "경기-성남시",
+     "km": 3.4,
+     "academies": {
+      "all": 165,
+      "math": 60,
+      "english": 40,
+      "korean": 25,
+      "science": 10
+     },
+     "students": 5121
+    },
+    {
+     "name": "중앙동",
+     "region": "경기-성남시",
+     "km": 3.8,
+     "academies": {
+      "all": 14,
+      "math": 3,
+      "english": 5,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 577
+    }
+   ]
   },
   {
    "name": "양지동",
@@ -6615,7 +9138,152 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "은행동",
+     "region": "경기-성남시",
+     "km": 0.8,
+     "academies": {
+      "all": 14,
+      "math": 4,
+      "english": 4,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 1042
+    },
+    {
+     "name": "산성동",
+     "region": "경기-성남시",
+     "km": 1.3,
+     "academies": {
+      "all": 5,
+      "math": 2,
+      "english": 1,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 438
+    },
+    {
+     "name": "단대동",
+     "region": "경기-성남시",
+     "km": 1.4,
+     "academies": {
+      "all": 21,
+      "math": 10,
+      "english": 8,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 2128
+    },
+    {
+     "name": "금광동",
+     "region": "경기-성남시",
+     "km": 1.8,
+     "academies": {
+      "all": 67,
+      "math": 27,
+      "english": 21,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 3971
+    },
+    {
+     "name": "신흥동",
+     "region": "경기-성남시",
+     "km": 2.7,
+     "academies": {
+      "all": 52,
+      "math": 16,
+      "english": 13,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 1676
+    },
+    {
+     "name": "상대원동",
+     "region": "경기-성남시",
+     "km": 2.8,
+     "academies": {
+      "all": 13,
+      "math": 6,
+      "english": 3,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 687
+    },
+    {
+     "name": "중앙동",
+     "region": "경기-성남시",
+     "km": 2.9,
+     "academies": {
+      "all": 14,
+      "math": 3,
+      "english": 5,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 577
+    },
+    {
+     "name": "복정동",
+     "region": "경기-성남시",
+     "km": 3.3,
+     "academies": {
+      "all": 4,
+      "math": 2,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 962
+    },
+    {
+     "name": "태평동",
+     "region": "경기-성남시",
+     "km": 3.4,
+     "academies": {
+      "all": 37,
+      "math": 12,
+      "english": 9,
+      "korean": 3,
+      "science": 1
+     },
+     "students": 1877
+    },
+    {
+     "name": "장지동",
+     "region": "서울-송파구",
+     "km": 3.7,
+     "academies": {
+      "all": 90,
+      "math": 35,
+      "english": 25,
+      "korean": 17,
+      "science": 1
+     },
+     "students": 5585
+    },
+    {
+     "name": "거여동",
+     "region": "서울-송파구",
+     "km": 3.8,
+     "academies": {
+      "all": 70,
+      "math": 25,
+      "english": 19,
+      "korean": 14,
+      "science": 2
+     },
+     "students": 4771
+    }
+   ]
   },
   {
    "name": "여수동",
@@ -7238,7 +9906,61 @@
       95
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "동천동",
+     "region": "경기-용인시",
+     "km": 2.9,
+     "academies": {
+      "all": 86,
+      "math": 34,
+      "english": 25,
+      "korean": 16,
+      "science": 1
+     },
+     "students": 3574
+    },
+    {
+     "name": "판교동",
+     "region": "경기-성남시",
+     "km": 3.1,
+     "academies": {
+      "all": 34,
+      "math": 15,
+      "english": 13,
+      "korean": 6,
+      "science": 0
+     },
+     "students": 3719
+    },
+    {
+     "name": "청계동",
+     "region": "경기-의왕시",
+     "km": 3.6,
+     "academies": {
+      "all": 9,
+      "math": 5,
+      "english": 4,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 585
+    },
+    {
+     "name": "청계동",
+     "region": "경기-화성시",
+     "km": 3.6,
+     "academies": {
+      "all": 197,
+      "math": 81,
+      "english": 43,
+      "korean": 47,
+      "science": 7
+     },
+     "students": 7859
+    }
+   ]
   },
   {
    "name": "은행동",
@@ -7511,7 +10233,126 @@
       12
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "양지동",
+     "region": "경기-성남시",
+     "km": 0.8,
+     "academies": {
+      "all": 5,
+      "math": 2,
+      "english": 2,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 201
+    },
+    {
+     "name": "금광동",
+     "region": "경기-성남시",
+     "km": 1.2,
+     "academies": {
+      "all": 67,
+      "math": 27,
+      "english": 21,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 3971
+    },
+    {
+     "name": "단대동",
+     "region": "경기-성남시",
+     "km": 1.5,
+     "academies": {
+      "all": 21,
+      "math": 10,
+      "english": 8,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 2128
+    },
+    {
+     "name": "산성동",
+     "region": "경기-성남시",
+     "km": 1.7,
+     "academies": {
+      "all": 5,
+      "math": 2,
+      "english": 1,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 438
+    },
+    {
+     "name": "상대원동",
+     "region": "경기-성남시",
+     "km": 2.3,
+     "academies": {
+      "all": 13,
+      "math": 6,
+      "english": 3,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 687
+    },
+    {
+     "name": "중앙동",
+     "region": "경기-성남시",
+     "km": 2.6,
+     "academies": {
+      "all": 14,
+      "math": 3,
+      "english": 5,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 577
+    },
+    {
+     "name": "신흥동",
+     "region": "경기-성남시",
+     "km": 2.7,
+     "academies": {
+      "all": 52,
+      "math": 16,
+      "english": 13,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 1676
+    },
+    {
+     "name": "태평동",
+     "region": "경기-성남시",
+     "km": 3.7,
+     "academies": {
+      "all": 37,
+      "math": 12,
+      "english": 9,
+      "korean": 3,
+      "science": 1
+     },
+     "students": 1877
+    },
+    {
+     "name": "복정동",
+     "region": "경기-성남시",
+     "km": 3.8,
+     "academies": {
+      "all": 4,
+      "math": 2,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 962
+    }
+   ]
   },
   {
    "name": "이매동",
@@ -7908,7 +10749,152 @@
       95
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "야탑동",
+     "region": "경기-성남시",
+     "km": 1.5,
+     "academies": {
+      "all": 91,
+      "math": 31,
+      "english": 31,
+      "korean": 19,
+      "science": 3
+     },
+     "students": 6431
+    },
+    {
+     "name": "백현동",
+     "region": "경기-성남시",
+     "km": 1.7,
+     "academies": {
+      "all": 29,
+      "math": 9,
+      "english": 10,
+      "korean": 2,
+      "science": 2
+     },
+     "students": 3203
+    },
+    {
+     "name": "삼평동",
+     "region": "경기-성남시",
+     "km": 1.7,
+     "academies": {
+      "all": 39,
+      "math": 13,
+      "english": 12,
+      "korean": 6,
+      "science": 1
+     },
+     "students": 2870
+    },
+    {
+     "name": "서현동",
+     "region": "경기-성남시",
+     "km": 2.5,
+     "academies": {
+      "all": 165,
+      "math": 60,
+      "english": 40,
+      "korean": 25,
+      "science": 10
+     },
+     "students": 5121
+    },
+    {
+     "name": "수내동",
+     "region": "경기-성남시",
+     "km": 2.7,
+     "academies": {
+      "all": 309,
+      "math": 109,
+      "english": 74,
+      "korean": 58,
+      "science": 15
+     },
+     "students": 7205
+    },
+    {
+     "name": "분당동",
+     "region": "경기-성남시",
+     "km": 3.2,
+     "academies": {
+      "all": 7,
+      "math": 5,
+      "english": 2,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 2483
+    },
+    {
+     "name": "판교동",
+     "region": "경기-성남시",
+     "km": 3.4,
+     "academies": {
+      "all": 34,
+      "math": 15,
+      "english": 13,
+      "korean": 6,
+      "science": 0
+     },
+     "students": 3719
+    },
+    {
+     "name": "정자동",
+     "region": "경기-성남시",
+     "km": 3.6,
+     "academies": {
+      "all": 285,
+      "math": 81,
+      "english": 42,
+      "korean": 42,
+      "science": 9
+     },
+     "students": 8970
+    },
+    {
+     "name": "하대원동",
+     "region": "경기-성남시",
+     "km": 3.7,
+     "academies": {
+      "all": 24,
+      "math": 9,
+      "english": 1,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 1224
+    },
+    {
+     "name": "도촌동",
+     "region": "경기-성남시",
+     "km": 3.8,
+     "academies": {
+      "all": 26,
+      "math": 8,
+      "english": 10,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 1045
+    },
+    {
+     "name": "성남동",
+     "region": "경기-성남시",
+     "km": 3.8,
+     "academies": {
+      "all": 37,
+      "math": 12,
+      "english": 9,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 3917
+    }
+   ]
   },
   {
    "name": "정자동",
@@ -8365,7 +11351,126 @@
       91
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "수내동",
+     "region": "경기-성남시",
+     "km": 1.1,
+     "academies": {
+      "all": 309,
+      "math": 109,
+      "english": 74,
+      "korean": 58,
+      "science": 15
+     },
+     "students": 7205
+    },
+    {
+     "name": "금곡동",
+     "region": "경기-성남시",
+     "km": 1.4,
+     "academies": {
+      "all": 54,
+      "math": 15,
+      "english": 13,
+      "korean": 9,
+      "science": 2
+     },
+     "students": 664
+    },
+    {
+     "name": "구미동",
+     "region": "경기-성남시",
+     "km": 2.2,
+     "academies": {
+      "all": 64,
+      "math": 26,
+      "english": 18,
+      "korean": 7,
+      "science": 3
+     },
+     "students": 3314
+    },
+    {
+     "name": "분당동",
+     "region": "경기-성남시",
+     "km": 2.8,
+     "academies": {
+      "all": 7,
+      "math": 5,
+      "english": 2,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 2483
+    },
+    {
+     "name": "백현동",
+     "region": "경기-성남시",
+     "km": 2.9,
+     "academies": {
+      "all": 29,
+      "math": 9,
+      "english": 10,
+      "korean": 2,
+      "science": 2
+     },
+     "students": 3203
+    },
+    {
+     "name": "서현동",
+     "region": "경기-성남시",
+     "km": 3.2,
+     "academies": {
+      "all": 165,
+      "math": 60,
+      "english": 40,
+      "korean": 25,
+      "science": 10
+     },
+     "students": 5121
+    },
+    {
+     "name": "판교동",
+     "region": "경기-성남시",
+     "km": 3.4,
+     "academies": {
+      "all": 34,
+      "math": 15,
+      "english": 13,
+      "korean": 6,
+      "science": 0
+     },
+     "students": 3719
+    },
+    {
+     "name": "이매동",
+     "region": "경기-성남시",
+     "km": 3.6,
+     "academies": {
+      "all": 100,
+      "math": 35,
+      "english": 28,
+      "korean": 13,
+      "science": 2
+     },
+     "students": 5622
+    },
+    {
+     "name": "죽전동",
+     "region": "경기-용인시",
+     "km": 4.0,
+     "academies": {
+      "all": 110,
+      "math": 46,
+      "english": 30,
+      "korean": 20,
+      "science": 1
+     },
+     "students": 7923
+    }
+   ]
   },
   {
    "name": "중동",
@@ -8507,7 +11612,165 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "중동",
+     "region": "경기-부천시",
+     "km": 0.0,
+     "academies": {
+      "all": 288,
+      "math": 102,
+      "english": 78,
+      "korean": 40,
+      "science": 10
+     },
+     "students": 16117
+    },
+    {
+     "name": "하중동",
+     "region": "경기-시흥시",
+     "km": 0.0,
+     "academies": {
+      "all": 8,
+      "math": 2,
+      "english": 1,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 246
+    },
+    {
+     "name": "중동",
+     "region": "경기-용인시",
+     "km": 0.0,
+     "academies": {
+      "all": 104,
+      "math": 39,
+      "english": 22,
+      "korean": 20,
+      "science": 3
+     },
+     "students": 5439
+    },
+    {
+     "name": "약대동",
+     "region": "경기-부천시",
+     "km": 1.4,
+     "academies": {
+      "all": 15,
+      "math": 3,
+      "english": 7,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 620
+    },
+    {
+     "name": "상동",
+     "region": "경기-부천시",
+     "km": 1.5,
+     "academies": {
+      "all": 269,
+      "math": 76,
+      "english": 82,
+      "korean": 35,
+      "science": 12
+     },
+     "students": 9414
+    },
+    {
+     "name": "하상동",
+     "region": "경기-시흥시",
+     "km": 1.5,
+     "academies": {
+      "all": 14,
+      "math": 6,
+      "english": 5,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 1324
+    },
+    {
+     "name": "상동",
+     "region": "경기-여주시",
+     "km": 1.5,
+     "academies": {
+      "all": 6,
+      "math": 3,
+      "english": 1,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 1014
+    },
+    {
+     "name": "심곡동",
+     "region": "경기-부천시",
+     "km": 1.9,
+     "academies": {
+      "all": 36,
+      "math": 7,
+      "english": 8,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 3075
+    },
+    {
+     "name": "심곡동",
+     "region": "경기-성남시",
+     "km": 1.9,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 528
+    },
+    {
+     "name": "도당동",
+     "region": "경기-부천시",
+     "km": 2.1,
+     "academies": {
+      "all": 13,
+      "math": 1,
+      "english": 4,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 2767
+    },
+    {
+     "name": "원미동",
+     "region": "경기-부천시",
+     "km": 2.3,
+     "academies": {
+      "all": 16,
+      "math": 1,
+      "english": 1,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 1253
+    },
+    {
+     "name": "송내동",
+     "region": "경기-부천시",
+     "km": 2.4,
+     "academies": {
+      "all": 51,
+      "math": 23,
+      "english": 14,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 4050
+    }
+   ]
   },
   {
    "name": "중앙동",
@@ -8794,7 +12057,165 @@
       87
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "신흥동",
+     "region": "경기-성남시",
+     "km": 0.9,
+     "academies": {
+      "all": 52,
+      "math": 16,
+      "english": 13,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 1676
+    },
+    {
+     "name": "상대원동",
+     "region": "경기-성남시",
+     "km": 1.1,
+     "academies": {
+      "all": 13,
+      "math": 6,
+      "english": 3,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 687
+    },
+    {
+     "name": "하대원동",
+     "region": "경기-성남시",
+     "km": 1.6,
+     "academies": {
+      "all": 24,
+      "math": 9,
+      "english": 1,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 1224
+    },
+    {
+     "name": "금광동",
+     "region": "경기-성남시",
+     "km": 1.6,
+     "academies": {
+      "all": 67,
+      "math": 27,
+      "english": 21,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 3971
+    },
+    {
+     "name": "단대동",
+     "region": "경기-성남시",
+     "km": 1.6,
+     "academies": {
+      "all": 21,
+      "math": 10,
+      "english": 8,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 2128
+    },
+    {
+     "name": "수진동",
+     "region": "경기-성남시",
+     "km": 2.1,
+     "academies": {
+      "all": 17,
+      "math": 6,
+      "english": 6,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 1878
+    },
+    {
+     "name": "성남동",
+     "region": "경기-성남시",
+     "km": 2.1,
+     "academies": {
+      "all": 37,
+      "math": 12,
+      "english": 9,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 3917
+    },
+    {
+     "name": "태평동",
+     "region": "경기-성남시",
+     "km": 2.1,
+     "academies": {
+      "all": 37,
+      "math": 12,
+      "english": 9,
+      "korean": 3,
+      "science": 1
+     },
+     "students": 1877
+    },
+    {
+     "name": "도촌동",
+     "region": "경기-성남시",
+     "km": 2.1,
+     "academies": {
+      "all": 26,
+      "math": 8,
+      "english": 10,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 1045
+    },
+    {
+     "name": "산성동",
+     "region": "경기-성남시",
+     "km": 2.2,
+     "academies": {
+      "all": 5,
+      "math": 2,
+      "english": 1,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 438
+    },
+    {
+     "name": "은행동",
+     "region": "경기-성남시",
+     "km": 2.6,
+     "academies": {
+      "all": 14,
+      "math": 4,
+      "english": 4,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 1042
+    },
+    {
+     "name": "양지동",
+     "region": "경기-성남시",
+     "km": 2.9,
+     "academies": {
+      "all": 5,
+      "math": 2,
+      "english": 2,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 201
+    }
+   ]
   },
   {
    "name": "창곡동",
@@ -9518,7 +12939,165 @@
       19
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "수진동",
+     "region": "경기-성남시",
+     "km": 1.2,
+     "academies": {
+      "all": 17,
+      "math": 6,
+      "english": 6,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 1878
+    },
+    {
+     "name": "복정동",
+     "region": "경기-성남시",
+     "km": 1.2,
+     "academies": {
+      "all": 4,
+      "math": 2,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 962
+    },
+    {
+     "name": "신흥동",
+     "region": "경기-성남시",
+     "km": 1.3,
+     "academies": {
+      "all": 52,
+      "math": 16,
+      "english": 13,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 1676
+    },
+    {
+     "name": "성남동",
+     "region": "경기-성남시",
+     "km": 1.9,
+     "academies": {
+      "all": 37,
+      "math": 12,
+      "english": 9,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 3917
+    },
+    {
+     "name": "중앙동",
+     "region": "경기-성남시",
+     "km": 2.1,
+     "academies": {
+      "all": 14,
+      "math": 3,
+      "english": 5,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 577
+    },
+    {
+     "name": "단대동",
+     "region": "경기-성남시",
+     "km": 2.2,
+     "academies": {
+      "all": 21,
+      "math": 10,
+      "english": 8,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 2128
+    },
+    {
+     "name": "산성동",
+     "region": "경기-성남시",
+     "km": 2.2,
+     "academies": {
+      "all": 5,
+      "math": 2,
+      "english": 1,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 438
+    },
+    {
+     "name": "하대원동",
+     "region": "경기-성남시",
+     "km": 2.6,
+     "academies": {
+      "all": 24,
+      "math": 9,
+      "english": 1,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 1224
+    },
+    {
+     "name": "상대원동",
+     "region": "경기-성남시",
+     "km": 3.2,
+     "academies": {
+      "all": 13,
+      "math": 6,
+      "english": 3,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 687
+    },
+    {
+     "name": "금광동",
+     "region": "경기-성남시",
+     "km": 3.2,
+     "academies": {
+      "all": 67,
+      "math": 27,
+      "english": 21,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 3971
+    },
+    {
+     "name": "양지동",
+     "region": "경기-성남시",
+     "km": 3.4,
+     "academies": {
+      "all": 5,
+      "math": 2,
+      "english": 2,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 201
+    },
+    {
+     "name": "세곡동",
+     "region": "서울-강남구",
+     "km": 3.4,
+     "academies": {
+      "all": 19,
+      "math": 7,
+      "english": 8,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 986
+    }
+   ]
   },
   {
    "name": "판교동",
@@ -9841,7 +13420,113 @@
       91
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "백현동",
+     "region": "경기-성남시",
+     "km": 1.8,
+     "academies": {
+      "all": 29,
+      "math": 9,
+      "english": 10,
+      "korean": 2,
+      "science": 2
+     },
+     "students": 3203
+    },
+    {
+     "name": "삼평동",
+     "region": "경기-성남시",
+     "km": 2.5,
+     "academies": {
+      "all": 39,
+      "math": 13,
+      "english": 12,
+      "korean": 6,
+      "science": 1
+     },
+     "students": 2870
+    },
+    {
+     "name": "시흥동",
+     "region": "경기-성남시",
+     "km": 2.9,
+     "academies": {
+      "all": 1,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 0
+    },
+    {
+     "name": "운중동",
+     "region": "경기-성남시",
+     "km": 3.1,
+     "academies": {
+      "all": 46,
+      "math": 11,
+      "english": 16,
+      "korean": 6,
+      "science": 0
+     },
+     "students": 2180
+    },
+    {
+     "name": "금곡동",
+     "region": "경기-성남시",
+     "km": 3.3,
+     "academies": {
+      "all": 54,
+      "math": 15,
+      "english": 13,
+      "korean": 9,
+      "science": 2
+     },
+     "students": 664
+    },
+    {
+     "name": "정자동",
+     "region": "경기-성남시",
+     "km": 3.4,
+     "academies": {
+      "all": 285,
+      "math": 81,
+      "english": 42,
+      "korean": 42,
+      "science": 9
+     },
+     "students": 8970
+    },
+    {
+     "name": "이매동",
+     "region": "경기-성남시",
+     "km": 3.4,
+     "academies": {
+      "all": 100,
+      "math": 35,
+      "english": 28,
+      "korean": 13,
+      "science": 2
+     },
+     "students": 5622
+    },
+    {
+     "name": "수내동",
+     "region": "경기-성남시",
+     "km": 3.5,
+     "academies": {
+      "all": 309,
+      "math": 109,
+      "english": 74,
+      "korean": 58,
+      "science": 15
+     },
+     "students": 7205
+    }
+   ]
   },
   {
    "name": "하대원동",
@@ -10116,7 +13801,165 @@
       77
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "성남동",
+     "region": "경기-성남시",
+     "km": 1.1,
+     "academies": {
+      "all": 37,
+      "math": 12,
+      "english": 9,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 3917
+    },
+    {
+     "name": "도촌동",
+     "region": "경기-성남시",
+     "km": 1.4,
+     "academies": {
+      "all": 26,
+      "math": 8,
+      "english": 10,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 1045
+    },
+    {
+     "name": "중앙동",
+     "region": "경기-성남시",
+     "km": 1.6,
+     "academies": {
+      "all": 14,
+      "math": 3,
+      "english": 5,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 577
+    },
+    {
+     "name": "수진동",
+     "region": "경기-성남시",
+     "km": 1.7,
+     "academies": {
+      "all": 17,
+      "math": 6,
+      "english": 6,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 1878
+    },
+    {
+     "name": "신흥동",
+     "region": "경기-성남시",
+     "km": 1.9,
+     "academies": {
+      "all": 52,
+      "math": 16,
+      "english": 13,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 1676
+    },
+    {
+     "name": "야탑동",
+     "region": "경기-성남시",
+     "km": 2.3,
+     "academies": {
+      "all": 91,
+      "math": 31,
+      "english": 31,
+      "korean": 19,
+      "science": 3
+     },
+     "students": 6431
+    },
+    {
+     "name": "상대원동",
+     "region": "경기-성남시",
+     "km": 2.3,
+     "academies": {
+      "all": 13,
+      "math": 6,
+      "english": 3,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 687
+    },
+    {
+     "name": "태평동",
+     "region": "경기-성남시",
+     "km": 2.6,
+     "academies": {
+      "all": 37,
+      "math": 12,
+      "english": 9,
+      "korean": 3,
+      "science": 1
+     },
+     "students": 1877
+    },
+    {
+     "name": "금광동",
+     "region": "경기-성남시",
+     "km": 3.1,
+     "academies": {
+      "all": 67,
+      "math": 27,
+      "english": 21,
+      "korean": 8,
+      "science": 0
+     },
+     "students": 3971
+    },
+    {
+     "name": "단대동",
+     "region": "경기-성남시",
+     "km": 3.1,
+     "academies": {
+      "all": 21,
+      "math": 10,
+      "english": 8,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 2128
+    },
+    {
+     "name": "산성동",
+     "region": "경기-성남시",
+     "km": 3.7,
+     "academies": {
+      "all": 5,
+      "math": 2,
+      "english": 1,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 438
+    },
+    {
+     "name": "이매동",
+     "region": "경기-성남시",
+     "km": 3.7,
+     "academies": {
+      "all": 100,
+      "math": 35,
+      "english": 28,
+      "korean": 13,
+      "science": 2
+     },
+     "students": 5622
+    }
+   ]
   }
  ]
 }

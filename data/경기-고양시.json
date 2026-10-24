@@ -430,7 +430,8 @@
       77
      ]
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "고양동",
@@ -731,7 +732,22 @@
       77
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "관산동",
+     "region": "경기-고양시",
+     "km": 3.2,
+     "academies": {
+      "all": 11,
+      "math": 3,
+      "english": 3,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 1784
+    }
+   ]
   },
   {
    "name": "관산동",
@@ -971,7 +987,22 @@
       2
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "고양동",
+     "region": "경기-고양시",
+     "km": 3.2,
+     "academies": {
+      "all": 26,
+      "math": 4,
+      "english": 6,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 2143
+    }
+   ]
   },
   {
    "name": "내유동",
@@ -1681,7 +1712,113 @@
       19
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "주엽동",
+     "region": "경기-고양시",
+     "km": 1.7,
+     "academies": {
+      "all": 130,
+      "math": 45,
+      "english": 39,
+      "korean": 21,
+      "science": 3
+     },
+     "students": 6671
+    },
+    {
+     "name": "덕이동",
+     "region": "경기-고양시",
+     "km": 2.2,
+     "academies": {
+      "all": 40,
+      "math": 12,
+      "english": 7,
+      "korean": 9,
+      "science": 1
+     },
+     "students": 4433
+    },
+    {
+     "name": "일산동",
+     "region": "경기-고양시",
+     "km": 2.5,
+     "academies": {
+      "all": 307,
+      "math": 114,
+      "english": 70,
+      "korean": 82,
+      "science": 17
+     },
+     "students": 4556
+    },
+    {
+     "name": "정발산동",
+     "region": "경기-고양시",
+     "km": 2.8,
+     "academies": {
+      "all": 18,
+      "math": 9,
+      "english": 3,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 1427
+    },
+    {
+     "name": "탄현동",
+     "region": "경기-고양시",
+     "km": 3.1,
+     "academies": {
+      "all": 63,
+      "math": 21,
+      "english": 17,
+      "korean": 16,
+      "science": 1
+     },
+     "students": 4557
+    },
+    {
+     "name": "중산동",
+     "region": "경기-고양시",
+     "km": 3.6,
+     "academies": {
+      "all": 54,
+      "math": 23,
+      "english": 16,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 4861
+    },
+    {
+     "name": "장항동",
+     "region": "경기-고양시",
+     "km": 3.7,
+     "academies": {
+      "all": 40,
+      "math": 12,
+      "english": 12,
+      "korean": 8,
+      "science": 1
+     },
+     "students": 2029
+    },
+    {
+     "name": "마두동",
+     "region": "경기-고양시",
+     "km": 3.9,
+     "academies": {
+      "all": 245,
+      "math": 84,
+      "english": 61,
+      "korean": 56,
+      "science": 9
+     },
+     "students": 5904
+    }
+   ]
   },
   {
    "name": "덕은동",
@@ -2345,7 +2482,87 @@
       19
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "탄현동",
+     "region": "경기-고양시",
+     "km": 1.9,
+     "academies": {
+      "all": 63,
+      "math": 21,
+      "english": 17,
+      "korean": 16,
+      "science": 1
+     },
+     "students": 4557
+    },
+    {
+     "name": "대화동",
+     "region": "경기-고양시",
+     "km": 2.2,
+     "academies": {
+      "all": 59,
+      "math": 18,
+      "english": 13,
+      "korean": 9,
+      "science": 3
+     },
+     "students": 5139
+    },
+    {
+     "name": "일산동",
+     "region": "경기-고양시",
+     "km": 2.3,
+     "academies": {
+      "all": 307,
+      "math": 114,
+      "english": 70,
+      "korean": 82,
+      "science": 17
+     },
+     "students": 4556
+    },
+    {
+     "name": "주엽동",
+     "region": "경기-고양시",
+     "km": 3.2,
+     "academies": {
+      "all": 130,
+      "math": 45,
+      "english": 39,
+      "korean": 21,
+      "science": 3
+     },
+     "students": 6671
+    },
+    {
+     "name": "중산동",
+     "region": "경기-고양시",
+     "km": 3.4,
+     "academies": {
+      "all": 54,
+      "math": 23,
+      "english": 16,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 4861
+    },
+    {
+     "name": "정발산동",
+     "region": "경기-고양시",
+     "km": 3.8,
+     "academies": {
+      "all": 18,
+      "math": 9,
+      "english": 3,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 1427
+    }
+   ]
   },
   {
    "name": "도내동",
@@ -3440,7 +3657,139 @@
       89
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "장항동",
+     "region": "경기-고양시",
+     "km": 1.4,
+     "academies": {
+      "all": 40,
+      "math": 12,
+      "english": 12,
+      "korean": 8,
+      "science": 1
+     },
+     "students": 2029
+    },
+    {
+     "name": "정발산동",
+     "region": "경기-고양시",
+     "km": 1.5,
+     "academies": {
+      "all": 18,
+      "math": 9,
+      "english": 3,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 1427
+    },
+    {
+     "name": "백석동",
+     "region": "경기-고양시",
+     "km": 1.5,
+     "academies": {
+      "all": 17,
+      "math": 2,
+      "english": 10,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 3116
+    },
+    {
+     "name": "풍산동",
+     "region": "경기-하남시",
+     "km": 2.1,
+     "academies": {
+      "all": 134,
+      "math": 51,
+      "english": 27,
+      "korean": 31,
+      "science": 4
+     },
+     "students": 2864
+    },
+    {
+     "name": "주엽동",
+     "region": "경기-고양시",
+     "km": 2.2,
+     "academies": {
+      "all": 130,
+      "math": 45,
+      "english": 39,
+      "korean": 21,
+      "science": 3
+     },
+     "students": 6671
+    },
+    {
+     "name": "중산동",
+     "region": "경기-고양시",
+     "km": 3.2,
+     "academies": {
+      "all": 54,
+      "math": 23,
+      "english": 16,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 4861
+    },
+    {
+     "name": "일산동",
+     "region": "경기-고양시",
+     "km": 3.4,
+     "academies": {
+      "all": 307,
+      "math": 114,
+      "english": 70,
+      "korean": 82,
+      "science": 17
+     },
+     "students": 4556
+    },
+    {
+     "name": "식사동",
+     "region": "경기-고양시",
+     "km": 3.7,
+     "academies": {
+      "all": 82,
+      "math": 28,
+      "english": 19,
+      "korean": 21,
+      "science": 2
+     },
+     "students": 5478
+    },
+    {
+     "name": "대화동",
+     "region": "경기-고양시",
+     "km": 3.9,
+     "academies": {
+      "all": 59,
+      "math": 18,
+      "english": 13,
+      "korean": 9,
+      "science": 3
+     },
+     "students": 5139
+    },
+    {
+     "name": "주교동",
+     "region": "경기-고양시",
+     "km": 3.9,
+     "academies": {
+      "all": 7,
+      "math": 3,
+      "english": 2,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 396
+    }
+   ]
   },
   {
    "name": "문봉동",
@@ -3857,7 +4206,87 @@
       89
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "마두동",
+     "region": "경기-고양시",
+     "km": 1.5,
+     "academies": {
+      "all": 245,
+      "math": 84,
+      "english": 61,
+      "korean": 56,
+      "science": 9
+     },
+     "students": 5904
+    },
+    {
+     "name": "장항동",
+     "region": "경기-고양시",
+     "km": 1.7,
+     "academies": {
+      "all": 40,
+      "math": 12,
+      "english": 12,
+      "korean": 8,
+      "science": 1
+     },
+     "students": 2029
+    },
+    {
+     "name": "풍산동",
+     "region": "경기-하남시",
+     "km": 2.5,
+     "academies": {
+      "all": 134,
+      "math": 51,
+      "english": 27,
+      "korean": 31,
+      "science": 4
+     },
+     "students": 2864
+    },
+    {
+     "name": "정발산동",
+     "region": "경기-고양시",
+     "km": 3.1,
+     "academies": {
+      "all": 18,
+      "math": 9,
+      "english": 3,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 1427
+    },
+    {
+     "name": "주엽동",
+     "region": "경기-고양시",
+     "km": 3.6,
+     "academies": {
+      "all": 130,
+      "math": 45,
+      "english": 39,
+      "korean": 21,
+      "science": 3
+     },
+     "students": 6671
+    },
+    {
+     "name": "주교동",
+     "region": "경기-고양시",
+     "km": 3.8,
+     "academies": {
+      "all": 7,
+      "math": 3,
+      "english": 2,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 396
+    }
+   ]
   },
   {
    "name": "사리현동",
@@ -4290,7 +4719,8 @@
       19
      ]
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "성사동",
@@ -4615,7 +5045,87 @@
       19
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "주교동",
+     "region": "경기-고양시",
+     "km": 1.6,
+     "academies": {
+      "all": 7,
+      "math": 3,
+      "english": 2,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 396
+    },
+    {
+     "name": "화정동",
+     "region": "경기-고양시",
+     "km": 2.0,
+     "academies": {
+      "all": 187,
+      "math": 55,
+      "english": 50,
+      "korean": 32,
+      "science": 6
+     },
+     "students": 5914
+    },
+    {
+     "name": "화정동",
+     "region": "경기-안산시",
+     "km": 2.0,
+     "academies": {
+      "all": 1,
+      "math": 0,
+      "english": 0,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 0
+    },
+    {
+     "name": "풍산동",
+     "region": "경기-하남시",
+     "km": 3.5,
+     "academies": {
+      "all": 134,
+      "math": 51,
+      "english": 27,
+      "korean": 31,
+      "science": 4
+     },
+     "students": 2864
+    },
+    {
+     "name": "식사동",
+     "region": "경기-고양시",
+     "km": 3.6,
+     "academies": {
+      "all": 82,
+      "math": 28,
+      "english": 19,
+      "korean": 21,
+      "science": 2
+     },
+     "students": 5478
+    },
+    {
+     "name": "행신동",
+     "region": "경기-고양시",
+     "km": 3.9,
+     "academies": {
+      "all": 117,
+      "math": 35,
+      "english": 28,
+      "korean": 19,
+      "science": 2
+     },
+     "students": 7029
+    }
+   ]
   },
   {
    "name": "식사동",
@@ -4954,7 +5464,100 @@
       37
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "풍산동",
+     "region": "경기-하남시",
+     "km": 2.1,
+     "academies": {
+      "all": 134,
+      "math": 51,
+      "english": 27,
+      "korean": 31,
+      "science": 4
+     },
+     "students": 2864
+    },
+    {
+     "name": "주교동",
+     "region": "경기-고양시",
+     "km": 2.3,
+     "academies": {
+      "all": 7,
+      "math": 3,
+      "english": 2,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 396
+    },
+    {
+     "name": "중산동",
+     "region": "경기-고양시",
+     "km": 2.8,
+     "academies": {
+      "all": 54,
+      "math": 23,
+      "english": 16,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 4861
+    },
+    {
+     "name": "정발산동",
+     "region": "경기-고양시",
+     "km": 3.5,
+     "academies": {
+      "all": 18,
+      "math": 9,
+      "english": 3,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 1427
+    },
+    {
+     "name": "성사동",
+     "region": "경기-고양시",
+     "km": 3.6,
+     "academies": {
+      "all": 42,
+      "math": 12,
+      "english": 12,
+      "korean": 7,
+      "science": 0
+     },
+     "students": 1978
+    },
+    {
+     "name": "마두동",
+     "region": "경기-고양시",
+     "km": 3.7,
+     "academies": {
+      "all": 245,
+      "math": 84,
+      "english": 61,
+      "korean": 56,
+      "science": 9
+     },
+     "students": 5904
+    },
+    {
+     "name": "일산동",
+     "region": "경기-고양시",
+     "km": 4.0,
+     "academies": {
+      "all": 307,
+      "math": 114,
+      "english": 70,
+      "korean": 82,
+      "science": 17
+     },
+     "students": 4556
+    }
+   ]
   },
   {
    "name": "신원동",
@@ -5450,7 +6053,61 @@
       37
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "수리동",
+     "region": "경기-군포시",
+     "km": 0.9,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 79
+    },
+    {
+     "name": "금정동",
+     "region": "경기-군포시",
+     "km": 2.4,
+     "academies": {
+      "all": 29,
+      "math": 8,
+      "english": 15,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 3819
+    },
+    {
+     "name": "산본동",
+     "region": "경기-군포시",
+     "km": 2.6,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 284
+    },
+    {
+     "name": "호계동",
+     "region": "경기-안양시",
+     "km": 3.4,
+     "academies": {
+      "all": 341,
+      "math": 116,
+      "english": 81,
+      "korean": 53,
+      "science": 17
+     },
+     "students": 8991
+    }
+   ]
   },
   {
    "name": "용두동",
@@ -6317,7 +6974,113 @@
       91
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "탄현동",
+     "region": "경기-고양시",
+     "km": 1.2,
+     "academies": {
+      "all": 63,
+      "math": 21,
+      "english": 17,
+      "korean": 16,
+      "science": 1
+     },
+     "students": 4557
+    },
+    {
+     "name": "중산동",
+     "region": "경기-고양시",
+     "km": 1.2,
+     "academies": {
+      "all": 54,
+      "math": 23,
+      "english": 16,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 4861
+    },
+    {
+     "name": "정발산동",
+     "region": "경기-고양시",
+     "km": 1.9,
+     "academies": {
+      "all": 18,
+      "math": 9,
+      "english": 3,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 1427
+    },
+    {
+     "name": "주엽동",
+     "region": "경기-고양시",
+     "km": 2.1,
+     "academies": {
+      "all": 130,
+      "math": 45,
+      "english": 39,
+      "korean": 21,
+      "science": 3
+     },
+     "students": 6671
+    },
+    {
+     "name": "덕이동",
+     "region": "경기-고양시",
+     "km": 2.3,
+     "academies": {
+      "all": 40,
+      "math": 12,
+      "english": 7,
+      "korean": 9,
+      "science": 1
+     },
+     "students": 4433
+    },
+    {
+     "name": "대화동",
+     "region": "경기-고양시",
+     "km": 2.5,
+     "academies": {
+      "all": 59,
+      "math": 18,
+      "english": 13,
+      "korean": 9,
+      "science": 3
+     },
+     "students": 5139
+    },
+    {
+     "name": "마두동",
+     "region": "경기-고양시",
+     "km": 3.4,
+     "academies": {
+      "all": 245,
+      "math": 84,
+      "english": 61,
+      "korean": 56,
+      "science": 9
+     },
+     "students": 5904
+    },
+    {
+     "name": "식사동",
+     "region": "경기-고양시",
+     "km": 4.0,
+     "academies": {
+      "all": 82,
+      "math": 28,
+      "english": 19,
+      "korean": 21,
+      "science": 2
+     },
+     "students": 5478
+    }
+   ]
   },
   {
    "name": "장항동",
@@ -6669,7 +7432,87 @@
       19
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "마두동",
+     "region": "경기-고양시",
+     "km": 1.4,
+     "academies": {
+      "all": 245,
+      "math": 84,
+      "english": 61,
+      "korean": 56,
+      "science": 9
+     },
+     "students": 5904
+    },
+    {
+     "name": "백석동",
+     "region": "경기-고양시",
+     "km": 1.7,
+     "academies": {
+      "all": 17,
+      "math": 2,
+      "english": 10,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 3116
+    },
+    {
+     "name": "주엽동",
+     "region": "경기-고양시",
+     "km": 2.3,
+     "academies": {
+      "all": 130,
+      "math": 45,
+      "english": 39,
+      "korean": 21,
+      "science": 3
+     },
+     "students": 6671
+    },
+    {
+     "name": "정발산동",
+     "region": "경기-고양시",
+     "km": 2.4,
+     "academies": {
+      "all": 18,
+      "math": 9,
+      "english": 3,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 1427
+    },
+    {
+     "name": "풍산동",
+     "region": "경기-하남시",
+     "km": 3.4,
+     "academies": {
+      "all": 134,
+      "math": 51,
+      "english": 27,
+      "korean": 31,
+      "science": 4
+     },
+     "students": 2864
+    },
+    {
+     "name": "대화동",
+     "region": "경기-고양시",
+     "km": 3.7,
+     "academies": {
+      "all": 59,
+      "math": 18,
+      "english": 13,
+      "korean": 9,
+      "science": 3
+     },
+     "students": 5139
+    }
+   ]
   },
   {
    "name": "정발산동",
@@ -6940,7 +7783,152 @@
       77
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "주엽동",
+     "region": "경기-고양시",
+     "km": 1.3,
+     "academies": {
+      "all": 130,
+      "math": 45,
+      "english": 39,
+      "korean": 21,
+      "science": 3
+     },
+     "students": 6671
+    },
+    {
+     "name": "마두동",
+     "region": "경기-고양시",
+     "km": 1.5,
+     "academies": {
+      "all": 245,
+      "math": 84,
+      "english": 61,
+      "korean": 56,
+      "science": 9
+     },
+     "students": 5904
+    },
+    {
+     "name": "일산동",
+     "region": "경기-고양시",
+     "km": 1.9,
+     "academies": {
+      "all": 307,
+      "math": 114,
+      "english": 70,
+      "korean": 82,
+      "science": 17
+     },
+     "students": 4556
+    },
+    {
+     "name": "중산동",
+     "region": "경기-고양시",
+     "km": 1.9,
+     "academies": {
+      "all": 54,
+      "math": 23,
+      "english": 16,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 4861
+    },
+    {
+     "name": "장항동",
+     "region": "경기-고양시",
+     "km": 2.4,
+     "academies": {
+      "all": 40,
+      "math": 12,
+      "english": 12,
+      "korean": 8,
+      "science": 1
+     },
+     "students": 2029
+    },
+    {
+     "name": "풍산동",
+     "region": "경기-하남시",
+     "km": 2.7,
+     "academies": {
+      "all": 134,
+      "math": 51,
+      "english": 27,
+      "korean": 31,
+      "science": 4
+     },
+     "students": 2864
+    },
+    {
+     "name": "대화동",
+     "region": "경기-고양시",
+     "km": 2.8,
+     "academies": {
+      "all": 59,
+      "math": 18,
+      "english": 13,
+      "korean": 9,
+      "science": 3
+     },
+     "students": 5139
+    },
+    {
+     "name": "탄현동",
+     "region": "경기-고양시",
+     "km": 3.0,
+     "academies": {
+      "all": 63,
+      "math": 21,
+      "english": 17,
+      "korean": 16,
+      "science": 1
+     },
+     "students": 4557
+    },
+    {
+     "name": "백석동",
+     "region": "경기-고양시",
+     "km": 3.1,
+     "academies": {
+      "all": 17,
+      "math": 2,
+      "english": 10,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 3116
+    },
+    {
+     "name": "식사동",
+     "region": "경기-고양시",
+     "km": 3.5,
+     "academies": {
+      "all": 82,
+      "math": 28,
+      "english": 19,
+      "korean": 21,
+      "science": 2
+     },
+     "students": 5478
+    },
+    {
+     "name": "덕이동",
+     "region": "경기-고양시",
+     "km": 3.8,
+     "academies": {
+      "all": 40,
+      "math": 12,
+      "english": 7,
+      "korean": 9,
+      "science": 1
+     },
+     "students": 4433
+    }
+   ]
   },
   {
    "name": "주교동",
@@ -7150,7 +8138,100 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "성사동",
+     "region": "경기-고양시",
+     "km": 1.6,
+     "academies": {
+      "all": 42,
+      "math": 12,
+      "english": 12,
+      "korean": 7,
+      "science": 0
+     },
+     "students": 1978
+    },
+    {
+     "name": "풍산동",
+     "region": "경기-하남시",
+     "km": 1.9,
+     "academies": {
+      "all": 134,
+      "math": 51,
+      "english": 27,
+      "korean": 31,
+      "science": 4
+     },
+     "students": 2864
+    },
+    {
+     "name": "식사동",
+     "region": "경기-고양시",
+     "km": 2.3,
+     "academies": {
+      "all": 82,
+      "math": 28,
+      "english": 19,
+      "korean": 21,
+      "science": 2
+     },
+     "students": 5478
+    },
+    {
+     "name": "화정동",
+     "region": "경기-고양시",
+     "km": 2.6,
+     "academies": {
+      "all": 187,
+      "math": 55,
+      "english": 50,
+      "korean": 32,
+      "science": 6
+     },
+     "students": 5914
+    },
+    {
+     "name": "화정동",
+     "region": "경기-안산시",
+     "km": 2.6,
+     "academies": {
+      "all": 1,
+      "math": 0,
+      "english": 0,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 0
+    },
+    {
+     "name": "백석동",
+     "region": "경기-고양시",
+     "km": 3.8,
+     "academies": {
+      "all": 17,
+      "math": 2,
+      "english": 10,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 3116
+    },
+    {
+     "name": "마두동",
+     "region": "경기-고양시",
+     "km": 3.9,
+     "academies": {
+      "all": 245,
+      "math": 84,
+      "english": 61,
+      "korean": 56,
+      "science": 9
+     },
+     "students": 5904
+    }
+   ]
   },
   {
    "name": "주엽동",
@@ -7549,7 +8630,139 @@
       67
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "정발산동",
+     "region": "경기-고양시",
+     "km": 1.3,
+     "academies": {
+      "all": 18,
+      "math": 9,
+      "english": 3,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 1427
+    },
+    {
+     "name": "대화동",
+     "region": "경기-고양시",
+     "km": 1.7,
+     "academies": {
+      "all": 59,
+      "math": 18,
+      "english": 13,
+      "korean": 9,
+      "science": 3
+     },
+     "students": 5139
+    },
+    {
+     "name": "일산동",
+     "region": "경기-고양시",
+     "km": 2.1,
+     "academies": {
+      "all": 307,
+      "math": 114,
+      "english": 70,
+      "korean": 82,
+      "science": 17
+     },
+     "students": 4556
+    },
+    {
+     "name": "마두동",
+     "region": "경기-고양시",
+     "km": 2.2,
+     "academies": {
+      "all": 245,
+      "math": 84,
+      "english": 61,
+      "korean": 56,
+      "science": 9
+     },
+     "students": 5904
+    },
+    {
+     "name": "장항동",
+     "region": "경기-고양시",
+     "km": 2.3,
+     "academies": {
+      "all": 40,
+      "math": 12,
+      "english": 12,
+      "korean": 8,
+      "science": 1
+     },
+     "students": 2029
+    },
+    {
+     "name": "중산동",
+     "region": "경기-고양시",
+     "km": 2.8,
+     "academies": {
+      "all": 54,
+      "math": 23,
+      "english": 16,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 4861
+    },
+    {
+     "name": "탄현동",
+     "region": "경기-고양시",
+     "km": 3.2,
+     "academies": {
+      "all": 63,
+      "math": 21,
+      "english": 17,
+      "korean": 16,
+      "science": 1
+     },
+     "students": 4557
+    },
+    {
+     "name": "덕이동",
+     "region": "경기-고양시",
+     "km": 3.2,
+     "academies": {
+      "all": 40,
+      "math": 12,
+      "english": 7,
+      "korean": 9,
+      "science": 1
+     },
+     "students": 4433
+    },
+    {
+     "name": "백석동",
+     "region": "경기-고양시",
+     "km": 3.6,
+     "academies": {
+      "all": 17,
+      "math": 2,
+      "english": 10,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 3116
+    },
+    {
+     "name": "풍산동",
+     "region": "경기-하남시",
+     "km": 3.9,
+     "academies": {
+      "all": 134,
+      "math": 51,
+      "english": 27,
+      "korean": 31,
+      "science": 4
+     },
+     "students": 2864
+    }
+   ]
   },
   {
    "name": "중산동",
@@ -7909,7 +9122,126 @@
       58
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "일산동",
+     "region": "경기-고양시",
+     "km": 1.2,
+     "academies": {
+      "all": 307,
+      "math": 114,
+      "english": 70,
+      "korean": 82,
+      "science": 17
+     },
+     "students": 4556
+    },
+    {
+     "name": "탄현동",
+     "region": "경기-고양시",
+     "km": 1.8,
+     "academies": {
+      "all": 63,
+      "math": 21,
+      "english": 17,
+      "korean": 16,
+      "science": 1
+     },
+     "students": 4557
+    },
+    {
+     "name": "정발산동",
+     "region": "경기-고양시",
+     "km": 1.9,
+     "academies": {
+      "all": 18,
+      "math": 9,
+      "english": 3,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 1427
+    },
+    {
+     "name": "주엽동",
+     "region": "경기-고양시",
+     "km": 2.8,
+     "academies": {
+      "all": 130,
+      "math": 45,
+      "english": 39,
+      "korean": 21,
+      "science": 3
+     },
+     "students": 6671
+    },
+    {
+     "name": "식사동",
+     "region": "경기-고양시",
+     "km": 2.8,
+     "academies": {
+      "all": 82,
+      "math": 28,
+      "english": 19,
+      "korean": 21,
+      "science": 2
+     },
+     "students": 5478
+    },
+    {
+     "name": "마두동",
+     "region": "경기-고양시",
+     "km": 3.2,
+     "academies": {
+      "all": 245,
+      "math": 84,
+      "english": 61,
+      "korean": 56,
+      "science": 9
+     },
+     "students": 5904
+    },
+    {
+     "name": "풍산동",
+     "region": "경기-하남시",
+     "km": 3.2,
+     "academies": {
+      "all": 134,
+      "math": 51,
+      "english": 27,
+      "korean": 31,
+      "science": 4
+     },
+     "students": 2864
+    },
+    {
+     "name": "덕이동",
+     "region": "경기-고양시",
+     "km": 3.4,
+     "academies": {
+      "all": 40,
+      "math": 12,
+      "english": 7,
+      "korean": 9,
+      "science": 1
+     },
+     "students": 4433
+    },
+    {
+     "name": "대화동",
+     "region": "경기-고양시",
+     "km": 3.6,
+     "academies": {
+      "all": 59,
+      "math": 18,
+      "english": 13,
+      "korean": 9,
+      "science": 3
+     },
+     "students": 5139
+    }
+   ]
   },
   {
    "name": "지축동",
@@ -8580,7 +9912,87 @@
       46
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "일산동",
+     "region": "경기-고양시",
+     "km": 1.2,
+     "academies": {
+      "all": 307,
+      "math": 114,
+      "english": 70,
+      "korean": 82,
+      "science": 17
+     },
+     "students": 4556
+    },
+    {
+     "name": "중산동",
+     "region": "경기-고양시",
+     "km": 1.8,
+     "academies": {
+      "all": 54,
+      "math": 23,
+      "english": 16,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 4861
+    },
+    {
+     "name": "덕이동",
+     "region": "경기-고양시",
+     "km": 1.9,
+     "academies": {
+      "all": 40,
+      "math": 12,
+      "english": 7,
+      "korean": 9,
+      "science": 1
+     },
+     "students": 4433
+    },
+    {
+     "name": "정발산동",
+     "region": "경기-고양시",
+     "km": 3.0,
+     "academies": {
+      "all": 18,
+      "math": 9,
+      "english": 3,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 1427
+    },
+    {
+     "name": "대화동",
+     "region": "경기-고양시",
+     "km": 3.1,
+     "academies": {
+      "all": 59,
+      "math": 18,
+      "english": 13,
+      "korean": 9,
+      "science": 3
+     },
+     "students": 5139
+    },
+    {
+     "name": "주엽동",
+     "region": "경기-고양시",
+     "km": 3.2,
+     "academies": {
+      "all": 130,
+      "math": 45,
+      "english": 39,
+      "korean": 21,
+      "science": 3
+     },
+     "students": 6671
+    }
+   ]
   },
   {
    "name": "토당동",
@@ -9664,7 +11076,48 @@
       77
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "화정동",
+     "region": "경기-고양시",
+     "km": 2.1,
+     "academies": {
+      "all": 187,
+      "math": 55,
+      "english": 50,
+      "korean": 32,
+      "science": 6
+     },
+     "students": 5914
+    },
+    {
+     "name": "화정동",
+     "region": "경기-안산시",
+     "km": 2.1,
+     "academies": {
+      "all": 1,
+      "math": 0,
+      "english": 0,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 0
+    },
+    {
+     "name": "성사동",
+     "region": "경기-고양시",
+     "km": 3.9,
+     "academies": {
+      "all": 42,
+      "math": 12,
+      "english": 12,
+      "korean": 7,
+      "science": 0
+     },
+     "students": 1978
+    }
+   ]
   },
   {
    "name": "행주내동",
@@ -10305,7 +11758,139 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "신사동",
+     "region": "서울-은평구",
+     "km": 2.0,
+     "academies": {
+      "all": 36,
+      "math": 14,
+      "english": 7,
+      "korean": 6,
+      "science": 0
+     },
+     "students": 3386
+    },
+    {
+     "name": "구산동",
+     "region": "서울-은평구",
+     "km": 2.1,
+     "academies": {
+      "all": 45,
+      "math": 20,
+      "english": 11,
+      "korean": 10,
+      "science": 1
+     },
+     "students": 4729
+    },
+    {
+     "name": "역촌동",
+     "region": "서울-은평구",
+     "km": 2.2,
+     "academies": {
+      "all": 68,
+      "math": 24,
+      "english": 15,
+      "korean": 15,
+      "science": 1
+     },
+     "students": 930
+    },
+    {
+     "name": "수색동",
+     "region": "서울-은평구",
+     "km": 2.2,
+     "academies": {
+      "all": 11,
+      "math": 4,
+      "english": 4,
+      "korean": 3,
+      "science": 0
+     },
+     "students": 709
+    },
+    {
+     "name": "증산동",
+     "region": "서울-은평구",
+     "km": 2.9,
+     "academies": {
+      "all": 20,
+      "math": 10,
+      "english": 5,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 1088
+    },
+    {
+     "name": "갈현동",
+     "region": "서울-은평구",
+     "km": 3.0,
+     "academies": {
+      "all": 97,
+      "math": 30,
+      "english": 24,
+      "korean": 32,
+      "science": 4
+     },
+     "students": 5138
+    },
+    {
+     "name": "상암동",
+     "region": "서울-마포구",
+     "km": 3.4,
+     "academies": {
+      "all": 66,
+      "math": 32,
+      "english": 18,
+      "korean": 14,
+      "science": 1
+     },
+     "students": 2736
+    },
+    {
+     "name": "대조동",
+     "region": "서울-은평구",
+     "km": 3.4,
+     "academies": {
+      "all": 34,
+      "math": 7,
+      "english": 7,
+      "korean": 13,
+      "science": 1
+     },
+     "students": 1769
+    },
+    {
+     "name": "응암동",
+     "region": "서울-은평구",
+     "km": 3.5,
+     "academies": {
+      "all": 119,
+      "math": 41,
+      "english": 32,
+      "korean": 35,
+      "science": 6
+     },
+     "students": 5893
+    },
+    {
+     "name": "북가좌동",
+     "region": "서울-서대문구",
+     "km": 3.7,
+     "academies": {
+      "all": 84,
+      "math": 34,
+      "english": 19,
+      "korean": 22,
+      "science": 4
+     },
+     "students": 2183
+    }
+   ]
   },
   {
    "name": "화정동",
@@ -10711,7 +12296,74 @@
       67
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "화정동",
+     "region": "경기-안산시",
+     "km": 0.0,
+     "academies": {
+      "all": 1,
+      "math": 0,
+      "english": 0,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 0
+    },
+    {
+     "name": "성사동",
+     "region": "경기-고양시",
+     "km": 2.0,
+     "academies": {
+      "all": 42,
+      "math": 12,
+      "english": 12,
+      "korean": 7,
+      "science": 0
+     },
+     "students": 1978
+    },
+    {
+     "name": "행신동",
+     "region": "경기-고양시",
+     "km": 2.1,
+     "academies": {
+      "all": 117,
+      "math": 35,
+      "english": 28,
+      "korean": 19,
+      "science": 2
+     },
+     "students": 7029
+    },
+    {
+     "name": "주교동",
+     "region": "경기-고양시",
+     "km": 2.6,
+     "academies": {
+      "all": 7,
+      "math": 3,
+      "english": 2,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 396
+    },
+    {
+     "name": "풍산동",
+     "region": "경기-하남시",
+     "km": 3.9,
+     "academies": {
+      "all": 134,
+      "math": 51,
+      "english": 27,
+      "korean": 31,
+      "science": 4
+     },
+     "students": 2864
+    }
+   ]
   }
  ]
 }

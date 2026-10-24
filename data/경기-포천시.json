@@ -268,7 +268,8 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "관인면",
@@ -417,7 +418,8 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "군내면",
@@ -582,7 +584,22 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "군내면",
+     "region": "경기-파주시",
+     "km": 0.0,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 56
+    }
+   ]
   },
   {
    "name": "내촌면",
@@ -726,7 +743,8 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "선단동",
@@ -876,7 +894,8 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "소흘읍",
@@ -1237,7 +1256,8 @@
       37
      ]
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "신북면",
@@ -1401,7 +1421,8 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "신읍동",
@@ -1847,7 +1868,8 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "영중면",
@@ -1991,7 +2013,8 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "이동면",
@@ -2145,7 +2168,22 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "이동면",
+     "region": "경기-용인시",
+     "km": 0.0,
+     "academies": {
+      "all": 7,
+      "math": 2,
+      "english": 3,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 180
+    }
+   ]
   },
   {
    "name": "일동면",
@@ -2348,7 +2386,8 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "창수면",
@@ -2487,7 +2526,8 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "화현면",
@@ -2631,7 +2671,8 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": []
   }
  ]
 }

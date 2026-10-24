@@ -415,7 +415,61 @@
       12
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "쌍령동",
+     "region": "경기-광주시",
+     "km": 1.9,
+     "academies": {
+      "all": 14,
+      "math": 3,
+      "english": 5,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 879
+    },
+    {
+     "name": "송정동",
+     "region": "경기-광주시",
+     "km": 2.5,
+     "academies": {
+      "all": 22,
+      "math": 6,
+      "english": 5,
+      "korean": 1,
+      "science": 1
+     },
+     "students": 3973
+    },
+    {
+     "name": "송정동",
+     "region": "경기-이천시",
+     "km": 2.5,
+     "academies": {
+      "all": 35,
+      "math": 12,
+      "english": 8,
+      "korean": 4,
+      "science": 2
+     },
+     "students": 1796
+    },
+    {
+     "name": "탄벌동",
+     "region": "경기-광주시",
+     "km": 3.5,
+     "academies": {
+      "all": 35,
+      "math": 9,
+      "english": 10,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 2730
+    }
+   ]
   },
   {
    "name": "고산동",
@@ -676,7 +730,61 @@
       15
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "고산동",
+     "region": "경기-의정부시",
+     "km": 0.0,
+     "academies": {
+      "all": 14,
+      "math": 7,
+      "english": 5,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 2948
+    },
+    {
+     "name": "송산동",
+     "region": "경기-화성시",
+     "km": 2.2,
+     "academies": {
+      "all": 18,
+      "math": 6,
+      "english": 4,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 732
+    },
+    {
+     "name": "별내면",
+     "region": "경기-남양주시",
+     "km": 2.7,
+     "academies": {
+      "all": 19,
+      "math": 7,
+      "english": 6,
+      "korean": 0,
+      "science": 2
+     },
+     "students": 1366
+    },
+    {
+     "name": "신곡동",
+     "region": "경기-의정부시",
+     "km": 3.6,
+     "academies": {
+      "all": 144,
+      "math": 52,
+      "english": 38,
+      "korean": 21,
+      "science": 5
+     },
+     "students": 6899
+    }
+   ]
   },
   {
    "name": "곤지암읍",
@@ -950,7 +1058,8 @@
      "korean": 1,
      "science": 0
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "남종면",
@@ -1089,7 +1198,8 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "남한산성면",
@@ -1233,7 +1343,22 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "탄벌동",
+     "region": "경기-광주시",
+     "km": 2.9,
+     "academies": {
+      "all": 35,
+      "math": 9,
+      "english": 10,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 2730
+    }
+   ]
   },
   {
    "name": "능평동",
@@ -1509,7 +1634,48 @@
       98
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "신현동",
+     "region": "경기-광주시",
+     "km": 1.8,
+     "academies": {
+      "all": 14,
+      "math": 4,
+      "english": 7,
+      "korean": 1,
+      "science": 1
+     },
+     "students": 825
+    },
+    {
+     "name": "분당동",
+     "region": "경기-성남시",
+     "km": 3.0,
+     "academies": {
+      "all": 7,
+      "math": 5,
+      "english": 2,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 2483
+    },
+    {
+     "name": "서현동",
+     "region": "경기-성남시",
+     "km": 3.8,
+     "academies": {
+      "all": 165,
+      "math": 60,
+      "english": 40,
+      "korean": 25,
+      "science": 10
+     },
+     "students": 5121
+    }
+   ]
   },
   {
    "name": "도척면",
@@ -1667,7 +1833,8 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "매산동",
@@ -1809,7 +1976,165 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "고등동",
+     "region": "경기-수원시",
+     "km": 0.6,
+     "academies": {
+      "all": 20,
+      "math": 8,
+      "english": 8,
+      "korean": 1,
+      "science": 1
+     },
+     "students": 1777
+    },
+    {
+     "name": "매교동",
+     "region": "경기-수원시",
+     "km": 0.8,
+     "academies": {
+      "all": 36,
+      "math": 15,
+      "english": 14,
+      "korean": 7,
+      "science": 2
+     },
+     "students": 2502
+    },
+    {
+     "name": "세류동",
+     "region": "경기-수원시",
+     "km": 1.6,
+     "academies": {
+      "all": 37,
+      "math": 11,
+      "english": 11,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 2406
+    },
+    {
+     "name": "화서동",
+     "region": "경기-수원시",
+     "km": 1.7,
+     "academies": {
+      "all": 50,
+      "math": 19,
+      "english": 11,
+      "korean": 8,
+      "science": 2
+     },
+     "students": 6578
+    },
+    {
+     "name": "지동",
+     "region": "경기-수원시",
+     "km": 2.1,
+     "academies": {
+      "all": 5,
+      "math": 1,
+      "english": 1,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 239
+    },
+    {
+     "name": "지동",
+     "region": "경기-평택시",
+     "km": 2.1,
+     "academies": {
+      "all": 2,
+      "math": 0,
+      "english": 1,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 586
+    },
+    {
+     "name": "인계동",
+     "region": "경기-수원시",
+     "km": 2.1,
+     "academies": {
+      "all": 36,
+      "math": 14,
+      "english": 8,
+      "korean": 7,
+      "science": 2
+     },
+     "students": 2033
+    },
+    {
+     "name": "서둔동",
+     "region": "경기-수원시",
+     "km": 2.2,
+     "academies": {
+      "all": 6,
+      "math": 2,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 587
+    },
+    {
+     "name": "영화동",
+     "region": "경기-수원시",
+     "km": 2.4,
+     "academies": {
+      "all": 13,
+      "math": 3,
+      "english": 4,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 821
+    },
+    {
+     "name": "권선동",
+     "region": "경기-수원시",
+     "km": 2.8,
+     "academies": {
+      "all": 136,
+      "math": 41,
+      "english": 42,
+      "korean": 25,
+      "science": 3
+     },
+     "students": 9015
+    },
+    {
+     "name": "우만동",
+     "region": "경기-수원시",
+     "km": 3.0,
+     "academies": {
+      "all": 45,
+      "math": 9,
+      "english": 9,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 3304
+    },
+    {
+     "name": "정자동",
+     "region": "경기-수원시",
+     "km": 3.4,
+     "academies": {
+      "all": 215,
+      "math": 83,
+      "english": 50,
+      "korean": 34,
+      "science": 6
+     },
+     "students": 8780
+    }
+   ]
   },
   {
    "name": "문형동",
@@ -2262,7 +2587,61 @@
       88
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "송정동",
+     "region": "경기-이천시",
+     "km": 0.0,
+     "academies": {
+      "all": 35,
+      "math": 12,
+      "english": 8,
+      "korean": 4,
+      "science": 2
+     },
+     "students": 1796
+    },
+    {
+     "name": "쌍령동",
+     "region": "경기-광주시",
+     "km": 2.5,
+     "academies": {
+      "all": 14,
+      "math": 3,
+      "english": 5,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 879
+    },
+    {
+     "name": "경안동",
+     "region": "경기-광주시",
+     "km": 2.5,
+     "academies": {
+      "all": 47,
+      "math": 14,
+      "english": 15,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 1958
+    },
+    {
+     "name": "탄벌동",
+     "region": "경기-광주시",
+     "km": 3.1,
+     "academies": {
+      "all": 35,
+      "math": 9,
+      "english": 10,
+      "korean": 2,
+      "science": 0
+     },
+     "students": 2730
+    }
+   ]
   },
   {
    "name": "신현동",
@@ -2532,7 +2911,61 @@
       46
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "분당동",
+     "region": "경기-성남시",
+     "km": 1.5,
+     "academies": {
+      "all": 7,
+      "math": 5,
+      "english": 2,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 2483
+    },
+    {
+     "name": "능평동",
+     "region": "경기-광주시",
+     "km": 1.8,
+     "academies": {
+      "all": 13,
+      "math": 3,
+      "english": 3,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 678
+    },
+    {
+     "name": "서현동",
+     "region": "경기-성남시",
+     "km": 2.2,
+     "academies": {
+      "all": 165,
+      "math": 60,
+      "english": 40,
+      "korean": 25,
+      "science": 10
+     },
+     "students": 5121
+    },
+    {
+     "name": "수내동",
+     "region": "경기-성남시",
+     "km": 3.4,
+     "academies": {
+      "all": 309,
+      "math": 109,
+      "english": 74,
+      "korean": 58,
+      "science": 15
+     },
+     "students": 7205
+    }
+   ]
   },
   {
    "name": "실촌읍",
@@ -2939,7 +3372,61 @@
       19
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "경안동",
+     "region": "경기-광주시",
+     "km": 1.9,
+     "academies": {
+      "all": 47,
+      "math": 14,
+      "english": 15,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 1958
+    },
+    {
+     "name": "송정동",
+     "region": "경기-광주시",
+     "km": 2.5,
+     "academies": {
+      "all": 22,
+      "math": 6,
+      "english": 5,
+      "korean": 1,
+      "science": 1
+     },
+     "students": 3973
+    },
+    {
+     "name": "송정동",
+     "region": "경기-이천시",
+     "km": 2.5,
+     "academies": {
+      "all": 35,
+      "math": 12,
+      "english": 8,
+      "korean": 4,
+      "science": 2
+     },
+     "students": 1796
+    },
+    {
+     "name": "초월읍",
+     "region": "경기-광주시",
+     "km": 3.5,
+     "academies": {
+      "all": 48,
+      "math": 18,
+      "english": 12,
+      "korean": 8,
+      "science": 1
+     },
+     "students": 4269
+    }
+   ]
   },
   {
    "name": "양벌동",
@@ -4758,7 +5245,22 @@
       7
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "쌍령동",
+     "region": "경기-광주시",
+     "km": 3.5,
+     "academies": {
+      "all": 14,
+      "math": 3,
+      "english": 5,
+      "korean": 4,
+      "science": 0
+     },
+     "students": 879
+    }
+   ]
   },
   {
    "name": "탄벌동",
@@ -5064,7 +5566,61 @@
       95
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "남한산성면",
+     "region": "경기-광주시",
+     "km": 2.9,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 156
+    },
+    {
+     "name": "송정동",
+     "region": "경기-광주시",
+     "km": 3.1,
+     "academies": {
+      "all": 22,
+      "math": 6,
+      "english": 5,
+      "korean": 1,
+      "science": 1
+     },
+     "students": 3973
+    },
+    {
+     "name": "송정동",
+     "region": "경기-이천시",
+     "km": 3.1,
+     "academies": {
+      "all": 35,
+      "math": 12,
+      "english": 8,
+      "korean": 4,
+      "science": 2
+     },
+     "students": 1796
+    },
+    {
+     "name": "경안동",
+     "region": "경기-광주시",
+     "km": 3.5,
+     "academies": {
+      "all": 47,
+      "math": 14,
+      "english": 15,
+      "korean": 5,
+      "science": 0
+     },
+     "students": 1958
+    }
+   ]
   },
   {
    "name": "태전동",
@@ -5618,7 +6174,8 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "회덕동",

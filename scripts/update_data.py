@@ -24,6 +24,8 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
+import nearby
+
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 
@@ -256,11 +258,18 @@ def fetch_schools(key, province, neis_addresses):
     # 시군구 코드 없이 시도 전체도 한 번 요청합니다. 코드가 바뀐 지역(예: 2026년 화성시 구 신설)을 놓치지 않기 위해서입니다.
     sgg_codes = [""] + config["sgg"]
     address_of = {}
+    point_of = {}  # 학교 위치(위도, 경도). 동 사이 거리를 잴 때 씁니다.
     for sgg in sgg_codes:
         for kind in SCHOOL_KINDS.values():
             for row in schoolinfo_list(key, {
                 "apiType": "0", "sidoCode": config["sido"], "sggCode": sgg, "schulKndCode": kind,
             }):
+                if not point_of:
+                    print(f"  학교기본정보 항목: {', '.join(sorted(row))}")
+                lat = to_float(row.get("LTTUD") or row.get("LAT") or row.get("LATITUDE"))
+                lon = to_float(row.get("LGTUD") or row.get("LOT") or row.get("LON") or row.get("LONGITUDE"))
+                if 33 < lat < 39 and 124 < lon < 132:
+                    point_of[row.get("SCHUL_CODE")] = (lat, lon)
                 address_of[row.get("SCHUL_CODE")] = [
                     row.get("ADRES_BRKDN") or "",
                     f"{row.get('SCHUL_RDNMA') or ''} {row.get('SCHUL_RDNDA') or ''}".strip(),
@@ -290,6 +299,7 @@ def fetch_schools(key, province, neis_addresses):
                     address = next((a for a in candidates if area_of(a)), "")
                     schools[code] = {
                         "code": code, "name": name, "level": level, "address": address, "students": students, "sgg": sgg,
+                        "point": point_of.get(code),
                     }
             print(f"    {year}년 {sgg or '시도 전체'}: 새 학교 {len(schools) - before}곳")
         if schools:
@@ -316,6 +326,13 @@ def fetch_past_students(key, province, year):
                     past[row.get("SCHUL_CODE")] = students
     print(f"  {year}년 공시 학생 수: 학교 {len(past)}곳")
     return past
+
+
+def to_float(value):
+    try:
+        return float(str(value or "").strip())
+    except ValueError:
+        return 0.0
 
 
 def to_int(value):
@@ -601,6 +618,8 @@ def build(province, academies, schools, year, sales=None, sales_label="", apt_ro
         a["students"][school["level"]] += school["students"]
         a["students"]["total"] += school["students"]
         a["schools"].append({k: school[k] for k in ("name", "level", "students")})
+        if school.get("point"):
+            a.setdefault("_points", []).append(school["point"])
         if past:
             before = past.get(school.get("code"), 0)
             a["studentsPast"][school["level"]] += before
@@ -661,6 +680,7 @@ def build(province, academies, schools, year, sales=None, sales_label="", apt_ro
                 for k, v in counts.items():
                     merged["opened"][period][k] += v
             merged["schools"] += area["schools"]
+            merged.setdefault("_points", []).extend(area.get("_points", []))
             merged["top"] += area["top"]
             for subject, levels in area["fees"].items():
                 for level, amounts in levels.items():
@@ -693,6 +713,10 @@ def build(province, academies, schools, year, sales=None, sales_label="", apt_ro
             continue
         for a in areas:
             a["schools"].sort(key=lambda s: ("elem", "middle", "high").index(s["level"]))
+            points = a.pop("_points", [])
+            if points:  # 학교 위치의 평균을 동 중심으로 씁니다.
+                a["center"] = [round(sum(p[0] for p in points) / len(points), 5),
+                               round(sum(p[1] for p in points) / len(points), 5)]
             a["fees"] = summarize_fees(a["fees"])
             a["top"] = pick_top_academies(a["top"])
             if sales:
@@ -785,6 +809,8 @@ def save(outputs, provinces):
     order = list(PROVINCES)
     index.sort(key=lambda r: (order.index(r["province"]), r["name"]))
     index_path.write_text(json.dumps(index, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+
+    nearby.apply_nearby()  # 구·시 경계를 넘어 가까운 동 목록을 붙입니다.
 
 
 def main():

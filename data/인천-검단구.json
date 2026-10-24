@@ -615,7 +615,35 @@
       47
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "마전동",
+     "region": "인천-검단구",
+     "km": 1.5,
+     "academies": {
+      "all": 78,
+      "math": 20,
+      "english": 15,
+      "korean": 13,
+      "science": 0
+     },
+     "students": 5599
+    },
+    {
+     "name": "원당동",
+     "region": "인천-검단구",
+     "km": 2.2,
+     "academies": {
+      "all": 204,
+      "math": 82,
+      "english": 53,
+      "korean": 33,
+      "science": 8
+     },
+     "students": 9386
+    }
+   ]
   },
   {
    "name": "마전동",
@@ -934,7 +962,48 @@
       73
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "당하동",
+     "region": "인천-검단구",
+     "km": 1.5,
+     "academies": {
+      "all": 105,
+      "math": 33,
+      "english": 30,
+      "korean": 14,
+      "science": 0
+     },
+     "students": 9174
+    },
+    {
+     "name": "원당동",
+     "region": "인천-검단구",
+     "km": 1.9,
+     "academies": {
+      "all": 204,
+      "math": 82,
+      "english": 53,
+      "korean": 33,
+      "science": 8
+     },
+     "students": 9386
+    },
+    {
+     "name": "풍무동",
+     "region": "경기-김포시",
+     "km": 3.6,
+     "academies": {
+      "all": 141,
+      "math": 49,
+      "english": 28,
+      "korean": 26,
+      "science": 5
+     },
+     "students": 6393
+    }
+   ]
   },
   {
    "name": "백석동",
@@ -2340,7 +2409,48 @@
       98
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "마전동",
+     "region": "인천-검단구",
+     "km": 1.9,
+     "academies": {
+      "all": 78,
+      "math": 20,
+      "english": 15,
+      "korean": 13,
+      "science": 0
+     },
+     "students": 5599
+    },
+    {
+     "name": "풍무동",
+     "region": "경기-김포시",
+     "km": 2.2,
+     "academies": {
+      "all": 141,
+      "math": 49,
+      "english": 28,
+      "korean": 26,
+      "science": 5
+     },
+     "students": 6393
+    },
+    {
+     "name": "당하동",
+     "region": "인천-검단구",
+     "km": 2.2,
+     "academies": {
+      "all": 105,
+      "math": 33,
+      "english": 30,
+      "korean": 14,
+      "science": 0
+     },
+     "students": 9174
+    }
+   ]
   }
  ]
 }

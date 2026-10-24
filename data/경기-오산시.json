@@ -2383,7 +2383,48 @@
       19
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "세교동",
+     "region": "경기-평택시",
+     "km": 0.0,
+     "academies": {
+      "all": 20,
+      "math": 8,
+      "english": 7,
+      "korean": 4,
+      "science": 2
+     },
+     "students": 4041
+    },
+    {
+     "name": "통복동",
+     "region": "경기-평택시",
+     "km": 1.6,
+     "academies": {
+      "all": 2,
+      "math": 2,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 0
+    },
+    {
+     "name": "동삭동",
+     "region": "경기-평택시",
+     "km": 2.6,
+     "academies": {
+      "all": 52,
+      "math": 17,
+      "english": 14,
+      "korean": 9,
+      "science": 0
+     },
+     "students": 3983
+    }
+   ]
   },
   {
    "name": "수청동",

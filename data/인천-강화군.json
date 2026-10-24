@@ -462,7 +462,35 @@
       31
      ]
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "송해면",
+     "region": "인천-강화군",
+     "km": 3.0,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 36
+    },
+    {
+     "name": "선원면",
+     "region": "인천-강화군",
+     "km": 3.6,
+     "academies": {
+      "all": 5,
+      "math": 3,
+      "english": 1,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 227
+    }
+   ]
   },
   {
    "name": "교동면",
@@ -611,7 +639,8 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "길상면",
@@ -789,7 +818,8 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "내가면",
@@ -933,7 +963,8 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "불은면",
@@ -1077,7 +1108,22 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "선원면",
+     "region": "인천-강화군",
+     "km": 4.0,
+     "academies": {
+      "all": 5,
+      "math": 3,
+      "english": 1,
+      "korean": 1,
+      "science": 0
+     },
+     "students": 227
+    }
+   ]
   },
   {
    "name": "삼산면",
@@ -1226,7 +1272,8 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "서도면",
@@ -1375,7 +1422,8 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "선원면",
@@ -1565,7 +1613,35 @@
      "korean": 1,
      "science": 0
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "강화읍",
+     "region": "인천-강화군",
+     "km": 3.6,
+     "academies": {
+      "all": 30,
+      "math": 10,
+      "english": 6,
+      "korean": 6,
+      "science": 0
+     },
+     "students": 2945
+    },
+    {
+     "name": "불은면",
+     "region": "인천-강화군",
+     "km": 4.0,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 75
+    }
+   ]
   },
   {
    "name": "송해면",
@@ -1704,7 +1780,22 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "강화읍",
+     "region": "인천-강화군",
+     "km": 3.0,
+     "academies": {
+      "all": 30,
+      "math": 10,
+      "english": 6,
+      "korean": 6,
+      "science": 0
+     },
+     "students": 2945
+    }
+   ]
   },
   {
    "name": "양도면",
@@ -1858,7 +1949,8 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": []
   },
   {
    "name": "양사면",
@@ -1997,7 +2089,22 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "하점면",
+     "region": "인천-강화군",
+     "km": 3.2,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 122
+    }
+   ]
   },
   {
    "name": "하점면",
@@ -2146,7 +2253,22 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": [
+    {
+     "name": "양사면",
+     "region": "인천-강화군",
+     "km": 3.2,
+     "academies": {
+      "all": 0,
+      "math": 0,
+      "english": 0,
+      "korean": 0,
+      "science": 0
+     },
+     "students": 34
+    }
+   ]
   },
   {
    "name": "화도면",
@@ -2290,7 +2412,8 @@
      "korean": 0,
      "science": 0
     }
-   }
+   },
+   "nearby": []
   }
  ]
 }
