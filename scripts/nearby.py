@@ -2,6 +2,7 @@
 
 1) 동 중심 좌표 만들기 (한 번만, 행정동 경계가 바뀌면 다시):
    python3 scripts/nearby.py centroids HangJeongDong_ver20250401.geojson
+   python3 scripts/nearby.py seoul-adm HangJeongDong_ver20250401.geojson  (서울 행정동 경계 -> data/seoul_adm.json)
    행정동 경계 자료: https://github.com/vuski/admdongkor (통계청 행정동 경계 기반)
    행정동을 법정동 이름으로 묶어(중계2·3동 -> 중계동) 중심 좌표의 평균을 data/centroids.json에 씁니다.
 
@@ -18,6 +19,8 @@ from pathlib import Path
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 CENTROIDS = DATA_DIR / "centroids.json"
+SEOUL_ADM = DATA_DIR / "seoul_adm.json"  # 서울 행정동 경계(간략화). 매출·개업·폐업을 법정동에 나눠 붙일 때 씁니다.
+ADM_POINTS = 60  # 경계 한 바퀴를 이만큼의 점으로 줄입니다.
 PROVINCES = {"서울특별시", "경기도", "인천광역시"}
 NEARBY_KM = 7.0  # 학원 20곳 이상인 동은 이 안까지
 BIG_HUB = 250   # 대형 학원가(대치동, 목동, 중계동, 평촌 등)는 멀어도 찾아가서
@@ -61,6 +64,39 @@ def build_centroids(path):
     }
     CENTROIDS.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"동 중심 좌표 {sum(len(v) for v in out.values())}곳 -> {CENTROIDS}")
+
+
+def build_seoul_adm(path):
+    """서울 행정동 경계를 [위도, 경도] 점 목록으로 줄여 저장합니다. {자치구: {행정동: [[[위도, 경도], ...], ...]}}"""
+    features = json.loads(Path(path).read_text(encoding="utf-8"))["features"]
+    out = {}
+    for f in features:
+        p = f["properties"]
+        if p["sidonm"] != "서울특별시":
+            continue
+        g = f["geometry"]
+        polys = g["coordinates"] if g["type"] == "MultiPolygon" else [g["coordinates"]]
+        rings = []
+        for poly in polys:
+            ring = poly[0]
+            step = max(1, len(ring) // ADM_POINTS)
+            rings.append([[round(pt[1], 5), round(pt[0], 5)] for pt in ring[::step]])
+        out.setdefault(p["sggnm"], {})[p["adm_nm"].split()[-1]] = rings
+    SEOUL_ADM.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+    print(f"서울 행정동 경계 {sum(len(v) for v in out.values())}곳 -> {SEOUL_ADM}")
+
+
+def inside(pt, rings):
+    """점(위도, 경도)이 행정동 경계 안에 있는지 봅니다(광선 교차)."""
+    y, x = pt
+    for ring in rings:
+        hit = False
+        for (y1, x1), (y2, x2) in zip(ring, ring[1:] + ring[:1]):
+            if (y1 > y) != (y2 > y) and x < (x2 - x1) * (y - y1) / (y2 - y1) + x1:
+                hit = not hit
+        if hit:
+            return True
+    return False
 
 
 def km(a, b):
@@ -126,6 +162,8 @@ def apply_nearby():
 if __name__ == "__main__":
     if sys.argv[1:2] == ["centroids"]:
         build_centroids(sys.argv[2])
+    elif sys.argv[1:2] == ["seoul-adm"]:
+        build_seoul_adm(sys.argv[2])
     elif sys.argv[1:2] == ["apply"]:
         apply_nearby()
     else:

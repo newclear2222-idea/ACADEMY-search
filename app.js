@@ -43,6 +43,35 @@ function feeOf(fees, subject, level) {
   return cell && cell[0] ? { median: cell[0], count: cell[1] } : null;
 }
 
+// 신도시·택지지구 이름. 동은 주소의 법정동이라 '위례', '동탄2'처럼 흔히 부르는 이름을 옆에 붙입니다.
+// '일부'는 그 법정동의 일부만 신도시에 들어간다는 뜻입니다.
+const NEW_TOWNS = {
+  "서울-송파구": {"장지동": "위례", "거여동": "위례 일부"},
+  "서울-강서구": {"마곡동": "마곡"},
+  "서울-은평구": {"진관동": "은평뉴타운"},
+  "서울-강동구": {"강일동": "강일지구", "고덕동": "고덕지구"},
+  "경기-성남시": {"창곡동": "위례", "판교동": "판교", "삼평동": "판교", "백현동": "판교"},
+  "경기-하남시": {"학암동": "위례", "망월동": "미사", "풍산동": "미사", "선동": "미사", "감일동": "감일"},
+  "경기-화성시": {"반송동": "동탄1", "석우동": "동탄1", "능동": "동탄1", "영천동": "동탄2", "청계동": "동탄2", "오산동": "동탄2", "산척동": "동탄2", "목동": "동탄2", "송동": "동탄2", "장지동": "동탄2", "신동": "동탄2"},
+  "경기-수원시": {"이의동": "광교", "하동": "광교", "원천동": "광교 일부", "호매실동": "호매실", "금곡동": "호매실"},
+  "경기-용인시": {"상현동": "광교 일부"},
+  "경기-남양주시": {"다산동": "다산", "별내동": "별내"},
+  "경기-고양시": {"삼송동": "삼송", "지축동": "지축", "원흥동": "원흥", "향동동": "향동", "덕은동": "덕은"},
+  "경기-김포시": {"장기동": "한강신도시", "운양동": "한강신도시", "구래동": "한강신도시", "마산동": "한강신도시"},
+  "경기-파주시": {"목동동": "운정", "야당동": "운정", "와동동": "운정", "동패동": "운정", "다율동": "운정"},
+  "경기-평택시": {"고덕동": "고덕국제"},
+  "경기-양주시": {"옥정동": "옥정"},
+  "경기-시흥시": {"배곧동": "배곧", "장현동": "장현"},
+  "경기-의정부시": {"민락동": "민락", "고산동": "고산"},
+  "경기-과천시": {"갈현동": "과천지식정보타운"},
+  "인천-연수구": {"송도동": "송도"},
+  "인천-서해구": {"청라동": "청라"},
+  "인천-검단구": {"원당동": "검단", "당하동": "검단", "불로동": "검단", "마전동": "검단 일부"},
+  "인천-영종구": {"중산동": "영종하늘도시", "운남동": "영종하늘도시", "운서동": "영종"},
+};
+const newTown = (regionId, name) => NEW_TOWNS[regionId]?.[name] || "";
+const townTag = (regionId, name) => { const t = newTown(regionId, name); return t ? ` <span class="town">${t}</span>` : ""; };
+
 // "강남구"처럼 시·도를 뺀 지역 이름.
 const shortRegion = (region) => (region || "").split(" ").slice(-1)[0] || "이 지역";
 // "고등학생 수학 등록 수강료"처럼 어떤 수강료인지 밝힌 이름.
@@ -93,11 +122,13 @@ function reasonsFor(r, ctx) {
   if (sales) reasons.push(sales);
   if (r.area.nearby) reasons.push(hubText(r.area, subject, ctx.regionId));
 
-  const change = studentChange(r.area, level);
+  const change = level === "total" && riskOf(r.area, ctx.data) ? null : studentChange(r.area, level); // 전체 학생 증감은 아래 학원·학생 문장에 함께 적습니다.
   if (change !== null && change >= 0.1) reasons.push(`학생 수가 ${ctx.pastYear}년보다 ${signedPct(change)} 늘었습니다. 수요가 커지는 동네입니다.`);
   if (change !== null && change <= -0.1) reasons.push(`학생 수가 ${ctx.pastYear}년보다 ${signedPct(change)} 줄었습니다. 지금 숫자보다 앞으로 수요가 작아질 수 있습니다.`);
   const opened = r.area.opened?.["1y"][subject] || 0;
-  if (r.academies >= 5 && opened / r.academies >= 0.2) reasons.push(`지금 ${label} ${fmt(r.academies)}곳 중 ${fmt(opened)}곳이 최근 1년 안에 문을 열었습니다. 새로 들어오는 학원이 많습니다.`);
+  const risk = riskReason(r.area, ctx.data);
+  if (risk) reasons.push(risk);
+  else if (r.academies >= 5 && opened / r.academies >= 0.2) reasons.push(`지금 ${label} ${fmt(r.academies)}곳 중 ${fmt(opened)}곳이 최근 1년 안에 문을 열었습니다. 새로 들어오는 학원이 많습니다(문 닫은 학원 수는 이 동 자료가 없습니다).`);
   const bigApts = (r.area.newApts || []).filter((x) => x.households >= 500 && x.moveIn >= thisMonth());
   if (bigApts.length) reasons.push(`${bigApts.map((x) => `${x.name}(${fmt(x.households)}세대)`).join(", ")} 입주가 예정돼 있어 학생이 늘 수 있습니다.`);
 
@@ -194,7 +225,7 @@ function nearbyHubs(area, subject) {
 function hubText(area, subject, regionId) {
   const { near, big } = nearbyHubs(area, subject);
   const label = SUBJECT_LABELS[subject];
-  const show = (n) => `${n.region === regionId ? "" : `${n.region.split("-").slice(1).join("-")} `}${n.name}(약 ${n.km}km, ${label} ${fmt(n.academies[subject] || 0)}곳${hubDraws(n, area) ? ", 매출로 다른 동 학생이 찾아오는 곳" : ""})`;
+  const show = (n) => `${n.region === regionId ? "" : `${n.region.split("-").slice(1).join("-")} `}${n.name}${newTown(n.region, n.name) ? `·${newTown(n.region, n.name)}` : ""}(약 ${n.km}km, ${label} ${fmt(n.academies[subject] || 0)}곳${hubDraws(n, area) ? ", 매출로 다른 동 학생이 찾아오는 곳" : ""})`;
   const parts = [];
   parts.push(near.length
     ? `4km 안의 가까운 학원 밀집 동은 ${near.map(show).join(", ")}입니다.`
@@ -284,6 +315,75 @@ function trendText(area, data, subject, level) {
     html += `<div class="rank-sub">새 아파트: ${items.join(", ")}${area.newApts.length > 4 ? ` 외 ${area.newApts.length - 4}곳` : ""}</div>`;
   }
   return html;
+}
+
+// ── 위험지역: 학원은 느는데 학생은 줄어드는 동 ──
+// 학원 순증가율(1년, 입시·보습 전체). 쓸 수 있는 자료 중 가장 정확한 것을 씁니다.
+//   1순위 교육청 등록 학원 수를 달마다 쌓아 본 실제 변화(6개월 이상 쌓인 뒤부터)
+//   2순위 서울시 상권분석 개업 점포 − 폐업 점포 (서울, 최근 4분기)
+//   3순위 교육청 '최근 1년 새로 연 학원' − 서울 학원 평균 폐업률 (경기·인천은 폐업 자료가 없어 빌려 씁니다)
+const RISK_GAP = 0.05; // 학원 순증가율 − 학생 증감률(1년)이 이만큼(5%p) 넘으면 위험지역
+const RISK_MIN_ACADEMIES = 10;
+const RISK_MIN_STUDENTS = 500;
+function academyGrowth(area, data) {
+  const h = area.historyChange;
+  if (h && h.before >= RISK_MIN_ACADEMIES) {
+    return { rate: (h.change / h.before) * (12 / h.months), source: "history",
+      text: `교육청 등록 입시·보습 학원이 ${h.from.replace("-", "년 ")}월 ${fmt(h.before)}곳에서 지금 ${fmt(h.before + h.change)}곳(${h.months}개월, 문 연 곳과 닫은 곳을 모두 반영)` };
+  }
+  const s = area.storeFlow;
+  if (s && s.base >= RISK_MIN_ACADEMIES) {
+    return { rate: (s.open - s.close) / s.base, source: "store", open: s.open, close: s.close,
+      text: `최근 1년 학원 개업 ${fmt(s.open)}곳, 폐업 ${fmt(s.close)}곳(서울시 상권분석 ${data.storePeriod}, 학원 약 ${fmt(s.base)}곳 기준)` };
+  }
+  const c = data.seoulStoreRate?.close;
+  const all = area.academies.all;
+  if (c != null && all >= RISK_MIN_ACADEMIES && area.opened) {
+    const open = area.opened["1y"].all;
+    return { rate: open / all - c, source: "estimate",
+      text: `최근 1년 새로 연 학원 ${fmt(open)}곳(지금 ${fmt(all)}곳의 ${pct(open / all)})에서 폐업 추정 ${pct(c)}를 뺀 값(이 동 폐업 자료가 없어 서울 학원 평균 폐업률을 썼습니다)` };
+  }
+  return null;
+}
+// 학생 증감률을 1년 단위로 바꿉니다. 예: 2년에 −6%면 1년 약 −3%.
+function studentRate(area, level, data) {
+  const change = studentChange(area, level);
+  const now = Number((data.baseDate || "").match(/(\d{4})년/)?.[1]);
+  const years = now && data.pastYear ? now - data.pastYear : 0;
+  if (change === null || years <= 0) return null;
+  return { rate: (1 + change) ** (1 / years) - 1, change, years };
+}
+function riskOf(area, data) {
+  if (area.academies.all < RISK_MIN_ACADEMIES || area.students.total < RISK_MIN_STUDENTS) return null;
+  const g = academyGrowth(area, data);
+  const st = studentRate(area, "total", data);
+  if (!g || !st) return null;
+  const gap = g.rate - st.rate;
+  return { growth: g, students: st, gap, risky: gap >= RISK_GAP };
+}
+const pp = (x) => `${x >= 0 ? "+" : "−"}${(Math.round(Math.abs(x) * 1000) / 10).toFixed(1)}%`;
+function riskText(area, data) {
+  const k = riskOf(area, data);
+  if (!k) return "";
+  const head = k.risky ? '<strong class="risk-text">위험지역</strong>: ' : "";
+  return `<div class="rank-sub">${head}학원 1년 순증가 <strong>${pp(k.growth.rate)}</strong> vs 학생 1년 <strong>${pp(k.students.rate)}</strong> (차이 ${pp(k.gap)}p)</div>`;
+}
+function riskReason(area, data) {
+  const k = riskOf(area, data);
+  if (!k) return "";
+  const st = area.students;
+  const stu = `초·중·고 학생은 ${data.pastYear}년 ${fmt(area.studentsPast.total)}명에서 ${fmt(st.total)}명으로 ${k.students.years}년에 ${signedPct(k.students.change)}, 1년으로는 ${pp(k.students.rate)}입니다`;
+  const aca = `학원은 ${k.growth.text}, 1년 순증가율 ${pp(k.growth.rate)}입니다`;
+  const read = k.risky
+    ? `학원이 학생보다 1년에 ${pp(k.gap).slice(1)}p 더 빨리 늘어 위험지역으로 표시했습니다. 학원 1곳이 나눠 가질 학생이 해마다 줄어, 지금 매출을 유지하거나 올리기 어려워지는 곳입니다.`
+    : k.gap > 0
+      ? `학원이 학생보다 조금 더 빨리 늘지만 차이(${pp(k.gap)}p)가 위험 기준(+${RISK_GAP * 100}%p)보다 작습니다.`
+      : `학생보다 학원이 덜 늘어(차이 ${pp(k.gap)}p) 학원 1곳당 학생은 유지되거나 늘어나는 쪽입니다.`;
+  const caveat = k.growth.source === "estimate" ? " 폐업은 추정이라 매달 쌓는 학원 수 기록이 6개월 모이면 실제 값으로 바뀝니다." : "";
+  return `학원과 학생 증가 속도: ${stu}. ${aca}. ${read}${caveat}`;
+}
+function riskTag(area, data) {
+  return riskOf(area, data)?.risky ? '<span class="tag risk">위험지역</span>' : "";
 }
 
 function thisMonth() {
@@ -398,6 +498,15 @@ function perAcademy(students, academies) {
   return academies === 0 ? Infinity : students / academies;
 }
 
+// 수강료·매출 판단에 쓰는 구·시 단위 기준값을 그 지역으로 맞춥니다.
+function setRegionContext(data) {
+  regionFees = data.fees;
+  const allSales = data.areas.filter((a) => a.sales && a.academies.all);
+  regionSalesPerAcademy = allSales.length
+    ? allSales.reduce((t, a) => t + a.sales, 0) / 3 / allSales.reduce((t, a) => t + a.academies.all, 0)
+    : 0;
+}
+
 function render(data) {
   const subject = els.subject.value;
   const level = els.level.value;
@@ -414,18 +523,14 @@ function render(data) {
   const average = perAcademy(totalStudents, totalAcademies);
 
   const regionFee = feeOf(data.fees, subject, level);
-  regionFees = data.fees;
-  const allSales = data.areas.filter((a) => a.sales && a.academies.all);
-  regionSalesPerAcademy = allSales.length
-    ? allSales.reduce((t, a) => t + a.sales, 0) / 3 / allSales.reduce((t, a) => t + a.academies.all, 0)
-    : 0;
+  setRegionContext(data);
   const withSales = data.areas.filter((a) => monthlyPerAcademy(a));
   const regionPerMonth = withSales.length
     ? withSales.reduce((t, a) => t + a.sales, 0) / 3 / withSales.reduce((t, a) => t + a.academies.all, 0)
     : 0;
   // 다른 동 학생이 가장 많이 찾아오는 곳. 경계 오차가 큰 동은 뺍니다.
   // 비율이 아니라 '기대보다 더 들어온 매출 금액'이 가장 큰 곳입니다. 학생이 적은 동은 비율만 커 보여서입니다.
-  const ctx = { subject, level, regionName: shortRegion(data.region), totalStudents, totalAcademies, regionFee, regionId: data.id, salesPeriod: data.salesPeriod, pastYear: data.pastYear };
+  const ctx = { subject, level, regionName: shortRegion(data.region), totalStudents, totalAcademies, regionFee, regionId: data.id, salesPeriod: data.salesPeriod, pastYear: data.pastYear, data };
 
   els.summary.innerHTML = `
     <div><div class="label">${data.region} ${LEVEL_LABELS[level]}</div><div class="value">${fmt(totalStudents)}명</div></div>
@@ -470,7 +575,7 @@ function render(data) {
         : "";
       return `<li>
         <div class="rank-head">
-          <span class="rank-name"><span class="no">${i + 1}</span>${r.area.name}${tag}${flowTag(r.area, subject, level)}</span>
+          <span class="rank-name"><span class="no">${i + 1}</span>${r.area.name}${townTag(data.id, r.area.name)}${riskTag(r.area, data)}${tag}${flowTag(r.area, subject, level)}</span>
           <span class="rank-metric">${metric}</span>
         </div>
         <div class="bar"><span style="width:${width.toFixed(1)}%"></span></div>
@@ -478,6 +583,7 @@ function render(data) {
         ${salesText}
         ${fervorText(r.area)}
         ${trendText(r.area, data, subject, level)}
+        ${riskText(r.area, data)}
         ${r.area.apt ? `<div class="rank-sub">아파트 평당 <strong>${bigWon(r.area.apt[0])}</strong> (${data.aptPeriod} ${fmt(r.area.apt[1])}건의 중간값)</div>` : ""}
         ${why}
       </li>`;
@@ -499,7 +605,7 @@ function render(data) {
 }
 
 const COLUMNS = [
-  { key: "name", label: "동", value: (r) => r.area.name, text: (r) => r.area.name },
+  { key: "name", label: "동", value: (r) => r.area.name, text: (r) => `${r.area.name}${townTag(r.data.id, r.area.name)}` },
   { key: "students", label: "학생", value: (r) => r.students, text: (r) => `${fmt(r.students)}명` },
   { key: "academies", label: "학원", value: (r) => r.academies, text: (r) => `${fmt(r.academies)}곳` },
   {
@@ -521,6 +627,11 @@ const COLUMNS = [
     key: "opened", label: "새 학원(1년)",
     value: (r) => r.area.opened?.["1y"][r.subject] ?? -1,
     text: (r) => (r.area.opened ? `${fmt(r.area.opened["1y"][r.subject])}곳` : "-"),
+  },
+  {
+    key: "risk", label: "학원−학생 증가(1년)",
+    value: (r) => riskOf(r.area, r.data)?.gap ?? -9,
+    text: (r) => { const k = riskOf(r.area, r.data); return k ? `${k.risky ? '<span class="risk-text">' : ""}${pp(k.gap)}p${k.risky ? " 위험</span>" : ""}` : "-"; },
   },
   {
     key: "newApts", label: "새 아파트",
@@ -557,14 +668,14 @@ const COLUMNS = [
 function renderCompare(rows, data, subject, level) {
   const hasSales = Boolean(data.salesPeriod);
   // 휴대폰에서도 바로 보이도록 매출과 경쟁 지표를 동 이름 옆에 둡니다.
-  const order = ["name", "localUse", "perStudent", "sales", "fervor", "apt", "change", "opened", "newApts", "ratio", "fee", "students", "academies"];
+  const order = ["name", "risk", "localUse", "perStudent", "sales", "fervor", "apt", "change", "opened", "newApts", "ratio", "fee", "students", "academies"];
   const hasApt = Boolean(data.aptPeriod);
   const hasTrend = Boolean(data.pastYear);
   const hasNewApts = data.areas.some((a) => a.newApts?.length);
   const cols = COLUMNS.filter((c) => (hasSales || !c.salesOnly) && (hasApt || !c.aptOnly)
-    && (hasTrend || c.key !== "change") && (data.areas[0]?.opened || c.key !== "opened") && (hasNewApts || c.key !== "newApts")).sort((a, b) => order.indexOf(a.key) - order.indexOf(b.key));
+    && (hasTrend || c.key !== "change") && (data.areas[0]?.opened || c.key !== "opened") && (c.key !== "risk" || data.areas.some((a) => riskOf(a, data))) && (hasNewApts || c.key !== "newApts")).sort((a, b) => order.indexOf(a.key) - order.indexOf(b.key));
   if (!cols.some((c) => c.key === sortKey)) sortKey = "ratio";
-  const list = rows.map((r) => ({ ...r, subject, level, fee: feeOf(r.area.fees, subject, level), perMonth: monthlyPerAcademy(r.area) }));
+  const list = rows.map((r) => ({ ...r, data, subject, level, fee: feeOf(r.area.fees, subject, level), perMonth: monthlyPerAcademy(r.area) }));
   const col = cols.find((c) => c.key === sortKey);
   list.sort((a, b) => {
     const x = col.value(a), y = col.value(b);
@@ -575,6 +686,162 @@ function renderCompare(rows, data, subject, level) {
     .join("")}</tr>`;
   els.compareBody.innerHTML = list
     .map((r) => `<tr>${cols.map((c) => `<td${c.key === "name" ? "" : ' class="num"'}>${c.text(r)}</td>`).join("")}</tr>`)
+    .join("");
+}
+
+// ── 개원 동네 추천 ──
+// 학생이 학원보다 빨리 느는 동(위 위험지역의 반대)을 먼저, 그다음 학원 1곳당 학생이 많은 동을 올립니다.
+//   점수 = (학생 1년 증감률 − 학원 1년 순증가율) × 100 + 5 × log2(학원 1곳당 학생 ÷ 범위 평균)
+// 경력·예산은 아래 규칙으로 후보를 거릅니다. 임대료 자료가 아직 없어 예산은 대형 학원가 제외 여부로만 씁니다.
+const REC_MIN_STUDENTS = 300;
+const REC_TOP = 10;
+let allRegions = [];
+const recEls = {
+  form: document.getElementById("rec-form"),
+  subject: document.getElementById("rec-subject"),
+  level: document.getElementById("rec-level"),
+  years: document.getElementById("rec-years"),
+  budget: document.getElementById("rec-budget"),
+  scope: document.getElementById("rec-scope"),
+  result: document.getElementById("rec-result"),
+};
+
+function recommend(regionsData, opts) {
+  const { subject, level, years, budget } = opts;
+  const pool = [];
+  const skipped = { risk: 0, small: 0, nodata: 0, hub: 0, flowIn: 0 };
+  for (const data of regionsData) {
+    setRegionContext(data);
+    for (const area of data.areas) {
+      const students = area.students[level];
+      if (students < REC_MIN_STUDENTS) { skipped.small += 1; continue; }
+      const st = studentRate(area, level, data);
+      const g = academyGrowth(area, data);
+      if (!st || !g) { skipped.nodata += 1; continue; }
+      const risk = riskOf(area, data);
+      if (risk?.risky) { skipped.risk += 1; continue; }
+      const bigHub = area.academies.all >= BIG_HUB;
+      const flow = !boundaryMismatch(area) && localUse(area, subject, level);
+      const kind = flow ? flowKind(flow.use) : null;
+      if (bigHub && (years < 3 || budget === "small")) { skipped.hub += 1; continue; }
+      if (kind === "in" && years < 3) { skipped.flowIn += 1; continue; }
+      const nearby = area.nearby ? hubText(area, subject, data.id) : "";
+      pool.push({ data, area, students, st, g, kind, flow, bigHub, nearby, academies: area.academies[subject] });
+    }
+  }
+  const sumS = pool.reduce((t, x) => t + x.students, 0);
+  const sumA = pool.reduce((t, x) => t + x.academies, 0);
+  const avg = sumA ? sumS / sumA : 0;
+  for (const x of pool) {
+    x.perAcademy = x.students / Math.max(x.academies, 1);
+    x.comp = avg ? Math.min(3, Math.max(0.25, x.perAcademy / avg)) : 1;
+    x.gap = x.st.rate - x.g.rate;
+    x.score = x.gap * 100 + 5 * Math.log2(x.comp);
+  }
+  pool.sort((a, b) => b.score - a.score);
+  return { top: pool.slice(0, REC_TOP), avg, skipped, total: pool.length };
+}
+
+function growthShort(g) {
+  if (g.source === "history") return "교육청 등록 학원 수 실제 변화";
+  if (g.source === "store") return `개업 ${fmt(g.open)}곳·폐업 ${fmt(g.close)}곳, 서울시 상권분석`;
+  return "새로 연 학원 − 폐업 추정";
+}
+
+function recItem(x, i, opts, scopeName) {
+  const { subject, level, years, budget } = opts;
+  const L = LEVEL_LABELS[level];
+  const S = SUBJECT_LABELS[subject];
+  const place = `${shortRegion(x.data.region)} ${x.area.name}${townTag(x.data.id, x.area.name)}`;
+  const past = x.area.studentsPast[level];
+  const lines = [];
+  lines.push(`${L} ${x.data.pastYear}년 ${fmt(past)}명 → ${fmt(x.students)}명 (1년 <strong>${pp(x.st.rate)}</strong>) · 학원 1년 순증가 <strong>${pp(x.g.rate)}</strong> (입시·보습 전체, ${growthShort(x.g)})`);
+  lines.push(`학원 1곳당 ${L} <strong>${fmt(Math.round(x.perAcademy))}명</strong> (${scopeName} 후보 평균 ${fmt(Math.round(opts.avg))}명의 ${(Math.round(x.perAcademy / opts.avg * 10) / 10).toFixed(1)}배) · ${S} ${fmt(x.academies)}곳, 최근 1년 새로 연 곳 ${fmt(x.area.opened?.["1y"][subject] || 0)}곳`);
+  const fee = feeOf(x.area.fees, subject, level);
+  if (fee && fee.count >= 3 && fee.median <= MAX_FEE) lines.push(`이 동 ${feeName(subject, level)} 중간값 ${won(fee.median)} (${fmt(fee.count)}개 과정)`);
+  if (x.kind === "out" || x.kind === "someOut") lines.push(`매출로 보면 동네 학생이 다른 동 학원으로 많이 다닙니다(기대치의 ${pct(x.flow.use)}). 동네에서 붙잡을 수 있다면 기회지만, 이미 다니는 학원에서 옮겨 오게 만들어야 합니다.`);
+  if (x.kind === "in") lines.push(`다른 동 학생이 찾아오는 학원가입니다(기대치의 ${pct(x.flow.use)}). 수요는 크지만 이름난 학원과 경쟁합니다.`);
+  if (x.nearby) lines.push(x.nearby);
+  const warn = [];
+  if (x.bigHub && budget === "mid") warn.push(`입시·보습 학원 ${fmt(x.area.academies.all)}곳이 모인 대형 학원가라 임대료와 시설 경쟁이 셀 수 있습니다. 예산 3천만~1억원이면 현장 임대료를 먼저 확인하세요.`);
+  if (x.bigHub && years >= 10) warn.push("경력이 길어 대형 학원가도 후보에 넣었습니다. 이름난 학원과 겨룰 강점(실적·커리큘럼)이 있는지가 관건입니다.");
+  if (x.area.students[level] < 500) warn.push(`${L}이 ${fmt(x.area.students[level])}명뿐이라 몇 명만 바뀌어도 증감률이 크게 흔들립니다.`);
+  return `<li>
+    <div class="rec-head"><span>${i + 1}. ${place}</span><span class="score">학생이 학원보다 1년 ${pp(x.gap)}p</span></div>
+    ${lines.map((t) => `<div class="rank-sub">${t}</div>`).join("")}
+    ${warn.map((t) => `<div class="rank-sub"><span class="risk-text">주의</span> ${t}</div>`).join("")}
+    <button type="button" class="rec-open" data-region="${x.data.id}" data-province="${x.data.province}" data-name="${x.area.name}">이 동 자세히 보기</button>
+  </li>`;
+}
+
+async function runRecommend(e) {
+  e.preventDefault();
+  const opts = {
+    subject: recEls.subject.value, level: recEls.level.value,
+    years: Number(recEls.years.value), budget: recEls.budget.value,
+  };
+  const scopeAll = recEls.scope.value === "all";
+  const targets = allRegions.filter((r) => scopeAll || r.province === els.province.value);
+  recEls.result.innerHTML = `<p class="rec-note">${fmt(targets.length)}개 구·시 자료를 읽는 중…</p>`;
+  const regionsData = await Promise.all(targets.map((r) => loadRegion(r.id)));
+  const res = recommend(regionsData, opts);
+  if (current) setRegionContext(current); // 아래 동별 화면의 기준값을 되돌립니다.
+  opts.avg = res.avg;
+  const scopeName = scopeAll ? "서울·경기·인천" : els.province.value;
+  const rules = [`${LEVEL_LABELS[opts.level]} ${REC_MIN_STUDENTS}명 미만인 동 ${fmt(res.skipped.small)}곳`, `위험지역 ${fmt(res.skipped.risk)}곳`];
+  if (res.skipped.hub) rules.push(`대형 학원가 ${fmt(res.skipped.hub)}곳(${opts.years < 3 ? "경력 3년 미만" : "예산 3천만원 미만"})`);
+  if (res.skipped.flowIn) rules.push(`다른 동 학생이 찾아오는 학원가 ${fmt(res.skipped.flowIn)}곳(경력 3년 미만)`);
+  if (res.skipped.nodata) rules.push(`학원이 10곳 미만이거나 비교 자료가 없는 동 ${fmt(res.skipped.nodata)}곳`);
+  recEls.result.innerHTML = res.top.length
+    ? `<p class="rec-note"><strong>${scopeName}</strong>에서 ${LEVEL_LABELS[opts.level]} 수가 학원보다 빨리 느는(덜 주는) 순서로 고르고, 학원 1곳당 학생이 많을수록 조금 더 올렸습니다. 후보 ${fmt(res.total)}곳 중 상위 ${res.top.length}곳입니다.</p>
+       <ol class="rec-list">${res.top.map((x, i) => recItem(x, i, opts, scopeName)).join("")}</ol>
+       <p class="rec-note">뺀 곳: ${rules.join(", ")}. 학원 증가율은 폐업 자료가 과목별로 없어 입시·보습 학원 전체로 봅니다. 상가 임대료와 아파트 시세 자료는 아직 받지 못해(공공데이터 활용 승인 대기), 예산은 대형 학원가를 뺄지 정하는 데만 썼습니다. 최종 결정 전에 현장 임대료와 상가를 꼭 확인하세요.</p>`
+    : `<p class="rec-note">조건에 맞는 동이 없습니다. 범위를 넓히거나 대상을 바꿔 보세요. (뺀 곳: ${rules.join(", ")})</p>`;
+}
+
+async function openArea(btn) {
+  els.province.value = btn.dataset.province;
+  fillRegions();
+  els.region.value = btn.dataset.region;
+  els.subject.value = recEls.subject.value;
+  els.level.value = recEls.level.value;
+  await update();
+  const item = [...els.ranking.querySelectorAll(".rank-name")].find((n) => n.textContent.replace(/^\d+/, "").startsWith(btn.dataset.name));
+  (item?.closest("li") || els.ranking).scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+// 신도시 이름으로 고르면 그 구·시를 열고 해당 동으로 내려갑니다. 위례처럼 여러 구·시에 걸치면 따로 나옵니다.
+function fillTowns() {
+  const sel = document.getElementById("town");
+  const groups = {};
+  for (const [regionId, dongs] of Object.entries(NEW_TOWNS)) {
+    const region = allRegions.find((r) => r.id === regionId);
+    if (!region) continue;
+    for (const [dong, label] of Object.entries(dongs)) {
+      const town = label.replace(" 일부", "");
+      const key = `${town}|${regionId}`;
+      (groups[key] ||= { town, region, dongs: [] }).dongs.push(dong);
+    }
+  }
+  const items = Object.entries(groups).sort((a, b) => a[1].town.localeCompare(b[1].town, "ko"));
+  sel.innerHTML += items.map(([key, g]) => `<option value="${key}">${g.town} · ${shortRegion(g.region.name)} (${g.dongs.join(", ")})</option>`).join("");
+  sel.addEventListener("change", async () => {
+    const g = groups[sel.value];
+    if (!g) return;
+    els.province.value = g.region.province;
+    fillRegions();
+    els.region.value = g.region.id;
+    await update();
+    const item = [...els.ranking.querySelectorAll(".rank-name")].find((n) => g.dongs.some((d) => n.textContent.replace(/^\d+/, "").startsWith(d)));
+    (item?.closest("li") || els.ranking).scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
+
+function fillRegions() {
+  const p = els.province.value;
+  els.region.innerHTML = allRegions
+    .filter((r) => r.province === p)
+    .map((r) => `<option value="${r.id}">${r.name.replace(p + " ", "")}</option>`)
     .join("");
 }
 
@@ -596,15 +863,15 @@ async function init() {
     document.querySelector(".controls").hidden = true;
     return;
   }
+  allRegions = regions;
+  fillTowns();
+  recEls.form.addEventListener("submit", runRecommend);
+  recEls.result.addEventListener("click", (e) => {
+    const btn = e.target.closest(".rec-open");
+    if (btn) openArea(btn);
+  });
   const provinces = [...new Set(regions.map((r) => r.province))];
   els.province.innerHTML = provinces.map((p) => `<option value="${p}">${p}</option>`).join("");
-  const fillRegions = () => {
-    const p = els.province.value;
-    els.region.innerHTML = regions
-      .filter((r) => r.province === p)
-      .map((r) => `<option value="${r.id}">${r.name.replace(p + " ", "")}</option>`)
-      .join("");
-  };
   fillRegions();
   els.province.addEventListener("change", () => {
     fillRegions();

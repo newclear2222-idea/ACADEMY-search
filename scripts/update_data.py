@@ -113,6 +113,13 @@ SPLIT_REGIONS = {
 }
 
 # 도로명주소 괄호 안의 건물 이름이 동 이름처럼 보이는 경우를 거릅니다. 예: (OO아파트상가동)
+# 주소 괄호에 법정동 대신 행정동 이름이 적힌 곳(관악구: 법정동은 봉천동·신림동·남현동뿐)을 법정동으로 바꿉니다.
+AREA_ALIASES = {
+    ("서울특별시", "관악구"): {
+        **{d: "봉천동" for d in ("보라매동", "청림동", "성현동", "행운동", "낙성대동", "청룡동", "은천동", "중앙동", "인헌동")},
+        **{d: "신림동" for d in ("서원동", "신원동", "서림동", "신사동", "난향동", "조원동", "대학동", "삼성동", "미성동", "난곡동")},
+    },
+}
 NOT_AREA_WORDS = ("상가", "아파트", "빌딩", "타운", "프라자", "플라자", "센터", "오피스")
 
 # 학교알리미 학교급 코드
@@ -397,7 +404,7 @@ def is_open_tutoring(row):
 def fetch_seoul_sales(key):
     """서울 행정동별 학원 추정매출(카드 결제 기반)을 가장 최근 분기로 받습니다.
 
-    돌려주는 값: ({(자치구, 법정동): 분기 매출 합계}, '2026년 2분기')
+    돌려주는 값: ({(자치구, 행정동): 분기 매출 합계}, '2026년 2분기')
     """
     today = datetime.date.today()
     for back in range(1, 9):
@@ -421,7 +428,7 @@ def fetch_seoul_sales(key):
                 if str(row.get("STDR_YYQU_CD")) != quarter or row.get("SVC_INDUTY_CD") not in ACADEMY_INDUSTRIES:
                     continue
                 gu = SEOUL_GU.get(str(row.get("ADSTRD_CD") or "")[:5])
-                dong = legal_dong(str(row.get("ADSTRD_CD_NM") or "").strip())
+                dong = str(row.get("ADSTRD_CD_NM") or "").strip()  # 행정동. build()에서 법정동에 붙입니다.
                 if gu and dong:
                     k = (gu, dong)
                     sales[k] = sales.get(k, 0) + to_int(row.get("THSMON_SELNG_AMT"))
@@ -438,7 +445,7 @@ def fetch_seoul_stores(key):
     """서울 행정동별 학원 개업·폐업 점포 수를 최근 1년(4분기) 더해 받습니다.
 
     나이스 학원 자료에는 문 닫은 학원이 남지 않아, 폐업은 이 자료로만 셉니다.
-    돌려주는 값: ({(자치구, 법정동): {"open", "close", "base"}}, '2025년 3분기~2026년 2분기')
+    돌려주는 값: ({(자치구, 행정동): {"open", "close", "base"}}, '2025년 3분기~2026년 2분기')
     base는 분기마다 '유사업종 점포 수'의 평균이라, (open - close) / base가 1년 순증가율입니다.
     """
     today = datetime.date.today()
@@ -466,7 +473,7 @@ def fetch_seoul_stores(key):
                 if str(row.get("STDR_YYQU_CD")) != quarter or row.get("SVC_INDUTY_CD") not in ACADEMY_INDUSTRIES:
                     continue
                 gu = SEOUL_GU.get(str(row.get("ADSTRD_CD") or "")[:5])
-                dong = legal_dong(str(row.get("ADSTRD_CD_NM") or "").strip())
+                dong = str(row.get("ADSTRD_CD_NM") or "").strip()
                 if gu and dong:
                     v = rows_of_quarter.setdefault((gu, dong), {"open": 0, "close": 0, "base": 0})
                     v["open"] += to_int(row.get("OPBIZ_STOR_CO"))
@@ -637,6 +644,51 @@ def new_region(province, name):
     return {"province": province, "name": name, "areas": {}, "unmatched": 0, "fees": new_fee_table()}
 
 
+def area_name(province, r, address):
+    name = area_of(address)
+    if r is None or not name:
+        return name
+    return AREA_ALIASES.get((province, r["name"]), {}).get(name, name)
+
+
+SEOUL_ADM_PATH = DATA_DIR / "seoul_adm.json"
+
+
+def spread_to_legal(gu, values, areas, adm_shapes):
+    """행정동 단위 값(매출, 개업·폐업)을 법정동에 붙입니다.
+
+    1) 행정동 이름을 법정동으로 묶은 이름(가양1동 -> 가양동)이 이 구에 있으면 그 동에 모두 붙입니다.
+    2) 없으면(예: 송파 위례동, 관악 청림동) 그 행정동 경계 안에 있는 학교들의 학생 수 비율대로 나눕니다.
+    3) 경계 안에 학교가 없으면 붙이지 않습니다.
+    돌려주는 값: {법정동: [(값, 비율), ...]}
+    """
+    out, unplaced = {}, []
+    alias = AREA_ALIASES.get(("서울특별시", gu), {})
+    for (g, adm), value in values.items():
+        if g != gu:
+            continue
+        legal = alias.get(adm) or alias.get(legal_dong(adm)) or legal_dong(adm)
+        if legal in areas:
+            out.setdefault(legal, []).append((value, 1.0))
+            continue
+        rings = adm_shapes.get(gu, {}).get(adm)
+        weights = {}
+        if rings:
+            for name, a in areas.items():
+                for pt, students in a.get("_spts", []):
+                    if nearby.inside(pt, rings):
+                        weights[name] = weights.get(name, 0) + max(students, 1)
+        total = sum(weights.values())
+        if not total:
+            unplaced.append(adm)
+            continue
+        for name, w in weights.items():
+            out.setdefault(name, []).append((value, w / total))
+    if unplaced:
+        print(f"    {gu}: 법정동을 못 찾은 행정동 {', '.join(unplaced)}")
+    return out
+
+
 def new_area(name):
     return {
         "name": name,
@@ -673,7 +725,7 @@ def build(province, academies, schools, year, sales=None, sales_label="", apt_ro
 
     for school in schools:
         r = region(school["address"])
-        name = area_of(school["address"])
+        name = area_name(province, r, school["address"])
         if r is None or not name:
             continue
         a = r["areas"].setdefault(name, new_area(name))
@@ -682,6 +734,7 @@ def build(province, academies, schools, year, sales=None, sales_label="", apt_ro
         a["schools"].append({k: school[k] for k in ("name", "level", "students")})
         if school.get("point"):
             a.setdefault("_points", []).append(school["point"])
+            a.setdefault("_spts", []).append((school["point"], school["students"]))
         if past:
             before = past.get(school.get("code"), 0)
             a["studentsPast"][school["level"]] += before
@@ -697,7 +750,7 @@ def build(province, academies, schools, year, sales=None, sales_label="", apt_ro
         r = region(address)
         if r is None:
             continue
-        name = area_of(address)
+        name = area_name(province, r, address)
         if not name:
             r["unmatched"] += 1
             continue
@@ -743,6 +796,7 @@ def build(province, academies, schools, year, sales=None, sales_label="", apt_ro
                     merged["opened"][period][k] += v
             merged["schools"] += area["schools"]
             merged.setdefault("_points", []).extend(area.get("_points", []))
+            merged.setdefault("_spts", []).extend(area.get("_spts", []))
             merged["top"] += area["top"]
             for subject, levels in area["fees"].items():
                 for level, amounts in levels.items():
@@ -768,12 +822,17 @@ def build(province, academies, schools, year, sales=None, sales_label="", apt_ro
             apt.setdefault((region_name, area_name), []).append(price)
 
     today = datetime.date.today()
+    adm_shapes = json.loads(SEOUL_ADM_PATH.read_text(encoding="utf-8")) if (sales or stores) and SEOUL_ADM_PATH.exists() else {}
     outputs = []
     for r in regions.values():
         areas = sorted(r["areas"].values(), key=lambda a: a["name"])
         if not any(a["students"]["total"] for a in areas):
             continue
+        by_name = {a["name"]: a for a in areas}
+        sales_of = spread_to_legal(r["name"], sales, by_name, adm_shapes) if sales else {}
+        stores_of = spread_to_legal(r["name"], stores, by_name, adm_shapes) if stores else {}
         for a in areas:
+            a.pop("_spts", None)
             a["schools"].sort(key=lambda s: ("elem", "middle", "high").index(s["level"]))
             points = a.pop("_points", [])
             if points:  # 학교 위치의 평균을 동 중심으로 씁니다.
@@ -782,9 +841,11 @@ def build(province, academies, schools, year, sales=None, sales_label="", apt_ro
             a["fees"] = summarize_fees(a["fees"])
             a["top"] = pick_top_academies(a["top"])
             if sales:
-                a["sales"] = sales.get((r["name"], a["name"]))
-            if stores and stores.get((r["name"], a["name"])):
-                a["storeFlow"] = stores[(r["name"], a["name"])]
+                parts = sales_of.get(a["name"])
+                a["sales"] = round(sum(v * w for v, w in parts)) if parts else None
+            if stores_of.get(a["name"]):
+                parts = stores_of[a["name"]]
+                a["storeFlow"] = {k: round(sum(v[k] * w for v, w in parts)) for k in ("open", "close", "base")}
             a["newApts"].sort(key=lambda x: x["moveIn"])
             prices = sorted(apt.get((r["name"], a["name"]), []))
             if len(prices) >= 3:
@@ -892,7 +953,7 @@ def save(outputs, provinces):
     index = [r for r in index if r.get("province") in PROVINCES and r["province"] not in provinces]
 
     add_close_rate(outputs)
-    keep = {f"{r['id']}.json" for r in index} | {f"{o['id']}.json" for o in outputs} | {"regions.json", "history.json", "centroids.json"}
+    keep = {f"{r['id']}.json" for r in index} | {f"{o['id']}.json" for o in outputs} | {"regions.json", "history.json", "centroids.json", "seoul_adm.json"}
     for old in DATA_DIR.glob("*.json"):
         if old.name not in keep:
             old.unlink()
