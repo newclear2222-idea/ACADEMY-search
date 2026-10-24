@@ -644,7 +644,7 @@ def new_region(province, name):
     return {"province": province, "name": name, "areas": {}, "unmatched": 0, "fees": new_fee_table()}
 
 
-def area_name(province, r, address):
+def area_name_of(province, r, address):
     name = area_of(address)
     if r is None or not name:
         return name
@@ -725,7 +725,7 @@ def build(province, academies, schools, year, sales=None, sales_label="", apt_ro
 
     for school in schools:
         r = region(school["address"])
-        name = area_name(province, r, school["address"])
+        name = area_name_of(province, r, school["address"])
         if r is None or not name:
             continue
         a = r["areas"].setdefault(name, new_area(name))
@@ -750,7 +750,7 @@ def build(province, academies, schools, year, sales=None, sales_label="", apt_ro
         r = region(address)
         if r is None:
             continue
-        name = area_name(province, r, address)
+        name = area_name_of(province, r, address)
         if not name:
             r["unmatched"] += 1
             continue
