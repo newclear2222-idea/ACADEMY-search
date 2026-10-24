@@ -161,10 +161,35 @@ function flowTag(area, regionFlow) {
 // 학원이 적은 동은 매출 집계(행정동)와 학원 주소(법정동)의 경계 차이에 크게 흔들려 보여주지 않습니다.
 const MIN_ACADEMIES_FOR_SALES = 20;
 
-// 학생 1명당 월 카드매출. 매출이 과목·학년별로 나뉘지 않아 전 과목 합계를 동 전체 초·중·고 학생 수로 나눕니다.
-function perStudent(area) {
-  return area.sales && area.students.total >= 500 ? area.sales / 3 / area.students.total : 0;
+// 2025년 초중고사교육비조사(국가데이터처·교육부) 표7, 전국 전체학생 1인당 월평균 사교육비(만원).
+// 국어는 논술을 더했고, 과학은 조사에서 사회와 묶여 있습니다.
+const SPEND_PROFILE = {
+  elem: { korean: 4.3, english: 11.8, math: 8.4, science: 0.8 },
+  middle: { korean: 4.6, english: 15.8, math: 17.0, science: 2.1 },
+  high: { korean: 8.1, english: 12.7, math: 16.5, science: 3.6 },
+};
+const profileSum = (level, subject) => (subject === "all"
+  ? Object.values(SPEND_PROFILE[level]).reduce((t, x) => t + x, 0)
+  : SPEND_PROFILE[level][subject] || 0);
+
+// 학생 1명당 월 카드매출. 카드매출은 과목·학년별로 나뉘지 않으므로, 전 과목 합계를 실제 값으로 두고
+// 과목·학년을 고르면 동 매출을 전국 사교육비 비율대로 나눈 추정치를 냅니다.
+const isEstimate = (subject, level) => subject !== "all" || level !== "total";
+function perStudent(area, subject = "all", level = "total") {
+  if (!area.sales || area.students.total < 500 || area.academies.all < MIN_ACADEMIES_FOR_SALES) return 0;
+  const monthly = area.sales / 3;
+  if (!isEstimate(subject, level)) return monthly / area.students.total;
+  const levels = Object.keys(SPEND_PROFILE);
+  const weight = levels.reduce((t, l) => t + (area.students[l] || 0) * profileSum(l, "all"), 0);
+  if (!weight) return 0;
+  const k = monthly / weight; // 이 동이 전국 평균보다 몇 배 쓰는지
+  if (level !== "total") return area.students[level] ? k * profileSum(level, subject) : 0;
+  return levels.reduce((t, l) => t + (area.students[l] || 0) * k * profileSum(l, subject), 0) / area.students.total;
 }
+const SUBJECT_SHORT = { all: "전 과목", math: "수학", english: "영어", korean: "국어·논술", science: "과학" };
+const perStudentLabel = (subject, level) => (isEstimate(subject, level)
+  ? `${level === "total" ? "학생" : LEVEL_LABELS[level]} 1명당 ${SUBJECT_SHORT[subject]} 월매출 (추정)`
+  : "학생 1명당 월매출 (전 과목 합계)");
 function monthlyPerAcademy(area) {
   return area.sales && area.academies.all >= MIN_ACADEMIES_FOR_SALES ? area.sales / 3 / area.academies.all : 0;
 }
@@ -247,7 +272,7 @@ function render(data) {
       const feeText = fee ? ` · 보통 수강료 ${won(fee.median)} (${fmt(fee.count)}개 과정)` : "";
       const perMonth = monthlyPerAcademy(r.area);
       const salesText = data.salesPeriod && r.area.sales
-        ? `<div class="rank-sub">학원 카드매출 추정: 동 전체 ${bigWon(r.area.sales)} (${data.salesPeriod})${perMonth ? ` · 학원 1곳당 <strong>월 ${bigWon(perMonth)}</strong>` : ""}${regionPerMonth && perMonth ? ` (지역 평균의 ${pct(perMonth / regionPerMonth)})` : ""}${perStudent(r.area) ? ` · 학생 1명당 전 과목 합계 <strong>월 ${won(Math.round(perStudent(r.area)))}</strong>` : ""}</div>`
+        ? `<div class="rank-sub">학원 카드매출 추정: 동 전체 ${bigWon(r.area.sales)} (${data.salesPeriod})${perMonth ? ` · 학원 1곳당 <strong>월 ${bigWon(perMonth)}</strong>` : ""}${regionPerMonth && perMonth ? ` (지역 평균의 ${pct(perMonth / regionPerMonth)})` : ""}${perStudent(r.area, subject, level) ? ` · ${perStudentLabel(subject, level)} <strong>월 ${won(Math.round(perStudent(r.area, subject, level)))}</strong>` : ""}</div>`
         : "";
       const reasons = reasonsFor(r, ctx);
       const why = reasons.length
@@ -323,9 +348,9 @@ const COLUMNS = [
     text: (r) => (r.fee ? won(r.fee.median) : "-"),
   },
   {
-    key: "perStudent", label: "학생 1명당 월매출 (전 과목 합계)", salesOnly: true,
-    value: (r) => perStudent(r.area),
-    text: (r) => { const v = perStudent(r.area); return v ? won(Math.round(v)) : "-"; },
+    key: "perStudent", label: perStudentLabel, salesOnly: true,
+    value: (r) => perStudent(r.area, r.subject, r.level),
+    text: (r) => { const v = perStudent(r.area, r.subject, r.level); return v ? won(Math.round(v)) : "-"; },
   },
   {
     key: "sales", label: "학원 1곳당 월매출", salesOnly: true,
@@ -351,7 +376,7 @@ function renderCompare(rows, data, subject, level) {
     return typeof x === "string" ? x.localeCompare(y, "ko") : y - x;
   });
   els.compareHead.innerHTML = `<tr>${cols
-    .map((c) => `<th scope="col"${c.key === "name" ? "" : ' class="num"'} aria-sort="${c.key === sortKey ? (c.key === "name" ? "ascending" : "descending") : "none"}"><button type="button" data-key="${c.key}">${c.label}${c.key === sortKey ? " ▼" : ""}</button></th>`)
+    .map((c) => `<th scope="col"${c.key === "name" ? "" : ' class="num"'} aria-sort="${c.key === sortKey ? (c.key === "name" ? "ascending" : "descending") : "none"}"><button type="button" data-key="${c.key}">${typeof c.label === "function" ? c.label(subject, level) : c.label}${c.key === sortKey ? " ▼" : ""}</button></th>`)
     .join("")}</tr>`;
   els.compareBody.innerHTML = list
     .map((r) => `<tr>${cols.map((c) => `<td${c.key === "name" ? "" : ' class="num"'}>${c.text(r)}</td>`).join("")}</tr>`)
