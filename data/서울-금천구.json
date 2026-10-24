@@ -69,6 +69,42 @@
     212000,
     80
    ]
+  },
+  "korean": {
+   "elem": [
+    150000,
+    16
+   ],
+   "middle": [
+    180000,
+    8
+   ],
+   "high": [
+    240000,
+    9
+   ],
+   "total": [
+    140000,
+    63
+   ]
+  },
+  "science": {
+   "elem": [
+    null,
+    0
+   ],
+   "middle": [
+    null,
+    0
+   ],
+   "high": [
+    null,
+    0
+   ],
+   "total": [
+    null,
+    1
+   ]
   }
  },
  "areas": [
@@ -83,7 +119,9 @@
    "academies": {
     "all": 10,
     "math": 0,
-    "english": 0
+    "english": 0,
+    "korean": 1,
+    "science": 0
    },
    "schools": [],
    "fees": {
@@ -140,6 +178,42 @@
       null,
       0
      ]
+    },
+    "korean": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      88000,
+      22
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      1
+     ]
     }
    },
    "top": [
@@ -157,7 +231,9 @@
      "capacity": 75,
      "since": 2020,
      "branches": 2,
-     "subjects": []
+     "subjects": [
+      "korean"
+     ]
     }
    ],
    "newApts": [],
@@ -171,12 +247,16 @@
     "1y": {
      "all": 0,
      "math": 0,
-     "english": 0
+     "english": 0,
+     "korean": 0,
+     "science": 0
     },
     "3y": {
      "all": 1,
      "math": 0,
-     "english": 0
+     "english": 0,
+     "korean": 0,
+     "science": 0
     }
    },
    "sales": 871900739
@@ -192,7 +272,9 @@
    "academies": {
     "all": 73,
     "math": 21,
-    "english": 21
+    "english": 21,
+    "korean": 12,
+    "science": 0
    },
    "schools": [
     {
@@ -330,6 +412,42 @@
       210000,
       46
      ]
+    },
+    "korean": {
+     "elem": [
+      160000,
+      7
+     ],
+     "middle": [
+      null,
+      2
+     ],
+     "high": [
+      null,
+      1
+     ],
+     "total": [
+      170000,
+      17
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
     }
    },
    "top": [
@@ -347,7 +465,9 @@
      "capacity": 650,
      "since": 2007,
      "branches": 1,
-     "subjects": []
+     "subjects": [
+      "korean"
+     ]
     },
     {
      "name": "네임드에듀학원",
@@ -401,6 +521,7 @@
      "since": 2021,
      "branches": 1,
      "subjects": [
+      "korean",
       "math"
      ]
     },
@@ -412,6 +533,7 @@
      "branches": 2,
      "subjects": [
       "english",
+      "korean",
       "math"
      ]
     },
@@ -422,7 +544,8 @@
      "since": 2021,
      "branches": 2,
      "subjects": [
-      "english"
+      "english",
+      "korean"
      ]
     },
     {
@@ -445,6 +568,16 @@
      "subjects": [
       "english"
      ]
+    },
+    {
+     "name": "최강스카이(SKY)학원",
+     "kind": "학원",
+     "capacity": 50,
+     "since": 2018,
+     "branches": 3,
+     "subjects": [
+      "korean"
+     ]
     }
    ],
    "newApts": [],
@@ -458,12 +591,16 @@
     "1y": {
      "all": 2,
      "math": 1,
-     "english": 1
+     "english": 1,
+     "korean": 0,
+     "science": 0
     },
     "3y": {
      "all": 19,
      "math": 6,
-     "english": 6
+     "english": 6,
+     "korean": 3,
+     "science": 0
     }
    },
    "sales": 1202649947,
@@ -496,7 +633,9 @@
    "academies": {
     "all": 89,
     "math": 26,
-    "english": 27
+    "english": 27,
+    "korean": 12,
+    "science": 0
    },
    "schools": [
     {
@@ -639,6 +778,42 @@
       220000,
       34
      ]
+    },
+    "korean": {
+     "elem": [
+      140000,
+      9
+     ],
+     "middle": [
+      190000,
+      6
+     ],
+     "high": [
+      240000,
+      8
+     ],
+     "total": [
+      170000,
+      24
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
     }
    },
    "top": [
@@ -682,7 +857,9 @@
      "capacity": 254,
      "since": 1998,
      "branches": 1,
-     "subjects": []
+     "subjects": [
+      "korean"
+     ]
     },
     {
      "name": "올타임영어학원",
@@ -705,6 +882,16 @@
      ]
     },
     {
+     "name": "리더스채움학원",
+     "kind": "학원",
+     "capacity": 130,
+     "since": 2008,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
      "name": "뮤엠영어시흥동학원",
      "kind": "학원",
      "capacity": 120,
@@ -722,6 +909,16 @@
      "branches": 1,
      "subjects": [
       "english"
+     ]
+    },
+    {
+     "name": "유니학원",
+     "kind": "학원",
+     "capacity": 100,
+     "since": 2020,
+     "branches": 1,
+     "subjects": [
+      "korean"
      ]
     },
     {
@@ -765,6 +962,26 @@
      ]
     },
     {
+     "name": "한샘에듀학원",
+     "kind": "학원",
+     "capacity": 82,
+     "since": 2014,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "라엘에듀학원",
+     "kind": "학원",
+     "capacity": 80,
+     "since": 2018,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
      "name": "절대수학학원",
      "kind": "학원",
      "capacity": 74,
@@ -786,12 +1003,16 @@
     "1y": {
      "all": 12,
      "math": 4,
-     "english": 4
+     "english": 4,
+     "korean": 1,
+     "science": 0
     },
     "3y": {
      "all": 19,
      "math": 6,
-     "english": 4
+     "english": 4,
+     "korean": 3,
+     "science": 0
     }
    },
    "sales": 3391812824,

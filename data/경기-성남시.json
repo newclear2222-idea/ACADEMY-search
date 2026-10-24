@@ -68,6 +68,42 @@
     270000,
     787
    ]
+  },
+  "korean": {
+   "elem": [
+    167000,
+    175
+   ],
+   "middle": [
+    200000,
+    154
+   ],
+   "high": [
+    280000,
+    98
+   ],
+   "total": [
+    200000,
+    464
+   ]
+  },
+  "science": {
+   "elem": [
+    53000,
+    19
+   ],
+   "middle": [
+    185000,
+    37
+   ],
+   "high": [
+    320000,
+    31
+   ],
+   "total": [
+    220000,
+    95
+   ]
   }
  },
  "areas": [
@@ -82,7 +118,9 @@
    "academies": {
     "all": 12,
     "math": 5,
-    "english": 6
+    "english": 6,
+    "korean": 1,
+    "science": 1
    },
    "schools": [
     {
@@ -145,6 +183,42 @@
       250000,
       16
      ]
+    },
+    "korean": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      1
+     ],
+     "high": [
+      null,
+      1
+     ],
+     "total": [
+      null,
+      2
+     ]
     }
    },
    "top": [
@@ -165,7 +239,8 @@
      "since": 2025,
      "branches": 5,
      "subjects": [
-      "english"
+      "english",
+      "korean"
      ]
     },
     {
@@ -219,6 +294,16 @@
      ]
     },
     {
+     "name": "만점과학교습소",
+     "kind": "교습소",
+     "capacity": 8,
+     "since": 2025,
+     "branches": 1,
+     "subjects": [
+      "science"
+     ]
+    },
+    {
      "name": "뉴마스터수학교습소",
      "kind": "교습소",
      "capacity": 7,
@@ -260,12 +345,16 @@
     "1y": {
      "all": 0,
      "math": 0,
-     "english": 0
+     "english": 0,
+     "korean": 0,
+     "science": 0
     },
     "3y": {
      "all": 7,
      "math": 3,
-     "english": 3
+     "english": 3,
+     "korean": 1,
+     "science": 1
     }
    },
    "fervor": {
@@ -293,7 +382,9 @@
    "academies": {
     "all": 64,
     "math": 26,
-    "english": 18
+    "english": 18,
+    "korean": 7,
+    "science": 3
    },
    "schools": [
     {
@@ -386,6 +477,42 @@
       240000,
       29
      ]
+    },
+    "korean": {
+     "elem": [
+      177160,
+      6
+     ],
+     "middle": [
+      220000,
+      3
+     ],
+     "high": [
+      null,
+      1
+     ],
+     "total": [
+      180000,
+      10
+     ]
+    },
+    "science": {
+     "elem": [
+      55000,
+      4
+     ],
+     "middle": [
+      100000,
+      9
+     ],
+     "high": [
+      290000,
+      3
+     ],
+     "total": [
+      100000,
+      16
+     ]
     }
    },
    "top": [
@@ -450,6 +577,7 @@
      "since": 2011,
      "branches": 1,
      "subjects": [
+      "korean",
       "math"
      ]
     },
@@ -494,6 +622,16 @@
      ]
     },
     {
+     "name": "국어의훈련분당구미학원",
+     "kind": "학원",
+     "capacity": 87,
+     "since": 2024,
+     "branches": 7,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
      "name": "뉴욕영어수학학원",
      "kind": "학원",
      "capacity": 86,
@@ -513,6 +651,66 @@
      "subjects": [
       "english"
      ]
+    },
+    {
+     "name": "깊독국어논술문해력학원",
+     "kind": "학원",
+     "capacity": 70,
+     "since": 2025,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "책나무분당구미점학원",
+     "kind": "학원",
+     "capacity": 65,
+     "since": 2026,
+     "branches": 9,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "구미하연과학교습소",
+     "kind": "교습소",
+     "capacity": 30,
+     "since": 2023,
+     "branches": 1,
+     "subjects": [
+      "science"
+     ]
+    },
+    {
+     "name": "대한논리속독미금교습소",
+     "kind": "교습소",
+     "capacity": 20,
+     "since": 2012,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "연세정도과학교습소",
+     "kind": "교습소",
+     "capacity": 8,
+     "since": 2026,
+     "branches": 1,
+     "subjects": [
+      "science"
+     ]
+    },
+    {
+     "name": "미금하연과학교습소",
+     "kind": "교습소",
+     "capacity": 5,
+     "since": 2026,
+     "branches": 1,
+     "subjects": [
+      "science"
+     ]
     }
    ],
    "newApts": [],
@@ -526,12 +724,16 @@
     "1y": {
      "all": 7,
      "math": 1,
-     "english": 0
+     "english": 0,
+     "korean": 1,
+     "science": 2
     },
     "3y": {
      "all": 16,
      "math": 3,
-     "english": 4
+     "english": 4,
+     "korean": 4,
+     "science": 2
     }
    },
    "fervor": {
@@ -559,7 +761,9 @@
    "academies": {
     "all": 54,
     "math": 15,
-    "english": 13
+    "english": 13,
+    "korean": 9,
+    "science": 2
    },
    "schools": [
     {
@@ -627,6 +831,42 @@
       306000,
       37
      ]
+    },
+    "korean": {
+     "elem": [
+      180000,
+      3
+     ],
+     "middle": [
+      180000,
+      5
+     ],
+     "high": [
+      280000,
+      5
+     ],
+     "total": [
+      200000,
+      13
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
     }
    },
    "top": [
@@ -661,7 +901,8 @@
      "since": 2016,
      "branches": 2,
      "subjects": [
-      "math"
+      "math",
+      "science"
      ]
     },
     {
@@ -689,6 +930,7 @@
      "since": 2005,
      "branches": 4,
      "subjects": [
+      "korean",
       "math"
      ]
     },
@@ -713,6 +955,26 @@
      ]
     },
     {
+     "name": "얘우대가과학학원",
+     "kind": "학원",
+     "capacity": 120,
+     "since": 2004,
+     "branches": 1,
+     "subjects": [
+      "science"
+     ]
+    },
+    {
+     "name": "단아(端雅)·해법중국어학원",
+     "kind": "학원",
+     "capacity": 100,
+     "since": 2019,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
      "name": "브레이닝수학학원",
      "kind": "학원",
      "capacity": 94,
@@ -720,6 +982,26 @@
      "branches": 2,
      "subjects": [
       "math"
+     ]
+    },
+    {
+     "name": "안채영국어교습소",
+     "kind": "교습소",
+     "capacity": 72,
+     "since": 2016,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "바른1교시국어학원",
+     "kind": "학원",
+     "capacity": 65,
+     "since": 2026,
+     "branches": 1,
+     "subjects": [
+      "korean"
      ]
     },
     {
@@ -740,6 +1022,16 @@
      "branches": 7,
      "subjects": [
       "english"
+     ]
+    },
+    {
+     "name": "이백국어학원",
+     "kind": "학원",
+     "capacity": 40,
+     "since": 2017,
+     "branches": 1,
+     "subjects": [
+      "korean"
      ]
     },
     {
@@ -774,12 +1066,16 @@
     "1y": {
      "all": 5,
      "math": 1,
-     "english": 2
+     "english": 2,
+     "korean": 2,
+     "science": 0
     },
     "3y": {
      "all": 15,
      "math": 4,
-     "english": 5
+     "english": 5,
+     "korean": 2,
+     "science": 0
     }
    },
    "fervor": {
@@ -807,7 +1103,9 @@
    "academies": {
     "all": 67,
     "math": 27,
-    "english": 21
+    "english": 21,
+    "korean": 8,
+    "science": 0
    },
    "schools": [
     {
@@ -910,6 +1208,42 @@
       240000,
       39
      ]
+    },
+    "korean": {
+     "elem": [
+      130000,
+      5
+     ],
+     "middle": [
+      180000,
+      8
+     ],
+     "high": [
+      260000,
+      5
+     ],
+     "total": [
+      160000,
+      18
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      1
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      1
+     ]
     }
    },
    "top": [
@@ -920,6 +1254,7 @@
      "since": 2016,
      "branches": 1,
      "subjects": [
+      "korean",
       "math"
      ]
     },
@@ -1002,6 +1337,16 @@
      ]
     },
     {
+     "name": "그루터기국어학원",
+     "kind": "학원",
+     "capacity": 121,
+     "since": 2020,
+     "branches": 5,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
      "name": "삼성영어셀레나금상학원",
      "kind": "학원",
      "capacity": 120,
@@ -1021,6 +1366,37 @@
       "english",
       "math"
      ]
+    },
+    {
+     "name": "정음국어논술교습소",
+     "kind": "교습소",
+     "capacity": 63,
+     "since": 2015,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "위드유수학전문학원",
+     "kind": "학원",
+     "capacity": 50,
+     "since": 2022,
+     "branches": 2,
+     "subjects": [
+      "korean",
+      "math"
+     ]
+    },
+    {
+     "name": "쏙쏙한글논리국어교습소",
+     "kind": "교습소",
+     "capacity": 14,
+     "since": 2019,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
     }
    ],
    "newApts": [],
@@ -1034,12 +1410,16 @@
     "1y": {
      "all": 5,
      "math": 4,
-     "english": 2
+     "english": 2,
+     "korean": 0,
+     "science": 0
     },
     "3y": {
      "all": 10,
      "math": 6,
-     "english": 3
+     "english": 3,
+     "korean": 1,
+     "science": 0
     }
    },
    "fervor": {
@@ -1067,7 +1447,9 @@
    "academies": {
     "all": 21,
     "math": 10,
-    "english": 8
+    "english": 8,
+    "korean": 4,
+    "science": 0
    },
    "schools": [
     {
@@ -1150,6 +1532,42 @@
       210000,
       6
      ]
+    },
+    "korean": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
     }
    },
    "top": [
@@ -1205,6 +1623,7 @@
      "since": 2015,
      "branches": 1,
      "subjects": [
+      "korean",
       "math"
      ]
     },
@@ -1219,13 +1638,24 @@
      ]
     },
     {
+     "name": "생각숲독서논술학원",
+     "kind": "학원",
+     "capacity": 59,
+     "since": 2026,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
      "name": "에이원(AONE)영어전문학원",
      "kind": "학원",
      "capacity": 58,
      "since": 2012,
      "branches": 2,
      "subjects": [
-      "english"
+      "english",
+      "korean"
      ]
     },
     {
@@ -1246,6 +1676,17 @@
      "branches": 1,
      "subjects": [
       "english",
+      "math"
+     ]
+    },
+    {
+     "name": "더쉬운수학국어학원",
+     "kind": "학원",
+     "capacity": 37,
+     "since": 2019,
+     "branches": 2,
+     "subjects": [
+      "korean",
       "math"
      ]
     },
@@ -1272,12 +1713,16 @@
     "1y": {
      "all": 2,
      "math": 0,
-     "english": 1
+     "english": 1,
+     "korean": 1,
+     "science": 0
     },
     "3y": {
      "all": 4,
      "math": 0,
-     "english": 2
+     "english": 2,
+     "korean": 1,
+     "science": 0
     }
    },
    "fervor": {
@@ -1305,7 +1750,9 @@
    "academies": {
     "all": 35,
     "math": 13,
-    "english": 15
+    "english": 15,
+    "korean": 8,
+    "science": 0
    },
    "schools": [
     {
@@ -1373,6 +1820,42 @@
       240000,
       30
      ]
+    },
+    "korean": {
+     "elem": [
+      null,
+      1
+     ],
+     "middle": [
+      null,
+      1
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      200000,
+      6
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
     }
    },
    "top": [
@@ -1392,7 +1875,9 @@
      "capacity": 100,
      "since": 2022,
      "branches": 69,
-     "subjects": []
+     "subjects": [
+      "korean"
+     ]
     },
     {
      "name": "엘티에스(LTS)영어학원",
@@ -1410,7 +1895,9 @@
      "capacity": 93,
      "since": 2025,
      "branches": 2,
-     "subjects": []
+     "subjects": [
+      "korean"
+     ]
     },
     {
      "name": "씽크웰영재수학학원",
@@ -1430,6 +1917,16 @@
      "branches": 1,
      "subjects": [
       "math"
+     ]
+    },
+    {
+     "name": "책나무판교대장독서논술학원",
+     "kind": "학원",
+     "capacity": 61,
+     "since": 2025,
+     "branches": 2,
+     "subjects": [
+      "korean"
      ]
     },
     {
@@ -1460,7 +1957,8 @@
      "since": 2024,
      "branches": 8,
      "subjects": [
-      "english"
+      "english",
+      "korean"
      ]
     },
     {
@@ -1471,6 +1969,17 @@
      "branches": 3,
      "subjects": [
       "english"
+     ]
+    },
+    {
+     "name": "리딩비(ReadingBee)영어독서학원",
+     "kind": "학원",
+     "capacity": 40,
+     "since": 2022,
+     "branches": 2,
+     "subjects": [
+      "english",
+      "korean"
      ]
     },
     {
@@ -1495,12 +2004,16 @@
     "1y": {
      "all": 3,
      "math": 1,
-     "english": 1
+     "english": 1,
+     "korean": 1,
+     "science": 0
     },
     "3y": {
      "all": 18,
      "math": 4,
-     "english": 9
+     "english": 9,
+     "korean": 6,
+     "science": 0
     }
    },
    "fervor": {
@@ -1528,7 +2041,9 @@
    "academies": {
     "all": 26,
     "math": 8,
-    "english": 10
+    "english": 10,
+    "korean": 5,
+    "science": 0
    },
    "schools": [
     {
@@ -1596,6 +2111,42 @@
       246000,
       18
      ]
+    },
+    "korean": {
+     "elem": [
+      190000,
+      9
+     ],
+     "middle": [
+      200000,
+      7
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      200000,
+      16
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
     }
    },
    "top": [
@@ -1652,6 +2203,26 @@
      ]
     },
     {
+     "name": "책나무동분당독서논술학원",
+     "kind": "학원",
+     "capacity": 64,
+     "since": 2025,
+     "branches": 15,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "읽는힘도촌국어교습소",
+     "kind": "교습소",
+     "capacity": 56,
+     "since": 2022,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
      "name": "풀린다수학학원",
      "kind": "학원",
      "capacity": 55,
@@ -1680,6 +2251,36 @@
      "subjects": [
       "math"
      ]
+    },
+    {
+     "name": "봄날국어독서,리드인교습소",
+     "kind": "교습소",
+     "capacity": 32,
+     "since": 2014,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "논술나무논술교습소",
+     "kind": "교습소",
+     "capacity": 11,
+     "since": 2023,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "한우리독서토론논술학원",
+     "kind": "학원",
+     "capacity": 0,
+     "since": 2025,
+     "branches": 76,
+     "subjects": [
+      "korean"
+     ]
     }
    ],
    "newApts": [],
@@ -1693,12 +2294,16 @@
     "1y": {
      "all": 2,
      "math": 0,
-     "english": 1
+     "english": 1,
+     "korean": 1,
+     "science": 0
     },
     "3y": {
      "all": 3,
      "math": 0,
-     "english": 1
+     "english": 1,
+     "korean": 2,
+     "science": 0
     }
    },
    "fervor": {
@@ -1726,7 +2331,9 @@
    "academies": {
     "all": 0,
     "math": 0,
-    "english": 0
+    "english": 0,
+    "korean": 0,
+    "science": 0
    },
    "schools": [
     {
@@ -1794,6 +2401,42 @@
       null,
       0
      ]
+    },
+    "korean": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
     }
    },
    "top": [],
@@ -1808,12 +2451,16 @@
     "1y": {
      "all": 0,
      "math": 0,
-     "english": 0
+     "english": 0,
+     "korean": 0,
+     "science": 0
     },
     "3y": {
      "all": 0,
      "math": 0,
-     "english": 0
+     "english": 0,
+     "korean": 0,
+     "science": 0
     }
    }
   },
@@ -1828,7 +2475,9 @@
    "academies": {
     "all": 29,
     "math": 9,
-    "english": 10
+    "english": 10,
+    "korean": 2,
+    "science": 2
    },
    "schools": [
     {
@@ -1916,6 +2565,42 @@
       210000,
       13
      ]
+    },
+    "korean": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      270000,
+      5
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      270000,
+      8
+     ]
     }
    },
    "top": [
@@ -1972,6 +2657,16 @@
      ]
     },
     {
+     "name": "국어를탐하다학원",
+     "kind": "학원",
+     "capacity": 56,
+     "since": 2014,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
      "name": "백현YBM잉글루영어학원",
      "kind": "학원",
      "capacity": 50,
@@ -2008,7 +2703,8 @@
      "since": 2015,
      "branches": 2,
      "subjects": [
-      "english"
+      "english",
+      "korean"
      ]
     },
     {
@@ -2048,7 +2744,18 @@
      "since": 2010,
      "branches": 4,
      "subjects": [
-      "math"
+      "math",
+      "science"
+     ]
+    },
+    {
+     "name": "바른과학교습소",
+     "kind": "교습소",
+     "capacity": 5,
+     "since": 2026,
+     "branches": 1,
+     "subjects": [
+      "science"
      ]
     }
    ],
@@ -2063,12 +2770,16 @@
     "1y": {
      "all": 4,
      "math": 1,
-     "english": 2
+     "english": 2,
+     "korean": 0,
+     "science": 1
     },
     "3y": {
      "all": 10,
      "math": 3,
-     "english": 4
+     "english": 4,
+     "korean": 0,
+     "science": 1
     }
    },
    "fervor": {
@@ -2096,7 +2807,9 @@
    "academies": {
     "all": 4,
     "math": 2,
-    "english": 0
+    "english": 0,
+    "korean": 0,
+    "science": 0
    },
    "schools": [
     {
@@ -2169,6 +2882,42 @@
       null,
       0
      ]
+    },
+    "korean": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
     }
    },
    "top": [
@@ -2220,12 +2969,16 @@
     "1y": {
      "all": 0,
      "math": 0,
-     "english": 0
+     "english": 0,
+     "korean": 0,
+     "science": 0
     },
     "3y": {
      "all": 1,
      "math": 1,
-     "english": 0
+     "english": 0,
+     "korean": 0,
+     "science": 0
     }
    },
    "fervor": {
@@ -2253,7 +3006,9 @@
    "academies": {
     "all": 7,
     "math": 5,
-    "english": 2
+    "english": 2,
+    "korean": 1,
+    "science": 0
    },
    "schools": [
     {
@@ -2331,6 +3086,42 @@
       null,
       2
      ]
+    },
+    "korean": {
+     "elem": [
+      155000,
+      4
+     ],
+     "middle": [
+      null,
+      2
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      160000,
+      6
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
     }
    },
    "top": [
@@ -2381,7 +3172,9 @@
      "capacity": 10,
      "since": 2017,
      "branches": 19,
-     "subjects": []
+     "subjects": [
+      "korean"
+     ]
     },
     {
      "name": "주니어랩잉글리쉬영어교습소",
@@ -2415,12 +3208,16 @@
     "1y": {
      "all": 0,
      "math": 0,
-     "english": 0
+     "english": 0,
+     "korean": 0,
+     "science": 0
     },
     "3y": {
      "all": 1,
      "math": 1,
-     "english": 0
+     "english": 0,
+     "korean": 0,
+     "science": 0
     }
    },
    "fervor": {
@@ -2448,7 +3245,9 @@
    "academies": {
     "all": 5,
     "math": 2,
-    "english": 1
+    "english": 1,
+    "korean": 0,
+    "science": 0
    },
    "schools": [
     {
@@ -2516,6 +3315,42 @@
       230000,
       7
      ]
+    },
+    "korean": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
     }
    },
    "top": [
@@ -2577,12 +3412,16 @@
     "1y": {
      "all": 0,
      "math": 0,
-     "english": 0
+     "english": 0,
+     "korean": 0,
+     "science": 0
     },
     "3y": {
      "all": 1,
      "math": 0,
-     "english": 0
+     "english": 0,
+     "korean": 0,
+     "science": 0
     }
    }
   },
@@ -2597,7 +3436,9 @@
    "academies": {
     "all": 39,
     "math": 13,
-    "english": 12
+    "english": 12,
+    "korean": 6,
+    "science": 1
    },
    "schools": [
     {
@@ -2680,6 +3521,42 @@
       300000,
       15
      ]
+    },
+    "korean": {
+     "elem": [
+      225000,
+      9
+     ],
+     "middle": [
+      190000,
+      3
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      200000,
+      13
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      1
+     ],
+     "high": [
+      null,
+      1
+     ],
+     "total": [
+      1320001,
+      5
+     ]
     }
    },
    "top": [
@@ -2699,7 +3576,9 @@
      "capacity": 275,
      "since": 2022,
      "branches": 3,
-     "subjects": []
+     "subjects": [
+      "korean"
+     ]
     },
     {
      "name": "판교해법학원",
@@ -2725,7 +3604,19 @@
      "capacity": 96,
      "since": 2016,
      "branches": 5,
-     "subjects": []
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "글마루국어전문학원",
+     "kind": "학원",
+     "capacity": 84,
+     "since": 2017,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
     },
     {
      "name": "남다른2관수학학원",
@@ -2806,6 +3697,36 @@
      "subjects": [
       "math"
      ]
+    },
+    {
+     "name": "시스템과학교습소",
+     "kind": "교습소",
+     "capacity": 21,
+     "since": 2010,
+     "branches": 1,
+     "subjects": [
+      "science"
+     ]
+    },
+    {
+     "name": "깊은샘국어학원",
+     "kind": "학원",
+     "capacity": 15,
+     "since": 2019,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "한우리독서논술보평교습소",
+     "kind": "교습소",
+     "capacity": 7,
+     "since": 2026,
+     "branches": 5,
+     "subjects": [
+      "korean"
+     ]
     }
    ],
    "newApts": [],
@@ -2819,12 +3740,16 @@
     "1y": {
      "all": 3,
      "math": 0,
-     "english": 1
+     "english": 1,
+     "korean": 2,
+     "science": 0
     },
     "3y": {
      "all": 7,
      "math": 0,
-     "english": 3
+     "english": 3,
+     "korean": 2,
+     "science": 0
     }
    },
    "fervor": {
@@ -2852,7 +3777,9 @@
    "academies": {
     "all": 13,
     "math": 6,
-    "english": 3
+    "english": 3,
+    "korean": 2,
+    "science": 0
    },
    "schools": [
     {
@@ -2925,6 +3852,42 @@
       null,
       2
      ]
+    },
+    "korean": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
     }
    },
    "top": [
@@ -2984,12 +3947,23 @@
      ]
     },
     {
+     "name": "책나무금상독서논술학원",
+     "kind": "학원",
+     "capacity": 61,
+     "since": 2026,
+     "branches": 2,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
      "name": "홍셈수학전문학원",
      "kind": "학원",
      "capacity": 45,
      "since": 2022,
      "branches": 1,
      "subjects": [
+      "korean",
       "math"
      ]
     },
@@ -3035,12 +4009,16 @@
     "1y": {
      "all": 2,
      "math": 0,
-     "english": 0
+     "english": 0,
+     "korean": 1,
+     "science": 0
     },
     "3y": {
      "all": 3,
      "math": 1,
-     "english": 0
+     "english": 0,
+     "korean": 1,
+     "science": 0
     }
    },
    "fervor": {
@@ -3068,7 +4046,9 @@
    "academies": {
     "all": 165,
     "math": 60,
-    "english": 40
+    "english": 40,
+    "korean": 25,
+    "science": 10
    },
    "schools": [
     {
@@ -3166,6 +4146,42 @@
       300000,
       78
      ]
+    },
+    "korean": {
+     "elem": [
+      190000,
+      31
+     ],
+     "middle": [
+      190000,
+      23
+     ],
+     "high": [
+      170000,
+      13
+     ],
+     "total": [
+      220000,
+      82
+     ]
+    },
+    "science": {
+     "elem": [
+      127000,
+      4
+     ],
+     "middle": [
+      215000,
+      5
+     ],
+     "high": [
+      400000,
+      6
+     ],
+     "total": [
+      234000,
+      15
+     ]
     }
    },
    "top": [
@@ -3230,7 +4246,8 @@
      "since": 2019,
      "branches": 3,
      "subjects": [
-      "math"
+      "math",
+      "science"
      ]
     },
     {
@@ -3265,6 +4282,26 @@
      ]
     },
     {
+     "name": "박상희국어학원",
+     "kind": "학원",
+     "capacity": 280,
+     "since": 2019,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "국자감국어논술학원",
+     "kind": "학원",
+     "capacity": 220,
+     "since": 2015,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
      "name": "내가찾던영어학원",
      "kind": "학원",
      "capacity": 202,
@@ -3285,6 +4322,16 @@
      ]
     },
     {
+     "name": "펜타스과학학원",
+     "kind": "학원",
+     "capacity": 160,
+     "since": 2004,
+     "branches": 2,
+     "subjects": [
+      "science"
+     ]
+    },
+    {
      "name": "정도영어학원",
      "kind": "학원",
      "capacity": 140,
@@ -3292,6 +4339,68 @@
      "branches": 1,
      "subjects": [
       "english"
+     ]
+    },
+    {
+     "name": "리드인서현학원",
+     "kind": "학원",
+     "capacity": 140,
+     "since": 2020,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "책나무분당효자촌독서논술학원",
+     "kind": "학원",
+     "capacity": 134,
+     "since": 2024,
+     "branches": 9,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "아둘람영어국어학원",
+     "kind": "학원",
+     "capacity": 120,
+     "since": 2019,
+     "branches": 1,
+     "subjects": [
+      "english",
+      "korean"
+     ]
+    },
+    {
+     "name": "펜타스과학2관",
+     "kind": "학원",
+     "capacity": 90,
+     "since": 2014,
+     "branches": 2,
+     "subjects": [
+      "science"
+     ]
+    },
+    {
+     "name": "하쌤국어인쌤과학학원",
+     "kind": "학원",
+     "capacity": 90,
+     "since": 2014,
+     "branches": 1,
+     "subjects": [
+      "korean",
+      "science"
+     ]
+    },
+    {
+     "name": "최상과학학원",
+     "kind": "학원",
+     "capacity": 84,
+     "since": 2022,
+     "branches": 1,
+     "subjects": [
+      "science"
      ]
     }
    ],
@@ -3306,12 +4415,16 @@
     "1y": {
      "all": 8,
      "math": 3,
-     "english": 1
+     "english": 1,
+     "korean": 1,
+     "science": 1
     },
     "3y": {
      "all": 28,
      "math": 10,
-     "english": 5
+     "english": 5,
+     "korean": 5,
+     "science": 2
     }
    },
    "fervor": {
@@ -3339,7 +4452,9 @@
    "academies": {
     "all": 37,
     "math": 12,
-    "english": 9
+    "english": 9,
+    "korean": 5,
+    "science": 0
    },
    "schools": [
     {
@@ -3437,6 +4552,42 @@
       null,
       0
      ]
+    },
+    "korean": {
+     "elem": [
+      null,
+      2
+     ],
+     "middle": [
+      120000,
+      5
+     ],
+     "high": [
+      150000,
+      7
+     ],
+     "total": [
+      140000,
+      14
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
     }
    },
    "top": [
@@ -3476,7 +4627,8 @@
      "since": 2021,
      "branches": 331,
      "subjects": [
-      "english"
+      "english",
+      "korean"
      ]
     },
     {
@@ -3487,6 +4639,16 @@
      "branches": 2,
      "subjects": [
       "math"
+     ]
+    },
+    {
+     "name": "하이탑대입전문학원",
+     "kind": "학원",
+     "capacity": 134,
+     "since": 2018,
+     "branches": 1,
+     "subjects": [
+      "korean"
      ]
     },
     {
@@ -3517,7 +4679,18 @@
      "since": 2020,
      "branches": 2,
      "subjects": [
+      "korean",
       "math"
+     ]
+    },
+    {
+     "name": "국어의문리더스국어교습소",
+     "kind": "교습소",
+     "capacity": 63,
+     "since": 2019,
+     "branches": 3,
+     "subjects": [
+      "korean"
      ]
     },
     {
@@ -3528,6 +4701,16 @@
      "branches": 25,
      "subjects": [
       "english"
+     ]
+    },
+    {
+     "name": "국어의정석국어교습소",
+     "kind": "교습소",
+     "capacity": 24,
+     "since": 2009,
+     "branches": 2,
+     "subjects": [
+      "korean"
      ]
     }
    ],
@@ -3542,12 +4725,16 @@
     "1y": {
      "all": 2,
      "math": 1,
-     "english": 0
+     "english": 0,
+     "korean": 0,
+     "science": 0
     },
     "3y": {
      "all": 6,
      "math": 3,
-     "english": 0
+     "english": 0,
+     "korean": 0,
+     "science": 0
     }
    },
    "fervor": {
@@ -3575,7 +4762,9 @@
    "academies": {
     "all": 309,
     "math": 109,
-    "english": 74
+    "english": 74,
+    "korean": 58,
+    "science": 15
    },
    "schools": [
     {
@@ -3673,6 +4862,42 @@
       370000,
       115
      ]
+    },
+    "korean": {
+     "elem": [
+      167000,
+      27
+     ],
+     "middle": [
+      240000,
+      22
+     ],
+     "high": [
+      320000,
+      12
+     ],
+     "total": [
+      210000,
+      64
+     ]
+    },
+    "science": {
+     "elem": [
+      53000,
+      3
+     ],
+     "middle": [
+      200000,
+      5
+     ],
+     "high": [
+      340000,
+      14
+     ],
+     "total": [
+      300000,
+      24
+     ]
     }
    },
    "top": [
@@ -3706,7 +4931,9 @@
      "capacity": 1440,
      "since": 2017,
      "branches": 4,
-     "subjects": []
+     "subjects": [
+      "korean"
+     ]
     },
     {
      "name": "에이닷영어학원",
@@ -3726,6 +4953,16 @@
      "branches": 2,
      "subjects": [
       "math"
+     ]
+    },
+    {
+     "name": "올가교육분당수내올가국어학원",
+     "kind": "학원",
+     "capacity": 670,
+     "since": 2016,
+     "branches": 2,
+     "subjects": [
+      "korean"
      ]
     },
     {
@@ -3769,6 +5006,37 @@
      ]
     },
     {
+     "name": "올인원수학전문학원",
+     "kind": "학원",
+     "capacity": 320,
+     "since": 2014,
+     "branches": 2,
+     "subjects": [
+      "korean",
+      "math"
+     ]
+    },
+    {
+     "name": "배지희국어보습학원",
+     "kind": "학원",
+     "capacity": 310,
+     "since": 2006,
+     "branches": 5,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "오늘의국어학원",
+     "kind": "학원",
+     "capacity": 286,
+     "since": 2013,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
      "name": "JS영어도서관학원",
      "kind": "학원",
      "capacity": 180,
@@ -3776,6 +5044,17 @@
      "branches": 1,
      "subjects": [
       "english"
+     ]
+    },
+    {
+     "name": "스파르타수학과학학원",
+     "kind": "학원",
+     "capacity": 170,
+     "since": 2020,
+     "branches": 3,
+     "subjects": [
+      "math",
+      "science"
      ]
     },
     {
@@ -3807,6 +5086,48 @@
      "subjects": [
       "english"
      ]
+    },
+    {
+     "name": "한제희과학학원",
+     "kind": "학원",
+     "capacity": 135,
+     "since": 2009,
+     "branches": 1,
+     "subjects": [
+      "science"
+     ]
+    },
+    {
+     "name": "알지과학전문학원",
+     "kind": "학원",
+     "capacity": 120,
+     "since": 2019,
+     "branches": 1,
+     "subjects": [
+      "korean",
+      "science"
+     ]
+    },
+    {
+     "name": "제이앤제이과학분당학원",
+     "kind": "학원",
+     "capacity": 100,
+     "since": 2013,
+     "branches": 3,
+     "subjects": [
+      "science"
+     ]
+    },
+    {
+     "name": "정인수학과학학원",
+     "kind": "학원",
+     "capacity": 90,
+     "since": 2011,
+     "branches": 2,
+     "subjects": [
+      "math",
+      "science"
+     ]
     }
    ],
    "newApts": [],
@@ -3820,12 +5141,16 @@
     "1y": {
      "all": 24,
      "math": 6,
-     "english": 8
+     "english": 8,
+     "korean": 6,
+     "science": 2
     },
     "3y": {
      "all": 65,
      "math": 21,
-     "english": 19
+     "english": 19,
+     "korean": 13,
+     "science": 2
     }
    },
    "fervor": {
@@ -3853,7 +5178,9 @@
    "academies": {
     "all": 17,
     "math": 6,
-    "english": 6
+    "english": 6,
+    "korean": 1,
+    "science": 0
    },
    "schools": [
     {
@@ -3936,6 +5263,42 @@
       250000,
       13
      ]
+    },
+    "korean": {
+     "elem": [
+      null,
+      2
+     ],
+     "middle": [
+      null,
+      2
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      175000,
+      4
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
     }
    },
    "top": [
@@ -4015,6 +5378,16 @@
      ]
     },
     {
+     "name": "한우리독서논술삼부논술교습소",
+     "kind": "교습소",
+     "capacity": 19,
+     "since": 2019,
+     "branches": 5,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
      "name": "미래엔성수초수학교습소",
      "kind": "교습소",
      "capacity": 14,
@@ -4056,12 +5429,16 @@
     "1y": {
      "all": 0,
      "math": 0,
-     "english": 0
+     "english": 0,
+     "korean": 0,
+     "science": 0
     },
     "3y": {
      "all": 3,
      "math": 0,
-     "english": 2
+     "english": 2,
+     "korean": 0,
+     "science": 0
     }
    },
    "fervor": {
@@ -4089,7 +5466,9 @@
    "academies": {
     "all": 1,
     "math": 0,
-    "english": 0
+    "english": 0,
+    "korean": 0,
+    "science": 0
    },
    "schools": [],
    "fees": {
@@ -4146,6 +5525,42 @@
       null,
       0
      ]
+    },
+    "korean": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
     }
    },
    "top": [],
@@ -4160,12 +5575,16 @@
     "1y": {
      "all": 0,
      "math": 0,
-     "english": 0
+     "english": 0,
+     "korean": 0,
+     "science": 0
     },
     "3y": {
      "all": 0,
      "math": 0,
-     "english": 0
+     "english": 0,
+     "korean": 0,
+     "science": 0
     }
    }
   },
@@ -4180,7 +5599,9 @@
    "academies": {
     "all": 52,
     "math": 16,
-    "english": 13
+    "english": 13,
+    "korean": 8,
+    "science": 0
    },
    "schools": [
     {
@@ -4253,6 +5674,42 @@
       258000,
       35
      ]
+    },
+    "korean": {
+     "elem": [
+      98880,
+      5
+     ],
+     "middle": [
+      190000,
+      6
+     ],
+     "high": [
+      null,
+      1
+     ],
+     "total": [
+      160000,
+      16
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
     }
    },
    "top": [
@@ -4305,7 +5762,28 @@
      "since": 2014,
      "branches": 1,
      "subjects": [
+      "korean",
       "math"
+     ]
+    },
+    {
+     "name": "리드인독서논술글맥국어학원",
+     "kind": "학원",
+     "capacity": 120,
+     "since": 2023,
+     "branches": 69,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "루미북독서학원",
+     "kind": "학원",
+     "capacity": 93,
+     "since": 2022,
+     "branches": 7,
+     "subjects": [
+      "korean"
      ]
     },
     {
@@ -4387,6 +5865,26 @@
      "subjects": [
       "english"
      ]
+    },
+    {
+     "name": "아셀자기주도논술교습소",
+     "kind": "교습소",
+     "capacity": 20,
+     "since": 2023,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "논술쟁이논술교습소",
+     "kind": "교습소",
+     "capacity": 4,
+     "since": 2015,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
     }
    ],
    "newApts": [],
@@ -4400,12 +5898,16 @@
     "1y": {
      "all": 3,
      "math": 1,
-     "english": 2
+     "english": 2,
+     "korean": 0,
+     "science": 0
     },
     "3y": {
      "all": 12,
      "math": 5,
-     "english": 4
+     "english": 4,
+     "korean": 1,
+     "science": 0
     }
    },
    "fervor": {
@@ -4433,7 +5935,9 @@
    "academies": {
     "all": 0,
     "math": 0,
-    "english": 0
+    "english": 0,
+    "korean": 0,
+    "science": 0
    },
    "schools": [
     {
@@ -4496,6 +6000,42 @@
       null,
       0
      ]
+    },
+    "korean": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
     }
    },
    "top": [],
@@ -4510,12 +6050,16 @@
     "1y": {
      "all": 0,
      "math": 0,
-     "english": 0
+     "english": 0,
+     "korean": 0,
+     "science": 0
     },
     "3y": {
      "all": 0,
      "math": 0,
-     "english": 0
+     "english": 0,
+     "korean": 0,
+     "science": 0
     }
    }
   },
@@ -4530,7 +6074,9 @@
    "academies": {
     "all": 91,
     "math": 31,
-    "english": 31
+    "english": 31,
+    "korean": 19,
+    "science": 3
    },
    "schools": [
     {
@@ -4643,6 +6189,42 @@
       260000,
       82
      ]
+    },
+    "korean": {
+     "elem": [
+      65000,
+      4
+     ],
+     "middle": [
+      80000,
+      3
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      80000,
+      8
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      2
+     ],
+     "middle": [
+      150000,
+      3
+     ],
+     "high": [
+      350000,
+      3
+     ],
+     "total": [
+      200000,
+      8
+     ]
     }
    },
    "top": [
@@ -4652,7 +6234,9 @@
      "capacity": 490,
      "since": 2013,
      "branches": 7,
-     "subjects": []
+     "subjects": [
+      "korean"
+     ]
     },
     {
      "name": "세원수학과학학원",
@@ -4661,7 +6245,8 @@
      "since": 2019,
      "branches": 1,
      "subjects": [
-      "math"
+      "math",
+      "science"
      ]
     },
     {
@@ -4736,6 +6321,46 @@
      ]
     },
     {
+     "name": "강주희국어논술학원",
+     "kind": "학원",
+     "capacity": 140,
+     "since": 2014,
+     "branches": 3,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "검정고시명문학원",
+     "kind": "학원",
+     "capacity": 135,
+     "since": 2013,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "강주희국어논술고등관학원",
+     "kind": "학원",
+     "capacity": 128,
+     "since": 2025,
+     "branches": 3,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "국어책국어학원",
+     "kind": "학원",
+     "capacity": 120,
+     "since": 2014,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
      "name": "파머스영어엠수학학원",
      "kind": "학원",
      "capacity": 96,
@@ -4744,6 +6369,26 @@
      "subjects": [
       "english",
       "math"
+     ]
+    },
+    {
+     "name": "플랜지과학학원",
+     "kind": "학원",
+     "capacity": 58,
+     "since": 2011,
+     "branches": 1,
+     "subjects": [
+      "science"
+     ]
+    },
+    {
+     "name": "매송하연과학교습소",
+     "kind": "교습소",
+     "capacity": 36,
+     "since": 2023,
+     "branches": 1,
+     "subjects": [
+      "science"
      ]
     }
    ],
@@ -4758,12 +6403,16 @@
     "1y": {
      "all": 3,
      "math": 2,
-     "english": 1
+     "english": 1,
+     "korean": 0,
+     "science": 0
     },
     "3y": {
      "all": 16,
      "math": 7,
-     "english": 8
+     "english": 8,
+     "korean": 4,
+     "science": 0
     }
    },
    "fervor": {
@@ -4791,7 +6440,9 @@
    "academies": {
     "all": 5,
     "math": 2,
-    "english": 2
+    "english": 2,
+    "korean": 0,
+    "science": 0
    },
    "schools": [
     {
@@ -4853,6 +6504,42 @@
      "total": [
       250000,
       6
+     ]
+    },
+    "korean": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
      ]
     }
    },
@@ -4917,12 +6604,16 @@
     "1y": {
      "all": 0,
      "math": 0,
-     "english": 0
+     "english": 0,
+     "korean": 0,
+     "science": 0
     },
     "3y": {
      "all": 0,
      "math": 0,
-     "english": 0
+     "english": 0,
+     "korean": 0,
+     "science": 0
     }
    }
   },
@@ -4937,7 +6628,9 @@
    "academies": {
     "all": 22,
     "math": 10,
-    "english": 7
+    "english": 7,
+    "korean": 2,
+    "science": 0
    },
    "schools": [
     {
@@ -4999,6 +6692,42 @@
      "total": [
       273000,
       8
+     ]
+    },
+    "korean": {
+     "elem": [
+      null,
+      2
+     ],
+     "middle": [
+      null,
+      1
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      74000,
+      3
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
      ]
     }
    },
@@ -5109,6 +6838,26 @@
      "subjects": [
       "english"
      ]
+    },
+    {
+     "name": "한우리독서토론논술성남여수논술교습소",
+     "kind": "교습소",
+     "capacity": 9,
+     "since": 2024,
+     "branches": 76,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "될때까지리드인논술교습소",
+     "kind": "교습소",
+     "capacity": 8,
+     "since": 2025,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
     }
    ],
    "newApts": [],
@@ -5122,12 +6871,16 @@
     "1y": {
      "all": 2,
      "math": 1,
-     "english": 0
+     "english": 0,
+     "korean": 0,
+     "science": 0
     },
     "3y": {
      "all": 6,
      "math": 1,
-     "english": 2
+     "english": 2,
+     "korean": 2,
+     "science": 0
     }
    },
    "fervor": {
@@ -5155,7 +6908,9 @@
    "academies": {
     "all": 46,
     "math": 11,
-    "english": 16
+    "english": 16,
+    "korean": 6,
+    "science": 0
    },
    "schools": [
     {
@@ -5232,6 +6987,42 @@
      "total": [
       350000,
       17
+     ]
+    },
+    "korean": {
+     "elem": [
+      null,
+      2
+     ],
+     "middle": [
+      190000,
+      3
+     ],
+     "high": [
+      null,
+      1
+     ],
+     "total": [
+      210000,
+      6
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
      ]
     }
    },
@@ -5321,6 +7112,26 @@
      ]
     },
     {
+     "name": "C&A논술판교2관서판교학원",
+     "kind": "학원",
+     "capacity": 86,
+     "since": 2012,
+     "branches": 5,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "리드인독서논술서판교점학원",
+     "kind": "학원",
+     "capacity": 85,
+     "since": 2022,
+     "branches": 2,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
      "name": "레테르영어학원",
      "kind": "학원",
      "capacity": 80,
@@ -5351,6 +7162,16 @@
      ]
     },
     {
+     "name": "차돌국어학원",
+     "kind": "학원",
+     "capacity": 60,
+     "since": 2024,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
      "name": "에픽영어수학학원",
      "kind": "학원",
      "capacity": 52,
@@ -5359,6 +7180,26 @@
      "subjects": [
       "english",
       "math"
+     ]
+    },
+    {
+     "name": "책나무서판교운중독서논술학원",
+     "kind": "학원",
+     "capacity": 28,
+     "since": 2017,
+     "branches": 2,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "어린이작가클럽논술교습소",
+     "kind": "교습소",
+     "capacity": 24,
+     "since": 2021,
+     "branches": 1,
+     "subjects": [
+      "korean"
      ]
     }
    ],
@@ -5373,12 +7214,16 @@
     "1y": {
      "all": 0,
      "math": 0,
-     "english": 0
+     "english": 0,
+     "korean": 0,
+     "science": 0
     },
     "3y": {
      "all": 7,
      "math": 1,
-     "english": 3
+     "english": 3,
+     "korean": 1,
+     "science": 0
     }
    },
    "fervor": {
@@ -5406,7 +7251,9 @@
    "academies": {
     "all": 14,
     "math": 4,
-    "english": 4
+    "english": 4,
+    "korean": 1,
+    "science": 0
    },
    "schools": [
     {
@@ -5483,6 +7330,42 @@
      "total": [
       180000,
       9
+     ]
+    },
+    "korean": {
+     "elem": [
+      null,
+      1
+     ],
+     "middle": [
+      null,
+      1
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      2
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
      ]
     }
    },
@@ -5562,6 +7445,16 @@
      ]
     },
     {
+     "name": "생각나무글꽃교습소",
+     "kind": "교습소",
+     "capacity": 8,
+     "since": 2016,
+     "branches": 7,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
      "name": "올림영어교습소",
      "kind": "교습소",
      "capacity": 3,
@@ -5594,12 +7487,16 @@
     "1y": {
      "all": 1,
      "math": 0,
-     "english": 1
+     "english": 1,
+     "korean": 0,
+     "science": 0
     },
     "3y": {
      "all": 2,
      "math": 1,
-     "english": 2
+     "english": 2,
+     "korean": 0,
+     "science": 0
     }
    },
    "fervor": {
@@ -5627,7 +7524,9 @@
    "academies": {
     "all": 100,
     "math": 35,
-    "english": 28
+    "english": 28,
+    "korean": 13,
+    "science": 2
    },
    "schools": [
     {
@@ -5730,6 +7629,42 @@
       300000,
       62
      ]
+    },
+    "korean": {
+     "elem": [
+      180000,
+      5
+     ],
+     "middle": [
+      220000,
+      8
+     ],
+     "high": [
+      440000,
+      14
+     ],
+     "total": [
+      380000,
+      27
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
     }
    },
    "top": [
@@ -5771,7 +7706,9 @@
      "capacity": 1140,
      "since": 2020,
      "branches": 2,
-     "subjects": []
+     "subjects": [
+      "science"
+     ]
     },
     {
      "name": "수학의아침사이언스카이제13학원",
@@ -5844,6 +7781,27 @@
      ]
     },
     {
+     "name": "글터국어논술학원",
+     "kind": "학원",
+     "capacity": 110,
+     "since": 2004,
+     "branches": 2,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "딱풀리는수학이매아름점학원",
+     "kind": "학원",
+     "capacity": 110,
+     "since": 2001,
+     "branches": 2,
+     "subjects": [
+      "korean",
+      "math"
+     ]
+    },
+    {
      "name": "모디영어학원",
      "kind": "학원",
      "capacity": 95,
@@ -5851,6 +7809,16 @@
      "branches": 1,
      "subjects": [
       "english"
+     ]
+    },
+    {
+     "name": "배지희국어이매2관학원",
+     "kind": "학원",
+     "capacity": 93,
+     "since": 2025,
+     "branches": 2,
+     "subjects": [
+      "korean"
      ]
     },
     {
@@ -5872,6 +7840,37 @@
      "subjects": [
       "english"
      ]
+    },
+    {
+     "name": "책나무분당이매독서논술학원",
+     "kind": "학원",
+     "capacity": 64,
+     "since": 2024,
+     "branches": 2,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "바른독서국어학원",
+     "kind": "학원",
+     "capacity": 50,
+     "since": 2018,
+     "branches": 4,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "뉴패러다임과학전문학원",
+     "kind": "학원",
+     "capacity": 28,
+     "since": 2003,
+     "branches": 1,
+     "subjects": [
+      "korean",
+      "science"
+     ]
     }
    ],
    "newApts": [],
@@ -5885,12 +7884,16 @@
     "1y": {
      "all": 7,
      "math": 2,
-     "english": 2
+     "english": 2,
+     "korean": 3,
+     "science": 0
     },
     "3y": {
      "all": 16,
      "math": 7,
-     "english": 5
+     "english": 5,
+     "korean": 4,
+     "science": 0
     }
    },
    "fervor": {
@@ -5918,7 +7921,9 @@
    "academies": {
     "all": 285,
     "math": 81,
-    "english": 42
+    "english": 42,
+    "korean": 42,
+    "science": 9
    },
    "schools": [
     {
@@ -6051,6 +8056,42 @@
       325000,
       59
      ]
+    },
+    "korean": {
+     "elem": [
+      180000,
+      15
+     ],
+     "middle": [
+      220000,
+      10
+     ],
+     "high": [
+      350000,
+      7
+     ],
+     "total": [
+      200000,
+      41
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      300000,
+      3
+     ],
+     "high": [
+      300000,
+      3
+     ],
+     "total": [
+      300000,
+      6
+     ]
     }
    },
    "top": [
@@ -6076,7 +8117,9 @@
      "capacity": 9600,
      "since": 2022,
      "branches": 3,
-     "subjects": []
+     "subjects": [
+      "science"
+     ]
     },
     {
      "name": "분당파인만보습학원",
@@ -6095,6 +8138,16 @@
      "subjects": []
     },
     {
+     "name": "참국어입시학원",
+     "kind": "학원",
+     "capacity": 1110,
+     "since": 2011,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
      "name": "홍정임영어학원",
      "kind": "학원",
      "capacity": 950,
@@ -6102,6 +8155,16 @@
      "branches": 2,
      "subjects": [
       "english"
+     ]
+    },
+    {
+     "name": "이룸입시교육학원",
+     "kind": "학원",
+     "capacity": 625,
+     "since": 2020,
+     "branches": 5,
+     "subjects": [
+      "korean"
      ]
     },
     {
@@ -6125,6 +8188,16 @@
      ]
     },
     {
+     "name": "올가교육정자올가국어학원",
+     "kind": "학원",
+     "capacity": 490,
+     "since": 2012,
+     "branches": 7,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
      "name": "수학하다마스터관학원",
      "kind": "학원",
      "capacity": 475,
@@ -6132,6 +8205,26 @@
      "branches": 6,
      "subjects": [
       "math"
+     ]
+    },
+    {
+     "name": "러셀분당학원",
+     "kind": "학원",
+     "capacity": 420,
+     "since": 2016,
+     "branches": 4,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "라임국어학원",
+     "kind": "학원",
+     "capacity": 355,
+     "since": 2006,
+     "branches": 1,
+     "subjects": [
+      "korean"
      ]
     },
     {
@@ -6151,6 +8244,7 @@
      "since": 2020,
      "branches": 1,
      "subjects": [
+      "korean",
       "math"
      ]
     },
@@ -6193,6 +8287,47 @@
      "subjects": [
       "english"
      ]
+    },
+    {
+     "name": "아카과학학원",
+     "kind": "학원",
+     "capacity": 132,
+     "since": 2012,
+     "branches": 1,
+     "subjects": [
+      "science"
+     ]
+    },
+    {
+     "name": "수이수과학학원",
+     "kind": "학원",
+     "capacity": 110,
+     "since": 2023,
+     "branches": 1,
+     "subjects": [
+      "science"
+     ]
+    },
+    {
+     "name": "로지크과학학원",
+     "kind": "학원",
+     "capacity": 89,
+     "since": 2026,
+     "branches": 1,
+     "subjects": [
+      "science"
+     ]
+    },
+    {
+     "name": "사이언스풀과학논술학원",
+     "kind": "학원",
+     "capacity": 60,
+     "since": 2020,
+     "branches": 7,
+     "subjects": [
+      "korean",
+      "science"
+     ]
     }
    ],
    "newApts": [],
@@ -6206,12 +8341,16 @@
     "1y": {
      "all": 23,
      "math": 8,
-     "english": 6
+     "english": 6,
+     "korean": 3,
+     "science": 1
     },
     "3y": {
      "all": 55,
      "math": 20,
-     "english": 8
+     "english": 8,
+     "korean": 7,
+     "science": 1
     }
    },
    "fervor": {
@@ -6239,7 +8378,9 @@
    "academies": {
     "all": 1,
     "math": 0,
-    "english": 0
+    "english": 0,
+    "korean": 0,
+    "science": 0
    },
    "schools": [],
    "fees": {
@@ -6296,6 +8437,42 @@
       null,
       0
      ]
+    },
+    "korean": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
     }
    },
    "top": [
@@ -6319,12 +8496,16 @@
     "1y": {
      "all": 0,
      "math": 0,
-     "english": 0
+     "english": 0,
+     "korean": 0,
+     "science": 0
     },
     "3y": {
      "all": 0,
      "math": 0,
-     "english": 0
+     "english": 0,
+     "korean": 0,
+     "science": 0
     }
    }
   },
@@ -6339,7 +8520,9 @@
    "academies": {
     "all": 14,
     "math": 3,
-    "english": 5
+    "english": 5,
+    "korean": 3,
+    "science": 0
    },
    "schools": [
     {
@@ -6401,6 +8584,42 @@
      "total": [
       240000,
       23
+     ]
+    },
+    "korean": {
+     "elem": [
+      239000,
+      14
+     ],
+     "middle": [
+      290000,
+      13
+     ],
+     "high": [
+      350000,
+      12
+     ],
+     "total": [
+      280000,
+      39
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
      ]
     }
    },
@@ -6480,6 +8699,16 @@
      ]
     },
     {
+     "name": "한우리독서토론논술중원힐스테이트논술교습소",
+     "kind": "교습소",
+     "capacity": 9,
+     "since": 2025,
+     "branches": 2,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
      "name": "리드앤톡성남중앙영어교습소",
      "kind": "교습소",
      "capacity": 8,
@@ -6487,6 +8716,26 @@
      "branches": 2,
      "subjects": [
       "english"
+     ]
+    },
+    {
+     "name": "해법독서논술교습소",
+     "kind": "교습소",
+     "capacity": 8,
+     "since": 2026,
+     "branches": 17,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "컴인방과후논술교습소",
+     "kind": "교습소",
+     "capacity": 6,
+     "since": 2025,
+     "branches": 1,
+     "subjects": [
+      "korean"
      ]
     },
     {
@@ -6521,12 +8770,16 @@
     "1y": {
      "all": 1,
      "math": 0,
-     "english": 0
+     "english": 0,
+     "korean": 1,
+     "science": 0
     },
     "3y": {
      "all": 6,
      "math": 0,
-     "english": 2
+     "english": 2,
+     "korean": 3,
+     "science": 0
     }
    },
    "fervor": {
@@ -6554,7 +8807,9 @@
    "academies": {
     "all": 219,
     "math": 71,
-    "english": 59
+    "english": 59,
+    "korean": 42,
+    "science": 7
    },
    "schools": [
     {
@@ -6647,6 +8902,42 @@
       255000,
       27
      ]
+    },
+    "korean": {
+     "elem": [
+      185000,
+      20
+     ],
+     "middle": [
+      215000,
+      21
+     ],
+     "high": [
+      280000,
+      15
+     ],
+     "total": [
+      220000,
+      56
+     ]
+    },
+    "science": {
+     "elem": [
+      44000,
+      6
+     ],
+     "middle": [
+      86000,
+      4
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      53000,
+      10
+     ]
     }
    },
    "top": [
@@ -6690,7 +8981,9 @@
      "capacity": 350,
      "since": 2022,
      "branches": 1,
-     "subjects": []
+     "subjects": [
+      "korean"
+     ]
     },
     {
      "name": "삼성영어셀레나위례푸른학원",
@@ -6710,6 +9003,36 @@
      "branches": 1,
      "subjects": [
       "english"
+     ]
+    },
+    {
+     "name": "브레인독서독해학원",
+     "kind": "학원",
+     "capacity": 235,
+     "since": 2020,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "이효정국어논술학원",
+     "kind": "학원",
+     "capacity": 220,
+     "since": 2020,
+     "branches": 2,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "책나무위례광장독서논술학원",
+     "kind": "학원",
+     "capacity": 210,
+     "since": 2023,
+     "branches": 1,
+     "subjects": [
+      "korean"
      ]
     },
     {
@@ -6733,6 +9056,16 @@
      ]
     },
     {
+     "name": "보리국어전문2관학원",
+     "kind": "학원",
+     "capacity": 200,
+     "since": 2021,
+     "branches": 2,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
      "name": "SLA영어학원",
      "kind": "학원",
      "capacity": 195,
@@ -6740,6 +9073,16 @@
      "branches": 1,
      "subjects": [
       "english"
+     ]
+    },
+    {
+     "name": "알과영과학위레본원학원",
+     "kind": "학원",
+     "capacity": 183,
+     "since": 2026,
+     "branches": 1,
+     "subjects": [
+      "science"
      ]
     },
     {
@@ -6779,7 +9122,50 @@
      "since": 2020,
      "branches": 2,
      "subjects": [
-      "english"
+      "english",
+      "korean"
+     ]
+    },
+    {
+     "name": "태건과학학원",
+     "kind": "학원",
+     "capacity": 67,
+     "since": 2026,
+     "branches": 1,
+     "subjects": [
+      "science"
+     ]
+    },
+    {
+     "name": "연세윤과학학원",
+     "kind": "학원",
+     "capacity": 64,
+     "since": 2022,
+     "branches": 1,
+     "subjects": [
+      "science"
+     ]
+    },
+    {
+     "name": "위더스수학과학학원",
+     "kind": "학원",
+     "capacity": 44,
+     "since": 2016,
+     "branches": 3,
+     "subjects": [
+      "math",
+      "science"
+     ]
+    },
+    {
+     "name": "플라이온수학과학학원",
+     "kind": "학원",
+     "capacity": 30,
+     "since": 2022,
+     "branches": 1,
+     "subjects": [
+      "math",
+      "science"
      ]
     }
    ],
@@ -6794,12 +9180,16 @@
     "1y": {
      "all": 27,
      "math": 9,
-     "english": 2
+     "english": 2,
+     "korean": 5,
+     "science": 2
     },
     "3y": {
      "all": 64,
      "math": 23,
-     "english": 13
+     "english": 13,
+     "korean": 10,
+     "science": 3
     }
    },
    "fervor": {
@@ -6827,7 +9217,9 @@
    "academies": {
     "all": 37,
     "math": 12,
-    "english": 9
+    "english": 9,
+    "korean": 3,
+    "science": 1
    },
    "schools": [
     {
@@ -6915,6 +9307,42 @@
       200000,
       15
      ]
+    },
+    "korean": {
+     "elem": [
+      125000,
+      5
+     ],
+     "middle": [
+      200000,
+      3
+     ],
+     "high": [
+      250000,
+      4
+     ],
+     "total": [
+      180000,
+      12
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
     }
    },
    "top": [
@@ -6994,6 +9422,26 @@
      ]
     },
     {
+     "name": "진학과학관학원",
+     "kind": "학원",
+     "capacity": 64,
+     "since": 2024,
+     "branches": 1,
+     "subjects": [
+      "science"
+     ]
+    },
+    {
+     "name": "경경중국어교습소",
+     "kind": "교습소",
+     "capacity": 54,
+     "since": 2011,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
      "name": "탑에듀영수학원",
      "kind": "학원",
      "capacity": 52,
@@ -7013,6 +9461,26 @@
       "english",
       "math"
      ]
+    },
+    {
+     "name": "리드인독서논술이마트점학원",
+     "kind": "학원",
+     "capacity": 19,
+     "since": 2016,
+     "branches": 2,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "보물을찾는아이들논술교습소",
+     "kind": "교습소",
+     "capacity": 12,
+     "since": 2014,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
     }
    ],
    "newApts": [],
@@ -7026,12 +9494,16 @@
     "1y": {
      "all": 2,
      "math": 1,
-     "english": 0
+     "english": 0,
+     "korean": 0,
+     "science": 0
     },
     "3y": {
      "all": 5,
      "math": 2,
-     "english": 1
+     "english": 1,
+     "korean": 0,
+     "science": 1
     }
    },
    "fervor": {
@@ -7059,7 +9531,9 @@
    "academies": {
     "all": 34,
     "math": 15,
-    "english": 13
+    "english": 13,
+    "korean": 6,
+    "science": 0
    },
    "schools": [
     {
@@ -7142,6 +9616,42 @@
       280000,
       21
      ]
+    },
+    "korean": {
+     "elem": [
+      null,
+      1
+     ],
+     "middle": [
+      null,
+      1
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      2
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
     }
    },
    "top": [
@@ -7214,6 +9724,16 @@
      ]
     },
     {
+     "name": "리드인독서논술서판교2관판교동점학원",
+     "kind": "학원",
+     "capacity": 88,
+     "since": 2024,
+     "branches": 2,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
      "name": "유투엠수학루체테영어학원",
      "kind": "학원",
      "capacity": 72,
@@ -7222,6 +9742,27 @@
      "subjects": [
       "english",
       "math"
+     ]
+    },
+    {
+     "name": "리드앤톡영어독서학원",
+     "kind": "학원",
+     "capacity": 70,
+     "since": 2022,
+     "branches": 17,
+     "subjects": [
+      "english",
+      "korean"
+     ]
+    },
+    {
+     "name": "책나무판교독서논술학원",
+     "kind": "학원",
+     "capacity": 60,
+     "since": 2025,
+     "branches": 2,
+     "subjects": [
+      "korean"
      ]
     },
     {
@@ -7243,6 +9784,26 @@
      "subjects": [
       "math"
      ]
+    },
+    {
+     "name": "토론과논술판교낙생학원",
+     "kind": "학원",
+     "capacity": 48,
+     "since": 2021,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "한우리독서논술교습소",
+     "kind": "교습소",
+     "capacity": 18,
+     "since": 2021,
+     "branches": 5,
+     "subjects": [
+      "korean"
+     ]
     }
    ],
    "newApts": [],
@@ -7256,12 +9817,16 @@
     "1y": {
      "all": 3,
      "math": 3,
-     "english": 0
+     "english": 0,
+     "korean": 0,
+     "science": 0
     },
     "3y": {
      "all": 9,
      "math": 5,
-     "english": 2
+     "english": 2,
+     "korean": 2,
+     "science": 0
     }
    },
    "fervor": {
@@ -7289,7 +9854,9 @@
    "academies": {
     "all": 24,
     "math": 9,
-    "english": 1
+    "english": 1,
+    "korean": 4,
+    "science": 0
    },
    "schools": [
     {
@@ -7367,6 +9934,42 @@
       280000,
       3
      ]
+    },
+    "korean": {
+     "elem": [
+      null,
+      2
+     ],
+     "middle": [
+      220000,
+      3
+     ],
+     "high": [
+      null,
+      1
+     ],
+     "total": [
+      220000,
+      6
+     ]
+    },
+    "science": {
+     "elem": [
+      null,
+      0
+     ],
+     "middle": [
+      null,
+      0
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      null,
+      0
+     ]
     }
    },
    "top": [
@@ -7385,6 +9988,7 @@
      "since": 2004,
      "branches": 2,
      "subjects": [
+      "korean",
       "math"
      ]
     },
@@ -7437,6 +10041,26 @@
      ]
     },
     {
+     "name": "매쓰톡톡국영수대입전문학원",
+     "kind": "학원",
+     "capacity": 30,
+     "since": 2022,
+     "branches": 2,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "한우리하대원논술교습소",
+     "kind": "교습소",
+     "capacity": 27,
+     "since": 2014,
+     "branches": 2,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
      "name": "김선생영어교습소",
      "kind": "교습소",
      "capacity": 18,
@@ -7444,6 +10068,16 @@
      "branches": 1,
      "subjects": [
       "english"
+     ]
+    },
+    {
+     "name": "일등급국어교습소",
+     "kind": "교습소",
+     "capacity": 18,
+     "since": 2020,
+     "branches": 2,
+     "subjects": [
+      "korean"
      ]
     }
    ],
@@ -7458,12 +10092,16 @@
     "1y": {
      "all": 0,
      "math": 0,
-     "english": 0
+     "english": 0,
+     "korean": 0,
+     "science": 0
     },
     "3y": {
      "all": 1,
      "math": 1,
-     "english": 0
+     "english": 0,
+     "korean": 0,
+     "science": 0
     }
    },
    "fervor": {
