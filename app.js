@@ -73,6 +73,14 @@ function reasonsFor(r, ctx) {
     reasons.push("학교가 1곳뿐이라 숫자가 그 학교 하나에 크게 좌우됩니다.");
   }
 
+  const change = studentChange(r.area, level);
+  if (change !== null && change >= 0.1) reasons.push(`학생 수가 ${ctx.pastYear}년보다 ${signedPct(change)} 늘었습니다. 수요가 커지는 동네입니다.`);
+  if (change !== null && change <= -0.1) reasons.push(`학생 수가 ${ctx.pastYear}년보다 ${signedPct(change)} 줄었습니다. 지금 숫자보다 앞으로 수요가 작아질 수 있습니다.`);
+  const opened = r.area.opened?.["1y"][subject] || 0;
+  if (r.academies >= 5 && opened / r.academies >= 0.2) reasons.push(`지금 ${label} ${fmt(r.academies)}곳 중 ${fmt(opened)}곳이 최근 1년 안에 문을 열었습니다. 새로 들어오는 학원이 많습니다.`);
+  const bigApts = (r.area.newApts || []).filter((x) => x.households >= 500 && x.moveIn >= thisMonth());
+  if (bigApts.length) reasons.push(`${bigApts.map((x) => `${x.name}(${fmt(x.households)}세대)`).join(", ")} 입주가 예정돼 있어 학생이 늘 수 있습니다.`);
+
   const areaFee = feeOf(r.area.fees, subject, level);
   if (areaFee && ctx.regionFee) {
     const diff = areaFee.median / ctx.regionFee.median - 1;
@@ -81,6 +89,33 @@ function reasonsFor(r, ctx) {
     }
   }
   return reasons;
+}
+
+// 학생 수 변화율 (몇 년 전 공시 대비). 그때 자료가 없으면 null.
+function studentChange(area, level) {
+  const before = area.studentsPast?.[level];
+  return before ? area.students[level] / before - 1 : null;
+}
+
+const signedPct = (x) => `${x >= 0 ? "+" : "−"}${Math.round(Math.abs(x) * 100)}%`;
+
+function trendText(area, data, subject, level) {
+  const lines = [];
+  const change = studentChange(area, level);
+  if (change !== null) lines.push(`학생 수 ${data.pastYear}년보다 <strong>${signedPct(change)}</strong>`);
+  const o = area.opened;
+  if (o) lines.push(`최근 1년 새로 연 ${SUBJECT_LABELS[subject]} <strong>${fmt(o["1y"][subject])}곳</strong> (3년 ${fmt(o["3y"][subject])}곳)`);
+  let html = lines.length ? `<div class="rank-sub">${lines.join(" · ")}</div>` : "";
+  if (area.newApts?.length) {
+    const items = area.newApts.slice(0, 4).map((x) => `${x.name} ${fmt(x.households)}세대 (${x.moveIn.replace("-", "년 ")}월 입주${x.moveIn < thisMonth() ? "" : " 예정"})`);
+    html += `<div class="rank-sub">새 아파트: ${items.join(", ")}${area.newApts.length > 4 ? ` 외 ${area.newApts.length - 4}곳` : ""}</div>`;
+  }
+  return html;
+}
+
+function thisMonth() {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
 }
 
 // 교육열 추정치: 시·도 안 동들과 비교한 백분위 평균 (scripts/update_data.py add_fervor)
@@ -146,7 +181,7 @@ function render(data) {
   const regionPerMonth = withSales.length
     ? withSales.reduce((t, a) => t + a.sales, 0) / 3 / withSales.reduce((t, a) => t + a.academies.all, 0)
     : 0;
-  const ctx = { subject, level, totalStudents, totalAcademies, regionFee };
+  const ctx = { subject, level, totalStudents, totalAcademies, regionFee, pastYear: data.pastYear };
 
   els.summary.innerHTML = `
     <div><div class="label">${data.region} ${LEVEL_LABELS[level]}</div><div class="value">${fmt(totalStudents)}명</div></div>
@@ -195,6 +230,7 @@ function render(data) {
         <div class="rank-sub">${LEVEL_LABELS[level]} ${fmt(r.students)}명 · ${SUBJECT_LABELS[subject]} ${fmt(r.academies)}곳 · 학교 ${schoolCount}곳${feeText}</div>
         ${salesText}
         ${fervorText(r.area)}
+        ${trendText(r.area, data, subject, level)}
         ${r.area.apt ? `<div class="rank-sub">아파트 평당 <strong>${bigWon(r.area.apt[0])}</strong> (${data.aptPeriod} ${fmt(r.area.apt[1])}건의 중간값)</div>` : ""}
         ${why}
       </li>`;
@@ -230,6 +266,21 @@ const COLUMNS = [
     text: (r) => (r.area.fervor ? `${fervorLabel(r.area.fervor.score)} ${r.area.fervor.score}` : "-"),
   },
   {
+    key: "change", label: "학생 증감",
+    value: (r) => studentChange(r.area, r.level) ?? -9,
+    text: (r) => { const c = studentChange(r.area, r.level); return c === null ? "-" : signedPct(c); },
+  },
+  {
+    key: "opened", label: "새 학원(1년)",
+    value: (r) => r.area.opened?.["1y"][r.subject] ?? -1,
+    text: (r) => (r.area.opened ? `${fmt(r.area.opened["1y"][r.subject])}곳` : "-"),
+  },
+  {
+    key: "newApts", label: "새 아파트",
+    value: (r) => (r.area.newApts || []).reduce((t, x) => t + x.households, 0),
+    text: (r) => { const n = (r.area.newApts || []).reduce((t, x) => t + x.households, 0); return n ? `${fmt(n)}세대` : "-"; },
+  },
+  {
     key: "apt", label: "아파트 평당가", aptOnly: true,
     value: (r) => r.area.apt?.[0] || 0,
     text: (r) => (r.area.apt ? bigWon(r.area.apt[0]) : "-"),
@@ -249,11 +300,14 @@ const COLUMNS = [
 function renderCompare(rows, data, subject, level) {
   const hasSales = Boolean(data.salesPeriod);
   // 휴대폰에서도 바로 보이도록 매출과 경쟁 지표를 동 이름 옆에 둡니다.
-  const order = ["name", "sales", "fervor", "apt", "ratio", "fee", "students", "academies"];
+  const order = ["name", "sales", "fervor", "apt", "change", "opened", "newApts", "ratio", "fee", "students", "academies"];
   const hasApt = Boolean(data.aptPeriod);
-  const cols = COLUMNS.filter((c) => (hasSales || !c.salesOnly) && (hasApt || !c.aptOnly)).sort((a, b) => order.indexOf(a.key) - order.indexOf(b.key));
+  const hasTrend = Boolean(data.pastYear);
+  const hasNewApts = data.areas.some((a) => a.newApts?.length);
+  const cols = COLUMNS.filter((c) => (hasSales || !c.salesOnly) && (hasApt || !c.aptOnly)
+    && (hasTrend || c.key !== "change") && (data.areas[0]?.opened || c.key !== "opened") && (hasNewApts || c.key !== "newApts")).sort((a, b) => order.indexOf(a.key) - order.indexOf(b.key));
   if (!cols.some((c) => c.key === sortKey)) sortKey = "ratio";
-  const list = rows.map((r) => ({ ...r, fee: feeOf(r.area.fees, subject, level), perMonth: monthlyPerAcademy(r.area) }));
+  const list = rows.map((r) => ({ ...r, subject, level, fee: feeOf(r.area.fees, subject, level), perMonth: monthlyPerAcademy(r.area) }));
   const col = cols.find((c) => c.key === sortKey);
   list.sort((a, b) => {
     const x = col.value(a), y = col.value(b);

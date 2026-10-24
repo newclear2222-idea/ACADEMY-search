@@ -30,6 +30,7 @@ NEIS_URL = "https://open.neis.go.kr/hub/acaInsTiInfo"
 NEIS_SCHOOL_URL = "https://open.neis.go.kr/hub/schoolInfo"
 SCHOOLINFO_URL = "https://www.schoolinfo.go.kr/openApi.do"
 APT_URL = "https://apis.data.go.kr/1613000/RTMSDataSvcAptTrade/getRTMSDataSvcAptTrade"
+PRESALE_URL = "https://api.odcloud.kr/api/ApplyhomeInfoDetailSvc/v1/getAPTLttotPblancDetail"  # 청약홈 분양정보
 APT_MONTHS = 6  # 최근 몇 달 거래로 평당가를 낼지
 PYEONG = 3.305785  # 1평(m²)
 SEOUL_URL = "http://openapi.seoul.go.kr:8088"
@@ -279,13 +280,34 @@ def fetch_schools(key, province, neis_addresses):
                     ]
                     # 동·읍·면까지 읽히는 첫 주소를 씁니다.
                     address = next((a for a in candidates if area_of(a)), "")
-                    schools[code] = {"name": name, "level": level, "address": address, "students": students, "sgg": sgg}
+                    schools[code] = {
+                        "code": code, "name": name, "level": level, "address": address, "students": students, "sgg": sgg,
+                    }
             print(f"    {year}년 {sgg or '시도 전체'}: 새 학교 {len(schools) - before}곳")
         if schools:
             no_address = sum(1 for school in schools.values() if not area_of(school["address"]))
             print(f"  {year}년 공시 기준 학교 {len(schools)}곳을 받았습니다 (동을 못 찾은 학교 {no_address}곳).")
             return list(schools.values()), year
     sys.exit(f"{province}: 학교알리미에서 학생 수를 받지 못했습니다. 인증키를 확인해 주세요.")
+
+
+TREND_YEARS = 3  # 학생 수를 몇 년 전과 비교할지
+
+
+def fetch_past_students(key, province, year):
+    """학교알리미에서 몇 년 전 공시의 학교별 학생 수를 받습니다. {학교 코드: 학생 수}"""
+    config = PROVINCES[province]
+    past = {}
+    for sgg in [""] + config["sgg"]:
+        for kind in SCHOOL_KINDS.values():
+            for row in schoolinfo_list(key, {
+                "apiType": "09", "pbanYr": year, "sidoCode": config["sido"], "sggCode": sgg, "schulKndCode": kind,
+            }):
+                students = to_int(row.get("COL_S_SUM") or row.get("COL_SUM_S4"))
+                if students:
+                    past[row.get("SCHUL_CODE")] = students
+    print(f"  {year}년 공시 학생 수: 학교 {len(past)}곳")
+    return past
 
 
 def to_int(value):
@@ -382,6 +404,44 @@ def fetch_seoul_sales(key):
             return sales, label
     print("  서울 학원 매출 자료를 찾지 못했습니다.")
     return {}, ""
+
+
+def fetch_presales(key):
+    """청약홈 아파트 분양 공고 중 아직 입주 전이거나 최근 1년 안에 입주한 단지를 받습니다.
+
+    돌려주는 값: [{"address", "name", "households", "moveIn": "2027-03", "notice": "2025-11-02"}, ...]
+    """
+    today = datetime.date.today()
+    since = f"{today.year - 4}-01-01"
+    move_in_from = f"{today.year - 1}{today.month:02d}"
+    out, page = [], 1
+    while True:
+        url = f"{PRESALE_URL}?" + urllib.parse.urlencode({
+            "page": page, "perPage": 1000, "serviceKey": key, "cond[RCRIT_PBLANC_DE::GTE]": since,
+        })
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "academy-search"}), timeout=60) as res:
+                data = json.loads(res.read().decode("utf-8"))
+        except Exception as e:  # 활용신청 전이면 401이 옵니다. 분양 소식은 덤이라 건너뜁니다.
+            print(f"  청약홈 분양정보를 받지 못했습니다: {e}")
+            return []
+        rows = data.get("data") or []
+        for row in rows:
+            move_in = str(row.get("MVN_PREARNGE_YM") or "")
+            if len(move_in) != 6 or move_in < move_in_from:
+                continue
+            out.append({
+                "address": str(row.get("HSSPLY_ADRES") or ""),
+                "name": str(row.get("HOUSE_NM") or "").strip(),
+                "households": to_int(row.get("TOT_SUPLY_HSHLDCO")),
+                "moveIn": f"{move_in[:4]}-{move_in[4:]}",
+                "notice": str(row.get("RCRIT_PBLANC_DE") or ""),
+            })
+        if not rows or page * 1000 >= to_int(data.get("totalCount")):
+            break
+        page += 1
+    print(f"  청약홈 분양 단지 {len(out)}곳 (입주 예정 또는 최근 1년 입주)")
+    return out
 
 
 def fetch_apartment_prices(key, province):
@@ -481,15 +541,24 @@ def new_area(name):
         "schools": [],
         "fees": new_fee_table(),
         "top": [],
+        "newApts": [],
+        "studentsPast": {"elem": 0, "middle": 0, "high": 0, "total": 0},
+        # 지금 영업 중인 학원 중 최근 1년, 3년 안에 문을 연 곳
+        "opened": {"1y": {"all": 0, "math": 0, "english": 0}, "3y": {"all": 0, "math": 0, "english": 0}},
     }
 
 
-def build(province, academies, schools, year, sales=None, sales_label="", apt_rows=None):
+def build(province, academies, schools, year, sales=None, sales_label="", apt_rows=None, past=None, past_year=None,
+          presales=None):
     """시도 하나의 학원·학교를 구·시·군 > 동·읍·면으로 묶습니다."""
     regions = {}
     sgg_regions = {}  # 학교알리미 시군구 코드 -> {구·시·군: 학교 수}. 아파트 거래를 구·시·군에 붙일 때 씁니다.
     if academies:
         print(f"  학원 항목: {', '.join(sorted(academies[0]))}")
+    statuses = {}
+    for row in academies:
+        statuses[row.get("REG_STTUS_NM") or "(없음)"] = statuses.get(row.get("REG_STTUS_NM") or "(없음)", 0) + 1
+    print(f"  학원 등록상태: {statuses}")
     brand_counts = count_branches(r.get("ACA_NM") for r in academies if is_open_tutoring(r))
 
     def region(address):
@@ -507,6 +576,10 @@ def build(province, academies, schools, year, sales=None, sales_label="", apt_ro
         a["students"][school["level"]] += school["students"]
         a["students"]["total"] += school["students"]
         a["schools"].append({k: school[k] for k in ("name", "level", "students")})
+        if past:
+            before = past.get(school.get("code"), 0)
+            a["studentsPast"][school["level"]] += before
+            a["studentsPast"]["total"] += before
         if school.get("sgg"):
             sgg_regions.setdefault(school["sgg"], {}).setdefault(r["name"], 0)
             sgg_regions[school["sgg"]][r["name"]] += 1
@@ -531,6 +604,12 @@ def build(province, academies, schools, year, sales=None, sales_label="", apt_ro
         add_fees(a["fees"], row, subjects)
         add_fees(r["fees"], row, subjects)
         established = str(row.get("ESTBL_YMD") or "")[:4]
+        opened_on = str(row.get("ESTBL_YMD") or "")[:8]
+        if opened_on.isdigit() and len(opened_on) == 8:
+            for period, days in (("1y", 365), ("3y", 365 * 3)):
+                if opened_on >= f"{datetime.date.today() - datetime.timedelta(days=days):%Y%m%d}":
+                    for k in {"all"} | subjects:
+                        a["opened"][period][k] += 1
         a["top"].append({
             "name": (row.get("ACA_NM") or "").strip(),
             "kind": "교습소" if "교습소" in (row.get("ACA_INSTI_SC_NM") or "") else "학원",
@@ -550,15 +629,28 @@ def build(province, academies, schools, year, sales=None, sales_label="", apt_ro
         for name, area in old_region["areas"].items():
             target = next((t for t in targets if name in regions[t]["areas"]), targets[0])
             merged = regions[target]["areas"].setdefault(name, new_area(name))
-            for key in ("students", "academies"):
+            for key in ("students", "academies", "studentsPast"):
                 for k, v in area[key].items():
                     merged[key][k] += v
+            for period, counts in area["opened"].items():
+                for k, v in counts.items():
+                    merged["opened"][period][k] += v
             merged["schools"] += area["schools"]
             merged["top"] += area["top"]
             for subject, levels in area["fees"].items():
                 for level, amounts in levels.items():
                     merged["fees"][subject][level] += amounts
                     regions[target]["fees"][subject][level] += amounts
+
+    for complex_ in presales or []:
+        found = region_of(complex_["address"])
+        name = area_of(complex_["address"])
+        if not found or found[0] != province or not name:
+            continue
+        region_name = found[1]
+        region_name = next((t for t in SPLIT_REGIONS.get(province, {}).get(region_name, []) if name in regions.get(t, {}).get("areas", {})), region_name)
+        if region_name in regions and name in regions[region_name]["areas"]:
+            regions[region_name]["areas"][name]["newApts"].append({k: complex_[k] for k in ("name", "households", "moveIn")})
 
     apt = {}
     for sgg, area_name, price in apt_rows or []:
@@ -580,6 +672,7 @@ def build(province, academies, schools, year, sales=None, sales_label="", apt_ro
             a["top"] = pick_top_academies(a["top"])
             if sales:
                 a["sales"] = sales.get((r["name"], a["name"]))
+            a["newApts"].sort(key=lambda x: x["moveIn"])
             prices = sorted(apt.get((r["name"], a["name"]), []))
             if len(prices) >= 3:
                 a["apt"] = [prices[len(prices) // 2], len(prices)]
@@ -597,6 +690,7 @@ def build(province, academies, schools, year, sales=None, sales_label="", apt_ro
             ] + (["학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)"] if sales else [])
               + (["아파트 가격: 국토교통부 아파트 매매 실거래가"] if apt else []),
             "salesPeriod": sales_label if sales else "",
+            "pastYear": past_year if past else None,
             "aptPeriod": f"최근 {APT_MONTHS}개월 매매" if apt else "",
             "unmatchedAcademies": r["unmatched"],
             "fees": summarize_fees(r["fees"]),
@@ -667,17 +761,20 @@ def main():
         sys.exit("NEIS_API_KEY와 SCHOOLINFO_API_KEY 환경변수가 필요합니다.")
 
     provinces = [PROVINCE_ALIASES.get(p, p) for p in sys.argv[1:]] or list(PROVINCES)
+    presales = fetch_presales(apt_key) if apt_key else []
     outputs = []
     for province in provinces:
         print(f"{province}")
         academies = fetch_academies(neis_key, PROVINCES[province]["office"])
         neis_addresses = fetch_neis_school_addresses(neis_key, PROVINCES[province]["office"])
         schools, year = fetch_schools(schoolinfo_key, province, neis_addresses)
+        past_year = year - TREND_YEARS
+        past = fetch_past_students(schoolinfo_key, province, past_year)
         sales, sales_label = {}, ""
         if province == "서울특별시" and seoul_key:
             sales, sales_label = fetch_seoul_sales(seoul_key)
         apt_rows = fetch_apartment_prices(apt_key, province) if apt_key else []
-        built = build(province, academies, schools, year, sales, sales_label, apt_rows)
+        built = build(province, academies, schools, year, sales, sales_label, apt_rows, past, past_year, presales)
         if not built:
             sys.exit(f"{province}: 지역별로 묶인 결과가 없어 저장하지 않습니다. 주소 형식을 확인해 주세요.")
         for o in built:
