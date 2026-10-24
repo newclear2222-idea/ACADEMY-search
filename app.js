@@ -94,35 +94,80 @@ function reasonsFor(r, ctx) {
   return reasons;
 }
 
-// 매출로 본 학생 흐름. 고른 과목·학년의 학생 1명당 추정 매출을 같은 지역(구·시) 평균과 견줍니다.
-function salesReason(area, ctx, subject = ctx.subject, level = ctx.level) {
-  const { hub } = ctx;
-  if (!ctx.salesPeriod) return "";
-  if (!area.sales) return "이 동은 서울시 상권분석 매출 집계에 학원 매출이 잡히지 않아 매출로는 판단할 수 없습니다.";
-  const v = perStudent(area, subject, level);
-  if (!v && level !== "total") {
-    return `이 동에는 ${LEVEL_LABELS[level]}이 다니는 학교가 없어, 초·중·고 전체로 봤습니다. ${salesReason(area, ctx, subject, "total")}`;
+// 2025년 초중고사교육비조사 과목별 사교육 참여율(%). 국어는 국어, 과학은 사회·과학 값입니다.
+const PARTICIPATION = {
+  total: { korean: 20.9, english: 46.8, math: 47.4, science: 11.2 },
+  elem: { korean: 20.3, english: 46.8, math: 44.8, science: 8.9 },
+  middle: { korean: 17.6, english: 54.4, math: 56.8, science: 13.1 },
+  high: { korean: 25.5, english: 38.6, math: 42.2, science: 13.3 },
+};
+
+const SUBJECT_KEYS = ["korean", "english", "math", "science"];
+
+// 과목 수강료. 그 동에 없으면(학원이 없거나 적은 동) 같은 지역(구·시) 보통 수강료를 씁니다.
+let regionFees = null;
+function subjectFee(area, subject, level) {
+  for (const fees of [area.fees, regionFees]) {
+    const fee = feeOf(fees, subject, level) || feeOf(fees, subject, "total");
+    if (fee) return { ...fee, region: fees === regionFees };
   }
-  const regionPerStudent = ctx.regionAvg(subject, level);
-  if (!v || !regionPerStudent) return "";
-  const rel = v / regionPerStudent;
-  const what = isEstimate(subject, level) ? `${level === "total" ? "학생" : LEVEL_LABELS[level]} 1명당 ${SUBJECT_SHORT[subject]} 학원 매출(추정)` : "학생 1명당 학원 카드매출(전 과목 합계)";
-  const hubText = hub && hub !== area.name ? ` 이 지역에서 학생 1명당 매출이 가장 많이 몰리는 곳은 ${hub}입니다.` : "";
-  let read;
-  if (rel <= 0.6) read = `학생 수에 비해 동네 학원 매출이 아주 적습니다. 이 동 학생 상당수가 다른 동 학원가로 다니는 것으로 보입니다.${hubText} 새 학원은 '멀리 가지 않아도 되는 학원'으로 이 학생들을 붙잡을 여지가 있지만, 이미 굳은 이동 습관을 바꾸기는 쉽지 않습니다.`;
-  else if (rel <= 0.85) read = `보통 동보다 조금 적습니다. 일부 학생이 다른 동 학원으로 나가는 것으로 보입니다.${hubText}`;
-  else if (rel < 1.2) read = "보통 동과 비슷합니다. 대체로 동네 학생이 동네 학원에 다니는 곳으로 보입니다.";
-  else if (rel < 1.6) read = "보통 동보다 많습니다. 다른 동 학생도 일부 찾아오는 곳으로 보입니다.";
-  else read = "학생 수에 비해 학원 매출이 아주 많습니다. 다른 동 학생들이 찾아오는 학원가로 보입니다. 수요는 크지만 이름난 학원과 정면으로 경쟁해야 합니다.";
-  const rough = roughSales(area) ? " 다만 이 동은 학원이 적어 매출 집계 경계와 어긋나므로 오차가 큽니다." : "";
-  return `${what}이 ${won(Math.round(v))}으로, 이 지역 보통 동(중간값) ${won(Math.round(regionPerStudent))}의 ${pct(rel)}입니다. ${read}${rough}`;
+  const fee = feeOf(area.fees, "all", level) || feeOf(regionFees, "all", level) || feeOf(regionFees, "all", "total");
+  return fee ? { ...fee, region: !feeOf(area.fees, "all", level), anySubject: true } : null;
 }
 
-// 학생 1명당 월 카드매출(전 과목 합계)을 지역 평균과 견준 배수. 한 과목 수강료와는 비교하지 않습니다.
-function flowOf(area, regionFlow) {
-  if (!area.sales || area.students.total < 500 || area.academies.all < MIN_ACADEMIES_FOR_SALES || !regionFlow) return null;
-  const spend = area.sales / 3 / area.students.total;
-  return { spend, avg: regionFlow, relative: spend / regionFlow };
+// 동네 학원 이용도(추정).
+//   학생 1명당 추정 매출 ÷ 수강료 = 이 동 학원에 등록한 학생 비율(대략)
+//   이것을 전국 사교육 참여율(예: 중학생 수학 56.8%)과 견줍니다.
+//   1배면 다니는 만큼 동네에서 다니고, 0.3배면 대부분 다른 동으로, 3배면 다른 동 학생이 찾아오는 곳입니다.
+// 전 과목은 과목마다 (수강료 × 참여율)을 더한 값과 견줍니다. 학년에 학교가 없으면 초·중·고 전체로 봅니다.
+function localUse(area, subject, level) {
+  if (!area.sales || !area.students.total) return null;
+  const lv = level !== "total" && !area.students[level] ? "total" : level;
+  const v = perStudent(area, subject, lv);
+  if (!v) return null;
+  const subjects = subject === "all" ? SUBJECT_KEYS : [subject];
+  let expected = 0;
+  for (const sj of subjects) {
+    const fee = subjectFee(area, sj, lv);
+    if (!fee) return null;
+    expected += fee.median * PARTICIPATION[lv][sj] / 100;
+  }
+  const fee = subject === "all" ? null : subjectFee(area, subject, lv);
+  return { v, level: lv, fee, join: subject === "all" ? null : PARTICIPATION[lv][subject], expected, use: v / expected };
+}
+
+const FLOW_OUT = 0.5;
+const FLOW_IN = 1.3;
+function flowKind(raw) {
+  const use = Math.round(raw * 100) / 100; // 화면에 보이는 %와 같은 기준으로 나눕니다.
+  if (use <= FLOW_OUT) return "out";
+  if (use <= 0.8) return "someOut";
+  if (use < FLOW_IN) return "local";
+  return "in";
+}
+
+function salesReason(area, ctx) {
+  const { subject, level, hub } = ctx;
+  if (!ctx.salesPeriod) return "";
+  if (!area.sales) return "이 동은 서울시 상권분석 매출 집계에 학원 매출이 잡히지 않아 매출로는 판단할 수 없습니다.";
+  if (!area.students.total) return `이 동에는 학교가 없어 학생 1명당으로는 볼 수 없습니다. 그런데도 학원 매출이 분기 ${bigWon(area.sales)}이라, 이 매출은 모두 다른 동 학생이 쓰는 돈입니다.`;
+  const f = localUse(area, subject, level);
+  if (!f) return "";
+  const who = f.level === "total" ? "학생" : LEVEL_LABELS[f.level];
+  const pre = f.level !== level ? `이 동에는 ${LEVEL_LABELS[level]}이 다니는 학교가 없어 초·중·고 전체로 봤습니다. ` : "";
+  const name = SUBJECT_SHORT[subject];
+  const rough = roughSales(area) ? " 다만 이 동은 학원이 적어 매출 집계 구역과 경계가 어긋나므로 오차가 큽니다." : "";
+  const hubText = hub && hub !== area.name ? ` 이 지역에서 학원 매출이 가장 몰리는 곳은 ${hub}입니다.` : "";
+  const basis = subject === "all"
+    ? `${who} 1명당 학원 카드매출(전 과목 합계)이 월 ${won(Math.round(f.v))}입니다. 이 동 과목별 수강료와 전국 참여율로 계산하면, 학생들이 사교육을 모두 동네 학원에서 받을 때 1명당 월 ${won(Math.round(f.expected))} 안팎이 나와야 합니다.`
+    : `${who} 1명당 ${name} 학원 매출(추정)이 월 ${won(Math.round(f.v))}으로, ${f.fee.region ? "지역 보통" : "이 동"} ${f.fee.anySubject ? "(과목 구분 없는) " : `${name} `}수강료 ${won(f.fee.median)}의 ${pct(f.v / f.fee.median)}입니다. 전국적으로 ${who}의 ${f.join}%가 ${name} 사교육을 받으므로, 모두 동네 학원에 다닌다면 ${f.join}% 안팎이 나와야 합니다.`;
+  const read = {
+    out: `실제는 그 기대치의 ${pct(f.use)}뿐이라, 이 동 학생 대부분이 다른 동 학원에 다니는 것으로 보입니다.${hubText} 새 학원은 가까운 거리를 내세워 이 학생들을 붙잡을 여지가 있습니다.`,
+    someOut: `실제는 그 기대치의 ${pct(f.use)}라, 일부 학생이 다른 동 학원으로 나가는 것으로 보입니다.${hubText}`,
+    local: `실제는 그 기대치의 ${pct(f.use)}로, 대체로 동네 학생이 동네 학원에 다니는 곳입니다.`,
+    in: `실제는 그 기대치의 ${pct(f.use)}라, 다른 동 학생들이 이 동 학원으로 찾아오는 곳입니다. 수요는 크지만 이름난 학원들과 경쟁해야 합니다.`,
+  }[flowKind(f.use)];
+  return `${pre}${basis} ${read} (카드 결제만 잡힌 매출이라 실제보다 조금 낮게 나옵니다.)${rough}`;
 }
 
 // 학생 수 변화율 (몇 년 전 공시 대비). 그때 자료가 없으면 null.
@@ -163,15 +208,17 @@ function fervorText(area) {
   const p = f.parts;
   const bits = [];
   if (p.density) bits.push(`학생 100명당 학원 ${p.density[0]}곳`);
-  if (p.fee) bits.push(`보통 수강료 ${won(p.fee[0])}`);
+  if (p.fee) bits.push(`전 과목 보통 수강료 ${won(p.fee[0])}`);
   return `<div class="rank-sub">교육열 추정 <strong>${fervorLabel(f.score)}</strong> (${f.score}점/100) · ${bits.join(" · ")}</div>`;
 }
 
-function flowTag(area, regionFlow) {
-  const flow = flowOf(area, regionFlow);
-  if (!flow) return "";
-  if (flow.relative <= 0.6) return '<span class="tag warn">다른 동으로 다님</span>';
-  if (flow.relative >= 1.6) return '<span class="tag good">다른 동에서 찾아옴</span>';
+// 근거 문장과 같은 계산으로 붙입니다. 오차가 큰 동에는 붙이지 않습니다.
+function flowTag(area, subject, level) {
+  const f = !roughSales(area) && localUse(area, subject, level);
+  if (!f) return "";
+  const kind = flowKind(f.use);
+  if (kind === "out") return '<span class="tag warn">다른 동으로 다님</span>';
+  if (kind === "in") return '<span class="tag good">다른 동에서 찾아옴</span>';
   return "";
 }
 
@@ -257,25 +304,15 @@ function render(data) {
   const average = perAcademy(totalStudents, totalAcademies);
 
   const regionFee = feeOf(data.fees, subject, level);
+  regionFees = data.fees;
   const withSales = data.areas.filter((a) => monthlyPerAcademy(a));
   const regionPerMonth = withSales.length
     ? withSales.reduce((t, a) => t + a.sales, 0) / 3 / withSales.reduce((t, a) => t + a.academies.all, 0)
     : 0;
-  const salesAreas = data.areas.filter((a) => a.sales && a.students.total);
-  const regionFlow = salesAreas.length
-    ? salesAreas.reduce((t, a) => t + a.sales, 0) / 3 / salesAreas.reduce((t, a) => t + a.students.total, 0)
-    : 0;
-  // 고른 과목·학년의 지역 평균 학생 1명당 매출. 경계 오차가 큰 동은 평균과 '학원가' 찾기에서 뺍니다.
-  const solid = data.areas.filter((a) => perStudent(a) && !roughSales(a));
-  // 평균은 대치동 같은 학원가 한 곳에 크게 끌려가서, 동들의 중간값을 기준으로 씁니다.
-  const regionAvg = (s, l) => {
-    const vals = solid.map((a) => perStudent(a, s, l)).filter(Boolean).sort((x, y) => x - y);
-    if (!vals.length) return 0;
-    const m = Math.floor(vals.length / 2);
-    return vals.length % 2 ? vals[m] : (vals[m - 1] + vals[m]) / 2;
-  };
-  const hub = solid.slice().sort((a, b) => perStudent(b) - perStudent(a))[0]?.name;
-  const ctx = { subject, level, totalStudents, totalAcademies, regionFee, regionFlow, regionAvg, hub, salesPeriod: data.salesPeriod, pastYear: data.pastYear };
+  // 다른 동 학생이 가장 많이 찾아오는 곳. 경계 오차가 큰 동은 뺍니다.
+  const hub = data.areas.filter((a) => !roughSales(a) && localUse(a, "all", "total"))
+    .sort((a, b) => localUse(b, "all", "total").use - localUse(a, "all", "total").use)[0]?.name;
+  const ctx = { subject, level, totalStudents, totalAcademies, regionFee, hub, salesPeriod: data.salesPeriod, pastYear: data.pastYear };
 
   els.summary.innerHTML = `
     <div><div class="label">${data.region} ${LEVEL_LABELS[level]}</div><div class="value">${fmt(totalStudents)}명</div></div>
@@ -317,7 +354,7 @@ function render(data) {
         : "";
       return `<li>
         <div class="rank-head">
-          <span class="rank-name"><span class="no">${i + 1}</span>${r.area.name}${tag}${flowTag(r.area, ctx.regionFlow)}</span>
+          <span class="rank-name"><span class="no">${i + 1}</span>${r.area.name}${tag}${flowTag(r.area, subject, level)}</span>
           <span class="rank-metric">${metric}</span>
         </div>
         <div class="bar"><span style="width:${width.toFixed(1)}%"></span></div>
@@ -390,6 +427,11 @@ const COLUMNS = [
     text: (r) => { const v = perStudent(r.area, r.subject, r.level); return v ? `${won(Math.round(v))}${roughSales(r.area) ? " (오차 큼)" : ""}` : "-"; },
   },
   {
+    key: "localUse", label: "동네 학원 이용 (추정)", salesOnly: true,
+    value: (r) => localUse(r.area, r.subject, r.level)?.use || 0,
+    text: (r) => { const f = localUse(r.area, r.subject, r.level); return f ? `${pct(f.use)}${roughSales(r.area) ? " (오차 큼)" : ""}` : "-"; },
+  },
+  {
     key: "sales", label: "학원 1곳당 월매출", salesOnly: true,
     value: (r) => r.perMonth,
     text: (r) => (r.perMonth ? bigWon(r.perMonth) : r.area.sales ? "학원 적음" : "-"),
@@ -399,7 +441,7 @@ const COLUMNS = [
 function renderCompare(rows, data, subject, level) {
   const hasSales = Boolean(data.salesPeriod);
   // 휴대폰에서도 바로 보이도록 매출과 경쟁 지표를 동 이름 옆에 둡니다.
-  const order = ["name", "sales", "perStudent", "fervor", "apt", "change", "opened", "newApts", "ratio", "fee", "students", "academies"];
+  const order = ["name", "localUse", "perStudent", "sales", "fervor", "apt", "change", "opened", "newApts", "ratio", "fee", "students", "academies"];
   const hasApt = Boolean(data.aptPeriod);
   const hasTrend = Boolean(data.pastYear);
   const hasNewApts = data.areas.some((a) => a.newApts?.length);
