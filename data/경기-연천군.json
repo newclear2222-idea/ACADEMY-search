@@ -11,6 +11,7 @@
   "대표 학원: 교육청에 등록한 정원이 큰 순서"
  ],
  "salesPeriod": "",
+ "pastYear": null,
  "aptPeriod": "",
  "unmatchedAcademies": 0,
  "fees": {
@@ -156,7 +157,26 @@
      ]
     }
    },
-   "top": []
+   "top": [],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    }
+   }
   },
   {
    "name": "미산면",
@@ -234,7 +254,26 @@
      ]
     }
    },
-   "top": []
+   "top": [],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    }
+   }
   },
   {
    "name": "백학면",
@@ -322,7 +361,26 @@
      ]
     }
    },
-   "top": []
+   "top": [],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    }
+   }
   },
   {
    "name": "신서면",
@@ -405,7 +463,26 @@
      ]
     }
    },
-   "top": []
+   "top": [],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    }
+   }
   },
   {
    "name": "연천읍",
@@ -507,7 +584,26 @@
      "branches": 1,
      "subjects": []
     }
-   ]
+   ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 1,
+     "math": 0,
+     "english": 0
+    }
+   }
   },
   {
    "name": "전곡읍",
@@ -697,6 +793,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 2,
+     "math": 0,
+     "english": 1
+    },
+    "3y": {
+     "all": 3,
+     "math": 0,
+     "english": 1
+    }
+   },
    "fervor": {
     "score": 31,
     "parts": {
@@ -802,7 +917,26 @@
      ]
     }
    },
-   "top": []
+   "top": [],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    }
+   }
   }
  ]
 }

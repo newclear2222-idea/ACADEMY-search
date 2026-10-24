@@ -11,6 +11,7 @@
   "대표 학원: 교육청에 등록한 정원이 큰 순서"
  ],
  "salesPeriod": "",
+ "pastYear": null,
  "aptPeriod": "",
  "unmatchedAcademies": 1,
  "fees": {
@@ -146,7 +147,26 @@
      ]
     }
    },
-   "top": []
+   "top": [],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    }
+   }
   },
   {
    "name": "상봉암동",
@@ -224,7 +244,26 @@
      ]
     }
    },
-   "top": []
+   "top": [],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    }
+   }
   },
   {
    "name": "생연동",
@@ -396,7 +435,26 @@
       "math"
      ]
     }
-   ]
+   ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 1,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 1,
+     "math": 0,
+     "english": 0
+    }
+   }
   },
   {
    "name": "송내동",
@@ -479,7 +537,26 @@
      ]
     }
    },
-   "top": []
+   "top": [],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    }
+   }
   },
   {
    "name": "안흥동",
@@ -562,7 +639,26 @@
      ]
     }
    },
-   "top": []
+   "top": [],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    }
+   }
   },
   {
    "name": "지행동",
@@ -775,6 +871,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 1,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 9,
+     "math": 1,
+     "english": 0
+    }
+   },
    "fervor": {
     "score": 40,
     "parts": {
@@ -865,7 +980,26 @@
      ]
     }
    },
-   "top": []
+   "top": [],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    }
+   }
   }
  ]
 }

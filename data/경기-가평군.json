@@ -11,6 +11,7 @@
   "대표 학원: 교육청에 등록한 정원이 큰 순서"
  ],
  "salesPeriod": "",
+ "pastYear": null,
  "aptPeriod": "",
  "unmatchedAcademies": 0,
  "fees": {
@@ -272,6 +273,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 2,
+     "math": 1,
+     "english": 0
+    },
+    "3y": {
+     "all": 4,
+     "math": 1,
+     "english": 1
+    }
+   },
    "fervor": {
     "score": 50,
     "parts": {
@@ -367,7 +387,26 @@
      ]
     }
    },
-   "top": []
+   "top": [],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    }
+   }
   },
   {
    "name": "상면",
@@ -455,7 +494,26 @@
      ]
     }
    },
-   "top": []
+   "top": [],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    }
+   }
   },
   {
    "name": "설악면",
@@ -615,6 +673,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 1,
+     "math": 0,
+     "english": 0
+    }
+   },
    "fervor": {
     "score": 54,
     "parts": {
@@ -767,7 +844,26 @@
       "math"
      ]
     }
-   ]
+   ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 2,
+     "math": 0,
+     "english": 0
+    }
+   }
   },
   {
    "name": "청평면",
@@ -948,7 +1044,26 @@
       "english"
      ]
     }
-   ]
+   ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 2,
+     "math": 0,
+     "english": 2
+    }
+   }
   },
   {
    "name": "하면",
@@ -1035,7 +1150,26 @@
      "branches": 1,
      "subjects": []
     }
-   ]
+   ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    }
+   }
   }
  ]
 }

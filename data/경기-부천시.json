@@ -11,6 +11,7 @@
   "대표 학원: 교육청에 등록한 정원이 큰 순서"
  ],
  "salesPeriod": "",
+ "pastYear": null,
  "aptPeriod": "",
  "unmatchedAcademies": 6,
  "fees": {
@@ -146,7 +147,26 @@
      ]
     }
    },
-   "top": []
+   "top": [],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    }
+   }
   },
   {
    "name": "고강동",
@@ -322,6 +342,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 1,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 3,
+     "math": 1,
+     "english": 0
+    }
+   },
    "fervor": {
     "score": 54,
     "parts": {
@@ -565,6 +604,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 1,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 2,
+     "math": 0,
+     "english": 0
+    }
+   },
    "fervor": {
     "score": 62,
     "parts": {
@@ -664,7 +722,26 @@
      "branches": 1,
      "subjects": []
     }
-   ]
+   ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    }
+   }
   },
   {
    "name": "도당동",
@@ -836,7 +913,26 @@
       "english"
      ]
     }
-   ]
+   ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 1,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 3,
+     "math": 0,
+     "english": 1
+    }
+   }
   },
   {
    "name": "범박동",
@@ -1048,6 +1144,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 9,
+     "math": 3,
+     "english": 4
+    },
+    "3y": {
+     "all": 18,
+     "math": 6,
+     "english": 7
+    }
+   },
    "fervor": {
     "score": 43,
     "parts": {
@@ -1171,7 +1286,26 @@
      "branches": 1,
      "subjects": []
     }
-   ]
+   ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    }
+   }
   },
   {
    "name": "상동",
@@ -1468,6 +1602,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 20,
+     "math": 4,
+     "english": 10
+    },
+    "3y": {
+     "all": 58,
+     "math": 12,
+     "english": 25
+    }
+   },
    "fervor": {
     "score": 55,
     "parts": {
@@ -1677,6 +1830,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 2,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 12,
+     "math": 5,
+     "english": 4
+    }
+   },
    "fervor": {
     "score": 64,
     "parts": {
@@ -1782,7 +1954,26 @@
      ]
     }
    },
-   "top": []
+   "top": [],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    }
+   }
   },
   {
    "name": "송내동",
@@ -1992,6 +2183,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 3,
+     "math": 1,
+     "english": 0
+    },
+    "3y": {
+     "all": 14,
+     "math": 7,
+     "english": 5
+    }
+   },
    "fervor": {
     "score": 45,
     "parts": {
@@ -2215,6 +2425,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 1,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 5,
+     "math": 1,
+     "english": 2
+    }
+   },
    "fervor": {
     "score": 66,
     "parts": {
@@ -2415,6 +2644,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 6,
+     "math": 2,
+     "english": 3
+    }
+   },
    "fervor": {
     "score": 52,
     "parts": {
@@ -2615,6 +2863,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 1,
+     "math": 1,
+     "english": 0
+    }
+   },
    "fervor": {
     "score": 21,
     "parts": {
@@ -2867,6 +3134,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 1,
+     "math": 1,
+     "english": 0
+    },
+    "3y": {
+     "all": 2,
+     "math": 1,
+     "english": 1
+    }
+   },
    "fervor": {
     "score": 28,
     "parts": {
@@ -3083,6 +3369,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 5,
+     "math": 1,
+     "english": 2
+    }
+   },
    "fervor": {
     "score": 14,
     "parts": {
@@ -3319,6 +3624,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 23,
+     "math": 8,
+     "english": 8
+    },
+    "3y": {
+     "all": 60,
+     "math": 23,
+     "english": 15
+    }
+   },
    "fervor": {
     "score": 71,
     "parts": {
@@ -3481,6 +3805,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 1,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 1,
+     "math": 0,
+     "english": 0
+    }
+   },
    "fervor": {
     "score": 24,
     "parts": {
@@ -3711,6 +4054,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 1,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 3,
+     "math": 1,
+     "english": 0
+    }
+   },
    "fervor": {
     "score": 35,
     "parts": {
@@ -3836,6 +4198,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 1,
+     "math": 1,
+     "english": 0
+    },
+    "3y": {
+     "all": 1,
+     "math": 1,
+     "english": 0
+    }
+   },
    "fervor": {
     "score": 12,
     "parts": {
@@ -4206,6 +4587,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 20,
+     "math": 9,
+     "english": 4
+    },
+    "3y": {
+     "all": 71,
+     "math": 24,
+     "english": 20
+    }
+   },
    "fervor": {
     "score": 42,
     "parts": {
@@ -4312,7 +4712,26 @@
       "english"
      ]
     }
-   ]
+   ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    }
+   }
   }
  ]
 }

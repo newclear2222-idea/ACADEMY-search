@@ -11,6 +11,7 @@
   "대표 학원: 교육청에 등록한 정원이 큰 순서"
  ],
  "salesPeriod": "",
+ "pastYear": null,
  "aptPeriod": "",
  "unmatchedAcademies": 8,
  "fees": {
@@ -255,7 +256,26 @@
       "math"
      ]
     }
-   ]
+   ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 1,
+     "math": 0,
+     "english": 1
+    }
+   }
   },
   {
    "name": "계수동",
@@ -338,7 +358,26 @@
      ]
     }
    },
-   "top": []
+   "top": [],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    }
+   }
   },
   {
    "name": "과림동",
@@ -421,7 +460,26 @@
      ]
     }
    },
-   "top": []
+   "top": [],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    }
+   }
   },
   {
    "name": "광석동",
@@ -499,7 +557,26 @@
      ]
     }
    },
-   "top": []
+   "top": [],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 1,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 1,
+     "math": 0,
+     "english": 0
+    }
+   }
   },
   {
    "name": "군자동",
@@ -639,6 +716,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 3,
+     "math": 1,
+     "english": 0
+    },
+    "3y": {
+     "all": 6,
+     "math": 3,
+     "english": 3
+    }
+   },
    "fervor": {
     "score": 23,
     "parts": {
@@ -734,7 +830,26 @@
      ]
     }
    },
-   "top": []
+   "top": [],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    }
+   }
   },
   {
    "name": "능곡동",
@@ -943,6 +1058,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 1,
+     "math": 0,
+     "english": 1
+    },
+    "3y": {
+     "all": 5,
+     "math": 0,
+     "english": 2
+    }
+   },
    "fervor": {
     "score": 60,
     "parts": {
@@ -1159,6 +1293,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 5,
+     "math": 0,
+     "english": 3
+    },
+    "3y": {
+     "all": 11,
+     "math": 2,
+     "english": 6
+    }
+   },
    "fervor": {
     "score": 80,
     "parts": {
@@ -1249,7 +1402,26 @@
      ]
     }
    },
-   "top": []
+   "top": [],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    }
+   }
   },
   {
    "name": "매화동",
@@ -1383,6 +1555,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    }
+   },
    "fervor": {
     "score": 44,
     "parts": {
@@ -1522,7 +1713,26 @@
       "english"
      ]
     }
-   ]
+   ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 1,
+     "math": 1,
+     "english": 0
+    },
+    "3y": {
+     "all": 2,
+     "math": 1,
+     "english": 0
+    }
+   }
   },
   {
    "name": "무지내동",
@@ -1600,7 +1810,26 @@
      ]
     }
    },
-   "top": []
+   "top": [],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    }
+   }
   },
   {
    "name": "배곧동",
@@ -1789,6 +2018,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 28,
+     "math": 11,
+     "english": 8
+    },
+    "3y": {
+     "all": 88,
+     "math": 32,
+     "english": 27
+    }
+   },
    "fervor": {
     "score": 94,
     "parts": {
@@ -1998,7 +2246,26 @@
       "english"
      ]
     }
-   ]
+   ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 4,
+     "math": 1,
+     "english": 2
+    },
+    "3y": {
+     "all": 7,
+     "math": 2,
+     "english": 2
+    }
+   }
   },
   {
    "name": "신천동",
@@ -2186,6 +2453,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 1,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 3,
+     "math": 1,
+     "english": 0
+    }
+   },
    "fervor": {
     "score": 18,
     "parts": {
@@ -2395,6 +2681,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 3,
+     "math": 1,
+     "english": 1
+    },
+    "3y": {
+     "all": 4,
+     "math": 1,
+     "english": 2
+    }
+   },
    "fervor": {
     "score": 28,
     "parts": {
@@ -2636,6 +2941,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 23,
+     "math": 8,
+     "english": 9
+    },
+    "3y": {
+     "all": 55,
+     "math": 14,
+     "english": 19
+    }
+   },
    "fervor": {
     "score": 71,
     "parts": {
@@ -2881,6 +3205,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 11,
+     "math": 2,
+     "english": 3
+    },
+    "3y": {
+     "all": 34,
+     "math": 9,
+     "english": 10
+    }
+   },
    "fervor": {
     "score": 52,
     "parts": {
@@ -3115,6 +3458,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 3,
+     "math": 1,
+     "english": 2
+    },
+    "3y": {
+     "all": 14,
+     "math": 6,
+     "english": 5
+    }
+   },
    "fervor": {
     "score": 18,
     "parts": {
@@ -3458,6 +3820,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 6,
+     "math": 2,
+     "english": 2
+    },
+    "3y": {
+     "all": 18,
+     "math": 8,
+     "english": 5
+    }
+   },
    "fervor": {
     "score": 20,
     "parts": {
@@ -3663,6 +4044,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 2,
+     "math": 1,
+     "english": 1
+    },
+    "3y": {
+     "all": 15,
+     "math": 3,
+     "english": 7
+    }
+   },
    "fervor": {
     "score": 58,
     "parts": {
@@ -3811,7 +4211,26 @@
       "math"
      ]
     }
-   ]
+   ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 1,
+     "math": 1,
+     "english": 0
+    }
+   }
   },
   {
    "name": "포동",
@@ -3916,7 +4335,26 @@
       "english"
      ]
     }
-   ]
+   ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    }
+   }
   },
   {
    "name": "하상동",
@@ -4107,6 +4545,25 @@
      ]
     }
    ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 1,
+     "math": 1,
+     "english": 0
+    }
+   },
    "fervor": {
     "score": 66,
     "parts": {
@@ -4252,7 +4709,26 @@
       "math"
      ]
     }
-   ]
+   ],
+   "newApts": [],
+   "studentsPast": {
+    "elem": 0,
+    "middle": 0,
+    "high": 0,
+    "total": 0
+   },
+   "opened": {
+    "1y": {
+     "all": 0,
+     "math": 0,
+     "english": 0
+    },
+    "3y": {
+     "all": 1,
+     "math": 0,
+     "english": 0
+    }
+   }
   }
  ]
 }
