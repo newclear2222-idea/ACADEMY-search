@@ -101,7 +101,7 @@ function reasonsFor(r, ctx) {
 
 // 학생 1명당 월 카드매출(전 과목 합계)을 지역 평균과 견준 배수. 한 과목 수강료와는 비교하지 않습니다.
 function flowOf(area, regionFlow) {
-  if (!area.sales || area.students.total < 500 || !regionFlow) return null;
+  if (!area.sales || area.students.total < 500 || area.academies.all < MIN_ACADEMIES_FOR_SALES || !regionFlow) return null;
   const spend = area.sales / 3 / area.students.total;
   return { spend, avg: regionFlow, relative: spend / regionFlow };
 }
@@ -145,7 +145,6 @@ function fervorText(area) {
   const bits = [];
   if (p.density) bits.push(`학생 100명당 학원 ${p.density[0]}곳`);
   if (p.fee) bits.push(`보통 수강료 ${won(p.fee[0])}`);
-  if (p.spend) bits.push(`학생 1명당 월 학원 카드매출 ${bigWon(p.spend[0])}`);
   return `<div class="rank-sub">교육열 추정 <strong>${fervorLabel(f.score)}</strong> (${f.score}점/100) · ${bits.join(" · ")}</div>`;
 }
 
@@ -185,6 +184,12 @@ function perStudent(area, subject = "all", level = "total") {
   const k = monthly / weight; // 이 동이 전국 평균보다 몇 배 쓰는지
   if (level !== "total") return area.students[level] ? k * profileSum(level, subject) : 0;
   return levels.reduce((t, l) => t + (area.students[l] || 0) * k * profileSum(l, subject), 0) / area.students.total;
+}
+function studentSalesText(area, subject, level) {
+  const v = perStudent(area, subject, level);
+  if (v) return `<div class="rank-sub">${perStudentLabel(subject, level)}: <strong>${won(Math.round(v))}</strong>${isEstimate(subject, level) ? " (동 전체 매출을 전국 과목·학교급 사교육비 비율로 나눈 값)" : " (국영수과 등 모든 과목 합계)"}</div>`;
+  if (area.academies.all < MIN_ACADEMIES_FOR_SALES) return '<div class="rank-sub">학생 1명당 매출: 이 동은 학원이 20곳 미만이라 매출 집계 경계와 맞지 않아 계산하지 않았습니다.</div>';
+  return "";
 }
 const SUBJECT_SHORT = { all: "전 과목", math: "수학", english: "영어", korean: "국어·논술", science: "과학" };
 const perStudentLabel = (subject, level) => (isEstimate(subject, level)
@@ -272,7 +277,7 @@ function render(data) {
       const feeText = fee ? ` · 보통 수강료 ${won(fee.median)} (${fmt(fee.count)}개 과정)` : "";
       const perMonth = monthlyPerAcademy(r.area);
       const salesText = data.salesPeriod && r.area.sales
-        ? `<div class="rank-sub">학원 카드매출 추정: 동 전체 ${bigWon(r.area.sales)} (${data.salesPeriod})${perMonth ? ` · 학원 1곳당 <strong>월 ${bigWon(perMonth)}</strong>` : ""}${regionPerMonth && perMonth ? ` (지역 평균의 ${pct(perMonth / regionPerMonth)})` : ""}${perStudent(r.area, subject, level) ? ` · ${perStudentLabel(subject, level)} <strong>월 ${won(Math.round(perStudent(r.area, subject, level)))}</strong>` : ""}</div>`
+        ? `<div class="rank-sub">학원 카드매출 추정: 동 전체 ${bigWon(r.area.sales)} (${data.salesPeriod})${perMonth ? ` · 학원 1곳당 <strong>월 ${bigWon(perMonth)}</strong>` : ""}${regionPerMonth && perMonth ? ` (지역 평균의 ${pct(perMonth / regionPerMonth)})` : ""}</div>${studentSalesText(r.area, subject, level)}`
         : "";
       const reasons = reasonsFor(r, ctx);
       const why = reasons.length

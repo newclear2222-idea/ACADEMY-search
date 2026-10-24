@@ -738,7 +738,8 @@ def add_fervor(outputs):
     metrics = {
         "density": lambda a: a["academies"]["all"] / a["students"]["total"] * 100,
         "fee": lambda a: a["fees"]["all"]["total"][0],
-        "spend": lambda a: a.get("sales") and a["sales"] / 3 / a["students"]["total"],
+        # 학원이 적은 동은 매출(행정동)과 학원·학교(법정동) 경계가 어긋나 값이 크게 틀어져 뺍니다.
+        "spend": lambda a: a.get("sales") and a["academies"]["all"] >= 20 and a["sales"] / 3 / a["students"]["total"],
     }
     ranks = {}
     for key, fn in metrics.items():
