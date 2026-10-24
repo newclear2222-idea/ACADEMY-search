@@ -19,6 +19,7 @@ import os
 import re
 import sys
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -29,7 +30,11 @@ DATA_DIR = ROOT / "data"
 NEIS_URL = "https://open.neis.go.kr/hub/acaInsTiInfo"
 NEIS_SCHOOL_URL = "https://open.neis.go.kr/hub/schoolInfo"
 SCHOOLINFO_URL = "https://www.schoolinfo.go.kr/openApi.do"
-APT_URL = "https://apis.data.go.kr/1613000/RTMSDataSvcAptTrade/getRTMSDataSvcAptTrade"
+# 활용신청한 서비스만 열립니다. '상세 자료'를 먼저, 안 되면 기본 자료를 씁니다.
+APT_URLS = [
+    "https://apis.data.go.kr/1613000/RTMSDataSvcAptTradeDev/getRTMSDataSvcAptTradeDev",
+    "https://apis.data.go.kr/1613000/RTMSDataSvcAptTrade/getRTMSDataSvcAptTrade",
+]
 PRESALE_URL = "https://api.odcloud.kr/api/ApplyhomeInfoDetailSvc/v1/getAPTLttotPblancDetail"  # 청약홈 분양정보
 APT_MONTHS = 6  # 최근 몇 달 거래로 평당가를 낼지
 PYEONG = 3.305785  # 1평(m²)
@@ -455,11 +460,28 @@ def fetch_apartment_prices(key, province):
         m = today.year * 12 + today.month - 1 - back
         months.append(f"{m // 12}{m % 12 + 1:02d}")
     rows = []
+    apt_url = None
+    for candidate in APT_URLS:
+        try:
+            url = f"{candidate}?" + urllib.parse.urlencode({"serviceKey": key, "LAWD_CD": "11110", "DEAL_YMD": months[0], "pageNo": 1, "numOfRows": 1})
+            with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "academy-search"}), timeout=60) as res:
+                code = ET.fromstring(res.read()).findtext(".//resultCode") or ""
+            if code in ("000", "00"):
+                apt_url = candidate
+                break
+            print(f"  {candidate.rsplit('/', 1)[-1]}: {code}")
+        except urllib.error.HTTPError as e:
+            print(f"  {candidate.rsplit('/', 1)[-1]}: HTTP {e.code} {e.read()[:200]!r}")
+        except Exception as e:
+            print(f"  {candidate.rsplit('/', 1)[-1]}: {e}")
+    if not apt_url:
+        print("  아파트 실거래가: 쓸 수 있는 서비스가 없습니다 (활용신청 승인 전일 수 있습니다).")
+        return rows
     for sgg in PROVINCES[province]["sgg"]:
         for ymd in months:
             page = 1
             while True:
-                url = f"{APT_URL}?" + urllib.parse.urlencode({
+                url = f"{apt_url}?" + urllib.parse.urlencode({
                     "serviceKey": key, "LAWD_CD": sgg, "DEAL_YMD": ymd, "pageNo": page, "numOfRows": 1000,
                 })
                 try:
