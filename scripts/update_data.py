@@ -404,11 +404,14 @@ def fetch_seoul_sales(key):
                 dong = legal_dong(str(row.get("ADSTRD_CD_NM") or "").strip())
                 if gu and dong:
                     k = (gu, dong)
-                    sales[k] = sales.get(k, 0) + to_int(row.get("THSMON_SELNG_AMT"))
+                    amount = to_int(row.get("THSMON_SELNG_AMT"))
+                    sales[k] = sales.get(k, 0) + amount
+                    if row.get("SVC_INDUTY_CD") == "CS200002":  # 외국어학원은 영어 매출로 따로 봅니다.
+                        sales[k + ("english",)] = sales.get(k + ("english",), 0) + amount
             start += 1000
         if sales:
             label = f"{quarter[:4]}년 {quarter[4]}분기"
-            print(f"  서울 학원 매출: {label}, 동 {len(sales)}곳")
+            print(f"  서울 학원 매출: {label}, 동 {sum(len(k) == 2 for k in sales)}곳")
             return sales, label
     print("  서울 학원 매출 자료를 찾지 못했습니다.")
     return {}, ""
@@ -697,6 +700,7 @@ def build(province, academies, schools, year, sales=None, sales_label="", apt_ro
             a["top"] = pick_top_academies(a["top"])
             if sales:
                 a["sales"] = sales.get((r["name"], a["name"]))
+                a["salesEnglish"] = sales.get((r["name"], a["name"], "english"))
             a["newApts"].sort(key=lambda x: x["moveIn"])
             prices = sorted(apt.get((r["name"], a["name"]), []))
             if len(prices) >= 3:

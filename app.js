@@ -161,6 +161,14 @@ function flowTag(area, regionFlow) {
 // 서울 상권분석 추정매출은 분기 합계라 3으로 나눠 한 달로 봅니다. 과목과 상관없이 입시·보습 학원 전체로 나눕니다.
 // 학원이 적은 동은 매출 집계(행정동)와 학원 주소(법정동)의 경계 차이에 크게 흔들려 보여주지 않습니다.
 const MIN_ACADEMIES_FOR_SALES = 20;
+
+// 학생 1명당 월 카드매출. 영어는 외국어학원 매출만, 다른 과목은 과목을 나눌 수 없어 전 과목 합계로 봅니다.
+// 학년별로는 나뉘지 않아 동 전체 초·중·고 학생 수로 나눕니다.
+function perStudent(area, subject) {
+  const sales = subject === "english" ? area.salesEnglish : area.sales;
+  return sales && area.students.total >= 500 ? sales / 3 / area.students.total : 0;
+}
+const perStudentLabel = (subject) => (subject === "english" ? "영어(외국어학원)" : "전 과목");
 function monthlyPerAcademy(area) {
   return area.sales && area.academies.all >= MIN_ACADEMIES_FOR_SALES ? area.sales / 3 / area.academies.all : 0;
 }
@@ -244,7 +252,7 @@ function render(data) {
       const feeText = fee ? ` · 보통 수강료 ${won(fee.median)} (${fmt(fee.count)}개 과정)` : "";
       const perMonth = monthlyPerAcademy(r.area);
       const salesText = data.salesPeriod && r.area.sales
-        ? `<div class="rank-sub">학원 카드매출 추정: 동 전체 ${bigWon(r.area.sales)} (${data.salesPeriod})${perMonth ? ` · 학원 1곳당 <strong>월 ${bigWon(perMonth)}</strong>` : ""}${regionPerMonth && perMonth ? ` (지역 평균의 ${pct(perMonth / regionPerMonth)})` : ""}</div>`
+        ? `<div class="rank-sub">학원 카드매출 추정: 동 전체 ${bigWon(r.area.sales)} (${data.salesPeriod})${perMonth ? ` · 학원 1곳당 <strong>월 ${bigWon(perMonth)}</strong>` : ""}${regionPerMonth && perMonth ? ` (지역 평균의 ${pct(perMonth / regionPerMonth)})` : ""}${perStudent(r.area, subject) ? ` · 학생 1명당 ${perStudentLabel(subject)} <strong>월 ${won(Math.round(perStudent(r.area, subject)))}</strong>` : ""}</div>`
         : "";
       const reasons = reasonsFor(r, ctx);
       const why = reasons.length
@@ -320,6 +328,11 @@ const COLUMNS = [
     text: (r) => (r.fee ? won(r.fee.median) : "-"),
   },
   {
+    key: "perStudent", label: (subject) => `학생 1명당 월매출 (${perStudentLabel(subject)})`, salesOnly: true,
+    value: (r) => perStudent(r.area, r.subject),
+    text: (r) => { const v = perStudent(r.area, r.subject); return v ? won(Math.round(v)) : "-"; },
+  },
+  {
     key: "sales", label: "학원 1곳당 월매출", salesOnly: true,
     value: (r) => r.perMonth,
     text: (r) => (r.perMonth ? bigWon(r.perMonth) : r.area.sales ? "학원 적음" : "-"),
@@ -329,7 +342,7 @@ const COLUMNS = [
 function renderCompare(rows, data, subject, level) {
   const hasSales = Boolean(data.salesPeriod);
   // 휴대폰에서도 바로 보이도록 매출과 경쟁 지표를 동 이름 옆에 둡니다.
-  const order = ["name", "sales", "fervor", "apt", "change", "opened", "newApts", "ratio", "fee", "students", "academies"];
+  const order = ["name", "sales", "perStudent", "fervor", "apt", "change", "opened", "newApts", "ratio", "fee", "students", "academies"];
   const hasApt = Boolean(data.aptPeriod);
   const hasTrend = Boolean(data.pastYear);
   const hasNewApts = data.areas.some((a) => a.newApts?.length);
@@ -343,7 +356,7 @@ function renderCompare(rows, data, subject, level) {
     return typeof x === "string" ? x.localeCompare(y, "ko") : y - x;
   });
   els.compareHead.innerHTML = `<tr>${cols
-    .map((c) => `<th scope="col"${c.key === "name" ? "" : ' class="num"'} aria-sort="${c.key === sortKey ? (c.key === "name" ? "ascending" : "descending") : "none"}"><button type="button" data-key="${c.key}">${c.label}${c.key === sortKey ? " ▼" : ""}</button></th>`)
+    .map((c) => `<th scope="col"${c.key === "name" ? "" : ' class="num"'} aria-sort="${c.key === sortKey ? (c.key === "name" ? "ascending" : "descending") : "none"}"><button type="button" data-key="${c.key}">${typeof c.label === "function" ? c.label(subject) : c.label}${c.key === sortKey ? " ▼" : ""}</button></th>`)
     .join("")}</tr>`;
   els.compareBody.innerHTML = list
     .map((r) => `<tr>${cols.map((c) => `<td${c.key === "name" ? "" : ' class="num"'}>${c.text(r)}</td>`).join("")}</tr>`)
