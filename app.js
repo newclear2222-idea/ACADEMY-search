@@ -73,6 +73,14 @@ function reasonsFor(r, ctx) {
     reasons.push("학교가 1곳뿐이라 숫자가 그 학교 하나에 크게 좌우됩니다.");
   }
 
+  // 학생 1명당 월 카드매출을 그 동 수강료와 견줍니다. 카드 결제만 잡혀 원래 낮게 나오므로 지역 전체 비율과 비교합니다.
+  const flow = flowOf(r.area, ctx.regionFlow);
+  if (flow) {
+    const base = `학생 1명당 월 학원 카드매출 ${won(flow.spend)}, 보통 수강료 ${won(flow.fee)}`;
+    if (flow.relative <= 0.6) reasons.push(`${base}입니다. 수강료에 비해 매출이 적습니다. 이 동 학생들이 다른 동 학원(근처 학원가)으로 많이 다니는 곳일 가능성이 큽니다. 카드 결제만 잡힌 숫자라 지역 평균과 비교해 판단했습니다.`);
+    else if (flow.relative >= 1.6) reasons.push(`${base}입니다. 수강료에 비해 매출이 많습니다. 다른 동 학생들이 이 동 학원으로 찾아오는 곳일 가능성이 큽니다.`);
+  }
+
   const change = studentChange(r.area, level);
   if (change !== null && change >= 0.1) reasons.push(`학생 수가 ${ctx.pastYear}년보다 ${signedPct(change)} 늘었습니다. 수요가 커지는 동네입니다.`);
   if (change !== null && change <= -0.1) reasons.push(`학생 수가 ${ctx.pastYear}년보다 ${signedPct(change)} 줄었습니다. 지금 숫자보다 앞으로 수요가 작아질 수 있습니다.`);
@@ -89,6 +97,14 @@ function reasonsFor(r, ctx) {
     }
   }
   return reasons;
+}
+
+// 학생 1명당 월 카드매출 / 보통 수강료. relative는 지역 전체 같은 비율 대비 배수.
+function flowOf(area, regionFlow) {
+  const fee = area.fees?.all?.total?.[0];
+  if (!area.sales || !fee || area.students.total < 500 || !regionFlow) return null;
+  const spend = area.sales / 3 / area.students.total;
+  return { spend, fee, relative: spend / fee / regionFlow };
 }
 
 // 학생 수 변화율 (몇 년 전 공시 대비). 그때 자료가 없으면 null.
@@ -132,6 +148,14 @@ function fervorText(area) {
   if (p.fee) bits.push(`보통 수강료 ${won(p.fee[0])}`);
   if (p.spend) bits.push(`학생 1명당 월 학원 카드매출 ${bigWon(p.spend[0])}`);
   return `<div class="rank-sub">교육열 추정 <strong>${fervorLabel(f.score)}</strong> (${f.score}점/100) · ${bits.join(" · ")}</div>`;
+}
+
+function flowTag(area, regionFlow) {
+  const flow = flowOf(area, regionFlow);
+  if (!flow) return "";
+  if (flow.relative <= 0.6) return '<span class="tag warn">다른 동으로 다님</span>';
+  if (flow.relative >= 1.6) return '<span class="tag good">다른 동에서 찾아옴</span>';
+  return "";
 }
 
 // 서울 상권분석 추정매출은 분기 합계라 3으로 나눠 한 달로 봅니다. 과목과 상관없이 입시·보습 학원 전체로 나눕니다.
@@ -181,7 +205,12 @@ function render(data) {
   const regionPerMonth = withSales.length
     ? withSales.reduce((t, a) => t + a.sales, 0) / 3 / withSales.reduce((t, a) => t + a.academies.all, 0)
     : 0;
-  const ctx = { subject, level, totalStudents, totalAcademies, regionFee, pastYear: data.pastYear };
+  const salesAreas = data.areas.filter((a) => a.sales && a.students.total);
+  const allFee = data.fees?.all?.total?.[0];
+  const regionFlow = salesAreas.length && allFee
+    ? salesAreas.reduce((t, a) => t + a.sales, 0) / 3 / salesAreas.reduce((t, a) => t + a.students.total, 0) / allFee
+    : 0;
+  const ctx = { subject, level, totalStudents, totalAcademies, regionFee, regionFlow, pastYear: data.pastYear };
 
   els.summary.innerHTML = `
     <div><div class="label">${data.region} ${LEVEL_LABELS[level]}</div><div class="value">${fmt(totalStudents)}명</div></div>
@@ -223,7 +252,7 @@ function render(data) {
         : "";
       return `<li>
         <div class="rank-head">
-          <span class="rank-name"><span class="no">${i + 1}</span>${r.area.name}${tag}</span>
+          <span class="rank-name"><span class="no">${i + 1}</span>${r.area.name}${tag}${flowTag(r.area, ctx.regionFlow)}</span>
           <span class="rank-metric">${metric}</span>
         </div>
         <div class="bar"><span style="width:${width.toFixed(1)}%"></span></div>
