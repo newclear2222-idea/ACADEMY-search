@@ -175,7 +175,7 @@ const profileSum = (level, subject) => (subject === "all"
 // 과목·학년을 고르면 동 매출을 전국 사교육비 비율대로 나눈 추정치를 냅니다.
 const isEstimate = (subject, level) => subject !== "all" || level !== "total";
 function perStudent(area, subject = "all", level = "total") {
-  if (!area.sales || area.students.total < 500 || area.academies.all < MIN_ACADEMIES_FOR_SALES) return 0;
+  if (!area.sales || !area.students.total) return 0;
   const monthly = area.sales / 3;
   if (!isEstimate(subject, level)) return monthly / area.students.total;
   const levels = Object.keys(SPEND_PROFILE);
@@ -185,11 +185,14 @@ function perStudent(area, subject = "all", level = "total") {
   if (level !== "total") return area.students[level] ? k * profileSum(level, subject) : 0;
   return levels.reduce((t, l) => t + (area.students[l] || 0) * k * profileSum(l, subject), 0) / area.students.total;
 }
+// 학원이나 학생이 적은 동은 매출(행정동)과 학원·학교(법정동) 경계 차이로 오차가 큽니다.
+const roughSales = (area) => area.academies.all < MIN_ACADEMIES_FOR_SALES || area.students.total < 500;
 function studentSalesText(area, subject, level) {
   const v = perStudent(area, subject, level);
-  if (v) return `<div class="rank-sub">${perStudentLabel(subject, level)}: <strong>${won(Math.round(v))}</strong>${isEstimate(subject, level) ? " (동 전체 매출을 전국 과목·학교급 사교육비 비율로 나눈 값)" : " (국영수과 등 모든 과목 합계)"}</div>`;
-  if (area.academies.all < MIN_ACADEMIES_FOR_SALES) return '<div class="rank-sub">학생 1명당 매출: 이 동은 학원이 20곳 미만이라 매출 집계 경계와 맞지 않아 계산하지 않았습니다.</div>';
-  return "";
+  if (!v) return "";
+  const note = isEstimate(subject, level) ? "동 전체 매출을 전국 과목·학교급 사교육비 비율로 나눈 값" : "국영수과 등 모든 과목 합계";
+  const rough = roughSales(area) ? ' <span class="tag warn">학원 적어 오차 큼</span>' : "";
+  return `<div class="rank-sub">${perStudentLabel(subject, level)}: <strong>${won(Math.round(v))}</strong> (${note})${rough}</div>`;
 }
 const SUBJECT_SHORT = { all: "전 과목", math: "수학", english: "영어", korean: "국어·논술", science: "과학" };
 const perStudentLabel = (subject, level) => (isEstimate(subject, level)
@@ -355,7 +358,7 @@ const COLUMNS = [
   {
     key: "perStudent", label: perStudentLabel, salesOnly: true,
     value: (r) => perStudent(r.area, r.subject, r.level),
-    text: (r) => { const v = perStudent(r.area, r.subject, r.level); return v ? won(Math.round(v)) : "-"; },
+    text: (r) => { const v = perStudent(r.area, r.subject, r.level); return v ? `${won(Math.round(v))}${roughSales(r.area) ? " (오차 큼)" : ""}` : "-"; },
   },
   {
     key: "sales", label: "학원 1곳당 월매출", salesOnly: true,
