@@ -1,4 +1,4 @@
-const SUBJECT_LABELS = { math: "수학 학원", english: "영어 학원", all: "입시·보습 학원" };
+const SUBJECT_LABELS = { math: "수학 학원", english: "영어 학원", korean: "국어·논술 학원", science: "과학 학원", all: "입시·보습 학원" };
 const LEVEL_LABELS = { total: "초·중·고 학생", elem: "초등학생", middle: "중학생", high: "고등학생" };
 
 const els = {

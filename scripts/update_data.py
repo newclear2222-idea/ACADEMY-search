@@ -116,7 +116,10 @@ SCHOOL_KINDS = {"elem": "02", "middle": "03", "high": "04"}
 SUBJECT_KEYWORDS = {
     "math": ["수학"],
     "english": ["영어"],
+    "korean": ["국어", "문학", "독서", "논술"],
+    "science": ["과학", "물리", "화학", "생명과학", "생물", "지구과학"],
 }
+SUBJECTS = ("all", *SUBJECT_KEYWORDS)
 
 # 교습과정 이름으로 학교급을 가립니다. 예: '고등수학', '중등부', '영어 초1~3', '국어(중)'
 LEVEL_PATTERNS = {
@@ -148,7 +151,7 @@ def course_subjects(name, academy_subjects):
     found = {s for s, words in SUBJECT_KEYWORDS.items() if any(w in name for w in words)}
     if found:
         return found
-    other_subject = re.search(r"국어|논술|과학|사회|코딩|한자|중국어|일본어|독서", name)
+    other_subject = re.search(r"사회|코딩|한자|중국어|일본어", name)
     return set() if other_subject or len(academy_subjects) != 1 else set(academy_subjects)
 
 
@@ -158,7 +161,7 @@ def course_levels(name):
 
 def new_fee_table():
     return {subject: {level: [] for level in ("elem", "middle", "high", "total")}
-            for subject in ("all", "math", "english")}
+            for subject in SUBJECTS}
 
 
 def add_fees(table, row, academy_subjects):
@@ -543,7 +546,7 @@ def count_branches(names):
 def pick_top_academies(academies):
     """과목별로 정원이 큰 학원을 몇 곳씩 남깁니다. 유명도가 아니라 규모 기준입니다."""
     keep = {}
-    for subject in ("all", "math", "english"):
+    for subject in SUBJECTS:
         pool = [x for x in academies if (subject == "all" or subject in x["subjects"]) and "원격" not in x["name"]]
         pool.sort(key=lambda x: (-x["capacity"], -x["branches"], x["name"]))
         for x in pool[:TOP_ACADEMIES]:
@@ -559,14 +562,14 @@ def new_area(name):
     return {
         "name": name,
         "students": {"elem": 0, "middle": 0, "high": 0, "total": 0},
-        "academies": {"all": 0, "math": 0, "english": 0},
+        "academies": {subject: 0 for subject in SUBJECTS},
         "schools": [],
         "fees": new_fee_table(),
         "top": [],
         "newApts": [],
         "studentsPast": {"elem": 0, "middle": 0, "high": 0, "total": 0},
         # 지금 영업 중인 학원 중 최근 1년, 3년 안에 문을 연 곳
-        "opened": {"1y": {"all": 0, "math": 0, "english": 0}, "3y": {"all": 0, "math": 0, "english": 0}},
+        "opened": {period: {subject: 0 for subject in SUBJECTS} for period in ("1y", "3y")},
     }
 
 
