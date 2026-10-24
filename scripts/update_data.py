@@ -760,13 +760,22 @@ def save(outputs, provinces):
     index = json.loads(index_path.read_text(encoding="utf-8")) if index_path.exists() else []
     index = [r for r in index if r.get("province") in PROVINCES and r["province"] not in provinces]
 
-    keep = {f"{r['id']}.json" for r in index} | {f"{o['id']}.json" for o in outputs} | {"regions.json"}
+    keep = {f"{r['id']}.json" for r in index} | {f"{o['id']}.json" for o in outputs} | {"regions.json", "history.json"}
     for old in DATA_DIR.glob("*.json"):
         if old.name not in keep:
             old.unlink()
     for o in outputs:
         (DATA_DIR / f"{o['id']}.json").write_text(
             json.dumps(o, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+
+    # 문 닫은 학원은 나이스 자료에 남지 않아, 달마다 동별 학원 수를 쌓아 두고 순증감을 계산합니다.
+    history_path = DATA_DIR / "history.json"
+    history = json.loads(history_path.read_text(encoding="utf-8")) if history_path.exists() else {}
+    month = f"{datetime.date.today():%Y-%m}"
+    snapshot = history.setdefault(month, {})
+    for o in outputs:
+        snapshot[o["id"]] = {a["name"]: a["academies"] for a in o["areas"]}
+    history_path.write_text(json.dumps(dict(sorted(history.items())), ensure_ascii=False) + "\n", encoding="utf-8")
 
     index += [{"id": o["id"], "name": o["region"], "province": o["province"]} for o in outputs]
     order = list(PROVINCES)
