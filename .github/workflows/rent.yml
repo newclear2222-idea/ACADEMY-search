@@ -1,0 +1,37 @@
+name: 상가 임대료 받기
+
+on:
+  schedule:
+    - cron: "0 1 20 * *" # 매달 20일 오전 10시 (한국 시간). 임대동향은 분기마다 나옵니다.
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: R-ONE 상가 임대료 받기
+        env:
+          REB_API_KEY: ${{ secrets.REB_API_KEY }}
+        run: python3 scripts/rent.py
+
+      - name: 바뀐 데이터 저장
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/rent.json
+          if git diff --cached --quiet; then
+            echo "바뀐 데이터가 없습니다."
+          else
+            git commit -m "상가 임대료 업데이트 ($(date +%Y-%m-%d))"
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push
+          fi

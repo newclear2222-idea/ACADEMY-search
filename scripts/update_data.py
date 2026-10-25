@@ -953,7 +953,7 @@ def save(outputs, provinces):
     index = [r for r in index if r.get("province") in PROVINCES and r["province"] not in provinces]
 
     add_close_rate(outputs)
-    keep = {f"{r['id']}.json" for r in index} | {f"{o['id']}.json" for o in outputs} | {"regions.json", "history.json", "centroids.json", "seoul_adm.json"}
+    keep = {f"{r['id']}.json" for r in index} | {f"{o['id']}.json" for o in outputs} | {"regions.json", "history.json", "centroids.json", "seoul_adm.json", "rent.json"}
     for old in DATA_DIR.glob("*.json"):
         if old.name not in keep:
             old.unlink()
