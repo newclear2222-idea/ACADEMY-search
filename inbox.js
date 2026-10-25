@@ -28,7 +28,7 @@ function ibRender() {
       <p class="rec-note">지역: ${ibEscape(ibArea(d))}${d.saju ? " · 사주 풀이 원함" : ""}</p>
       ${d.memo ? `<p class="rec-note">메모: ${ibEscape(d.memo)}</p>` : ""}
       ${it.note ? `<p class="rec-note">처리 메모: ${ibEscape(it.note)}</p>` : ""}
-      <button type="button" class="rec-go inbox-make" data-i="${i}">이 신청으로 보고서 만들기</button>
+      <div class="inbox-actions"><button type="button" class="rec-go inbox-make" data-i="${i}">이 신청으로 보고서 만들기</button>${d.saju && !window.claude ? `<button type="button" class="inbox-copy" data-i="${i}">사주 풀이용으로 복사</button>` : ""}</div>
     </li>`;
   }).join("");
 }
@@ -96,6 +96,14 @@ if (ibEls.url.value && ibEls.key.value) { ibEls.box.open = true; ibLoad(true); }
 ibEls.list.addEventListener("click", (e) => {
   const btn = e.target.closest(".inbox-make");
   if (btn) ibApply(ibItems[Number(btn.dataset.i)].data);
+  // Claude 밖(GitHub 주소)에서는 사주 풀이가 안 나오니, Claude 가이드의 '직접 붙여넣기'에 넣을 원본을 복사해 줍니다.
+  const copy = e.target.closest(".inbox-copy");
+  if (copy) {
+    const text = JSON.stringify(ibItems[Number(copy.dataset.i)].data);
+    const done = (msg) => { copy.textContent = msg; setTimeout(() => { copy.textContent = "사주 풀이용으로 복사"; }, 2500); };
+    navigator.clipboard?.writeText(text).then(() => done("복사했습니다. Claude 가이드에 붙여 넣으세요"))
+      .catch(() => { ibEls.paste.value = text; ibEls.paste.closest("details").open = true; ibEls.paste.select(); done("아래 칸에 넣었습니다. Ctrl+C로 복사하세요"); });
+  }
 });
 ibEls.apply.addEventListener("click", () => {
   const d = ibParse(ibEls.paste.value);
