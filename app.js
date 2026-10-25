@@ -1484,11 +1484,19 @@ async function runSajuAi(box, saju, opts, profile, fresh = false) {
   if (!sample) { out.textContent = "Claude 풀이는 Claude 화면에서 이 보고서를 만들 때 자동으로 써집니다. 지금 화면에서는 Claude에 연결할 수 없어 위 계산값만 보여 드립니다."; return; }
   const ctl = new AbortController();
   go.hidden = true; stop.hidden = false;
-  out.textContent = "Claude가 사주를 깊이 살펴보는 중입니다. 처음 한 번은 Claude 사용 허락을 묻습니다. 첫 글자가 나오기까지 1~2분쯤 걸릴 수 있고, 전체 풀이는 몇 분에 걸쳐 이어서 써집니다…";
+  // 첫 글자가 나올 때까지 지난 시간을 보여 줘, 멈춘 것이 아니라 생각 중임을 알립니다.
+  const t0 = Date.now();
+  let started = false;
+  const waiting = () => {
+    const sec = Math.round((Date.now() - t0) / 1000);
+    out.textContent = `Claude가 사주를 깊이 살펴보는 중입니다… (${sec}초 지남)\n\n아직 끝난 것이 아닙니다. 상담 한 시간 분량(7,000~9,000자)의 풀이라 첫 글자가 나오기까지 1~3분쯤 걸리고, 그 뒤 몇 분에 걸쳐 이어서 써집니다. 이 화면을 닫지 말고 기다려 주세요.\n처음 한 번은 화면 위쪽에 Claude 사용을 허락할지 묻는 창이 뜹니다. 허락해야 풀이가 시작됩니다.`;
+  };
+  waiting();
+  const timer = setInterval(() => { if (!started) waiting(); }, 1000);
   stop.onclick = () => ctl.abort();
   let finished = false;
   try {
-    const { truncated } = await sample(sajuPrompt(saju, opts, profile), { modelTier: "complex", effort: "high", cache: fresh ? false : { gcTime: 86400000 }, signal: ctl.signal, onText: ({ text }) => { out.textContent = text; } });
+    const { truncated } = await sample(sajuPrompt(saju, opts, profile), { modelTier: "complex", effort: "medium", cache: fresh ? false : { gcTime: 86400000 }, signal: ctl.signal, onText: ({ text }) => { started = true; out.textContent = text; } });
     if (truncated) out.textContent += "\n\n(길이 제한으로 여기서 끊겼습니다.)";
     finished = true;
   } catch (e) {
@@ -1497,6 +1505,7 @@ async function runSajuAi(box, saju, opts, profile, fresh = false) {
     out.textContent += `${out.textContent ? "\n\n" : ""}${why || "풀이를 받지 못했습니다. 잠시 뒤 '다시 풀이 받기'를 눌러 주세요."}`;
     if (["not_granted", "sampling_disabled", "not_declared", "capability_disabled", "capability_removed"].includes(e.code)) { stop.hidden = true; return; }
   } finally {
+    clearInterval(timer);
     stop.hidden = true;
   }
   go.hidden = false;
