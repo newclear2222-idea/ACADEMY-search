@@ -1,5 +1,22 @@
 // 받은 상담 신청: 상담 신청 사이트(intake.html)가 구글 시트에 쌓은 신청을 불러와 개원 보고서 만들기 칸에 채우고 바로 보고서를 만듭니다.
 // app.js의 rpEls, fmt, LEVEL_LABELS를 씁니다. 시트 주소와 비밀번호는 이 브라우저에만 기억합니다.
+// 받은 상담 신청과 맨 아래 계산 근거는 원장님 화면에서만 보입니다. 주소 끝에 #원장을 붙여 한 번 열면 이 브라우저가 기억하고,
+// #손님으로 열면 다시 감춥니다. Claude 안에서 연 가이드는 원장님만 볼 수 있어 늘 보입니다.
+function ibIsOwner() {
+  const hash = decodeURIComponent(location.hash.slice(1));
+  try {
+    if (hash === "원장") localStorage.setItem("owner", "1");
+    if (hash === "손님") localStorage.removeItem("owner");
+    if (hash === "원장" || hash === "손님") history.replaceState(null, "", location.pathname + location.search);
+    return !!window.claude || localStorage.getItem("owner") === "1";
+  } catch (e) { return !!window.claude || hash === "원장"; }
+}
+let ibOwner = ibIsOwner();
+document.querySelectorAll(".owner-only").forEach((el) => { el.hidden = !ibOwner; });
+window.addEventListener("hashchange", () => {
+  ibOwner = ibIsOwner();
+  document.querySelectorAll(".owner-only").forEach((el) => { el.hidden = !ibOwner; });
+});
 const ibEls = Object.fromEntries(["box", "url", "key", "load", "status", "list", "paste", "apply"].map((k) => [k, document.getElementById(`inbox-${k}`)]));
 const IB_SUBJECT = { math: "수학", english: "영어", korean: "국어·논술", science: "과학", all: "입시·보습 전체" };
 let ibItems = [];
@@ -92,7 +109,7 @@ ibEls.url.value = ibStore.get("url") || window.INTAKE_URL || "";
 ibEls.key.value = ibStore.get("key");
 ibEls.load.addEventListener("click", () => ibLoad());
 // 비밀번호를 한 번 넣어 두었으면 열 때마다 신청 목록을 바로 불러옵니다.
-if (ibEls.url.value && ibEls.key.value) { ibEls.box.open = true; ibLoad(true); }
+if (ibOwner && ibEls.url.value && ibEls.key.value) { ibEls.box.open = true; ibLoad(true); }
 ibEls.list.addEventListener("click", (e) => {
   const btn = e.target.closest(".inbox-make");
   if (btn) ibApply(ibItems[Number(btn.dataset.i)].data);
