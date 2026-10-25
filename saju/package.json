@@ -1,0 +1,17 @@
+{
+  "name": "academy-search-saju",
+  "private": true,
+  "description": "만세력 계산기를 사이트용 한 파일(saju.js)로 묶습니다. npm run build",
+  "scripts": {
+    "build": "esbuild entry.ts --bundle --format=iife --global-name=Saju --minify --target=es2019 --outfile=../saju.js",
+    "test": "esbuild check.ts --bundle --platform=node --outfile=/tmp/saju-check.cjs --log-level=warning && node /tmp/saju-check.cjs"
+  },
+  "dependencies": {
+    "@fullstackfamily/manseryeok": "1.0.8",
+    "astronomy-engine": "2.1.19",
+    "k-saju": "0.1.4"
+  },
+  "devDependencies": {
+    "esbuild": "0.24.2"
+  }
+}

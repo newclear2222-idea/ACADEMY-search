@@ -150,6 +150,26 @@
           <legend>가고 싶은 시·구 (시·도 이름 옆 “전체”로 한꺼번에 고를 수 있고, 아무것도 고르지 않으면 서울·경기·인천 전체)</legend>
           <div id="rp-regions" class="rp-regions"></div>
         </fieldset>
+        <fieldset class="rp-group">
+          <legend>사주 (선택: 넣으면 보고서에 사주와 방위 궁합이 참고로 붙고, 이 화면 안에서만 계산해 어디에도 저장하지 않아요)</legend>
+          <div class="controls rec-controls">
+            <label>생년월일
+              <input id="rp-birth" type="text" inputmode="numeric" placeholder="예: 1985-03-16" maxlength="10" autocomplete="off">
+            </label>
+            <label>출생시간 (모르면 비우기)
+              <input id="rp-btime" type="text" inputmode="numeric" placeholder="예: 07:30" maxlength="5" autocomplete="off">
+            </label>
+            <label>달력
+              <select id="rp-cal"><option>양력</option><option>음력</option></select>
+            </label>
+            <label>성별
+              <select id="rp-gender"><option>남성</option><option>여성</option></select>
+            </label>
+            <label>방위 기준 위치 (사는 곳)
+              <select id="rp-home"></select>
+            </label>
+          </div>
+        </fieldset>
         <button type="submit" class="rec-go">보고서 만들기</button>
       </form>
       <p id="rp-status" class="rec-note" aria-live="polite"></p>

@@ -1067,7 +1067,7 @@ function rentEstimate(x, m2) {
 }
 function showReport(target = recEls.report, report = lastReport) {
   if (!report) return;
-  const { res, opts, scopeName, rules, profile } = report;
+  const { res, opts, scopeName, rules, profile, saju } = report;
   const { subject, level, years, budget } = opts;
   const L = LEVEL_LABELS[level], S = SUBJECT_LABELS[subject];
   const [m2, sizeName] = RENT_SIZES[budget];
@@ -1089,11 +1089,12 @@ function showReport(target = recEls.report, report = lastReport) {
   const rows = top.map((x, i) => {
     const rent = rentEstimate(x, m2);
     const mark = [x.risk?.caution ? '<span class="caution-text">주의</span>' : "", x.boost ? "입주 가산" : "", x.hubBonus ? "학원가 우대" : ""].filter(Boolean).join(" · ");
-    return `<tr><td>${i + 1}</td><td>${name(x)}</td><td class="num">${(Math.round(x.score * 10) / 10).toFixed(1)}</td><td class="num">${pp(x.gap)}p</td><td class="num">${x.academies ? `${fmt(Math.round(x.perAcademy))}명` : "학원 없음"}</td><td class="num">${rent ? `${fmt(rent)}만원` : "-"}</td><td class="num">${x.area.apt ? bigWon(x.area.apt[0]) : "-"}</td><td>${mark}</td></tr>`;
+    return `<tr><td>${i + 1}</td><td>${name(x)}</td><td class="num">${(Math.round(x.score * 10) / 10).toFixed(1)}</td><td class="num">${pp(x.gap)}p</td><td class="num">${x.academies ? `${fmt(Math.round(x.perAcademy))}명` : "학원 없음"}</td><td class="num">${rent ? `${fmt(rent)}만원` : "-"}</td><td class="num">${x.area.apt ? bigWon(x.area.apt[0]) : "-"}</td>${saju ? `<td>${sajuMatch(saju, x)?.short || "-"}</td>` : ""}<td>${mark}</td></tr>`;
   }).join("");
   const details = top.map((x, i) => {
     const card = recItem(x, i, opts, scopeName).replace(/<button[^]*?<\/button>/, "").replace(/^\s*<li>|<\/li>\s*$/g, "");
-    return `<section class="report-dong">${card}${riskText(x.area, x.data)}</section>`;
+    const m = saju && sajuMatch(saju, x);
+    return `<section class="report-dong">${card}${m ? `<p class="rank-sub">사주 방위(참고): ${m.text} → ${m.label}</p>` : ""}${riskText(x.area, x.data)}</section>`;
   }).join("");
   target.innerHTML = `
     <div class="report-tools"><button type="button" class="rec-go report-save">보고서 파일로 저장</button><button type="button" class="report-ghost report-copy">글 복사</button><button type="button" class="report-close">닫기</button></div>
@@ -1103,14 +1104,15 @@ function showReport(target = recEls.report, report = lastReport) {
       <dl class="report-cond">
         <div><dt>과목</dt><dd>${S}</dd></div><div><dt>대상</dt><dd>${L}</dd></div>
         <div><dt>경력</dt><dd>${profile ? profile.label : YEARS_LABEL[years]}</dd></div><div><dt>예산</dt><dd>${profile?.budgetText || BUDGET_LABEL[budget]}</dd></div>${opts.rentLimit ? `<div><dt>월 임대료 한도</dt><dd>${fmt(opts.rentLimit)}만원</dd></div>` : ""}
-        <div><dt>범위</dt><dd>${scopeName}</dd></div><div><dt>넓이 가정</dt><dd>전용 ${sizeName}(${m2}㎡)</dd></div>
+        <div><dt>범위</dt><dd>${scopeName}</dd></div><div><dt>넓이 가정</dt><dd>전용 ${sizeName}(${m2}㎡)</dd></div>${saju ? `<div><dt>사주 종합 오행</dt><dd>${saju.need.map((e) => ELEMENT_KO[e]).join("·") || "-"}</dd></div>` : ""}
       </dl>
     </header>
     <h3>1. 요약</h3>
     ${summary.map((t) => `<p>${t}</p>`).join("")}
     ${profile ? `<h3>경력으로 본 입지 전략</h3>${profile.strategy.map((t) => `<p>${t}</p>`).join("")}` : ""}
+    ${saju ? sajuSection(saju, top, name) : ""}
     <h3>2. 추천 동 한눈에 보기</h3>
-    <div class="table-wrap"><table class="report-table"><thead><tr><th>순위</th><th>동</th><th class="num">점수</th><th class="num">${L}−학원 증가(1년)</th><th class="num">${S.replace(" 학원", "")} 학원 1곳당 ${L}</th><th class="num">월 임대료 어림(전용 ${sizeName})</th><th class="num">아파트 평당</th><th>표시</th></tr></thead><tbody>${rows}</tbody></table></div>
+    <div class="table-wrap"><table class="report-table"><thead><tr><th>순위</th><th>동</th><th class="num">점수</th><th class="num">${L}−학원 증가(1년)</th><th class="num">${S.replace(" 학원", "")} 학원 1곳당 ${L}</th><th class="num">월 임대료 어림(전용 ${sizeName})</th><th class="num">아파트 평당</th>${saju ? "<th>사주 방위(맞는 학파 수)</th>" : ""}<th>표시</th></tr></thead><tbody>${rows}</tbody></table></div>
     <h3>3. 동별 근거</h3>
     ${details}
     <h3>4. 고른 방법</h3>
@@ -1171,6 +1173,11 @@ function copyReport(btn) {
 // 개원 보고서 만들기: 경력을 종류별로 받아 학원가를 우대할지, 뺄지 정합니다.
 const rpEls = {
   form: document.getElementById("rp-form"),
+  birth: document.getElementById("rp-birth"),
+  btime: document.getElementById("rp-btime"),
+  cal: document.getElementById("rp-cal"),
+  gender: document.getElementById("rp-gender"),
+  home: document.getElementById("rp-home"),
   subject: document.getElementById("rp-subject"),
   level: document.getElementById("rp-level"),
   budget: document.getElementById("rp-budget"),
@@ -1207,7 +1214,246 @@ function careerProfile(budget) {
   else if (own === 0 && total >= 1) strategy.push("직접 운영해 본 경험이 없으니 첫해에는 상담·홍보·행정에 드는 시간을 넉넉히 잡으세요.");
   return { big, small, own, tutor, record, total, pref, label, strategy };
 }
+// 사주: 계산은 saju.js(원장일지 만세력 계산기, saju/lib/saju-profile.ts)가 하고, 여기서는 입력 확인과 표시만 합니다.
+const ELEMENTS = ["木", "火", "土", "金", "水"];
+const ELEMENT_KO = { 木: "목(木)", 火: "화(火)", 土: "토(土)", 金: "금(金)", 水: "수(水)" };
+// 목·금은 받침이 있고 화·토·수는 없어 조사가 달라집니다.
+const elJosa = (e, withB, without) => (e === "木" || e === "金" ? withB : without);
+const ELEMENT_DIR = { 木: "동쪽", 火: "남쪽", 土: "가운데", 金: "서쪽", 水: "북쪽" };
+const SAJU_CENTER_KM = 3; // 기준 위치에서 이만큼 안이면 방위 대신 가운데(土)로 봅니다.
+let sajuReady = null;
+function loadSaju() {
+  sajuReady ??= new Promise((ok, fail) => {
+    const tag = document.createElement("script");
+    tag.src = "saju.js";
+    tag.onload = () => ok(window.Saju);
+    tag.onerror = () => { sajuReady = null; fail(new Error("사주 계산기를 불러오지 못했습니다")); };
+    document.head.append(tag);
+  });
+  return sajuReady;
+}
+// 19850316, 1985.3.16 같은 입력도 1985-03-16 꼴로 맞춥니다. 음력 2월 30일처럼 양력에 없는 날도 넣을 수 있게 글자로 받습니다.
+function normalizeBirth() {
+  const digits = rpEls.birth.value.trim().match(/^(\d{4})\D*(\d{1,2})\D*(\d{1,2})\D*$/) || rpEls.birth.value.trim().match(/^(\d{4})(\d{2})(\d{2})$/);
+  if (digits) rpEls.birth.value = `${digits[1]}-${digits[2].padStart(2, "0")}-${digits[3].padStart(2, "0")}`;
+  const t = rpEls.btime.value.trim().match(/^(\d{1,2})\D?(\d{2})$/);
+  if (t) rpEls.btime.value = `${t[1].padStart(2, "0")}:${t[2]}`;
+}
+function sajuInputError() {
+  normalizeBirth();
+  const date = rpEls.birth.value.trim();
+  if (!date) return null;
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return "생년월일은 1985-03-16처럼 넣어 주세요.";
+  const [y, m, d] = date.split("-").map(Number);
+  if (!(y >= 1900 && y <= 2050)) return "생년월일은 1900~2050년 사이로 넣어 주세요.";
+  if (rpEls.cal.value === "양력") {
+    const t = new Date(Date.UTC(y, m - 1, d));
+    if (t.getUTCMonth() !== m - 1 || t.getUTCDate() !== d) return "없는 날짜입니다. 생년월일을 확인해 주세요.";
+  } else if (!(m >= 1 && m <= 12 && d >= 1 && d <= 30)) return "음력 날짜는 1~12월, 1~30일로 넣어 주세요.";
+  const time = rpEls.btime.value.trim();
+  if (time) {
+    const [h, mi] = time.split(":").map(Number);
+    if (!/^\d{2}:\d{2}$/.test(time) || h > 23 || mi > 59) return "출생시간은 07:30처럼 24시간제로 넣어 주세요. 모르면 비워 두세요.";
+  }
+  return "";
+}
+async function sajuFor() {
+  if (!rpEls.birth.value) return null;
+  const Saju = await loadSaju();
+  const p = Saju.calculateProfile(rpEls.birth.value.trim(), rpEls.btime.value.trim(), rpEls.cal.value, rpEls.gender.value);
+  const min = Math.min(...ELEMENTS.map((e) => p.counts[e]));
+  const max = Math.max(...ELEMENTS.map((e) => p.counts[e]));
+  const home = allRegions.find((r) => r.id === rpEls.home.value);
+  const centroids = await fetchJson("data/centroids.json");
+  const pts = Object.values(centroids[home.name] || {});
+  const origin = pts.length ? [pts.reduce((a, q) => a + q[0], 0) / pts.length, pts.reduce((a, q) => a + q[1], 0) / pts.length] : null;
+  const schools = sajuSchools(p);
+  let daeun = [];
+  try { if (p.daeunStart != null) daeun = Saju.daeunTable(rpEls.birth.value.trim(), rpEls.btime.value.trim(), rpEls.cal.value, rpEls.gender.value, p.daeunStart); } catch (err) { console.warn(err); }
+  return {
+    p, origin, homeName: shortRegion(home.name), daeun, birthSolar: Saju.solarBirth(rpEls.birth.value.trim(), rpEls.cal.value),
+    schools,
+    need: schoolsBest(schools),
+    full: max > min ? ELEMENTS.filter((e) => p.counts[e] === max) : [],
+    input: `${rpEls.birth.value} ${rpEls.btime.value || "시간 모름"} ${rpEls.cal.value} ${rpEls.gender.value}`,
+  };
+}
+// 기준 위치에서 본 동의 방향을 오행으로 바꿉니다(동 木, 남 火, 서 金, 북 水, 가까우면 土).
+function sajuElementOf(saju, x) {
+  const c = x.area.center;
+  if (!saju?.origin || !c) return null;
+  const [lat0, lng0] = saju.origin;
+  const dy = (c[0] - lat0) * 111;
+  const dx = (c[1] - lng0) * 111 * Math.cos(lat0 * Math.PI / 180);
+  if (Math.hypot(dx, dy) < SAJU_CENTER_KM) return "土";
+  const deg = (Math.atan2(dx, dy) * 180 / Math.PI + 360) % 360;
+  return deg >= 45 && deg < 135 ? "木" : deg >= 135 && deg < 225 ? "火" : deg >= 225 && deg < 315 ? "金" : "水";
+}
+// 학파마다 쓰는 오행을 다르게 고르므로 여러 풀이를 나란히 계산합니다. 모두 원국(계산기 값)만 보고 정합니다.
+const GEN = { 木: "火", 火: "土", 土: "金", 金: "水", 水: "木" }; // 생(生): 木이 火를 낳음
+const CTRL = { 木: "土", 土: "水", 水: "火", 火: "金", 金: "木" }; // 극(剋): 木이 土를 누름
+const BRANCH_EL = { 子: "水", 丑: "土", 寅: "木", 卯: "木", 辰: "土", 巳: "火", 午: "火", 未: "土", 申: "金", 酉: "金", 戌: "土", 亥: "水" };
+const tenGodEl = (me) => ({ 비겁: me, 인성: ELEMENTS.find((e) => GEN[e] === me), 식상: GEN[me], 재성: CTRL[me], 관성: ELEMENTS.find((e) => CTRL[e] === me) });
+function tenGodOf(me, e) {
+  const t = tenGodEl(me);
+  return Object.keys(t).find((k) => t[k] === e);
+}
+function sajuSchools(p) {
+  const me = STEM_INFO[p.chart.day.stem][1];
+  const T = tenGodEl(me);
+  const helps = (e) => e === me || GEN[e] === me;
+  const pos = [["년간", p.chart.year.stem], ["년지", p.chart.year.branch], ["월간", p.chart.month.stem], ["월지", p.chart.month.branch], ["일지", p.chart.day.branch]];
+  if (p.chart.hour) pos.push(["시간", p.chart.hour.stem], ["시지", p.chart.hour.branch]);
+  const chars = pos.map(([k, c]) => ({ k, e: STEM_INFO[c]?.[1] || BRANCH_EL[c] }));
+  const helpN = chars.filter((c) => helps(c.e)).length;
+  // 억부: 신강이면 넘치는 쪽을 덜고, 신약이면 모자란 쪽을 돕습니다.
+  const eokbu = (strong) => {
+    if (strong == null) return { use: [], how: "치우치지 않아(중화) 방위를 따로 정하지 않음" };
+    const n = (k) => chars.filter((c) => c.e === T[k]).length;
+    if (strong) return n("인성") > n("비겁")
+      ? { use: [T.재성], how: `신강, 인성이 많아 재성 ${ELEMENT_KO[T.재성]}${elJosa(T.재성, "으로", "로")} 덜어 냄 (식상 ${ELEMENT_KO[T.식상]}도 도움)` }
+      : { use: [T.관성], how: `신강, 비겁이 많아 관성 ${ELEMENT_KO[T.관성]}${elJosa(T.관성, "으로", "로")} 다스림 (식상 ${ELEMENT_KO[T.식상]}도 도움)` };
+    const drain = ["식상", "재성", "관성"].sort((a, b) => n(b) - n(a))[0];
+    return drain === "재성"
+      ? { use: [T.비겁], how: `신약, 재성이 많아 비겁 ${ELEMENT_KO[T.비겁]}${elJosa(T.비겁, "으로", "로")} 버팀 (재다신약)` }
+      : { use: [T.인성], how: `신약, ${drain}이 많아 인성 ${ELEMENT_KO[T.인성]}${elJosa(T.인성, "으로", "로")} 도움` };
+  };
+  const verdict = (a, b) => (a > b ? true : a < b ? false : null);
+  // 1) 개수법: 일간을 뺀 글자 중 나를 돕는 글자(비겁·인성)가 절반을 넘는지
+  const byCount = verdict(helpN * 2, chars.length);
+  // 2) 득령·득지·득세: 월지, 일지, 나머지 글자 다수 중 둘 이상을 얻으면 신강
+  const month = chars.find((c) => c.k === "월지"), day = chars.find((c) => c.k === "일지");
+  const rest = chars.filter((c) => c !== month && c !== day);
+  const got = [helps(month.e), helps(day.e), rest.filter((c) => helps(c.e)).length * 2 > rest.length];
+  const byThree = got.filter(Boolean).length >= 2;
+  // 3) 가중 점수법: 월지 3배, 일지 1.5배, 나머지 1배
+  const w = (c) => (c.k === "월지" ? 3 : c.k === "일지" ? 1.5 : 1);
+  const total = chars.reduce((a, c) => a + w(c), 0), helpW = chars.filter((c) => helps(c.e)).reduce((a, c) => a + w(c), 0);
+  const byWeight = verdict(helpW * 2, total);
+  const label = (v) => (v == null ? "중화" : v ? "신강" : "신약");
+  // 4) 조후: 태어난 계절의 춥고 더움을 맞춤
+  const season = { 巳: "여름", 午: "여름", 未: "여름", 亥: "겨울", 子: "겨울", 丑: "겨울", 寅: "봄", 卯: "봄", 辰: "봄", 申: "가을", 酉: "가을", 戌: "가을" }[p.chart.month.branch];
+  const johu = { 여름: ["水", "여름생이라 더운 기운을 식히는 水가 급함"], 겨울: ["火", "겨울생이라 찬 기운을 데우는 火가 급함"], 봄: ["火", "봄생, 이른 봄의 찬 기운을 덜어 줄 火가 보조로 필요"], 가을: ["水", "가을생, 마른 기운을 적셔 줄 水가 보조로 필요"] }[season];
+  const min = Math.min(...ELEMENTS.map((e) => p.counts[e]));
+  const lacking = ELEMENTS.filter((e) => p.counts[e] === min);
+  return [
+    { family: "억부", name: "억부 · 개수법", judge: `${label(byCount)} (돕는 글자 ${helpN}/${chars.length})`, ...eokbu(byCount) },
+    { family: "억부", name: "억부 · 득령·득지·득세", judge: `${label(byThree)} (득령 ${got[0] ? "○" : "×"}, 득지 ${got[1] ? "○" : "×"}, 득세 ${got[2] ? "○" : "×"})`, ...eokbu(byThree) },
+    { family: "억부", name: "억부 · 가중 점수법", judge: `${label(byWeight)} (돕는 점수 ${helpW}/${total}, 월지 3배·일지 1.5배)`, ...eokbu(byWeight) },
+    { family: "조후", name: "조후", judge: `${season} ${p.chart.month.korean.slice(1)}월생`, use: [johu[0]], how: johu[1] },
+    { family: "재성 방향", name: "재성 방향 (사업·재물 중심)", judge: `일간 ${ELEMENT_KO[me]}의 재성`, use: [T.재성], how: `일간이 누르는 ${ELEMENT_KO[T.재성]}${elJosa(T.재성, "을", "를")} 돈과 사업의 자리로 봄. 신강할 때 특히 맞다고 보는 풀이` },
+    { family: "부족 오행", name: "부족 오행 보완", judge: `가장 적은 오행 ${lacking.map((e) => ELEMENT_KO[e]).join("·")}`, use: lacking, how: "오행 개수의 균형만 보고 모자란 기운을 채움" },
+  ];
+}
+// 억부의 세 판정법은 한 학파라서 한 표로 셉니다(세 방법 중 둘 이상이 고른 기운). 학파 4곳의 표가 가장 많은 오행을 종합으로 씁니다.
+function familyUse(schools) {
+  const fam = {};
+  for (const sc of schools) (fam[sc.family] ??= []).push(sc);
+  return Object.entries(fam).map(([name, list]) => ({
+    name, list,
+    use: ELEMENTS.filter((e) => list.filter((sc) => sc.use.includes(e)).length * 2 > list.length),
+  }));
+}
+function schoolsBest(schools) {
+  const fams = familyUse(schools);
+  const votes = Object.fromEntries(ELEMENTS.map((e) => [e, fams.filter((f) => f.use.includes(e)).length]));
+  const top = Math.max(...Object.values(votes));
+  return top ? ELEMENTS.filter((e) => votes[e] === top) : [];
+}
+function sajuMatch(saju, x) {
+  const e = sajuElementOf(saju, x);
+  if (!e) return null;
+  const fams = familyUse(saju.schools).filter((f) => f.use.length);
+  const hitFams = fams.filter((f) => f.use.includes(e));
+  const hit = saju.schools.filter((sc) => sc.use.includes(e));
+  const label = hitFams.length && hitFams.length * 2 >= fams.length ? "잘 맞음" : hitFams.length ? "일부 맞음" : saju.full.includes(e) ? "많은 기운 쪽" : "해당 없음";
+  return { e, label, hit, short: `${label} ${hitFams.length}/${fams.length}`, text: `${saju.homeName}에서 ${ELEMENT_DIR[e]}${e === "土" ? "" : " 방향"}(${ELEMENT_KO[e]}), ${hitFams.length ? `학파 ${fams.length}곳 중 ${hitFams.map((f) => f.name).join("·")} 풀이에 맞음` : "맞는 풀이 없음"}` };
+}
+// 해석 문구는 널리 쓰는 일간·오행·십성 풀이를 개원 상황에 맞춰 짧게 옮긴 것입니다. 계산값(원국·개수·대운)만 근거로 씁니다.
+const STEM_INFO = {
+  甲: ["갑", "木", "큰 나무", "곧고 앞장서는 기질로, 큰 그림을 그리고 밀고 나가는 편입니다"],
+  乙: ["을", "木", "풀과 덩굴", "부드럽고 적응력이 좋아 사람 사이를 잘 엮는 편입니다"],
+  丙: ["병", "火", "태양", "밝고 드러내는 기질로, 설명과 홍보에 강한 편입니다"],
+  丁: ["정", "火", "촛불", "섬세하게 한 사람씩 살피고 오래 집중하는 편입니다"],
+  戊: ["무", "土", "큰 산", "묵직하게 믿음을 주고 오래 버티는 힘이 있는 편입니다"],
+  己: ["기", "土", "논밭", "꼼꼼하게 길러 내는 기질로, 관리와 돌봄에 강한 편입니다"],
+  庚: ["경", "金", "바위와 쇠", "원칙과 결단력이 있어 엄격한 관리에 강한 편입니다"],
+  辛: ["신", "金", "보석", "예리하고 완성도를 따지는 편이라 디테일에 강합니다"],
+  壬: ["임", "水", "큰 강", "넓게 보고 흐름을 읽는 기질로, 확장에 강한 편입니다"],
+  癸: ["계", "水", "비와 이슬", "조용히 스며드는 기질로, 분석과 기획에 강한 편입니다"],
+};
+const BRANCH_KO = { 子: "자", 丑: "축", 寅: "인", 卯: "묘", 辰: "진", 巳: "사", 午: "오", 未: "미", 申: "신", 酉: "유", 戌: "술", 亥: "해" };
+const ganjiKo = (g) => (STEM_INFO[g[0]]?.[0] || g[0]) + (BRANCH_KO[g[1]] || g[1]);
+const ELEMENT_PLACE = {
+  木: "새로 자라는 곳(신도시, 새 아파트 입주 지역, 공원·녹지 가까운 곳)",
+  火: "밝고 사람이 몰리는 곳(역세권, 번화한 상권)",
+  土: "기준 위치 가까이, 오래 자리 잡은 안정된 주거지",
+  金: "정돈된 대단지 아파트와 학교가 가까운 곳",
+  水: "강·하천이 가깝거나 사람 흐름이 많은 곳",
+};
+const SIPSEONG_STYLE = {
+  비겁: ["경쟁심과 독립심이 강해 학원이 많은 곳에서도 밀리지 않는 편입니다", "학원가 경쟁도 해볼 만합니다", "hub"],
+  식상: ["가르치고 표현하는 힘이 강해 수업과 콘텐츠로 입소문을 내는 편입니다", "작게 시작해 실력으로 키우는 독자 운영이 맞습니다", "away"],
+  재성: ["사람과 돈을 다루는 감각이 있어 상권과 수익 계산에 밝은 편입니다", "임대료에 비해 학생이 많은 곳을 고르는 데 강점이 있습니다", "away"],
+  관성: ["규칙과 체계를 중시해 출결·테스트·상담이 짜인 관리형 학원에 강한 편입니다", "대형 학원에서 배운 운영 방식을 살리기 좋습니다", "hub"],
+  인성: ["배우고 쌓는 힘이 있어 학부모에게 믿음을 주는 편입니다", "상담과 커리큘럼 설명으로 신뢰를 쌓는 동네 밀착형이 맞습니다", "away"],
+};
+const SIPSEONG_LACK = {
+  비겁: "혼자 버티기보다 함께할 강사·동료를 미리 구해 두세요",
+  식상: "홍보 글과 설명회처럼 밖으로 알리는 일을 따로 챙기세요",
+  재성: "임대료·수강료·손익분기를 숫자로 꼼꼼히 계산해 두세요",
+  관성: "출결·숙제·상담 규칙을 개원 전에 정해 두세요",
+  인성: "첫해에는 학부모 상담과 신뢰 쌓기에 시간을 넉넉히 잡으세요",
+};
+function sajuSection(saju, top, name) {
+  const { p } = saju;
+  const pillars = [["년주", p.chart.year], ["월주", p.chart.month], ["일주", p.chart.day], ["시주", p.chart.hour]];
+  const [dayKo, dayEl, dayImg, dayTrait] = STEM_INFO[p.chart.day.stem] || ["", "", "", ""];
+  const good = top.filter((x) => sajuMatch(saju, x)?.label === "잘 맞음");
+  const growing = saju.need.includes("木") ? top.filter((x) => newTown(x.data.id, x.area.name) || x.boost) : [];
+  const counts = ELEMENTS.map((e) => `${ELEMENT_KO[e]} ${p.counts[e]}`).join(", ");
+  const sipMax = Math.max(...Object.values(p.sipseong));
+  const strong = Object.keys(p.sipseong).filter((k) => p.sipseong[k] === sipMax);
+  const lack = Object.keys(p.sipseong).filter((k) => p.sipseong[k] === 0);
+  const hubVotes = strong.filter((k) => SIPSEONG_STYLE[k][2] === "hub").length;
+  const tilt = hubVotes * 2 > strong.length ? "학원가 쪽" : hubVotes * 2 < strong.length ? "비학원가 동네 쪽" : "학원가와 비학원가 어느 쪽이든";
+  // 대운: 시작 나이는 보정된 daeunStart + 10 × 순번, 지금 나이는 만 나이로 셉니다.
+  let daeunHtml = "";
+  if (saju.daeun.length) {
+    const now = new Date();
+    const b = saju.birthSolar;
+    const age = now.getFullYear() - b.year - ((now.getMonth() + 1 < b.month || (now.getMonth() + 1 === b.month && now.getDate() < b.day)) ? 1 : 0);
+    const cur = saju.daeun.filter((d) => d.startAge <= age).pop();
+    const fits = (d) => saju.need.filter((e) => e === d.stemElement || e === d.branchElement);
+    const later = saju.daeun.filter((d) => d.startAge > age);
+    const nextFit = later.find((d) => fits(d).length);
+    const last = Math.max(cur ? cur.startAge + 20 : 0, nextFit?.startAge || 0);
+    const show = saju.daeun.filter((d) => d.startAge + 10 > age - 10 && d.startAge <= last);
+    let timing;
+    if (cur && fits(cur).length) timing = `지금(만 ${age}세)은 ${cur.startAge}세에 시작한 ${ganjiKo(cur.ganji)} 대운으로, 학파 종합 기운인 ${fits(cur).map((e) => ELEMENT_KO[e]).join("·")}${elJosa(fits(cur).at(-1), "이", "가")} 들어와 있습니다. 개원 시기로 무게를 둘 만합니다${later[0] ? ` (이 대운은 ${later[0].startAge}세 전까지)` : ""}.`;
+    else if (cur) timing = `지금(만 ${age}세)은 ${cur.startAge}세에 시작한 ${ganjiKo(cur.ganji)} 대운이고, 학파 종합 기운(${saju.need.map((e) => ELEMENT_KO[e]).join("·")})은 아직 들어오지 않았습니다.${nextFit ? ` 그 기운이 들어오는 다음 대운은 ${nextFit.startAge}세부터(${ganjiKo(nextFit.ganji)})입니다. 지금 연다면 무리한 확장보다 작게 시작해 버티는 쪽이 낫습니다.` : " 앞으로의 대운에도 뚜렷하게 들어오지 않아, 시기보다 입지와 준비로 보완하는 편이 낫습니다."}`;
+    else timing = `첫 대운이 ${saju.daeun[0].startAge}세에 시작합니다.`;
+    daeunHtml = `<p><strong>개원 시기(대운).</strong> ${timing}</p>
+    <div class="table-wrap"><table class="report-table"><thead><tr><th class="num">시작 나이</th><th>대운</th><th>오행</th><th>종합 기운</th></tr></thead><tbody>${show.map((d) => `<tr${d === cur ? ' class="saju-now"' : ""}><td class="num">${d.startAge}세${d === cur ? " (지금)" : ""}</td><td>${ganjiKo(d.ganji)}(${d.ganji})</td><td>${ELEMENT_KO[d.stemElement]}·${ELEMENT_KO[d.branchElement]}</td><td>${fits(d).length ? fits(d).map((e) => ELEMENT_KO[e]).join("·") : "-"}</td></tr>`).join("")}</tbody></table></div>`;
+  }
+  return `<h3>사주로 본 개원 해석 (참고)</h3>
+    <p>입력: ${saju.input}. 원국은 ${pillars.map(([k, v]) => `${k} ${v?.korean || "모름"}`).join(", ")}이고, 대운은 ${p.daeunStart ?? "-"}세에 시작합니다.${p.chart.hour ? "" : " 출생시간을 몰라 시주는 빼고 보았습니다."}</p>
+    <div class="table-wrap"><table class="report-table"><thead><tr>${ELEMENTS.map((e) => `<th class="num">${ELEMENT_KO[e]}</th>`).join("")}${Object.keys(p.sipseong).map((k) => `<th class="num">${k}</th>`).join("")}</tr></thead>
+    <tbody><tr>${ELEMENTS.map((e) => `<td class="num">${p.counts[e]}</td>`).join("")}${Object.values(p.sipseong).map((v) => `<td class="num">${v}</td>`).join("")}</tr></tbody></table></div>
+    <p><strong>타고난 성향(일간).</strong> 일간이 ${dayKo}${ELEMENT_KO[dayEl]?.slice(0, 1) || ""}(${p.chart.day.stem}), ${dayImg}입니다. ${dayTrait}.</p>
+    <p><strong>오행 균형.</strong> ${counts}${saju.full.length ? `. 가장 많은 쪽은 ${saju.full.map((e) => ELEMENT_KO[e]).join("·")}입니다` : ""}.</p>
+    <p><strong>학파별로 쓰는 기운.</strong> 신강·신약 판정과 용신을 고르는 법은 학파마다 달라서 여러 풀이를 나란히 계산했습니다. 어느 하나가 정답이라기보다 이렇게 해석할 수 있다는 뜻입니다. 억부는 판정법이 셋이라 따로 보여 주되, 종합할 때는 셋 중 둘 이상이 고른 기운을 억부의 한 표로 셉니다.</p>
+    <div class="table-wrap"><table class="report-table saju-schools"><thead><tr><th>풀이</th><th>판단</th><th>쓰는 기운과 이유</th><th>방위</th><th>추천 동 중 맞는 곳</th></tr></thead><tbody>${saju.schools.map((sc) => {
+      const hits = top.filter((x) => sajuMatch(saju, x)?.hit.includes(sc)).map(name);
+      return `<tr><td>${sc.name}</td><td>${sc.judge}</td><td>${sc.how}</td><td>${sc.use.map((e) => ELEMENT_DIR[e]).join("·") || "-"}</td><td>${hits.length ? hits.join(", ") : "-"}</td></tr>`;
+    }).join("")}</tbody></table></div>
+    <p><strong>가르치고 운영하는 방식(십성).</strong> 가장 많은 ${strong.map((k) => `${k}(${p.sipseong[k]}개)`).join("·")}: ${strong.map((k) => `${SIPSEONG_STYLE[k][0]}. ${SIPSEONG_STYLE[k][1]}.`).join(" ")}${lack.length ? ` 없는 ${lack.join("·")}: ${lack.map((k) => SIPSEONG_LACK[k]).join(". ")}.` : ""} 성향으로만 보면 ${tilt}이 어울립니다.</p>
+    <p><strong>어디로 가면 좋은가(종합).</strong> ${saju.need.length ? `억부·조후·재성 방향·부족 오행 네 학파 중 가장 많이 고른 기운은 ${saju.need.map((e) => ELEMENT_KO[e]).join("·")}이고, 기준 위치 ${saju.homeName}에서 ${saju.need.map((e) => ELEMENT_DIR[e]).join("·")}입니다. 어울리는 곳은 ${saju.need.map((e) => ELEMENT_PLACE[e]).join(", ")}입니다. ` : ""}${good.length ? `추천 동 중 학파 절반 이상에서 맞는 곳은 <strong>${good.map(name).join(", ")}</strong>입니다.` : "추천 동 중 학파 절반 이상에서 맞는 곳은 없습니다."}${growing.length ? ` 木 기운의 '새로 자라는 곳'으로는 신도시이거나 입주 예정 단지가 있는 ${growing.map(name).join(", ")}도 어울립니다.` : ""}</p>
+    ${daeunHtml}
+    <p class="rec-note">원국·오행·십성·대운은 원장일지 만세력 계산기 값 그대로이고(대운은 정확한 절입 시각 기준 보정), 학파별 판정과 해석 문구, 방위 규칙(동 木, 남 火, 서 金, 북 水, 기준 위치 ${SAJU_CENTER_KM}km 안은 土)은 전통 풀이를 단순하게 옮긴 참고용입니다. 지장간, 격국, 통관, 병약은 넣지 않았습니다. 데이터 근거가 아니라 순위에는 넣지 않았습니다.</p>`;
+}
 function fillReportRegions() {
+  rpEls.home.innerHTML = allRegions.map((r) => `<option value="${r.id}"${r.id === "서울-중구" ? " selected" : ""}>${r.name}</option>`).join("");
   const provinces = [...new Set(allRegions.map((r) => r.province))];
   rpEls.regions.innerHTML = provinces.map((p) => `<div class="rp-prov"><p class="rp-prov-name">${p} <label class="rp-check rp-all"><input type="checkbox" data-prov="${p}"> ${p} 전체</label></p><div class="rp-list">${allRegions
     .filter((r) => r.province === p)
@@ -1234,6 +1480,8 @@ async function runReportMaker(e) {
     subject: rpEls.subject.value, level: rpEls.level.value, years: profile.total, budget,
     hubPref: profile.pref, rentLimit: Number(rpEls.rent.value) || 0,
   };
+  const sajuError = sajuInputError();
+  if (sajuError) { rpEls.status.textContent = sajuError; rpEls.birth.focus(); return; }
   const picked = [...rpEls.regions.querySelectorAll(".rp-list input:checked")].map((i) => i.value);
   const targets = picked.length ? allRegions.filter((r) => picked.includes(r.id)) : allRegions;
   const wholeProv = [...rpEls.regions.querySelectorAll(".rp-all input:checked")].map((i) => i.dataset.prov);
@@ -1254,8 +1502,13 @@ async function runReportMaker(e) {
     rpEls.status.textContent = `조건에 맞는 동이 없습니다. 지역을 넓히거나 임대료 한도를 올려 보세요. (뺀 곳: ${rules.join(", ")})`;
     return;
   }
+  let saju = null;
   rpEls.status.textContent = "";
-  showReport(rpEls.report, { res, opts, scopeName, rules, profile });
+  try { saju = await sajuFor(); } catch (err) {
+    console.warn(err);
+    rpEls.status.textContent = "사주를 계산하지 못해 사주 없이 보고서를 만들었습니다. 음력이면 그 달에 그 날짜가 있는지 확인해 주세요.";
+  }
+  showReport(rpEls.report, { res, opts, scopeName, rules, profile, saju });
 }
 
 async function openArea(btn) {

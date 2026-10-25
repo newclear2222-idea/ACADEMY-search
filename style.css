@@ -226,6 +226,7 @@ th { color: var(--muted); font-weight: 600; }
 .report-table { border-collapse: collapse; width: 100%; font-size: 0.88rem; }
 .report-table th, .report-table td { border-bottom: 1px solid var(--line); padding: 6px 8px; text-align: left; white-space: nowrap; }
 .report-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+.saju-now td { font-weight: 700; background: var(--accent-soft); }
 .report-dong { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
 @media print {
   body * { visibility: hidden; }
