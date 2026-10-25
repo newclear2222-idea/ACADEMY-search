@@ -10,12 +10,13 @@
   "수강료: 학원이 교육청에 등록한 1인당 교습비",
   "대표 학원: 교육청에 등록한 정원이 큰 순서",
   "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)",
-  "학원 개업·폐업: 서울시 상권분석서비스 점포 (일반교습학원·외국어학원)"
+  "학원 개업·폐업: 서울시 상권분석서비스 점포 (일반교습학원·외국어학원)",
+  "아파트 가격: 국토교통부 아파트 매매 실거래가"
  ],
  "salesPeriod": "2026년 2분기",
  "storePeriod": "2025년 3분기~2026년 2분기",
  "pastYear": 2024,
- "aptPeriod": "",
+ "aptPeriod": "최근 6개월 매매",
  "unmatchedAcademies": 4,
  "fees": {
   "all": {
@@ -373,7 +374,13 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "마포자이힐스테이트 라첼스",
+     "households": 463,
+     "moveIn": "2027-03"
+    }
+   ],
    "studentsPast": {
     "elem": 730,
     "middle": 0,
@@ -406,6 +413,10 @@
     "close": 8,
     "base": 70
    },
+   "apt": [
+    80951646,
+    56
+   ],
    "fervor": {
     "score": 60,
     "parts": {
@@ -1203,6 +1214,10 @@
     126.93941
    ],
    "sales": null,
+   "apt": [
+    27599318,
+    8
+   ],
    "nearby": [
     {
      "name": "창천동",
@@ -1938,6 +1953,10 @@
     "close": 9,
     "base": 128
    },
+   "apt": [
+    89471705,
+    45
+   ],
    "fervor": {
     "score": 90,
     "parts": {
@@ -2651,7 +2670,13 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "공덕역자이르네",
+     "households": 177,
+     "moveIn": "2029-01"
+    }
+   ],
    "studentsPast": {
     "elem": 680,
     "middle": 0,
@@ -2684,6 +2709,10 @@
     "close": 7,
     "base": 50
    },
+   "apt": [
+    55740331,
+    111
+   ],
    "fervor": {
     "score": 73,
     "parts": {
@@ -3233,7 +3262,13 @@
     }
    },
    "top": [],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "홍대입구역 센트럴 아르떼 해모로",
+     "households": 52,
+     "moveIn": "2026-11"
+    }
+   ],
    "studentsPast": {
     "elem": 0,
     "middle": 0,
@@ -3569,6 +3604,10 @@
     "close": 15,
     "base": 105
    },
+   "apt": [
+    38914479,
+    89
+   ],
    "fervor": {
     "score": 76,
     "parts": {
@@ -4196,6 +4235,10 @@
     "close": 6,
     "base": 70
    },
+   "apt": [
+    77856453,
+    16
+   ],
    "fervor": {
     "score": 26,
     "parts": {
@@ -4951,6 +4994,10 @@
     "close": 14,
     "base": 117
    },
+   "apt": [
+    51831758,
+    100
+   ],
    "fervor": {
     "score": 58,
     "parts": {
@@ -5585,6 +5632,10 @@
     "close": 16,
     "base": 200
    },
+   "apt": [
+    37546234,
+    33
+   ],
    "nearby": [
     {
      "name": "상수동",
@@ -6357,6 +6408,10 @@
     "close": 15,
     "base": 152
    },
+   "apt": [
+    49947507,
+    66
+   ],
    "fervor": {
     "score": 59,
     "parts": {
@@ -6980,7 +7035,11 @@
      "science": 0
     }
    },
-   "sales": null
+   "sales": null,
+   "apt": [
+    76901359,
+    41
+   ]
   },
   {
    "name": "신수동",
@@ -7329,6 +7388,10 @@
     "close": 3,
     "base": 64
    },
+   "apt": [
+    72873016,
+    52
+   ],
    "fervor": {
     "score": 65,
     "parts": {
@@ -8073,7 +8136,18 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "마포 푸르지오 어반피스",
+     "households": 122,
+     "moveIn": "2027-03"
+    },
+    {
+     "name": "마포 에피트 어바닉",
+     "households": 163,
+     "moveIn": "2028-07"
+    }
+   ],
    "studentsPast": {
     "elem": 1077,
     "middle": 883,
@@ -8106,6 +8180,10 @@
     "close": 8,
     "base": 76
    },
+   "apt": [
+    98131603,
+    117
+   ],
    "fervor": {
     "score": 55,
     "parts": {
@@ -8731,6 +8809,10 @@
     "close": 4,
     "base": 32
    },
+   "apt": [
+    42785781,
+    16
+   ],
    "fervor": {
     "score": 13,
     "parts": {
@@ -9507,6 +9589,10 @@
     "close": 4,
     "base": 65
    },
+   "apt": [
+    89338065,
+    44
+   ],
    "fervor": {
     "score": 53,
     "parts": {
@@ -10161,6 +10247,10 @@
     "close": 17,
     "base": 111
    },
+   "apt": [
+    101411210,
+    15
+   ],
    "nearby": [
     {
      "name": "염리동",
@@ -10820,6 +10910,10 @@
     126.90448
    ],
    "sales": null,
+   "apt": [
+    45913681,
+    46
+   ],
    "fervor": {
     "score": 49,
     "parts": {
@@ -11525,7 +11619,11 @@
      "science": 0
     }
    },
-   "sales": null
+   "sales": null,
+   "apt": [
+    62637564,
+    57
+   ]
   },
   {
    "name": "합정동",
@@ -11745,6 +11843,10 @@
     "close": 2,
     "base": 47
    },
+   "apt": [
+    50520014,
+    21
+   ],
    "fervor": {
     "score": 45,
     "parts": {
@@ -12354,7 +12456,11 @@
      "science": 0
     }
    },
-   "sales": null
+   "sales": null,
+   "apt": [
+    88002506,
+    22
+   ]
   }
  ],
  "seoulStoreRate": {

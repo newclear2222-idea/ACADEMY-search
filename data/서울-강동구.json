@@ -10,12 +10,13 @@
   "수강료: 학원이 교육청에 등록한 1인당 교습비",
   "대표 학원: 교육청에 등록한 정원이 큰 순서",
   "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)",
-  "학원 개업·폐업: 서울시 상권분석서비스 점포 (일반교습학원·외국어학원)"
+  "학원 개업·폐업: 서울시 상권분석서비스 점포 (일반교습학원·외국어학원)",
+  "아파트 가격: 국토교통부 아파트 매매 실거래가"
  ],
  "salesPeriod": "2026년 2분기",
  "storePeriod": "2025년 3분기~2026년 2분기",
  "pastYear": 2024,
- "aptPeriod": "",
+ "aptPeriod": "최근 6개월 매매",
  "unmatchedAcademies": 0,
  "fees": {
   "all": {
@@ -424,7 +425,13 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "고덕강일지구 3단지 토지임대부(본청약)",
+     "households": 1305,
+     "moveIn": "2027-05"
+    }
+   ],
    "studentsPast": {
     "elem": 2044,
     "middle": 1642,
@@ -457,6 +464,10 @@
     "close": 29,
     "base": 160
    },
+   "apt": [
+    60479782,
+    126
+   ],
    "fervor": {
     "score": 58,
     "parts": {
@@ -1143,6 +1154,10 @@
     "close": 16,
     "base": 168
    },
+   "apt": [
+    85024183,
+    197
+   ],
    "fervor": {
     "score": 36,
     "parts": {
@@ -1866,7 +1881,13 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "디 아테온(THE ATHEON)",
+     "households": 64,
+     "moveIn": "2026-07"
+    }
+   ],
    "studentsPast": {
     "elem": 1807,
     "middle": 494,
@@ -1899,6 +1920,10 @@
     "close": 9,
     "base": 116
    },
+   "apt": [
+    33895497,
+    251
+   ],
    "fervor": {
     "score": 60,
     "parts": {
@@ -2600,7 +2625,13 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "올림픽파크 서한포레스트",
+     "households": 109,
+     "moveIn": "2027-12"
+    }
+   ],
    "studentsPast": {
     "elem": 1076,
     "middle": 799,
@@ -2633,6 +2664,10 @@
     "close": 11,
     "base": 90
    },
+   "apt": [
+    80098848,
+    253
+   ],
    "fervor": {
     "score": 46,
     "parts": {
@@ -3411,6 +3446,10 @@
     "close": 32,
     "base": 427
    },
+   "apt": [
+    69127099,
+    159
+   ],
    "fervor": {
     "score": 95,
     "parts": {
@@ -4347,7 +4386,13 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "고덕강일 대성베르힐",
+     "households": 613,
+     "moveIn": "2027-10"
+    }
+   ],
    "studentsPast": {
     "elem": 3971,
     "middle": 1249,
@@ -4380,6 +4425,10 @@
     "close": 8,
     "base": 76
    },
+   "apt": [
+    74350286,
+    188
+   ],
    "fervor": {
     "score": 38,
     "parts": {
@@ -5149,6 +5198,10 @@
     "close": 11,
     "base": 204
    },
+   "apt": [
+    39214531,
+    198
+   ],
    "fervor": {
     "score": 96,
     "parts": {
@@ -5943,6 +5996,10 @@
     "close": 18,
     "base": 207
    },
+   "apt": [
+    67359255,
+    211
+   ],
    "fervor": {
     "score": 80,
     "parts": {
@@ -6687,7 +6744,23 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "더샵 강동센트럴시티",
+     "households": 168,
+     "moveIn": "2025-12"
+    },
+    {
+     "name": "e편한세상 강동 프레스티지원",
+     "households": 263,
+     "moveIn": "2026-01"
+    },
+    {
+     "name": "VIORR(비오르)",
+     "households": 53,
+     "moveIn": "2026-05"
+    }
+   ],
    "studentsPast": {
     "elem": 1383,
     "middle": 1851,
@@ -6720,6 +6793,10 @@
     "close": 12,
     "base": 144
    },
+   "apt": [
+    40247216,
+    201
+   ],
    "fervor": {
     "score": 58,
     "parts": {

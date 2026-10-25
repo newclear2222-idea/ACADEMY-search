@@ -10,12 +10,13 @@
   "수강료: 학원이 교육청에 등록한 1인당 교습비",
   "대표 학원: 교육청에 등록한 정원이 큰 순서",
   "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)",
-  "학원 개업·폐업: 서울시 상권분석서비스 점포 (일반교습학원·외국어학원)"
+  "학원 개업·폐업: 서울시 상권분석서비스 점포 (일반교습학원·외국어학원)",
+  "아파트 가격: 국토교통부 아파트 매매 실거래가"
  ],
  "salesPeriod": "2026년 2분기",
  "storePeriod": "2025년 3분기~2026년 2분기",
  "pastYear": 2024,
- "aptPeriod": "",
+ "aptPeriod": "최근 6개월 매매",
  "unmatchedAcademies": 47,
  "fees": {
   "all": {
@@ -378,7 +379,23 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "라클라체자이드파인",
+     "households": 369,
+     "moveIn": "2028-12"
+    },
+    {
+     "name": "동작구수방사 공공분양주택(본청약)",
+     "households": 263,
+     "moveIn": "2028-12"
+    },
+    {
+     "name": "드파인 아르티아",
+     "households": 171,
+     "moveIn": "2029-11"
+    }
+   ],
    "studentsPast": {
     "elem": 289,
     "middle": 0,
@@ -411,6 +428,10 @@
     "close": 16,
     "base": 146
    },
+   "apt": [
+    63142145,
+    160
+   ],
    "nearby": [
     {
      "name": "본동",
@@ -1156,7 +1177,13 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "아크로 리버스카이",
+     "households": 285,
+     "moveIn": "2029-08"
+    }
+   ],
    "studentsPast": {
     "elem": 2197,
     "middle": 1467,
@@ -1189,6 +1216,10 @@
     "close": 9,
     "base": 172
    },
+   "apt": [
+    58081713,
+    117
+   ],
    "fervor": {
     "score": 59,
     "parts": {
@@ -1806,6 +1837,10 @@
     126.97942
    ],
    "sales": null,
+   "apt": [
+    60317443,
+    17
+   ],
    "fervor": {
     "score": 41,
     "parts": {
@@ -2489,6 +2524,10 @@
     126.95234
    ],
    "sales": null,
+   "apt": [
+    63975769,
+    52
+   ],
    "fervor": {
     "score": 45,
     "parts": {
@@ -3242,7 +3281,13 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "힐스테이트 이수역센트럴",
+     "households": 170,
+     "moveIn": "2028-04"
+    }
+   ],
    "studentsPast": {
     "elem": 2985,
     "middle": 1215,
@@ -3275,6 +3320,10 @@
     "close": 21,
     "base": 226
    },
+   "apt": [
+    64581402,
+    338
+   ],
    "fervor": {
     "score": 60,
     "parts": {
@@ -4057,7 +4106,13 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "동작 센트럴 동문 디 이스트",
+     "households": 72,
+     "moveIn": "2030-02"
+    }
+   ],
    "studentsPast": {
     "elem": 3416,
     "middle": 1765,
@@ -4090,6 +4145,10 @@
     "close": 28,
     "base": 265
    },
+   "apt": [
+    62256571,
+    270
+   ],
    "fervor": {
     "score": 56,
     "parts": {
@@ -4851,7 +4910,13 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "동작 보라매역 프리센트",
+     "households": 91,
+     "moveIn": "2026-10"
+    }
+   ],
    "studentsPast": {
     "elem": 1600,
     "middle": 1050,
@@ -4884,6 +4949,10 @@
     "close": 9,
     "base": 98
    },
+   "apt": [
+    46907201,
+    186
+   ],
    "fervor": {
     "score": 28,
     "parts": {
@@ -5747,7 +5816,13 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "써밋 더힐",
+     "households": 432,
+     "moveIn": "2030-06"
+    }
+   ],
    "studentsPast": {
     "elem": 2093,
     "middle": 636,
@@ -5780,6 +5855,10 @@
     "close": 6,
     "base": 84
    },
+   "apt": [
+    91084822,
+    111
+   ],
    "fervor": {
     "score": 24,
     "parts": {

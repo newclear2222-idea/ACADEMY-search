@@ -10,12 +10,13 @@
   "수강료: 학원이 교육청에 등록한 1인당 교습비",
   "대표 학원: 교육청에 등록한 정원이 큰 순서",
   "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)",
-  "학원 개업·폐업: 서울시 상권분석서비스 점포 (일반교습학원·외국어학원)"
+  "학원 개업·폐업: 서울시 상권분석서비스 점포 (일반교습학원·외국어학원)",
+  "아파트 가격: 국토교통부 아파트 매매 실거래가"
  ],
  "salesPeriod": "2026년 2분기",
  "storePeriod": "2025년 3분기~2026년 2분기",
  "pastYear": 2024,
- "aptPeriod": "",
+ "aptPeriod": "최근 6개월 매매",
  "unmatchedAcademies": 17,
  "fees": {
   "all": {
@@ -259,6 +260,10 @@
     "close": 20,
     "base": 162
    },
+   "apt": [
+    45926066,
+    31
+   ],
    "nearby": [
     {
      "name": "영등포동7가",
@@ -814,7 +819,11 @@
      "science": 0
     }
    },
-   "sales": null
+   "sales": null,
+   "apt": [
+    59595276,
+    18
+   ]
   },
   {
    "name": "당산동2가",
@@ -977,7 +986,11 @@
      "science": 0
     }
    },
-   "sales": null
+   "sales": null,
+   "apt": [
+    43399768,
+    48
+   ]
   },
   {
    "name": "당산동3가",
@@ -1133,7 +1146,11 @@
      "science": 0
     }
    },
-   "sales": null
+   "sales": null,
+   "apt": [
+    59512462,
+    32
+   ]
   },
   {
    "name": "당산동4가",
@@ -1377,7 +1394,13 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "e편한세상 당산 리버파크",
+     "households": 111,
+     "moveIn": "2028-03"
+    }
+   ],
    "studentsPast": {
     "elem": 0,
     "middle": 0,
@@ -1400,7 +1423,11 @@
      "science": 1
     }
    },
-   "sales": null
+   "sales": null,
+   "apt": [
+    63874490,
+    59
+   ]
   },
   {
    "name": "당산동5가",
@@ -1735,6 +1762,10 @@
     126.89914
    ],
    "sales": null,
+   "apt": [
+    70809698,
+    66
+   ],
    "fervor": {
     "score": 60,
     "parts": {
@@ -3037,6 +3068,10 @@
     "close": 10,
     "base": 61
    },
+   "apt": [
+    34855451,
+    260
+   ],
    "fervor": {
     "score": 29,
     "parts": {
@@ -3728,6 +3763,10 @@
     "close": 4,
     "base": 24
    },
+   "apt": [
+    45440154,
+    20
+   ],
    "nearby": [
     {
      "name": "영등포동",
@@ -4854,7 +4893,11 @@
      "science": 0
     }
    },
-   "sales": null
+   "sales": null,
+   "apt": [
+    64398409,
+    12
+   ]
   },
   {
    "name": "문래동3가",
@@ -5171,6 +5214,10 @@
     "close": 4,
     "base": 47
    },
+   "apt": [
+    59299032,
+    54
+   ],
    "fervor": {
     "score": 57,
     "parts": {
@@ -5769,7 +5816,13 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "더샵 프리엘라",
+     "households": 138,
+     "moveIn": "2029-03"
+    }
+   ],
    "studentsPast": {
     "elem": 0,
     "middle": 0,
@@ -5792,7 +5845,11 @@
      "science": 0
     }
    },
-   "sales": null
+   "sales": null,
+   "apt": [
+    49068523,
+    33
+   ]
   },
   {
    "name": "문래동6가",
@@ -6085,6 +6142,10 @@
     "close": 4,
     "base": 49
    },
+   "apt": [
+    53689981,
+    40
+   ],
    "fervor": {
     "score": 28,
     "parts": {
@@ -6899,7 +6960,38 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "대방역 여의도 더로드캐슬",
+     "households": 46,
+     "moveIn": "2025-10"
+    },
+    {
+     "name": "서울대방 신혼희망타운(공공분양) 잔여세대 입주자모집공고",
+     "households": 2,
+     "moveIn": "2027-06"
+    },
+    {
+     "name": "서울대방 신혼희망타운 공공분양(본청약)",
+     "households": 122,
+     "moveIn": "2027-06"
+    },
+    {
+     "name": "더샵 신길센트럴시티(조합원 취소분)",
+     "households": 67,
+     "moveIn": "2029-07"
+    },
+    {
+     "name": "더샵 신길센트럴시티",
+     "households": 477,
+     "moveIn": "2029-07"
+    },
+    {
+     "name": "써밋 클라비온",
+     "households": 176,
+     "moveIn": "2030-01"
+    }
+   ],
    "studentsPast": {
     "elem": 4124,
     "middle": 1332,
@@ -6932,6 +7024,10 @@
     "close": 18,
     "base": 215
    },
+   "apt": [
+    64781477,
+    362
+   ],
    "fervor": {
     "score": 50,
     "parts": {
@@ -8107,7 +8203,13 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "영등포자이 디그니티",
+     "households": 185,
+     "moveIn": "2026-03"
+    }
+   ],
    "studentsPast": {
     "elem": 0,
     "middle": 0,
@@ -8130,7 +8232,11 @@
      "science": 0
     }
    },
-   "sales": null
+   "sales": null,
+   "apt": [
+    62457739,
+    15
+   ]
   },
   {
    "name": "양평동2가",
@@ -8318,6 +8424,10 @@
     126.88293
    ],
    "sales": null,
+   "apt": [
+    53542842,
+    36
+   ],
    "nearby": [
     {
      "name": "문래동6가",
@@ -8994,6 +9104,10 @@
     126.89363
    ],
    "sales": null,
+   "apt": [
+    53478146,
+    62
+   ],
    "fervor": {
     "score": 42,
     "parts": {
@@ -9583,6 +9697,10 @@
     126.89612
    ],
    "sales": null,
+   "apt": [
+    50449731,
+    9
+   ],
    "nearby": [
     {
      "name": "양평동3가",
@@ -10232,7 +10350,11 @@
      "science": 0
     }
    },
-   "sales": null
+   "sales": null,
+   "apt": [
+    73903101,
+    28
+   ]
   },
   {
    "name": "여의도동",
@@ -10566,6 +10688,10 @@
     "close": 9,
     "base": 129
    },
+   "apt": [
+    91518178,
+    120
+   ],
    "fervor": {
     "score": 70,
     "parts": {
@@ -11236,6 +11362,10 @@
     "close": 14,
     "base": 78
    },
+   "apt": [
+    65471756,
+    50
+   ],
    "fervor": {
     "score": 41,
     "parts": {
@@ -11790,7 +11920,13 @@
      "subjects": []
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "리버센트 푸르지오 위브",
+     "households": 175,
+     "moveIn": "2029-01"
+    }
+   ],
    "studentsPast": {
     "elem": 0,
     "middle": 0,
@@ -11813,7 +11949,11 @@
      "science": 0
     }
    },
-   "sales": null
+   "sales": null,
+   "apt": [
+    36212130,
+    12
+   ]
   },
   {
    "name": "영등포동6가",
@@ -12152,6 +12292,10 @@
     126.90393
    ],
    "sales": null,
+   "apt": [
+    72998337,
+    33
+   ],
    "nearby": [
     {
      "name": "당산동",
@@ -12769,7 +12913,11 @@
      "science": 0
     }
    },
-   "sales": null
+   "sales": null,
+   "apt": [
+    70021334,
+    17
+   ]
   }
  ],
  "seoulStoreRate": {

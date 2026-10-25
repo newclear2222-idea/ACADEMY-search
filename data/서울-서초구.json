@@ -10,12 +10,13 @@
   "수강료: 학원이 교육청에 등록한 1인당 교습비",
   "대표 학원: 교육청에 등록한 정원이 큰 순서",
   "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)",
-  "학원 개업·폐업: 서울시 상권분석서비스 점포 (일반교습학원·외국어학원)"
+  "학원 개업·폐업: 서울시 상권분석서비스 점포 (일반교습학원·외국어학원)",
+  "아파트 가격: 국토교통부 아파트 매매 실거래가"
  ],
  "salesPeriod": "2026년 2분기",
  "storePeriod": "2025년 3분기~2026년 2분기",
  "pastYear": 2024,
- "aptPeriod": "",
+ "aptPeriod": "최근 6개월 매매",
  "unmatchedAcademies": 7,
  "fees": {
   "all": {
@@ -342,6 +343,10 @@
     "close": 2,
     "base": 43
    },
+   "apt": [
+    62685843,
+    19
+   ],
    "fervor": {
     "score": 34,
     "parts": {
@@ -1026,7 +1031,13 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "반포 래미안 트리니원",
+     "households": 506,
+     "moveIn": "2026-08"
+    }
+   ],
    "studentsPast": {
     "elem": 6450,
     "middle": 3418,
@@ -1059,6 +1070,10 @@
     "close": 57,
     "base": 635
    },
+   "apt": [
+    169369850,
+    225
+   ],
    "fervor": {
     "score": 82,
     "parts": {
@@ -1876,7 +1891,23 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "래미안 원페를라",
+     "households": 482,
+     "moveIn": "2025-11"
+    },
+    {
+     "name": "디에이치 방배",
+     "households": 1244,
+     "moveIn": "2026-09"
+    },
+    {
+     "name": "아크로 리츠카운티",
+     "households": 140,
+     "moveIn": "2027-10"
+    }
+   ],
    "studentsPast": {
     "elem": 3636,
     "middle": 1514,
@@ -1909,6 +1940,10 @@
     "close": 31,
     "base": 395
    },
+   "apt": [
+    66416270,
+    244
+   ],
    "fervor": {
     "score": 73,
     "parts": {
@@ -2728,7 +2763,13 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "아크로 드 서초",
+     "households": 56,
+     "moveIn": "2029-02"
+    }
+   ],
    "studentsPast": {
     "elem": 5257,
     "middle": 2774,
@@ -2761,6 +2802,10 @@
     "close": 74,
     "base": 628
    },
+   "apt": [
+    77050669,
+    385
+   ],
    "fervor": {
     "score": 78,
     "parts": {
@@ -3309,6 +3354,10 @@
     127.05444
    ],
    "sales": null,
+   "apt": [
+    77828958,
+    16
+   ],
    "nearby": [
     {
      "name": "내곡동",
@@ -3874,6 +3923,10 @@
     "close": 22,
     "base": 203
    },
+   "apt": [
+    63114266,
+    61
+   ],
    "fervor": {
     "score": 76,
     "parts": {
@@ -4524,6 +4577,10 @@
     127.02321
    ],
    "sales": null,
+   "apt": [
+    78625759,
+    70
+   ],
    "fervor": {
     "score": 77,
     "parts": {
@@ -5220,7 +5277,13 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "오티에르 반포",
+     "households": 86,
+     "moveIn": "2026-07"
+    }
+   ],
    "studentsPast": {
     "elem": 1141,
     "middle": 1861,
@@ -5253,6 +5316,10 @@
     "close": 15,
     "base": 107
    },
+   "apt": [
+    155712906,
+    206
+   ],
    "fervor": {
     "score": 90,
     "parts": {

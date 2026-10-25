@@ -8,12 +8,13 @@
   "학원: 나이스 교육정보 개방포털 학원교습소정보",
   "학생 수: 학교알리미 학년별·학급별 학생수",
   "수강료: 학원이 교육청에 등록한 1인당 교습비",
-  "대표 학원: 교육청에 등록한 정원이 큰 순서"
+  "대표 학원: 교육청에 등록한 정원이 큰 순서",
+  "아파트 가격: 국토교통부 아파트 매매 실거래가"
  ],
  "salesPeriod": "",
  "storePeriod": "",
  "pastYear": 2024,
- "aptPeriod": "",
+ "aptPeriod": "최근 6개월 매매",
  "unmatchedAcademies": 0,
  "fees": {
   "all": {
@@ -1514,7 +1515,13 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "쌍용 더 플래티넘 한강",
+     "households": 333,
+     "moveIn": "2029-05"
+    }
+   ],
    "studentsPast": {
     "elem": 419,
     "middle": 239,
@@ -1896,7 +1903,18 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "양평 하늘채 센트로힐스",
+     "households": 200,
+     "moveIn": "2027-03"
+    },
+    {
+     "name": "효성해링턴 플레이스 양평",
+     "households": 455,
+     "moveIn": "2028-04"
+    }
+   ],
    "studentsPast": {
     "elem": 1779,
     "middle": 1491,

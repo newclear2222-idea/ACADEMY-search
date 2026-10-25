@@ -8,12 +8,13 @@
   "학원: 나이스 교육정보 개방포털 학원교습소정보",
   "학생 수: 학교알리미 학년별·학급별 학생수",
   "수강료: 학원이 교육청에 등록한 1인당 교습비",
-  "대표 학원: 교육청에 등록한 정원이 큰 순서"
+  "대표 학원: 교육청에 등록한 정원이 큰 순서",
+  "아파트 가격: 국토교통부 아파트 매매 실거래가"
  ],
  "salesPeriod": "",
  "storePeriod": "",
  "pastYear": 2024,
- "aptPeriod": "",
+ "aptPeriod": "최근 6개월 매매",
  "unmatchedAcademies": 3,
  "fees": {
   "all": {
@@ -761,7 +762,13 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "여주역자이 헤리티지",
+     "households": 769,
+     "moveIn": "2027-06"
+    }
+   ],
    "studentsPast": {
     "elem": 989,
     "middle": 737,
@@ -4176,7 +4183,18 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "여주역 로제비앙 더센텀",
+     "households": 744,
+     "moveIn": "2028-04"
+    },
+    {
+     "name": "더샵 여주역더퍼스트",
+     "households": 696,
+     "moveIn": "2029-08"
+    }
+   ],
    "studentsPast": {
     "elem": 0,
     "middle": 0,

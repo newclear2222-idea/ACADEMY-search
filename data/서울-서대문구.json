@@ -10,12 +10,13 @@
   "수강료: 학원이 교육청에 등록한 1인당 교습비",
   "대표 학원: 교육청에 등록한 정원이 큰 순서",
   "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)",
-  "학원 개업·폐업: 서울시 상권분석서비스 점포 (일반교습학원·외국어학원)"
+  "학원 개업·폐업: 서울시 상권분석서비스 점포 (일반교습학원·외국어학원)",
+  "아파트 가격: 국토교통부 아파트 매매 실거래가"
  ],
  "salesPeriod": "2026년 2분기",
  "storePeriod": "2025년 3분기~2026년 2분기",
  "pastYear": 2024,
- "aptPeriod": "",
+ "aptPeriod": "최근 6개월 매매",
  "unmatchedAcademies": 16,
  "fees": {
   "all": {
@@ -414,7 +415,13 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "DMC 가재울 아이파크",
+     "households": 92,
+     "moveIn": "2025-11"
+    }
+   ],
    "studentsPast": {
     "elem": 3210,
     "middle": 760,
@@ -447,6 +454,10 @@
     "close": 14,
     "base": 141
    },
+   "apt": [
+    57139764,
+    212
+   ],
    "fervor": {
     "score": 60,
     "parts": {
@@ -1066,7 +1077,11 @@
      "science": 0
     }
    },
-   "sales": null
+   "sales": null,
+   "apt": [
+    54120770,
+    15
+   ]
   },
   {
    "name": "대신동",
@@ -1838,6 +1853,10 @@
     "close": 0,
     "base": 4
    },
+   "apt": [
+    57488465,
+    29
+   ],
    "nearby": [
     {
      "name": "북아현동",
@@ -3166,6 +3185,10 @@
     "close": 19,
     "base": 140
    },
+   "apt": [
+    41458690,
+    167
+   ],
    "fervor": {
     "score": 79,
     "parts": {
@@ -3948,6 +3971,10 @@
     "close": 2,
     "base": 42
    },
+   "apt": [
+    79190965,
+    77
+   ],
    "fervor": {
     "score": 29,
     "parts": {
@@ -4678,7 +4705,13 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "드파인 연희",
+     "households": 332,
+     "moveIn": "2029-01"
+    }
+   ],
    "studentsPast": {
     "elem": 636,
     "middle": 845,
@@ -4711,6 +4744,10 @@
     "close": 10,
     "base": 90
    },
+   "apt": [
+    38819820,
+    84
+   ],
    "fervor": {
     "score": 70,
     "parts": {
@@ -5323,7 +5360,13 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "경희궁 유보라",
+     "households": 108,
+     "moveIn": "2026-07"
+    }
+   ],
    "studentsPast": {
     "elem": 0,
     "middle": 0,
@@ -5346,7 +5389,11 @@
      "science": 0
     }
    },
-   "sales": null
+   "sales": null,
+   "apt": [
+    58111209,
+    18
+   ]
   },
   {
    "name": "우측.홍동",
@@ -5671,6 +5718,10 @@
     "close": 0,
     "base": 5
    },
+   "apt": [
+    33038619,
+    4
+   ],
    "nearby": [
     {
      "name": "노고산동",
@@ -6276,6 +6327,10 @@
     "close": 6,
     "base": 33
    },
+   "apt": [
+    66367439,
+    27
+   ],
    "fervor": {
     "score": 20,
     "parts": {
@@ -7493,6 +7548,10 @@
     126.95251
    ],
    "sales": null,
+   "apt": [
+    43303445,
+    31
+   ],
    "nearby": [
     {
      "name": "무악동",
@@ -8237,6 +8296,10 @@
     "close": 10,
     "base": 127
    },
+   "apt": [
+    41831445,
+    364
+   ],
    "fervor": {
     "score": 70,
     "parts": {
@@ -9028,7 +9091,13 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "쌍용 더 플래티넘 서대문",
+     "households": 62,
+     "moveIn": "2030-01"
+    }
+   ],
    "studentsPast": {
     "elem": 2041,
     "middle": 1462,
@@ -9061,6 +9130,10 @@
     "close": 12,
     "base": 134
    },
+   "apt": [
+    33970446,
+    251
+   ],
    "fervor": {
     "score": 56,
     "parts": {

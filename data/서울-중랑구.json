@@ -10,12 +10,13 @@
   "수강료: 학원이 교육청에 등록한 1인당 교습비",
   "대표 학원: 교육청에 등록한 정원이 큰 순서",
   "학원 매출: 서울시 상권분석서비스 추정매출 (카드 결제 기반)",
-  "학원 개업·폐업: 서울시 상권분석서비스 점포 (일반교습학원·외국어학원)"
+  "학원 개업·폐업: 서울시 상권분석서비스 점포 (일반교습학원·외국어학원)",
+  "아파트 가격: 국토교통부 아파트 매매 실거래가"
  ],
  "salesPeriod": "2026년 2분기",
  "storePeriod": "2025년 3분기~2026년 2분기",
  "pastYear": 2024,
- "aptPeriod": "",
+ "aptPeriod": "최근 6개월 매매",
  "unmatchedAcademies": 3,
  "fees": {
   "all": {
@@ -454,7 +455,13 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "상봉 센트럴 아이파크",
+     "households": 242,
+     "moveIn": "2030-03"
+    }
+   ],
    "studentsPast": {
     "elem": 2075,
     "middle": 1480,
@@ -487,6 +494,10 @@
     "close": 6,
     "base": 102
    },
+   "apt": [
+    27141593,
+    91
+   ],
    "fervor": {
     "score": 8,
     "parts": {
@@ -1262,6 +1273,10 @@
     "close": 17,
     "base": 174
    },
+   "apt": [
+    33057850,
+    402
+   ],
    "fervor": {
     "score": 27,
     "parts": {
@@ -2014,6 +2029,10 @@
     "close": 9,
     "base": 101
    },
+   "apt": [
+    42152078,
+    493
+   ],
    "fervor": {
     "score": 16,
     "parts": {
@@ -2715,7 +2734,13 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "더샵 퍼스트월드",
+     "households": 800,
+     "moveIn": "2029-08"
+    }
+   ],
    "studentsPast": {
     "elem": 545,
     "middle": 1347,
@@ -2748,6 +2773,10 @@
     "close": 0,
     "base": 60
    },
+   "apt": [
+    35399258,
+    194
+   ],
    "fervor": {
     "score": 17,
     "parts": {
@@ -3540,6 +3569,10 @@
     "close": 8,
     "base": 185
    },
+   "apt": [
+    30470782,
+    457
+   ],
    "fervor": {
     "score": 70,
     "parts": {
@@ -4290,7 +4323,13 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "리버센 SK VIEW 롯데캐슬",
+     "households": 501,
+     "moveIn": "2025-11"
+    }
+   ],
    "studentsPast": {
     "elem": 582,
     "middle": 767,
@@ -4323,6 +4362,10 @@
     "close": 4,
     "base": 62
    },
+   "apt": [
+    38643608,
+    108
+   ],
    "fervor": {
     "score": 29,
     "parts": {

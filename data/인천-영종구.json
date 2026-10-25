@@ -8,12 +8,13 @@
   "학원: 나이스 교육정보 개방포털 학원교습소정보",
   "학생 수: 학교알리미 학년별·학급별 학생수",
   "수강료: 학원이 교육청에 등록한 1인당 교습비",
-  "대표 학원: 교육청에 등록한 정원이 큰 순서"
+  "대표 학원: 교육청에 등록한 정원이 큰 순서",
+  "아파트 가격: 국토교통부 아파트 매매 실거래가"
  ],
  "salesPeriod": "",
  "storePeriod": "",
  "pastYear": 2024,
- "aptPeriod": "",
+ "aptPeriod": "최근 6개월 매매",
  "unmatchedAcademies": 0,
  "fees": {
   "all": {
@@ -554,7 +555,28 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "영종 오션파크 모아엘가 그랑데",
+     "households": 560,
+     "moveIn": "2026-04"
+    },
+    {
+     "name": "영종 진아레히",
+     "households": 547,
+     "moveIn": "2027-05"
+    },
+    {
+     "name": "영종국제도시 신일 비아프 크레스트(2단지)",
+     "households": 516,
+     "moveIn": "2028-08"
+    },
+    {
+     "name": "영종국제도시 신일 비아프 크레스트(1단지)",
+     "households": 444,
+     "moveIn": "2028-08"
+    }
+   ],
    "studentsPast": {
     "elem": 1594,
     "middle": 1764,
@@ -1567,7 +1589,23 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "인천 영종국제도시 RC4-1,2BL 주상복합 (사전청약)",
+     "households": 868,
+     "moveIn": "2027-02"
+    },
+    {
+     "name": "영종하늘도시 대라수 어썸(A50BL)",
+     "households": 297,
+     "moveIn": "2029-06"
+    },
+    {
+     "name": "인천영종국제도시 디에트르 라 메르Ⅰ(RC4-1,2BL)(본청약)",
+     "households": 903,
+     "moveIn": "2029-10"
+    }
+   ],
    "studentsPast": {
     "elem": 4103,
     "middle": 988,

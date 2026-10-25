@@ -8,12 +8,13 @@
   "학원: 나이스 교육정보 개방포털 학원교습소정보",
   "학생 수: 학교알리미 학년별·학급별 학생수",
   "수강료: 학원이 교육청에 등록한 1인당 교습비",
-  "대표 학원: 교육청에 등록한 정원이 큰 순서"
+  "대표 학원: 교육청에 등록한 정원이 큰 순서",
+  "아파트 가격: 국토교통부 아파트 매매 실거래가"
  ],
  "salesPeriod": "",
  "storePeriod": "",
  "pastYear": 2024,
- "aptPeriod": "",
+ "aptPeriod": "최근 6개월 매매",
  "unmatchedAcademies": 0,
  "fees": {
   "all": {
@@ -358,7 +359,13 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "자라섬 수자인 리버페스타",
+     "households": 381,
+     "moveIn": "2027-09"
+    }
+   ],
    "studentsPast": {
     "elem": 841,
     "middle": 528,
@@ -959,7 +966,13 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "썬밸리 오드카운티 가평설악",
+     "households": 1039,
+     "moveIn": "2028-10"
+    }
+   ],
    "studentsPast": {
     "elem": 316,
     "middle": 488,
@@ -1470,7 +1483,13 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "청평 수자인 더퍼스트",
+     "households": 551,
+     "moveIn": "2027-09"
+    }
+   ],
    "studentsPast": {
     "elem": 390,
     "middle": 197,
