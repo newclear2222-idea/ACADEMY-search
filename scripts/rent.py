@@ -55,6 +55,39 @@ def all_rows(service, key, **params):
         page += 1
 
 
+UPPER = ("2층", "3층", "4층", "5층", "6층이상")
+
+
+def attach_upper(out, floor_rows):
+    """상권마다 2층 이상 임대료(층별 단순 평균)를 붙입니다. 지하와 1층은 뺍니다.
+
+    2층 이상 값이 없는 상권은 위 단계(권역·시도)의 '2층 이상 ÷ 1층' 비율을 그 상권 1층 값에 곱합니다.
+    """
+    for kind, rows in floor_rows.items():
+        floors = {}
+        for r in rows:
+            if r.get("ITM_NM") == "임대료" and r.get("DTA_VAL") is not None:
+                floors.setdefault(r.get("GRP_FULLNM"), {})[r.get("CLS_NM")] = float(r["DTA_VAL"])
+        upper = {g: sum(v[f] for f in UPPER if f in v) / n for g, v in floors.items() if (n := sum(f in v for f in UPPER))}
+        ratio = {g: upper[g] / v["1층"] for g, v in floors.items() if g in upper and v.get("1층")}
+        table = out["tables"].get(kind)
+        if not table:
+            continue
+        filled = borrowed = 0
+        for row in table["rows"]:
+            g = row["full"]
+            if g in upper:
+                row["upper"], row["upperFloors"] = round(upper[g], 2), [f for f in UPPER if f in floors[g]]
+                filled += 1
+                continue
+            parts = g.split(">")
+            parent = next((">".join(parts[:i]) for i in range(len(parts) - 1, 0, -1) if ">".join(parts[:i]) in ratio), None)
+            if parent:
+                row["upper"], row["upperFrom"] = round(row["value"] * ratio[parent], 2), parent
+                borrowed += 1
+        print(f"    {kind}: 2층 이상 값 {filled}곳, 위 단계 비율로 어림 {borrowed}곳, 없음 {len(table['rows']) - filled - borrowed}곳")
+
+
 def main():
     key = (os.environ.get("REB_API_KEY") or "").strip()
     if not key:
@@ -89,25 +122,24 @@ def main():
                                "unit": rows[0].get("UI_NM"), "rows": keep}
         print(f"    서울·경기·인천 {len(keep)}곳")
     # 학원은 1층을 거의 쓰지 않아, 층별 임대료 표에서 2층 이상 값을 따로 받습니다.
-    out["floors"] = {}
+    # 지역별 임대료 표의 값은 1층 임대료와 같습니다(2026년 2분기 서울 중대형 56.71 = 층별 표 1층 56.7).
+    floor_rows, out["floors"] = {}, {}
     for kind, word in WANT.items():
-        cands = [t for t in tables if "층별임대료" in (t.get("STATBL_NM") or "") and word in t["STATBL_NM"]]
+        cands = [t for t in tables if "층별임대료" in (t.get("STATBL_NM") or "") and word in t["STATBL_NM"] and "~)" in t["STATBL_NM"]]
         if not cands:
             print(f"  {word} 층별 임대료 통계표를 찾지 못했습니다.")
             continue
-        first = lambda x: int((re.search(r"\((\d{4})", x["STATBL_NM"]) or [0, 0])[1])
-        t = max(cands, key=first)
-        print(f"  층별: {t['STATBL_NM']} ({t['STATBL_ID']}), 후보 {[c['STATBL_NM'] for c in cands]}")
+        start = lambda x: re.search(r"\((\d{4})년(\d)?", x["STATBL_NM"])
+        t = max(cands, key=lambda x: (int(start(x).group(1)), int(start(x).group(2) or 0)) if start(x) else (0, 0))
         rows = all_rows("SttsApiTblData", key, STATBL_ID=t["STATBL_ID"], DTACYCLE_CD=t.get("DTACYCLE_CD") or "QY")
         if not rows:
             continue
         latest = max(r["WRTTIME_IDTFR_ID"] for r in rows)
-        rows = [r for r in rows if r["WRTTIME_IDTFR_ID"] == latest and r.get("DTA_VAL") is not None]
-        print(f"    {latest}, {len(rows)}줄. 예시 줄: {rows[0]}")
-        print(f"    분류: {sorted({r.get('CLS_FULLNM') for r in rows})[:40]}")
-        print(f"    항목: {sorted({r.get('ITM_FULLNM') or r.get('ITM_NM') for r in rows})[:40]}")
-        out["floors"][kind] = {"id": t["STATBL_ID"], "name": t["STATBL_NM"], "period": rows[0].get("WRTTIME_DESC") or latest,
-                               "rows": [{k: v for k, v in r.items() if k not in ("STATBL_ID", "DTACYCLE_CD", "WRTTIME_IDTFR_ID", "WRTTIME_DESC", "UI_NM")} for r in rows]}
+        rows = [r for r in rows if r["WRTTIME_IDTFR_ID"] == latest]
+        print(f"  {t['STATBL_NM']} ({t['STATBL_ID']}): {latest}, {len(rows)}줄")
+        floor_rows[kind] = rows
+        out["floors"][kind] = {"id": t["STATBL_ID"], "name": t["STATBL_NM"], "period": rows[0].get("WRTTIME_DESC") or latest}
+    attach_upper(out, floor_rows)
     if not out["tables"]:
         sys.exit("임대료 자료를 하나도 받지 못했습니다.")
     (DATA_DIR / "rent.json").write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")

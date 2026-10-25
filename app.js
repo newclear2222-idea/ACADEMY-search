@@ -494,17 +494,18 @@ function indexRent(raw) {
     idx.period ||= t.period;
     const k = idx.kinds[kind] = { dong: {}, region: {}, zone: {}, province: {} };
     for (const row of t.rows) {
-      if (row.item !== "임대료" || !(row.value > 0)) continue;
+      // 학원은 1층을 거의 쓰지 않아 2층 이상(지하·1층 제외) 평균을 씁니다. value는 1층 값입니다.
+      if (row.item !== "임대료" || !(row.upper > 0)) continue;
       const path = row.full.split(">");
-      if (path.length === 1) { k.province[path[0]] = { value: row.value, names: [path[0]] }; continue; }
-      if (path[0] === "서울" && path.length === 2) { k.zone[path[1]] = { value: row.value, names: [`서울 ${path[1]}권역`] }; continue; }
+      if (path.length === 1) { k.province[path[0]] = { value: row.upper, ground: row.value, names: [path[0]] }; continue; }
+      if (path[0] === "서울" && path.length === 2) { k.zone[path[1]] = { value: row.upper, ground: row.value, names: [`서울 ${path[1]}권역`] }; continue; }
       for (const [rid, dongs] of RENT_PLACES[path.at(-1)] || []) {
         (k.region[rid] ||= []).push(row);
         for (const d of dongs) (k.dong[`${rid}|${d}`] ||= []).push(row);
       }
     }
     for (const lv of ["dong", "region"]) for (const [key, rows] of Object.entries(k[lv])) {
-      k[lv][key] = { value: median(rows.map((r) => r.value)), names: rows.map((r) => r.full.split(">").at(-1)), count: rows.length };
+      k[lv][key] = { value: median(rows.map((r) => r.upper)), ground: median(rows.map((r) => r.value)), names: rows.map((r) => r.full.split(">").at(-1)), count: rows.length };
     }
   }
   return idx;
@@ -541,7 +542,7 @@ function rentText(area, data, m2 = 99, sizeName = "30평") {
   const r = rentFor(data.id, area.name);
   if (!r) return "";
   const kinds = r.kinds.map((k) => `${RENT_KINDS[k.kind].replace(" 상가", "")} ${rentWon(k.value)}`).join(" · ");
-  return `<div class="rank-sub">상가 임대료 ㎡당 월: ${kinds} (${rent.period}, ${rentWhere(r, shortRegion(data.region))}) → ${sizeName}(${m2}㎡)이면 <strong>월 약 ${rentMonthly(r.main.value, m2)}</strong> (${RENT_KINDS[r.main.kind]} 기준 어림. 조사 상권이 번화가라 위층·골목은 보통 더 쌉니다)</div>`;
+  return `<div class="rank-sub">2층 이상 상가 임대료 ㎡당 월: ${kinds} (${rent.period}, ${rentWhere(r, shortRegion(data.region))}, 지하·1층 제외. ${RENT_KINDS[r.main.kind].replace(" 상가", "")} 1층은 ${rentWon(r.main.ground)}) → ${sizeName}(${m2}㎡)이면 <strong>월 약 ${rentMonthly(r.main.value, m2)}</strong> (${RENT_KINDS[r.main.kind]} 기준 어림. 조사 상권이 번화가라 골목 상가는 보통 더 쌉니다)</div>`;
 }
 
 function thisMonth() {
@@ -804,7 +805,7 @@ const COLUMNS = [
     text: (r) => (r.area.apt ? bigWon(r.area.apt[0]) : "-"),
   },
   {
-    key: "rent", label: "상가 임대료(㎡당 월)", rentOnly: true,
+    key: "rent", label: "2층 이상 임대료(㎡당 월)", rentOnly: true,
     value: (r) => rentFor(r.data.id, r.area.name)?.main.value || 0,
     text: (r) => { const x = rentFor(r.data.id, r.area.name); return x ? `${rentWon(x.main.value)}${x.level === "dong" ? "" : x.level === "region" ? " (구·시)" : " (권역·시도)"}` : "-"; },
   },
