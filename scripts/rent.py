@@ -9,6 +9,7 @@ import json
 import os
 import re
 import sys
+import time
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -18,12 +19,22 @@ BASE = "https://www.reb.or.kr/r-one/openapi"
 # 통계표 이름에 이 말이 들어간 것을 찾습니다. 이름으로 찾아 ID가 바뀌어도 따라갑니다.
 WANT = {"small": "소규모 상가", "large": "중대형 상가", "complex": "집합 상가"}
 PROVINCES = ("서울", "경기", "인천")
+PAGE = 200
 
 
 def call(service, key, **params):
     query = urllib.parse.urlencode({"KEY": key, "Type": "json", **params})
-    with urllib.request.urlopen(f"{BASE}/{service}.do?{query}", timeout=60) as res:
-        data = json.loads(res.read().decode("utf-8"))
+    req = urllib.request.Request(f"{BASE}/{service}.do?{query}", headers={"User-Agent": "Mozilla/5.0 academy-search"})
+    for attempt in range(5):  # R-ONE은 가끔 응답 없이 연결을 끊어 몇 번 다시 시도합니다.
+        try:
+            with urllib.request.urlopen(req, timeout=60) as res:
+                data = json.loads(res.read().decode("utf-8"))
+            break
+        except Exception as e:
+            if attempt == 4:
+                raise
+            print(f"    {service} 다시 시도 ({e})")
+            time.sleep(2 ** attempt)
     parts = data.get(service) or []
     head = next((p["head"] for p in parts if "head" in p), [])
     result = next((h["RESULT"] for h in head if "RESULT" in h), {})
@@ -37,7 +48,7 @@ def call(service, key, **params):
 def all_rows(service, key, **params):
     out, page = [], 1
     while True:
-        rows, total = call(service, key, pIndex=page, pSize=1000, **params)
+        rows, total = call(service, key, pIndex=page, pSize=PAGE, **params)
         out += rows
         if not rows or len(out) >= total:
             return out
