@@ -913,7 +913,9 @@ const recEls = {
   budget: document.getElementById("rec-budget"),
   scope: document.getElementById("rec-scope"),
   result: document.getElementById("rec-result"),
+  report: document.getElementById("rec-report"),
 };
+let lastReport = null;
 
 function recommend(regionsData, opts) {
   const { subject, level, years, budget } = opts;
@@ -1036,11 +1038,93 @@ async function runRecommend(e) {
   if (res.skipped.hub) rules.push(`대형 학원가 ${fmt(res.skipped.hub)}곳(${opts.years < 3 ? "경력 3년 미만" : "예산 3천만원 미만"})`);
   if (res.skipped.flowIn) rules.push(`다른 동 학생이 찾아오는 학원가 ${fmt(res.skipped.flowIn)}곳(경력 3년 미만)`);
   if (res.skipped.nodata) rules.push(`학생 증감 비교 자료가 없는 동 ${fmt(res.skipped.nodata)}곳`);
+  lastReport = res.top.length ? { res, opts, scopeName, rules } : null;
+  recEls.report.hidden = true;
   recEls.result.innerHTML = res.top.length
-    ? `<p class="rec-note"><strong>${scopeName}</strong>에서 ${LEVEL_LABELS[opts.level]} 수가 학원보다 빨리 느는(덜 주는) 순서로 고르고, 학원 1곳당 학생이 많을수록 조금 더 올렸습니다. 후보 ${fmt(res.total)}곳 중 상위 ${res.top.length}곳입니다.</p>
+    ? `<button type="button" class="rec-go rec-report-open">이 결과를 보고서로 보기</button>
+       <p class="rec-note"><strong>${scopeName}</strong>에서 ${LEVEL_LABELS[opts.level]} 수가 학원보다 빨리 느는(덜 주는) 순서로 고르고, 학원 1곳당 학생이 많을수록 조금 더 올렸습니다. 후보 ${fmt(res.total)}곳 중 상위 ${res.top.length}곳입니다.</p>
        <ol class="rec-list">${res.top.map((x, i) => recItem(x, i, opts, scopeName)).join("")}</ol>
        <p class="rec-note">뺀 곳: ${rules.join(", ")}. 학원 증가율은 폐업 자료가 과목별로 없어 입시·보습 학원 전체로 봅니다. 예산은 대형 학원가를 뺄지 정하고, 상가 임대료를 그 예산에 흔한 넓이(3천만원 미만 전용 15평, 1억원 미만 전용 30평, 그 이상 전용 60평)로 어림하는 데 썼습니다. 최종 결정 전에 현장 임대료와 상가를 꼭 확인하세요.</p>`
     : `<p class="rec-note">조건에 맞는 동이 없습니다. 범위를 넓히거나 대상을 바꿔 보세요. (뺀 곳: ${rules.join(", ")})</p>`;
+}
+
+// 추천 결과를 한 편의 보고서로 엮습니다. 숫자와 근거는 추천 카드와 같은 함수에서 나옵니다.
+const YEARS_LABEL = { 0: "3년 미만", 3: "3~10년", 10: "10년 이상" };
+const BUDGET_LABEL = { small: "3천만원 미만 (교습소·공부방)", mid: "3천만~1억원 (소형 학원)", large: "1억원 이상 (중대형 학원)" };
+function rentEstimate(x, m2) {
+  const r = rentFor(x.data.id, x.area.name);
+  return r ? Math.round(r.main.value / RENT_NET[r.main.kind] * m2 / 10 / 10) * 10 : null; // 만원, 10만원 단위
+}
+function showReport() {
+  if (!lastReport) return;
+  const { res, opts, scopeName, rules } = lastReport;
+  const { subject, level, years, budget } = opts;
+  const L = LEVEL_LABELS[level], S = SUBJECT_LABELS[subject];
+  const [m2, sizeName] = RENT_SIZES[budget];
+  const today = new Date().toLocaleDateString("ko-KR", { year: "numeric", month: "long", day: "numeric" });
+  const top = res.top;
+  const name = (x) => `${shortRegion(x.data.region)} ${x.area.name}${newTown(x.data.id, x.area.name) ? `(${newTown(x.data.id, x.area.name)})` : ""}`;
+  const first = top[0];
+  const firstRent = rentEstimate(first, m2);
+  const summary = [
+    `${scopeName}에서 ${L} ${REC_MIN_STUDENTS}명 이상인 동 가운데 위험지역 등을 뺀 후보 ${fmt(res.total)}곳을 비교했고, 상위 ${top.length}곳을 골랐습니다.`,
+    `1순위는 <strong>${name(first)}</strong>입니다. ${L}이 학원보다 1년에 ${pp(first.gap).slice(1)}p ${first.gap >= 0 ? "빨리 늘고" : "덜 줄고"}, ${S} 1곳당 ${L}이 ${fmt(Math.round(first.perAcademy))}명으로 후보 평균의 ${(Math.round(first.perAcademy / res.avg * 10) / 10).toFixed(1)}배입니다${firstRent ? `. 전용 ${sizeName} 월 임대료는 약 ${fmt(firstRent)}만원으로 어림됩니다` : ""}.`,
+  ];
+  const towns = top.filter((x) => newTown(x.data.id, x.area.name)).length;
+  const boosted = top.filter((x) => x.boost).length;
+  const cautions = top.filter((x) => x.risk?.caution).length;
+  if (towns) summary.push(`상위 ${top.length}곳 중 ${towns}곳이 신도시입니다.`);
+  if (boosted) summary.push(`${boosted}곳은 곧 입주할 새 아파트의 학생 증가를 가산했습니다(어림).`);
+  if (cautions) summary.push(`${cautions}곳은 동 전체(초·중·고)로 보면 '주의' 동이라 상세 내용을 꼭 확인하세요.`);
+  const rows = top.map((x, i) => {
+    const rent = rentEstimate(x, m2);
+    const mark = x.risk?.caution ? '<span class="caution-text">주의</span>' : x.boost ? "입주 가산" : "";
+    return `<tr><td>${i + 1}</td><td>${name(x)}</td><td class="num">${pp(x.gap)}p</td><td class="num">${x.academies ? `${fmt(Math.round(x.perAcademy))}명` : "학원 없음"}</td><td class="num">${rent ? `${fmt(rent)}만원` : "-"}</td><td class="num">${x.area.apt ? bigWon(x.area.apt[0]) : "-"}</td><td>${mark}</td></tr>`;
+  }).join("");
+  const details = top.map((x, i) => {
+    const card = recItem(x, i, opts, scopeName).replace(/<button[^]*?<\/button>/, "").replace(/^\s*<li>|<\/li>\s*$/g, "");
+    return `<section class="report-dong">${card}${riskText(x.area, x.data)}</section>`;
+  }).join("");
+  recEls.report.innerHTML = `
+    <div class="report-tools"><button type="button" class="rec-go report-copy">보고서 글 복사</button><button type="button" class="report-close">닫기</button></div>
+    <header class="report-head">
+      <p class="report-kicker">학원 입지 가이드 · ${today}</p>
+      <h2>개원 입지 보고서: ${scopeName} ${L} ${S.replace(" 학원", "")}</h2>
+      <dl class="report-cond">
+        <div><dt>과목</dt><dd>${S}</dd></div><div><dt>대상</dt><dd>${L}</dd></div>
+        <div><dt>경력</dt><dd>${YEARS_LABEL[years]}</dd></div><div><dt>예산</dt><dd>${BUDGET_LABEL[budget]}</dd></div>
+        <div><dt>범위</dt><dd>${scopeName}</dd></div><div><dt>넓이 가정</dt><dd>전용 ${sizeName}(${m2}㎡)</dd></div>
+      </dl>
+    </header>
+    <h3>1. 요약</h3>
+    ${summary.map((t) => `<p>${t}</p>`).join("")}
+    <h3>2. 추천 동 한눈에 보기</h3>
+    <div class="table-wrap"><table class="report-table"><thead><tr><th>순위</th><th>동</th><th class="num">${L}−학원 증가(1년)</th><th class="num">${S.replace(" 학원", "")} 학원 1곳당 ${L}</th><th class="num">월 임대료 어림(전용 ${sizeName})</th><th class="num">아파트 평당</th><th>표시</th></tr></thead><tbody>${rows}</tbody></table></div>
+    <h3>3. 동별 근거</h3>
+    ${details}
+    <h3>4. 고른 방법</h3>
+    <p>${L} 1년 증감률(곧 입주할 새 아파트 가산 포함)에서 학원 1년 순증가율을 뺀 값을 먼저 보고, 학원 1곳당 학생이 후보 평균보다 많으면 조금 더 올렸습니다(점수 = 차이 %p + 5 × log₂(학원 1곳당 학생 ÷ 평균)).</p>
+    <p>뺀 곳: ${rules.join(", ")}.</p>
+    <p>학원 증가율은 폐업 자료가 과목별로 없어 입시·보습 학원 전체로 봅니다. 임대료는 한국부동산원 2층 이상 계약면적 ㎡당 값을 전용률로 나눠 어림했고 관리비·부가세는 빠져 있습니다.</p>
+    <h3>5. 현장에서 확인할 것</h3>
+    <ul>
+      <li>후보 동 상가 2층 이상 매물의 보증금·월세·관리비와 전용면적</li>
+      <li>주변 초·중·고등학교 위치와 학원까지 걸어서 오는 길</li>
+      <li>같은 과목 학원의 반 구성, 수강료, 원생 규모</li>
+      <li>입주 예정 단지의 실제 입주 시기와 세대 구성</li>
+    </ul>
+    <p class="rec-note">출처: ${(first.data.sources || []).join(" / ")}${rent ? ` / 한국부동산원 상업용부동산 임대동향(${rent.period})` : ""}. 공공데이터로 만든 참고 자료이며 현장 조사를 대신하지 않습니다.</p>`;
+  recEls.report.hidden = false;
+  recEls.report.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+function copyReport(btn) {
+  const text = [...recEls.report.children].filter((el) => !el.classList.contains("report-tools")).map((el) => el.innerText).join("\n\n");
+  const done = () => { btn.textContent = "복사했습니다"; setTimeout(() => { btn.textContent = "보고서 글 복사"; }, 2000); };
+  navigator.clipboard?.writeText(text).then(done).catch(() => {
+    const range = document.createRange(); range.selectNodeContents(recEls.report);
+    const sel = getSelection(); sel.removeAllRanges(); sel.addRange(range);
+    btn.textContent = "선택했습니다. 복사하세요";
+  });
 }
 
 async function openArea(btn) {
@@ -1127,6 +1211,12 @@ async function init() {
   recEls.result.addEventListener("click", (e) => {
     const btn = e.target.closest(".rec-open");
     if (btn) openArea(btn);
+    if (e.target.closest(".rec-report-open")) showReport();
+  });
+  recEls.report.addEventListener("click", (e) => {
+    if (e.target.closest(".report-close")) { recEls.report.hidden = true; recEls.result.scrollIntoView({ block: "start" }); }
+    const copy = e.target.closest(".report-copy");
+    if (copy) copyReport(copy);
   });
   const provinces = [...new Set(regions.map((r) => r.province))];
   els.province.innerHTML = provinces.map((p) => `<option value="${p}">${p}</option>`).join("");

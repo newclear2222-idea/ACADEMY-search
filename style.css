@@ -208,3 +208,31 @@ th { color: var(--muted); font-weight: 600; }
 .risk-box.caution { border-left-color: var(--warn); }
 .risk-box.calm { border-left-color: var(--line); color: var(--muted); }
 .risk-title { font-weight: 700; }
+
+/* 개원 입지 보고서 */
+.report { margin-top: 18px; border-top: 2px solid var(--accent); padding-top: 16px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.report h2 { margin: 0; font-size: 1.3rem; text-wrap: balance; }
+.report h3 { margin: 14px 0 0; font-size: 1.05rem; color: var(--accent); }
+.report p { margin: 0; line-height: 1.65; }
+.report ul { margin: 0; padding-left: 1.2em; line-height: 1.65; }
+.report-tools { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+.report-close { font: inherit; background: none; border: 1px solid var(--line); color: var(--text); border-radius: 8px; padding: 10px 14px; cursor: pointer; }
+.report-kicker { font-size: 0.8rem; color: var(--muted); letter-spacing: 0.04em; }
+.report-head { display: flex; flex-direction: column; gap: 8px; }
+.report-cond { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 6px 14px; margin: 4px 0 0; }
+.report-cond div { display: flex; gap: 8px; min-width: 0; }
+.report-cond dt { color: var(--muted); flex: 0 0 auto; }
+.report-cond dd { margin: 0; font-weight: 600; min-width: 0; }
+.report-table { border-collapse: collapse; width: 100%; font-size: 0.88rem; }
+.report-table th, .report-table td { border-bottom: 1px solid var(--line); padding: 6px 8px; text-align: left; white-space: nowrap; }
+.report-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+.report-dong { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+@media print {
+  body * { visibility: hidden; }
+  .report, .report * { visibility: visible; }
+  .report { position: absolute; inset: 0 auto auto 0; width: 100%; border: 0; }
+  .report-tools { display: none; }
+  .report-dong { break-inside: avoid; }
+}
+.controls label { min-width: 0; max-width: 100%; }
+.controls select { max-width: 100%; min-width: 0; }
