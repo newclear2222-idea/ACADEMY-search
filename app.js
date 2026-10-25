@@ -740,6 +740,7 @@ function recommend(regionsData, opts) {
   for (const data of regionsData) {
     setRegionContext(data);
     for (const area of data.areas) {
+      if (opts.townsOnly && !newTown(data.id, area.name)) continue;
       const students = area.students[level];
       if (students < REC_MIN_STUDENTS) { skipped.small += 1; continue; }
       const st = studentRate(area, level, data);
@@ -823,14 +824,16 @@ async function runRecommend(e) {
     subject: recEls.subject.value, level: recEls.level.value,
     years: Number(recEls.years.value), budget: recEls.budget.value,
   };
-  const scopeAll = recEls.scope.value === "all";
-  const targets = allRegions.filter((r) => scopeAll || r.province === els.province.value);
+  const scope = recEls.scope.value;
+  const townsOnly = scope === "towns";
+  const targets = allRegions.filter((r) => scope === "all" || r.province === scope || (townsOnly && NEW_TOWNS[r.id]));
+  opts.townsOnly = townsOnly;
   recEls.result.innerHTML = `<p class="rec-note">${fmt(targets.length)}개 구·시 자료를 읽는 중…</p>`;
   const regionsData = await Promise.all(targets.map((r) => loadRegion(r.id)));
   const res = recommend(regionsData, opts);
   if (current) setRegionContext(current); // 아래 동별 화면의 기준값을 되돌립니다.
   opts.avg = res.avg;
-  const scopeName = scopeAll ? "서울·경기·인천" : els.province.value;
+  const scopeName = { all: "서울·경기·인천", towns: "신도시" }[scope] || scope;
   const rules = [`${LEVEL_LABELS[opts.level]} ${REC_MIN_STUDENTS}명 미만인 동 ${fmt(res.skipped.small)}곳`, `위험지역 ${fmt(res.skipped.risk)}곳`];
   if (res.skipped.hub) rules.push(`대형 학원가 ${fmt(res.skipped.hub)}곳(${opts.years < 3 ? "경력 3년 미만" : "예산 3천만원 미만"})`);
   if (res.skipped.flowIn) rules.push(`다른 동 학생이 찾아오는 학원가 ${fmt(res.skipped.flowIn)}곳(경력 3년 미만)`);
