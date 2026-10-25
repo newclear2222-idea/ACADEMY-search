@@ -481,7 +481,9 @@ const RENT_PLACES = {
 };
 const RENT_KINDS = { large: "중대형 상가", complex: "집합 상가", small: "소규모 상가" }; // 학원은 주로 중대형 건물에 들어가 이 순서로 고릅니다.
 const RENT_ZONES = { 도심: ["서울-종로구", "서울-중구"], 강남: ["서울-강남구", "서울-서초구"], 영등포신촌: ["서울-영등포구", "서울-마포구", "서울-서대문구"] };
-const RENT_SIZES = { small: [50, "15평"], mid: [99, "30평"], large: [198, "60평"] }; // 예산별로 흔한 학원 넓이(전용 기준 어림).
+const RENT_SIZES = { small: [50, "15평"], mid: [99, "30평"], large: [198, "60평"] }; // 예산별로 흔한 학원 넓이(전용면적).
+// 한국부동산원 임대료는 계약면적(전용+공용) ㎡당이라, 전용면적으로 바꿀 때 나눌 전용률입니다(어림값).
+const RENT_NET = { large: 0.6, complex: 0.5, small: 0.7 };
 const RENT_LEVELS = ["dong", "region", "zone", "province"];
 let rent = null;
 
@@ -542,7 +544,8 @@ function rentText(area, data, m2 = 99, sizeName = "30평") {
   const r = rentFor(data.id, area.name);
   if (!r) return "";
   const kinds = r.kinds.map((k) => `${RENT_KINDS[k.kind].replace(" 상가", "")} ${rentWon(k.value)}`).join(" · ");
-  return `<div class="rank-sub">2층 이상 상가 임대료 ㎡당 월: ${kinds} (${rent.period}, ${rentWhere(r, shortRegion(data.region))}, 지하·1층 제외. ${RENT_KINDS[r.main.kind].replace(" 상가", "")} 1층은 ${rentWon(r.main.ground)}) → ${sizeName}(${m2}㎡)이면 <strong>월 약 ${rentMonthly(r.main.value, m2)}</strong> (${RENT_KINDS[r.main.kind]} 기준 어림. 관리비·부가세 별도이고, 이미 맺은 계약들의 평균이라 새로 나온 매물 호가보다 낮게 나올 수 있습니다)</div>`;
+  const net = RENT_NET[r.main.kind];
+  return `<div class="rank-sub">2층 이상 상가 임대료 계약면적 ㎡당 월: ${kinds} (${rent.period}, ${rentWhere(r, shortRegion(data.region))}, 지하·1층 제외. ${RENT_KINDS[r.main.kind].replace(" 상가", "")} 1층은 ${rentWon(r.main.ground)}) → 전용 ${sizeName}(${m2}㎡)이면 계약면적 약 ${fmt(Math.round(m2 / net / 3.3058))}평(전용률 ${Math.round(net * 100)}% 가정)이라 <strong>월 약 ${rentMonthly(r.main.value / net, m2)}</strong> (${RENT_KINDS[r.main.kind]} 기준 어림. 보증금을 월세로 환산해 더한 값이고 관리비·부가세 별도)</div>`;
 }
 
 function thisMonth() {
@@ -805,7 +808,7 @@ const COLUMNS = [
     text: (r) => (r.area.apt ? bigWon(r.area.apt[0]) : "-"),
   },
   {
-    key: "rent", label: "2층 이상 임대료(㎡당 월)", rentOnly: true,
+    key: "rent", label: "2층 이상 임대료(계약㎡당 월)", rentOnly: true,
     value: (r) => rentFor(r.data.id, r.area.name)?.main.value || 0,
     text: (r) => { const x = rentFor(r.data.id, r.area.name); return x ? `${rentWon(x.main.value)}${x.level === "dong" ? "" : x.level === "region" ? " (구·시)" : " (권역·시도)"}` : "-"; },
   },
@@ -994,7 +997,7 @@ async function runRecommend(e) {
   recEls.result.innerHTML = res.top.length
     ? `<p class="rec-note"><strong>${scopeName}</strong>에서 ${LEVEL_LABELS[opts.level]} 수가 학원보다 빨리 느는(덜 주는) 순서로 고르고, 학원 1곳당 학생이 많을수록 조금 더 올렸습니다. 후보 ${fmt(res.total)}곳 중 상위 ${res.top.length}곳입니다.</p>
        <ol class="rec-list">${res.top.map((x, i) => recItem(x, i, opts, scopeName)).join("")}</ol>
-       <p class="rec-note">뺀 곳: ${rules.join(", ")}. 학원 증가율은 폐업 자료가 과목별로 없어 입시·보습 학원 전체로 봅니다. 예산은 대형 학원가를 뺄지 정하고, 상가 임대료를 그 예산에 흔한 넓이(3천만원 미만 15평, 1억원 미만 30평, 그 이상 60평)로 어림하는 데 썼습니다. 최종 결정 전에 현장 임대료와 상가를 꼭 확인하세요.</p>`
+       <p class="rec-note">뺀 곳: ${rules.join(", ")}. 학원 증가율은 폐업 자료가 과목별로 없어 입시·보습 학원 전체로 봅니다. 예산은 대형 학원가를 뺄지 정하고, 상가 임대료를 그 예산에 흔한 넓이(3천만원 미만 전용 15평, 1억원 미만 전용 30평, 그 이상 전용 60평)로 어림하는 데 썼습니다. 최종 결정 전에 현장 임대료와 상가를 꼭 확인하세요.</p>`
     : `<p class="rec-note">조건에 맞는 동이 없습니다. 범위를 넓히거나 대상을 바꿔 보세요. (뺀 곳: ${rules.join(", ")})</p>`;
 }
 
