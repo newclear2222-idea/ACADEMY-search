@@ -917,10 +917,13 @@ const recEls = {
 };
 let lastReport = null;
 
+const HUB_BONUS = 8; // 대형·유명 학원 경력이면 학원가 동에 더하는 점수(%p와 같은 단위)
 function recommend(regionsData, opts) {
   const { subject, level, years, budget } = opts;
   const pool = [];
-  const skipped = { risk: 0, small: 0, nodata: 0, hub: 0, flowIn: 0 };
+  const skipped = { risk: 0, small: 0, nodata: 0, hub: 0, flowIn: 0, rent: 0 };
+  // hubPref: "hub"(대형·유명 경력, 학원가 우대) · "away"(경력 짧음, 학원가 뺌) · 없음(기존 규칙)
+  const pref = opts.hubPref;
   for (const data of regionsData) {
     setRegionContext(data);
     for (const area of data.areas) {
@@ -935,10 +938,16 @@ function recommend(regionsData, opts) {
       const bigHub = area.academies.all >= BIG_HUB;
       const flow = !boundaryMismatch(area) && localUse(area, subject, level);
       const kind = flow ? flowKind(flow.use) : null;
-      if (bigHub && (years < 3 || budget === "small")) { skipped.hub += 1; continue; }
-      if (kind === "in" && years < 3) { skipped.flowIn += 1; continue; }
+      if (bigHub && (pref === "away" || (pref !== "hub" && (years < 3 || budget === "small")))) { skipped.hub += 1; continue; }
+      if (kind === "in" && (pref === "away" || (!pref && years < 3))) { skipped.flowIn += 1; continue; }
       const nearby = area.nearby ? hubText(area, subject, data.id) : "";
-      pool.push({ data, area, students, st, g, risk, kind, flow, bigHub, nearby, boost: moveInBoost(area, level), academies: area.academies[subject] });
+      const x = { data, area, students, st, g, risk, kind, flow, bigHub, nearby, boost: moveInBoost(area, level), academies: area.academies[subject] };
+      if (opts.rentLimit) {
+        const r = rentEstimate(x, RENT_SIZES[budget][0]);
+        if (r && r > opts.rentLimit) { skipped.rent += 1; continue; }
+      }
+      x.hubBonus = pref === "hub" && (bigHub || kind === "in") ? HUB_BONUS : 0;
+      pool.push(x);
     }
   }
   const sumS = pool.reduce((t, x) => t + x.students, 0);
@@ -948,7 +957,7 @@ function recommend(regionsData, opts) {
     x.perAcademy = x.students / Math.max(x.academies, 1);
     x.comp = avg ? Math.min(3, Math.max(0.25, x.perAcademy / avg)) : 1;
     x.gap = withBoost(x.st, x.boost) - x.g.rate;
-    x.score = x.gap * 100 + 5 * Math.log2(x.comp);
+    x.score = x.gap * 100 + 5 * Math.log2(x.comp) + (x.hubBonus || 0);
   }
   pool.sort((a, b) => b.score - a.score);
   return { top: pool.slice(0, REC_TOP), avg, skipped, total: pool.length };
@@ -998,8 +1007,9 @@ function recItem(x, i, opts, scopeName) {
   const rentLine = rentText(x.area, x.data, m2, sizeName);
   if (rentLine) lines.push(rentLine.replace(/^<div class="rank-sub">|<\/div>$/g, ""));
   const warn = [];
-  if (x.bigHub && budget === "mid") warn.push(`입시·보습 학원 ${fmt(x.area.academies.all)}곳이 모인 대형 학원가라 임대료와 시설 경쟁이 셀 수 있습니다. 예산 3천만~1억원이면 아래 임대료 어림보다 현장 시세를 먼저 확인하세요.`);
-  if (x.bigHub && years >= 10) warn.push("경력이 길어 대형 학원가도 후보에 넣었습니다. 이름난 학원과 겨룰 강점(실적·커리큘럼)이 있는지가 관건입니다.");
+  if (x.bigHub && budget !== "large") warn.push(`입시·보습 학원 ${fmt(x.area.academies.all)}곳이 모인 대형 학원가라 임대료와 시설 경쟁이 셀 수 있습니다. 예산 ${budget === "small" ? "3천만원 미만" : "3천만~1억원"}이면 아래 임대료 어림보다 현장 시세를 먼저 확인하세요.`);
+  if (x.hubBonus) lines.push(`대형·유명 학원 경력이 있어 학원가(${x.bigHub ? `입시·보습 학원 ${fmt(x.area.academies.all)}곳이 모인 대형 학원가` : "다른 동 학생이 찾아오는 동"})를 우대해 점수 +${HUB_BONUS}을 더했습니다.`);
+  if (x.bigHub && years >= 10 && !opts.hubPref) warn.push("경력이 길어 대형 학원가도 후보에 넣었습니다. 이름난 학원과 겨룰 강점(실적·커리큘럼)이 있는지가 관건입니다.");
   // 주의·위험 표시는 동 전체(초·중·고) 기준이라, 고른 학년과 방향이 다를 수 있어 두 숫자를 함께 적습니다.
   if (x.risk?.caution) {
     const k = x.risk;
@@ -1055,9 +1065,9 @@ function rentEstimate(x, m2) {
   const r = rentFor(x.data.id, x.area.name);
   return r ? Math.round(r.main.value / RENT_NET[r.main.kind] * m2 / 10 / 10) * 10 : null; // 만원, 10만원 단위
 }
-function showReport() {
-  if (!lastReport) return;
-  const { res, opts, scopeName, rules } = lastReport;
+function showReport(target = recEls.report, report = lastReport) {
+  if (!report) return;
+  const { res, opts, scopeName, rules, profile } = report;
   const { subject, level, years, budget } = opts;
   const L = LEVEL_LABELS[level], S = SUBJECT_LABELS[subject];
   const [m2, sizeName] = RENT_SIZES[budget];
@@ -1078,32 +1088,33 @@ function showReport() {
   if (cautions) summary.push(`${cautions}곳은 동 전체(초·중·고)로 보면 '주의' 동이라 상세 내용을 꼭 확인하세요.`);
   const rows = top.map((x, i) => {
     const rent = rentEstimate(x, m2);
-    const mark = x.risk?.caution ? '<span class="caution-text">주의</span>' : x.boost ? "입주 가산" : "";
-    return `<tr><td>${i + 1}</td><td>${name(x)}</td><td class="num">${pp(x.gap)}p</td><td class="num">${x.academies ? `${fmt(Math.round(x.perAcademy))}명` : "학원 없음"}</td><td class="num">${rent ? `${fmt(rent)}만원` : "-"}</td><td class="num">${x.area.apt ? bigWon(x.area.apt[0]) : "-"}</td><td>${mark}</td></tr>`;
+    const mark = [x.risk?.caution ? '<span class="caution-text">주의</span>' : "", x.boost ? "입주 가산" : "", x.hubBonus ? "학원가 우대" : ""].filter(Boolean).join(" · ");
+    return `<tr><td>${i + 1}</td><td>${name(x)}</td><td class="num">${(Math.round(x.score * 10) / 10).toFixed(1)}</td><td class="num">${pp(x.gap)}p</td><td class="num">${x.academies ? `${fmt(Math.round(x.perAcademy))}명` : "학원 없음"}</td><td class="num">${rent ? `${fmt(rent)}만원` : "-"}</td><td class="num">${x.area.apt ? bigWon(x.area.apt[0]) : "-"}</td><td>${mark}</td></tr>`;
   }).join("");
   const details = top.map((x, i) => {
     const card = recItem(x, i, opts, scopeName).replace(/<button[^]*?<\/button>/, "").replace(/^\s*<li>|<\/li>\s*$/g, "");
     return `<section class="report-dong">${card}${riskText(x.area, x.data)}</section>`;
   }).join("");
-  recEls.report.innerHTML = `
+  target.innerHTML = `
     <div class="report-tools"><button type="button" class="rec-go report-copy">보고서 글 복사</button><button type="button" class="report-close">닫기</button></div>
     <header class="report-head">
       <p class="report-kicker">학원 입지 가이드 · ${today}</p>
       <h2>개원 입지 보고서: ${scopeName} ${L} ${S.replace(" 학원", "")}</h2>
       <dl class="report-cond">
         <div><dt>과목</dt><dd>${S}</dd></div><div><dt>대상</dt><dd>${L}</dd></div>
-        <div><dt>경력</dt><dd>${YEARS_LABEL[years]}</dd></div><div><dt>예산</dt><dd>${BUDGET_LABEL[budget]}</dd></div>
+        <div><dt>경력</dt><dd>${profile ? profile.label : YEARS_LABEL[years]}</dd></div><div><dt>예산</dt><dd>${profile?.budgetText || BUDGET_LABEL[budget]}</dd></div>${opts.rentLimit ? `<div><dt>월 임대료 한도</dt><dd>${fmt(opts.rentLimit)}만원</dd></div>` : ""}
         <div><dt>범위</dt><dd>${scopeName}</dd></div><div><dt>넓이 가정</dt><dd>전용 ${sizeName}(${m2}㎡)</dd></div>
       </dl>
     </header>
     <h3>1. 요약</h3>
     ${summary.map((t) => `<p>${t}</p>`).join("")}
+    ${profile ? `<h3>경력으로 본 입지 전략</h3>${profile.strategy.map((t) => `<p>${t}</p>`).join("")}` : ""}
     <h3>2. 추천 동 한눈에 보기</h3>
-    <div class="table-wrap"><table class="report-table"><thead><tr><th>순위</th><th>동</th><th class="num">${L}−학원 증가(1년)</th><th class="num">${S.replace(" 학원", "")} 학원 1곳당 ${L}</th><th class="num">월 임대료 어림(전용 ${sizeName})</th><th class="num">아파트 평당</th><th>표시</th></tr></thead><tbody>${rows}</tbody></table></div>
+    <div class="table-wrap"><table class="report-table"><thead><tr><th>순위</th><th>동</th><th class="num">점수</th><th class="num">${L}−학원 증가(1년)</th><th class="num">${S.replace(" 학원", "")} 학원 1곳당 ${L}</th><th class="num">월 임대료 어림(전용 ${sizeName})</th><th class="num">아파트 평당</th><th>표시</th></tr></thead><tbody>${rows}</tbody></table></div>
     <h3>3. 동별 근거</h3>
     ${details}
     <h3>4. 고른 방법</h3>
-    <p>${L} 1년 증감률(곧 입주할 새 아파트 가산 포함)에서 학원 1년 순증가율을 뺀 값을 먼저 보고, 학원 1곳당 학생이 후보 평균보다 많으면 조금 더 올렸습니다(점수 = 차이 %p + 5 × log₂(학원 1곳당 학생 ÷ 평균)).</p>
+    <p>${L} 1년 증감률(곧 입주할 새 아파트 가산 포함)에서 학원 1년 순증가율을 뺀 값을 먼저 보고, 학원 1곳당 학생이 후보 평균보다 많으면 조금 더 올렸습니다(점수 = 차이 %p + 5 × log₂(학원 1곳당 학생 ÷ 평균)${opts.hubPref === "hub" ? ` + 학원가 우대 ${HUB_BONUS}` : ""}). 그래서 표의 순위는 차이 %p 순서와 조금 다를 수 있습니다.</p>
     <p>뺀 곳: ${rules.join(", ")}.</p>
     <p>학원 증가율은 폐업 자료가 과목별로 없어 입시·보습 학원 전체로 봅니다. 임대료는 한국부동산원 2층 이상 계약면적 ㎡당 값을 전용률로 나눠 어림했고 관리비·부가세는 빠져 있습니다.</p>
     <h3>5. 현장에서 확인할 것</h3>
@@ -1114,17 +1125,96 @@ function showReport() {
       <li>입주 예정 단지의 실제 입주 시기와 세대 구성</li>
     </ul>
     <p class="rec-note">출처: ${(first.data.sources || []).join(" / ")}${rent ? ` / 한국부동산원 상업용부동산 임대동향(${rent.period})` : ""}. 공공데이터로 만든 참고 자료이며 현장 조사를 대신하지 않습니다.</p>`;
-  recEls.report.hidden = false;
-  recEls.report.scrollIntoView({ behavior: "smooth", block: "start" });
+  target.hidden = false;
+  target.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 function copyReport(btn) {
-  const text = [...recEls.report.children].filter((el) => !el.classList.contains("report-tools")).map((el) => el.innerText).join("\n\n");
+  const box = btn.closest(".report");
+  const text = [...box.children].filter((el) => !el.classList.contains("report-tools")).map((el) => el.innerText).join("\n\n");
   const done = () => { btn.textContent = "복사했습니다"; setTimeout(() => { btn.textContent = "보고서 글 복사"; }, 2000); };
   navigator.clipboard?.writeText(text).then(done).catch(() => {
-    const range = document.createRange(); range.selectNodeContents(recEls.report);
+    const range = document.createRange(); range.selectNodeContents(box);
     const sel = getSelection(); sel.removeAllRanges(); sel.addRange(range);
     btn.textContent = "선택했습니다. 복사하세요";
   });
+}
+
+// 개원 보고서 만들기: 경력을 종류별로 받아 학원가를 우대할지, 뺄지 정합니다.
+const rpEls = {
+  form: document.getElementById("rp-form"),
+  subject: document.getElementById("rp-subject"),
+  level: document.getElementById("rp-level"),
+  budget: document.getElementById("rp-budget"),
+  rent: document.getElementById("rp-rent"),
+  big: document.getElementById("rp-big"),
+  small: document.getElementById("rp-small"),
+  own: document.getElementById("rp-own"),
+  tutor: document.getElementById("rp-tutor"),
+  record: document.getElementById("rp-record"),
+  regions: document.getElementById("rp-regions"),
+  status: document.getElementById("rp-status"),
+  report: document.getElementById("rp-report"),
+};
+const manwon = (n) => (n >= 10000 ? `${fmt(Math.floor(n / 10000))}억${n % 10000 ? ` ${fmt(n % 10000)}만` : ""}원` : `${fmt(n)}만원`);
+function careerProfile(budget) {
+  const num = (el) => Math.max(0, Number(el.value) || 0);
+  const big = num(rpEls.big), small = num(rpEls.small), own = num(rpEls.own), tutor = num(rpEls.tutor);
+  const record = rpEls.record.checked;
+  const total = big + small + own + tutor;
+  const famous = big >= 3 || (big >= 1 && record);
+  const pref = famous ? "hub" : total < 3 ? "away" : null;
+  const parts = [["대형·유명 학원", big], ["중소형 학원", small], ["직접 운영", own], ["과외·공부방", tutor]].filter(([, y]) => y).map(([n, y]) => `${n} ${y}년`);
+  const label = `${parts.join(", ") || "경력 없음"}${record ? " · 실적·따라올 수강생 있음" : ""}`;
+  const strategy = [];
+  if (pref === "hub") {
+    strategy.push(`대형·유명 학원 경력(${big}년${record ? ", 실적 있음" : ""})이 있어 이름값으로 학생을 모을 수 있다고 보고, <strong>학원가를 우대</strong>했습니다. 입시·보습 학원 ${BIG_HUB}곳 이상이 모인 대형 학원가와, 매출로 보아 다른 동 학생이 찾아오는 동에 점수 +${HUB_BONUS}을 더했습니다(점수 단위는 학생−학원 증가 차이 %p와 같습니다).`);
+    strategy.push("학원가는 수요가 크고 학부모가 학원을 고르러 오는 곳이라 경력과 실적이 바로 통하지만, 임대료와 이름난 학원과의 경쟁이 셉니다. 아래 표의 월 임대료와 각 동의 대표 학원을 함께 보세요.");
+  } else if (pref === "away") {
+    strategy.push(`경력이 모두 합해 ${total}년이라, 이름난 학원과 정면으로 겨뤄야 하는 <strong>학원가는 뺐습니다</strong>(대형 학원가와 다른 동 학생이 찾아오는 동). 동네 학생이 동네 학원에 다니는 곳에서 꼼꼼한 관리로 자리 잡는 쪽이 유리합니다.`);
+  } else {
+    strategy.push(`대형·유명 학원 경력이 짧아 학원가를 따로 우대하지는 않았고, 비학원가와 학원가를 같은 기준으로 비교했습니다. 경력이 모두 합해 ${total}년이라 학원가를 빼지는 않았습니다.${budget === "small" ? " 다만 예산이 3천만원 미만이라 임대료 부담이 큰 대형 학원가는 뺐습니다." : ""}`);
+  }
+  if (own >= 3) strategy.push(`직접 운영 경력이 ${own}년이라 신도시처럼 처음부터 학생을 모아야 하는 곳도 무리가 적습니다.`);
+  else if (own === 0 && total >= 1) strategy.push("직접 운영해 본 경험이 없으니 첫해에는 상담·홍보·행정에 드는 시간을 넉넉히 잡으세요.");
+  return { big, small, own, tutor, record, total, pref, label, strategy };
+}
+function fillReportRegions() {
+  const provinces = [...new Set(allRegions.map((r) => r.province))];
+  rpEls.regions.innerHTML = provinces.map((p) => `<div class="rp-prov"><p class="rp-prov-name">${p}</p><div class="rp-list">${allRegions
+    .filter((r) => r.province === p)
+    .map((r) => `<label class="rp-check"><input type="checkbox" value="${r.id}"> ${r.name.replace(p + " ", "")}</label>`).join("")}</div></div>`).join("");
+}
+async function runReportMaker(e) {
+  e.preventDefault();
+  const money = Math.max(0, Number(rpEls.budget.value) || 0);
+  const budget = money < 3000 ? "small" : money < 10000 ? "mid" : "large";
+  const profile = careerProfile(budget);
+  profile.budgetText = `${manwon(money)} (${BUDGET_LABEL[budget].replace(/^[^(]*\(/, "").replace(")", "")} 규모로 봄)`;
+  const opts = {
+    subject: rpEls.subject.value, level: rpEls.level.value, years: profile.total, budget,
+    hubPref: profile.pref, rentLimit: Number(rpEls.rent.value) || 0,
+  };
+  const picked = [...rpEls.regions.querySelectorAll("input:checked")].map((i) => i.value);
+  const targets = picked.length ? allRegions.filter((r) => picked.includes(r.id)) : allRegions;
+  const names = targets.map((r) => shortRegion(r.name));
+  const scopeName = picked.length ? (names.length > 3 ? `${names.slice(0, 3).join("·")} 외 ${names.length - 3}곳` : names.join("·")) : "서울·경기·인천";
+  rpEls.status.textContent = `${fmt(targets.length)}개 구·시 자료를 읽는 중…`;
+  rpEls.report.hidden = true;
+  const regionsData = await Promise.all(targets.map((r) => loadRegion(r.id)));
+  const res = recommend(regionsData, opts);
+  if (current) setRegionContext(current);
+  opts.avg = res.avg;
+  const rules = [`${LEVEL_LABELS[opts.level]} ${REC_MIN_STUDENTS}명 미만인 동 ${fmt(res.skipped.small)}곳`, `위험지역 ${fmt(res.skipped.risk)}곳`];
+  if (res.skipped.hub) rules.push(`대형 학원가 ${fmt(res.skipped.hub)}곳(${profile.pref === "away" ? "경력 3년 미만" : "예산 3천만원 미만"})`);
+  if (res.skipped.flowIn) rules.push(`다른 동 학생이 찾아오는 학원가 ${fmt(res.skipped.flowIn)}곳(경력 3년 미만)`);
+  if (res.skipped.rent) rules.push(`월 임대료 어림이 한도 ${fmt(opts.rentLimit)}만원을 넘는 동 ${fmt(res.skipped.rent)}곳`);
+  if (res.skipped.nodata) rules.push(`학생 증감 비교 자료가 없는 동 ${fmt(res.skipped.nodata)}곳`);
+  if (!res.top.length) {
+    rpEls.status.textContent = `조건에 맞는 동이 없습니다. 지역을 넓히거나 임대료 한도를 올려 보세요. (뺀 곳: ${rules.join(", ")})`;
+    return;
+  }
+  rpEls.status.textContent = "";
+  showReport(rpEls.report, { res, opts, scopeName, rules, profile });
 }
 
 async function openArea(btn) {
@@ -1207,6 +1297,13 @@ async function init() {
   }
   fillTowns();
   fillRecScope();
+  fillReportRegions();
+  rpEls.form.addEventListener("submit", runReportMaker);
+  rpEls.report.addEventListener("click", (e) => {
+    if (e.target.closest(".report-close")) { rpEls.report.hidden = true; rpEls.form.scrollIntoView({ block: "start" }); }
+    const copy = e.target.closest(".report-copy");
+    if (copy) copyReport(copy);
+  });
   recEls.form.addEventListener("submit", runRecommend);
   recEls.result.addEventListener("click", (e) => {
     const btn = e.target.closest(".rec-open");
