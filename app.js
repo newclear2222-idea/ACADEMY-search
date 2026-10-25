@@ -1365,7 +1365,8 @@ async function sajuFor() {
   const p = Saju.calculateProfile(date, time, cal, gender);
   let daeun = [];
   try { if (p.daeunStart != null) daeun = Saju.daeunTable(date, time, cal, gender, p.daeunStart); } catch (err) { console.warn(err); }
-  return { p, tg: Saju.tenGodProfile(p.chart), daeun, birthSolar: Saju.solarBirth(date, cal), input: `${date} ${time || "시간 모름"} ${cal} ${gender}` };
+  const years = Saju.yearFlow(p.chart.day.stem, new Date().getFullYear(), 15);
+  return { p, tg: Saju.tenGodProfile(p.chart), daeun, years, birthSolar: Saju.solarBirth(date, cal), input: `${date} ${time || "시간 모름"} ${cal} ${gender}` };
 }
 // 사주 풀이는 Claude가 씁니다. 여기서는 만세력 계산값을 표로 보여 주고 Claude에게 넘길 자료를 만듭니다.
 // [한글 읽기, 오행, 그림, 성향, 학원에서는]
@@ -1405,30 +1406,47 @@ function sajuSection(saju) {
   const stemGod = (k, v) => (k === "일" ? "나(일간)" : tg.items.find((it) => it.pos === `${k}간`)?.god || "");
   const hidden = (k) => tg.items.filter((it) => it.pos === `${k}지`);
   const cell = (v, f) => (v ? f(v) : "모름");
-  const cur = saju.daeun.filter((d) => d.startAge <= saju.age).pop();
   return `<h3>사주로 본 학원 운영 (Claude 풀이, 참고)</h3>
-    <p>입력: ${saju.input}. 아래 계산값은 원장일지 만세력 계산기 그대로이고(대운 시작 나이는 정확한 절입 시각 기준 보정), 풀이는 이 값을 Claude가 읽어 씁니다.</p>
+    <p>입력: ${saju.input}. 아래 여덟 글자는 원장일지 만세력 계산기 그대로이고, 풀이는 이 값과 보정된 대운을 Claude가 읽어 씁니다.</p>
     <div class="table-wrap"><table class="report-table saju-chart"><thead><tr><th></th>${cols.map(([n]) => `<th>${n}</th>`).join("")}</tr></thead><tbody>
       <tr><th>천간</th>${cols.map(([, v, k]) => `<td>${cell(v, () => `<strong>${hanjaKo(v.stem)}(${v.stem})</strong><br>${stemGod(k, v)}`)}</td>`).join("")}</tr>
       <tr><th>지지</th>${cols.map(([, v, k]) => `<td>${cell(v, () => `<strong>${hanjaKo(v.branch)}(${v.branch})</strong><br>${hidden(k).find((it) => it.part === "정기")?.god || ""}`)}</td>`).join("")}</tr>
-      <tr><th>지장간</th>${cols.map(([, v, k]) => `<td>${cell(v, () => hidden(k).map((it) => `${hanjaKo(it.char)} ${it.god}`).join("<br>"))}</td>`).join("")}</tr>
     </tbody></table></div>
-    <p class="rec-note">오행: ${ELEMENTS.map((e) => `${ELEMENT_PLAIN[e]}(${e}) ${p.counts[e]}`).join(", ")}. 월지 기준 격국 후보: ${GYEOK_NAME[tg.gyeok.god]}. ${tg.clashes.length ? `지지 충: ${tg.clashes.map((c) => `${c.a}·${c.b}(${hanjaKo(c.pair)})`).join(", ")}.` : ""}</p>
-    ${saju.daeun.length ? `<div class="table-wrap"><table class="report-table"><thead><tr><th class="num">대운 시작</th>${saju.daeun.map((d) => `<th${d === cur ? ' class="saju-now"' : ""}>${d.startAge}세${d === cur ? "(지금)" : ""}</th>`).join("")}</tr></thead><tbody><tr><th class="num">간지</th>${saju.daeun.map((d) => `<td>${ganjiKo(d.ganji)}<br>${d.ganji}</td>`).join("")}</tr><tr><th class="num">십신</th>${saju.daeun.map((d) => `<td>${d.stemGod}<br>${d.branchGod}</td>`).join("")}</tr></tbody></table></div>` : ""}
     <div class="saju-ai no-save"><button type="button" class="report-ghost saju-ai-stop" hidden>멈추기</button><button type="button" class="report-ghost saju-ai-go" hidden>다시 풀이 받기</button></div>
     <div class="saju-ai-out">Claude 풀이를 준비하는 중입니다…</div>
-    <p class="rec-note">사주 풀이는 참고용이며 입지 추천과 순위에는 쓰지 않습니다. 신강·신약과 용신은 학파마다 판단이 달라 관점별로 보여 달라고 요청했습니다.</p>`;
+    <p class="rec-note">사주 풀이는 참고용이며 입지 추천과 순위에는 쓰지 않습니다.</p>`;
 }
 // AI 풀이: 계산은 끝난 값만 넘기고, Claude에게는 날짜·나이를 다시 계산하지 말라고 합니다.
 function sajuPrompt(saju, opts, profile) {
   const { p, tg } = saju;
   const pillars = [["년주", p.chart.year], ["월주", p.chart.month], ["일주", p.chart.day], ["시주", p.chart.hour]].map(([k, v]) => `${k} ${v ? `${v.korean}(${v.hanja})` : "모름(출생시간 미상)"}`).join(", ");
   const gods = GOD_ORDER.map((g) => `${g} ${fmt1(tg.scores[g] || 0)} [${godWhere(tg, g) || "없음"}]`).join("\n");
-  const daeun = saju.daeun.map((d) => `${d.startAge}세~ ${ganjiKo(d.ganji)}(${d.ganji}) 천간 ${d.stemGod}, 지지 ${d.branchGod}${saju.age != null && d.startAge <= saju.age && saju.age < d.startAge + 10 ? " ← 지금" : ""}`).join("\n");
-  return `당신은 30년 경력의 사주명리 상담가이며, 학원 경영 컨설팅도 해 온 사람입니다. 학원을 개원하려는 원장님의 사주를 명리학적으로 깊이 풀이하고, 그것을 학원 운영에 연결해 주세요. 짧은 요약이 아니라 상담 한 시간 분량의 자세한 풀이를 원합니다.
+  const daeun = saju.daeun.map((d) => `${d.startAge}세(${saju.birthSolar.year + d.startAge}년)~ ${ganjiKo(d.ganji)}(${d.ganji}) 천간 ${d.stemGod}, 지지 ${d.branchGod}${saju.age != null && d.startAge <= saju.age && saju.age < d.startAge + 10 ? " ← 지금" : ""}`).join("\n");
+  return `당신은 30년 경력의 사주명리 상담가이며 학원 경영 컨설팅도 해 온 사람입니다. 학원을 개원하려는 원장님의 사주를 보고, 아래 질문에만 현실적이고 구체적으로 답해 주세요. 이론 설명보다 "그래서 어떻게 하라"가 중요합니다.
 
 [반드시 지킬 것]
-- 아래 [계산값]을 그대로 쓰세요. 생년월일로 원국, 지장간, 나이, 대운 시작 나이를 다시 계산하지 마세요. 대운 시작 나이는 정확한 절입 시각으로 보정된 값입니다.
+- [계산값]을 그대로 쓰세요. 생년월일로 원국, 나이, 대운, 연도 간지를 다시 계산하지 마세요. 대운 시작 나이는 정확한 절입 시각으로 보정된 값이고, 연도별 간지와 십신도 아래 표를 쓰세요.
+- 시기는 반드시 연도로 말하세요(예: "2027~2028년"). 아래 대운의 시작 연도와 연도별 흐름을 근거로 쓰세요.
+- 각 답마다 근거를 한 줄로 붙이세요(예: "근거: 식신이 두 개 있고 재성으로 이어짐"). 근거는 짧게, 결론과 실천 조언은 자세하게.
+- 사주를 모르는 사람도 읽게 쉬운 말로 쓰고, 전문 용어는 꼭 필요할 때만 괄호로 풀어 주세요.
+- 신강·신약이나 용신을 장황하게 논하지 마세요. 판단이 갈리는 부분은 "이렇게도 볼 수 있다"고 한 줄로만 덧붙이세요.
+- 어느 동네인지 같은 입지 추천은 하지 마세요(입지는 데이터로 따로 정합니다). 학원가·비학원가 성향만 답하세요.
+- 겁주는 예언 대신 실천할 수 있는 조언으로 쓰세요.
+- 마크다운 기호(#, *, |, -)는 쓰지 말고, 질문마다 "■ 제목"으로 시작하세요. 전체 5,000~7,000자.
+
+[답할 질문, 이 순서로]
+■ 1. 학원업이 나에게 맞는가 (맞는 점, 힘들 수 있는 점)
+■ 2. 나는 어떤 원장인가 (1인형인지 시스템형인지, 직강형인지 관리형인지, 여러 면모가 섞였다면 비중까지)
+■ 3. 어울리는 과목과 추가해도 좋은 과목 (지금 과목은 아래 개원 조건 참고. 지금 과목이 맞는지, 함께 넣으면 좋은 과목과 피할 과목, 넣는 시기)
+■ 4. 학원가가 좋은가 비학원가가 좋은가 (이유와 각각을 골랐을 때의 운영 요령)
+■ 5. 홍보는 입소문형인가 대대적 홍보형인가 (구체적인 홍보 방법 3~5가지)
+■ 6. 언제 개원하면 좋은가 (앞으로 몇 년 중 좋은 해와 피할 해, 그해 안에서 준비 순서)
+■ 7. 최고의 전성기는 언제 오는가 (연도 범위와 그때 해야 할 일)
+■ 8. 확장이나 2관(분원)을 해도 되는 사주인가 (해도 된다면 언제, 어떤 방식으로, 조심할 점)
+■ 9. 내가 보완해야 할 것 (구체적인 방법과 함께)
+■ 10. 주기적으로 챙길 것 (학부모 상담 주기, 학생 관리 루틴, 나 자신의 관리 등 주간·월간·학기별로)
+
+[계산값]을 그대로 쓰세요. 생년월일로 원국, 지장간, 나이, 대운 시작 나이를 다시 계산하지 마세요. 대운 시작 나이는 정확한 절입 시각으로 보정된 값입니다.
 - 합·충·형·파·해, 12운성, 신살 같은 관계는 아래 여덟 글자와 대운 글자를 보고 직접 찾아 설명해도 됩니다(새로 계산하는 것이 아니라 주어진 글자를 읽는 것입니다).
 - 신강·신약, 용신은 학파마다 판단이 다르므로 하나로 단정하지 마세요. 억부·조후·통관·병약 등 관점별로 "이 관점에서는 이렇게 본다"를 각각 보여 주고, 관점마다 결론이 다르면 그 차이가 학원 운영에서 무엇을 뜻하는지 설명하세요.
 - 한 가지 꼬리표로 좁히지 말고 여러 기운과 조합이 함께 작용하는 모습을 엮어 설명하세요.
@@ -1470,8 +1488,10 @@ ${gods}
 천간에 뜨고 지지에 뿌리 있는 십신: ${tg.rooted.map((r) => `${r.god}(${r.pos} ${r.char})`).join(", ") || "없음"}
 격국 후보(월지 기준, 월지 속 글자 중 천간에 뜬 것 우선): ${GYEOK_NAME[tg.gyeok.god]} — 월지 ${p.chart.month.branch} 속 ${tg.gyeok.char}(${tg.gyeok.god})${tg.gyeok.shown ? ", 천간에 뜸" : ""}
 지지 충: ${tg.clashes.map((c) => `${c.a}·${c.b} ${c.pair}`).join(", ") || "없음"}
-대운(시작 나이는 보정값):
+대운(시작 나이는 보정값, 시작 연도는 양력 생년 + 시작 나이):
 ${daeun}
+연도별 흐름(세운, 연도 간지와 일간 기준 십신):
+${saju.years.map((y) => `${y.year}년 ${ganjiKo(y.ganji)}(${y.ganji}) 천간 ${y.stemGod}, 지지 ${y.branchGod}`).join("\n")}
 지금 만 나이: ${saju.age ?? "알 수 없음"}
 
 [원장님 개원 조건]
@@ -1489,7 +1509,7 @@ async function runSajuAi(box, saju, opts, profile, fresh = false) {
   let started = false;
   const waiting = () => {
     const sec = Math.round((Date.now() - t0) / 1000);
-    out.textContent = `Claude가 사주를 깊이 살펴보는 중입니다… (${sec}초 지남)\n\n아직 끝난 것이 아닙니다. 상담 한 시간 분량(7,000~9,000자)의 풀이라 첫 글자가 나오기까지 1~3분쯤 걸리고, 그 뒤 몇 분에 걸쳐 이어서 써집니다. 이 화면을 닫지 말고 기다려 주세요.\n처음 한 번은 화면 위쪽에 Claude 사용을 허락할지 묻는 창이 뜹니다. 허락해야 풀이가 시작됩니다.`;
+    out.textContent = `Claude가 사주를 깊이 살펴보는 중입니다… (${sec}초 지남)\n\n아직 끝난 것이 아닙니다. 열 가지 질문에 자세히 답하는 풀이라 첫 글자가 나오기까지 1~3분쯤 걸리고, 그 뒤 몇 분에 걸쳐 이어서 써집니다. 이 화면을 닫지 말고 기다려 주세요.\n처음 한 번은 화면 위쪽에 Claude 사용을 허락할지 묻는 창이 뜹니다. 허락해야 풀이가 시작됩니다.`;
   };
   waiting();
   const timer = setInterval(() => { if (!started) waiting(); }, 1000);

@@ -75,3 +75,19 @@ export function tenGodProfile(chart: Saju) {
   }
   return { items, scores, rooted, gyeok: { god: gyeok.god, char: gyeok.char, part: gyeok.part, shown: Boolean(shown) }, clashes };
 }
+
+// 해마다의 간지(세운)와 일간 기준 십신. 연도 간지는 입춘 기준이지만 연 단위 흐름을 보는 데 씁니다.
+const STEMS10 = "甲乙丙丁戊己庚辛壬癸";
+const BRANCHES12 = "子丑寅卯辰巳午未申酉戌亥";
+export function yearFlow(dayStem: string, from: number, count: number) {
+  const principal = (branch: string) => {
+    const hidden = (JIJANGGAN as Record<string, { stem: string }[]>)[branch] || [];
+    return hidden[hidden.length - 1]?.stem || "";
+  };
+  return Array.from({ length: count }, (_, i) => {
+    const year = from + i;
+    const stem = STEMS10[((year - 4) % 10 + 10) % 10];
+    const branch = BRANCHES12[((year - 4) % 12 + 12) % 12];
+    return { year, ganji: stem + branch, stemGod: sipseongDetail(dayStem, stem) || "", branchGod: sipseongDetail(dayStem, principal(branch)) || "" };
+  });
+}
