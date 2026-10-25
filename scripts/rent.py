@@ -7,6 +7,7 @@
 """
 import json
 import os
+import re
 import sys
 import urllib.parse
 import urllib.request
@@ -15,7 +16,7 @@ from pathlib import Path
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 BASE = "https://www.reb.or.kr/r-one/openapi"
 # 통계표 이름에 이 말이 들어간 것을 찾습니다. 이름으로 찾아 ID가 바뀌어도 따라갑니다.
-WANT = {"small": "소규모상가", "large": "중대형상가", "complex": "집합상가"}
+WANT = {"small": "소규모 상가", "large": "중대형 상가", "complex": "집합 상가"}
 PROVINCES = ("서울", "경기", "인천")
 
 
@@ -54,12 +55,13 @@ def main():
         print(f"  {t.get('STATBL_ID')} | {t.get('STATBL_NM')} | 주기 {t.get('DTACYCLE_CD')} | {t.get('RPSTUI_NM') or ''}")
     out = {"source": "한국부동산원 상업용부동산 임대동향조사 (R-ONE)", "unit": "", "tables": {}}
     for kind, word in WANT.items():
-        cands = [t for t in rent_tables if word in t["STATBL_NM"] and "지역별" in t["STATBL_NM"]] or \
-                [t for t in rent_tables if word in t["STATBL_NM"]]
+        # 같은 통계가 기간별로 나뉘어 있어(예: '(2022년~)', '(2024년3분기~)') 가장 최근에 시작한 표를 씁니다.
+        cands = [t for t in rent_tables if word in t["STATBL_NM"] and "지역별 임대료" in t["STATBL_NM"] and "~)" in t["STATBL_NM"]]
         if not cands:
             print(f"  {word} 임대료 통계표를 찾지 못했습니다.")
             continue
-        t = sorted(cands, key=lambda x: (x.get("DTACYCLE_CD") != "QY", len(x["STATBL_NM"])))[0]
+        start = lambda x: re.search(r"\((\d{4})년(\d)?", x["STATBL_NM"])
+        t = max(cands, key=lambda x: (int(start(x).group(1)), int(start(x).group(2) or 0)) if start(x) else (0, 0))
         cycle = t.get("DTACYCLE_CD") or "QY"
         rows = all_rows("SttsApiTblData", key, STATBL_ID=t["STATBL_ID"], DTACYCLE_CD=cycle)
         if not rows:
