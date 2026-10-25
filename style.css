@@ -226,6 +226,13 @@ th { color: var(--muted); font-weight: 600; }
 .report-table { border-collapse: collapse; width: 100%; font-size: 0.88rem; }
 .report-table th, .report-table td { border-bottom: 1px solid var(--line); padding: 6px 8px; text-align: left; white-space: nowrap; }
 .report-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+.report h4 { margin: 10px 0 0; font-size: 0.98rem; }
+.saju-summary { border: 1px solid var(--accent); background: var(--accent-soft); border-radius: 10px; padding: 10px 14px; }
+.saju-summary-title { font-weight: 700; margin: 0 0 4px; }
+.saju-summary ul { margin: 0; }
+.saju-type { border-left: 3px solid var(--line); padding: 2px 0 2px 12px; display: flex; flex-direction: column; gap: 4px; }
+.saju-plain th, .saju-plain td { white-space: normal; vertical-align: top; }
+.saju-plain th:first-child, .saju-plain td:first-child, .saju-plain th:last-child, .saju-plain td:last-child { white-space: nowrap; }
 .saju-now td { font-weight: 700; background: var(--accent-soft); }
 .report-dong { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
 @media print {
