@@ -1178,6 +1178,7 @@ const rpEls = {
   cal: document.getElementById("rp-cal"),
   gender: document.getElementById("rp-gender"),
   home: document.getElementById("rp-home"),
+  towns: document.getElementById("rp-towns"),
   subject: document.getElementById("rp-subject"),
   level: document.getElementById("rp-level"),
   budget: document.getElementById("rp-budget"),
@@ -1483,10 +1484,13 @@ async function runReportMaker(e) {
   const sajuError = sajuInputError();
   if (sajuError) { rpEls.status.textContent = sajuError; rpEls.birth.focus(); return; }
   const picked = [...rpEls.regions.querySelectorAll(".rp-list input:checked")].map((i) => i.value);
-  const targets = picked.length ? allRegions.filter((r) => picked.includes(r.id)) : allRegions;
+  const townsOnly = rpEls.towns.checked;
+  const targets = (picked.length ? allRegions.filter((r) => picked.includes(r.id)) : allRegions).filter((r) => !townsOnly || NEW_TOWNS[r.id]);
+  opts.townsOnly = townsOnly;
+  if (!targets.length) { rpEls.status.textContent = "고른 시·구 안에 신도시가 없습니다. 시·구를 더 고르거나 '신도시 동만 보기'를 끄세요."; return; }
   const wholeProv = [...rpEls.regions.querySelectorAll(".rp-all input:checked")].map((i) => i.dataset.prov);
   const names = [...wholeProv.map((p) => `${p} 전체`), ...targets.filter((r) => !wholeProv.includes(r.province)).map((r) => shortRegion(r.name))];
-  const scopeName = picked.length ? (names.length > 3 ? `${names.slice(0, 3).join("·")} 외 ${names.length - 3}곳` : names.join("·")) : "서울·경기·인천";
+  const scopeName = (picked.length ? (names.length > 3 ? `${names.slice(0, 3).join("·")} 외 ${names.length - 3}곳` : names.join("·")) : "서울·경기·인천") + (townsOnly ? " 신도시" : "");
   rpEls.status.textContent = `${fmt(targets.length)}개 구·시 자료를 읽는 중…`;
   rpEls.report.hidden = true;
   const regionsData = await Promise.all(targets.map((r) => loadRegion(r.id)));
