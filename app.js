@@ -1096,7 +1096,7 @@ function showReport(target = recEls.report, report = lastReport) {
     return `<section class="report-dong">${card}${riskText(x.area, x.data)}</section>`;
   }).join("");
   target.innerHTML = `
-    <div class="report-tools"><button type="button" class="rec-go report-save">보고서 파일로 저장</button><button type="button" class="report-ghost report-copy">글 복사</button><button type="button" class="report-close">닫기</button></div>
+    <div class="report-tools"><button type="button" class="rec-go report-save" data-kind="pdf">PDF로 저장</button><button type="button" class="report-ghost report-save" data-kind="html">웹 문서(HTML)로 저장</button><button type="button" class="report-ghost report-copy">글 복사</button><button type="button" class="report-close">닫기</button></div>
     <header class="report-head">
       <p class="report-kicker">학원 입지 가이드 · ${today}</p>
       <h2>개원 입지 보고서: ${scopeName} ${L} ${S.replace(" 학원", "")}</h2>
@@ -1131,35 +1131,138 @@ function showReport(target = recEls.report, report = lastReport) {
   wireSajuAi(target, report);
 }
 // 받는 사람이 이 사이트 없이도 열 수 있게 스타일까지 담은 HTML 한 장으로 저장합니다.
-async function saveReport(btn) {
-  const box = btn.closest(".report");
+// 보고서를 남에게 보낼 문서로 만듭니다. 화면 스타일(style.css) 위에 문서용 스타일을 덧씌웁니다.
+const DOC_CSS = `
+:root { --bg: #ffffff; --surface: #ffffff; --text: #1b1f2a; --muted: #5d6474; --line: #d9dce3; --accent: #1f3a6b; --accent-soft: #eef2f9; color-scheme: light; }
+html, body { background: #fff; }
+body { margin: 0; padding: 32px 20px 48px; color: var(--text); font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", system-ui, sans-serif; font-size: 14px; line-height: 1.7; word-break: keep-all; overflow-wrap: anywhere; }
+.doc { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
+.doc-cover { border-bottom: 3px solid var(--accent); padding-bottom: 14px; margin-bottom: 6px; }
+.doc-brand { margin: 0; font-size: 12px; letter-spacing: 0.08em; color: var(--accent); font-weight: 700; }
+.doc h2 { margin: 6px 0 4px; font-size: 24px; line-height: 1.35; color: var(--text); }
+.doc .report-kicker { display: none; }
+.doc .report-head { gap: 6px; }
+.doc .report-cond { background: var(--accent-soft); border-radius: 8px; padding: 10px 14px; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
+.doc h3 { margin: 22px 0 2px; font-size: 17px; color: var(--accent); border-bottom: 1px solid var(--line); padding-bottom: 4px; }
+.doc h4 { margin: 14px 0 0; font-size: 15px; }
+.doc p, .doc li { margin: 0; }
+.doc .table-wrap { overflow: visible; }
+.doc .report-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+.doc .report-table th { background: var(--accent-soft); color: var(--accent); font-weight: 700; }
+.doc .report-table th, .doc .report-table td { border: 1px solid var(--line); padding: 5px 7px; white-space: normal; vertical-align: top; }
+.doc .report-table .num, .doc .report-table td:first-child, .doc .report-table th:first-child { white-space: nowrap; }
+.doc .report-dong { border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; break-inside: avoid; }
+.doc .saju-type, .doc .saju-summary { break-inside: avoid; }
+.doc .saju-ai-out { border: 1px solid var(--line); background: #fafbfd; }
+.doc .rec-note { font-size: 12px; color: var(--muted); }
+.doc button, .doc .no-save, .doc .report-tools { display: none !important; }
+.doc-foot { margin-top: 26px; padding-top: 10px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); }
+@page { size: A4; margin: 14mm 12mm; }
+@media print { body { padding: 0; } .doc { max-width: none; } h3, h4 { break-after: avoid; } tr { break-inside: avoid; } }
+`;
+async function reportDocument(box) {
   const copy = box.cloneNode(true);
-  copy.querySelectorAll(".report-tools, .no-save, .saju-ai-out[hidden]").forEach((el) => el.remove());
-  const body = copy.innerHTML;
+  copy.querySelectorAll(".report-tools, .no-save, .saju-ai-out[hidden], button").forEach((el) => el.remove());
   const title = box.querySelector("h2")?.textContent || "개원 입지 보고서";
+  const day = new Date().toLocaleDateString("ko-KR", { year: "numeric", month: "long", day: "numeric" });
   let css = "";
   try { css = await (await fetch("style.css")).text(); } catch (e) { console.warn(e); }
-  const html = `<!doctype html>\n<html lang="ko" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title}</title><style>${css}
-body { margin: 0; padding: 24px 16px; font-family: system-ui, -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; background: #fff; color: #1d1d1f; }
-.report { max-width: 860px; margin: 0 auto; border-top: 0; }
-@media print { body { padding: 0; } .report { position: static; } }
-</style></head><body><article class="report">${body}<p class="rec-note">인쇄하거나 PDF로 저장하려면 이 파일을 연 브라우저에서 인쇄(Ctrl+P, 맥은 ⌘+P)를 누르세요.</p></article></body></html>`;
-  const day = new Date().toISOString().slice(0, 10);
-  const filename = `${title.replace(/^개원 입지 보고서:\s*/, "개원입지보고서_").replace(/[\\/:*?"<>|]/g, "").replace(/\s+/g, "_")}_${day}.html`;
-  const label = "보고서 파일로 저장";
-  const say = (t) => { btn.textContent = t; setTimeout(() => { btn.textContent = label; }, 2500); };
+  const html = `<!doctype html>
+<html lang="ko" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title}</title><style>${css}${DOC_CSS}</style></head>
+<body><article class="report doc"><div class="doc-cover"><p class="doc-brand">학원 입지 가이드 · 개원 입지 보고서 · ${day}</p></div>${copy.innerHTML}
+<p class="doc-foot">공공데이터(교육청·통계청·한국부동산원 등)로 만든 참고 자료이며 현장 조사를 대신하지 않습니다. 사주 풀이는 참고용입니다. 작성일 ${day}.</p></article></body></html>`;
+  const base = title.replace(/^개원 입지 보고서:\s*/, "개원입지보고서_").replace(/[\\/:*?"<>|]/g, "").replace(/\s+/g, "_");
+  return { html, base: `${base}_${new Date().toISOString().slice(0, 10)}` };
+}
+// 외부 라이브러리는 PDF를 만들 때만 불러옵니다.
+const PDF_LIBS = ["https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js", "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"];
+let pdfLibsReady = null;
+function loadPdfLibs() {
+  pdfLibsReady ??= Promise.all(PDF_LIBS.map((src) => new Promise((ok, fail) => {
+    const tag = document.createElement("script");
+    tag.src = src; tag.onload = ok; tag.onerror = () => fail(new Error(`불러오지 못함: ${src}`));
+    document.head.append(tag);
+  }))).catch((e) => { pdfLibsReady = null; throw e; });
+  return pdfLibsReady;
+}
+// 문서를 A4 폭으로 그린 뒤, 문단·표 줄 경계에서 쪽을 나눠 PDF로 만듭니다.
+async function reportPdf(html) {
+  await loadPdfLibs();
+  const WIDTH = 760;
+  const frame = document.createElement("iframe");
+  frame.style.cssText = `position:fixed;left:-10000px;top:0;width:${WIDTH + 40}px;height:1000px;border:0;visibility:hidden`;
+  document.body.append(frame);
+  try {
+    await new Promise((ok) => { frame.onload = ok; frame.srcdoc = html.replace("<body>", '<body style="padding:0 20px">'); });
+    const doc = frame.contentDocument;
+    await doc.fonts?.ready;
+    const root = doc.querySelector(".doc");
+    const top0 = root.getBoundingClientRect().top;
+    const cuts = new Set();
+    root.querySelectorAll(".doc > *, .doc tr, .doc li, .report-dong > *, .saju-type, .doc-cover").forEach((el) => {
+      const r = el.getBoundingClientRect();
+      cuts.add(Math.round(r.top - top0)); cuts.add(Math.round(r.bottom - top0));
+    });
+    const total = Math.ceil(root.getBoundingClientRect().height);
+    const scale = 2;
+    const canvas = await window.html2canvas(root, { scale, backgroundColor: "#ffffff", windowWidth: WIDTH + 40, logging: false });
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF({ unit: "mm", format: "a4" });
+    const margin = 12, pageW = 210 - margin * 2, pageH = 297 - margin * 2 - 8;
+    const pxPerMm = root.getBoundingClientRect().width / pageW;
+    const pagePx = Math.floor(pageH * pxPerMm);
+    const sorted = [...cuts].filter((c) => c > 0 && c <= total).sort((a, b) => a - b);
+    let start = 0, page = 0;
+    while (start < total) {
+      let end = Math.min(start + pagePx, total);
+      if (end < total) {
+        const fit = sorted.filter((c) => c > start + pagePx * 0.5 && c <= start + pagePx).pop();
+        if (fit) end = fit;
+      }
+      const slice = document.createElement("canvas");
+      slice.width = canvas.width; slice.height = Math.ceil((end - start) * scale);
+      slice.getContext("2d").drawImage(canvas, 0, Math.floor(start * scale), canvas.width, slice.height, 0, 0, canvas.width, slice.height);
+      if (page) pdf.addPage();
+      pdf.addImage(slice.toDataURL("image/jpeg", 0.85), "JPEG", margin, margin, pageW, (end - start) / pxPerMm);
+      page += 1;
+      pdf.setFontSize(8); pdf.setTextColor(140);
+      pdf.text(String(page), 105, 297 - 7, { align: "center" });
+      start = end;
+    }
+    return pdf.output("blob");
+  } finally {
+    frame.remove();
+  }
+}
+// 이 링크(Claude 화면) 안에서는 저장 확인 창을 거치고, 일반 브라우저에서는 바로 내려받습니다. 둘 다 사용하는 컴퓨터에 저장됩니다.
+async function saveFile(filename, data, type) {
   const downloads = window.claude?.use ? await window.claude.use("downloads").catch(() => null) : null;
   if (downloads) {
-    try { await downloads.save({ filename, data: html }); say("저장했습니다"); }
-    catch (e) { say(e?.code === "declined" ? "저장을 취소했습니다" : e?.code === "rate_limited" ? "잠시 뒤 다시 눌러 주세요" : "여기서는 저장할 수 없습니다"); }
-    return;
+    try { await downloads.save({ filename, data }); return "저장했습니다"; }
+    catch (e) { return e?.code === "declined" ? "저장을 취소했습니다" : e?.code === "rate_limited" ? "잠시 뒤 다시 눌러 주세요" : "여기서는 저장할 수 없습니다"; }
   }
-  const url = URL.createObjectURL(new Blob([html], { type: "text/html;charset=utf-8" }));
+  const url = URL.createObjectURL(data instanceof Blob ? data : new Blob([data], { type }));
   const a = document.createElement("a");
   a.href = url; a.download = filename;
   document.body.append(a); a.click(); a.remove();
   setTimeout(() => URL.revokeObjectURL(url), 10000);
-  say("저장했습니다");
+  return "저장했습니다";
+}
+async function saveReport(btn) {
+  const kind = btn.dataset.kind || "pdf";
+  const label = btn.textContent;
+  const say = (t) => { btn.textContent = t; setTimeout(() => { btn.textContent = label; btn.disabled = false; }, 2500); };
+  btn.disabled = true;
+  try {
+    const { html, base } = await reportDocument(btn.closest(".report"));
+    if (kind === "html") return say(await saveFile(`${base}.html`, html, "text/html;charset=utf-8"));
+    btn.textContent = "PDF 만드는 중…";
+    const blob = await reportPdf(html);
+    say(await saveFile(`${base}.pdf`, blob, "application/pdf"));
+  } catch (e) {
+    console.warn(e);
+    say(kind === "pdf" ? "PDF를 만들지 못했습니다. 웹 문서로 저장해 보세요" : "저장하지 못했습니다");
+  }
 }
 function copyReport(btn) {
   const box = btn.closest(".report");
@@ -1455,26 +1558,39 @@ function sajuPrompt(saju, opts, profile) {
   const pillars = [["년주", p.chart.year], ["월주", p.chart.month], ["일주", p.chart.day], ["시주", p.chart.hour]].map(([k, v]) => `${k} ${v ? `${v.korean}(${v.hanja})` : "모름(출생시간 미상)"}`).join(", ");
   const gods = GOD_ORDER.map((g) => `${g} ${fmt1(tg.scores[g] || 0)} [${godWhere(tg, g) || "없음"}]`).join("\n");
   const daeun = saju.daeun.map((d) => `${d.startAge}세~ ${ganjiKo(d.ganji)}(${d.ganji}) 천간 ${d.stemGod}, 지지 ${d.branchGod}${saju.age != null && d.startAge <= saju.age && saju.age < d.startAge + 10 ? " ← 지금" : ""}`).join("\n");
-  return `당신은 사주명리에 밝은 상담가입니다. 학원을 개원하려는 원장님의 사주를 '학원 운영' 관점에서 풀이해 주세요.
+  return `당신은 30년 경력의 사주명리 상담가이며, 학원 경영 컨설팅도 해 온 사람입니다. 학원을 개원하려는 원장님의 사주를 명리학적으로 깊이 풀이하고, 그것을 학원 운영에 연결해 주세요. 짧은 요약이 아니라 상담 한 시간 분량의 자세한 풀이를 원합니다.
 
 [반드시 지킬 것]
-- 아래 계산값을 그대로 쓰세요. 생년월일로 원국, 나이, 대운 시작 나이를 다시 계산하지 마세요. 대운 시작 나이는 정확한 절입 시각으로 보정된 값입니다.
-- 신강·신약은 학파마다 판정이 달라 단정하지 마세요. 꼭 언급하려면 "이렇게 보는 견해도 있다" 정도로만 쓰세요.
-- 한 가지 꼬리표(예: "직강형 원장")로 좁히지 말고, 여러 기운과 조합이 어떻게 함께 작용하는지 엮어서 설명하세요. 해석이 갈릴 수 있는 부분은 두 가지 이상의 관점을 보여 주세요.
-- 사주를 잘 모르는 사람도 이해하도록 쉬운 말로 쓰고, 전문 용어는 처음 나올 때 괄호로 풀어 주세요.
+- 아래 [계산값]을 그대로 쓰세요. 생년월일로 원국, 지장간, 나이, 대운 시작 나이를 다시 계산하지 마세요. 대운 시작 나이는 정확한 절입 시각으로 보정된 값입니다.
+- 합·충·형·파·해, 12운성, 신살 같은 관계는 아래 여덟 글자와 대운 글자를 보고 직접 찾아 설명해도 됩니다(새로 계산하는 것이 아니라 주어진 글자를 읽는 것입니다).
+- 신강·신약, 용신은 학파마다 판단이 다르므로 하나로 단정하지 마세요. 억부·조후·통관·병약 등 관점별로 "이 관점에서는 이렇게 본다"를 각각 보여 주고, 관점마다 결론이 다르면 그 차이가 학원 운영에서 무엇을 뜻하는지 설명하세요.
+- 한 가지 꼬리표로 좁히지 말고 여러 기운과 조합이 함께 작용하는 모습을 엮어 설명하세요.
+- 모든 판단에 근거 글자를 붙이세요. 예: "월지 진(辰) 속 을목(乙) 정인이 년간에 떠 있어…"
+- 사주를 잘 모르는 사람도 읽을 수 있게, 전문 용어는 처음 나올 때 괄호로 쉽게 풀어 주세요.
 - 학원 입지(어느 동네)는 추천하지 마세요. 입지는 데이터로 따로 정합니다.
-- 각 주장마다 어떤 글자·십신·조합에서 나온 판단인지 짧게 밝히세요.
-- 마크다운 기호(#, *, |) 없이 일반 문장으로 쓰고, 제목은 "■ 제목" 형식으로 쓰세요. 전체 2,500자 안팎.
+- 단정적인 운명 예언이나 불안을 주는 표현은 피하고, 실천할 수 있는 조언으로 바꿔 쓰세요.
+- 마크다운 기호(#, *, |, -)는 쓰지 말고, 큰 제목은 "■ 제목", 작은 제목은 "▶ 제목"으로 쓰세요. 전체 7,000~9,000자로 충분히 자세히 쓰세요.
 
-[다룰 내용]
-■ 한마디로 어떤 원장인가 (여러 기운의 조합으로)
-■ 수업과 학생 관리 스타일
-■ 학원가와 비학원가 중 어디서 힘을 내는 성향인가 (장단점 함께)
-■ 홍보: 입소문형인가 대대적 홍보형인가, 구체적인 홍보 방법
-■ 운영 규모: 1인 원장인가 강사 여럿 시스템인가, 사람 쓰는 법
-■ 돈 관리와 조심할 점
-■ 개원 시기: 지금 대운과 다음 대운으로 본 흐름
-■ 이 사주에 맞는 개원 첫해 실천 5가지
+[다룰 내용과 순서]
+■ 1. 원국 읽기
+  ▶ 네 기둥(년·월·일·시)을 하나씩: 천간과 지지, 지지 속 지장간, 그 자리가 뜻하는 것(조상·사회, 부모·직업 환경, 나와 배우자, 자녀·말년·결과물), 일간에게 어떤 십신인지
+  ▶ 오행의 많고 적음과 계절(월지)로 본 사주의 온도와 습도
+■ 2. 일간과 십신 배치
+  ▶ 일간의 본성
+  ▶ 강한 십신과 약한 십신, 천간에 드러난 것과 지지에 숨은 것의 차이
+■ 3. 글자 사이의 관계: 천간합, 지지의 합·충·형·파·해(있는 것만), 그것이 성격과 일에 주는 영향
+■ 4. 격국과 용신 후보 (관점별)
+■ 5. 조합으로 본 해석: 식상생재, 관인상생, 재생관, 식신제살, 상관견관, 비겁탈재 등 이 사주에 실제로 있는 조합만 골라, 각각 학원에서 어떻게 나타나는지 예를 들어
+■ 6. 대운별 흐름: 아래 대운을 하나씩 모두, 그 10년의 분위기와 원국과의 합·충, 학원을 하는 사람에게 주는 기회와 주의점. 특히 지금 대운과 다음 대운은 더 자세히
+■ 7. 학원 운영에 적용
+  ▶ 어떤 원장인가 (여러 면모를 함께)
+  ▶ 수업과 학생 관리 스타일
+  ▶ 학원가와 비학원가 중 어디서 힘을 내는 성향인가 (장단점)
+  ▶ 홍보: 입소문형인가 대대적 홍보형인가, 구체적인 홍보 방법
+  ▶ 운영 규모: 1인 원장인가 강사 여럿 시스템인가, 강사·직원과 일하는 법
+  ▶ 돈 관리와 조심할 점
+  ▶ 개원과 확장에 좋은 시기
+■ 8. 이 사주에 맞는 개원 첫해 실천 7가지 (구체적으로)
 
 [계산값]
 입력: ${saju.input}
@@ -1483,6 +1599,7 @@ function sajuPrompt(saju, opts, profile) {
 오행 개수: ${ELEMENTS.map((e) => `${e} ${p.counts[e]}`).join(", ")}
 십신 무게(월지 2배, 일지 1.5배, 지장간은 날수 비율로 나눔) [어디에]:
 ${gods}
+지장간(여기→중기→정기, 각 십신): ${[...new Set(tg.items.filter((it) => it.branch).map((it) => it.pos))].map((pos) => `${pos} ${tg.items.find((it) => it.pos === pos).branch}: ${tg.items.filter((it) => it.pos === pos).map((it) => `${it.char} ${it.god}`).join(", ")}`).join(" / ")}
 천간에 뜨고 지지에 뿌리 있는 십신: ${tg.rooted.map((r) => `${r.god}(${r.pos} ${r.char})`).join(", ") || "없음"}
 격국(월지 기준): ${reading.gy[0]} — 월지 ${p.chart.month.branch} 속 ${tg.gyeok.char}(${tg.gyeok.god})${tg.gyeok.shown ? ", 천간에 뜸" : ""}
 지지 충: ${tg.clashes.map((c) => `${c.a}·${c.b} ${c.pair}`).join(", ") || "없음"}
@@ -1501,10 +1618,10 @@ async function runSajuAi(box, saju, opts, profile) {
   if (!sample) { box.hidden = true; return; }
   const ctl = new AbortController();
   btn.disabled = true; stop.hidden = false; out.hidden = false;
-  out.textContent = "Claude가 풀이를 쓰는 중입니다. 처음 글자가 나오기까지 30초~1분쯤 걸릴 수 있습니다…";
+  out.textContent = "Claude가 사주를 깊이 살펴보는 중입니다. 첫 글자가 나오기까지 1~2분쯤 걸릴 수 있고, 전체 풀이는 몇 분에 걸쳐 이어서 써집니다…";
   stop.onclick = () => ctl.abort();
   try {
-    const { truncated } = await sample(sajuPrompt(saju, opts, profile), { signal: ctl.signal, onText: ({ text }) => { out.textContent = text; } });
+    const { truncated } = await sample(sajuPrompt(saju, opts, profile), { modelTier: "complex", effort: "high", signal: ctl.signal, onText: ({ text }) => { out.textContent = text; } });
     if (truncated) out.textContent += "\n\n(길이 제한으로 여기서 끊겼습니다.)";
   } catch (e) {
     out.textContent = e.text ?? "";
