@@ -858,7 +858,7 @@ function renderCompare(rows, data, subject, level) {
 // ── 개원 동네 추천 ──
 // 학생이 학원보다 빨리 느는 동(위 위험지역의 반대)을 먼저, 그다음 학원 1곳당 학생이 많은 동을 올립니다.
 //   점수 = (학생 1년 증감률 − 학원 1년 순증가율) × 100 + 5 × log2(학원 1곳당 학생 ÷ 범위 평균)
-// 경력·예산은 아래 규칙으로 후보를 거릅니다. 임대료 자료가 아직 없어 예산은 대형 학원가 제외 여부로만 씁니다.
+// 경력·예산은 아래 규칙으로 후보를 거릅니다. 예산은 대형 학원가 제외 여부와 임대료 어림 넓이에 씁니다.
 const REC_MIN_STUDENTS = 500;
 const REC_TOP = 10;
 let allRegions = [];
@@ -944,6 +944,9 @@ function recItem(x, i, opts, scopeName) {
   if (x.kind === "out" || x.kind === "someOut") lines.push(`매출로 보면 동네 학생이 다른 동 학원으로 많이 다닙니다(기대치의 ${pct(x.flow.use)}). 동네에서 붙잡을 수 있다면 기회지만, 이미 다니는 학원에서 옮겨 오게 만들어야 합니다.`);
   if (x.kind === "in") lines.push(`다른 동 학생이 찾아오는 학원가입니다(기대치의 ${pct(x.flow.use)}). 수요는 크지만 이름난 학원과 경쟁합니다.`);
   if (x.nearby) lines.push(x.nearby);
+  if (x.area.apt) lines.push(`아파트 평당 <strong>${bigWon(x.area.apt[0])}</strong> (${x.data.aptPeriod} ${fmt(x.area.apt[1])}건의 중간값)`);
+  const comingApts = (x.area.newApts || []).filter((a) => a.moveIn >= thisMonth());
+  if (comingApts.length) lines.push(`입주 예정 새 아파트: ${comingApts.slice(0, 3).map((a) => `${a.name} ${fmt(a.households)}세대(${a.moveIn})`).join(", ")}${comingApts.length > 3 ? ` 외 ${comingApts.length - 3}곳` : ""}`);
   const [m2, sizeName] = RENT_SIZES[budget];
   const rentLine = rentText(x.area, x.data, m2, sizeName);
   if (rentLine) lines.push(rentLine.replace(/^<div class="rank-sub">|<\/div>$/g, ""));
@@ -991,7 +994,7 @@ async function runRecommend(e) {
   recEls.result.innerHTML = res.top.length
     ? `<p class="rec-note"><strong>${scopeName}</strong>에서 ${LEVEL_LABELS[opts.level]} 수가 학원보다 빨리 느는(덜 주는) 순서로 고르고, 학원 1곳당 학생이 많을수록 조금 더 올렸습니다. 후보 ${fmt(res.total)}곳 중 상위 ${res.top.length}곳입니다.</p>
        <ol class="rec-list">${res.top.map((x, i) => recItem(x, i, opts, scopeName)).join("")}</ol>
-       <p class="rec-note">뺀 곳: ${rules.join(", ")}. 학원 증가율은 폐업 자료가 과목별로 없어 입시·보습 학원 전체로 봅니다. 예산은 대형 학원가를 뺄지 정하고, 상가 임대료를 그 예산에 흔한 넓이(3천만원 미만 15평, 1억원 미만 30평, 그 이상 60평)로 어림하는 데 썼습니다. 아파트 시세 자료는 아직 받지 못했습니다(공공데이터 활용 승인 대기). 최종 결정 전에 현장 임대료와 상가를 꼭 확인하세요.</p>`
+       <p class="rec-note">뺀 곳: ${rules.join(", ")}. 학원 증가율은 폐업 자료가 과목별로 없어 입시·보습 학원 전체로 봅니다. 예산은 대형 학원가를 뺄지 정하고, 상가 임대료를 그 예산에 흔한 넓이(3천만원 미만 15평, 1억원 미만 30평, 그 이상 60평)로 어림하는 데 썼습니다. 최종 결정 전에 현장 임대료와 상가를 꼭 확인하세요.</p>`
     : `<p class="rec-note">조건에 맞는 동이 없습니다. 범위를 넓히거나 대상을 바꿔 보세요. (뺀 곳: ${rules.join(", ")})</p>`;
 }
 
