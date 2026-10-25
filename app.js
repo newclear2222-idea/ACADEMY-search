@@ -413,6 +413,137 @@ function riskTag(area, data) {
   return k?.risky ? '<span class="tag risk">위험지역</span>' : k?.caution ? '<span class="tag caution">주의</span>' : "";
 }
 
+// 한국부동산원 상권 이름 → 그 상권이 있는 구·시와 법정동. 동을 비워 두면 구·시 전체 값을 낼 때만 씁니다.
+const RENT_PLACES = {
+  "광화문": [["서울-종로구", []]], "종로": [["서울-종로구", ["관철동", "종로3가", "운니동", "경운동"]]],
+  "북촌": [["서울-종로구", ["가회동", "계동", "안국동"]]], "서촌": [["서울-종로구", ["누하동", "통인동", "필운동", "옥인동", "통의동"]]],
+  "혜화동": [["서울-종로구", ["혜화동", "명륜1가", "명륜동1가", "동숭동"]]],
+  "남대문": [["서울-중구", []]], "명동": [["서울-중구", []]], "방산시장": [["서울-중구", []]], "시청": [["서울-중구", ["정동"]]],
+  "을지로": [["서울-중구", ["을지로2가", "수표동"]]], "충무로": [["서울-중구", ["필동1가", "인현동2가", "묵정동"]]],
+  "동대문": [["서울-중구", ["황학동", "흥인동"]]], "약수역": [["서울-중구", ["신당동"]]],
+  "청담": [["서울-강남구", ["청담동"]]], "압구정": [["서울-강남구", ["압구정동"]]], "신사역": [["서울-강남구", ["신사동"]]],
+  "논현역": [["서울-강남구", ["논현동"]]], "도산대로": [["서울-강남구", []]], "테헤란로": [["서울-강남구", ["역삼동", "삼성동"]]],
+  "강남대로": [["서울-강남구", []], ["서울-서초구", []]], "학동/강남구청역": [["서울-강남구", []]], "한티역": [["서울-강남구", ["대치동", "도곡동"]]],
+  "교대역": [["서울-서초구", ["서초동"]]], "남부터미널": [["서울-서초구", ["서초동"]]], "방배역/내방역": [["서울-서초구", ["방배동"]]],
+  "서래마을": [["서울-서초구", ["반포동"]]], "양재말죽거리": [["서울-서초구", ["양재동"]]], "양재역": [["서울-서초구", ["양재동"]]],
+  "당산역": [["서울-영등포구", ["당산동", "당산동1가", "당산동2가", "당산동3가", "당산동4가", "당산동5가", "당산동6가"]]],
+  "영등포역": [["서울-영등포구", ["영등포동", "영등포동5가", "영등포동6가", "영등포동7가", "영등포동8가"]]], "여의도": [["서울-영등포구", ["여의도동"]]],
+  "공덕역": [["서울-마포구", ["공덕동", "아현동"]]], "동교/연남": [["서울-마포구", ["동교동", "연남동"]]], "망원역": [["서울-마포구", ["망원동"]]],
+  "홍대/합정": [["서울-마포구", ["서교동", "합정동"]]], "신촌/이대": [["서울-서대문구", ["창천동", "대현동", "신촌동"]]],
+  "가락시장": [["서울-송파구", ["가락동"]]], "잠실/송파": [["서울-송파구", ["잠실동", "송파동", "신천동"]]], "잠실새내역": [["서울-송파구", ["잠실동"]]],
+  "건대입구": [["서울-광진구", ["화양동"]]], "군자": [["서울-광진구", ["군자동", "능동"]]], "구의역": [["서울-광진구", ["구의동"]]],
+  "경희대": [["서울-동대문구", ["회기동"]]], "장안동": [["서울-동대문구", ["장안동"]]], "청량리": [["서울-동대문구", ["청량리동", "전농동"]]],
+  "까치산역": [["서울-강서구", ["화곡동"]]], "화곡": [["서울-강서구", ["화곡동"]]],
+  "노량진": [["서울-동작구", ["노량진동"]]], "사당": [["서울-동작구", ["사당동"]]], "독산/시흥": [["서울-금천구", ["독산동", "시흥동"]]],
+  "뚝섬": [["서울-성동구", ["성수동1가", "성수동2가", "성수1가동", "성수2가동"]]], "왕십리": [["서울-성동구", ["행당동", "하왕십리동", "상왕십리동", "도선동"]]],
+  "목동": [["서울-양천구", ["목동", "신정동"]]], "미아사거리": [["서울-강북구", ["미아동"]]], "수유": [["서울-강북구", ["수유동"]]],
+  "불광역": [["서울-은평구", ["불광동"]]], "연신내": [["서울-은평구", ["갈현동", "불광동"]]],
+  "상계역": [["서울-노원구", ["상계동"]]], "노원역": [["서울-노원구", ["상계동"]]], "쌍문역": [["서울-도봉구", ["쌍문동"]]],
+  "상봉역": [["서울-중랑구", ["상봉동", "망우동"]]], "서울대입구역": [["서울-관악구", ["봉천동"]]], "낙성대": [["서울-관악구", ["봉천동"]]],
+  "신림역": [["서울-관악구", ["신림동"]]], "성신여대": [["서울-성북구", ["동선동", "돈암동"]]],
+  "숙명여대": [["서울-용산구", ["청파동1가", "청파동2가", "청파동3가", "갈월동"]]], "용산역": [["서울-용산구", ["한강로2가", "한강로3가"]]],
+  "이태원": [["서울-용산구", ["이태원동", "한남동"]]], "오류동역": [["서울-구로구", ["오류동"]]], "구로디지털단지역": [["서울-구로구", ["구로동"]]],
+  "천호": [["서울-강동구", ["천호동"]]], "명일역": [["서울-강동구", ["명일동"]]],
+  "고양시청": [["경기-고양시", ["주교동", "성사동"]]], "탄현역": [["경기-고양시", ["탄현동"]]], "일산라페스타": [["경기-고양시", ["장항동", "마두동"]]],
+  "행신역": [["경기-고양시", ["행신동"]]], "화정역": [["경기-고양시", ["화정동"]]], "광명철산": [["경기-광명시", ["철산동"]]],
+  "광주시가지": [["경기-광주시", ["경안동", "송정동"]]], "광주광남동": [["경기-광주시", ["태전동", "쌍령동"]]], "구리역": [["경기-구리시", ["인창동", "수택동"]]],
+  "기흥역": [["경기-용인시", ["구갈동"]]], "김량장동": [["경기-용인시", ["김량장동"]]], "용인수지": [["경기-용인시", ["풍덕천동"]]],
+  "동백지구": [["경기-용인시", ["동백동", "중동"]]], "상현역": [["경기-용인시", ["상현동"]]], "죽전카페거리": [["경기-용인시", ["죽전동"]]],
+  "동두천중앙로": [["경기-동두천시", ["생연동"]]],
+  "모란": [["경기-성남시", ["성남동", "중앙동"]]], "성남구시가지": [["경기-성남시", ["태평동", "수진동", "신흥동"]]], "단대오거리역": [["경기-성남시", ["단대동", "신흥동"]]],
+  "분당역세권": [["경기-성남시", ["서현동", "정자동", "수내동"]]], "서판교": [["경기-성남시", ["판교동", "운중동"]]], "야탑역": [["경기-성남시", ["야탑동"]]],
+  "위례신도시": [["경기-성남시", ["창곡동"]], ["경기-하남시", ["학암동"]], ["서울-송파구", ["장지동", "거여동"]]],
+  "병점역": [["경기-화성시", ["병점동", "진안동"]]], "화성남양읍": [["경기-화성시", ["남양읍", "남양동"]]], "화성봉담읍": [["경기-화성시", ["봉담읍"]]],
+  "동탄2신도시": [["경기-화성시", ["영천동", "청계동", "오산동", "산척동", "목동", "송동", "장지동", "신동"]]], "동탄센트럴파크": [["경기-화성시", ["반송동", "석우동"]]],
+  "부천역": [["경기-부천시", ["심곡동"]]], "상중동": [["경기-부천시", ["상동", "중동"]]], "송내역": [["경기-부천시", ["송내동"]]], "역곡역": [["경기-부천시", ["역곡동"]]],
+  "수원역": [["경기-수원시", ["매산로2가", "매산로3가"]]], "수원파장동": [["경기-수원시", ["파장동"]]], "인계동": [["경기-수원시", ["인계동"]]],
+  "팔달문로터리": [["경기-수원시", ["팔달로1가", "남창동"]]], "아주대삼거리": [["경기-수원시", ["원천동", "우만동"]]], "영통역": [["경기-수원시", ["영통동"]]],
+  "광교중앙역": [["경기-수원시", ["이의동", "하동"]]],
+  "신장/지산/서정": [["경기-평택시", ["신장동", "지산동", "서정동"]]], "평택역": [["경기-평택시", ["평택동"]]], "평택시청": [["경기-평택시", ["비전동"]]],
+  "신천역": [["경기-시흥시", ["신천동"]]], "배곧신도시": [["경기-시흥시", ["배곧동"]]], "시흥시립도서관": [["경기-시흥시", []]],
+  "안성 서인사거리": [["경기-안성시", ["서인동"]]], "안양역": [["경기-안양시", ["안양동"]]], "인덕원": [["경기-안양시", ["관양동"]]],
+  "범계학원가": [["경기-안양시", ["평촌동", "범계동", "호계동"]]], "평촌범계": [["경기-안양시", ["평촌동", "범계동"]]],
+  "양주덕정역": [["경기-양주시", ["덕정동"]]], "여주시청": [["경기-여주시", ["홍문동"]]], "오산시청": [["경기-오산시", ["오산동"]]],
+  "의정부역": [["경기-의정부시", ["의정부동"]]], "의정부민락": [["경기-의정부시", ["민락동"]]], "이천종합터미널": [["경기-이천시", ["중리동", "창전동"]]],
+  "파주시청": [["경기-파주시", ["금촌동"]]], "금릉역": [["경기-파주시", ["금릉동", "금촌동"]]], "파주야당역": [["경기-파주시", ["야당동"]]],
+  "파주운정호수": [["경기-파주시", ["와동동", "목동동", "동패동", "다율동"]]], "포천소흘읍": [["경기-포천시", ["소흘읍"]]], "포천시외버스터미널": [["경기-포천시", ["신읍동"]]],
+  "하남원도심": [["경기-하남시", ["신장동", "덕풍동"]]], "미사지구": [["경기-하남시", ["망월동", "풍산동", "선동"]]],
+  "김포운양역": [["경기-김포시", ["운양동"]]], "김포장기역": [["경기-김포시", ["장기동"]]], "김포한강구래": [["경기-김포시", ["구래동", "마산동"]]],
+  "남양주다산": [["경기-남양주시", ["다산동"]]], "남양주별내": [["경기-남양주시", ["별내동"]]],
+  "고잔신도시": [["경기-안산시", ["고잔동"]]], "안산중앙역": [["경기-안산시", ["고잔동"]]], "상록수역": [["경기-안산시", ["본오동"]]],
+  "선부다이아몬드": [["경기-안산시", ["선부동"]]], "월피다이아몬드": [["경기-안산시", ["월피동"]]], "한대앞역": [["경기-안산시", ["사동"]]],
+  "산본역": [["경기-군포시", ["산본동"]]],
+  "간석오거리": [["인천-남동구", ["간석동"]]], "구월": [["인천-남동구", ["구월동"]]], "인천논현역": [["인천-남동구", ["논현동"]]], "소래포구역": [["인천-남동구", ["논현동"]]],
+  "검단사거리완정역": [["인천-검단구", ["마전동", "왕길동", "당하동"]]], "계양계산": [["인천-계양구", ["계산동"]]], "부평": [["인천-부평구", ["부평동"]]],
+  "석남/가정중앙시장": [["인천-서해구", ["석남동", "가정동"]]], "인천서구청": [["인천-서해구", ["심곡동"]]], "청라국제도시": [["인천-서해구", ["청라동"]]],
+  "신포동": [["인천-제물포구", ["신생동", "내동", "답동"]]], "주안": [["인천-미추홀구", ["주안동"]]], "인하대앞": [["인천-미추홀구", ["용현동"]]],
+  "연수역": [["인천-연수구", ["연수동"]]], "송도": [["인천-연수구", ["송도동"]]], "영종": [["인천-영종구", ["운서동", "중산동", "운남동"]]],
+};
+const RENT_KINDS = { large: "중대형 상가", complex: "집합 상가", small: "소규모 상가" }; // 학원은 주로 중대형 건물에 들어가 이 순서로 고릅니다.
+const RENT_ZONES = { 도심: ["서울-종로구", "서울-중구"], 강남: ["서울-강남구", "서울-서초구"], 영등포신촌: ["서울-영등포구", "서울-마포구", "서울-서대문구"] };
+const RENT_SIZES = { small: [50, "15평"], mid: [99, "30평"], large: [198, "60평"] }; // 예산별로 흔한 학원 넓이(전용 기준 어림).
+const RENT_LEVELS = ["dong", "region", "zone", "province"];
+let rent = null;
+
+const median = (xs) => { const s = [...xs].sort((a, b) => a - b); const m = s.length >> 1; return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; };
+// 상권 값을 동·구시·권역·시도 단위로 묶어 둡니다. 서울은 권역(도심·강남·영등포신촌·기타) 값이 따로 있습니다.
+function indexRent(raw) {
+  const idx = { period: null, kinds: {} };
+  for (const [kind, t] of Object.entries(raw.tables || {})) {
+    if (!RENT_KINDS[kind]) continue;
+    idx.period ||= t.period;
+    const k = idx.kinds[kind] = { dong: {}, region: {}, zone: {}, province: {} };
+    for (const row of t.rows) {
+      if (row.item !== "임대료" || !(row.value > 0)) continue;
+      const path = row.full.split(">");
+      if (path.length === 1) { k.province[path[0]] = { value: row.value, names: [path[0]] }; continue; }
+      if (path[0] === "서울" && path.length === 2) { k.zone[path[1]] = { value: row.value, names: [`서울 ${path[1]}권역`] }; continue; }
+      for (const [rid, dongs] of RENT_PLACES[path.at(-1)] || []) {
+        (k.region[rid] ||= []).push(row);
+        for (const d of dongs) (k.dong[`${rid}|${d}`] ||= []).push(row);
+      }
+    }
+    for (const lv of ["dong", "region"]) for (const [key, rows] of Object.entries(k[lv])) {
+      k[lv][key] = { value: median(rows.map((r) => r.value)), names: rows.map((r) => r.full.split(">").at(-1)), count: rows.length };
+    }
+  }
+  return idx;
+}
+
+function rentZone(regionId) {
+  if (!regionId.startsWith("서울-")) return null;
+  return Object.keys(RENT_ZONES).find((z) => RENT_ZONES[z].includes(regionId)) || "기타";
+}
+
+// 가장 가까운 단위의 임대료를 고릅니다: 이 동 상권 → 구·시 안 상권들의 중간값 → 서울 권역 → 시·도 평균.
+function rentFor(regionId, dong) {
+  if (!rent) return null;
+  const keys = { dong: `${regionId}|${dong}`, region: regionId, zone: rentZone(regionId), province: regionId.split("-")[0] };
+  for (const level of RENT_LEVELS) {
+    if (!keys[level]) continue;
+    const kinds = Object.keys(RENT_KINDS).filter((kind) => rent.kinds[kind]?.[level][keys[level]]).map((kind) => ({ kind, ...rent.kinds[kind][level][keys[level]] }));
+    if (kinds.length) return { level, kinds, main: kinds[0] };
+  }
+  return null;
+}
+
+const rentWon = (thousand) => `${(Math.round(thousand) / 10).toFixed(1)}만원`; // 천원/㎡ → 만원/㎡
+const rentMonthly = (thousand, m2) => `${fmt(Math.round(thousand * m2 / 10 / 10) * 10)}만원`; // 10만원 단위
+function rentWhere(r, regionName) {
+  const names = [...new Set(r.main.names)];
+  const list = names.length > 3 ? `${names.slice(0, 3).join("·")} 등 ${names.length}곳` : names.join("·");
+  if (r.level === "dong") return `${list} 상권`;
+  if (r.level === "region") return `이 동 상권 자료가 없어 ${regionName} 안 ${list} 상권 ${names.length > 1 ? "중간값" : "값"}`;
+  return `이 동·${regionName} 상권 자료가 없어 ${names[0]} 평균`;
+}
+
+function rentText(area, data, m2 = 99, sizeName = "30평") {
+  const r = rentFor(data.id, area.name);
+  if (!r) return "";
+  const kinds = r.kinds.map((k) => `${RENT_KINDS[k.kind].replace(" 상가", "")} ${rentWon(k.value)}`).join(" · ");
+  return `<div class="rank-sub">상가 임대료 ㎡당 월: ${kinds} (${rent.period}, ${rentWhere(r, shortRegion(data.region))}) → ${sizeName}(${m2}㎡)이면 <strong>월 약 ${rentMonthly(r.main.value, m2)}</strong> (${RENT_KINDS[r.main.kind]} 기준 어림. 조사 상권이 번화가라 위층·골목은 보통 더 쌉니다)</div>`;
+}
+
 function thisMonth() {
   const d = new Date();
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
@@ -611,6 +742,7 @@ function render(data) {
         ${fervorText(r.area)}
         ${trendText(r.area, data, subject, level)}
         ${riskText(r.area, data)}
+        ${rentText(r.area, data)}
         ${r.area.apt ? `<div class="rank-sub">아파트 평당 <strong>${bigWon(r.area.apt[0])}</strong> (${data.aptPeriod} ${fmt(r.area.apt[1])}건의 중간값)</div>` : ""}
         ${why}
       </li>`;
@@ -628,7 +760,8 @@ function render(data) {
 
   const base = data.baseDate ? `${data.baseDate}. ` : "";
   const skipped = data.unmatchedAcademies ? ` 주소에 동 이름이 없어 빠진 학원 ${fmt(data.unmatchedAcademies)}곳.` : "";
-  els.sources.textContent = `${base}출처: ${data.sources.join(" / ")}.${skipped}`;
+  const rentSource = rent ? ` / 한국부동산원 상업용부동산 임대동향(${rent.period})` : "";
+  els.sources.textContent = `${base}출처: ${data.sources.join(" / ")}${rentSource}.${skipped}`;
 }
 
 const COLUMNS = [
@@ -671,6 +804,11 @@ const COLUMNS = [
     text: (r) => (r.area.apt ? bigWon(r.area.apt[0]) : "-"),
   },
   {
+    key: "rent", label: "상가 임대료(㎡당 월)", rentOnly: true,
+    value: (r) => rentFor(r.data.id, r.area.name)?.main.value || 0,
+    text: (r) => { const x = rentFor(r.data.id, r.area.name); return x ? `${rentWon(x.main.value)}${x.level === "dong" ? "" : x.level === "region" ? " (구·시)" : " (권역·시도)"}` : "-"; },
+  },
+  {
     key: "fee", label: (subject, level) => `${feeName(subject, level).replace(" 등록", "")} (중간값)`,
     value: (r) => r.fee?.median || 0,
     text: (r) => (r.fee ? won(r.fee.median) : "-"),
@@ -695,11 +833,11 @@ const COLUMNS = [
 function renderCompare(rows, data, subject, level) {
   const hasSales = Boolean(data.salesPeriod);
   // 휴대폰에서도 바로 보이도록 매출과 경쟁 지표를 동 이름 옆에 둡니다.
-  const order = ["name", "risk", "localUse", "perStudent", "sales", "fervor", "apt", "change", "opened", "newApts", "ratio", "fee", "students", "academies"];
+  const order = ["name", "risk", "localUse", "perStudent", "sales", "fervor", "apt", "rent", "change", "opened", "newApts", "ratio", "fee", "students", "academies"];
   const hasApt = Boolean(data.aptPeriod);
   const hasTrend = Boolean(data.pastYear);
   const hasNewApts = data.areas.some((a) => a.newApts?.length);
-  const cols = COLUMNS.filter((c) => (hasSales || !c.salesOnly) && (hasApt || !c.aptOnly)
+  const cols = COLUMNS.filter((c) => (hasSales || !c.salesOnly) && (hasApt || !c.aptOnly) && (rent || !c.rentOnly)
     && (hasTrend || c.key !== "change") && (data.areas[0]?.opened || c.key !== "opened") && (c.key !== "risk" || data.areas.some((a) => riskOf(a, data))) && (hasNewApts || c.key !== "newApts")).sort((a, b) => order.indexOf(a.key) - order.indexOf(b.key));
   if (!cols.some((c) => c.key === sortKey)) sortKey = "ratio";
   const list = rows.map((r) => ({ ...r, data, subject, level, fee: feeOf(r.area.fees, subject, level), perMonth: monthlyPerAcademy(r.area) }));
@@ -805,8 +943,11 @@ function recItem(x, i, opts, scopeName) {
   if (x.kind === "out" || x.kind === "someOut") lines.push(`매출로 보면 동네 학생이 다른 동 학원으로 많이 다닙니다(기대치의 ${pct(x.flow.use)}). 동네에서 붙잡을 수 있다면 기회지만, 이미 다니는 학원에서 옮겨 오게 만들어야 합니다.`);
   if (x.kind === "in") lines.push(`다른 동 학생이 찾아오는 학원가입니다(기대치의 ${pct(x.flow.use)}). 수요는 크지만 이름난 학원과 경쟁합니다.`);
   if (x.nearby) lines.push(x.nearby);
+  const [m2, sizeName] = RENT_SIZES[budget];
+  const rentLine = rentText(x.area, x.data, m2, sizeName);
+  if (rentLine) lines.push(rentLine.replace(/^<div class="rank-sub">|<\/div>$/g, ""));
   const warn = [];
-  if (x.bigHub && budget === "mid") warn.push(`입시·보습 학원 ${fmt(x.area.academies.all)}곳이 모인 대형 학원가라 임대료와 시설 경쟁이 셀 수 있습니다. 예산 3천만~1억원이면 현장 임대료를 먼저 확인하세요.`);
+  if (x.bigHub && budget === "mid") warn.push(`입시·보습 학원 ${fmt(x.area.academies.all)}곳이 모인 대형 학원가라 임대료와 시설 경쟁이 셀 수 있습니다. 예산 3천만~1억원이면 아래 임대료 어림보다 현장 시세를 먼저 확인하세요.`);
   if (x.bigHub && years >= 10) warn.push("경력이 길어 대형 학원가도 후보에 넣었습니다. 이름난 학원과 겨룰 강점(실적·커리큘럼)이 있는지가 관건입니다.");
   if (x.risk?.caution) warn.push(`학원이 학생보다 1년에 ${pp(x.risk.gap).slice(1)}p 더 빨리 늘어 '주의' 동입니다(초·중·고 전체 기준).`);
   if (x.area.students[level] < 500) warn.push(`${L}이 ${fmt(x.area.students[level])}명뿐이라 몇 명만 바뀌어도 증감률이 크게 흔들립니다.`);
@@ -841,7 +982,7 @@ async function runRecommend(e) {
   recEls.result.innerHTML = res.top.length
     ? `<p class="rec-note"><strong>${scopeName}</strong>에서 ${LEVEL_LABELS[opts.level]} 수가 학원보다 빨리 느는(덜 주는) 순서로 고르고, 학원 1곳당 학생이 많을수록 조금 더 올렸습니다. 후보 ${fmt(res.total)}곳 중 상위 ${res.top.length}곳입니다.</p>
        <ol class="rec-list">${res.top.map((x, i) => recItem(x, i, opts, scopeName)).join("")}</ol>
-       <p class="rec-note">뺀 곳: ${rules.join(", ")}. 학원 증가율은 폐업 자료가 과목별로 없어 입시·보습 학원 전체로 봅니다. 상가 임대료와 아파트 시세 자료는 아직 받지 못해(공공데이터 활용 승인 대기), 예산은 대형 학원가를 뺄지 정하는 데만 썼습니다. 최종 결정 전에 현장 임대료와 상가를 꼭 확인하세요.</p>`
+       <p class="rec-note">뺀 곳: ${rules.join(", ")}. 학원 증가율은 폐업 자료가 과목별로 없어 입시·보습 학원 전체로 봅니다. 예산은 대형 학원가를 뺄지 정하고, 상가 임대료를 그 예산에 흔한 넓이(3천만원 미만 15평, 1억원 미만 30평, 그 이상 60평)로 어림하는 데 썼습니다. 아파트 시세 자료는 아직 받지 못했습니다(공공데이터 활용 승인 대기). 최종 결정 전에 현장 임대료와 상가를 꼭 확인하세요.</p>`
     : `<p class="rec-note">조건에 맞는 동이 없습니다. 범위를 넓히거나 대상을 바꿔 보세요. (뺀 곳: ${rules.join(", ")})</p>`;
 }
 
@@ -910,6 +1051,11 @@ async function init() {
     return;
   }
   allRegions = regions;
+  try {
+    rent = indexRent(await fetchJson("data/rent.json"));
+  } catch (e) {
+    console.warn(e); // 임대료 자료가 없어도 나머지는 그대로 보입니다.
+  }
   fillTowns();
   recEls.form.addEventListener("submit", runRecommend);
   recEls.result.addEventListener("click", (e) => {
