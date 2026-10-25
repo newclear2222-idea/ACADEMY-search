@@ -64,6 +64,16 @@ def main():
     rent_tables = [t for t in tables if "임대료" in (t.get("STATBL_NM") or "")]
     for t in rent_tables:
         print(f"  {t.get('STATBL_ID')} | {t.get('STATBL_NM')} | 주기 {t.get('DTACYCLE_CD')} | {t.get('RPSTUI_NM') or ''}")
+    # 층별 임대료·효용비율 표가 있는지 살핍니다(학원은 1층을 거의 쓰지 않아 2층 이상 값이 필요합니다).
+    for t in [t for t in tables if "층" in (t.get("STATBL_NM") or "")]:
+        print(f"  [층] {t.get('STATBL_ID')} | {t.get('STATBL_NM')} | 주기 {t.get('DTACYCLE_CD')}")
+        try:
+            rows, total = call("SttsApiTblData", key, pIndex=1, pSize=40, STATBL_ID=t["STATBL_ID"], DTACYCLE_CD=t.get("DTACYCLE_CD") or "QY")
+            print(f"      {total}줄, 항목 {sorted({r.get('ITM_NM') for r in rows})}")
+            for r in rows[:12]:
+                print(f"      {r.get('WRTTIME_DESC')} | {r.get('CLS_FULLNM')} | {r.get('ITM_FULLNM') or r.get('ITM_NM')} | {r.get('DTA_VAL')} {r.get('UI_NM')}")
+        except Exception as e:
+            print(f"      읽기 실패: {e}")
     out = {"source": "한국부동산원 상업용부동산 임대동향조사 (R-ONE)", "unit": "", "tables": {}}
     for kind, word in WANT.items():
         # 같은 통계가 기간별로 나뉘어 있어(예: '(2022년~)', '(2024년3분기~)') 가장 최근에 시작한 표를 씁니다.
