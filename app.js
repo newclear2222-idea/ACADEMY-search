@@ -935,7 +935,7 @@ function recItem(x, i, opts, scopeName) {
   const lines = [];
   lines.push(`학생: ${studentLine(x.area, level, x.st, x.data)}`);
   lines.push(`학원(입시·보습 전체): ${growthLine(x.g, x.data).replace(/^학원 /, "")}`);
-  lines.push(`차이: 학생 ${pp(x.st.rate)} − 학원 ${pp(x.g.rate)} = <strong>${pp(x.gap)}p</strong> (클수록 학생이 학원보다 빨리 늚)`);
+  lines.push(`차이: ${L} ${pp(x.st.rate)} − 학원 ${pp(x.g.rate)} = <strong>${pp(x.gap)}p</strong> (클수록 학생이 학원보다 빨리 늚)`);
   lines.push(x.academies
     ? `${S} 1곳당 ${L} <strong>${fmt(Math.round(x.perAcademy))}명</strong> (${scopeName} 후보 평균 ${fmt(Math.round(opts.avg))}명의 ${(Math.round(x.perAcademy / opts.avg * 10) / 10).toFixed(1)}배) · ${S} ${fmt(x.academies)}곳, 최근 1년 새로 연 곳 ${fmt(x.area.opened?.["1y"][subject] || 0)}곳`
     : `등록된 ${S}이 없습니다. 비어 있는 시장일 수도, 수요가 작아 아무도 들어오지 않은 곳일 수도 있어 현장 확인이 필요합니다.`);
@@ -950,10 +950,17 @@ function recItem(x, i, opts, scopeName) {
   const warn = [];
   if (x.bigHub && budget === "mid") warn.push(`입시·보습 학원 ${fmt(x.area.academies.all)}곳이 모인 대형 학원가라 임대료와 시설 경쟁이 셀 수 있습니다. 예산 3천만~1억원이면 아래 임대료 어림보다 현장 시세를 먼저 확인하세요.`);
   if (x.bigHub && years >= 10) warn.push("경력이 길어 대형 학원가도 후보에 넣었습니다. 이름난 학원과 겨룰 강점(실적·커리큘럼)이 있는지가 관건입니다.");
-  if (x.risk?.caution) warn.push(`학원이 학생보다 1년에 ${pp(x.risk.gap).slice(1)}p 더 빨리 늘어 '주의' 동입니다(초·중·고 전체 기준).`);
+  // 주의·위험 표시는 동 전체(초·중·고) 기준이라, 고른 학년과 방향이 다를 수 있어 두 숫자를 함께 적습니다.
+  if (x.risk?.caution) {
+    const k = x.risk;
+    const base = `초·중·고 전체 학생은 1년 ${pp(k.students.rate)}로 학원(${pp(k.growth.rate)})보다 ${pp(k.gap).slice(1)}p 느리게 늘어, 동 전체로는 '주의' 동입니다(주의·위험 표시는 초·중·고 전체 기준).`;
+    warn.push(level === "total" ? base
+      : x.gap > 0 ? `${L}은 학원보다 빨리 늘지만, ${base} 다른 학년은 덜 늘거나 줄고 있다는 뜻이라, 그 학년을 가르치던 학원들이 ${L} 쪽으로 넘어오면 경쟁이 세질 수 있습니다.`
+      : base);
+  }
   if (x.area.students[level] < 500) warn.push(`${L}이 ${fmt(x.area.students[level])}명뿐이라 몇 명만 바뀌어도 증감률이 크게 흔들립니다.`);
   return `<li>
-    <div class="rec-head"><span>${i + 1}. ${place}</span><span class="score">학생이 학원보다 1년 ${pp(x.gap)}p</span></div>
+    <div class="rec-head"><span>${i + 1}. ${place}</span><span class="score">${L}이 학원보다 1년 ${pp(x.gap)}p</span></div>
     ${lines.map((t) => `<div class="rank-sub">${t}</div>`).join("")}
     ${warn.map((t) => `<div class="rank-sub"><span class="risk-text">주의</span> ${t}</div>`).join("")}
     <button type="button" class="rec-open" data-region="${x.data.id}" data-province="${x.data.province}" data-name="${x.area.name}">이 동 자세히 보기</button>
