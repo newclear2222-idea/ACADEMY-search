@@ -261,3 +261,18 @@ th { color: var(--muted); font-weight: 600; }
 .rp-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 4px 10px; }
 .rp-form > .rec-go { align-self: flex-start; }
 .saju-chart th, .saju-chart td { text-align: center; white-space: normal; vertical-align: top; }
+
+/* 개원 상담 신청(intake.html)과 받은 상담 신청 */
+.rp-form input[type="text"], .rp-form input[type="tel"], .rp-form input[type="email"], .rp-form textarea,
+.inbox input, .inbox textarea { font: inherit; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--text); width: 100%; min-width: 0; }
+.rp-form textarea, .inbox textarea { resize: vertical; }
+.intake { margin: 0 0 32px; }
+.intake-saju { display: flex; flex-direction: column; gap: 10px; }
+.intake-terms { margin: 0; padding-left: 1.2em; font-size: 0.9rem; color: var(--muted); }
+.intake-trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.inbox .rec-list { margin-top: 10px; }
+.inbox .rec-list .rec-go { align-self: flex-start; margin-top: 4px; }
+.inbox-paste { margin-top: 12px; display: flex; flex-direction: column; gap: 8px; }
+.inbox-paste > summary { cursor: pointer; font-size: 0.9rem; color: var(--muted); }
+.inbox-paste[open] { display: flex; }
+.inbox-paste .rec-go { align-self: flex-start; margin-top: 8px; }

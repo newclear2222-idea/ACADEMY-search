@@ -92,6 +92,28 @@
       <article id="rec-report" class="report" hidden></article>
     </details>
 
+    <details class="recommend inbox" id="inbox-box">
+      <summary>받은 상담 신청: 상담 신청 사이트로 들어온 내용으로 바로 개원 보고서 만들기</summary>
+      <p class="rec-note">상담 신청 사이트(intake.html)에 들어온 신청은 구글 시트에 쌓입니다. 시트 주소와 비밀번호를 한 번 넣으면 이 브라우저가 기억합니다.</p>
+      <div class="controls rec-controls">
+        <label>시트 주소 (Apps Script 웹 앱)
+          <input id="inbox-url" type="url" placeholder="https://script.google.com/macros/s/…/exec" autocomplete="off">
+        </label>
+        <label>비밀번호
+          <input id="inbox-key" type="password" autocomplete="off">
+        </label>
+        <button type="button" class="rec-go" id="inbox-load">신청 불러오기</button>
+      </div>
+      <p id="inbox-status" class="rec-note" aria-live="polite"></p>
+      <ul id="inbox-list" class="rec-list"></ul>
+      <details class="inbox-paste">
+        <summary>직접 붙여넣기 (시트 연결이 안 될 때)</summary>
+        <p class="rec-note">구글 시트에서 그 신청 줄의 맨 끝 '원본' 칸을 복사해 넣으세요.</p>
+        <textarea id="inbox-paste" rows="3" placeholder='{"v":1,"name":"…"}'></textarea>
+        <button type="button" class="rec-go" id="inbox-apply">이 내용으로 보고서 만들기</button>
+      </details>
+    </details>
+
     <details class="recommend report-maker" id="report-maker">
       <summary>개원 보고서 만들기: 예산·경력·원하는 지역을 자세히 넣고 보고서로 받기</summary>
       <form id="rp-form" class="rp-form">
@@ -231,5 +253,6 @@
   </main>
 
   <script src="app.js"></script>
+  <script src="inbox.js"></script>
 </body>
 </html>
