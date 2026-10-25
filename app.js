@@ -336,22 +336,39 @@ const RISK_MIN_STUDENTS = 500;
 function academyGrowth(area, data) {
   const h = area.historyChange;
   if (h && h.before >= RISK_MIN_ACADEMIES) {
-    return { rate: (h.change / h.before) * (12 / h.months), source: "history",
-      text: `교육청 등록 입시·보습 학원이 ${h.from.replace("-", "년 ")}월 ${fmt(h.before)}곳에서 지금 ${fmt(h.before + h.change)}곳(${h.months}개월, 문 연 곳과 닫은 곳을 모두 반영)` };
+    return { rate: (h.change / h.before) * (12 / h.months), source: "history", ...h };
   }
   const s = area.storeFlow;
   if (s && s.base >= RISK_MIN_ACADEMIES) {
-    return { rate: (s.open - s.close) / s.base, source: "store", open: s.open, close: s.close,
-      text: `최근 1년 학원 개업 ${fmt(s.open)}곳, 폐업 ${fmt(s.close)}곳(서울시 상권분석 ${data.storePeriod}, 학원 약 ${fmt(s.base)}곳 기준)` };
+    return { rate: (s.open - s.close) / s.base, source: "store", open: s.open, close: s.close, base: s.base, period: data.storePeriod };
   }
   const c = data.seoulStoreRate?.close;
   const all = area.academies.all;
   if (c != null && all >= RISK_MIN_ACADEMIES && area.opened) {
     const open = area.opened["1y"].all;
-    return { rate: open / all - c, source: "estimate",
-      text: `최근 1년 새로 연 학원 ${fmt(open)}곳(지금 ${fmt(all)}곳의 ${pct(open / all)})에서 폐업 추정 ${pct(c)}를 뺀 값(이 동 폐업 자료가 없어 서울 학원 평균 폐업률을 썼습니다)` };
+    return { rate: open / all - c, source: "estimate", open, close: c * all, base: all, closeRate: c };
   }
   return null;
+}
+const signedN = (n) => `${n >= 0 ? "+" : "−"}${fmt(Math.abs(Math.round(n)))}`;
+// 학원 순증가를 계산 과정까지 한 줄로 적습니다. 추정이면 [추정]을 붙입니다.
+function growthLine(g, data) {
+  if (g.source === "history") {
+    return `학원 ${g.from.replace("-", "년 ")}월 ${fmt(g.before)}곳 → 지금 ${fmt(g.before + g.change)}곳(${g.months}개월, 순증 ${signedN(g.change)}곳) = 1년으로 <strong>${pp(g.rate)}</strong> (교육청 등록 입시·보습 학원 실제 변화)`;
+  }
+  if (g.source === "store") {
+    return `학원 최근 1년 개업 ${fmt(g.open)}곳 − 폐업 ${fmt(g.close)}곳 = 순증 ${signedN(g.open - g.close)}곳, 학원 약 ${fmt(g.base)}곳 대비 <strong>${pp(g.rate)}</strong> (서울시 상권분석 ${g.period}, 실제 집계)`;
+  }
+  const where = g.source === "region" ? `이 동은 학원이 ${RISK_MIN_ACADEMIES}곳 미만이라 ${shortRegion(data.region)} 전체 값: ` : "";
+  if (g.closeRate != null) {
+    return `${where}학원 최근 1년 새로 연 곳 ${fmt(g.open)}곳(교육청) − 폐업 추정 약 ${fmt(Math.round(g.close))}곳(${fmt(g.base)}곳 × 서울 학원 평균 폐업률 ${(Math.round(g.closeRate * 1000) / 10).toFixed(1)}%) = 순증 약 ${signedN(g.open - g.close)}곳, ${fmt(g.base)}곳 대비 <strong>${pp(g.rate)}</strong> <span class="caution-text">[추정]</span>`;
+  }
+  return `${where}학원 최근 1년 개업 ${fmt(g.open)}곳 − 폐업 ${fmt(g.close)}곳 = 순증 ${signedN(g.open - g.close)}곳, 약 ${fmt(g.base)}곳 대비 <strong>${pp(g.rate)}</strong> (서울시 상권분석)`;
+}
+function studentLine(area, level, st, data) {
+  const now = area.students[level], before = area.studentsPast[level];
+  const year = Number((data.baseDate || "").match(/(\d{4})년/)?.[1]);
+  return `${LEVEL_LABELS[level]} ${data.pastYear}년 ${fmt(before)}명 → ${year}년 ${fmt(now)}명(${signedN(now - before)}명, ${st.years}년 ${pp(st.change)}) = 1년으로 <strong>${pp(st.rate)}</strong>`;
 }
 // 학생 증감률을 1년 단위로 바꿉니다. 예: 2년에 −6%면 1년 약 −3%.
 function studentRate(area, level, data) {
@@ -370,27 +387,26 @@ function riskOf(area, data) {
   return { growth: g, students: st, gap, risky: gap >= RISK_GAP, caution: gap >= CAUTION_GAP && gap < RISK_GAP };
 }
 const pp = (x) => `${x >= 0 ? "+" : "−"}${(Math.round(Math.abs(x) * 1000) / 10).toFixed(1)}%`;
+function verdictLine(k) {
+  const calc = `학원 ${pp(k.growth.rate)} − 학생 ${pp(k.students.rate)} = <strong>${pp(k.gap)}p</strong>`;
+  if (k.risky) return `차이: ${calc} → 위험 기준 ${RISK_GAP * 100}%p 이상이라 <strong class="risk-text">위험지역</strong>. 학원 1곳이 나눠 가질 학생이 해마다 줄어 매출을 유지하거나 올리기 어려워지는 곳입니다.`;
+  if (k.caution) return `차이: ${calc} → 주의 기준 ${CAUTION_GAP * 100}%p 이상, 위험 기준 ${RISK_GAP * 100}%p 미만이라 <strong class="caution-text">주의</strong>. 학원 1곳당 학생이 서서히 줄어드는 곳입니다.`;
+  return `차이: ${calc} → 주의 기준(${CAUTION_GAP * 100}%p)보다 작습니다. 서울·경기·인천 동의 가운데값은 약 +4%p입니다.`;
+}
+// 카드에 바로 보이는 근거. 위험·주의 동은 학원·학생·차이를 줄마다 나눠 보여줍니다.
 function riskText(area, data) {
   const k = riskOf(area, data);
   if (!k) return "";
-  const head = k.risky ? '<strong class="risk-text">위험지역</strong>: ' : k.caution ? '<strong class="caution-text">주의</strong>: ' : "";
-  return `<div class="rank-sub">${head}학원 1년 순증가 <strong>${pp(k.growth.rate)}</strong> vs 학생 1년 <strong>${pp(k.students.rate)}</strong> (차이 ${pp(k.gap)}p)</div>`;
+  const lines = [growthLine(k.growth, data), studentLine(area, "total", k.students, data), verdictLine(k)];
+  const cls = k.risky ? "risk-box" : k.caution ? "risk-box caution" : "risk-box calm";
+  const title = k.risky ? "위험지역 판단 근거" : k.caution ? "주의 판단 근거" : "학원·학생 증가 속도";
+  return `<div class="${cls}"><div class="risk-title">${title}</div>${lines.map((t) => `<div>${t}</div>`).join("")}</div>`;
 }
 function riskReason(area, data) {
   const k = riskOf(area, data);
   if (!k) return "";
-  const st = area.students;
-  const stu = `초·중·고 학생은 ${data.pastYear}년 ${fmt(area.studentsPast.total)}명에서 ${fmt(st.total)}명으로 ${k.students.years}년에 ${signedPct(k.students.change)}, 1년으로는 ${pp(k.students.rate)}입니다`;
-  const aca = `학원은 ${k.growth.text}, 1년 순증가율 ${pp(k.growth.rate)}입니다`;
-  const read = k.risky
-    ? `학원이 학생보다 1년에 ${pp(k.gap).slice(1)}p 더 빨리 늘어 위험지역으로 표시했습니다. 학원 1곳이 나눠 가질 학생이 해마다 줄어, 지금 매출을 유지하거나 올리기 어려워지는 곳입니다.`
-    : k.caution
-      ? `학원이 학생보다 1년에 ${pp(k.gap).slice(1)}p 더 빨리 늘어 주의로 표시했습니다(위험 기준은 +${RISK_GAP * 100}%p). 학원 1곳당 학생이 서서히 줄어드는 곳입니다.`
-      : k.gap > 0
-      ? `학원이 학생보다 조금 더 빨리 늘지만 차이(${pp(k.gap)}p)가 서울·경기·인천의 보통 수준(약 +4%p)보다 작습니다.`
-      : `학생보다 학원이 덜 늘어(차이 ${pp(k.gap)}p) 학원 1곳당 학생은 유지되거나 늘어나는 쪽입니다.`;
-  const caveat = k.growth.source === "estimate" ? " 폐업은 추정이라 매달 쌓는 학원 수 기록이 6개월 모이면 실제 값으로 바뀝니다." : "";
-  return `학원과 학생 증가 속도: ${stu}. ${aca}. ${read}${caveat}`;
+  const caveat = k.growth.source === "estimate" ? " 경기·인천은 폐업 자료가 없어 폐업 수를 서울 평균으로 추정했습니다. 매달 쌓는 학원 수 기록이 6개월 모이면 실제 값으로 바뀝니다." : "";
+  return `학원과 학생 증가 속도(위 판단 근거 참고): 학원 1년 ${pp(k.growth.rate)}, 학생 1년 ${pp(k.students.rate)}, 차이 ${pp(k.gap)}p입니다.${caveat}`;
 }
 function riskTag(area, data) {
   const k = riskOf(area, data);
@@ -761,19 +777,14 @@ function regionGrowth(data) {
   let g = null;
   const base = sum((a) => a.storeFlow?.base || 0);
   if (base >= RISK_MIN_ACADEMIES) {
-    g = { rate: (sum((a) => a.storeFlow?.open || 0) - sum((a) => a.storeFlow?.close || 0)) / base, source: "region" };
+    const open = sum((a) => a.storeFlow?.open || 0), close = sum((a) => a.storeFlow?.close || 0);
+    g = { rate: (open - close) / base, source: "region", open, close, base };
   } else if (data.seoulStoreRate && sum((a) => a.academies.all) >= RISK_MIN_ACADEMIES) {
-    g = { rate: sum((a) => a.opened?.["1y"].all || 0) / sum((a) => a.academies.all) - data.seoulStoreRate.close, source: "region" };
+    const all = sum((a) => a.academies.all), c = data.seoulStoreRate.close, open = sum((a) => a.opened?.["1y"].all || 0);
+    g = { rate: open / all - c, source: "region", open, close: c * all, base: all, closeRate: c };
   }
   regionGrowthCache.set(data, g);
   return g;
-}
-
-function growthShort(g) {
-  if (g.source === "region") return "이 동은 학원이 적어 구·시 전체 값";
-  if (g.source === "history") return "교육청 등록 학원 수 실제 변화";
-  if (g.source === "store") return `개업 ${fmt(g.open)}곳·폐업 ${fmt(g.close)}곳, 서울시 상권분석`;
-  return "새로 연 학원 − 폐업 추정";
 }
 
 function recItem(x, i, opts, scopeName) {
@@ -781,9 +792,10 @@ function recItem(x, i, opts, scopeName) {
   const L = LEVEL_LABELS[level];
   const S = SUBJECT_LABELS[subject];
   const place = `${shortRegion(x.data.region)} ${x.area.name}${townTag(x.data.id, x.area.name)}`;
-  const past = x.area.studentsPast[level];
   const lines = [];
-  lines.push(`${L} ${x.data.pastYear}년 ${fmt(past)}명 → ${fmt(x.students)}명 (${x.st.years}년 ${signedPct(x.st.change)}, 1년으로는 <strong>${pp(x.st.rate)}</strong>) · 학원 1년 순증가 <strong>${pp(x.g.rate)}</strong> (입시·보습 전체, ${growthShort(x.g)})`);
+  lines.push(`학생: ${studentLine(x.area, level, x.st, x.data)}`);
+  lines.push(`학원(입시·보습 전체): ${growthLine(x.g, x.data).replace(/^학원 /, "")}`);
+  lines.push(`차이: 학생 ${pp(x.st.rate)} − 학원 ${pp(x.g.rate)} = <strong>${pp(x.gap)}p</strong> (클수록 학생이 학원보다 빨리 늚)`);
   lines.push(x.academies
     ? `${S} 1곳당 ${L} <strong>${fmt(Math.round(x.perAcademy))}명</strong> (${scopeName} 후보 평균 ${fmt(Math.round(opts.avg))}명의 ${(Math.round(x.perAcademy / opts.avg * 10) / 10).toFixed(1)}배) · ${S} ${fmt(x.academies)}곳, 최근 1년 새로 연 곳 ${fmt(x.area.opened?.["1y"][subject] || 0)}곳`
     : `등록된 ${S}이 없습니다. 비어 있는 시장일 수도, 수요가 작아 아무도 들어오지 않은 곳일 수도 있어 현장 확인이 필요합니다.`);

@@ -204,3 +204,7 @@ th { color: var(--muted); font-weight: 600; }
 .rec-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px; font-weight: 700; }
 .rec-head .score { color: var(--accent); font-variant-numeric: tabular-nums; }
 .rec-open { font: inherit; font-size: 0.85rem; color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; text-align: left; width: fit-content; text-decoration: underline; }
+.risk-box { font-size: 0.85rem; font-variant-numeric: tabular-nums; border-left: 3px solid var(--risk); padding: 6px 10px; margin: 4px 0; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.risk-box.caution { border-left-color: var(--warn); }
+.risk-box.calm { border-left-color: var(--line); color: var(--muted); }
+.risk-title { font-weight: 700; }
