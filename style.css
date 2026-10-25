@@ -233,6 +233,9 @@ th { color: var(--muted); font-weight: 600; }
 .saju-type { border-left: 3px solid var(--line); padding: 2px 0 2px 12px; display: flex; flex-direction: column; gap: 4px; }
 .saju-plain th, .saju-plain td { white-space: normal; vertical-align: top; }
 .saju-plain th:first-child, .saju-plain td:first-child, .saju-plain th:last-child, .saju-plain td:last-child { white-space: nowrap; }
+.saju-ai { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.saju-ai .rec-note { flex-basis: 100%; }
+.saju-ai-out { white-space: pre-wrap; line-height: 1.7; border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; background: var(--surface); overflow-wrap: anywhere; }
 .saju-now td { font-weight: 700; background: var(--accent-soft); }
 .report-dong { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
 @media print {
