@@ -1710,6 +1710,8 @@ async function init() {
   });
   els.result.hidden = false;
   for (const el of [els.region, els.subject, els.level]) el.addEventListener("change", update);
+  // 위쪽 줄에서 고르면 표는 바로 바뀌지만 화면 아래에 있어서, 보기 버튼으로 그 자리까지 내려갑니다.
+  document.getElementById("view-go").addEventListener("click", () => els.result.scrollIntoView({ behavior: "smooth", block: "start" }));
   els.compareHead.addEventListener("click", (e) => {
     const key = e.target.closest("button")?.dataset.key;
     if (!key || !current) return;
