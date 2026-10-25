@@ -1,0 +1,20 @@
+name: 공공데이터 키 확인
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 실거래가·청약홈 1건씩 불러 보기
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        working-directory: scripts
+        run: python3 check_keys.py
