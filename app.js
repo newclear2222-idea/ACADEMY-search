@@ -134,7 +134,7 @@ function reasonsFor(r, ctx) {
   }
   if (risk) reasons.push(risk);
   else if (r.academies >= 5 && opened / r.academies >= 0.2) reasons.push(`지금 ${label} ${fmt(r.academies)}곳 중 ${fmt(opened)}곳이 최근 1년 안에 문을 열었습니다. 새로 들어오는 학원이 많습니다(문 닫은 학원 수는 이 동 자료가 없습니다).`);
-  const bigApts = (r.area.newApts || []).filter((x) => x.households >= 500 && x.moveIn >= thisMonth());
+  const bigApts = freshApts(r.area).filter((x) => x.households >= 500 && x.moveIn >= thisMonth());
   if (bigApts.length) reasons.push(`${bigApts.map((x) => `${x.name}(${fmt(x.households)}세대)`).join(", ")} 입주가 예정돼 있어 학생이 늘 수 있습니다.`);
 
   const areaFee = feeOf(r.area.fees, subject, level);
@@ -315,9 +315,10 @@ function trendText(area, data, subject, level) {
   const o = area.opened;
   if (o) lines.push(`최근 1년 새로 연 ${SUBJECT_LABELS[subject]} <strong>${fmt(o["1y"][subject])}곳</strong> (3년 ${fmt(o["3y"][subject])}곳)`);
   let html = lines.length ? `<div class="rank-sub">${lines.join(" · ")}</div>` : "";
-  if (area.newApts?.length) {
-    const items = area.newApts.slice(0, 4).map((x) => `${x.name} ${fmt(x.households)}세대 (${x.moveIn.replace("-", "년 ")}월 입주${x.moveIn < thisMonth() ? "" : " 예정"})`);
-    html += `<div class="rank-sub">새 아파트: ${items.join(", ")}${area.newApts.length > 4 ? ` 외 ${area.newApts.length - 4}곳` : ""}</div>`;
+  const apts = freshApts(area);
+  if (apts.length) {
+    const items = apts.slice(0, 4).map((x) => `${x.name} ${fmt(x.households)}세대 (${x.moveIn.replace("-", "년 ")}월 입주${x.moveIn < thisMonth() ? "" : " 예정"})`);
+    html += `<div class="rank-sub">새 아파트: ${items.join(", ")}${apts.length > 4 ? ` 외 ${apts.length - 4}곳` : ""}</div>`;
   }
   return html;
 }
@@ -378,17 +379,55 @@ function studentRate(area, level, data) {
   if (change === null || years <= 0) return null;
   return { rate: (1 + change) ** (1 / years) - 1, change, years };
 }
+// 곧(이번 달부터 내년 말까지) 입주하는 새 아파트가 데려올 학생을 어림해 학생 증가율에 더합니다.
+// 세대당 학생 수는 신축 아파트에 흔히 쓰는 어림값이고, 교육청이 단지마다 정하는 학생 유발률과 다를 수 있습니다.
+const MOVEIN_PER_HOUSEHOLD = { elem: 0.25, middle: 0.12, high: 0.1 };
+MOVEIN_PER_HOUSEHOLD.total = MOVEIN_PER_HOUSEHOLD.elem + MOVEIN_PER_HOUSEHOLD.middle + MOVEIN_PER_HOUSEHOLD.high;
+const MOVEIN_CAP = 0.3; // 학생이 적은 동에서 가산이 지나치게 커지지 않게 1년 +30%까지만 더합니다.
+// 같은 세대를 다시 모집하는 공고(추가입주자·취소분·잔여 세대)와, 본청약이 따로 있는 사전청약은 빼서 두 번 세지 않습니다.
+const REOFFER = /추가입주자|취소분|자격상실|당첨취소|잔여|무순위|보류지|재공급/;
+function freshApts(area) {
+  const list = (area.newApts || []).filter((x) => !REOFFER.test(x.name));
+  const base = (n) => n.replace(/\((사전청약|본청약)\)/g, "").trim();
+  const main = new Set(list.filter((x) => !/사전청약/.test(x.name)).map((x) => base(x.name)));
+  return list.filter((x) => !/사전청약/.test(x.name) || !main.has(base(x.name)));
+}
+const monthIndex = (ym) => Number(ym.slice(0, 4)) * 12 + Number(ym.slice(5, 7)) - 1;
+function moveInBoost(area, level) {
+  const now = thisMonth();
+  const end = `${Number(now.slice(0, 4)) + 1}-12`;
+  const list = freshApts(area).filter((x) => x.moveIn >= now && x.moveIn <= end);
+  const students = area.students[level];
+  if (!list.length || !students) return null;
+  const households = list.reduce((t, x) => t + x.households, 0);
+  const per = MOVEIN_PER_HOUSEHOLD[level];
+  const added = households * per;
+  const last = list.reduce((m, x) => (x.moveIn > m ? x.moveIn : m), now);
+  const horizon = Math.max(1, (monthIndex(last) - monthIndex(now) + 1) / 12);
+  const raw = added / students / horizon;
+  return { list, households, per, added, students, horizon, rate: Math.min(MOVEIN_CAP, raw), capped: raw > MOVEIN_CAP, level };
+}
+function boostLine(b) {
+  const names = b.list.slice(0, 3).map((x) => `${x.name} ${fmt(x.households)}세대(${x.moveIn.replace("-", "년 ")}월)`).join(", ") + (b.list.length > 3 ? ` 외 ${b.list.length - 3}곳` : "");
+  const L = LEVEL_LABELS[b.level];
+  const years = b.horizon > 1 ? `${(Math.round(b.horizon * 10) / 10).toFixed(1)}년에 걸쳐 나눠` : "1년 안에";
+  return `입주 예정 가산: ${names} → 합계 ${fmt(b.households)}세대 × 세대당 ${L} ${b.per.toFixed(2)}명 = 약 ${fmt(Math.round(b.added))}명이 지금 ${L} ${fmt(b.students)}명에 더해진다고 보고, ${years} 들어오면 1년 <strong>${pp(b.rate)}</strong>${b.capped ? `(최대 ${pct(MOVEIN_CAP)}로 제한)` : ""} <span class="caution-text">[어림]</span>`;
+}
+const withBoost = (st, b) => st.rate + (b?.rate || 0);
+const studentCalc = (st, b) => (b ? `(학생 ${pp(st.rate)} + 입주 가산 ${pp(b.rate)})` : `학생 ${pp(st.rate)}`);
+
 function riskOf(area, data) {
   if (area.academies.all < RISK_MIN_ACADEMIES || area.students.total < RISK_MIN_STUDENTS) return null;
   const g = academyGrowth(area, data);
   const st = studentRate(area, "total", data);
   if (!g || !st) return null;
-  const gap = g.rate - st.rate;
-  return { growth: g, students: st, gap, risky: gap >= RISK_GAP, caution: gap >= CAUTION_GAP && gap < RISK_GAP };
+  const boost = moveInBoost(area, "total");
+  const gap = g.rate - withBoost(st, boost);
+  return { growth: g, students: st, boost, gap, risky: gap >= RISK_GAP, caution: gap >= CAUTION_GAP && gap < RISK_GAP };
 }
 const pp = (x) => `${x >= 0 ? "+" : "−"}${(Math.round(Math.abs(x) * 1000) / 10).toFixed(1)}%`;
 function verdictLine(k) {
-  const calc = `학원 ${pp(k.growth.rate)} − 학생 ${pp(k.students.rate)} = <strong>${pp(k.gap)}p</strong>`;
+  const calc = `학원 ${pp(k.growth.rate)} − ${studentCalc(k.students, k.boost)} = <strong>${pp(k.gap)}p</strong>`;
   if (k.risky) return `차이: ${calc} → 위험 기준 ${RISK_GAP * 100}%p 이상이라 <strong class="risk-text">위험지역</strong>. 학원 1곳이 나눠 가질 학생이 해마다 줄어 매출을 유지하거나 올리기 어려워지는 곳입니다.`;
   if (k.caution) return `차이: ${calc} → 주의 기준 ${CAUTION_GAP * 100}%p 이상, 위험 기준 ${RISK_GAP * 100}%p 미만이라 <strong class="caution-text">주의</strong>. 학원 1곳당 학생이 서서히 줄어드는 곳입니다.`;
   return `차이: ${calc} → 주의 기준(${CAUTION_GAP * 100}%p)보다 작습니다. 서울·경기·인천 동의 가운데값은 약 +4%p입니다.`;
@@ -397,7 +436,7 @@ function verdictLine(k) {
 function riskText(area, data) {
   const k = riskOf(area, data);
   if (!k) return "";
-  const lines = [growthLine(k.growth, data), studentLine(area, "total", k.students, data), verdictLine(k)];
+  const lines = [growthLine(k.growth, data), studentLine(area, "total", k.students, data), ...(k.boost ? [boostLine(k.boost)] : []), verdictLine(k)];
   const cls = k.risky ? "risk-box" : k.caution ? "risk-box caution" : "risk-box calm";
   const title = k.risky ? "위험지역 판단 근거" : k.caution ? "주의 판단 근거" : "학원·학생 증가 속도";
   return `<div class="${cls}"><div class="risk-title">${title}</div>${lines.map((t) => `<div>${t}</div>`).join("")}</div>`;
@@ -406,7 +445,8 @@ function riskReason(area, data) {
   const k = riskOf(area, data);
   if (!k) return "";
   const caveat = k.growth.source === "estimate" ? " 경기·인천은 폐업 자료가 없어 폐업 수를 서울 평균으로 추정했습니다. 매달 쌓는 학원 수 기록이 6개월 모이면 실제 값으로 바뀝니다." : "";
-  return `학원과 학생 증가 속도(위 판단 근거 참고): 학원 1년 ${pp(k.growth.rate)}, 학생 1년 ${pp(k.students.rate)}, 차이 ${pp(k.gap)}p입니다.${caveat}`;
+  const boost = k.boost ? ` 곧 입주할 새 아파트 ${fmt(k.boost.households)}세대로 학생 1년 ${pp(k.boost.rate)}를 더했습니다.` : "";
+  return `학원과 학생 증가 속도(위 판단 근거 참고): 학원 1년 ${pp(k.growth.rate)}, 학생 1년 ${pp(withBoost(k.students, k.boost))}, 차이 ${pp(k.gap)}p입니다.${boost}${caveat}`;
 }
 function riskTag(area, data) {
   const k = riskOf(area, data);
@@ -799,8 +839,8 @@ const COLUMNS = [
   },
   {
     key: "newApts", label: "새 아파트",
-    value: (r) => (r.area.newApts || []).reduce((t, x) => t + x.households, 0),
-    text: (r) => { const n = (r.area.newApts || []).reduce((t, x) => t + x.households, 0); return n ? `${fmt(n)}세대` : "-"; },
+    value: (r) => freshApts(r.area).reduce((t, x) => t + x.households, 0),
+    text: (r) => { const n = freshApts(r.area).reduce((t, x) => t + x.households, 0); return n ? `${fmt(n)}세대` : "-"; },
   },
   {
     key: "apt", label: "아파트 평당가", aptOnly: true,
@@ -840,7 +880,7 @@ function renderCompare(rows, data, subject, level) {
   const order = ["name", "risk", "localUse", "perStudent", "sales", "fervor", "apt", "rent", "change", "opened", "newApts", "ratio", "fee", "students", "academies"];
   const hasApt = Boolean(data.aptPeriod);
   const hasTrend = Boolean(data.pastYear);
-  const hasNewApts = data.areas.some((a) => a.newApts?.length);
+  const hasNewApts = data.areas.some((a) => freshApts(a).length);
   const cols = COLUMNS.filter((c) => (hasSales || !c.salesOnly) && (hasApt || !c.aptOnly) && (rent || !c.rentOnly)
     && (hasTrend || c.key !== "change") && (data.areas[0]?.opened || c.key !== "opened") && (c.key !== "risk" || data.areas.some((a) => riskOf(a, data))) && (hasNewApts || c.key !== "newApts")).sort((a, b) => order.indexOf(a.key) - order.indexOf(b.key));
   if (!cols.some((c) => c.key === sortKey)) sortKey = "ratio";
@@ -896,7 +936,7 @@ function recommend(regionsData, opts) {
       if (bigHub && (years < 3 || budget === "small")) { skipped.hub += 1; continue; }
       if (kind === "in" && years < 3) { skipped.flowIn += 1; continue; }
       const nearby = area.nearby ? hubText(area, subject, data.id) : "";
-      pool.push({ data, area, students, st, g, risk, kind, flow, bigHub, nearby, academies: area.academies[subject] });
+      pool.push({ data, area, students, st, g, risk, kind, flow, bigHub, nearby, boost: moveInBoost(area, level), academies: area.academies[subject] });
     }
   }
   const sumS = pool.reduce((t, x) => t + x.students, 0);
@@ -905,7 +945,7 @@ function recommend(regionsData, opts) {
   for (const x of pool) {
     x.perAcademy = x.students / Math.max(x.academies, 1);
     x.comp = avg ? Math.min(3, Math.max(0.25, x.perAcademy / avg)) : 1;
-    x.gap = x.st.rate - x.g.rate;
+    x.gap = withBoost(x.st, x.boost) - x.g.rate;
     x.score = x.gap * 100 + 5 * Math.log2(x.comp);
   }
   pool.sort((a, b) => b.score - a.score);
@@ -938,7 +978,8 @@ function recItem(x, i, opts, scopeName) {
   const lines = [];
   lines.push(`학생: ${studentLine(x.area, level, x.st, x.data)}`);
   lines.push(`학원(입시·보습 전체): ${growthLine(x.g, x.data).replace(/^학원 /, "")}`);
-  lines.push(`차이: ${L} ${pp(x.st.rate)} − 학원 ${pp(x.g.rate)} = <strong>${pp(x.gap)}p</strong> (클수록 학생이 학원보다 빨리 늚)`);
+  if (x.boost) lines.push(boostLine(x.boost));
+  lines.push(`차이: ${x.boost ? `(${L} ${pp(x.st.rate)} + 입주 가산 ${pp(x.boost.rate)})` : `${L} ${pp(x.st.rate)}`} − 학원 ${pp(x.g.rate)} = <strong>${pp(x.gap)}p</strong> (클수록 학생이 학원보다 빨리 늚)`);
   lines.push(x.academies
     ? `${S} 1곳당 ${L} <strong>${fmt(Math.round(x.perAcademy))}명</strong> (${scopeName} 후보 평균 ${fmt(Math.round(opts.avg))}명의 ${(Math.round(x.perAcademy / opts.avg * 10) / 10).toFixed(1)}배) · ${S} ${fmt(x.academies)}곳, 최근 1년 새로 연 곳 ${fmt(x.area.opened?.["1y"][subject] || 0)}곳`
     : `등록된 ${S}이 없습니다. 비어 있는 시장일 수도, 수요가 작아 아무도 들어오지 않은 곳일 수도 있어 현장 확인이 필요합니다.`);
@@ -948,8 +989,9 @@ function recItem(x, i, opts, scopeName) {
   if (x.kind === "in") lines.push(`다른 동 학생이 찾아오는 학원가입니다(기대치의 ${pct(x.flow.use)}). 수요는 크지만 이름난 학원과 경쟁합니다.`);
   if (x.nearby) lines.push(x.nearby);
   if (x.area.apt) lines.push(`아파트 평당 <strong>${bigWon(x.area.apt[0])}</strong> (${x.data.aptPeriod} ${fmt(x.area.apt[1])}건의 중간값)`);
-  const comingApts = (x.area.newApts || []).filter((a) => a.moveIn >= thisMonth());
-  if (comingApts.length) lines.push(`입주 예정 새 아파트: ${comingApts.slice(0, 3).map((a) => `${a.name} ${fmt(a.households)}세대(${a.moveIn})`).join(", ")}${comingApts.length > 3 ? ` 외 ${comingApts.length - 3}곳` : ""}`);
+  const later = `${Number(thisMonth().slice(0, 4)) + 1}-12`;
+  const comingApts = freshApts(x.area).filter((a) => a.moveIn > later);
+  if (comingApts.length) lines.push(`그 뒤 입주 예정 새 아파트(가산에는 넣지 않음): ${comingApts.slice(0, 3).map((a) => `${a.name} ${fmt(a.households)}세대(${a.moveIn})`).join(", ")}${comingApts.length > 3 ? ` 외 ${comingApts.length - 3}곳` : ""}`);
   const [m2, sizeName] = RENT_SIZES[budget];
   const rentLine = rentText(x.area, x.data, m2, sizeName);
   if (rentLine) lines.push(rentLine.replace(/^<div class="rank-sub">|<\/div>$/g, ""));
@@ -959,7 +1001,7 @@ function recItem(x, i, opts, scopeName) {
   // 주의·위험 표시는 동 전체(초·중·고) 기준이라, 고른 학년과 방향이 다를 수 있어 두 숫자를 함께 적습니다.
   if (x.risk?.caution) {
     const k = x.risk;
-    const base = `초·중·고 전체 학생은 1년 ${pp(k.students.rate)}로 학원(${pp(k.growth.rate)})보다 ${pp(k.gap).slice(1)}p 느리게 늘어, 동 전체로는 '주의' 동입니다(주의·위험 표시는 초·중·고 전체 기준).`;
+    const base = `초·중·고 전체 학생은 1년 ${pp(withBoost(k.students, k.boost))}${k.boost ? "(입주 가산 포함)" : ""}로 학원(${pp(k.growth.rate)})보다 ${pp(k.gap).slice(1)}p 느리게 늘어, 동 전체로는 '주의' 동입니다(주의·위험 표시는 초·중·고 전체 기준).`;
     warn.push(level === "total" ? base
       : x.gap > 0 ? `${L}은 학원보다 빨리 늘지만, ${base} 다른 학년은 덜 늘거나 줄고 있다는 뜻이라, 그 학년을 가르치던 학원들이 ${L} 쪽으로 넘어오면 경쟁이 세질 수 있습니다.`
       : base);
