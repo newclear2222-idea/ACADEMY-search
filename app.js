@@ -1367,7 +1367,7 @@ async function sajuFor() {
   try { if (p.daeunStart != null) daeun = Saju.daeunTable(date, time, cal, gender, p.daeunStart); } catch (err) { console.warn(err); }
   return { p, tg: Saju.tenGodProfile(p.chart), daeun, birthSolar: Saju.solarBirth(date, cal), input: `${date} ${time || "시간 모름"} ${cal} ${gender}` };
 }
-// 풀이는 열 가지 십신의 무게(자리와 지장간 날수 비율)와 그 조합으로 읽습니다. 학파마다 판정이 갈리는 신강·신약은 쓰지 않습니다.
+// 사주 풀이는 Claude가 씁니다. 여기서는 만세력 계산값을 표로 보여 주고 Claude에게 넘길 자료를 만듭니다.
 // [한글 읽기, 오행, 그림, 성향, 학원에서는]
 const STEM_INFO = {
   甲: ["갑", "木", "큰 나무", "곧게 위로 자라는 큰 나무처럼 앞장서고 큰 그림을 그리는 성향입니다", "학원의 방향과 커리큘럼을 먼저 크게 세우고 밀고 나갈 때 강합니다. 고집이 세 보일 수 있으니 학부모 의견을 듣는 창구(정기 상담, 설문)를 따로 두세요"],
@@ -1385,176 +1385,43 @@ const BRANCH_KO = { 子: "자", 丑: "축", 寅: "인", 卯: "묘", 辰: "진", 
 const hanjaKo = (t) => [...t].map((ch) => STEM_INFO[ch]?.[0] || BRANCH_KO[ch] || ch).join("");
 const ganjiKo = hanjaKo;
 const ELEMENT_PLAIN = { 木: "나무", 火: "불", 土: "흙", 金: "쇠", 水: "물" };
-// 열 가지 십신: [묶음, 쉬운 뜻, 학원 운영에서는]
-const TEN_GODS = {
-  비견: ["비겁", "나와 나란한 기운. 독립심, 자기 방식, 동료", "1인 원장으로 내 방식대로 끌고 가는 힘, 동료 원장과의 연대"],
-  겁재: ["비겁", "나와 겨루는 기운. 승부욕, 과감함, 경쟁", "학원가 경쟁에서 밀리지 않는 승부욕과 공격적인 모집. 대신 돈이 새기 쉬움"],
-  식신: ["식상", "꾸준히 만들어 내는 힘. 성실한 실력, 여유", "매일 쌓이는 성실한 수업, 기초 관리, 입소문 나는 실력"],
-  상관: ["식상", "튀는 표현력. 말솜씨, 개성, 비판 정신", "스타 강사형 강의, 설명회 말솜씨, 기존 방식을 바꾸는 새 커리큘럼"],
-  편재: ["재성", "크게 움직이는 돈. 사업 확장, 기회 포착", "대규모 모집, 방학 특강·단기반, 분원 확장 같은 사업 감각"],
-  정재: ["재성", "차곡차곡 모으는 돈. 꼼꼼함, 안정", "수강료·정원 관리, 장기 재원생 유지, 안정적인 현금 흐름"],
-  편관: ["관성", "나를 세게 누르는 힘. 압박, 카리스마, 위기 대응", "엄격한 스파르타식 관리, 성적 압박을 견디는 힘, 위기 돌파"],
-  정관: ["관성", "나를 바르게 하는 힘. 규칙, 명예, 신용", "정석 시스템, 학원의 평판과 신뢰, 규정이 분명한 조직"],
-  편인: ["인성", "남다른 배움. 독특한 기획, 전문 지식, 직관", "틈새 과목·특화 커리큘럼, 독창적인 교재, 분석형 진단"],
-  정인: ["인성", "정통 배움과 보살핌. 학력, 자격, 신뢰", "학부모 신뢰, 차분한 상담, 정통 커리큘럼과 학력·자격"],
-};
-const GOD_ORDER = Object.keys(TEN_GODS);
-const GOD_SHORT = { 비견: "독립심", 겁재: "승부욕", 식신: "성실한 실력", 상관: "표현력", 편재: "사업 감각", 정재: "꼼꼼한 관리", 편관: "카리스마·위기 대응", 정관: "원칙·신용", 편인: "독창적 기획", 정인: "신뢰·상담" };
-const godLevel = (n) => (n < 0.3 ? "없음" : n < 1 ? "약함" : n < 2 ? "보통" : "강함");
+const GOD_ORDER = ["비견", "겁재", "식신", "상관", "편재", "정재", "편관", "정관", "편인", "정인"];
+const GYEOK_NAME = { 비견: "건록격", 겁재: "양인·월겁격", 식신: "식신격", 상관: "상관격", 편재: "편재격", 정재: "정재격", 편관: "편관(칠살)격", 정관: "정관격", 편인: "편인격", 정인: "정인격" };
 const fmt1 = (n) => (Math.round(n * 10) / 10).toFixed(1);
-const GYEOK_TEXT = {
-  비견: ["건록격", "자기 힘으로 서는 구조입니다. 남 밑에 있기보다 독립 개원에 맞고, 원장이 직접 뛰는 학원이 어울립니다"],
-  겁재: ["양인·월겁격", "추진력과 승부욕이 큰 구조입니다. 경쟁이 센 곳에서도 밀어붙이지만 독단과 큰 지출을 조심해야 합니다"],
-  식신: ["식신격", "꾸준한 실력과 여유의 구조입니다. 수업 품질로 오래 가는 입소문형 학원이 어울립니다"],
-  상관: ["상관격", "재능과 표현력의 구조입니다. 스타 강사형, 남과 다른 커리큘럼으로 이름을 내기 좋고, 규정·조직과의 마찰은 조심해야 합니다"],
-  편재: ["편재격", "사업가 기질의 구조입니다. 기회를 보고 크게 움직여 특강, 확장, 분원으로 키우는 데 강합니다"],
-  정재: ["정재격", "성실한 관리의 구조입니다. 정원과 수강료를 꼼꼼히 관리하는 안정형 학원이 어울립니다"],
-  편관: ["편관(칠살)격", "압박을 견디는 카리스마의 구조입니다. 엄격한 관리로 성적을 끌어올리는 스파르타형 운영에 강합니다"],
-  정관: ["정관격", "원칙과 신용의 구조입니다. 정석 시스템과 평판으로 크는 학원, 대형 학원이나 프랜차이즈 운영 방식과 잘 맞습니다"],
-  편인: ["편인격", "독특한 전문성의 구조입니다. 틈새·특화 과목, 진단·분석형 학원이 어울립니다"],
-  정인: ["정인격", "배움과 보살핌의 구조입니다. 학부모 신뢰와 상담으로 오래 다니게 하는 학원이 어울립니다"],
-};
-// 조합: 두 기운이 함께 있을 때의 흐름. need의 모든 조건이 맞으면 보여 줍니다.
-const PATTERNS = [
-  { name: "식상생재", kind: "good", need: [["식신", "상관"], ["편재", "정재"]], text: "가르치는 힘이 돈으로 이어지는 구조입니다. 수업과 콘텐츠가 곧 원생 모집과 매출이 되니, 실력을 보여 주는 특강·설명회가 가장 좋은 영업입니다" },
-  { name: "재생관", kind: "good", need: [["편재", "정재"], ["편관", "정관"]], text: "번 돈이 조직과 평판으로 커지는 구조입니다. 원생이 늘면 강사를 더해 시스템 학원으로 키우기 좋습니다" },
-  { name: "관인상생", kind: "good", need: [["편관", "정관"], ["편인", "정인"]], text: "체계와 신뢰가 이어지는 구조입니다. 대형 학원식 관리 시스템에 차분한 학부모 상담을 더하면 오래 다니는 학원이 됩니다" },
-  { name: "식신제살", kind: "good", need: [["식신"], ["편관"]], text: "압박을 실력으로 이겨 내는 구조입니다. 경쟁이 센 학원가에서도 수업의 질로 돌파할 힘이 있습니다" },
-  { name: "상관패인", kind: "good", need: [["상관"], ["정인"]], text: "튀는 재능을 신뢰로 다듬는 구조입니다. 개성 있는 수업에 차분한 상담을 더하면 '특별하지만 믿을 만한' 학원이 됩니다" },
-  { name: "비겁·식상(독립 실력형)", kind: "good", need: [["비견", "겁재"], ["식신", "상관"]], text: "내 실력으로 서는 구조입니다. 원장 직강 대표 반을 중심으로 시작하기 좋습니다" },
-  { name: "상관견관", kind: "warn", need: [["상관"], ["정관"]], text: "자유로운 표현과 규칙이 부딪치는 구조입니다. 프랜차이즈 규정, 윗사람, 학부모 민원에서 말이 앞서지 않게 조심하세요. 남의 틀보다 내 학원이 맞는 편입니다" },
-  { name: "비겁탈재", kind: "warn", need: [["비견", "겁재", 1.5], ["편재", "정재"]], text: "동업자나 강사와 돈이 얽히기 쉬운 구조입니다. 공동 투자는 신중히 하고, 계약서와 강사 경업 금지 조항을 챙기세요" },
-  { name: "재극인", kind: "warn", need: [["편재", "정재", 2], ["편인", "정인"]], text: "수익 계산이 신뢰와 공부를 누르기 쉬운 구조입니다. 매출보다 커리큘럼과 상담 품질을 먼저 지키세요" },
-  { name: "편인도식", kind: "warn", need: [["편인"], ["식신"]], text: "기획은 많은데 실행과 홍보가 막히기 쉬운 구조입니다. 계획을 작게 나눠 바로 실행하세요" },
-  { name: "관살혼잡", kind: "warn", need: [["편관"], ["정관"]], text: "책임과 압박이 겹치는 구조입니다. 강사·실장과 역할과 결정권을 문서로 분명히 나누세요" },
-];
-const PATTERN_MIN = 0.8; // 이만큼(지장간 무게 포함) 있어야 '있다'고 봅니다.
-const SIPSEONG_LACK = {
-  비겁: "혼자 버티는 힘이 약할 수 있습니다. 힘들 때 의논할 동료 원장이나 멘토를 두세요",
-  식상: "밖으로 드러내는 힘이 약할 수 있습니다. 홍보 글, 설명회처럼 알리는 일을 일정에 넣어 따로 챙기세요",
-  재성: "돈 계산이 약할 수 있습니다. 임대료·수강료·손익분기 원생 수를 숫자로 적어 두고 매달 확인하세요",
-  관성: "규칙과 체계가 약할 수 있습니다. 출결·숙제·보강·환불 규칙을 개원 전에 정해 두세요",
-  인성: "신뢰를 쌓는 데 시간이 걸릴 수 있습니다. 첫해에는 학부모 상담 시간을 넉넉히 잡으세요",
-};
-const DAEUN_MEAN = {
-  비겁: ["독립과 경쟁의 시기", "내 학원을 차리려는 마음과 추진력이 커집니다. 다만 동업이나 지출로 돈이 새기 쉬우니 투자 규모를 미리 정해 두세요"],
-  식상: ["실력과 콘텐츠로 이름을 알리는 시기", "수업, 설명회, 블로그처럼 실력을 보여 주는 일이 잘 풀리기 쉽습니다. 새 반이나 특강을 열어 보기 좋습니다"],
-  재성: ["사업과 수익을 키우는 시기", "원생과 매출을 늘리는 데 관심과 기회가 커집니다. 확장 욕심이 커지니 현금 흐름을 꼼꼼히 보세요"],
-  관성: ["조직과 책임의 시기", "체계를 갖추고 평판을 쌓기 좋습니다. 맡는 책임과 부담도 커지니 혼자 다 지지 말고 나눌 사람을 두세요"],
-  인성: ["준비와 배움의 시기", "자격, 커리큘럼, 인맥을 다지고 도움을 받기 좋습니다. 서두르기보다 준비를 탄탄히 하는 쪽이 낫습니다"],
-};
-// 세 가지 선택: 각 쪽에 가까운 십신의 무게를 더해 비율로 봅니다.
-const AXES = [
-  { title: "학원가냐 비학원가냐", a: ["학원가", ["겁재", "편관", "정관", "상관"]], b: ["비학원가 동네", ["식신", "정인", "편인", "정재"]],
-    aText: "학원가는 경쟁이 세지만 학생이 원래 모이는 곳입니다. 승부욕·압박을 견디는 힘·평판·튀는 강의력 쪽이 더 무거워, 다른 학원과 비교당하는 환경에서 오히려 힘을 낼 수 있다고 봅니다. 대신 임대료가 높으니 위 데이터의 임대료 어림과 꼭 함께 보세요.",
-    bText: "비학원가 동네는 경쟁이 덜한 대신 원장이 직접 학생을 모아야 합니다. 꾸준한 수업·신뢰·특화된 전문성·꼼꼼한 관리 쪽이 더 무거워, 아파트 단지나 학교 가까이에서 '우리 동네 선생님'으로 자리 잡는 방식이 맞습니다.",
-    tie: "두 쪽 무게가 비슷해서 입지는 사주보다 데이터(학생 증가, 학원 1곳당 학생 수, 임대료)로 정하는 편이 낫습니다." },
-  { title: "대대적 홍보냐 입소문이냐", a: ["대대적 홍보", ["상관", "편재", "겁재"]], b: ["입소문", ["식신", "정인", "정관", "정재"]],
-    aText: "튀는 표현력·사업 감각·승부욕 쪽이 더 무거워 현수막, 전단, 블로그, 설명회처럼 밖으로 크게 알리는 방식이 잘 맞습니다. 개원 초 3개월에 홍보 예산을 몰아 쓰고 무료 특강으로 실력을 먼저 보여 주세요.",
-    bText: "성실한 실력·신뢰·평판·꼼꼼함 쪽이 더 무거워 광고보다 다니는 학생과 학부모의 소개로 크는 쪽입니다. 첫 원생 10~20명을 확실히 관리하고 성적 변화와 상담 내용을 꾸준히 보내 소개가 생기게 하세요. 재원생 소개 혜택을 두면 좋습니다.",
-    tie: "두 쪽 무게가 비슷하니 개원 초에는 알리는 홍보, 자리 잡은 뒤에는 입소문 관리로 순서를 나누세요." },
-  { title: "강사 여럿 시스템이냐 1인 원장이냐", a: ["강사 여럿 시스템", ["정관", "편관", "편재", "정재"]], b: ["1인 원장 직강", ["비견", "식신", "상관", "편인"]],
-    aText: "규칙·관리·사업 감각 쪽이 더 무거워 강사를 여럿 두고 시스템으로 운영하는 쪽이 맞습니다. 처음부터 출결·숙제·테스트 매뉴얼을 만들고 원장은 상담과 관리에 집중하세요. 강사 수와 급여는 손익표를 보고 정하세요.",
-    bText: "독립심·가르치는 힘·특화된 전문성 쪽이 더 무거워 원장이 직접 가르치는 1인 운영이나 소수 강사로 시작하는 쪽이 맞습니다. 교습소나 소형 학원으로 시작해 대기 학생이 생기면 강사를 한 명씩 늘리세요.",
-    tie: "1인으로 시작해 원생이 늘면 강사를 더하는 단계형이 무난합니다." },
-];
-function sajuAxis(sc, ax) {
-  const sum = (keys) => keys.reduce((t, k) => t + (sc[k] || 0), 0);
-  const [aName, aKeys] = ax.a, [bName, bKeys] = ax.b;
-  const a = sum(aKeys), b = sum(bKeys);
-  const share = a + b ? a / (a + b) : 0.5;
-  const side = Math.abs(share - 0.5) < 0.08 ? "둘 다 가능" : `${Math.abs(share - 0.5) < 0.17 ? "약간 " : ""}${share > 0.5 ? aName : bName} 쪽`;
-  const why = (name, keys, n) => `${name} ${fmt1(n)} (${keys.map((k) => `${k} ${fmt1(sc[k] || 0)}`).join(", ")})`;
-  return { title: ax.title, side, aName, bName, share, text: side === "둘 다 가능" ? ax.tie : share > 0.5 ? ax.aText : ax.bText, why: `${why(aName, aKeys, a)} 대 ${why(bName, bKeys, b)}` };
-}
-// 그 십신이 어디서 왔는지: 년간, 월지(속) 같은 자리 목록
+// 그 십신이 어디서 왔는지: 년간 을, 월지 진(속 을) 같은 자리 목록
 function godWhere(tg, god) {
-  const seen = new Map();
-  for (const it of tg.items.filter((x) => x.god === god)) {
-    const label = it.branch ? `${it.pos} ${hanjaKo(it.branch)}(${it.part !== "정기" ? "속 " : ""}${hanjaKo(it.char)})` : `${it.pos} ${hanjaKo(it.char)}`;
-    seen.set(label, (seen.get(label) || 0) + it.w);
-  }
-  return [...seen.keys()].join(", ");
+  const seen = new Set();
+  for (const it of tg.items.filter((x) => x.god === god)) seen.add(it.branch ? `${it.pos} ${hanjaKo(it.branch)}(${it.part !== "정기" ? "속 " : ""}${hanjaKo(it.char)})` : `${it.pos} ${hanjaKo(it.char)}`);
+  return [...seen].join(", ");
 }
-function sajuPatterns(tg) {
-  const sc = tg.scores;
-  return PATTERNS.filter((pt) => pt.need.every((cond) => {
-    const min = typeof cond[cond.length - 1] === "number" ? cond[cond.length - 1] : PATTERN_MIN;
-    const gods = cond.filter((g) => typeof g === "string");
-    return gods.reduce((t, g) => t + (sc[g] || 0), 0) >= min;
-  })).map((pt) => ({ ...pt, why: pt.need.map((cond) => cond.filter((g) => typeof g === "string" && (tg.scores[g] || 0) > 0.05).map((g) => `${g} ${fmt1(tg.scores[g])}(${godWhere(tg, g)})`).join(" + ")).join(" / ") }));
+function sajuAge(saju) {
+  const now = new Date(), b = saju.birthSolar;
+  return now.getFullYear() - b.year - ((now.getMonth() + 1 < b.month || (now.getMonth() + 1 === b.month && now.getDate() < b.day)) ? 1 : 0);
 }
 function sajuSection(saju) {
   const { p, tg } = saju;
-  const sc = tg.scores;
-  const pillars = [["년주", p.chart.year], ["월주", p.chart.month], ["일주", p.chart.day], ["시주", p.chart.hour]];
-  const me = STEM_INFO[p.chart.day.stem];
-  const ranked = GOD_ORDER.filter((g) => (sc[g] || 0) >= 1).sort((a, b) => sc[b] - sc[a]);
-  const top = ranked.slice(0, 3);
-  const groups = {};
-  for (const g of GOD_ORDER) groups[TEN_GODS[g][0]] = (groups[TEN_GODS[g][0]] || 0) + (sc[g] || 0);
-  const lack = Object.keys(groups).filter((k) => groups[k] < 0.3);
-  const patterns = sajuPatterns(tg);
-  const goods = patterns.filter((x) => x.kind === "good"), warns = patterns.filter((x) => x.kind === "warn");
-  const axes = AXES.map((ax) => sajuAxis(sc, ax));
-  const gy = GYEOK_TEXT[tg.gyeok.god];
-  let daeunHtml = "", nowText = "";
-  if (saju.daeun.length) {
-    const now = new Date(), b = saju.birthSolar;
-    const age = now.getFullYear() - b.year - ((now.getMonth() + 1 < b.month || (now.getMonth() + 1 === b.month && now.getDate() < b.day)) ? 1 : 0);
-    saju.age = age;
-    const cur = saju.daeun.filter((d) => d.startAge <= age).pop();
-    const next = saju.daeun.find((d) => d.startAge > age);
-    const grp = (g) => TEN_GODS[g]?.[0];
-    const show = saju.daeun.filter((d) => d.startAge + 10 > age - 10).slice(0, 4);
-    let timing = `첫 대운이 ${saju.daeun[0].startAge}세에 시작합니다.`;
-    if (cur) {
-      nowText = `${DAEUN_MEAN[grp(cur.stemGod)][0]} (${ganjiKo(cur.ganji)} 대운, ${cur.stemGod}·${cur.branchGod})`;
-      timing = `지금 만 ${age}세는 ${cur.startAge}세에 시작한 <strong>${ganjiKo(cur.ganji)} 대운</strong>입니다. 앞 글자(천간)가 나에게 ${cur.stemGod}이라 <strong>${DAEUN_MEAN[grp(cur.stemGod)][0]}</strong>로 봅니다. ${DAEUN_MEAN[grp(cur.stemGod)][1]}.${grp(cur.branchGod) !== grp(cur.stemGod) ? ` 뒤 글자(지지)는 ${cur.branchGod}이라 ${DAEUN_MEAN[grp(cur.branchGod)][0]}의 기운도 함께 있습니다.` : ""}${next ? ` 이 흐름은 ${next.startAge}세 전까지 이어지고, 그다음 ${ganjiKo(next.ganji)} 대운은 ${next.stemGod}으로 ${DAEUN_MEAN[grp(next.stemGod)][0]}입니다.` : ""}`;
-    }
-    daeunHtml = `<h4>개원 시기: 대운으로 본 흐름</h4>
-    <p>대운은 10년마다 바뀌는 인생의 큰 흐름입니다. 대운 두 글자가 나(일간)에게 어떤 십신인지로 그 10년의 분위기를 봅니다.</p>
-    <p>${timing}</p>
-    <div class="table-wrap"><table class="report-table"><thead><tr><th class="num">시작 나이</th><th>대운</th><th>십신(앞·뒤 글자)</th><th>학원 운영으로 보면</th></tr></thead><tbody>${show.map((d) => `<tr${d === cur ? ' class="saju-now"' : ""}><td class="num">${d.startAge}세${d === cur ? " (지금)" : ""}</td><td>${ganjiKo(d.ganji)}(${d.ganji})</td><td>${d.stemGod}·${d.branchGod}</td><td>${DAEUN_MEAN[grp(d.stemGod)][0]}</td></tr>`).join("")}</tbody></table></div>
-    <p class="rec-note">앞 글자를 주로 보고 뒤 글자(정기 기준)를 함께 보는 풀이를 따랐습니다. 뒤 글자를 더 무겁게 보는 풀이도 있습니다.</p>`;
-  }
-  saju.reading = { top, goods, warns, axes, gy, nowText }; // AI 풀이에 넘길 요약
-  const patternHtml = (list) => list.map((x) => `<div class="saju-type"><p><strong>${x.name}</strong></p><p>${x.text}.</p><p class="rec-note">근거: ${x.why}</p></div>`).join("");
-  return `<h3>사주로 본 학원 운영 성향 (참고)</h3>
-    <div class="saju-summary"><p class="saju-summary-title">한눈에 보기</p><ul>
-      <li>바탕 구조(격국): <strong>${gy[0]}</strong></li>
-      <li>강하게 드러나는 기운: <strong>${top.map((g) => `${g}(${GOD_SHORT[g]})`).join(", ") || "고르게 퍼져 있음"}</strong></li>
-      ${goods.length ? `<li>살릴 조합: <strong>${goods.map((x) => x.name).join(", ")}</strong></li>` : ""}
-      ${warns.length ? `<li>조심할 조합: <strong>${warns.map((x) => x.name).join(", ")}</strong></li>` : ""}
-      ${axes.map((x) => `<li>${x.title}: <strong>${x.side}</strong></li>`).join("")}
-      ${nowText ? `<li>지금 10년: <strong>${nowText}</strong></li>` : ""}
-    </ul></div>
-    <h4>내 사주 읽는 법</h4>
-    <p>사주는 태어난 해·달·날·시를 두 글자씩, 모두 여덟 글자로 나타낸 것입니다. ${saju.input}으로 계산하면 ${pillars.map(([k, v]) => `${k} ${v?.korean || "모름"}`).join(", ")}입니다.${p.chart.hour ? "" : " 출생시간을 몰라 시주 두 글자는 빼고 보았습니다."} 태어난 날의 앞 글자(일간)가 '나'이고, 나머지 글자가 나와 어떤 관계인지를 열 가지 '십신'으로 봅니다.</p>
-    <p>단순히 개수만 세지 않고 세 가지를 더 봤습니다. ① 아래 글자(지지) 속에 숨은 글자(지장간)까지 날수 비율로 나눠 셌고, ② 태어난 달의 아래 글자(월지)는 2배, 태어난 날의 아래 글자(일지)는 1.5배로 무겁게 쳤으며, ③ 한 기운만 보지 않고 두 기운이 함께 있을 때의 조합을 읽었습니다.</p>
-    <div class="table-wrap"><table class="report-table saju-plain"><thead><tr><th>십신</th><th>쉬운 뜻</th><th>학원 운영에서는</th><th class="num">무게</th><th>어디에</th></tr></thead><tbody>${GOD_ORDER.map((g) => `<tr${(sc[g] || 0) >= 2 ? ' class="saju-now"' : ""}><td><strong>${g}</strong></td><td>${TEN_GODS[g][1]}</td><td>${TEN_GODS[g][2]}</td><td class="num">${fmt1(sc[g] || 0)} (${godLevel(sc[g] || 0)})</td><td>${godWhere(tg, g) || "-"}</td></tr>`).join("")}</tbody></table></div>
-    <p class="rec-note">'월지 진(속 을)'은 아래 글자 진 속에 숨은 을이라는 뜻으로, 겉으로 덜 드러나는 기운입니다. 괄호 안에 '속'이 없으면 그 글자의 중심 기운입니다.${tg.rooted.length ? ` 위 글자(천간)에 뜬 ${tg.rooted.map((r) => `${r.god}(${r.pos} ${hanjaKo(r.char)})`).join(", ")}은 아래 글자에도 뿌리가 있어 실제로 잘 드러나는 기운으로 봅니다.` : ""} 오행으로 세면 ${ELEMENTS.map((e) => `${ELEMENT_PLAIN[e]} ${p.counts[e]}`).join(", ")}개입니다.</p>
-    <h4>나는 어떤 사람인가: 일간</h4>
-    <p>나를 나타내는 글자는 <strong>${me[0]}${ELEMENT_KO[me[1]].slice(0, 1)}(${p.chart.day.stem}), ${me[2]}</strong>입니다. ${me[3]}. 학원에서는 ${me[4]}.</p>
-    <h4>바탕 구조: 격국</h4>
-    <p>태어난 달의 아래 글자 ${hanjaKo(p.chart.month.branch)} 속 ${hanjaKo(tg.gyeok.char)}(${tg.gyeok.char})${"무기계".includes(hanjaKo(tg.gyeok.char)) ? "가" : "이"} ${tg.gyeok.shown ? "위 글자에도 떠 있어" : "중심 기운이라"}, 이 ${tg.gyeok.god}을 바탕으로 보면 <strong>${gy[0]}</strong>입니다. ${gy[1]}.</p>
-    <p class="rec-note">격국을 정하는 법도 학파마다 조금씩 다릅니다. 여기서는 월지 속 글자 중 천간에 뜬 것을 먼저 보고(정기 → 중기 → 여기 순), 없으면 월지의 중심 글자로 정했습니다.</p>
-    <h4>강하게 드러나는 기운</h4>
-    ${top.length ? top.map((g) => `<div class="saju-type"><p><strong>${g}</strong> 무게 ${fmt1(sc[g])} · ${godWhere(tg, g)}</p><p>${TEN_GODS[g][1]}. 학원에서는 ${TEN_GODS[g][2]}.</p></div>`).join("") : "<p>어느 하나가 두드러지지 않고 고르게 퍼져 있습니다. 한쪽으로 치우치지 않는 대신, 강점을 일부러 정해 키우는 편이 좋습니다.</p>"}
-    ${goods.length ? `<h4>살릴 조합</h4>${patternHtml(goods)}` : ""}
-    ${warns.length ? `<h4>조심할 조합</h4>${patternHtml(warns)}` : ""}
-    ${p.chart && tg.clashes.length ? `<p><strong>부딪치는 자리(충).</strong> ${tg.clashes.map((c) => `${c.a}·${c.b}(${hanjaKo(c.pair)})`).join(", ")}이 서로 부딪칩니다. ${tg.clashes.some((c) => c.a === "월지" || c.b === "월지" || c.a === "일지" || c.b === "일지") ? "생활 기반이 자주 바뀌기 쉬운 구조라 이전·확장은 임대 계약 기간과 함께 신중히 정하되, 변화에 빠르게 대응하는 힘으로 쓸 수도 있습니다." : "변화와 이동이 잦을 수 있는 구조입니다."}</p>` : ""}
-    <h4>어떻게 운영할까: 세 가지 선택</h4>
-    ${axes.map((x) => `<div class="saju-type"><p><strong>${x.title} → ${x.side}</strong> (${x.aName} ${Math.round(x.share * 100)}% : ${x.bName} ${100 - Math.round(x.share * 100)}%)</p><p>${x.text}</p><p class="rec-note">근거(무게): ${x.why}</p></div>`).join("")}
-    ${lack.length ? `<h4>비어 있는 기운</h4><ul>${lack.map((k) => `<li>${k}이 거의 없음: ${SIPSEONG_LACK[k]}.</li>`).join("")}</ul>` : ""}
-    ${daeunHtml}
-    <div class="saju-ai no-save" hidden><button type="button" class="rec-go saju-ai-go">AI로 더 자세히 풀이 (Claude)</button><button type="button" class="report-ghost saju-ai-stop" hidden>멈추기</button><p class="rec-note">위 계산값을 Claude에게 보내 조합까지 엮어 문장으로 풀어 받습니다. 사장님 Claude 계정으로 처리되고 처음 한 번 허락을 묻습니다. 같은 사주라도 매번 문장은 조금씩 다를 수 있습니다.</p></div>
-    <div class="saju-ai-out" hidden></div>
-    <p class="rec-note">원국·오행·십신·지장간·대운은 원장일지 만세력 계산기와 같은 라이브러리 값입니다(대운 시작 나이는 정확한 절입 시각 기준 보정). 풀이는 십신과 조합을 널리 쓰는 뜻으로 읽어 학원 운영에 맞춰 옮긴 참고용 규칙이며, 학파마다 판정이 갈리는 신강·신약은 쓰지 않았습니다. 사주는 입지 추천과 순위에 쓰지 않습니다.</p>`;
+  saju.age = sajuAge(saju);
+  const cols = [["시주", p.chart.hour, "시"], ["일주", p.chart.day, "일"], ["월주", p.chart.month, "월"], ["년주", p.chart.year, "년"]];
+  const stemGod = (k, v) => (k === "일" ? "나(일간)" : tg.items.find((it) => it.pos === `${k}간`)?.god || "");
+  const hidden = (k) => tg.items.filter((it) => it.pos === `${k}지`);
+  const cell = (v, f) => (v ? f(v) : "모름");
+  const cur = saju.daeun.filter((d) => d.startAge <= saju.age).pop();
+  return `<h3>사주로 본 학원 운영 (Claude 풀이, 참고)</h3>
+    <p>입력: ${saju.input}. 아래 계산값은 원장일지 만세력 계산기 그대로이고(대운 시작 나이는 정확한 절입 시각 기준 보정), 풀이는 이 값을 Claude가 읽어 씁니다.</p>
+    <div class="table-wrap"><table class="report-table saju-chart"><thead><tr><th></th>${cols.map(([n]) => `<th>${n}</th>`).join("")}</tr></thead><tbody>
+      <tr><th>천간</th>${cols.map(([, v, k]) => `<td>${cell(v, () => `<strong>${hanjaKo(v.stem)}(${v.stem})</strong><br>${stemGod(k, v)}`)}</td>`).join("")}</tr>
+      <tr><th>지지</th>${cols.map(([, v, k]) => `<td>${cell(v, () => `<strong>${hanjaKo(v.branch)}(${v.branch})</strong><br>${hidden(k).find((it) => it.part === "정기")?.god || ""}`)}</td>`).join("")}</tr>
+      <tr><th>지장간</th>${cols.map(([, v, k]) => `<td>${cell(v, () => hidden(k).map((it) => `${hanjaKo(it.char)} ${it.god}`).join("<br>"))}</td>`).join("")}</tr>
+    </tbody></table></div>
+    <p class="rec-note">오행: ${ELEMENTS.map((e) => `${ELEMENT_PLAIN[e]}(${e}) ${p.counts[e]}`).join(", ")}. 월지 기준 격국 후보: ${GYEOK_NAME[tg.gyeok.god]}. ${tg.clashes.length ? `지지 충: ${tg.clashes.map((c) => `${c.a}·${c.b}(${hanjaKo(c.pair)})`).join(", ")}.` : ""}</p>
+    ${saju.daeun.length ? `<div class="table-wrap"><table class="report-table"><thead><tr><th class="num">대운 시작</th>${saju.daeun.map((d) => `<th${d === cur ? ' class="saju-now"' : ""}>${d.startAge}세${d === cur ? "(지금)" : ""}</th>`).join("")}</tr></thead><tbody><tr><th class="num">간지</th>${saju.daeun.map((d) => `<td>${ganjiKo(d.ganji)}<br>${d.ganji}</td>`).join("")}</tr><tr><th class="num">십신</th>${saju.daeun.map((d) => `<td>${d.stemGod}<br>${d.branchGod}</td>`).join("")}</tr></tbody></table></div>` : ""}
+    <div class="saju-ai no-save"><button type="button" class="report-ghost saju-ai-stop" hidden>멈추기</button><button type="button" class="report-ghost saju-ai-go" hidden>다시 풀이 받기</button></div>
+    <div class="saju-ai-out">Claude 풀이를 준비하는 중입니다…</div>
+    <p class="rec-note">사주 풀이는 참고용이며 입지 추천과 순위에는 쓰지 않습니다. 신강·신약과 용신은 학파마다 판단이 달라 관점별로 보여 달라고 요청했습니다.</p>`;
 }
 // AI 풀이: 계산은 끝난 값만 넘기고, Claude에게는 날짜·나이를 다시 계산하지 말라고 합니다.
 function sajuPrompt(saju, opts, profile) {
-  const { p, tg, reading } = saju;
+  const { p, tg } = saju;
   const pillars = [["년주", p.chart.year], ["월주", p.chart.month], ["일주", p.chart.day], ["시주", p.chart.hour]].map(([k, v]) => `${k} ${v ? `${v.korean}(${v.hanja})` : "모름(출생시간 미상)"}`).join(", ");
   const gods = GOD_ORDER.map((g) => `${g} ${fmt1(tg.scores[g] || 0)} [${godWhere(tg, g) || "없음"}]`).join("\n");
   const daeun = saju.daeun.map((d) => `${d.startAge}세~ ${ganjiKo(d.ganji)}(${d.ganji}) 천간 ${d.stemGod}, 지지 ${d.branchGod}${saju.age != null && d.startAge <= saju.age && saju.age < d.startAge + 10 ? " ← 지금" : ""}`).join("\n");
@@ -1601,9 +1468,8 @@ function sajuPrompt(saju, opts, profile) {
 ${gods}
 지장간(여기→중기→정기, 각 십신): ${[...new Set(tg.items.filter((it) => it.branch).map((it) => it.pos))].map((pos) => `${pos} ${tg.items.find((it) => it.pos === pos).branch}: ${tg.items.filter((it) => it.pos === pos).map((it) => `${it.char} ${it.god}`).join(", ")}`).join(" / ")}
 천간에 뜨고 지지에 뿌리 있는 십신: ${tg.rooted.map((r) => `${r.god}(${r.pos} ${r.char})`).join(", ") || "없음"}
-격국(월지 기준): ${reading.gy[0]} — 월지 ${p.chart.month.branch} 속 ${tg.gyeok.char}(${tg.gyeok.god})${tg.gyeok.shown ? ", 천간에 뜸" : ""}
+격국 후보(월지 기준, 월지 속 글자 중 천간에 뜬 것 우선): ${GYEOK_NAME[tg.gyeok.god]} — 월지 ${p.chart.month.branch} 속 ${tg.gyeok.char}(${tg.gyeok.god})${tg.gyeok.shown ? ", 천간에 뜸" : ""}
 지지 충: ${tg.clashes.map((c) => `${c.a}·${c.b} ${c.pair}`).join(", ") || "없음"}
-규칙으로 찾은 조합: ${[...reading.goods, ...reading.warns].map((x) => x.name).join(", ") || "없음"}
 대운(시작 나이는 보정값):
 ${daeun}
 지금 만 나이: ${saju.age ?? "알 수 없음"}
@@ -1611,35 +1477,36 @@ ${daeun}
 [원장님 개원 조건]
 과목 ${SUBJECT_LABELS[opts.subject]}, 대상 ${LEVEL_LABELS[opts.level]}, ${profile ? `경력은 ${profile.label}, 예산 ${profile.budgetText}` : ""}`;
 }
-async function runSajuAi(box, saju, opts, profile) {
-  const btn = box.querySelector(".saju-ai-go"), stop = box.querySelector(".saju-ai-stop");
+async function runSajuAi(box, saju, opts, profile, fresh = false) {
+  const go = box.querySelector(".saju-ai-go"), stop = box.querySelector(".saju-ai-stop");
   const out = box.nextElementSibling;
   const sample = await window.claude?.use?.("sample").catch(() => null);
-  if (!sample) { box.hidden = true; return; }
+  if (!sample) { out.textContent = "Claude 풀이는 Claude 화면에서 이 보고서를 만들 때 자동으로 써집니다. 지금 화면에서는 Claude에 연결할 수 없어 위 계산값만 보여 드립니다."; return; }
   const ctl = new AbortController();
-  btn.disabled = true; stop.hidden = false; out.hidden = false;
-  out.textContent = "Claude가 사주를 깊이 살펴보는 중입니다. 첫 글자가 나오기까지 1~2분쯤 걸릴 수 있고, 전체 풀이는 몇 분에 걸쳐 이어서 써집니다…";
+  go.hidden = true; stop.hidden = false;
+  out.textContent = "Claude가 사주를 깊이 살펴보는 중입니다. 처음 한 번은 Claude 사용 허락을 묻습니다. 첫 글자가 나오기까지 1~2분쯤 걸릴 수 있고, 전체 풀이는 몇 분에 걸쳐 이어서 써집니다…";
   stop.onclick = () => ctl.abort();
+  let finished = false;
   try {
-    const { truncated } = await sample(sajuPrompt(saju, opts, profile), { modelTier: "complex", effort: "high", signal: ctl.signal, onText: ({ text }) => { out.textContent = text; } });
+    const { truncated } = await sample(sajuPrompt(saju, opts, profile), { modelTier: "complex", effort: "high", cache: fresh ? false : { gcTime: 86400000 }, signal: ctl.signal, onText: ({ text }) => { out.textContent = text; } });
     if (truncated) out.textContent += "\n\n(길이 제한으로 여기서 끊겼습니다.)";
+    finished = true;
   } catch (e) {
     out.textContent = e.text ?? "";
-    const why = { not_granted: "Claude 사용을 허락하지 않아 풀이를 받지 못했습니다.", sampling_disabled: "이 계정에서는 Claude를 쓸 수 없습니다.", rate_limited: "요청이 많아 잠시 뒤 다시 눌러 주세요.", refused: "Claude가 이 요청에 답하지 않았습니다.", session_expired: "다시 로그인한 뒤 눌러 주세요." }[e.code];
-    if (e.code !== "cancelled") out.textContent += `${out.textContent ? "\n\n" : ""}${why || "풀이를 받지 못했습니다. 잠시 뒤 다시 눌러 주세요."}`;
-    if (["not_granted", "sampling_disabled", "not_declared", "capability_disabled", "capability_removed"].includes(e.code)) box.hidden = true;
+    const why = { cancelled: "풀이를 멈췄습니다.", not_granted: "Claude 사용을 허락하지 않아 풀이를 받지 못했습니다.", sampling_disabled: "이 계정에서는 Claude를 쓸 수 없습니다.", rate_limited: "요청이 많아 잠시 뒤 '다시 풀이 받기'를 눌러 주세요.", refused: "Claude가 이 요청에 답하지 않았습니다.", session_expired: "다시 로그인한 뒤 '다시 풀이 받기'를 눌러 주세요." }[e.code];
+    out.textContent += `${out.textContent ? "\n\n" : ""}${why || "풀이를 받지 못했습니다. 잠시 뒤 '다시 풀이 받기'를 눌러 주세요."}`;
+    if (["not_granted", "sampling_disabled", "not_declared", "capability_disabled", "capability_removed"].includes(e.code)) { stop.hidden = true; return; }
   } finally {
-    btn.disabled = false; stop.hidden = true;
+    stop.hidden = true;
   }
+  go.hidden = false;
+  go.textContent = finished ? "새로 풀이 받기" : "다시 풀이 받기";
+  go.onclick = () => runSajuAi(box, saju, opts, profile, true);
 }
-// 보고서가 그려진 뒤, 이 화면에서 Claude를 쓸 수 있을 때만 AI 풀이 버튼을 보여 줍니다.
-async function wireSajuAi(target, report) {
+// 보고서가 그려지면 만세력 계산값을 Claude에게 바로 보내 풀이를 받습니다(보고서 만들기 버튼이 요청입니다).
+function wireSajuAi(target, report) {
   const box = target.querySelector(".saju-ai");
-  if (!box || !report.saju) return;
-  const sample = await window.claude?.use?.("sample").catch(() => null);
-  if (!sample) return;
-  box.hidden = false;
-  box.querySelector(".saju-ai-go").onclick = () => runSajuAi(box, report.saju, report.opts, report.profile);
+  if (box && report.saju) runSajuAi(box, report.saju, report.opts, report.profile);
 }
 function fillReportRegions() {
   const provinces = [...new Set(allRegions.map((r) => r.province))];

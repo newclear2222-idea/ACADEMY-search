@@ -260,3 +260,4 @@ th { color: var(--muted); font-weight: 600; }
 .rp-all { color: var(--text); font-weight: 600; }
 .rp-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 4px 10px; }
 .rp-form > .rec-go { align-self: flex-start; }
+.saju-chart th, .saju-chart td { text-align: center; white-space: normal; vertical-align: top; }
