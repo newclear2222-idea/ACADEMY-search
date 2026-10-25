@@ -33,7 +33,7 @@ function ibRender() {
   }).join("");
 }
 
-async function ibLoad() {
+async function ibLoad(auto) {
   const url = ibEls.url.value.trim();
   const key = ibEls.key.value.trim();
   if (!/^https:\/\/script\.google\.com\/macros\/s\/[\w-]+\/exec$/.test(url)) { ibEls.status.textContent = "시트 주소는 https://script.google.com/macros/s/…/exec 꼴입니다."; ibEls.url.focus(); return; }
@@ -49,6 +49,7 @@ async function ibLoad() {
     ibRender();
   } catch (e) {
     console.warn(e);
+    if (auto === true) { ibEls.status.textContent = "이 화면에서는 시트에 바로 연결할 수 없어요. 아래 '직접 붙여넣기'를 쓰세요."; return; }
     ibEls.status.textContent = "시트에 연결하지 못했습니다. 이 화면에서 바깥 주소 연결이 막혀 있을 수 있어요. 시트에서 그 신청 줄의 '원본' 칸을 복사해 아래 '직접 붙여넣기'에 넣어 주세요.";
   }
 }
@@ -87,9 +88,11 @@ function ibApply(d) {
   rpEls.form.requestSubmit();
 }
 
-ibEls.url.value = ibStore.get("url");
+ibEls.url.value = ibStore.get("url") || window.INTAKE_URL || "";
 ibEls.key.value = ibStore.get("key");
-ibEls.load.addEventListener("click", ibLoad);
+ibEls.load.addEventListener("click", () => ibLoad());
+// 비밀번호를 한 번 넣어 두었으면 열 때마다 신청 목록을 바로 불러옵니다.
+if (ibEls.url.value && ibEls.key.value) { ibEls.box.open = true; ibLoad(true); }
 ibEls.list.addEventListener("click", (e) => {
   const btn = e.target.closest(".inbox-make");
   if (btn) ibApply(ibItems[Number(btn.dataset.i)].data);
