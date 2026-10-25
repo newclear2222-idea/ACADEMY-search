@@ -64,16 +64,6 @@ def main():
     rent_tables = [t for t in tables if "임대료" in (t.get("STATBL_NM") or "")]
     for t in rent_tables:
         print(f"  {t.get('STATBL_ID')} | {t.get('STATBL_NM')} | 주기 {t.get('DTACYCLE_CD')} | {t.get('RPSTUI_NM') or ''}")
-    # 층별 임대료·효용비율 표가 있는지 살핍니다(학원은 1층을 거의 쓰지 않아 2층 이상 값이 필요합니다).
-    for t in [t for t in tables if "층" in (t.get("STATBL_NM") or "")]:
-        print(f"  [층] {t.get('STATBL_ID')} | {t.get('STATBL_NM')} | 주기 {t.get('DTACYCLE_CD')}")
-        try:
-            rows, total = call("SttsApiTblData", key, pIndex=1, pSize=40, STATBL_ID=t["STATBL_ID"], DTACYCLE_CD=t.get("DTACYCLE_CD") or "QY")
-            print(f"      {total}줄, 항목 {sorted({r.get('ITM_NM') for r in rows})}")
-            for r in rows[:12]:
-                print(f"      {r.get('WRTTIME_DESC')} | {r.get('CLS_FULLNM')} | {r.get('ITM_FULLNM') or r.get('ITM_NM')} | {r.get('DTA_VAL')} {r.get('UI_NM')}")
-        except Exception as e:
-            print(f"      읽기 실패: {e}")
     out = {"source": "한국부동산원 상업용부동산 임대동향조사 (R-ONE)", "unit": "", "tables": {}}
     for kind, word in WANT.items():
         # 같은 통계가 기간별로 나뉘어 있어(예: '(2022년~)', '(2024년3분기~)') 가장 최근에 시작한 표를 씁니다.
@@ -98,6 +88,26 @@ def main():
         out["tables"][kind] = {"id": t["STATBL_ID"], "name": t["STATBL_NM"], "period": rows[0].get("WRTTIME_DESC") or latest,
                                "unit": rows[0].get("UI_NM"), "rows": keep}
         print(f"    서울·경기·인천 {len(keep)}곳")
+    # 학원은 1층을 거의 쓰지 않아, 층별 임대료 표에서 2층 이상 값을 따로 받습니다.
+    out["floors"] = {}
+    for kind, word in WANT.items():
+        cands = [t for t in tables if "층별임대료" in (t.get("STATBL_NM") or "") and word in t["STATBL_NM"]]
+        if not cands:
+            print(f"  {word} 층별 임대료 통계표를 찾지 못했습니다.")
+            continue
+        first = lambda x: int((re.search(r"\((\d{4})", x["STATBL_NM"]) or [0, 0])[1])
+        t = max(cands, key=first)
+        print(f"  층별: {t['STATBL_NM']} ({t['STATBL_ID']}), 후보 {[c['STATBL_NM'] for c in cands]}")
+        rows = all_rows("SttsApiTblData", key, STATBL_ID=t["STATBL_ID"], DTACYCLE_CD=t.get("DTACYCLE_CD") or "QY")
+        if not rows:
+            continue
+        latest = max(r["WRTTIME_IDTFR_ID"] for r in rows)
+        rows = [r for r in rows if r["WRTTIME_IDTFR_ID"] == latest and r.get("DTA_VAL") is not None]
+        print(f"    {latest}, {len(rows)}줄. 예시 줄: {rows[0]}")
+        print(f"    분류: {sorted({r.get('CLS_FULLNM') for r in rows})[:40]}")
+        print(f"    항목: {sorted({r.get('ITM_FULLNM') or r.get('ITM_NM') for r in rows})[:40]}")
+        out["floors"][kind] = {"id": t["STATBL_ID"], "name": t["STATBL_NM"], "period": rows[0].get("WRTTIME_DESC") or latest,
+                               "rows": [{k: v for k, v in r.items() if k not in ("STATBL_ID", "DTACYCLE_CD", "WRTTIME_IDTFR_ID", "WRTTIME_DESC", "UI_NM")} for r in rows]}
     if not out["tables"]:
         sys.exit("임대료 자료를 하나도 받지 못했습니다.")
     (DATA_DIR / "rent.json").write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
