@@ -542,7 +542,7 @@ function rentText(area, data, m2 = 99, sizeName = "30평") {
   const r = rentFor(data.id, area.name);
   if (!r) return "";
   const kinds = r.kinds.map((k) => `${RENT_KINDS[k.kind].replace(" 상가", "")} ${rentWon(k.value)}`).join(" · ");
-  return `<div class="rank-sub">2층 이상 상가 임대료 ㎡당 월: ${kinds} (${rent.period}, ${rentWhere(r, shortRegion(data.region))}, 지하·1층 제외. ${RENT_KINDS[r.main.kind].replace(" 상가", "")} 1층은 ${rentWon(r.main.ground)}) → ${sizeName}(${m2}㎡)이면 <strong>월 약 ${rentMonthly(r.main.value, m2)}</strong> (${RENT_KINDS[r.main.kind]} 기준 어림. 조사 상권이 번화가라 골목 상가는 보통 더 쌉니다)</div>`;
+  return `<div class="rank-sub">2층 이상 상가 임대료 ㎡당 월: ${kinds} (${rent.period}, ${rentWhere(r, shortRegion(data.region))}, 지하·1층 제외. ${RENT_KINDS[r.main.kind].replace(" 상가", "")} 1층은 ${rentWon(r.main.ground)}) → ${sizeName}(${m2}㎡)이면 <strong>월 약 ${rentMonthly(r.main.value, m2)}</strong> (${RENT_KINDS[r.main.kind]} 기준 어림. 관리비·부가세 별도이고, 이미 맺은 계약들의 평균이라 새로 나온 매물 호가보다 낮게 나올 수 있습니다)</div>`;
 }
 
 function thisMonth() {
