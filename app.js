@@ -968,14 +968,15 @@ async function runRecommend(e) {
   };
   const scope = recEls.scope.value;
   const townsOnly = scope === "towns";
-  const targets = allRegions.filter((r) => scope === "all" || r.province === scope || (townsOnly && NEW_TOWNS[r.id]));
+  const one = scope.startsWith("region:") && allRegions.find((r) => r.id === scope.slice(7));
+  const targets = allRegions.filter((r) => (one ? r === one : scope === "all" || r.province === scope || (townsOnly && NEW_TOWNS[r.id])));
   opts.townsOnly = townsOnly;
   recEls.result.innerHTML = `<p class="rec-note">${fmt(targets.length)}개 구·시 자료를 읽는 중…</p>`;
   const regionsData = await Promise.all(targets.map((r) => loadRegion(r.id)));
   const res = recommend(regionsData, opts);
   if (current) setRegionContext(current); // 아래 동별 화면의 기준값을 되돌립니다.
   opts.avg = res.avg;
-  const scopeName = { all: "서울·경기·인천", towns: "신도시" }[scope] || scope;
+  const scopeName = one ? one.name : { all: "서울·경기·인천", towns: "신도시" }[scope] || scope;
   const rules = [`${LEVEL_LABELS[opts.level]} ${REC_MIN_STUDENTS}명 미만인 동 ${fmt(res.skipped.small)}곳`, `위험지역 ${fmt(res.skipped.risk)}곳`];
   if (res.skipped.hub) rules.push(`대형 학원가 ${fmt(res.skipped.hub)}곳(${opts.years < 3 ? "경력 3년 미만" : "예산 3천만원 미만"})`);
   if (res.skipped.flowIn) rules.push(`다른 동 학생이 찾아오는 학원가 ${fmt(res.skipped.flowIn)}곳(경력 3년 미만)`);
@@ -1025,6 +1026,14 @@ function fillTowns() {
   });
 }
 
+// 추천 범위에 구·시 하나만 고르는 항목을 시·도별로 붙입니다.
+function fillRecScope() {
+  const provinces = [...new Set(allRegions.map((r) => r.province))];
+  recEls.scope.insertAdjacentHTML("beforeend", provinces.map((p) => `<optgroup label="${p} 안 구·시 하나">${allRegions
+    .filter((r) => r.province === p)
+    .map((r) => `<option value="region:${r.id}">${r.name.replace(p + " ", "")}</option>`).join("")}</optgroup>`).join(""));
+}
+
 function fillRegions() {
   const p = els.province.value;
   els.region.innerHTML = allRegions
@@ -1058,6 +1067,7 @@ async function init() {
     console.warn(e); // 임대료 자료가 없어도 나머지는 그대로 보입니다.
   }
   fillTowns();
+  fillRecScope();
   recEls.form.addEventListener("submit", runRecommend);
   recEls.result.addEventListener("click", (e) => {
     const btn = e.target.closest(".rec-open");
