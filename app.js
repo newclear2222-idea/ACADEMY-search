@@ -1096,7 +1096,7 @@ function showReport(target = recEls.report, report = lastReport) {
     return `<section class="report-dong">${card}${riskText(x.area, x.data)}</section>`;
   }).join("");
   target.innerHTML = `
-    <div class="report-tools"><button type="button" class="rec-go report-copy">보고서 글 복사</button><button type="button" class="report-close">닫기</button></div>
+    <div class="report-tools"><button type="button" class="rec-go report-save">보고서 파일로 저장</button><button type="button" class="report-ghost report-copy">글 복사</button><button type="button" class="report-close">닫기</button></div>
     <header class="report-head">
       <p class="report-kicker">학원 입지 가이드 · ${today}</p>
       <h2>개원 입지 보고서: ${scopeName} ${L} ${S.replace(" 학원", "")}</h2>
@@ -1128,10 +1128,39 @@ function showReport(target = recEls.report, report = lastReport) {
   target.hidden = false;
   target.scrollIntoView({ behavior: "smooth", block: "start" });
 }
+// 받는 사람이 이 사이트 없이도 열 수 있게 스타일까지 담은 HTML 한 장으로 저장합니다.
+async function saveReport(btn) {
+  const box = btn.closest(".report");
+  const body = [...box.children].filter((el) => !el.classList.contains("report-tools")).map((el) => el.outerHTML).join("\n");
+  const title = box.querySelector("h2")?.textContent || "개원 입지 보고서";
+  let css = "";
+  try { css = await (await fetch("style.css")).text(); } catch (e) { console.warn(e); }
+  const html = `<!doctype html>\n<html lang="ko" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title}</title><style>${css}
+body { margin: 0; padding: 24px 16px; font-family: system-ui, -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; background: #fff; color: #1d1d1f; }
+.report { max-width: 860px; margin: 0 auto; border-top: 0; }
+@media print { body { padding: 0; } .report { position: static; } }
+</style></head><body><article class="report">${body}<p class="rec-note">인쇄하거나 PDF로 저장하려면 이 파일을 연 브라우저에서 인쇄(Ctrl+P, 맥은 ⌘+P)를 누르세요.</p></article></body></html>`;
+  const day = new Date().toISOString().slice(0, 10);
+  const filename = `${title.replace(/^개원 입지 보고서:\s*/, "개원입지보고서_").replace(/[\\/:*?"<>|]/g, "").replace(/\s+/g, "_")}_${day}.html`;
+  const label = "보고서 파일로 저장";
+  const say = (t) => { btn.textContent = t; setTimeout(() => { btn.textContent = label; }, 2500); };
+  const downloads = window.claude?.use ? await window.claude.use("downloads").catch(() => null) : null;
+  if (downloads) {
+    try { await downloads.save({ filename, data: html }); say("저장했습니다"); }
+    catch (e) { say(e?.code === "declined" ? "저장을 취소했습니다" : e?.code === "rate_limited" ? "잠시 뒤 다시 눌러 주세요" : "여기서는 저장할 수 없습니다"); }
+    return;
+  }
+  const url = URL.createObjectURL(new Blob([html], { type: "text/html;charset=utf-8" }));
+  const a = document.createElement("a");
+  a.href = url; a.download = filename;
+  document.body.append(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 10000);
+  say("저장했습니다");
+}
 function copyReport(btn) {
   const box = btn.closest(".report");
   const text = [...box.children].filter((el) => !el.classList.contains("report-tools")).map((el) => el.innerText).join("\n\n");
-  const done = () => { btn.textContent = "복사했습니다"; setTimeout(() => { btn.textContent = "보고서 글 복사"; }, 2000); };
+  const done = () => { btn.textContent = "복사했습니다"; setTimeout(() => { btn.textContent = "글 복사"; }, 2000); };
   navigator.clipboard?.writeText(text).then(done).catch(() => {
     const range = document.createRange(); range.selectNodeContents(box);
     const sel = getSelection(); sel.removeAllRanges(); sel.addRange(range);
@@ -1180,9 +1209,20 @@ function careerProfile(budget) {
 }
 function fillReportRegions() {
   const provinces = [...new Set(allRegions.map((r) => r.province))];
-  rpEls.regions.innerHTML = provinces.map((p) => `<div class="rp-prov"><p class="rp-prov-name">${p}</p><div class="rp-list">${allRegions
+  rpEls.regions.innerHTML = provinces.map((p) => `<div class="rp-prov"><p class="rp-prov-name">${p} <label class="rp-check rp-all"><input type="checkbox" data-prov="${p}"> ${p} 전체</label></p><div class="rp-list">${allRegions
     .filter((r) => r.province === p)
     .map((r) => `<label class="rp-check"><input type="checkbox" value="${r.id}"> ${r.name.replace(p + " ", "")}</label>`).join("")}</div></div>`).join("");
+}
+// 시·도 전체 칸을 누르면 그 아래 구·시를 한꺼번에 고르고, 하나씩 바꾸면 전체 칸도 따라 바뀝니다.
+function syncReportRegions(e) {
+  const box = e.target.closest(".rp-prov");
+  if (!box) return;
+  const all = box.querySelector(".rp-all input");
+  const items = [...box.querySelectorAll(".rp-list input")];
+  if (e.target === all) items.forEach((i) => { i.checked = all.checked; });
+  const on = items.filter((i) => i.checked).length;
+  all.checked = on === items.length;
+  all.indeterminate = on > 0 && on < items.length;
 }
 async function runReportMaker(e) {
   e.preventDefault();
@@ -1194,9 +1234,10 @@ async function runReportMaker(e) {
     subject: rpEls.subject.value, level: rpEls.level.value, years: profile.total, budget,
     hubPref: profile.pref, rentLimit: Number(rpEls.rent.value) || 0,
   };
-  const picked = [...rpEls.regions.querySelectorAll("input:checked")].map((i) => i.value);
+  const picked = [...rpEls.regions.querySelectorAll(".rp-list input:checked")].map((i) => i.value);
   const targets = picked.length ? allRegions.filter((r) => picked.includes(r.id)) : allRegions;
-  const names = targets.map((r) => shortRegion(r.name));
+  const wholeProv = [...rpEls.regions.querySelectorAll(".rp-all input:checked")].map((i) => i.dataset.prov);
+  const names = [...wholeProv.map((p) => `${p} 전체`), ...targets.filter((r) => !wholeProv.includes(r.province)).map((r) => shortRegion(r.name))];
   const scopeName = picked.length ? (names.length > 3 ? `${names.slice(0, 3).join("·")} 외 ${names.length - 3}곳` : names.join("·")) : "서울·경기·인천";
   rpEls.status.textContent = `${fmt(targets.length)}개 구·시 자료를 읽는 중…`;
   rpEls.report.hidden = true;
@@ -1299,10 +1340,13 @@ async function init() {
   fillRecScope();
   fillReportRegions();
   rpEls.form.addEventListener("submit", runReportMaker);
+  rpEls.regions.addEventListener("change", syncReportRegions);
   rpEls.report.addEventListener("click", (e) => {
     if (e.target.closest(".report-close")) { rpEls.report.hidden = true; rpEls.form.scrollIntoView({ block: "start" }); }
     const copy = e.target.closest(".report-copy");
     if (copy) copyReport(copy);
+    const save = e.target.closest(".report-save");
+    if (save) saveReport(save);
   });
   recEls.form.addEventListener("submit", runRecommend);
   recEls.result.addEventListener("click", (e) => {
@@ -1314,6 +1358,8 @@ async function init() {
     if (e.target.closest(".report-close")) { recEls.report.hidden = true; recEls.result.scrollIntoView({ block: "start" }); }
     const copy = e.target.closest(".report-copy");
     if (copy) copyReport(copy);
+    const save = e.target.closest(".report-save");
+    if (save) saveReport(save);
   });
   const provinces = [...new Set(regions.map((r) => r.province))];
   els.province.innerHTML = provinces.map((p) => `<option value="${p}">${p}</option>`).join("");
