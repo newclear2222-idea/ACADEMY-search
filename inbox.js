@@ -38,7 +38,8 @@ function ibRender() {
   ibEls.list.innerHTML = ibItems.map((it, i) => {
     const d = it.data;
     const at = new Date(it.receivedAt);
-    const when = !it.receivedAt ? "" : isNaN(at) ? String(it.receivedAt).split(" ").slice(0, 3).join(" ") : at.toLocaleDateString("ko-KR", { month: "long", day: "numeric" });
+    const md = String(it.receivedAt || "").match(/\d{4}\.\s*(\d{1,2})\.\s*(\d{1,2})/); // 시트가 돌려주는 "2026. 10. 26 오전 3:52:50" 꼴
+    const when = !it.receivedAt ? "" : !isNaN(at) ? at.toLocaleDateString("ko-KR", { month: "long", day: "numeric" }) : md ? `${md[1]}월 ${md[2]}일` : String(it.receivedAt);
     const career = [["대형", d.big], ["중소형", d.small], ["운영", d.own], ["과외", d.tutor]].filter(([, y]) => y > 0).map(([k, y]) => `${k} ${y}년`).join(", ") || "경력 없음";
     return `<li>
       <div class="rec-head"><span>${ibEscape(d.name || "이름 없음")} <span class="rec-note">${ibEscape(d.phone || "")}</span></span><span class="rec-note">${ibEscape(when)}</span></div>
@@ -116,6 +117,7 @@ async function ibLoadSheet(auto) {
       tool_error: "시트를 읽지 못했어요. 주소가 맞는지, 시트 아래 탭 이름이 '상담신청'인지 확인해 주세요.",
       server_unavailable: "구글 쪽이 잠시 응답하지 않아요. 조금 뒤 '신청 불러오기'를 다시 눌러 주세요.",
     }[e && e.code];
+    if (e && e.code === "tool_error" && /quota|rate/i.test(String(e.message))) { ibEls.status.textContent = "구글이 잠깐 읽기를 쉬라고 해요(1분 한도). 1분 뒤 '신청 불러오기'를 다시 눌러 주세요."; return; }
     ibEls.status.textContent = msg || `시트를 불러오지 못했어요. 잠시 뒤 다시 눌러 주세요. (${(e && e.code) || "알 수 없음"})`;
   }
 }
