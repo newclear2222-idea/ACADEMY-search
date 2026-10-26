@@ -37,7 +37,8 @@ function ibRender() {
   if (!ibItems.length) { ibEls.list.innerHTML = ""; return; }
   ibEls.list.innerHTML = ibItems.map((it, i) => {
     const d = it.data;
-    const when = it.receivedAt ? new Date(it.receivedAt).toLocaleDateString("ko-KR", { month: "long", day: "numeric" }) : "";
+    const at = new Date(it.receivedAt);
+    const when = !it.receivedAt ? "" : isNaN(at) ? String(it.receivedAt).split(" ").slice(0, 3).join(" ") : at.toLocaleDateString("ko-KR", { month: "long", day: "numeric" });
     const career = [["대형", d.big], ["중소형", d.small], ["운영", d.own], ["과외", d.tutor]].filter(([, y]) => y > 0).map(([k, y]) => `${k} ${y}년`).join(", ") || "경력 없음";
     return `<li>
       <div class="rec-head"><span>${ibEscape(d.name || "이름 없음")} <span class="rec-note">${ibEscape(d.phone || "")}</span></span><span class="rec-note">${ibEscape(when)}</span></div>
@@ -68,6 +69,54 @@ async function ibLoad(auto) {
     console.warn(e);
     if (auto === true) { ibEls.status.textContent = "이 화면에서는 시트에 바로 연결할 수 없어요. 아래 '직접 붙여넣기'를 쓰세요."; return; }
     ibEls.status.textContent = "시트에 연결하지 못했습니다. 이 화면에서 바깥 주소 연결이 막혀 있을 수 있어요. 시트에서 그 신청 줄의 '원본' 칸을 복사해 아래 '직접 붙여넣기'에 넣어 주세요.";
+  }
+}
+
+// Claude 안에서 연 가이드는 바깥 주소(Apps Script)에 닿지 못하므로, 원장님이 연결한 Google Sheets 커넥터로 시트를 직접 읽습니다.
+// 시트 주소만 있으면 되고 비밀번호는 필요 없습니다(원장님 구글 계정으로만 열립니다).
+const IB_CLAUDE = !!window.claude;
+const IB_SHEETS = "Google Sheets";
+const IB_RANGE = "상담신청!A2:T";
+function ibSheetId(text) {
+  const t = String(text || "").trim();
+  const m = t.match(/\/spreadsheets\/d\/([\w-]{20,})/) || t.match(/^([\w-]{20,})$/);
+  return m ? m[1] : "";
+}
+// 시트 줄을 Apps Script(doGet)가 돌려주던 모양과 똑같이 바꿉니다. 맨 끝 '원본' 칸이 깨진 줄은 건너뜁니다.
+function ibRows(values) {
+  return (values || []).map((r) => {
+    let data;
+    try { data = JSON.parse(r[19]); } catch (err) { return null; }
+    if (!data || typeof data !== "object" || !data.subject) return null;
+    return { id: String(r[0] || ""), receivedAt: String(r[1] || ""), note: String(r[18] || ""), data };
+  }).filter(Boolean).reverse();
+}
+async function ibLoadSheet(auto) {
+  const id = ibSheetId(ibEls.url.value);
+  if (!id) { ibEls.status.textContent = "구글 시트 주소(https://docs.google.com/spreadsheets/d/…)를 넣어 주세요."; ibEls.url.focus(); return; }
+  ibStore.set("sheet", ibEls.url.value.trim());
+  ibEls.status.textContent = "시트에서 불러오는 중…";
+  const mcp = await window.claude.use("mcp").catch(() => null);
+  if (!mcp) { ibEls.status.textContent = "이 화면에서는 구글 시트 연결을 쓸 수 없어요. claude.ai에서 이 가이드를 열어 주세요."; return; }
+  try {
+    const res = await mcp.callTool(IB_SHEETS, "get_values", { spreadsheetId: id, range: IB_RANGE }, { cache: false });
+    const p = res.payload;
+    const values = Array.isArray(p) ? p : p && Array.isArray(p.values) ? p.values : [];
+    ibItems = ibRows(values);
+    ibEls.status.textContent = ibItems.length ? `신청 ${fmt(ibItems.length)}건 (최근 순)` : "아직 들어온 신청이 없습니다.";
+    ibRender();
+  } catch (e) {
+    console.warn(e);
+    const msg = {
+      server_not_connected: "Google Sheets가 연결돼 있지 않아요. claude.ai 설정 → 커넥터에서 Google Sheets를 연결해 주세요.",
+      needs_reauth: "Google Sheets 로그인이 풀렸어요. claude.ai 설정 → 커넥터에서 Google Sheets를 다시 연결해 주세요.",
+      not_in_manifest: "이 가이드가 Google Sheets를 쓰도록 허용되지 않았어요. 오른쪽 위 메뉴의 권한에서 Google Sheets를 허용한 뒤 '신청 불러오기'를 눌러 주세요.",
+      approval_required: "Google Sheets 사용 허용이 필요해요. '신청 불러오기'를 누르고 허용을 눌러 주세요.",
+      selection_required: "Google Sheets 연결이 여러 개예요. 뜨는 창에서 하나를 골라 주세요.",
+      tool_error: "시트를 읽지 못했어요. 주소가 맞는지, 시트 아래 탭 이름이 '상담신청'인지 확인해 주세요.",
+      server_unavailable: "구글 쪽이 잠시 응답하지 않아요. 조금 뒤 '신청 불러오기'를 다시 눌러 주세요.",
+    }[e && e.code];
+    ibEls.status.textContent = msg || `시트를 불러오지 못했어요. 잠시 뒤 다시 눌러 주세요. (${(e && e.code) || "알 수 없음"})`;
   }
 }
 
@@ -105,11 +154,22 @@ function ibApply(d) {
   rpEls.form.requestSubmit();
 }
 
-ibEls.url.value = ibStore.get("url") || window.INTAKE_URL || "";
-ibEls.key.value = ibStore.get("key");
-ibEls.load.addEventListener("click", () => ibLoad());
-// 비밀번호를 한 번 넣어 두었으면 열 때마다 신청 목록을 바로 불러옵니다.
-if (ibOwner && ibEls.url.value && ibEls.key.value) { ibEls.box.open = true; ibLoad(true); }
+if (IB_CLAUDE) {
+  const urlLabel = ibEls.url.closest("label");
+  urlLabel.firstChild.nodeValue = "구글 시트 주소 ";
+  ibEls.url.placeholder = "https://docs.google.com/spreadsheets/d/…";
+  ibEls.key.closest("label").hidden = true;
+  ibEls.box.querySelector(":scope > .rec-note").textContent = "상담 신청 사이트(intake.html)에 들어온 신청은 구글 시트에 쌓입니다. 시트 주소를 한 번 넣으면 열 때마다 신청 목록을 바로 불러옵니다.";
+  ibEls.url.value = ibStore.get("sheet") || window.INTAKE_SHEET || "";
+  ibEls.load.addEventListener("click", () => ibLoadSheet());
+  if (ibOwner) { ibEls.box.open = true; if (ibSheetId(ibEls.url.value)) ibLoadSheet(true); }
+} else {
+  ibEls.url.value = ibStore.get("url") || window.INTAKE_URL || "";
+  ibEls.key.value = ibStore.get("key");
+  ibEls.load.addEventListener("click", () => ibLoad());
+  // 비밀번호를 한 번 넣어 두었으면 열 때마다 신청 목록을 바로 불러옵니다.
+  if (ibOwner && ibEls.url.value && ibEls.key.value) { ibEls.box.open = true; ibLoad(true); }
+}
 ibEls.list.addEventListener("click", (e) => {
   const btn = e.target.closest(".inbox-make");
   if (btn) ibApply(ibItems[Number(btn.dataset.i)].data);
