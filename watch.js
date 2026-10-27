@@ -53,7 +53,7 @@ async function wMcp() {
 }
 
 async function wSave() {
-  const done = `동네 ${wTowns.length}곳을 저장했어요. 매일 아침 7시에 새 소식이 있으면 메일로 보내 드려요.`;
+  const done = `동네 ${wTowns.length}곳을 저장했어요. 매일 아침 7시에 새 소식이 있으면 아래 최근 알림에 쌓여요.`;
   try {
     if (IB_CLAUDE) {
       const id = wSheetId();
@@ -137,7 +137,7 @@ async function wLoad() {
       const link = /^https:\/\//.test(a.link) ? ` <a href="${ibEscape(a.link)}" target="_blank" rel="noopener">자세히</a>` : "";
       return `<li><div class="rec-head"><span><span class="tag ${a.kind === "새 학원" ? "warn" : a.kind === "학원 인수" ? "" : "good"}">${ibEscape(a.kind)}</span> ${ibEscape(wName(a))}</span><span class="rec-note">${ibEscape(when)}</span></div><p class="rec-note">${ibEscape(a.text)}${link}</p></li>`;
     }).join("")
-    : '<li class="rec-note">아직 받은 알림이 없습니다. 동네를 고른 다음 날 아침부터 새 소식이 오면 여기와 메일에 쌓여요.</li>';
+    : '<li class="rec-note">아직 받은 알림이 없습니다. 동네를 고른 다음 날 아침부터 새 소식이 오면 여기에 쌓여요.</li>';
 }
 
 if (ibOwner) {
