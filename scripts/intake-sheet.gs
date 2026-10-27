@@ -2,12 +2,10 @@
 // - 상담 신청 사이트(intake.html)가 보낸 신청을 시트에 한 줄씩 붙입니다(doPost).
 // - 학원 입지 가이드가 아래 READ_KEY를 붙여 부르면 쌓인 신청을 돌려줍니다(doGet). 키가 틀리면 아무것도 주지 않습니다.
 // - 동네 알림: 가이드에서 고른 동네를 '알림지역' 탭에 두고, 매일 아침 GitHub 자동 작업(scripts/watch.py)이 새 소식을 보내면
-//   '알림' 탭에 쌓습니다(SEND_MAIL이 true면 이 시트 주인의 Gmail로도 보냅니다). 이것도 READ_KEY가 맞아야 합니다.
+//   '알림' 탭에 쌓고, 가이드의 '동네 알림' 칸이 그걸 보여 줍니다. 메일은 보내지 않습니다. 이것도 READ_KEY가 맞아야 합니다.
 
 // 가이드에서 신청 목록을 불러올 때 쓸 비밀번호입니다. 남이 짐작하기 어려운 12자 이상으로 바꾸세요.
 const READ_KEY = "여기에-비밀번호를-넣으세요";
-// 동네 알림을 Gmail로도 받으려면 true로 바꾸세요. false면 학원 입지 가이드의 '동네 알림' 칸과 시트 '알림' 탭에만 쌓입니다.
-const SEND_MAIL = false;
 const SHEET_NAME = "상담신청";
 const HEADERS = ["번호", "받은 시각", "이름", "휴대폰", "이메일", "과목", "대상", "개원에 쓸 돈(만원)", "월 임대료 한도(만원)",
   "대형·유명 강사(년)", "중소형 강사(년)", "직접 운영(년)", "과외·공부방(년)", "실적·수강생", "신도시만", "원하는 지역", "사주", "더 알려 주실 것", "처리 메모", "원본"];
@@ -150,7 +148,7 @@ function saveTowns_(towns) {
   return { ok: true, count: list.length };
 }
 
-// 매일 아침 자동 작업이 보낸 새 소식을 '알림' 탭에 붙이고, 학원 목록을 '알림상태' 탭에 저장한 뒤 Gmail로 보냅니다.
+// 매일 아침 자동 작업이 보낸 새 소식을 '알림' 탭에 붙이고, 학원 목록을 '알림상태' 탭에 저장합니다.
 function saveReport_(d) {
   const items = (Array.isArray(d.items) ? d.items : []).slice(0, 300).map((it) => ({
     region: str_(it.region, 30), town: str_(it.town, 20), kind: str_(it.kind, 20), text: str_(it.text, 500),
@@ -172,21 +170,5 @@ function saveReport_(d) {
   const now = new Date();
   const log = tab_(ALERT_SHEET, ALERT_HEADERS);
   log.getRange(log.getLastRow() + 1, 1, items.length, 6).setValues(items.map((it) => [now, it.region, it.town, it.kind, text_(it.text), it.link]));
-  const to = Session.getEffectiveUser().getEmail();
-  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-  const byTown = {};
-  items.forEach((it) => {
-    const t = it.region.replace(/^[^-]+-/, "") + " " + it.town;
-    (byTown[t] = byTown[t] || []).push(it);
-  });
-  const html = Object.keys(byTown).map((t) => "<h3 style=\"margin:16px 0 4px\">" + esc(t) + "</h3><ul>" + byTown[t].map((it) =>
-    "<li><b>" + esc(it.kind) + "</b> " + esc(it.text) + (it.link ? " <a href=\"" + esc(it.link) + "\">자세히</a>" : "") + "</li>").join("") + "</ul>").join("");
-  if (SEND_MAIL && to) {
-    MailApp.sendEmail({
-      to: to,
-      subject: "[동네 알림] " + Object.keys(byTown).slice(0, 3).join(", ") + (Object.keys(byTown).length > 3 ? " 외" : "") + " 새 소식 " + items.length + "건",
-      htmlBody: html + "<p style=\"color:#666;font-size:12px\">학원 입지 가이드에서 고른 동네의 온비드 공매·LH 상가 공고·교육청 학원 등록을 매일 아침 확인해 보내 드립니다. 동네를 바꾸려면 가이드의 '동네 알림'에서 고르세요.</p>",
-    });
-  }
   return { ok: true, sent: items.length };
 }
