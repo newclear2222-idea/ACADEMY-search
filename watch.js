@@ -1,5 +1,5 @@
 // 동네 알림: 동별 카드의 '알림 받기'를 누른 동네를 구글 시트 '알림지역' 탭에 저장합니다.
-// 매일 아침 GitHub 자동 작업(scripts/watch.py)이 그 동네의 공매 상가·LH 상가 공고·학원 문 닫음·인수·새 학원을 찾아 시트 '알림' 탭과 Gmail로 보냅니다.
+// 매일 아침 GitHub 자동 작업(scripts/watch.py)이 그 동네의 공매 상가·LH 상가 공고·학원 문 닫음·인수·새 학원을 찾아 시트 '알림' 탭에 쌓으면 여기서 보여 줍니다.
 // inbox.js의 ibOwner, ibStore, ibEscape, ibSheetId, IB_CLAUDE, IB_SHEETS를 씁니다. 원장님 화면에서만 보입니다.
 const wEls = Object.fromEntries(["box", "towns", "status", "alerts", "reload"].map((k) => [k, document.getElementById(`watch-${k}`)]));
 const W_MAX = 60;
@@ -120,6 +120,14 @@ async function wLoad() {
     wRemember();
     wRender();
   }
+  // 지난번에 본 뒤로 새로 온 알림 수를 칸 제목에 붙이고, 있으면 칸을 펼칩니다.
+  let seen = "";
+  try { seen = localStorage.getItem("watch-seen") || ""; } catch (e) { /* 기억 못 해도 됩니다 */ }
+  const fresh = alerts.filter((a) => String(a.at || "") > seen).length;
+  const sum = wEls.box.querySelector("summary");
+  sum.querySelector(".watch-new")?.remove();
+  if (fresh && seen) { sum.insertAdjacentHTML("beforeend", ` <span class="tag warn watch-new">새 소식 ${fresh}건</span>`); wEls.box.open = true; }
+  if (alerts.length) try { localStorage.setItem("watch-seen", String(alerts[0].at || "")); } catch (e) { /* 그대로 */ }
   wEls.alerts.innerHTML = alerts.length
     ? alerts.map((a) => {
       const at = String(a.at || "");
