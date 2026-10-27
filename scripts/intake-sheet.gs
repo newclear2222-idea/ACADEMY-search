@@ -1,6 +1,8 @@
 // 개원 상담 신청을 구글 시트에 쌓는 Google Apps Script입니다. 설정 방법은 README의 '개원 상담 신청 사이트'를 보세요.
 // - 상담 신청 사이트(intake.html)가 보낸 신청을 시트에 한 줄씩 붙입니다(doPost).
 // - 학원 입지 가이드가 아래 READ_KEY를 붙여 부르면 쌓인 신청을 돌려줍니다(doGet). 키가 틀리면 아무것도 주지 않습니다.
+// - 동네 알림: 가이드에서 고른 동네를 '알림지역' 탭에 두고, 매일 아침 GitHub 자동 작업(scripts/watch.py)이 새 소식을 보내면
+//   '알림' 탭에 쌓고 이 시트 주인의 Gmail로 보냅니다. 이것도 READ_KEY가 맞아야 합니다.
 
 // 가이드에서 신청 목록을 불러올 때 쓸 비밀번호입니다. 남이 짐작하기 어려운 12자 이상으로 바꾸세요.
 const READ_KEY = "여기에-비밀번호를-넣으세요";
@@ -45,6 +47,7 @@ function clean_(d) {
 function doPost(e) {
   let d;
   try { d = JSON.parse(e.postData.contents); } catch (err) { return json_({ ok: false, error: "형식 오류" }); }
+  if (d.action) return watchPost_(d);
   if (d.website) return json_({ ok: true }); // 자동 입력(스팸)은 받은 척하고 버립니다.
   const c = clean_(d);
   if (!c.name || c.phone.replace(/\D/g, "").length < 9) return json_({ ok: false, error: "이름과 휴대폰 번호가 필요합니다" });
@@ -63,9 +66,13 @@ function doPost(e) {
   return json_({ ok: true });
 }
 
+const keyOk_ = (key) => READ_KEY.length >= 12 && READ_KEY.indexOf("여기에") !== 0 && key === READ_KEY;
+
 function doGet(e) {
   const key = (e && e.parameter && e.parameter.key) || "";
-  if (READ_KEY.length < 12 || READ_KEY.indexOf("여기에") === 0 || key !== READ_KEY) return json_({ ok: false, error: "비밀번호가 맞지 않습니다" });
+  if (!keyOk_(key)) return json_({ ok: false, error: "비밀번호가 맞지 않습니다" });
+  if (e.parameter.what === "watch") return json_({ ok: true, towns: watchTowns_(), state: watchState_() });
+  if (e.parameter.what === "alerts") return json_({ ok: true, items: recentAlerts_() });
   const rows = sheet_().getDataRange().getValues().slice(1);
   const items = rows.map((r) => {
     let data = {};
@@ -73,4 +80,111 @@ function doGet(e) {
     return { id: String(r[0]), receivedAt: r[1] instanceof Date ? r[1].toISOString() : String(r[1]), note: String(r[HEADERS.length - 2] || ""), data };
   }).filter(Boolean).reverse();
   return json_({ ok: true, items });
+}
+
+// ---- 동네 알림 ----
+// 알림지역: 지역(예: 서울-노원구) | 동(예: 중계동) | 넣은 날. 시트에서 직접 줄을 더하거나 지워도 됩니다.
+// 알림: 받은 날 | 지역 | 동 | 종류 | 내용 | 링크. 최근 것이 맨 아래입니다.
+// 알림상태: 동마다 지난번에 본 학원 목록(새로 생기거나 없어진 학원을 가리려고). 손대지 않습니다.
+const WATCH_SHEET = "알림지역";
+const ALERT_SHEET = "알림";
+const STATE_SHEET = "알림상태";
+const WATCH_HEADERS = ["지역", "동", "넣은 날"];
+const ALERT_HEADERS = ["받은 날", "지역", "동", "종류", "내용", "링크"];
+
+function tab_(name, headers) {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const sh = ss.getSheetByName(name) || ss.insertSheet(name);
+  if (sh.getLastRow() === 0) { sh.appendRow(headers); sh.setFrozenRows(1); }
+  return sh;
+}
+const rows_ = (sh) => (sh.getLastRow() < 2 ? [] : sh.getRange(2, 1, sh.getLastRow() - 1, sh.getLastColumn()).getValues());
+
+function watchTowns_() {
+  const seen = {};
+  return rows_(tab_(WATCH_SHEET, WATCH_HEADERS))
+    .map((r) => ({ region: String(r[0]).trim(), town: String(r[1]).trim() }))
+    .filter((t) => /^[가-힣]+-[가-힣]+$/.test(t.region) && t.town && !seen[t.region + "|" + t.town] && (seen[t.region + "|" + t.town] = true));
+}
+// 칸 하나에 5만 글자까지만 들어가서, 학원이 많은 동은 목록을 옆 칸으로 나눠 적습니다.
+const STATE_CHUNK = 45000;
+function watchState_() {
+  const state = {};
+  rows_(tab_(STATE_SHEET, ["동", "지난번 목록"])).forEach((r) => {
+    try { state[String(r[0])] = JSON.parse(r.slice(1).map((c) => String(c).replace(/^~/, "")).join("")); } catch (err) { /* 깨진 줄은 처음부터 다시 셉니다 */ }
+  });
+  return state;
+}
+function recentAlerts_() {
+  return rows_(tab_(ALERT_SHEET, ALERT_HEADERS)).slice(-100).reverse().map((r) => ({
+    at: r[0] instanceof Date ? r[0].toISOString() : String(r[0]),
+    region: String(r[1]), town: String(r[2]), kind: String(r[3]), text: String(r[4]), link: String(r[5]),
+  }));
+}
+
+function watchPost_(d) {
+  if (!keyOk_(String(d.key || ""))) return json_({ ok: false, error: "비밀번호가 맞지 않습니다" });
+  const lock = LockService.getScriptLock();
+  lock.waitLock(20000);
+  try {
+    if (d.action === "watch") return json_(saveTowns_(d.towns));
+    if (d.action === "report") return json_(saveReport_(d));
+    return json_({ ok: false, error: "모르는 요청" });
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+// 가이드에서 고른 동네 목록으로 '알림지역' 탭을 바꿉니다. 원래 있던 동은 넣은 날을 그대로 둡니다.
+function saveTowns_(towns) {
+  const sh = tab_(WATCH_SHEET, WATCH_HEADERS);
+  const before = {};
+  rows_(sh).forEach((r) => { before[r[0] + "|" + r[1]] = r[2]; });
+  const list = (Array.isArray(towns) ? towns : []).slice(0, 60)
+    .map((t) => [str_(t && t.region, 30), str_(t && t.town, 20)])
+    .filter(([region, town]) => /^[가-힣]+-[가-힣]+$/.test(region) && /^[가-힣0-9·.]+$/.test(town));
+  if (sh.getLastRow() > 1) sh.getRange(2, 1, sh.getLastRow() - 1, sh.getLastColumn()).clearContent();
+  if (list.length) sh.getRange(2, 1, list.length, 3).setValues(list.map(([r, t]) => [r, t, before[r + "|" + t] || new Date()]));
+  return { ok: true, count: list.length };
+}
+
+// 매일 아침 자동 작업이 보낸 새 소식을 '알림' 탭에 붙이고, 학원 목록을 '알림상태' 탭에 저장한 뒤 Gmail로 보냅니다.
+function saveReport_(d) {
+  const items = (Array.isArray(d.items) ? d.items : []).slice(0, 300).map((it) => ({
+    region: str_(it.region, 30), town: str_(it.town, 20), kind: str_(it.kind, 20), text: str_(it.text, 500),
+    link: /^https:\/\//.test(String(it.link || "")) ? str_(it.link, 500) : "",
+  }));
+  if (d.state && typeof d.state === "object") {
+    const sh = tab_(STATE_SHEET, ["동", "지난번 목록"]);
+    if (sh.getLastRow() > 1) sh.getRange(2, 1, sh.getLastRow() - 1, sh.getLastColumn()).clearContent();
+    const rows = Object.keys(d.state).slice(0, 200).map((k) => {
+      const text = JSON.stringify(d.state[k]);
+      const parts = [];
+      for (let i = 0; i < text.length && parts.length < 40; i += STATE_CHUNK) parts.push("~" + text.slice(i, i + STATE_CHUNK)); // ~를 앞에 붙여 시트가 수식이나 숫자로 바꾸지 않게 합니다.
+      return [str_(k, 60), ...parts];
+    });
+    const width = Math.max(2, ...rows.map((r) => r.length));
+    if (rows.length) sh.getRange(2, 1, rows.length, width).setValues(rows.map((r) => r.concat(Array(width - r.length).fill(""))));
+  }
+  if (!items.length) return { ok: true, sent: 0 };
+  const now = new Date();
+  const log = tab_(ALERT_SHEET, ALERT_HEADERS);
+  log.getRange(log.getLastRow() + 1, 1, items.length, 6).setValues(items.map((it) => [now, it.region, it.town, it.kind, text_(it.text), it.link]));
+  const to = Session.getEffectiveUser().getEmail();
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const byTown = {};
+  items.forEach((it) => {
+    const t = it.region.replace(/^[^-]+-/, "") + " " + it.town;
+    (byTown[t] = byTown[t] || []).push(it);
+  });
+  const html = Object.keys(byTown).map((t) => "<h3 style=\"margin:16px 0 4px\">" + esc(t) + "</h3><ul>" + byTown[t].map((it) =>
+    "<li><b>" + esc(it.kind) + "</b> " + esc(it.text) + (it.link ? " <a href=\"" + esc(it.link) + "\">자세히</a>" : "") + "</li>").join("") + "</ul>").join("");
+  if (to) {
+    MailApp.sendEmail({
+      to: to,
+      subject: "[동네 알림] " + Object.keys(byTown).slice(0, 3).join(", ") + (Object.keys(byTown).length > 3 ? " 외" : "") + " 새 소식 " + items.length + "건",
+      htmlBody: html + "<p style=\"color:#666;font-size:12px\">학원 입지 가이드에서 고른 동네의 교육청 학원 등록·LH 상가 공고를 매일 아침 확인해 보내 드립니다. 동네를 바꾸려면 가이드의 '동네 알림'에서 고르세요.</p>",
+    });
+  }
+  return { ok: true, sent: items.length };
 }

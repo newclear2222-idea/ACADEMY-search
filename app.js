@@ -780,6 +780,7 @@ function render(data) {
           <span class="rank-name"><span class="no">${i + 1}</span>${r.area.name}${townTag(data.id, r.area.name)}${riskTag(r.area, data)}${tag}${flowTag(r.area, subject, level)}</span>
           <span class="rank-metric">${metric}</span>
         </div>
+        ${typeof watchButton === "function" ? watchButton(data.id, r.area.name) : ""}
         <div class="bar"><span style="width:${width.toFixed(1)}%"></span></div>
         <div class="rank-sub">${LEVEL_LABELS[level]} ${fmt(r.students)}명 · ${SUBJECT_LABELS[subject]} ${fmt(r.academies)}곳 · 학교 ${schoolCount}곳${feeText}</div>
         ${salesText}
