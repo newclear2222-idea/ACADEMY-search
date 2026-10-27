@@ -183,7 +183,7 @@ function saveReport_(d) {
     MailApp.sendEmail({
       to: to,
       subject: "[동네 알림] " + Object.keys(byTown).slice(0, 3).join(", ") + (Object.keys(byTown).length > 3 ? " 외" : "") + " 새 소식 " + items.length + "건",
-      htmlBody: html + "<p style=\"color:#666;font-size:12px\">학원 입지 가이드에서 고른 동네의 교육청 학원 등록·LH 상가 공고를 매일 아침 확인해 보내 드립니다. 동네를 바꾸려면 가이드의 '동네 알림'에서 고르세요.</p>",
+      htmlBody: html + "<p style=\"color:#666;font-size:12px\">학원 입지 가이드에서 고른 동네의 온비드 공매·LH 상가 공고·교육청 학원 등록을 매일 아침 확인해 보내 드립니다. 동네를 바꾸려면 가이드의 '동네 알림'에서 고르세요.</p>",
     });
   }
   return { ok: true, sent: items.length };

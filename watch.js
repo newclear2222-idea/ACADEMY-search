@@ -1,5 +1,5 @@
 // 동네 알림: 동별 카드의 '알림 받기'를 누른 동네를 구글 시트 '알림지역' 탭에 저장합니다.
-// 매일 아침 GitHub 자동 작업(scripts/watch.py)이 그 동네의 학원 문 닫음·새 학원·LH 상가 공고를 찾아 시트 '알림' 탭과 Gmail로 보냅니다.
+// 매일 아침 GitHub 자동 작업(scripts/watch.py)이 그 동네의 공매 상가·LH 상가 공고·학원 문 닫음·인수·새 학원을 찾아 시트 '알림' 탭과 Gmail로 보냅니다.
 // inbox.js의 ibOwner, ibStore, ibEscape, ibSheetId, IB_CLAUDE, IB_SHEETS를 씁니다. 원장님 화면에서만 보입니다.
 const wEls = Object.fromEntries(["box", "towns", "status", "alerts", "reload"].map((k) => [k, document.getElementById(`watch-${k}`)]));
 const W_MAX = 60;
@@ -127,7 +127,7 @@ async function wLoad() {
       const md = at.match(/\d{4}\.\s*(\d{1,2})\.\s*(\d{1,2})/);
       const when = !isNaN(d) && /^\d{4}-/.test(at) ? d.toLocaleDateString("ko-KR", { month: "long", day: "numeric" }) : md ? `${md[1]}월 ${md[2]}일` : at;
       const link = /^https:\/\//.test(a.link) ? ` <a href="${ibEscape(a.link)}" target="_blank" rel="noopener">자세히</a>` : "";
-      return `<li><div class="rec-head"><span><span class="tag ${a.kind === "새 학원" ? "warn" : "good"}">${ibEscape(a.kind)}</span> ${ibEscape(wName(a))}</span><span class="rec-note">${ibEscape(when)}</span></div><p class="rec-note">${ibEscape(a.text)}${link}</p></li>`;
+      return `<li><div class="rec-head"><span><span class="tag ${a.kind === "새 학원" ? "warn" : a.kind === "학원 인수" ? "" : "good"}">${ibEscape(a.kind)}</span> ${ibEscape(wName(a))}</span><span class="rec-note">${ibEscape(when)}</span></div><p class="rec-note">${ibEscape(a.text)}${link}</p></li>`;
     }).join("")
     : '<li class="rec-note">아직 받은 알림이 없습니다. 동네를 고른 다음 날 아침부터 새 소식이 오면 여기와 메일에 쌓여요.</li>';
 }
