@@ -1,0 +1,24 @@
+name: 동네 알림
+
+on:
+  schedule:
+    - cron: "0 22 * * *" # 매일 오전 7시 (한국 시간)
+  workflow_dispatch: # Actions 탭에서 'Run workflow'로 바로 확인해 볼 수도 있습니다
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 고른 동네의 새 소식 보내기
+        env:
+          NEIS_API_KEY: ${{ secrets.NEIS_API_KEY }}
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+          SHEET_KEY: ${{ secrets.SHEET_KEY }}
+        working-directory: scripts
+        run: python3 watch.py
