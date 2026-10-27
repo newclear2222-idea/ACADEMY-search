@@ -130,14 +130,24 @@
     </details>
 
     <details class="recommend inbox watch owner-only" id="watch-box" hidden>
-      <summary>동네 알림: 고른 동네에 학원 자리가 나거나 LH 상가 공고가 뜨면 아침마다 메일로 받기</summary>
+      <summary>동네 알림: 고른 동네에 공매·LH 상가가 나오거나 학원 자리가 나면 아침마다 메일로 받기</summary>
       <p class="rec-note">아래 동별 카드에서 <strong>🔔 알림 받기</strong>를 누르면 그 동네가 여기에 담기고 구글 시트에 저장됩니다. 매일 아침 7시에 확인해서 새 소식이 있을 때만 메일(시트 주인 Gmail)로 보내 드려요.</p>
       <ul class="rec-note watch-kinds">
-        <li><strong>학원 문 닫음·휴원</strong>: 교육청 학원 목록에서 빠지거나 휴원한 곳. 학원을 하던 자리가 빌 수 있어요.</li>
-        <li><strong>새 학원</strong>: 그 동에 새로 등록한 입시·보습 학원·교습소 (경쟁 상대).</li>
+        <li><strong>공매 상가</strong>: 온비드(캠코)에 입찰 중이거나 곧 입찰하는 그 동 주소의 상가·근린생활시설·사무실.</li>
         <li><strong>LH 상가 공고</strong>: 그 시·구나 동 이름이 들어간 LH 단지내상가 분양·임대 공고.</li>
+        <li><strong>학원 문 닫음·휴원</strong>: 교육청 학원 목록에서 빠졌는데 같은 자리에 다른 학원이 없는 곳. 자리가 빌 수 있어요.</li>
+        <li><strong>학원 인수</strong>: 같은 자리에 다른 학원이 등록된 곳. 이미 인계가 끝난 경우라 참고만 하세요.</li>
+        <li><strong>새 학원</strong>: 그 동에 새로 등록한 입시·보습 학원·교습소 (경쟁 상대).</li>
       </ul>
-      <p class="rec-note">일반 상가 매물(네이버·네모 등)은 가져올 수 없어요. 그건 각 앱의 알림 기능을 켜 두세요.</p>
+      <details class="inbox-paste watch-apps">
+        <summary>네이버·네모 일반 매물 알림 켜기 (그쪽 앱에서 직접 한 번만)</summary>
+        <p class="rec-note">일반 매물은 각 서비스가 자료를 가져가는 걸 막고 있어 이 가이드로는 받을 수 없어요. 대신 아래처럼 켜 두면 휴대폰으로 바로 와요.</p>
+        <ol class="rec-note watch-kinds">
+          <li><strong>학원 양도 매물</strong>: 네이버 카페 앱에서 학원 양도·매매 카페에 가입 → 카페 안 <strong>키워드 알림</strong>에 동네 이름(예: 중계동, 노원 학원)을 넣으세요. <a href="https://section.cafe.naver.com/ca-fe/home/search/articles?q=%ED%95%99%EC%9B%90%20%EC%96%91%EB%8F%84" target="_blank" rel="noopener">학원 양도 글 찾기</a></li>
+          <li><strong>빈 상가 매물</strong>: 네모 앱에서 동네를 고르고 면적·층·월세를 맞춘 뒤 알림을 켜세요. <a href="https://www.nemoapp.kr" target="_blank" rel="noopener">네모 열기</a></li>
+          <li><strong>네이버 부동산</strong>: 상가·업무 유형으로 동네를 찾아 관심지역에 등록하세요(상가는 아파트만큼 알림이 잘 오지 않을 수 있어요). <a href="https://new.land.naver.com/offices" target="_blank" rel="noopener">네이버 부동산 상가 열기</a></li>
+        </ol>
+      </details>
       <ul id="watch-towns" class="watch-towns"></ul>
       <p id="watch-status" class="rec-note" aria-live="polite"></p>
       <div class="inbox-actions"><span class="rec-note">최근 알림</span><button type="button" class="inbox-copy" id="watch-reload">새로 불러오기</button></div>
