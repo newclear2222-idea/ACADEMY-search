@@ -742,6 +742,7 @@ function render(data) {
     <div><div class="label">학원 1곳당 월 카드매출 (추정, 평균)</div><div class="value">${bigWon(regionPerMonth)}</div></div>` : ""}`;
 
   renderCompare(rows, data, subject, level);
+  if (typeof renderDongMap === "function") renderDongMap(data, rows, average);
 
   const finite = rows.filter((r) => Number.isFinite(r.ratio)).map((r) => r.ratio);
   const max = Math.max(...finite, 1);
