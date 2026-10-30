@@ -253,13 +253,16 @@
         </table>
       </div>
 
-      <div class="dong-map-wrap" hidden>
-        <h2 class="section-title">동별 지도 <span class="hint">초록은 경쟁 낮음, 주황은 경쟁 높음. 원이 클수록 학생이 많고, 누르면 그 동 카드로 갑니다</span></h2>
-        <div id="dong-map" class="dong-map" role="img" aria-label="동별 학원 경쟁 지도"></div>
+      <div class="dong-split">
+        <div class="dong-map-wrap" hidden>
+          <h2 class="section-title">동별 지도 <span class="hint">초록은 경쟁 낮음, 주황은 경쟁 높음. 동을 누르면 그 동 카드로 갑니다</span></h2>
+          <div id="dong-map" class="dong-map" role="img" aria-label="동별 학원 경쟁 지도"></div>
+        </div>
+        <div class="dong-list">
+          <h2 class="section-title">동별 자세히 <span class="hint">학원 1곳당 학생 수가 많을수록 경쟁이 덜합니다</span></h2>
+          <ol id="ranking" class="ranking"></ol>
+        </div>
       </div>
-
-      <h2 class="section-title">동별 자세히 <span class="hint">학원 1곳당 학생 수가 많을수록 경쟁이 덜합니다</span></h2>
-      <ol id="ranking" class="ranking"></ol>
 
       <details class="detail">
         <summary>학교별 학생 수 자세히 보기</summary>
