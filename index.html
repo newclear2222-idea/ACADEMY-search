@@ -19,6 +19,7 @@
   <meta name="twitter:title" content="학원 입지 가이드">
   <meta name="twitter:description" content="서울·경기·인천 동네별 학생 수·학원 수·임대료로 경쟁이 덜한 학원 개원 자리를 찾고, 개원 보고서를 PDF로 받아 보세요.">
   <meta name="twitter:image" content="https://newclear2222-idea.github.io/ACADEMY-search/og.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -252,6 +253,11 @@
         </table>
       </div>
 
+      <div class="dong-map-wrap" hidden>
+        <h2 class="section-title">동별 지도 <span class="hint">초록은 경쟁 낮음, 주황은 경쟁 높음. 원이 클수록 학생이 많고, 누르면 그 동 카드로 갑니다</span></h2>
+        <div id="dong-map" class="dong-map" role="img" aria-label="동별 학원 경쟁 지도"></div>
+      </div>
+
       <h2 class="section-title">동별 자세히 <span class="hint">학원 1곳당 학생 수가 많을수록 경쟁이 덜합니다</span></h2>
       <ol id="ranking" class="ranking"></ol>
 
@@ -292,7 +298,9 @@
     </section>
   </main>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
   <script src="app.js"></script>
+  <script src="map.js"></script>
   <script src="intake-config.js"></script>
   <script src="inbox.js"></script>
   <script src="watch.js"></script>
