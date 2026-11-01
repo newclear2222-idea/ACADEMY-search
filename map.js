@@ -76,12 +76,12 @@ async function renderDongMap(data, rows, average) {
   const big = typeof bigAcademies === "function" ? bigAcademies(data) : [];
   const levelNow = els.level.value;
   const bigSub = typeof bigAcademies === "function" && (subjectNow !== "all" || levelNow !== "total") ? bigAcademies(data, 2, subjectNow, levelNow) : [];
-  const bigPick = [LEVEL_SHORT[levelNow], subjectNow === "all" ? "" : SUBJECT_SHORT[subjectNow]].filter(Boolean).join(" ");
+  const bigPick = [LEVEL_SHORT[levelNow], subjectNow === "all" ? "" : SUBJECT_SHORT[subjectNow] + " 전문"].filter(Boolean).join(" ");
   const bigItems = (list) => list.map((b, i) => `<div>${i + 1}. ${b.name}<span>${b.dong}${b.halls > 1 ? ` ${b.halls}관` : ""} · 정원 ${fmt(b.seats)}명</span></div>`).join("");
   const boxEl = dmBigBox.getContainer();
   boxEl.hidden = !big.length && !bigSub.length;
   boxEl.innerHTML = (big.length ? `<strong>${shortRegion(data.region)} 대표 대형 학원</strong>${bigItems(big)}` : "")
-    + (bigSub.length ? `<strong class="dm-big-sub">${bigPick} 대형 학원</strong>${bigItems(bigSub)}` : "");
+    + (bigSub.length ? `<strong class="dm-big-sub">${bigPick} ${subjectNow === "all" ? "대형 학원" : "학원"}</strong>${bigItems(bigSub)}` : "");
   const css = getComputedStyle(document.documentElement);
   const line = css.getPropertyValue("--line").trim();
   const text = css.getPropertyValue("--text").trim();
