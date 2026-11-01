@@ -77,6 +77,55 @@ const shortRegion = (region) => (region || "").split(" ").slice(-1)[0] || "이 �
 // "고등학생 수학 등록 수강료"처럼 어떤 수강료인지 밝힌 이름.
 const feeName = (subject, level) => `${level === "total" ? "" : `${LEVEL_LABELS[level]} `}${subject === "all" ? "전 과목" : SUBJECT_SHORT[subject]} 등록 수강료`;
 
+// 대형 쏠림: 정원 500명 이상 학원(대형)이 동 전체 학원·교습소 정원에서 차지하는 비중 (scripts/update_data.py big_share).
+// 작은 학원 정원은 실제와 어긋난 곳이 많아 학원 수 대신 쓰지 않고, 대형 학원이 시장을 얼마나 쥐고 있는지만 봅니다.
+const BIG_SHARE_HEAVY = 0.5;
+const BIG_MIN_COUNT = 2;
+function bigHeavy(area) {
+  const b = area.bigShare;
+  if (!b || !b.seats || b.count < BIG_MIN_COUNT) return null;
+  const share = b.big / b.seats;
+  return share >= BIG_SHARE_HEAVY ? { ...b, share } : null;
+}
+function bigHeavyText(area) {
+  const b = bigHeavy(area);
+  if (!b) return "";
+  const names = b.names.map((n) => n.replace(/학원$/, "")).join(", ");
+  return `정원 500명 이상 대형 학원 ${fmt(b.count)}곳(${names}${b.count > b.names.length ? " 등" : ""})이 이 동 학원 전체 정원의 ${pct(b.share)}를 차지합니다. 대형 학원이 학생을 많이 가져가는 대형 쏠림 동이라, 학원 1곳당 학생 숫자보다 실제 경쟁이 높고 새 학원이 자리 잡기 어렵습니다.`;
+}
+
+// 구·시마다 대표 대형 학원 2곳: 정원 500명 이상 학원 중 정원이 큰 곳. 한 동 안 같은 이름의 여러 관(2관·3관)은 하나로 묶어 정원을 더합니다.
+// 눈높이·씽크빅 같은 학습센터 체인과 원격 학원, 정원 5,000명이 넘는 입력 실수는 뺍니다.
+const BIG_SKIP = /원격|러닝센터|학습센터|학습코칭|씽크빅|구몬|공부방/;
+function bigAcademies(data, count = 2) {
+  const brand = (n) => n.replace(/\([^)]*\)/g, "").replace(/\s/g, "").replace(/(어학원|학원|교습소)$/, "");
+  const groups = [];
+  for (const a of data.areas) {
+    const xs = (a.top || []).filter((x) => x.kind === "학원" && x.capacity >= 500 && x.capacity <= 5000 && !BIG_SKIP.test(x.name));
+    const starts = {};
+    xs.forEach((x) => { const b = brand(x.name); for (let i = 4; i <= b.length; i++) starts[b.slice(0, i)] = (starts[b.slice(0, i)] || 0) + 1; });
+    const byKey = {};
+    xs.forEach((x) => {
+      const b = brand(x.name);
+      let key = b;
+      for (let i = 4; i <= b.length; i++) if (starts[b.slice(0, i)] >= 2) { key = b.slice(0, i); break; }
+      (byKey[key] ||= []).push(x);
+    });
+    Object.values(byKey).forEach((list) => {
+      list.sort((p, q) => q.capacity - p.capacity);
+      groups.push({ name: list[0].name.replace(/학원$/, ""), dong: a.name, halls: list.length, seats: list.reduce((t, x) => t + x.capacity, 0) });
+    });
+  }
+  // 같은 브랜드가 여러 동에 있으면 가장 큰 곳 하나만 남겨 서로 다른 학원 2곳을 보여 줍니다.
+  const picked = [];
+  for (const g of groups.sort((p, q) => q.seats - p.seats)) {
+    if (picked.some((x) => brand(x.name).slice(0, 4) === brand(g.name).slice(0, 4))) continue;
+    picked.push(g);
+    if (picked.length === count) break;
+  }
+  return picked;
+}
+
 // 숫자에서 읽을 수 있는 이유만 적습니다. 현장 조사나 설문이 아닙니다.
 function reasonsFor(r, ctx) {
   const { subject, level } = ctx;
@@ -118,6 +167,8 @@ function reasonsFor(r, ctx) {
     reasons.push("학교가 1곳뿐이라 숫자가 그 학교 하나에 크게 좌우됩니다.");
   }
 
+  const big = bigHeavyText(r.area);
+  if (big) reasons.push(big);
   const sales = salesReason(r.area, ctx);
   if (sales) reasons.push(sales);
   if (r.area.nearby) reasons.push(hubText(r.area, subject, ctx.regionId));
@@ -734,11 +785,13 @@ function render(data) {
   // 비율이 아니라 '기대보다 더 들어온 매출 금액'이 가장 큰 곳입니다. 학생이 적은 동은 비율만 커 보여서입니다.
   const ctx = { subject, level, regionName: shortRegion(data.region), totalStudents, totalAcademies, regionFee, regionId: data.id, salesPeriod: data.salesPeriod, pastYear: data.pastYear, data, average };
 
+  const bigList = bigAcademies(data);
   els.summary.innerHTML = `
     <div><div class="label">${data.region} ${LEVEL_LABELS[level]}</div><div class="value">${fmt(totalStudents)}명</div></div>
     <div><div class="label">${SUBJECT_LABELS[subject]}</div><div class="value">${fmt(totalAcademies)}곳</div></div>
     <div><div class="label">${shortRegion(data.region)} 평균, 학원 1곳당 학생</div><div class="value">${Number.isFinite(average) ? fmt(Math.round(average)) + "명" : "-"}</div></div>
-    <div><div class="label">${shortRegion(data.region)} ${feeName(subject, level)} (중간값)</div><div class="value">${regionFee ? won(regionFee.median) : "-"}</div></div>${regionPerMonth ? `
+    <div><div class="label">${shortRegion(data.region)} ${feeName(subject, level)} (중간값)</div><div class="value">${regionFee ? won(regionFee.median) : "-"}</div></div>${bigList.length ? `
+    <div><div class="label">${shortRegion(data.region)} 대표 대형 학원 (정원 기준)</div><div class="value value-list">${bigList.map((b) => `${b.name}<br><span>${b.dong}${b.halls > 1 ? ` ${b.halls}관` : ""} · 정원 ${fmt(b.seats)}명</span>`).join("<div class=\"gap\"></div>")}</div></div>` : ""}${regionPerMonth ? `
     <div><div class="label">학원 1곳당 월 카드매출 (추정, 평균)</div><div class="value">${bigWon(regionPerMonth)}</div></div>` : ""}`;
 
   renderCompare(rows, data, subject, level);
@@ -760,6 +813,8 @@ function render(data) {
         metric = `학원 1곳당 <strong>${fmt(Math.round(r.ratio))}</strong>명`;
         if (r.ratio >= average * 1.2) tag = '<span class="tag good">경쟁 낮음</span>';
         else if (r.ratio <= average * 0.8) tag = '<span class="tag warn">경쟁 높음</span>';
+        // 대형 쏠림이면 학원 수로 본 '경쟁 낮음'·보통 대신 진입이 어렵다고 표시합니다.
+        if (bigHeavy(r.area)) tag = (tag.includes("경쟁 높음") ? tag : "") + '<span class="tag warn">대형 쏠림·진입 어려움</span>';
         width = (r.ratio / max) * 100;
       }
       const schoolCount = r.area.schools.length;
@@ -959,7 +1014,9 @@ function recommend(regionsData, opts) {
     x.perAcademy = x.students / Math.max(x.academies, 1);
     x.comp = avg ? Math.min(3, Math.max(0.25, x.perAcademy / avg)) : 1;
     x.gap = withBoost(x.st, x.boost) - x.g.rate;
-    x.score = x.gap * 100 + 5 * Math.log2(x.comp) + (x.hubBonus || 0);
+    x.big = bigHeavy(x.area);
+    // 대형 쏠림 동은 학원 1곳당 학생으로 본 경쟁 점수를 '평균의 절반'만큼 깎습니다(5 * log2(0.5) = -5).
+    x.score = x.gap * 100 + 5 * Math.log2(x.comp) + (x.big ? -5 : 0) + (x.hubBonus || 0);
   }
   pool.sort((a, b) => b.score - a.score);
   return { top: pool.slice(0, REC_TOP), avg, skipped, total: pool.length };
@@ -1020,6 +1077,7 @@ function recItem(x, i, opts, scopeName) {
       : x.gap > 0 ? `${L}은 학원보다 빨리 늘지만, ${base} 다른 학년은 덜 늘거나 줄고 있다는 뜻이라, 그 학년을 가르치던 학원들이 ${L} 쪽으로 넘어오면 경쟁이 세질 수 있습니다.`
       : base);
   }
+  if (x.big) warn.push(`${bigHeavyText(x.area)} (추천 점수에서 5점 뺐습니다)`);
   if (x.area.students[level] < 500) warn.push(`${L}이 ${fmt(x.area.students[level])}명뿐이라 몇 명만 바뀌어도 증감률이 크게 흔들립니다.`);
   return `<li>
     <div class="rec-head"><span>${i + 1}. ${place}</span><span class="score">${L}이 학원보다 1년 ${pp(x.gap)}p</span></div>

@@ -142,6 +142,9 @@ LEVEL_PATTERNS = {
 
 TOP_ACADEMIES = 5
 BRAND_MIN_LEN = 4
+# 대형 쏠림: 정원이 이 이상인 학원을 대형으로 봅니다. 정원이 이보다 큰 값은 입력 실수로 보고 뺍니다.
+BIG_SEATS = 500
+SEATS_MAX = 5_000
 
 # 1인당 교습비로 보기 어려운 값(입력 실수 등)은 뺍니다.
 FEE_MIN, FEE_MAX = 30_000, 2_000_000
@@ -629,6 +632,20 @@ def count_branches(names):
     return counts
 
 
+def big_share(academies):
+    """동 안 학원·교습소 정원 합계 가운데 대형 학원(정원 BIG_SEATS 이상)이 차지하는 몫.
+
+    작은 학원 정원은 실제와 어긋난 곳이 많아 점수로 쓰지 않고, 대형 학원을 가려내고 그 비중을 보는 데만 씁니다.
+    돌려주는 값: {"big": 대형 정원 합, "seats": 전체 정원 합, "count": 대형 학원 수, "names": 큰 순 3곳}
+    """
+    ok = [x for x in academies if 0 < x["capacity"] <= SEATS_MAX and "원격" not in x["name"]]
+    big = sorted((x for x in ok if x["kind"] == "학원" and x["capacity"] >= BIG_SEATS), key=lambda x: -x["capacity"])
+    seats = sum(x["capacity"] for x in ok)
+    if not big or not seats:
+        return None
+    return {"big": sum(x["capacity"] for x in big), "seats": seats, "count": len(big), "names": [x["name"] for x in big[:3]]}
+
+
 def pick_top_academies(academies):
     """과목별로 정원이 큰 학원을 몇 곳씩 남깁니다. 유명도가 아니라 규모 기준입니다."""
     keep = {}
@@ -839,6 +856,9 @@ def build(province, academies, schools, year, sales=None, sales_label="", apt_ro
                 a["center"] = [round(sum(p[0] for p in points) / len(points), 5),
                                round(sum(p[1] for p in points) / len(points), 5)]
             a["fees"] = summarize_fees(a["fees"])
+            share = big_share(a["top"])
+            if share:
+                a["bigShare"] = share
             a["top"] = pick_top_academies(a["top"])
             if sales:
                 parts = sales_of.get(a["name"])

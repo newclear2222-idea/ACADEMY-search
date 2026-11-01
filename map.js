@@ -1,6 +1,6 @@
 // 동별 지도: 지금 고른 시·구의 행정동 경계를 그리고, 동별 카드와 같은 색으로 칠합니다.
 // 경계는 data/geo/<서울|경기|인천>.json(행정안전부 행정동 경계, 간략화)에 들어 있어 바깥 지도 그림 없이도 보입니다.
-// 색은 동별 카드의 표시와 같습니다: 학원 1곳당 학생이 평균의 1.2배 이상이면 초록(경쟁 낮음), 0.8배 이하면 주황(경쟁 높음).
+// 색은 동별 카드의 표시와 같습니다: 학원 1곳당 학생이 평균의 1.2배 이상이면 초록(경쟁 낮음), 0.8배 이하이거나 대형 쏠림이면 주황(경쟁 높음).
 // 행정동(화곡1동)은 이름으로 동별 카드의 법정동(화곡동)에 붙이고, 이름이 다르면 가장 가까운 동에 붙입니다. 누르면 그 동 카드로 내려갑니다.
 let dmMap = null;
 let dmLayer = null;
@@ -9,6 +9,7 @@ const dmGeo = {};
 function dmColor(r, average) {
   const css = getComputedStyle(document.documentElement);
   if (!r) return css.getPropertyValue("--muted").trim();
+  if (typeof bigHeavy === "function" && bigHeavy(r.area)) return css.getPropertyValue("--warn").trim(); // 대형 쏠림은 경쟁 높음과 같은 색
   if (!Number.isFinite(r.ratio)) return r.students > 0 ? css.getPropertyValue("--good").trim() : css.getPropertyValue("--muted").trim();
   if (r.ratio >= average * 1.2) return css.getPropertyValue("--good").trim();
   if (r.ratio <= average * 0.8) return css.getPropertyValue("--warn").trim();
