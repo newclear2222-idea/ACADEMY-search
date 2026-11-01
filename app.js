@@ -90,7 +90,19 @@ function bigHeavy(area) {
 function bigHeavyText(area) {
   const b = bigHeavy(area);
   if (!b) return "";
-  const names = b.names.map((n) => n.replace(/학원$/, "")).join(", ");
+  // 같은 학원의 여러 관(대찬시대·대찬W, 사과나무 쓰리·원·투 등)은 한 이름으로 합쳐 보여 줍니다.
+  const groups = [];
+  b.names.map((n) => n.replace(/학원$/, "")).forEach((n) => {
+    const g = groups.find((x) => SAME_BRAND.some((k) => n.startsWith(k) && x[0].startsWith(k)) || n.slice(0, 4) === x[0].slice(0, 4));
+    g ? g.push(n) : groups.push([n]);
+  });
+  const names = groups.map((g) => {
+    if (g.length === 1) return g[0];
+    const k = SAME_BRAND.find((x) => g[0].startsWith(x));
+    let i = 0;
+    while (g.every((n) => n[i] && n[i] === g[0][i])) i++;
+    return `${k || g[0].slice(0, i)} ${g.length}관`;
+  }).join(", ");
   return `정원 500명 이상 대형 학원 ${fmt(b.count)}곳(${names}${b.count > b.names.length ? " 등" : ""})이 이 동 학원 전체 정원의 ${pct(b.share)}를 차지합니다. 대형 학원이 학생을 많이 가져가는 대형 쏠림 동이라, 학원 1곳당 학생 숫자보다 실제 경쟁이 높고 새 학원이 자리 잡기 어렵습니다.`;
 }
 
@@ -111,8 +123,12 @@ function onlySubject(x, subject) {
 
 // 앞 글자가 짧아 자동으로 안 묶이지만 같은 학원인 이름들입니다(대찬시대·대찬W·대찬바론 등).
 const SAME_BRAND = ["대찬"];
+// 학교급이 등록돼 있지 않아도 이름으로 고등(재수·입시) 학원임을 알 수 있는 곳입니다.
+const HIGH_ONLY = /재수|독학|입시|수능|의대|시대인재|러셀|대찬|대성|메가스터디|이투스|하이퍼|종로/;
+// 학교급을 못 찾은 학원은 모든 학교급에 넣습니다(빈 배열). 이름이 고등 전문이면 고등으로만 봅니다.
+const levelsOf = (x) => (x.levels?.length ? x.levels : HIGH_ONLY.test(x.name) ? ["high"] : []);
 function bigAcademies(data, count = 2, subject = "all", level = "total") {
-  const brand = (n) => n.replace(/\([^)]*\)/g, "").replace(/\s/g, "").replace(/(어학원|학원|교습소)$/, "");
+  const brand = (n) => n.replace(/\([^)]*\)/g, "").replace(/^제?\d+관/, "").replace(/\s/g, "").replace(/((?<!영)어학원|학원|교습소)$/, "");
   // 이름 앞의 동네 이름(목동, 대치 등)은 떼고 비교해야 '목동시대인재'와 '시대인재'가 같은 학원으로 묶입니다.
   const places = new Set(["대치", "목동", "중계", "평촌", "분당", "강남", "일산"]);
   data.areas.forEach((a) => { const n = a.name.replace(/제?\d+동$/, "동"); places.add(n); if (n.length >= 3) places.add(n.replace(/동$/, "")); });
@@ -121,7 +137,7 @@ function bigAcademies(data, count = 2, subject = "all", level = "total") {
   const xs = [];
   for (const a of data.areas) {
     (a.top || []).forEach((x) => {
-      if (x.kind === "학원" && x.capacity >= (subject === "all" ? 500 : 100) && x.capacity <= 30000 && !BIG_SKIP.test(x.name) && (subject === "all" || onlySubject(x, subject)) && (level === "total" || !x.levels || x.levels.includes(level))) xs.push({ ...x, dong: a.name });
+      if (x.kind === "학원" && x.capacity >= (subject === "all" ? 500 : 100) && x.capacity <= 30000 && !BIG_SKIP.test(x.name) && (subject === "all" || onlySubject(x, subject)) && (level === "total" || levelsOf(x).length === 0 || levelsOf(x).includes(level))) xs.push({ ...x, dong: a.name });
     });
   }
   // 구 전체에서 앞 3글자 이상이 같은 이름(1관·2관·고등관·별관 등)은 한 학원으로 묶어 정원을 더합니다. 다른 구는 섞지 않습니다.
