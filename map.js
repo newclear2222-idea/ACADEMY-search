@@ -4,6 +4,7 @@
 // 행정동(화곡1동)은 이름으로 동별 카드의 법정동(화곡동)에 붙이고, 이름이 다르면 가장 가까운 동에 붙입니다. 누르면 그 동 카드로 내려갑니다.
 let dmMap = null;
 let dmLayer = null;
+let dmBigBox = null; // 지도 오른쪽 위 빈 곳에 적는 구·시 대표 대형 학원 2곳
 const dmGeo = {};
 
 function dmColor(r, average) {
@@ -65,8 +66,15 @@ async function renderDongMap(data, rows, average) {
       maxZoom: 18, opacity: 0.55, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> · 경계 행정안전부',
     }).addTo(dmMap);
     dmLayer = L.layerGroup().addTo(dmMap);
+    dmBigBox = L.control({ position: "topright" });
+    dmBigBox.onAdd = () => { const div = L.DomUtil.create("div", "dm-big"); L.DomEvent.disableClickPropagation(div); return div; };
+    dmBigBox.addTo(dmMap);
   }
   dmLayer.clearLayers();
+  const big = typeof bigAcademies === "function" ? bigAcademies(data) : [];
+  const boxEl = dmBigBox.getContainer();
+  boxEl.hidden = !big.length;
+  boxEl.innerHTML = big.length ? `<strong>${shortRegion(data.region)} 대표 대형 학원</strong>${big.map((b, i) => `<div>${i + 1}. ${b.name}<span>${b.dong}${b.halls > 1 ? ` ${b.halls}관` : ""} · 정원 ${fmt(b.seats)}명</span></div>`).join("")}` : "";
   const css = getComputedStyle(document.documentElement);
   const line = css.getPropertyValue("--line").trim();
   const text = css.getPropertyValue("--text").trim();

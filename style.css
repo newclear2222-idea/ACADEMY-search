@@ -314,3 +314,7 @@ th { color: var(--muted); font-weight: 600; }
 .dong-map .leaflet-tooltip { font: inherit; font-size: 0.85rem; line-height: 1.4; }
 @media (max-width: 600px) { .dong-map { height: 300px; } }
 .summary .value-list .gap { height: 6px; }
+.dm-big { background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; font-size: 0.8rem; line-height: 1.45; max-width: 220px; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12); }
+.dm-big strong { display: block; margin-bottom: 2px; }
+.dm-big div { font-weight: 700; }
+.dm-big span { display: block; font-weight: 400; color: var(--muted); font-size: 0.75rem; }
