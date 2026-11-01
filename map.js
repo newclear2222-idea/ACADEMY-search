@@ -71,10 +71,15 @@ async function renderDongMap(data, rows, average) {
     dmBigBox.addTo(dmMap);
   }
   dmLayer.clearLayers();
+  // 지도 상자: 구·시 대표 대형 학원 2곳, 과목을 골랐으면 그 과목 대형 학원 2곳도.
+  const subjectNow = els.subject.value;
   const big = typeof bigAcademies === "function" ? bigAcademies(data) : [];
+  const bigSub = typeof bigAcademies === "function" && subjectNow !== "all" ? bigAcademies(data, 2, subjectNow) : [];
+  const bigItems = (list) => list.map((b, i) => `<div>${i + 1}. ${b.name}<span>${b.dong}${b.halls > 1 ? ` ${b.halls}관` : ""} · 정원 ${fmt(b.seats)}명</span></div>`).join("");
   const boxEl = dmBigBox.getContainer();
-  boxEl.hidden = !big.length;
-  boxEl.innerHTML = big.length ? `<strong>${shortRegion(data.region)} 대표 대형 학원</strong>${big.map((b, i) => `<div>${i + 1}. ${b.name}<span>${b.dong}${b.halls > 1 ? ` ${b.halls}관` : ""} · 정원 ${fmt(b.seats)}명</span></div>`).join("")}` : "";
+  boxEl.hidden = !big.length && !bigSub.length;
+  boxEl.innerHTML = (big.length ? `<strong>${shortRegion(data.region)} 대표 대형 학원</strong>${bigItems(big)}` : "")
+    + (bigSub.length ? `<strong class="dm-big-sub">${SUBJECT_SHORT[subjectNow]} 대형 학원</strong>${bigItems(bigSub)}` : "");
   const css = getComputedStyle(document.documentElement);
   const line = css.getPropertyValue("--line").trim();
   const text = css.getPropertyValue("--text").trim();

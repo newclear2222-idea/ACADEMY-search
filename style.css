@@ -318,3 +318,4 @@ th { color: var(--muted); font-weight: 600; }
 .dm-big strong { display: block; margin-bottom: 2px; }
 .dm-big div { font-weight: 700; }
 .dm-big span { display: block; font-weight: 400; color: var(--muted); font-size: 0.75rem; }
+.dm-big .dm-big-sub { margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--line); }
