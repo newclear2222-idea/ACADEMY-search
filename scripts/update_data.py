@@ -786,8 +786,13 @@ def build(province, academies, schools, year, sales=None, sales_label="", apt_ro
                 if opened_on >= f"{datetime.date.today() - datetime.timedelta(days=days):%Y%m%d}":
                     for k in {"all"} | subjects:
                         a["opened"][period][k] += 1
+        # 가르치는 학교급: 학원 이름, 교습과정, 교습비 과정 이름에서 '초등·중등·고등' 등을 찾습니다. 못 찾으면 비워 둡니다.
+        levels = course_levels(text)
+        for course, _ in parse_fees(row.get("PSNBY_THCC_CNTNT")):
+            levels |= course_levels(course)
         a["top"].append({
             "name": (row.get("ACA_NM") or "").strip(),
+            "levels": sorted(levels),
             "kind": "교습소" if "교습소" in (row.get("ACA_INSTI_SC_NM") or "") else "학원",
             "capacity": capacity_of(row),
             "since": int(established) if established.isdigit() else None,

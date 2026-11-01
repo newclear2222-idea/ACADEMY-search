@@ -97,12 +97,13 @@ function bigHeavyText(area) {
 // 구·시마다 대표 대형 학원 2곳: 정원 500명 이상 학원 중 정원이 큰 곳. 한 동 안 같은 이름의 여러 관(2관·3관)은 하나로 묶어 정원을 더합니다.
 // 눈높이·씽크빅 같은 학습센터 체인과 원격 학원, 정원 3만 명이 넘는 입력 실수는 뺍니다.
 const BIG_SKIP = /원격|러닝센터|학습센터|학습코칭|씽크빅|구몬|공부방/;
-// subject를 주면(영어 등) 그 과목을 가르치는 대형 학원만 봅니다.
-function bigAcademies(data, count = 2, subject = "all") {
+// subject·level을 주면(영어, 고등 등) 그 과목·학교급을 가르치는 대형 학원만 봅니다. 학교급은 학원 이름과 교습과정에서 찾은 것이라, 못 찾은 학원은 학교급을 고르면 빠집니다.
+const LEVEL_SHORT = { total: "", elem: "초등", middle: "중등", high: "고등" };
+function bigAcademies(data, count = 2, subject = "all", level = "total") {
   const brand = (n) => n.replace(/\([^)]*\)/g, "").replace(/\s/g, "").replace(/(어학원|학원|교습소)$/, "");
   const groups = [];
   for (const a of data.areas) {
-    const xs = (a.top || []).filter((x) => x.kind === "학원" && x.capacity >= 500 && x.capacity <= 30000 && !BIG_SKIP.test(x.name) && (subject === "all" || x.subjects.includes(subject)));
+    const xs = (a.top || []).filter((x) => x.kind === "학원" && x.capacity >= 500 && x.capacity <= 30000 && !BIG_SKIP.test(x.name) && (subject === "all" || x.subjects.includes(subject)) && (level === "total" || !x.levels || x.levels.includes(level)));
     const starts = {};
     xs.forEach((x) => { const b = brand(x.name); for (let i = 4; i <= b.length; i++) starts[b.slice(0, i)] = (starts[b.slice(0, i)] || 0) + 1; });
     const byKey = {};
@@ -787,7 +788,8 @@ function render(data) {
   const ctx = { subject, level, regionName: shortRegion(data.region), totalStudents, totalAcademies, regionFee, regionId: data.id, salesPeriod: data.salesPeriod, pastYear: data.pastYear, data, average };
 
   const bigList = bigAcademies(data);
-  const bigSubject = subject === "all" ? [] : bigAcademies(data, 2, subject);
+  const bigSubject = subject === "all" && level === "total" ? [] : bigAcademies(data, 2, subject, level);
+  const bigPick = [LEVEL_SHORT[level], subject === "all" ? "" : SUBJECT_SHORT[subject]].filter(Boolean).join(" ");
   const bigLine = (b) => `${b.name}<br><span>${b.dong}${b.halls > 1 ? ` ${b.halls}관` : ""} · 정원 ${fmt(b.seats)}명</span>`;
   els.summary.innerHTML = `
     <div><div class="label">${data.region} ${LEVEL_LABELS[level]}</div><div class="value">${fmt(totalStudents)}명</div></div>
@@ -795,7 +797,7 @@ function render(data) {
     <div><div class="label">${shortRegion(data.region)} 평균, 학원 1곳당 학생</div><div class="value">${Number.isFinite(average) ? fmt(Math.round(average)) + "명" : "-"}</div></div>
     <div><div class="label">${shortRegion(data.region)} ${feeName(subject, level)} (중간값)</div><div class="value">${regionFee ? won(regionFee.median) : "-"}</div></div>${bigList.length ? `
     <div><div class="label">${shortRegion(data.region)} 대표 대형 학원 (정원 기준)</div><div class="value value-list">${bigList.map(bigLine).join("<div class=\"gap\"></div>")}</div></div>` : ""}${bigSubject.length ? `
-    <div><div class="label">${shortRegion(data.region)} ${SUBJECT_SHORT[subject]} 대형 학원 (정원 기준)</div><div class="value value-list">${bigSubject.map(bigLine).join("<div class=\"gap\"></div>")}</div></div>` : ""}${regionPerMonth ? `
+    <div><div class="label">${shortRegion(data.region)} ${bigPick} 대형 학원 (정원 기준)</div><div class="value value-list">${bigSubject.map(bigLine).join("<div class=\"gap\"></div>")}</div></div>` : ""}${regionPerMonth ? `
     <div><div class="label">학원 1곳당 월 카드매출 (추정, 평균)</div><div class="value">${bigWon(regionPerMonth)}</div></div>` : ""}`;
 
   renderCompare(rows, data, subject, level);
