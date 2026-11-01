@@ -79,8 +79,8 @@ const feeName = (subject, level) => `${level === "total" ? "" : `${LEVEL_LABELS[
 
 // 대형 쏠림: 정원 500명 이상 학원(대형)이 동 전체 학원·교습소 정원에서 차지하는 비중 (scripts/update_data.py big_share).
 // 작은 학원 정원은 실제와 어긋난 곳이 많아 학원 수 대신 쓰지 않고, 대형 학원이 시장을 얼마나 쥐고 있는지만 봅니다.
-const BIG_SHARE_HEAVY = 0.5;
-const BIG_MIN_COUNT = 2;
+const BIG_SHARE_HEAVY = 0.4; // 1,030개 동 중 약 11%(대치·목동·중계·내발산·반포·송도 등)가 걸리는 선
+const BIG_MIN_COUNT = 3;
 function bigHeavy(area) {
   const b = area.bigShare;
   if (!b || !b.seats || b.count < BIG_MIN_COUNT) return null;
