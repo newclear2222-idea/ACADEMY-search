@@ -2,8 +2,8 @@
  "id": "서울-강북구",
  "province": "서울특별시",
  "region": "서울특별시 강북구",
- "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 10월 기준",
- "builtAt": "2026-10-25",
+ "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 11월 기준",
+ "builtAt": "2026-11-01",
  "sources": [
   "학원: 나이스 교육정보 개방포털 학원교습소정보",
   "학생 수: 학교알리미 학년별·학급별 학생수",
@@ -22,37 +22,37 @@
   "all": {
    "elem": [
     160000,
-    216
+    211
    ],
    "middle": [
     240000,
-    184
+    181
    ],
    "high": [
     300000,
-    92
+    87
    ],
    "total": [
     200000,
-    517
+    505
    ]
   },
   "math": {
    "elem": [
     170000,
-    107
+    102
    ],
    "middle": [
     250000,
-    108
+    105
    ],
    "high": [
     330000,
-    62
+    57
    ],
    "total": [
-    220000,
-    281
+    225000,
+    269
    ]
   },
   "english": {
@@ -210,11 +210,11 @@
      ],
      "high": [
       315000,
-      76
+      74
      ],
      "total": [
       200000,
-      382
+      381
      ]
     },
     "math": {
@@ -228,11 +228,11 @@
      ],
      "high": [
       330000,
-      53
+      51
      ],
      "total": [
       240000,
-      206
+      205
      ]
     },
     "english": {
@@ -368,6 +368,17 @@
      ]
     },
     {
+     "name": "해냄영어수학학원",
+     "kind": "학원",
+     "capacity": 500,
+     "since": 2019,
+     "branches": 2,
+     "subjects": [
+      "english",
+      "math"
+     ]
+    },
+    {
      "name": "유앤오학원",
      "kind": "학원",
      "capacity": 497,
@@ -425,16 +436,6 @@
      "capacity": 414,
      "since": 2018,
      "branches": 2,
-     "subjects": [
-      "english"
-     ]
-    },
-    {
-     "name": "삼성영어화계학원",
-     "kind": "학원",
-     "capacity": 385,
-     "since": 2020,
-     "branches": 96,
      "subjects": [
       "english"
      ]
@@ -536,6 +537,16 @@
     37.62073,
     127.02126
    ],
+   "bigShare": {
+    "big": 7853,
+    "seats": 26528,
+    "count": 11,
+    "names": [
+     "도약독학재수학원",
+     "사토즈학원",
+     "하나보습학원"
+    ]
+   },
    "sales": 1566635337,
    "storeFlow": {
     "open": 1,
@@ -543,15 +554,15 @@
     "base": 65
    },
    "apt": [
-    34722317,
-    474
+    35902753,
+    370
    ],
    "fervor": {
     "score": 30,
     "parts": {
      "density": [
       1.9,
-      64
+      65
      ],
      "fee": [
       200000,
@@ -667,8 +678,8 @@
      "region": "서울-강북구",
      "km": 1.9,
      "academies": {
-      "all": 30,
-      "math": 5,
+      "all": 29,
+      "math": 4,
       "english": 6,
       "korean": 10,
       "science": 0
@@ -695,8 +706,8 @@
      "region": "서울-성북구",
      "km": 2.6,
      "academies": {
-      "all": 16,
-      "math": 4,
+      "all": 17,
+      "math": 5,
       "english": 4,
       "korean": 10,
       "science": 1
@@ -765,10 +776,10 @@
      "region": "서울-성북구",
      "km": 3.1,
      "academies": {
-      "all": 65,
+      "all": 66,
       "math": 20,
       "english": 18,
-      "korean": 21,
+      "korean": 22,
       "science": 0
      },
      "students": 2721,
@@ -779,10 +790,10 @@
      "region": "서울-도봉구",
      "km": 3.7,
      "academies": {
-      "all": 133,
+      "all": 132,
       "math": 38,
       "english": 35,
-      "korean": 47,
+      "korean": 46,
       "science": 2
      },
      "students": 8143,
@@ -796,7 +807,7 @@
       "all": 141,
       "math": 54,
       "english": 33,
-      "korean": 34,
+      "korean": 33,
       "science": 6
      },
      "students": 7229,
@@ -821,8 +832,8 @@
      "region": "서울-동대문구",
      "km": 4.2,
      "academies": {
-      "all": 63,
-      "math": 24,
+      "all": 64,
+      "math": 25,
       "english": 16,
       "korean": 18,
       "science": 0
@@ -838,7 +849,7 @@
       "all": 38,
       "math": 19,
       "english": 9,
-      "korean": 7,
+      "korean": 8,
       "science": 1
      },
      "students": 6067,
@@ -905,11 +916,11 @@
      "region": "서울-노원구",
      "km": 5.7,
      "academies": {
-      "all": 402,
-      "math": 136,
-      "english": 91,
-      "korean": 106,
-      "science": 26
+      "all": 401,
+      "math": 135,
+      "english": 92,
+      "korean": 105,
+      "science": 25
      },
      "students": 14702,
      "sales": 21568691687
@@ -919,7 +930,7 @@
      "region": "서울-중랑구",
      "km": 5.7,
      "academies": {
-      "all": 30,
+      "all": 29,
       "math": 8,
       "english": 6,
       "korean": 9,
@@ -934,7 +945,7 @@
      "km": 5.7,
      "academies": {
       "all": 85,
-      "math": 35,
+      "math": 36,
       "english": 27,
       "korean": 17,
       "science": 5
@@ -947,8 +958,8 @@
      "region": "서울-노원구",
      "km": 6.0,
      "academies": {
-      "all": 210,
-      "math": 86,
+      "all": 209,
+      "math": 85,
       "english": 53,
       "korean": 41,
       "science": 3
@@ -961,9 +972,9 @@
      "region": "서울-동대문구",
      "km": 6.1,
      "academies": {
-      "all": 55,
+      "all": 56,
       "math": 21,
-      "english": 7,
+      "english": 8,
       "korean": 18,
       "science": 1
      },
@@ -995,8 +1006,8 @@
     "total": 1676
    },
    "academies": {
-    "all": 30,
-    "math": 5,
+    "all": 29,
+    "math": 4,
     "english": 6,
     "korean": 10,
     "science": 0
@@ -1032,37 +1043,37 @@
     "all": {
      "elem": [
       130000,
-      17
-     ],
-     "middle": [
-      200000,
-      9
-     ],
-     "high": [
-      250000,
-      3
-     ],
-     "total": [
-      140000,
-      30
-     ]
-    },
-    "math": {
-     "elem": [
-      150000,
-      10
+      12
      ],
      "middle": [
       200000,
       6
      ],
      "high": [
-      250000,
-      3
+      null,
+      0
      ],
      "total": [
-      160000,
+      130000,
       19
+     ]
+    },
+    "math": {
+     "elem": [
+      150000,
+      5
+     ],
+     "middle": [
+      200000,
+      3
+     ],
+     "high": [
+      null,
+      0
+     ],
+     "total": [
+      180000,
+      8
      ]
     },
     "english": {
@@ -1221,16 +1232,6 @@
      ]
     },
     {
-     "name": "스텝업영재수학교습소",
-     "kind": "교습소",
-     "capacity": 126,
-     "since": 2008,
-     "branches": 1,
-     "subjects": [
-      "math"
-     ]
-    },
-    {
      "name": "다니엘수학교습소",
      "kind": "교습소",
      "capacity": 36,
@@ -1288,6 +1289,16 @@
     37.63193,
     127.03815
    ],
+   "bigShare": {
+    "big": 4687,
+    "seats": 8969,
+    "count": 6,
+    "names": [
+     "제2관파머스영어학원",
+     "파머스영어학원",
+     "예일학원"
+    ]
+   },
    "sales": 1120513725,
    "storeFlow": {
     "open": 6,
@@ -1295,18 +1306,18 @@
     "base": 77
    },
    "apt": [
-    27236929,
-    175
+    27051932,
+    160
    ],
    "fervor": {
-    "score": 35,
+    "score": 34,
     "parts": {
      "density": [
-      1.8,
-      59
+      1.7,
+      57
      ],
      "fee": [
-      140000,
+      130000,
       1
      ],
      "spend": [
@@ -1366,7 +1377,7 @@
       "all": 141,
       "math": 54,
       "english": 33,
-      "korean": 34,
+      "korean": 33,
       "science": 6
      },
      "students": 7229,
@@ -1433,10 +1444,10 @@
      "region": "서울-도봉구",
      "km": 2.6,
      "academies": {
-      "all": 133,
+      "all": 132,
       "math": 38,
       "english": 35,
-      "korean": 47,
+      "korean": 46,
       "science": 2
      },
      "students": 8143,
@@ -1492,7 +1503,7 @@
       "all": 38,
       "math": 19,
       "english": 9,
-      "korean": 7,
+      "korean": 8,
       "science": 1
      },
      "students": 6067,
@@ -1545,11 +1556,11 @@
      "region": "서울-노원구",
      "km": 3.8,
      "academies": {
-      "all": 402,
-      "math": 136,
-      "english": 91,
-      "korean": 106,
-      "science": 26
+      "all": 401,
+      "math": 135,
+      "english": 92,
+      "korean": 105,
+      "science": 25
      },
      "students": 14702,
      "sales": 21568691687
@@ -1559,10 +1570,10 @@
      "region": "서울-성북구",
      "km": 4.1,
      "academies": {
-      "all": 65,
+      "all": 66,
       "math": 20,
       "english": 18,
-      "korean": 21,
+      "korean": 22,
       "science": 0
      },
      "students": 2721,
@@ -1573,8 +1584,8 @@
      "region": "서울-노원구",
      "km": 4.1,
      "academies": {
-      "all": 210,
-      "math": 86,
+      "all": 209,
+      "math": 85,
       "english": 53,
       "korean": 41,
       "science": 3
@@ -1587,8 +1598,8 @@
      "region": "서울-동대문구",
      "km": 4.2,
      "academies": {
-      "all": 63,
-      "math": 24,
+      "all": 64,
+      "math": 25,
       "english": 16,
       "korean": 18,
       "science": 0
@@ -1602,7 +1613,7 @@
      "km": 4.2,
      "academies": {
       "all": 85,
-      "math": 35,
+      "math": 36,
       "english": 27,
       "korean": 17,
       "science": 5
@@ -1657,7 +1668,7 @@
      "region": "서울-중랑구",
      "km": 5.0,
      "academies": {
-      "all": 30,
+      "all": 29,
       "math": 8,
       "english": 6,
       "korean": 9,
@@ -1976,8 +1987,8 @@
      "region": "서울-성북구",
      "km": 2.1,
      "academies": {
-      "all": 16,
-      "math": 4,
+      "all": 17,
+      "math": 5,
       "english": 4,
       "korean": 10,
       "science": 1
@@ -2018,8 +2029,8 @@
      "region": "서울-강북구",
      "km": 2.4,
      "academies": {
-      "all": 30,
-      "math": 5,
+      "all": 29,
+      "math": 4,
       "english": 6,
       "korean": 10,
       "science": 0
@@ -2074,10 +2085,10 @@
      "region": "서울-성북구",
      "km": 2.8,
      "academies": {
-      "all": 65,
+      "all": 66,
       "math": 20,
       "english": 18,
-      "korean": 21,
+      "korean": 22,
       "science": 0
      },
      "students": 2721,
@@ -2130,8 +2141,8 @@
      "region": "서울-동대문구",
      "km": 4.0,
      "academies": {
-      "all": 63,
-      "math": 24,
+      "all": 64,
+      "math": 25,
       "english": 16,
       "korean": 18,
       "science": 0
@@ -2158,10 +2169,10 @@
      "region": "서울-도봉구",
      "km": 4.2,
      "academies": {
-      "all": 133,
+      "all": 132,
       "math": 38,
       "english": 35,
-      "korean": 47,
+      "korean": 46,
       "science": 2
      },
      "students": 8143,
@@ -2175,7 +2186,7 @@
       "all": 141,
       "math": 54,
       "english": 33,
-      "korean": 34,
+      "korean": 33,
       "science": 6
      },
      "students": 7229,
@@ -2189,7 +2200,7 @@
       "all": 38,
       "math": 19,
       "english": 9,
-      "korean": 7,
+      "korean": 8,
       "science": 1
      },
      "students": 6067,
@@ -2270,7 +2281,7 @@
      "region": "서울-중랑구",
      "km": 5.7,
      "academies": {
-      "all": 30,
+      "all": 29,
       "math": 8,
       "english": 6,
       "korean": 9,
@@ -2284,9 +2295,9 @@
      "region": "서울-동대문구",
      "km": 5.7,
      "academies": {
-      "all": 55,
+      "all": 56,
       "math": 21,
-      "english": 7,
+      "english": 8,
       "korean": 18,
       "science": 1
      },
@@ -2299,7 +2310,7 @@
      "km": 5.9,
      "academies": {
       "all": 85,
-      "math": 35,
+      "math": 36,
       "english": 27,
       "korean": 17,
       "science": 5
@@ -2571,8 +2582,8 @@
      "region": "서울-강북구",
      "km": 1.9,
      "academies": {
-      "all": 30,
-      "math": 5,
+      "all": 29,
+      "math": 4,
       "english": 6,
       "korean": 10,
       "science": 0
@@ -2585,10 +2596,10 @@
      "region": "서울-성북구",
      "km": 2.2,
      "academies": {
-      "all": 65,
+      "all": 66,
       "math": 20,
       "english": 18,
-      "korean": 21,
+      "korean": 22,
       "science": 0
      },
      "students": 2721,
@@ -2641,8 +2652,8 @@
      "region": "서울-성북구",
      "km": 2.7,
      "academies": {
-      "all": 16,
-      "math": 4,
+      "all": 17,
+      "math": 5,
       "english": 4,
       "korean": 10,
       "science": 1
@@ -2683,8 +2694,8 @@
      "region": "서울-동대문구",
      "km": 2.8,
      "academies": {
-      "all": 63,
-      "math": 24,
+      "all": 64,
+      "math": 25,
       "english": 16,
       "korean": 18,
       "science": 0
@@ -2728,7 +2739,7 @@
       "all": 141,
       "math": 54,
       "english": 33,
-      "korean": 34,
+      "korean": 33,
       "science": 6
      },
      "students": 7229,
@@ -2742,7 +2753,7 @@
       "all": 38,
       "math": 19,
       "english": 9,
-      "korean": 7,
+      "korean": 8,
       "science": 1
      },
      "students": 6067,
@@ -2781,7 +2792,7 @@
      "region": "서울-중랑구",
      "km": 4.3,
      "academies": {
-      "all": 30,
+      "all": 29,
       "math": 8,
       "english": 6,
       "korean": 9,
@@ -2795,10 +2806,10 @@
      "region": "서울-도봉구",
      "km": 4.4,
      "academies": {
-      "all": 133,
+      "all": 132,
       "math": 38,
       "english": 35,
-      "korean": 47,
+      "korean": 46,
       "science": 2
      },
      "students": 8143,
@@ -2824,7 +2835,7 @@
      "km": 4.7,
      "academies": {
       "all": 85,
-      "math": 35,
+      "math": 36,
       "english": 27,
       "korean": 17,
       "science": 5
@@ -2837,9 +2848,9 @@
      "region": "서울-동대문구",
      "km": 5.0,
      "academies": {
-      "all": 55,
+      "all": 56,
       "math": 21,
-      "english": 7,
+      "english": 8,
       "korean": 18,
       "science": 1
      },
@@ -2851,11 +2862,11 @@
      "region": "서울-노원구",
      "km": 5.3,
      "academies": {
-      "all": 402,
-      "math": 136,
-      "english": 91,
-      "korean": 106,
-      "science": 26
+      "all": 401,
+      "math": 135,
+      "english": 92,
+      "korean": 105,
+      "science": 25
      },
      "students": 14702,
      "sales": 21568691687
@@ -3170,8 +3181,8 @@
      "region": "서울-성북구",
      "km": 2.2,
      "academies": {
-      "all": 16,
-      "math": 4,
+      "all": 17,
+      "math": 5,
       "english": 4,
       "korean": 10,
       "science": 1
@@ -3184,10 +3195,10 @@
      "region": "서울-성북구",
      "km": 2.2,
      "academies": {
-      "all": 65,
+      "all": 66,
       "math": 20,
       "english": 18,
-      "korean": 21,
+      "korean": 22,
       "science": 0
      },
      "students": 2721,
@@ -3198,8 +3209,8 @@
      "region": "서울-강북구",
      "km": 2.2,
      "academies": {
-      "all": 30,
-      "math": 5,
+      "all": 29,
+      "math": 4,
       "english": 6,
       "korean": 10,
       "science": 0
@@ -3282,8 +3293,8 @@
      "region": "서울-동대문구",
      "km": 3.3,
      "academies": {
-      "all": 63,
-      "math": 24,
+      "all": 64,
+      "math": 25,
       "english": 16,
       "korean": 18,
       "science": 0
@@ -3313,7 +3324,7 @@
       "all": 141,
       "math": 54,
       "english": 33,
-      "korean": 34,
+      "korean": 33,
       "science": 6
      },
      "students": 7229,
@@ -3324,10 +3335,10 @@
      "region": "서울-도봉구",
      "km": 4.4,
      "academies": {
-      "all": 133,
+      "all": 132,
       "math": 38,
       "english": 35,
-      "korean": 47,
+      "korean": 46,
       "science": 2
      },
      "students": 8143,
@@ -3341,7 +3352,7 @@
       "all": 38,
       "math": 19,
       "english": 9,
-      "korean": 7,
+      "korean": 8,
       "science": 1
      },
      "students": 6067,
@@ -3394,7 +3405,7 @@
      "region": "서울-중랑구",
      "km": 4.9,
      "academies": {
-      "all": 30,
+      "all": 29,
       "math": 8,
       "english": 6,
       "korean": 9,
@@ -3408,9 +3419,9 @@
      "region": "서울-동대문구",
      "km": 5.1,
      "academies": {
-      "all": 55,
+      "all": 56,
       "math": 21,
-      "english": 7,
+      "english": 8,
       "korean": 18,
       "science": 1
      },
@@ -3437,7 +3448,7 @@
      "km": 5.4,
      "academies": {
       "all": 85,
-      "math": 35,
+      "math": 36,
       "english": 27,
       "korean": 17,
       "science": 5
@@ -3629,7 +3640,7 @@
      "kind": "학원",
      "capacity": 708,
      "since": 2022,
-     "branches": 28,
+     "branches": 29,
      "subjects": [
       "english",
       "korean"
@@ -3705,7 +3716,7 @@
      "kind": "학원",
      "capacity": 365,
      "since": 2011,
-     "branches": 16,
+     "branches": 15,
      "subjects": [
       "english"
      ]
@@ -3748,6 +3759,16 @@
     37.63653,
     127.01397
    ],
+   "bigShare": {
+    "big": 5255,
+    "seats": 11589,
+    "count": 8,
+    "names": [
+     "스카이학원",
+     "리드인독서영어원서학원",
+     "엘리트영어수학학원"
+    ]
+   },
    "sales": 1758086273,
    "storeFlow": {
     "open": 9,
@@ -3755,8 +3776,8 @@
     "base": 130
    },
    "apt": [
-    26433841,
-    123
+    26461846,
+    111
    ],
    "fervor": {
     "score": 24,
@@ -3795,8 +3816,8 @@
      "region": "서울-강북구",
      "km": 2.2,
      "academies": {
-      "all": 30,
-      "math": 5,
+      "all": 29,
+      "math": 4,
       "english": 6,
       "korean": 10,
       "science": 0
@@ -3809,10 +3830,10 @@
      "region": "서울-도봉구",
      "km": 2.2,
      "academies": {
-      "all": 133,
+      "all": 132,
       "math": 38,
       "english": 35,
-      "korean": 47,
+      "korean": 46,
       "science": 2
      },
      "students": 8143,
@@ -3896,7 +3917,7 @@
       "all": 141,
       "math": 54,
       "english": 33,
-      "korean": 34,
+      "korean": 33,
       "science": 6
      },
      "students": 7229,
@@ -3994,7 +4015,7 @@
       "all": 38,
       "math": 19,
       "english": 9,
-      "korean": 7,
+      "korean": 8,
       "science": 1
      },
      "students": 6067,
@@ -4005,10 +4026,10 @@
      "region": "서울-성북구",
      "km": 5.0,
      "academies": {
-      "all": 65,
+      "all": 66,
       "math": 20,
       "english": 18,
-      "korean": 21,
+      "korean": 22,
       "science": 0
      },
      "students": 2721,
@@ -4019,8 +4040,8 @@
      "region": "서울-노원구",
      "km": 5.1,
      "academies": {
-      "all": 210,
-      "math": 86,
+      "all": 209,
+      "math": 85,
       "english": 53,
       "korean": 41,
       "science": 3
@@ -4047,11 +4068,11 @@
      "region": "서울-노원구",
      "km": 5.5,
      "academies": {
-      "all": 402,
-      "math": 136,
-      "english": 91,
-      "korean": 106,
-      "science": 26
+      "all": 401,
+      "math": 135,
+      "english": 92,
+      "korean": 105,
+      "science": 25
      },
      "students": 14702,
      "sales": 21568691687
@@ -4061,8 +4082,8 @@
      "region": "서울-동대문구",
      "km": 5.8,
      "academies": {
-      "all": 63,
-      "math": 24,
+      "all": 64,
+      "math": 25,
       "english": 16,
       "korean": 18,
       "science": 0
@@ -4076,7 +4097,7 @@
      "km": 6.4,
      "academies": {
       "all": 85,
-      "math": 35,
+      "math": 36,
       "english": 27,
       "korean": 17,
       "science": 5
@@ -4287,7 +4308,7 @@
    },
    "apt": [
     20228386,
-    16
+    14
    ],
    "nearby": [
     {
@@ -4295,10 +4316,10 @@
      "region": "서울-도봉구",
      "km": 1.5,
      "academies": {
-      "all": 133,
+      "all": 132,
       "math": 38,
       "english": 35,
-      "korean": 47,
+      "korean": 46,
       "science": 2
      },
      "students": 8143,
@@ -4340,7 +4361,7 @@
       "all": 141,
       "math": 54,
       "english": 33,
-      "korean": 34,
+      "korean": 33,
       "science": 6
      },
      "students": 7229,
@@ -4351,8 +4372,8 @@
      "region": "서울-강북구",
      "km": 3.7,
      "academies": {
-      "all": 30,
-      "math": 5,
+      "all": 29,
+      "math": 4,
       "english": 6,
       "korean": 10,
       "science": 0
@@ -4379,8 +4400,8 @@
      "region": "서울-노원구",
      "km": 4.5,
      "academies": {
-      "all": 210,
-      "math": 86,
+      "all": 209,
+      "math": 85,
       "english": 53,
       "korean": 41,
       "science": 3
@@ -4435,11 +4456,11 @@
      "region": "서울-노원구",
      "km": 5.6,
      "academies": {
-      "all": 402,
-      "math": 136,
-      "english": 91,
-      "korean": 106,
-      "science": 26
+      "all": 401,
+      "math": 135,
+      "english": 92,
+      "korean": 105,
+      "science": 25
      },
      "students": 14702,
      "sales": 21568691687
@@ -4452,7 +4473,7 @@
       "all": 38,
       "math": 19,
       "english": 9,
-      "korean": 7,
+      "korean": 8,
       "science": 1
      },
      "students": 6067,

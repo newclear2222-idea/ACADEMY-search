@@ -2,8 +2,8 @@
  "id": "경기-남양주시",
  "province": "경기도",
  "region": "경기도 남양주시",
- "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 10월 기준",
- "builtAt": "2026-10-25",
+ "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 11월 기준",
+ "builtAt": "2026-11-01",
  "sources": [
   "학원: 나이스 교육정보 개방포털 학원교습소정보",
   "학생 수: 학교알리미 학년별·학급별 학생수",
@@ -28,11 +28,11 @@
    ],
    "high": [
     320000,
-    247
+    249
    ],
    "total": [
     220000,
-    1464
+    1466
    ]
   },
   "math": {
@@ -64,11 +64,11 @@
    ],
    "high": [
     340000,
-    83
+    85
    ],
    "total": [
     240000,
-    487
+    489
    ]
   },
   "korean": {
@@ -435,9 +435,9 @@
      "km": 4.8,
      "academies": {
       "all": 221,
-      "math": 71,
+      "math": 73,
       "english": 63,
-      "korean": 52,
+      "korean": 51,
       "science": 6
      },
      "students": 8737,
@@ -448,7 +448,7 @@
      "region": "서울-강동구",
      "km": 5.4,
      "academies": {
-      "all": 109,
+      "all": 108,
       "math": 42,
       "english": 25,
       "korean": 24,
@@ -477,7 +477,7 @@
      "km": 5.5,
      "academies": {
       "all": 268,
-      "math": 94,
+      "math": 93,
       "english": 57,
       "korean": 40,
       "science": 14
@@ -491,7 +491,7 @@
      "km": 5.5,
      "academies": {
       "all": 36,
-      "math": 11,
+      "math": 12,
       "english": 11,
       "korean": 4,
       "science": 2
@@ -532,11 +532,11 @@
      "region": "경기-남양주시",
      "km": 6.0,
      "academies": {
-      "all": 116,
+      "all": 117,
       "math": 37,
       "english": 34,
       "korean": 20,
-      "science": 2
+      "science": 3
      },
      "students": 5897,
      "sales": null
@@ -574,7 +574,7 @@
      "region": "서울-중랑구",
      "km": 6.7,
      "academies": {
-      "all": 30,
+      "all": 29,
       "math": 8,
       "english": 6,
       "korean": 9,
@@ -616,11 +616,11 @@
      "region": "서울-노원구",
      "km": 9.3,
      "academies": {
-      "all": 402,
-      "math": 136,
-      "english": 91,
-      "korean": 106,
-      "science": 26
+      "all": 401,
+      "math": 135,
+      "english": 92,
+      "korean": 105,
+      "science": 25
      },
      "students": 14702,
      "sales": 21568691687
@@ -858,7 +858,7 @@
     127.21074
    ],
    "apt": [
-    13451597,
+    13397361,
     70
    ],
    "nearby": [
@@ -909,11 +909,11 @@
      "region": "경기-남양주시",
      "km": 5.1,
      "academies": {
-      "all": 116,
+      "all": 117,
       "math": 37,
       "english": 34,
       "korean": 20,
-      "science": 2
+      "science": 3
      },
      "students": 5897,
      "sales": null
@@ -938,7 +938,7 @@
      "km": 10.6,
      "academies": {
       "all": 268,
-      "math": 94,
+      "math": 93,
       "english": 57,
       "korean": 40,
       "science": 14
@@ -1042,11 +1042,11 @@
      ],
      "high": [
       340000,
-      87
+      89
      ],
      "total": [
       220000,
-      533
+      535
      ]
     },
     "math": {
@@ -1078,11 +1078,11 @@
      ],
      "high": [
       340000,
-      29
+      31
      ],
      "total": [
       250000,
-      166
+      168
      ]
     },
     "korean": {
@@ -1270,21 +1270,21 @@
      ]
     },
     {
-     "name": "박준영논리속독학원",
-     "kind": "학원",
-     "capacity": 168,
-     "since": 2018,
-     "branches": 4,
-     "subjects": [
-      "korean"
-     ]
-    },
-    {
      "name": "대치동이수정국어다산학원",
      "kind": "학원",
      "capacity": 143,
      "since": 2023,
      "branches": 2,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
+     "name": "지금루미북클럽독서논술학원",
+     "kind": "학원",
+     "capacity": 140,
+     "since": 2019,
+     "branches": 1,
      "subjects": [
       "korean"
      ]
@@ -1340,10 +1340,10 @@
    },
    "opened": {
     "1y": {
-     "all": 66,
+     "all": 65,
      "math": 25,
      "english": 18,
-     "korean": 9,
+     "korean": 8,
      "science": 4
     },
     "3y": {
@@ -1358,9 +1358,19 @@
     37.61603,
     127.15931
    ],
+   "bigShare": {
+    "big": 12755,
+    "seats": 42120,
+    "count": 14,
+    "names": [
+     "눈높이러닝센터다산중앙학원",
+     "눈높이러닝센터다산한강학원",
+     "구주이배수학다산학원"
+    ]
+   },
    "apt": [
-    37322283,
-    1288
+    37778212,
+    1173
    ],
    "fervor": {
     "score": 69,
@@ -1493,9 +1503,9 @@
      "region": "경기-남양주시",
      "km": 5.7,
      "academies": {
-      "all": 153,
+      "all": 155,
       "math": 52,
-      "english": 40,
+      "english": 41,
       "korean": 24,
       "science": 3
      },
@@ -1536,9 +1546,9 @@
      "km": 6.3,
      "academies": {
       "all": 221,
-      "math": 71,
+      "math": 73,
       "english": 63,
-      "korean": 52,
+      "korean": 51,
       "science": 6
      },
      "students": 8737,
@@ -1563,11 +1573,11 @@
      "region": "경기-남양주시",
      "km": 6.5,
      "academies": {
-      "all": 116,
+      "all": 117,
       "math": 37,
       "english": 34,
       "korean": 20,
-      "science": 2
+      "science": 3
      },
      "students": 5897,
      "sales": null
@@ -1578,7 +1588,7 @@
      "km": 6.6,
      "academies": {
       "all": 85,
-      "math": 35,
+      "math": 36,
       "english": 27,
       "korean": 17,
       "science": 5
@@ -1605,7 +1615,7 @@
      "region": "서울-중랑구",
      "km": 6.9,
      "academies": {
-      "all": 30,
+      "all": 29,
       "math": 8,
       "english": 6,
       "korean": 9,
@@ -1620,7 +1630,7 @@
      "km": 7.3,
      "academies": {
       "all": 268,
-      "math": 94,
+      "math": 93,
       "english": 57,
       "korean": 40,
       "science": 14
@@ -1633,11 +1643,11 @@
      "region": "서울-노원구",
      "km": 8.5,
      "academies": {
-      "all": 402,
-      "math": 136,
-      "english": 91,
-      "korean": 106,
-      "science": 26
+      "all": 401,
+      "math": 135,
+      "english": 92,
+      "korean": 105,
+      "science": 25
      },
      "students": 14702,
      "sales": 21568691687
@@ -1858,7 +1868,7 @@
      "kind": "교습소",
      "capacity": 8,
      "since": 2011,
-     "branches": 50,
+     "branches": 49,
      "subjects": [
       "korean"
      ]
@@ -1891,6 +1901,14 @@
     37.61131,
     127.16144
    ],
+   "bigShare": {
+    "big": 1620,
+    "seats": 1922,
+    "count": 1,
+    "names": [
+     "눈높이러닝센터도농학원"
+    ]
+   },
    "fervor": {
     "score": 12,
     "parts": {
@@ -2051,9 +2069,9 @@
      "km": 5.7,
      "academies": {
       "all": 221,
-      "math": 71,
+      "math": 73,
       "english": 63,
-      "korean": 52,
+      "korean": 51,
       "science": 6
      },
      "students": 8737,
@@ -2078,11 +2096,11 @@
      "region": "경기-남양주시",
      "km": 6.1,
      "academies": {
-      "all": 116,
+      "all": 117,
       "math": 37,
       "english": 34,
       "korean": 20,
-      "science": 2
+      "science": 3
      },
      "students": 5897,
      "sales": null
@@ -2106,9 +2124,9 @@
      "region": "경기-남양주시",
      "km": 6.2,
      "academies": {
-      "all": 153,
+      "all": 155,
       "math": 52,
-      "english": 40,
+      "english": 41,
       "korean": 24,
       "science": 3
      },
@@ -2134,7 +2152,7 @@
      "region": "서울-강동구",
      "km": 6.7,
      "academies": {
-      "all": 109,
+      "all": 108,
       "math": 42,
       "english": 25,
       "korean": 24,
@@ -2149,7 +2167,7 @@
      "km": 6.8,
      "academies": {
       "all": 36,
-      "math": 11,
+      "math": 12,
       "english": 11,
       "korean": 4,
       "science": 2
@@ -2163,7 +2181,7 @@
      "km": 6.8,
      "academies": {
       "all": 268,
-      "math": 94,
+      "math": 93,
       "english": 57,
       "korean": 40,
       "science": 14
@@ -2177,7 +2195,7 @@
      "km": 6.9,
      "academies": {
       "all": 85,
-      "math": 35,
+      "math": 36,
       "english": 27,
       "korean": 17,
       "science": 5
@@ -2204,11 +2222,11 @@
      "region": "서울-노원구",
      "km": 8.9,
      "academies": {
-      "all": 402,
-      "math": 136,
-      "english": 91,
-      "korean": 106,
-      "science": 26
+      "all": 401,
+      "math": 135,
+      "english": 92,
+      "korean": 105,
+      "science": 25
      },
      "students": 14702,
      "sales": 21568691687
@@ -2224,9 +2242,9 @@
     "total": 6267
    },
    "academies": {
-    "all": 153,
+    "all": 155,
     "math": 52,
-    "english": 40,
+    "english": 41,
     "korean": 24,
     "science": 3
    },
@@ -2570,16 +2588,16 @@
    },
    "opened": {
     "1y": {
-     "all": 16,
+     "all": 18,
      "math": 5,
-     "english": 6,
+     "english": 7,
      "korean": 2,
      "science": 0
     },
     "3y": {
-     "all": 50,
+     "all": 52,
      "math": 13,
-     "english": 16,
+     "english": 17,
      "korean": 6,
      "science": 0
     }
@@ -2588,16 +2606,26 @@
     37.65627,
     127.11979
    ],
+   "bigShare": {
+    "big": 5889,
+    "seats": 16427,
+    "count": 6,
+    "names": [
+     "에듀코치개별지도별내학원",
+     "눈높이러닝센터별내학원",
+     "별내점와와학습코칭학원"
+    ]
+   },
    "apt": [
-    25482984,
-    616
+    25924031,
+    586
    ],
    "fervor": {
     "score": 72,
     "parts": {
      "density": [
-      2.4,
-      86
+      2.5,
+      87
      ],
      "fee": [
       228000,
@@ -2625,8 +2653,8 @@
      "region": "경기-남양주시",
      "km": 2.3,
      "academies": {
-      "all": 8,
-      "math": 4,
+      "all": 9,
+      "math": 5,
       "english": 1,
       "korean": 1,
       "science": 0
@@ -2667,11 +2695,11 @@
      "region": "서울-노원구",
      "km": 4.1,
      "academies": {
-      "all": 402,
-      "math": 136,
-      "english": 91,
-      "korean": 106,
-      "science": 26
+      "all": 401,
+      "math": 135,
+      "english": 92,
+      "korean": 105,
+      "science": 25
      },
      "students": 14702,
      "sales": 21568691687
@@ -2682,7 +2710,7 @@
      "km": 4.3,
      "academies": {
       "all": 85,
-      "math": 35,
+      "math": 36,
       "english": 27,
       "korean": 17,
       "science": 5
@@ -2698,7 +2726,7 @@
       "all": 38,
       "math": 19,
       "english": 9,
-      "korean": 7,
+      "korean": 8,
       "science": 1
      },
      "students": 6067,
@@ -2709,8 +2737,8 @@
      "region": "서울-노원구",
      "km": 5.3,
      "academies": {
-      "all": 210,
-      "math": 86,
+      "all": 209,
+      "math": 85,
       "english": 53,
       "korean": 41,
       "science": 3
@@ -2796,7 +2824,7 @@
       "all": 141,
       "math": 54,
       "english": 33,
-      "korean": 34,
+      "korean": 33,
       "science": 6
      },
      "students": 7229,
@@ -2807,7 +2835,7 @@
      "region": "서울-중랑구",
      "km": 6.7,
      "academies": {
-      "all": 30,
+      "all": 29,
       "math": 8,
       "english": 6,
       "korean": 9,
@@ -3105,8 +3133,8 @@
     127.11692
    ],
    "apt": [
-    12971439,
-    116
+    12975323,
+    122
    ],
    "fervor": {
     "score": 34,
@@ -3141,8 +3169,8 @@
      "region": "경기-의정부시",
      "km": 3.9,
      "academies": {
-      "all": 164,
-      "math": 59,
+      "all": 165,
+      "math": 60,
       "english": 42,
       "korean": 34,
       "science": 1
@@ -3169,7 +3197,7 @@
      "region": "경기-의정부시",
      "km": 5.6,
      "academies": {
-      "all": 144,
+      "all": 143,
       "math": 52,
       "english": 38,
       "korean": 21,
@@ -3183,9 +3211,9 @@
      "region": "경기-남양주시",
      "km": 6.1,
      "academies": {
-      "all": 153,
+      "all": 155,
       "math": 52,
-      "english": 40,
+      "english": 41,
       "korean": 24,
       "science": 3
      },
@@ -3197,7 +3225,7 @@
      "region": "경기-의정부시",
      "km": 6.4,
      "academies": {
-      "all": 89,
+      "all": 88,
       "math": 37,
       "english": 22,
       "korean": 7,
@@ -3253,11 +3281,11 @@
      "region": "서울-노원구",
      "km": 7.7,
      "academies": {
-      "all": 402,
-      "math": 136,
-      "english": 91,
-      "korean": 106,
-      "science": 26
+      "all": 401,
+      "math": 135,
+      "english": 92,
+      "korean": 105,
+      "science": 25
      },
      "students": 14702,
      "sales": 21568691687
@@ -3444,6 +3472,14 @@
     37.7123,
     127.31892
    ],
+   "bigShare": {
+    "big": 830,
+    "seats": 830,
+    "count": 1,
+    "names": [
+     "남양주독학기숙학원김미연학원"
+    ]
+   },
    "nearby": [
     {
      "name": "화도읍",
@@ -3698,7 +3734,7 @@
      "kind": "학원",
      "capacity": 139,
      "since": 2026,
-     "branches": 66,
+     "branches": 65,
      "subjects": [
       "english"
      ]
@@ -3838,9 +3874,19 @@
     37.69417,
     127.20584
    ],
+   "bigShare": {
+    "big": 3385,
+    "seats": 8461,
+    "count": 3,
+    "names": [
+     "눈높이러닝센터양지학원",
+     "하람수학2관학원",
+     "탑코어오남학원"
+    ]
+   },
    "apt": [
-    11027554,
-    397
+    11467126,
+    360
    ],
    "fervor": {
     "score": 26,
@@ -3923,11 +3969,11 @@
     "total": 5897
    },
    "academies": {
-    "all": 116,
+    "all": 117,
     "math": 37,
     "english": 34,
     "korean": 20,
-    "science": 2
+    "science": 3
    },
    "schools": [
     {
@@ -4240,6 +4286,16 @@
      ]
     },
     {
+     "name": "더포텐과학학원",
+     "kind": "학원",
+     "capacity": 74,
+     "since": 2026,
+     "branches": 1,
+     "subjects": [
+      "science"
+     ]
+    },
+    {
      "name": "연주시차과학교습소",
      "kind": "교습소",
      "capacity": 14,
@@ -4265,34 +4321,42 @@
    },
    "opened": {
     "1y": {
-     "all": 7,
+     "all": 8,
      "math": 2,
      "english": 2,
      "korean": 2,
-     "science": 0
+     "science": 1
     },
     "3y": {
-     "all": 26,
+     "all": 27,
      "math": 8,
      "english": 5,
      "korean": 5,
-     "science": 0
+     "science": 1
     }
    },
    "center": [
     37.5885,
     127.22443
    ],
+   "bigShare": {
+    "big": 1620,
+    "seats": 9418,
+    "count": 1,
+    "names": [
+     "눈높이러닝센터도곡학원"
+    ]
+   },
    "apt": [
-    21521386,
-    620
+    21842556,
+    599
    ],
    "fervor": {
     "score": 76,
     "parts": {
      "density": [
       2.0,
-      74
+      75
      ],
      "fee": [
       250000,
@@ -4307,9 +4371,9 @@
      "km": 4.1,
      "academies": {
       "all": 221,
-      "math": 71,
+      "math": 73,
       "english": 63,
-      "korean": 52,
+      "korean": 51,
       "science": 6
      },
      "students": 8737,
@@ -4362,8 +4426,8 @@
      "region": "경기-하남시",
      "km": 5.2,
      "academies": {
-      "all": 43,
-      "math": 11,
+      "all": 42,
+      "math": 10,
       "english": 14,
       "korean": 4,
       "science": 0
@@ -4405,7 +4469,7 @@
      "km": 6.7,
      "academies": {
       "all": 36,
-      "math": 11,
+      "math": 12,
       "english": 11,
       "korean": 4,
       "science": 2
@@ -4433,7 +4497,7 @@
      "km": 7.8,
      "academies": {
       "all": 268,
-      "math": 94,
+      "math": 93,
       "english": 57,
       "korean": 40,
       "science": 14
@@ -4886,9 +4950,9 @@
      "km": 5.7,
      "academies": {
       "all": 221,
-      "math": 71,
+      "math": 73,
       "english": 63,
-      "korean": 52,
+      "korean": 51,
       "science": 6
      },
      "students": 8737,
@@ -4927,11 +4991,11 @@
      "region": "경기-남양주시",
      "km": 6.0,
      "academies": {
-      "all": 116,
+      "all": 117,
       "math": 37,
       "english": 34,
       "korean": 20,
-      "science": 2
+      "science": 3
      },
      "students": 5897,
      "sales": null
@@ -4941,9 +5005,9 @@
      "region": "경기-남양주시",
      "km": 6.2,
      "academies": {
-      "all": 153,
+      "all": 155,
       "math": 52,
-      "english": 40,
+      "english": 41,
       "korean": 24,
       "science": 3
      },
@@ -4983,7 +5047,7 @@
      "region": "서울-강동구",
      "km": 6.9,
      "academies": {
-      "all": 109,
+      "all": 108,
       "math": 42,
       "english": 25,
       "korean": 24,
@@ -4998,7 +5062,7 @@
      "km": 6.9,
      "academies": {
       "all": 36,
-      "math": 11,
+      "math": 12,
       "english": 11,
       "korean": 4,
       "science": 2
@@ -5012,7 +5076,7 @@
      "km": 6.9,
      "academies": {
       "all": 268,
-      "math": 94,
+      "math": 93,
       "english": 57,
       "korean": 40,
       "science": 14
@@ -5025,11 +5089,11 @@
      "region": "서울-노원구",
      "km": 8.9,
      "academies": {
-      "all": 402,
-      "math": 136,
-      "english": 91,
-      "korean": 106,
-      "science": 26
+      "all": 401,
+      "math": 135,
+      "english": 92,
+      "korean": 105,
+      "science": 25
      },
      "students": 14702,
      "sales": 21568691687
@@ -5294,8 +5358,8 @@
     127.18245
    ],
    "apt": [
-    10674812,
-    99
+    10945014,
+    95
    ],
    "fervor": {
     "score": 16,
@@ -5358,9 +5422,9 @@
      "region": "경기-남양주시",
      "km": 5.5,
      "academies": {
-      "all": 153,
+      "all": 155,
       "math": 52,
-      "english": 40,
+      "english": 41,
       "korean": 24,
       "science": 3
      },
@@ -5400,11 +5464,11 @@
      "region": "서울-노원구",
      "km": 9.6,
      "academies": {
-      "all": 402,
-      "math": 136,
-      "english": 91,
-      "korean": 106,
-      "science": 26
+      "all": 401,
+      "math": 135,
+      "english": 92,
+      "korean": 105,
+      "science": 25
      },
      "students": 14702,
      "sales": 21568691687
@@ -5857,8 +5921,8 @@
    },
    "opened": {
     "1y": {
-     "all": 15,
-     "math": 7,
+     "all": 14,
+     "math": 6,
      "english": 4,
      "korean": 3,
      "science": 1
@@ -5875,16 +5939,26 @@
     37.72403,
     127.1931
    ],
+   "bigShare": {
+    "big": 5765,
+    "seats": 15811,
+    "count": 6,
+    "names": [
+     "눈높이러닝센터장현키움학원",
+     "눈높이러닝센터진접학원",
+     "영수베스트학원"
+    ]
+   },
    "apt": [
-    16192148,
-    572
+    16342644,
+    562
    ],
    "fervor": {
     "score": 34,
     "parts": {
      "density": [
       1.3,
-      49
+      48
      ],
      "fee": [
       200000,
@@ -6089,7 +6163,7 @@
      "kind": "교습소",
      "capacity": 42,
      "since": 2011,
-     "branches": 76,
+     "branches": 77,
      "subjects": [
       "korean"
      ]
@@ -6162,6 +6236,14 @@
     37.65067,
     127.14273
    ],
+   "bigShare": {
+    "big": 1605,
+    "seats": 2671,
+    "count": 1,
+    "names": [
+     "대교하이캠퍼스퇴계원학원"
+    ]
+   },
    "fervor": {
     "score": 18,
     "parts": {
@@ -6181,8 +6263,8 @@
      "region": "경기-남양주시",
      "km": 1.1,
      "academies": {
-      "all": 8,
-      "math": 4,
+      "all": 9,
+      "math": 5,
       "english": 1,
       "korean": 1,
       "science": 0
@@ -6209,9 +6291,9 @@
      "region": "경기-남양주시",
      "km": 2.1,
      "academies": {
-      "all": 153,
+      "all": 155,
       "math": 52,
-      "english": 40,
+      "english": 41,
       "korean": 24,
       "science": 3
      },
@@ -6252,7 +6334,7 @@
      "km": 5.6,
      "academies": {
       "all": 85,
-      "math": 35,
+      "math": 36,
       "english": 27,
       "korean": 17,
       "science": 5
@@ -6279,11 +6361,11 @@
      "region": "서울-노원구",
      "km": 6.1,
      "academies": {
-      "all": 402,
-      "math": 136,
-      "english": 91,
-      "korean": 106,
-      "science": 26
+      "all": 401,
+      "math": 135,
+      "english": 92,
+      "korean": 105,
+      "science": 25
      },
      "students": 14702,
      "sales": 21568691687
@@ -6324,7 +6406,7 @@
       "all": 38,
       "math": 19,
       "english": 9,
-      "korean": 7,
+      "korean": 8,
       "science": 1
      },
      "students": 6067,
@@ -6364,7 +6446,7 @@
      "km": 11.2,
      "academies": {
       "all": 268,
-      "math": 94,
+      "math": 93,
       "english": 57,
       "korean": 40,
       "science": 14
@@ -6383,8 +6465,8 @@
     "total": 790
    },
    "academies": {
-    "all": 8,
-    "math": 4,
+    "all": 9,
+    "math": 5,
     "english": 1,
     "korean": 1,
     "science": 0
@@ -6564,6 +6646,16 @@
      "subjects": [
       "english"
      ]
+    },
+    {
+     "name": "지니고수학학원",
+     "kind": "학원",
+     "capacity": 0,
+     "since": 2026,
+     "branches": 1,
+     "subjects": [
+      "math"
+     ]
     }
    ],
    "newApts": [
@@ -6596,15 +6688,15 @@
    },
    "opened": {
     "1y": {
-     "all": 0,
-     "math": 0,
+     "all": 1,
+     "math": 1,
      "english": 0,
      "korean": 0,
      "science": 0
     },
     "3y": {
-     "all": 2,
-     "math": 0,
+     "all": 3,
+     "math": 1,
      "english": 1,
      "korean": 0,
      "science": 0
@@ -6615,15 +6707,15 @@
     127.14526
    ],
    "apt": [
-    19725477,
-    163
+    19475580,
+    159
    ],
    "fervor": {
-    "score": 18,
+    "score": 21,
     "parts": {
      "density": [
-      1.0,
-      33
+      1.1,
+      39
      ],
      "fee": [
       135000,
@@ -6665,9 +6757,9 @@
      "region": "경기-남양주시",
      "km": 2.3,
      "academies": {
-      "all": 153,
+      "all": 155,
       "math": 52,
-      "english": 40,
+      "english": 41,
       "korean": 24,
       "science": 3
      },
@@ -6708,7 +6800,7 @@
      "km": 6.3,
      "academies": {
       "all": 85,
-      "math": 35,
+      "math": 36,
       "english": 27,
       "korean": 17,
       "science": 5
@@ -6721,11 +6813,11 @@
      "region": "서울-노원구",
      "km": 6.4,
      "academies": {
-      "all": 402,
-      "math": 136,
-      "english": 91,
-      "korean": 106,
-      "science": 26
+      "all": 401,
+      "math": 135,
+      "english": 92,
+      "korean": 105,
+      "science": 25
      },
      "students": 14702,
      "sales": 21568691687
@@ -7134,9 +7226,18 @@
     37.64463,
     127.23711
    ],
+   "bigShare": {
+    "big": 2325,
+    "seats": 9261,
+    "count": 2,
+    "names": [
+     "눈높이러닝센터평내학원",
+     "평내점와와학습코칭학원"
+    ]
+   },
    "apt": [
     16737718,
-    387
+    407
    ],
    "fervor": {
     "score": 52,
@@ -7199,11 +7300,11 @@
      "region": "경기-남양주시",
      "km": 6.3,
      "academies": {
-      "all": 116,
+      "all": 117,
       "math": 37,
       "english": 34,
       "korean": 20,
-      "science": 2
+      "science": 3
      },
      "students": 5897,
      "sales": null
@@ -7497,7 +7598,7 @@
      "kind": "학원",
      "capacity": 120,
      "since": 2021,
-     "branches": 101,
+     "branches": 102,
      "subjects": [
       "english",
       "math"
@@ -7579,7 +7680,7 @@
      "kind": "교습소",
      "capacity": 21,
      "since": 2023,
-     "branches": 76,
+     "branches": 77,
      "subjects": [
       "korean"
      ]
@@ -7622,9 +7723,18 @@
     37.65786,
     127.24861
    ],
+   "bigShare": {
+    "big": 2325,
+    "seats": 9391,
+    "count": 2,
+    "names": [
+     "눈높이러닝센터호평학원",
+     "호평점와와학습코칭학원"
+    ]
+   },
    "apt": [
-    18782869,
-    356
+    18855341,
+    374
    ],
    "fervor": {
     "score": 56,
@@ -8127,11 +8237,6 @@
    ],
    "newApts": [
     {
-     "name": "빌리브센트하이",
-     "households": 250,
-     "moveIn": "2025-10"
-    },
-    {
      "name": "마석역 극동스타클래스 더퍼스트",
      "households": 138,
      "moveIn": "2026-01"
@@ -8163,9 +8268,17 @@
     37.65395,
     127.31112
    ],
+   "bigShare": {
+    "big": 560,
+    "seats": 9383,
+    "count": 1,
+    "names": [
+     "학생공감학원"
+    ]
+   },
    "apt": [
-    12718896,
-    443
+    12802917,
+    433
    ],
    "fervor": {
     "score": 58,
@@ -8176,7 +8289,7 @@
      ],
      "fee": [
       270000,
-      89
+      90
      ]
     }
    },

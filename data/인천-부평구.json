@@ -2,8 +2,8 @@
  "id": "인천-부평구",
  "province": "인천광역시",
  "region": "인천광역시 부평구",
- "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 10월 기준",
- "builtAt": "2026-10-25",
+ "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 11월 기준",
+ "builtAt": "2026-11-01",
  "sources": [
   "학원: 나이스 교육정보 개방포털 학원교습소정보",
   "학생 수: 학교알리미 학년별·학급별 학생수",
@@ -24,15 +24,15 @@
    ],
    "middle": [
     250000,
-    189
+    190
    ],
    "high": [
-    316000,
-    123
+    320000,
+    125
    ],
    "total": [
     200000,
-    725
+    728
    ]
   },
   "math": {
@@ -41,16 +41,16 @@
     123
    ],
    "middle": [
-    255000,
-    81
+    260000,
+    82
    ],
    "high": [
-    330000,
-    63
+    350000,
+    65
    ],
    "total": [
     230000,
-    273
+    276
    ]
   },
   "english": {
@@ -159,15 +159,15 @@
      ],
      "middle": [
       250000,
-      4
+      5
      ],
      "high": [
-      null,
-      1
+      350000,
+      3
      ],
      "total": [
-      150000,
-      11
+      200000,
+      14
      ]
     },
     "math": {
@@ -176,16 +176,16 @@
       3
      ],
      "middle": [
-      null,
-      2
+      270000,
+      3
      ],
      "high": [
-      null,
-      1
+      350000,
+      3
      ],
      "total": [
-      200000,
-      7
+      270000,
+      10
      ]
     },
     "english": {
@@ -413,20 +413,30 @@
     37.51322,
     126.72737
    ],
+   "bigShare": {
+    "big": 14464,
+    "seats": 15692,
+    "count": 10,
+    "names": [
+     "눈높이러닝센터갈산학원",
+     "STS학원",
+     "갈산삼성영어학원"
+    ]
+   },
    "apt": [
-    14986225,
-    148
+    15457912,
+    29
    ],
    "fervor": {
-    "score": 31,
+    "score": 42,
     "parts": {
      "density": [
       1.3,
       56
      ],
      "fee": [
-      150000,
-      6
+      200000,
+      29
      ]
     }
    },
@@ -492,7 +502,7 @@
      "region": "인천-부평구",
      "km": 2.0,
      "academies": {
-      "all": 75,
+      "all": 76,
       "math": 28,
       "english": 21,
       "korean": 12,
@@ -548,7 +558,7 @@
      "region": "인천-계양구",
      "km": 2.8,
      "academies": {
-      "all": 57,
+      "all": 56,
       "math": 16,
       "english": 9,
       "korean": 13,
@@ -660,10 +670,10 @@
      "region": "인천-서해구",
      "km": 5.4,
      "academies": {
-      "all": 41,
+      "all": 42,
       "math": 11,
-      "english": 11,
-      "korean": 4,
+      "english": 12,
+      "korean": 5,
       "science": 1
      },
      "students": 3037,
@@ -688,9 +698,9 @@
      "region": "인천-남동구",
      "km": 5.8,
      "academies": {
-      "all": 68,
+      "all": 69,
       "math": 15,
-      "english": 22,
+      "english": 23,
       "korean": 6,
       "science": 0
      },
@@ -744,11 +754,11 @@
      "region": "인천-서해구",
      "km": 8.4,
      "academies": {
-      "all": 382,
-      "math": 136,
+      "all": 383,
+      "math": 137,
       "english": 114,
       "korean": 56,
-      "science": 20
+      "science": 21
      },
      "students": 5921,
      "sales": null
@@ -758,10 +768,10 @@
      "region": "서울-양천구",
      "km": 11.4,
      "academies": {
-      "all": 535,
+      "all": 536,
       "math": 178,
-      "english": 113,
-      "korean": 156,
+      "english": 115,
+      "korean": 155,
       "science": 28
      },
      "students": 19194,
@@ -922,10 +932,6 @@
     37.47864,
     126.74938
    ],
-   "apt": [
-    16773486,
-    10
-   ],
    "nearby": [
     {
      "name": "일신동",
@@ -974,7 +980,7 @@
      "region": "인천-부평구",
      "km": 2.3,
      "academies": {
-      "all": 75,
+      "all": 76,
       "math": 28,
       "english": 21,
       "korean": 12,
@@ -1044,10 +1050,10 @@
      "region": "경기-부천시",
      "km": 4.1,
      "academies": {
-      "all": 62,
+      "all": 61,
       "math": 20,
       "english": 20,
-      "korean": 7,
+      "korean": 6,
       "science": 1
      },
      "students": 2075,
@@ -1072,9 +1078,9 @@
      "region": "인천-남동구",
      "km": 4.2,
      "academies": {
-      "all": 68,
+      "all": 69,
       "math": 15,
-      "english": 22,
+      "english": 23,
       "korean": 6,
       "science": 0
      },
@@ -1256,8 +1262,8 @@
      "academies": {
       "all": 174,
       "math": 53,
-      "english": 53,
-      "korean": 27,
+      "english": 52,
+      "korean": 28,
       "science": 2
      },
      "students": 8789,
@@ -1338,10 +1344,10 @@
      "region": "서울-양천구",
      "km": 10.3,
      "academies": {
-      "all": 535,
+      "all": 536,
       "math": 178,
-      "english": 113,
-      "korean": 156,
+      "english": 115,
+      "korean": 155,
       "science": 28
      },
      "students": 19194,
@@ -1358,7 +1364,7 @@
     "total": 8295
    },
    "academies": {
-    "all": 75,
+    "all": 76,
     "math": 28,
     "english": 21,
     "korean": 12,
@@ -1718,14 +1724,14 @@
    },
    "opened": {
     "1y": {
-     "all": 7,
+     "all": 8,
      "math": 1,
      "english": 2,
      "korean": 1,
      "science": 0
     },
     "3y": {
-     "all": 13,
+     "all": 14,
      "math": 2,
      "english": 4,
      "korean": 2,
@@ -1736,9 +1742,19 @@
     37.49715,
     126.73847
    ],
+   "bigShare": {
+    "big": 37857,
+    "seats": 42936,
+    "count": 30,
+    "names": [
+     "눈높이러닝센터부평동수학원",
+     "눈높이러닝센터인천부개길주학원",
+     "지엘학원"
+    ]
+   },
    "apt": [
-    18100070,
-    436
+    19519747,
+    130
    ],
    "fervor": {
     "score": 58,
@@ -1955,9 +1971,9 @@
      "region": "인천-남동구",
      "km": 4.7,
      "academies": {
-      "all": 68,
+      "all": 69,
       "math": 15,
-      "english": 22,
+      "english": 23,
       "korean": 6,
       "science": 0
      },
@@ -1983,7 +1999,7 @@
      "region": "인천-계양구",
      "km": 4.8,
      "academies": {
-      "all": 57,
+      "all": 56,
       "math": 16,
       "english": 9,
       "korean": 13,
@@ -2039,10 +2055,10 @@
      "region": "경기-부천시",
      "km": 5.4,
      "academies": {
-      "all": 62,
+      "all": 61,
       "math": 20,
       "english": 20,
-      "korean": 7,
+      "korean": 6,
       "science": 1
      },
      "students": 2075,
@@ -2137,10 +2153,10 @@
      "region": "인천-서해구",
      "km": 6.8,
      "academies": {
-      "all": 41,
+      "all": 42,
       "math": 11,
-      "english": 11,
-      "korean": 4,
+      "english": 12,
+      "korean": 5,
       "science": 1
      },
      "students": 3037,
@@ -2165,11 +2181,11 @@
      "region": "인천-서해구",
      "km": 10.0,
      "academies": {
-      "all": 382,
-      "math": 136,
+      "all": 383,
+      "math": 137,
       "english": 114,
       "korean": 56,
-      "science": 20
+      "science": 21
      },
      "students": 5921,
      "sales": null
@@ -2534,12 +2550,22 @@
     37.49682,
     126.72312
    ],
+   "bigShare": {
+    "big": 33965,
+    "seats": 39743,
+    "count": 26,
+    "names": [
+     "와와학습코칭센터부평학원",
+     "인천부평에이닷영어학원",
+     "잇올스파르타독학재수학원"
+    ]
+   },
    "apt": [
-    19772678,
-    456
+    19190533,
+    129
    ],
    "fervor": {
-    "score": 38,
+    "score": 36,
     "parts": {
      "density": [
       0.9,
@@ -2547,7 +2573,7 @@
      ],
      "fee": [
       200000,
-      31
+      29
      ]
     }
    },
@@ -2557,7 +2583,7 @@
      "region": "인천-부평구",
      "km": 1.4,
      "academies": {
-      "all": 75,
+      "all": 76,
       "math": 28,
       "english": 21,
       "korean": 12,
@@ -2711,9 +2737,9 @@
      "region": "인천-남동구",
      "km": 3.9,
      "academies": {
-      "all": 68,
+      "all": 69,
       "math": 15,
-      "english": 22,
+      "english": 23,
       "korean": 6,
       "science": 0
      },
@@ -2739,7 +2765,7 @@
      "region": "인천-계양구",
      "km": 4.5,
      "academies": {
-      "all": 57,
+      "all": 56,
       "math": 16,
       "english": 9,
       "korean": 13,
@@ -2837,10 +2863,10 @@
      "region": "인천-서해구",
      "km": 5.6,
      "academies": {
-      "all": 41,
+      "all": 42,
       "math": 11,
-      "english": 11,
-      "korean": 4,
+      "english": 12,
+      "korean": 5,
       "science": 1
      },
      "students": 3037,
@@ -2893,10 +2919,10 @@
      "region": "경기-부천시",
      "km": 6.7,
      "academies": {
-      "all": 62,
+      "all": 61,
       "math": 20,
       "english": 20,
-      "korean": 7,
+      "korean": 6,
       "science": 1
      },
      "students": 2075,
@@ -2907,11 +2933,11 @@
      "region": "인천-서해구",
      "km": 8.9,
      "academies": {
-      "all": 382,
-      "math": 136,
+      "all": 383,
+      "math": 137,
       "english": 114,
       "korean": 56,
-      "science": 20
+      "science": 21
      },
      "students": 5921,
      "sales": null
@@ -2921,10 +2947,10 @@
      "region": "서울-양천구",
      "km": 11.9,
      "academies": {
-      "all": 535,
+      "all": 536,
       "math": 178,
-      "english": 113,
-      "korean": 156,
+      "english": 115,
+      "korean": 155,
       "science": 28
      },
      "students": 19194,
@@ -3372,12 +3398,22 @@
     37.50148,
     126.7027
    ],
+   "bigShare": {
+    "big": 46891,
+    "seats": 58822,
+    "count": 43,
+    "names": [
+     "눈높이러닝센터마장학원",
+     "홍수학클리닉학원",
+     "전방올림수학학원"
+    ]
+   },
    "apt": [
-    15171468,
-    585
+    16291534,
+    202
    ],
    "fervor": {
-    "score": 54,
+    "score": 52,
     "parts": {
      "density": [
       1.6,
@@ -3385,7 +3421,7 @@
      ],
      "fee": [
       200000,
-      31
+      29
      ]
     }
    },
@@ -3479,7 +3515,7 @@
      "region": "인천-부평구",
      "km": 3.2,
      "academies": {
-      "all": 75,
+      "all": 76,
       "math": 28,
       "english": 21,
       "korean": 12,
@@ -3493,10 +3529,10 @@
      "region": "인천-서해구",
      "km": 3.7,
      "academies": {
-      "all": 41,
+      "all": 42,
       "math": 11,
-      "english": 11,
-      "korean": 4,
+      "english": 12,
+      "korean": 5,
       "science": 1
      },
      "students": 3037,
@@ -3549,9 +3585,9 @@
      "region": "인천-남동구",
      "km": 4.1,
      "academies": {
-      "all": 68,
+      "all": 69,
       "math": 15,
-      "english": 22,
+      "english": 23,
       "korean": 6,
       "science": 0
      },
@@ -3563,7 +3599,7 @@
      "region": "인천-계양구",
      "km": 4.1,
      "academies": {
-      "all": 57,
+      "all": 56,
       "math": 16,
       "english": 9,
       "korean": 13,
@@ -3745,11 +3781,11 @@
      "region": "인천-서해구",
      "km": 7.1,
      "academies": {
-      "all": 382,
-      "math": 136,
+      "all": 383,
+      "math": 137,
       "english": 114,
       "korean": 56,
-      "science": 20
+      "science": 21
      },
      "students": 5921,
      "sales": null
@@ -3949,7 +3985,7 @@
      "kind": "학원",
      "capacity": 3100,
      "since": 2017,
-     "branches": 15,
+     "branches": 16,
      "subjects": []
     },
     {
@@ -4166,9 +4202,19 @@
     37.51672,
     126.74104
    ],
+   "bigShare": {
+    "big": 64461,
+    "seats": 73909,
+    "count": 50,
+    "names": [
+     "눈높이러닝센터삼산미래학원",
+     "에듀플렉스에듀코치개별지도인천삼산학원",
+     "케이앤케이(KnK)미래학원"
+    ]
+   },
    "apt": [
-    20589664,
-    384
+    21125589,
+    126
    ],
    "fervor": {
     "score": 79,
@@ -4231,7 +4277,7 @@
      "region": "인천-부평구",
      "km": 2.2,
      "academies": {
-      "all": 75,
+      "all": 76,
       "math": 28,
       "english": 21,
       "korean": 12,
@@ -4343,7 +4389,7 @@
      "region": "인천-계양구",
      "km": 3.1,
      "academies": {
-      "all": 57,
+      "all": 56,
       "math": 16,
       "english": 9,
       "korean": 13,
@@ -4483,10 +4529,10 @@
      "region": "경기-부천시",
      "km": 6.4,
      "academies": {
-      "all": 62,
+      "all": 61,
       "math": 20,
       "english": 20,
-      "korean": 7,
+      "korean": 6,
       "science": 1
      },
      "students": 2075,
@@ -4497,10 +4543,10 @@
      "region": "인천-서해구",
      "km": 6.5,
      "academies": {
-      "all": 41,
+      "all": 42,
       "math": 11,
-      "english": 11,
-      "korean": 4,
+      "english": 12,
+      "korean": 5,
       "science": 1
      },
      "students": 3037,
@@ -4511,9 +4557,9 @@
      "region": "인천-남동구",
      "km": 6.6,
      "academies": {
-      "all": 68,
+      "all": 69,
       "math": 15,
-      "english": 22,
+      "english": 23,
       "korean": 6,
       "science": 0
      },
@@ -4553,11 +4599,11 @@
      "region": "인천-서해구",
      "km": 9.4,
      "academies": {
-      "all": 382,
-      "math": 136,
+      "all": 383,
+      "math": 137,
       "english": 114,
       "korean": 56,
-      "science": 20
+      "science": 21
      },
      "students": 5921,
      "sales": null
@@ -4567,10 +4613,10 @@
      "region": "서울-양천구",
      "km": 10.2,
      "academies": {
-      "all": 535,
+      "all": 536,
       "math": 178,
-      "english": 113,
-      "korean": 156,
+      "english": 115,
+      "korean": 155,
       "science": 28
      },
      "students": 19194,
@@ -4908,9 +4954,19 @@
     37.47873,
     126.70242
    ],
+   "bigShare": {
+    "big": 4712,
+    "seats": 8029,
+    "count": 5,
+    "names": [
+     "한솔영어수학더샵학원",
+     "셀파우등생학원",
+     "비욘드잉글리쉬학원"
+    ]
+   },
    "apt": [
-    19691030,
-    227
+    16061361,
+    46
    ],
    "fervor": {
     "score": 18,
@@ -4931,9 +4987,9 @@
      "region": "인천-남동구",
      "km": 1.6,
      "academies": {
-      "all": 68,
+      "all": 69,
       "math": 15,
-      "english": 22,
+      "english": 23,
       "korean": 6,
       "science": 0
      },
@@ -5015,7 +5071,7 @@
      "region": "인천-부평구",
      "km": 3.8,
      "academies": {
-      "all": 75,
+      "all": 76,
       "math": 28,
       "english": 21,
       "korean": 12,
@@ -5169,10 +5225,10 @@
      "region": "인천-서해구",
      "km": 5.5,
      "academies": {
-      "all": 41,
+      "all": 42,
       "math": 11,
-      "english": 11,
-      "korean": 4,
+      "english": 12,
+      "korean": 5,
       "science": 1
      },
      "students": 3037,
@@ -5239,7 +5295,7 @@
      "region": "인천-계양구",
      "km": 6.6,
      "academies": {
-      "all": 57,
+      "all": 56,
       "math": 16,
       "english": 9,
       "korean": 13,
@@ -5281,11 +5337,11 @@
      "region": "인천-서해구",
      "km": 8.8,
      "academies": {
-      "all": 382,
-      "math": 136,
+      "all": 383,
+      "math": 137,
       "english": 114,
       "korean": 56,
-      "science": 20
+      "science": 21
      },
      "students": 5921,
      "sales": null
@@ -5298,7 +5354,7 @@
       "all": 601,
       "math": 196,
       "english": 149,
-      "korean": 133,
+      "korean": 136,
       "science": 34
      },
      "students": 29681,
@@ -5531,10 +5587,16 @@
     37.48365,
     126.74263
    ],
-   "apt": [
-    14329845,
-    23
-   ],
+   "bigShare": {
+    "big": 9008,
+    "seats": 9290,
+    "count": 5,
+    "names": [
+     "윤선생영어숲인천백운학원",
+     "케이수학YNK영어학원",
+     "은샘수학학원"
+    ]
+   },
    "nearby": [
     {
      "name": "구산동",
@@ -5555,7 +5617,7 @@
      "region": "인천-부평구",
      "km": 1.5,
      "academies": {
-      "all": 75,
+      "all": 76,
       "math": 28,
       "english": 21,
       "korean": 12,
@@ -5695,9 +5757,9 @@
      "region": "인천-남동구",
      "km": 4.0,
      "academies": {
-      "all": 68,
+      "all": 69,
       "math": 15,
-      "english": 22,
+      "english": 23,
       "korean": 6,
       "science": 0
      },
@@ -5751,10 +5813,10 @@
      "region": "경기-부천시",
      "km": 4.7,
      "academies": {
-      "all": 62,
+      "all": 61,
       "math": 20,
       "english": 20,
-      "korean": 7,
+      "korean": 6,
       "science": 1
      },
      "students": 2075,
@@ -5905,7 +5967,7 @@
      "region": "인천-계양구",
      "km": 6.3,
      "academies": {
-      "all": 57,
+      "all": 56,
       "math": 16,
       "english": 9,
       "korean": 13,
@@ -5933,10 +5995,10 @@
      "region": "서울-양천구",
      "km": 10.6,
      "academies": {
-      "all": 535,
+      "all": 536,
       "math": 178,
-      "english": 113,
-      "korean": 156,
+      "english": 115,
+      "korean": 155,
       "science": 28
      },
      "students": 19194,
@@ -5947,11 +6009,11 @@
      "region": "인천-서해구",
      "km": 11.1,
      "academies": {
-      "all": 382,
-      "math": 136,
+      "all": 383,
+      "math": 137,
       "english": 114,
       "korean": 56,
-      "science": 20
+      "science": 21
      },
      "students": 5921,
      "sales": null
@@ -6199,7 +6261,7 @@
      "kind": "학원",
      "capacity": 61,
      "since": 2026,
-     "branches": 1,
+     "branches": 2,
      "subjects": [
       "math",
       "science"
@@ -6273,9 +6335,19 @@
     37.51366,
     126.70567
    ],
+   "bigShare": {
+    "big": 15720,
+    "seats": 17537,
+    "count": 8,
+    "names": [
+     "청천대우학원",
+     "청천금호학원",
+     "루모스어학원"
+    ]
+   },
    "apt": [
-    19070242,
-    307
+    25798198,
+    101
    ],
    "fervor": {
     "score": 42,
@@ -6286,7 +6358,7 @@
      ],
      "fee": [
       155000,
-      12
+      10
      ]
     }
    },
@@ -6352,7 +6424,7 @@
      "region": "인천-계양구",
      "km": 2.8,
      "academies": {
-      "all": 57,
+      "all": 56,
       "math": 16,
       "english": 9,
       "korean": 13,
@@ -6422,7 +6494,7 @@
      "region": "인천-부평구",
      "km": 3.4,
      "academies": {
-      "all": 75,
+      "all": 76,
       "math": 28,
       "english": 21,
       "korean": 12,
@@ -6436,10 +6508,10 @@
      "region": "인천-서해구",
      "km": 3.5,
      "academies": {
-      "all": 41,
+      "all": 42,
       "math": 11,
-      "english": 11,
-      "korean": 4,
+      "english": 12,
+      "korean": 5,
       "science": 1
      },
      "students": 3037,
@@ -6506,9 +6578,9 @@
      "region": "인천-남동구",
      "km": 5.5,
      "academies": {
-      "all": 68,
+      "all": 69,
       "math": 15,
-      "english": 22,
+      "english": 23,
       "korean": 6,
       "science": 0
      },
@@ -6576,11 +6648,11 @@
      "region": "인천-서해구",
      "km": 6.6,
      "academies": {
-      "all": 382,
-      "math": 136,
+      "all": 383,
+      "math": 137,
       "english": 114,
       "korean": 56,
-      "science": 20
+      "science": 21
      },
      "students": 5921,
      "sales": null

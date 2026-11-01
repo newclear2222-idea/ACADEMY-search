@@ -2,8 +2,8 @@
  "id": "경기-광주시",
  "province": "경기도",
  "region": "경기도 광주시",
- "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 10월 기준",
- "builtAt": "2026-10-25",
+ "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 11월 기준",
+ "builtAt": "2026-11-01",
  "sources": [
   "학원: 나이스 교육정보 개방포털 학원교습소정보",
   "학생 수: 학교알리미 학년별·학급별 학생수",
@@ -409,10 +409,6 @@
     37.41048,
     127.25246
    ],
-   "apt": [
-    19047058,
-    43
-   ],
    "fervor": {
     "score": 48,
     "parts": {
@@ -432,7 +428,7 @@
      "region": "경기-광주시",
      "km": 0.9,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 9,
       "english": 10,
       "korean": 2,
@@ -448,8 +444,8 @@
      "academies": {
       "all": 15,
       "math": 3,
-      "english": 5,
-      "korean": 5,
+      "english": 4,
+      "korean": 6,
       "science": 0
      },
      "students": 1952,
@@ -694,7 +690,7 @@
      "kind": "학원",
      "capacity": 94,
      "since": 2025,
-     "branches": 65,
+     "branches": 66,
      "subjects": [
       "korean",
       "math"
@@ -802,10 +798,10 @@
    },
    "opened": {
     "1y": {
-     "all": 6,
-     "math": 1,
+     "all": 5,
+     "math": 0,
      "english": 1,
-     "korean": 2,
+     "korean": 1,
      "science": 0
     },
     "3y": {
@@ -819,10 +815,6 @@
    "center": [
     37.37249,
     127.22958
-   ],
-   "apt": [
-    26898672,
-    141
    ],
    "fervor": {
     "score": 56,
@@ -941,7 +933,7 @@
      "region": "경기-광주시",
      "km": 4.8,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 9,
       "english": 10,
       "korean": 2,
@@ -983,10 +975,10 @@
      "region": "경기-성남시",
      "km": 9.4,
      "academies": {
-      "all": 310,
-      "math": 109,
-      "english": 74,
-      "korean": 59,
+      "all": 313,
+      "math": 110,
+      "english": 75,
+      "korean": 60,
       "science": 15
      },
      "students": 7205,
@@ -1172,7 +1164,7 @@
      "kind": "학원",
      "capacity": 90,
      "since": 2006,
-     "branches": 4,
+     "branches": 3,
      "subjects": []
     },
     {
@@ -1240,7 +1232,7 @@
      "kind": "학원",
      "capacity": 45,
      "since": 2016,
-     "branches": 57,
+     "branches": 58,
      "subjects": [
       "english",
       "math"
@@ -1301,10 +1293,14 @@
     37.3552,
     127.35257
    ],
-   "apt": [
-    12032927,
-    69
-   ],
+   "bigShare": {
+    "big": 585,
+    "seats": 2015,
+    "count": 1,
+    "names": [
+     "더오른보습학원"
+    ]
+   },
    "nearby": [
     {
      "name": "실촌읍",
@@ -1676,7 +1672,7 @@
      "region": "경기-광주시",
      "km": 5.5,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 9,
       "english": 10,
       "korean": 2,
@@ -1705,8 +1701,8 @@
      "km": 6.1,
      "academies": {
       "all": 21,
-      "math": 10,
-      "english": 8,
+      "math": 9,
+      "english": 7,
       "korean": 4,
       "science": 0
      },
@@ -1747,7 +1743,7 @@
      "km": 11.9,
      "academies": {
       "all": 268,
-      "math": 94,
+      "math": 93,
       "english": 57,
       "korean": 40,
       "science": 14
@@ -1940,7 +1936,7 @@
      "kind": "학원",
      "capacity": 45,
      "since": 2023,
-     "branches": 81,
+     "branches": 80,
      "subjects": [
       "math"
      ]
@@ -2023,10 +2019,6 @@
     37.34876,
     127.16657
    ],
-   "apt": [
-    16542262,
-    25
-   ],
    "fervor": {
     "score": 86,
     "parts": {
@@ -2074,9 +2066,9 @@
      "region": "경기-성남시",
      "km": 4.3,
      "academies": {
-      "all": 64,
+      "all": 63,
       "math": 26,
-      "english": 18,
+      "english": 17,
       "korean": 7,
       "science": 3
      },
@@ -2089,9 +2081,9 @@
      "km": 4.4,
      "academies": {
       "all": 165,
-      "math": 60,
+      "math": 61,
       "english": 40,
-      "korean": 25,
+      "korean": 24,
       "science": 10
      },
      "students": 5121,
@@ -2102,10 +2094,10 @@
      "region": "경기-성남시",
      "km": 4.6,
      "academies": {
-      "all": 310,
-      "math": 109,
-      "english": 74,
-      "korean": 59,
+      "all": 313,
+      "math": 110,
+      "english": 75,
+      "korean": 60,
       "science": 15
      },
      "students": 7205,
@@ -2130,10 +2122,10 @@
      "region": "경기-성남시",
      "km": 4.9,
      "academies": {
-      "all": 54,
+      "all": 53,
       "math": 15,
       "english": 13,
-      "korean": 9,
+      "korean": 8,
       "science": 2
      },
      "students": 664,
@@ -2175,7 +2167,7 @@
       "all": 100,
       "math": 35,
       "english": 28,
-      "korean": 13,
+      "korean": 12,
       "science": 2
      },
      "students": 5622,
@@ -2214,10 +2206,10 @@
      "region": "경기-성남시",
      "km": 6.6,
      "academies": {
-      "all": 29,
+      "all": 30,
       "math": 9,
       "english": 10,
-      "korean": 2,
+      "korean": 3,
       "science": 2
      },
      "students": 3203,
@@ -2228,8 +2220,8 @@
      "region": "경기-용인시",
      "km": 6.7,
      "academies": {
-      "all": 125,
-      "math": 40,
+      "all": 126,
+      "math": 41,
       "english": 34,
       "korean": 26,
       "science": 5
@@ -2428,10 +2420,6 @@
     37.31399,
     127.32503
    ],
-   "apt": [
-    7001310,
-    9
-   ],
    "nearby": [
     {
      "name": "곤지암읍",
@@ -2590,10 +2578,6 @@
      "science": 0
     }
    },
-   "apt": [
-    9004084,
-    9
-   ],
    "nearby": [
     {
      "name": "매산로3가",
@@ -2768,9 +2752,9 @@
      "region": "경기-수원시",
      "km": 2.9,
      "academies": {
-      "all": 137,
+      "all": 138,
       "math": 42,
-      "english": 42,
+      "english": 43,
       "korean": 25,
       "science": 3
      },
@@ -2824,8 +2808,8 @@
      "region": "경기-수원시",
      "km": 3.5,
      "academies": {
-      "all": 148,
-      "math": 54,
+      "all": 147,
+      "math": 53,
       "english": 44,
       "korean": 25,
       "science": 5
@@ -2838,7 +2822,7 @@
      "region": "경기-수원시",
      "km": 3.9,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -2894,8 +2878,8 @@
      "region": "경기-수원시",
      "km": 4.5,
      "academies": {
-      "all": 148,
-      "math": 55,
+      "all": 149,
+      "math": 56,
       "english": 28,
       "korean": 32,
       "science": 5
@@ -2908,9 +2892,9 @@
      "region": "경기-수원시",
      "km": 4.6,
      "academies": {
-      "all": 63,
+      "all": 64,
       "math": 23,
-      "english": 16,
+      "english": 17,
       "korean": 10,
       "science": 0
      },
@@ -2978,8 +2962,8 @@
      "region": "경기-수원시",
      "km": 6.0,
      "academies": {
-      "all": 237,
-      "math": 64,
+      "all": 236,
+      "math": 63,
       "english": 57,
       "korean": 48,
       "science": 12
@@ -2992,10 +2976,10 @@
      "region": "경기-수원시",
      "km": 6.3,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 16,
       "english": 7,
-      "korean": 2,
+      "korean": 3,
       "science": 2
      },
      "students": 2101,
@@ -3159,11 +3143,7 @@
      "korean": 0,
      "science": 0
     }
-   },
-   "apt": [
-    8949725,
-    31
-   ]
+   }
   },
   {
    "name": "송정동",
@@ -3421,7 +3401,7 @@
      "kind": "교습소",
      "capacity": 15,
      "since": 2018,
-     "branches": 117,
+     "branches": 119,
      "subjects": [
       "english"
      ]
@@ -3470,16 +3450,20 @@
     37.41982,
     127.26241
    ],
-   "apt": [
-    14007564,
-    102
-   ],
+   "bigShare": {
+    "big": 660,
+    "seats": 1867,
+    "count": 1,
+    "names": [
+     "아소비&비전수학학원"
+    ]
+   },
    "fervor": {
     "score": 50,
     "parts": {
      "density": [
       0.6,
-      12
+      13
      ],
      "fee": [
       260000,
@@ -3507,7 +3491,7 @@
      "region": "경기-광주시",
      "km": 1.8,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 9,
       "english": 10,
       "korean": 2,
@@ -3523,8 +3507,8 @@
      "academies": {
       "all": 15,
       "math": 3,
-      "english": 5,
-      "korean": 5,
+      "english": 4,
+      "korean": 6,
       "science": 0
      },
      "students": 1952,
@@ -3848,10 +3832,6 @@
     37.35964,
     127.16081
    ],
-   "apt": [
-    21412605,
-    108
-   ],
    "fervor": {
     "score": 55,
     "parts": {
@@ -3900,9 +3880,9 @@
      "km": 3.2,
      "academies": {
       "all": 165,
-      "math": 60,
+      "math": 61,
       "english": 40,
-      "korean": 25,
+      "korean": 24,
       "science": 10
      },
      "students": 5121,
@@ -3913,10 +3893,10 @@
      "region": "경기-성남시",
      "km": 3.6,
      "academies": {
-      "all": 310,
-      "math": 109,
-      "english": 74,
-      "korean": 59,
+      "all": 313,
+      "math": 110,
+      "english": 75,
+      "korean": 60,
       "science": 15
      },
      "students": 7205,
@@ -3941,9 +3921,9 @@
      "region": "경기-성남시",
      "km": 4.1,
      "academies": {
-      "all": 64,
+      "all": 63,
       "math": 26,
-      "english": 18,
+      "english": 17,
       "korean": 7,
       "science": 3
      },
@@ -3969,10 +3949,10 @@
      "region": "경기-성남시",
      "km": 4.4,
      "academies": {
-      "all": 54,
+      "all": 53,
       "math": 15,
       "english": 13,
-      "korean": 9,
+      "korean": 8,
       "science": 2
      },
      "students": 664,
@@ -4000,7 +3980,7 @@
       "all": 100,
       "math": 35,
       "english": 28,
-      "korean": 13,
+      "korean": 12,
       "science": 2
      },
      "students": 5622,
@@ -4011,10 +3991,10 @@
      "region": "경기-성남시",
      "km": 5.4,
      "academies": {
-      "all": 29,
+      "all": 30,
       "math": 9,
       "english": 10,
-      "korean": 2,
+      "korean": 3,
       "science": 2
      },
      "students": 3203,
@@ -4039,8 +4019,8 @@
      "region": "경기-성남시",
      "km": 6.1,
      "academies": {
-      "all": 38,
-      "math": 13,
+      "all": 39,
+      "math": 14,
       "english": 11,
       "korean": 6,
       "science": 1
@@ -4508,7 +4488,7 @@
      "kind": "교습소",
      "capacity": 6,
      "since": 2019,
-     "branches": 22,
+     "branches": 23,
      "subjects": [
       "korean"
      ]
@@ -4551,10 +4531,6 @@
     37.39899,
     127.2761
    ],
-   "apt": [
-    18733381,
-    129
-   ],
    "fervor": {
     "score": 40,
     "parts": {
@@ -4576,8 +4552,8 @@
      "academies": {
       "all": 15,
       "math": 3,
-      "english": 5,
-      "korean": 5,
+      "english": 4,
+      "korean": 6,
       "science": 0
      },
      "students": 1952,
@@ -4630,7 +4606,7 @@
      "region": "경기-광주시",
      "km": 3.4,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 9,
       "english": 10,
       "korean": 2,
@@ -4917,10 +4893,6 @@
     37.37587,
     127.25231
    ],
-   "apt": [
-    12988387,
-    140
-   ],
    "fervor": {
     "score": 56,
     "parts": {
@@ -4930,7 +4902,7 @@
      ],
      "fee": [
       270000,
-      89
+      90
      ]
     }
    },
@@ -4984,8 +4956,8 @@
      "academies": {
       "all": 15,
       "math": 3,
-      "english": 5,
-      "korean": 5,
+      "english": 4,
+      "korean": 6,
       "science": 0
      },
      "students": 1952,
@@ -5052,7 +5024,7 @@
      "region": "경기-광주시",
      "km": 4.3,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 9,
       "english": 10,
       "korean": 2,
@@ -5094,10 +5066,10 @@
      "region": "경기-성남시",
      "km": 11.4,
      "academies": {
-      "all": 310,
-      "math": 109,
-      "english": 74,
-      "korean": 59,
+      "all": 313,
+      "math": 110,
+      "english": 75,
+      "korean": 60,
       "science": 15
      },
      "students": 7205,
@@ -5116,8 +5088,8 @@
    "academies": {
     "all": 15,
     "math": 3,
-    "english": 5,
-    "korean": 5,
+    "english": 4,
+    "korean": 6,
     "science": 0
    },
    "schools": [
@@ -5316,16 +5288,6 @@
      ]
     },
     {
-     "name": "링키영어경기광주자연앤자이점영어교습소",
-     "kind": "교습소",
-     "capacity": 9,
-     "since": 2024,
-     "branches": 66,
-     "subjects": [
-      "english"
-     ]
-    },
-    {
      "name": "플레이팩토사고력수학교습소",
      "kind": "교습소",
      "capacity": 6,
@@ -5340,7 +5302,7 @@
      "kind": "교습소",
      "capacity": 5,
      "since": 2026,
-     "branches": 76,
+     "branches": 77,
      "subjects": [
       "korean"
      ]
@@ -5366,17 +5328,17 @@
    },
    "opened": {
     "1y": {
-     "all": 1,
+     "all": 2,
      "math": 0,
      "english": 0,
-     "korean": 1,
+     "korean": 2,
      "science": 0
     },
     "3y": {
      "all": 8,
      "math": 2,
-     "english": 4,
-     "korean": 3,
+     "english": 3,
+     "korean": 4,
      "science": 0
     }
    },
@@ -5384,10 +5346,14 @@
     37.40069,
     127.2524
    ],
-   "apt": [
-    28927421,
-    167
-   ],
+   "bigShare": {
+    "big": 560,
+    "seats": 1622,
+    "count": 1,
+    "names": [
+     "채원석국영수전문학원"
+    ]
+   },
    "nearby": [
     {
      "name": "경안동",
@@ -5422,7 +5388,7 @@
      "region": "경기-광주시",
      "km": 1.7,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 9,
       "english": 10,
       "korean": 2,
@@ -5562,10 +5528,10 @@
      "region": "경기-성남시",
      "km": 11.9,
      "academies": {
-      "all": 310,
-      "math": 109,
-      "english": 74,
-      "korean": 59,
+      "all": 313,
+      "math": 110,
+      "english": 75,
+      "korean": 60,
       "science": 15
      },
      "students": 7205,
@@ -5966,9 +5932,9 @@
      "km": 6.3,
      "academies": {
       "all": 165,
-      "math": 60,
+      "math": 61,
       "english": 40,
-      "korean": 25,
+      "korean": 24,
       "science": 10
      },
      "students": 5121,
@@ -5979,7 +5945,7 @@
      "region": "경기-광주시",
      "km": 6.5,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 9,
       "english": 10,
       "korean": 2,
@@ -6021,10 +5987,10 @@
      "region": "경기-성남시",
      "km": 7.0,
      "academies": {
-      "all": 310,
-      "math": 109,
-      "english": 74,
-      "korean": 59,
+      "all": 313,
+      "math": 110,
+      "english": 75,
+      "korean": 60,
       "science": 15
      },
      "students": 7205,
@@ -6316,10 +6282,6 @@
     37.38998,
     127.24255
    ],
-   "apt": [
-    22732905,
-    60
-   ],
    "nearby": [
     {
      "name": "중대동",
@@ -6356,8 +6318,8 @@
      "academies": {
       "all": 15,
       "math": 3,
-      "english": 5,
-      "korean": 5,
+      "english": 4,
+      "korean": 6,
       "science": 0
      },
      "students": 1952,
@@ -6410,7 +6372,7 @@
      "region": "경기-광주시",
      "km": 2.7,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 9,
       "english": 10,
       "korean": 2,
@@ -6480,10 +6442,10 @@
      "region": "경기-성남시",
      "km": 10.7,
      "academies": {
-      "all": 310,
-      "math": 109,
-      "english": 74,
-      "korean": 59,
+      "all": 313,
+      "math": 110,
+      "english": 75,
+      "korean": 60,
       "science": 15
      },
      "students": 7205,
@@ -6636,7 +6598,7 @@
      "kind": "학원",
      "capacity": 132,
      "since": 2015,
-     "branches": 50,
+     "branches": 49,
      "subjects": []
     },
     {
@@ -6783,8 +6745,8 @@
      "academies": {
       "all": 15,
       "math": 3,
-      "english": 5,
-      "korean": 5,
+      "english": 4,
+      "korean": 6,
       "science": 0
      },
      "students": 1952,
@@ -6809,7 +6771,7 @@
      "region": "경기-광주시",
      "km": 2.5,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 9,
       "english": 10,
       "korean": 2,
@@ -6921,10 +6883,10 @@
      "region": "경기-성남시",
      "km": 9.8,
      "academies": {
-      "all": 310,
-      "math": 109,
-      "english": 74,
-      "korean": 59,
+      "all": 313,
+      "math": 110,
+      "english": 75,
+      "korean": 60,
       "science": 15
      },
      "students": 7205,
@@ -7122,7 +7084,7 @@
      "region": "경기-광주시",
      "km": 5.6,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 9,
       "english": 10,
       "korean": 2,
@@ -7375,7 +7337,7 @@
      "kind": "학원",
      "capacity": 102,
      "since": 2023,
-     "branches": 81,
+     "branches": 80,
      "subjects": [
       "korean",
       "math"
@@ -7463,10 +7425,14 @@
     37.38358,
     127.29954
    ],
-   "apt": [
-    15945645,
-    219
-   ],
+   "bigShare": {
+    "big": 508,
+    "seats": 3857,
+    "count": 1,
+    "names": [
+     "이투스247독학기숙학원"
+    ]
+   },
    "fervor": {
     "score": 22,
     "parts": {
@@ -7542,7 +7508,7 @@
      "region": "경기-광주시",
      "km": 6.0,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 9,
       "english": 10,
       "korean": 2,
@@ -7590,7 +7556,7 @@
     "total": 2730
    },
    "academies": {
-    "all": 35,
+    "all": 36,
     "math": 9,
     "english": 10,
     "korean": 2,
@@ -7739,11 +7705,11 @@
      "subjects": []
     },
     {
-     "name": "수담수학학원",
+     "name": "수담수학와이비엠잉글루탄벌학원",
      "kind": "학원",
      "capacity": 94,
      "since": 2021,
-     "branches": 2,
+     "branches": 3,
      "subjects": [
       "math"
      ]
@@ -7773,7 +7739,7 @@
      "kind": "학원",
      "capacity": 60,
      "since": 2011,
-     "branches": 57,
+     "branches": 58,
      "subjects": [
       "english",
       "math"
@@ -7862,11 +7828,11 @@
      "all": 3,
      "math": 1,
      "english": 0,
-     "korean": 1,
+     "korean": 0,
      "science": 0
     },
     "3y": {
-     "all": 9,
+     "all": 10,
      "math": 1,
      "english": 3,
      "korean": 1,
@@ -7877,16 +7843,20 @@
     37.41416,
     127.24303
    ],
-   "apt": [
-    14556243,
-    117
-   ],
+   "bigShare": {
+    "big": 1120,
+    "seats": 3065,
+    "count": 1,
+    "names": [
+     "탄벌점와와학습코칭학원"
+    ]
+   },
    "fervor": {
-    "score": 70,
+    "score": 71,
     "parts": {
      "density": [
       1.3,
-      46
+      47
      ],
      "fee": [
       300000,
@@ -7916,8 +7886,8 @@
      "academies": {
       "all": 15,
       "math": 3,
-      "english": 5,
-      "korean": 5,
+      "english": 4,
+      "korean": 6,
       "science": 0
      },
      "students": 1952,
@@ -8026,10 +7996,10 @@
      "region": "경기-성남시",
      "km": 11.6,
      "academies": {
-      "all": 310,
-      "math": 109,
-      "english": 74,
-      "korean": 59,
+      "all": 313,
+      "math": 110,
+      "english": 75,
+      "korean": 60,
       "science": 15
      },
      "students": 7205,
@@ -8198,7 +8168,7 @@
      "kind": "학원",
      "capacity": 348,
      "since": 2017,
-     "branches": 51,
+     "branches": 53,
      "subjects": [
       "math"
      ]
@@ -8383,7 +8353,7 @@
      "science": 0
     },
     "3y": {
-     "all": 46,
+     "all": 45,
      "math": 19,
      "english": 13,
      "korean": 10,
@@ -8394,10 +8364,14 @@
     37.3835,
     127.23045
    ],
-   "apt": [
-    22964949,
-    441
-   ],
+   "bigShare": {
+    "big": 800,
+    "seats": 8066,
+    "count": 1,
+    "names": [
+     "채원석학원"
+    ]
+   },
    "fervor": {
     "score": 73,
     "parts": {
@@ -8475,8 +8449,8 @@
      "academies": {
       "all": 15,
       "math": 3,
-      "english": 5,
-      "korean": 5,
+      "english": 4,
+      "korean": 6,
       "science": 0
      },
      "students": 1952,
@@ -8515,7 +8489,7 @@
      "region": "경기-광주시",
      "km": 3.6,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 9,
       "english": 10,
       "korean": 2,
@@ -8571,10 +8545,10 @@
      "region": "경기-성남시",
      "km": 9.6,
      "academies": {
-      "all": 310,
-      "math": 109,
-      "english": 74,
-      "korean": 59,
+      "all": 313,
+      "math": 110,
+      "english": 75,
+      "korean": 60,
       "science": 15
      },
      "students": 7205,
@@ -8959,11 +8933,7 @@
      "korean": 0,
      "science": 0
     }
-   },
-   "apt": [
-    13551019,
-    11
-   ]
+   }
   }
  ],
  "seoulStoreRate": {

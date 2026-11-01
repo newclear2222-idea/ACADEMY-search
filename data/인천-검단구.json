@@ -2,8 +2,8 @@
  "id": "인천-검단구",
  "province": "인천광역시",
  "region": "인천광역시 검단구",
- "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 10월 기준",
- "builtAt": "2026-10-25",
+ "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 11월 기준",
+ "builtAt": "2026-11-01",
  "sources": [
   "학원: 나이스 교육정보 개방포털 학원교습소정보",
   "학생 수: 학교알리미 학년별·학급별 학생수",
@@ -38,37 +38,37 @@
   "math": {
    "elem": [
     200000,
-    110
+    114
    ],
    "middle": [
     280000,
-    100
+    105
    ],
    "high": [
     350000,
-    57
+    60
    ],
    "total": [
-    240000,
-    305
+    250000,
+    317
    ]
   },
   "english": {
    "elem": [
-    225000,
-    95
+    220000,
+    91
    ],
    "middle": [
-    270000,
-    50
+    260000,
+    45
    ],
    "high": [
-    380000,
-    32
+    370000,
+    29
    ],
    "total": [
-    250000,
-    227
+    240000,
+    215
    ]
   },
   "korean": {
@@ -251,10 +251,6 @@
     37.60565,
     126.65089
    ],
-   "apt": [
-    15182616,
-    28
-   ],
    "nearby": [
     {
      "name": "왕길동",
@@ -317,7 +313,7 @@
      "region": "인천-검단구",
      "km": 3.9,
      "academies": {
-      "all": 105,
+      "all": 104,
       "math": 33,
       "english": 30,
       "korean": 14,
@@ -331,7 +327,7 @@
      "region": "경기-김포시",
      "km": 4.0,
      "academies": {
-      "all": 60,
+      "all": 59,
       "math": 27,
       "english": 17,
       "korean": 8,
@@ -359,10 +355,10 @@
      "region": "경기-김포시",
      "km": 4.7,
      "academies": {
-      "all": 230,
+      "all": 229,
       "math": 83,
       "english": 68,
-      "korean": 36,
+      "korean": 35,
       "science": 8
      },
      "students": 10966,
@@ -373,9 +369,9 @@
      "region": "경기-김포시",
      "km": 4.9,
      "academies": {
-      "all": 130,
-      "math": 46,
-      "english": 41,
+      "all": 129,
+      "math": 45,
+      "english": 40,
       "korean": 19,
       "science": 2
      },
@@ -387,10 +383,10 @@
      "region": "인천-검단구",
      "km": 5.1,
      "academies": {
-      "all": 205,
-      "math": 82,
+      "all": 208,
+      "math": 83,
       "english": 54,
-      "korean": 33,
+      "korean": 34,
       "science": 8
      },
      "students": 9386,
@@ -415,8 +411,8 @@
      "region": "경기-김포시",
      "km": 5.6,
      "academies": {
-      "all": 92,
-      "math": 26,
+      "all": 91,
+      "math": 25,
       "english": 21,
       "korean": 17,
       "science": 5
@@ -443,8 +439,8 @@
      "region": "경기-김포시",
      "km": 5.9,
      "academies": {
-      "all": 145,
-      "math": 49,
+      "all": 144,
+      "math": 48,
       "english": 34,
       "korean": 22,
       "science": 7
@@ -457,10 +453,10 @@
      "region": "경기-김포시",
      "km": 6.1,
      "academies": {
-      "all": 40,
+      "all": 39,
       "math": 11,
-      "english": 7,
-      "korean": 5,
+      "english": 6,
+      "korean": 6,
       "science": 5
      },
      "students": 2749,
@@ -471,7 +467,7 @@
      "region": "경기-김포시",
      "km": 6.5,
      "academies": {
-      "all": 141,
+      "all": 140,
       "math": 49,
       "english": 28,
       "korean": 26,
@@ -485,11 +481,11 @@
      "region": "인천-서해구",
      "km": 7.5,
      "academies": {
-      "all": 382,
-      "math": 136,
+      "all": 383,
+      "math": 137,
       "english": 114,
       "korean": 56,
-      "science": 20
+      "science": 21
      },
      "students": 5921,
      "sales": null
@@ -505,7 +501,7 @@
     "total": 9174
    },
    "academies": {
-    "all": 105,
+    "all": 104,
     "math": 33,
     "english": 30,
     "korean": 14,
@@ -852,9 +848,9 @@
      "science": 0
     },
     "3y": {
-     "all": 51,
+     "all": 50,
      "math": 17,
-     "english": 16,
+     "english": 15,
      "korean": 6,
      "science": 0
     }
@@ -863,10 +859,16 @@
     37.58854,
     126.68977
    ],
-   "apt": [
-    19897399,
-    574
-   ],
+   "bigShare": {
+    "big": 19357,
+    "seats": 25928,
+    "count": 16,
+    "names": [
+     "원당JL학원",
+     "교연학원",
+     "열정센텀학원"
+    ]
+   },
    "fervor": {
     "score": 52,
     "parts": {
@@ -900,10 +902,10 @@
      "region": "인천-검단구",
      "km": 1.9,
      "academies": {
-      "all": 205,
-      "math": 82,
+      "all": 208,
+      "math": 83,
       "english": 54,
-      "korean": 33,
+      "korean": 34,
       "science": 8
      },
      "students": 9386,
@@ -956,7 +958,7 @@
      "region": "경기-김포시",
      "km": 3.6,
      "academies": {
-      "all": 141,
+      "all": 140,
       "math": 49,
       "english": 28,
       "korean": 26,
@@ -998,10 +1000,10 @@
      "region": "경기-김포시",
      "km": 4.2,
      "academies": {
-      "all": 40,
+      "all": 39,
       "math": 11,
-      "english": 7,
-      "korean": 5,
+      "english": 6,
+      "korean": 6,
       "science": 5
      },
      "students": 2749,
@@ -1012,8 +1014,8 @@
      "region": "경기-김포시",
      "km": 4.4,
      "academies": {
-      "all": 92,
-      "math": 26,
+      "all": 91,
+      "math": 25,
       "english": 21,
       "korean": 17,
       "science": 5
@@ -1040,7 +1042,7 @@
      "region": "인천-계양구",
      "km": 6.2,
      "academies": {
-      "all": 57,
+      "all": 56,
       "math": 16,
       "english": 9,
       "korean": 13,
@@ -1054,7 +1056,7 @@
      "region": "경기-김포시",
      "km": 6.5,
      "academies": {
-      "all": 114,
+      "all": 113,
       "math": 47,
       "english": 31,
       "korean": 21,
@@ -1082,10 +1084,10 @@
      "region": "경기-김포시",
      "km": 6.6,
      "academies": {
-      "all": 230,
+      "all": 229,
       "math": 83,
       "english": 68,
-      "korean": 36,
+      "korean": 35,
       "science": 8
      },
      "students": 10966,
@@ -1096,11 +1098,11 @@
      "region": "인천-서해구",
      "km": 7.1,
      "academies": {
-      "all": 382,
-      "math": 136,
+      "all": 383,
+      "math": 137,
       "english": 114,
       "korean": 56,
-      "science": 20
+      "science": 21
      },
      "students": 5921,
      "sales": null
@@ -1433,9 +1435,9 @@
    },
    "opened": {
     "1y": {
-     "all": 7,
+     "all": 6,
      "math": 1,
-     "english": 1,
+     "english": 0,
      "korean": 1,
      "science": 0
     },
@@ -1451,10 +1453,16 @@
     37.60323,
     126.66528
    ],
-   "apt": [
-    10986511,
-    214
-   ],
+   "bigShare": {
+    "big": 21733,
+    "seats": 29434,
+    "count": 24,
+    "names": [
+     "연세바움(Baum)영어보습학원",
+     "검단바움국·영·수전문학원",
+     "베스트교육검단마전학원"
+    ]
+   },
    "fervor": {
     "score": 72,
     "parts": {
@@ -1544,7 +1552,7 @@
      "region": "인천-검단구",
      "km": 2.7,
      "academies": {
-      "all": 105,
+      "all": 104,
       "math": 33,
       "english": 30,
       "korean": 14,
@@ -1572,10 +1580,10 @@
      "region": "인천-검단구",
      "km": 3.8,
      "academies": {
-      "all": 205,
-      "math": 82,
+      "all": 208,
+      "math": 83,
       "english": 54,
-      "korean": 33,
+      "korean": 34,
       "science": 8
      },
      "students": 9386,
@@ -1600,8 +1608,8 @@
      "region": "경기-김포시",
      "km": 4.6,
      "academies": {
-      "all": 92,
-      "math": 26,
+      "all": 91,
+      "math": 25,
       "english": 21,
       "korean": 17,
       "science": 5
@@ -1614,10 +1622,10 @@
      "region": "경기-김포시",
      "km": 4.7,
      "academies": {
-      "all": 230,
+      "all": 229,
       "math": 83,
       "english": 68,
-      "korean": 36,
+      "korean": 35,
       "science": 8
      },
      "students": 10966,
@@ -1628,7 +1636,7 @@
      "region": "경기-김포시",
      "km": 4.7,
      "academies": {
-      "all": 60,
+      "all": 59,
       "math": 27,
       "english": 17,
       "korean": 8,
@@ -1656,10 +1664,10 @@
      "region": "경기-김포시",
      "km": 5.0,
      "academies": {
-      "all": 40,
+      "all": 39,
       "math": 11,
-      "english": 7,
-      "korean": 5,
+      "english": 6,
+      "korean": 6,
       "science": 5
      },
      "students": 2749,
@@ -1670,7 +1678,7 @@
      "region": "경기-김포시",
      "km": 5.3,
      "academies": {
-      "all": 141,
+      "all": 140,
       "math": 49,
       "english": 28,
       "korean": 26,
@@ -1684,8 +1692,8 @@
      "region": "경기-김포시",
      "km": 5.7,
      "academies": {
-      "all": 145,
-      "math": 49,
+      "all": 144,
+      "math": 48,
       "english": 34,
       "korean": 22,
       "science": 7
@@ -1698,9 +1706,9 @@
      "region": "경기-김포시",
      "km": 5.7,
      "academies": {
-      "all": 130,
-      "math": 46,
-      "english": 41,
+      "all": 129,
+      "math": 45,
+      "english": 40,
       "korean": 19,
       "science": 2
      },
@@ -1712,11 +1720,11 @@
      "region": "인천-서해구",
      "km": 7.5,
      "academies": {
-      "all": 382,
-      "math": 136,
+      "all": 383,
+      "math": 137,
       "english": 114,
       "korean": 56,
-      "science": 20
+      "science": 21
      },
      "students": 5921,
      "sales": null
@@ -1979,10 +1987,6 @@
     37.58031,
     126.67357
    ],
-   "apt": [
-    26063957,
-    48
-   ],
    "fervor": {
     "score": 10,
     "parts": {
@@ -2002,7 +2006,7 @@
      "region": "인천-검단구",
      "km": 1.7,
      "academies": {
-      "all": 105,
+      "all": 104,
       "math": 33,
       "english": 30,
       "korean": 14,
@@ -2058,10 +2062,10 @@
      "region": "인천-검단구",
      "km": 3.6,
      "academies": {
-      "all": 205,
-      "math": 82,
+      "all": 208,
+      "math": 83,
       "english": 54,
-      "korean": 33,
+      "korean": 34,
       "science": 8
      },
      "students": 9386,
@@ -2086,7 +2090,7 @@
      "region": "경기-김포시",
      "km": 5.3,
      "academies": {
-      "all": 141,
+      "all": 140,
       "math": 49,
       "english": 28,
       "korean": 26,
@@ -2114,11 +2118,11 @@
      "region": "인천-서해구",
      "km": 5.5,
      "academies": {
-      "all": 382,
-      "math": 136,
+      "all": 383,
+      "math": 137,
       "english": 114,
       "korean": 56,
-      "science": 20
+      "science": 21
      },
      "students": 5921,
      "sales": null
@@ -2128,10 +2132,10 @@
      "region": "경기-김포시",
      "km": 5.8,
      "academies": {
-      "all": 40,
+      "all": 39,
       "math": 11,
-      "english": 7,
-      "korean": 5,
+      "english": 6,
+      "korean": 6,
       "science": 5
      },
      "students": 2749,
@@ -2142,8 +2146,8 @@
      "region": "경기-김포시",
      "km": 5.9,
      "academies": {
-      "all": 92,
-      "math": 26,
+      "all": 91,
+      "math": 25,
       "english": 21,
       "korean": 17,
       "science": 5
@@ -2170,7 +2174,7 @@
      "region": "인천-계양구",
      "km": 6.2,
      "academies": {
-      "all": 57,
+      "all": 56,
       "math": 16,
       "english": 9,
       "korean": 13,
@@ -2198,10 +2202,10 @@
      "region": "인천-서해구",
      "km": 6.8,
      "academies": {
-      "all": 41,
+      "all": 42,
       "math": 11,
-      "english": 11,
-      "korean": 4,
+      "english": 12,
+      "korean": 5,
       "science": 1
      },
      "students": 3037,
@@ -2586,7 +2590,7 @@
    },
    "opened": {
     "1y": {
-     "all": 17,
+     "all": 16,
      "math": 4,
      "english": 5,
      "korean": 3,
@@ -2604,10 +2608,16 @@
     37.61219,
     126.69373
    ],
-   "apt": [
-    17396852,
-    235
-   ],
+   "bigShare": {
+    "big": 4144,
+    "seats": 7766,
+    "count": 4,
+    "names": [
+     "정송리더스학원",
+     "청연영어수학전문학원",
+     "불로종로엠학원"
+    ]
+   },
    "fervor": {
     "score": 66,
     "parts": {
@@ -2641,8 +2651,8 @@
      "region": "경기-김포시",
      "km": 2.0,
      "academies": {
-      "all": 92,
-      "math": 26,
+      "all": 91,
+      "math": 25,
       "english": 21,
       "korean": 17,
       "science": 5
@@ -2655,10 +2665,10 @@
      "region": "인천-검단구",
      "km": 2.1,
      "academies": {
-      "all": 205,
-      "math": 82,
+      "all": 208,
+      "math": 83,
       "english": 54,
-      "korean": 33,
+      "korean": 34,
       "science": 8
      },
      "students": 9386,
@@ -2669,10 +2679,10 @@
      "region": "경기-김포시",
      "km": 2.3,
      "academies": {
-      "all": 40,
+      "all": 39,
       "math": 11,
-      "english": 7,
-      "korean": 5,
+      "english": 6,
+      "korean": 6,
       "science": 5
      },
      "students": 2749,
@@ -2683,7 +2693,7 @@
      "region": "인천-검단구",
      "km": 2.6,
      "academies": {
-      "all": 105,
+      "all": 104,
       "math": 33,
       "english": 30,
       "korean": 14,
@@ -2725,7 +2735,7 @@
      "region": "경기-김포시",
      "km": 2.9,
      "academies": {
-      "all": 141,
+      "all": 140,
       "math": 49,
       "english": 28,
       "korean": 26,
@@ -2753,10 +2763,10 @@
      "region": "경기-김포시",
      "km": 4.3,
      "academies": {
-      "all": 230,
+      "all": 229,
       "math": 83,
       "english": 68,
-      "korean": 36,
+      "korean": 35,
       "science": 8
      },
      "students": 10966,
@@ -2767,8 +2777,8 @@
      "region": "경기-김포시",
      "km": 4.6,
      "academies": {
-      "all": 145,
-      "math": 49,
+      "all": 144,
+      "math": 48,
       "english": 34,
       "korean": 22,
       "science": 7
@@ -2795,7 +2805,7 @@
      "region": "경기-김포시",
      "km": 5.8,
      "academies": {
-      "all": 114,
+      "all": 113,
       "math": 47,
       "english": 31,
       "korean": 21,
@@ -2809,7 +2819,7 @@
      "region": "경기-김포시",
      "km": 5.8,
      "academies": {
-      "all": 60,
+      "all": 59,
       "math": 27,
       "english": 17,
       "korean": 8,
@@ -2823,9 +2833,9 @@
      "region": "경기-김포시",
      "km": 6.9,
      "academies": {
-      "all": 130,
-      "math": 46,
-      "english": 41,
+      "all": 129,
+      "math": 45,
+      "english": 40,
       "korean": 19,
       "science": 2
      },
@@ -2837,11 +2847,11 @@
      "region": "인천-서해구",
      "km": 9.5,
      "academies": {
-      "all": 382,
-      "math": 136,
+      "all": 383,
+      "math": 137,
       "english": 114,
       "korean": 56,
-      "science": 20
+      "science": 21
      },
      "students": 5921,
      "sales": null
@@ -2851,9 +2861,9 @@
      "region": "경기-고양시",
      "km": 10.4,
      "academies": {
-      "all": 307,
+      "all": 308,
       "math": 114,
-      "english": 70,
+      "english": 71,
       "korean": 82,
       "science": 17
      },
@@ -3009,10 +3019,6 @@
     37.59692,
     126.63708
    ],
-   "apt": [
-    12223682,
-    26
-   ],
    "nearby": [
     {
      "name": "왕길동",
@@ -3061,7 +3067,7 @@
      "region": "인천-검단구",
      "km": 4.7,
      "academies": {
-      "all": 105,
+      "all": 104,
       "math": 33,
       "english": 30,
       "korean": 14,
@@ -3075,7 +3081,7 @@
      "region": "경기-김포시",
      "km": 4.7,
      "academies": {
-      "all": 60,
+      "all": 59,
       "math": 27,
       "english": 17,
       "korean": 8,
@@ -3117,9 +3123,9 @@
      "region": "경기-김포시",
      "km": 5.4,
      "academies": {
-      "all": 130,
-      "math": 46,
-      "english": 41,
+      "all": 129,
+      "math": 45,
+      "english": 40,
       "korean": 19,
       "science": 2
      },
@@ -3145,10 +3151,10 @@
      "region": "경기-김포시",
      "km": 6.0,
      "academies": {
-      "all": 230,
+      "all": 229,
       "math": 83,
       "english": 68,
-      "korean": 36,
+      "korean": 35,
       "science": 8
      },
      "students": 10966,
@@ -3159,10 +3165,10 @@
      "region": "인천-검단구",
      "km": 6.2,
      "academies": {
-      "all": 205,
-      "math": 82,
+      "all": 208,
+      "math": 83,
       "english": 54,
-      "korean": 33,
+      "korean": 34,
       "science": 8
      },
      "students": 9386,
@@ -3173,11 +3179,11 @@
      "region": "인천-서해구",
      "km": 6.4,
      "academies": {
-      "all": 382,
-      "math": 136,
+      "all": 383,
+      "math": 137,
       "english": 114,
       "korean": 56,
-      "science": 20
+      "science": 21
      },
      "students": 5921,
      "sales": null
@@ -3439,10 +3445,16 @@
     37.60176,
     126.65101
    ],
-   "apt": [
-    12031649,
-    93
-   ],
+   "bigShare": {
+    "big": 5252,
+    "seats": 6539,
+    "count": 5,
+    "names": [
+     "윤선생우리집앞영어교실오류학원",
+     "올튼학원",
+     "제이(J)영어수학전문학원"
+    ]
+   },
    "nearby": [
     {
      "name": "금곡동",
@@ -3491,7 +3503,7 @@
      "region": "인천-검단구",
      "km": 3.7,
      "academies": {
-      "all": 105,
+      "all": 104,
       "math": 33,
       "english": 30,
       "korean": 14,
@@ -3519,7 +3531,7 @@
      "region": "경기-김포시",
      "km": 4.4,
      "academies": {
-      "all": 60,
+      "all": 59,
       "math": 27,
       "english": 17,
       "korean": 8,
@@ -3561,10 +3573,10 @@
      "region": "인천-검단구",
      "km": 5.0,
      "academies": {
-      "all": 205,
-      "math": 82,
+      "all": 208,
+      "math": 83,
       "english": 54,
-      "korean": 33,
+      "korean": 34,
       "science": 8
      },
      "students": 9386,
@@ -3575,10 +3587,10 @@
      "region": "경기-김포시",
      "km": 5.1,
      "academies": {
-      "all": 230,
+      "all": 229,
       "math": 83,
       "english": 68,
-      "korean": 36,
+      "korean": 35,
       "science": 8
      },
      "students": 10966,
@@ -3589,9 +3601,9 @@
      "region": "경기-김포시",
      "km": 5.3,
      "academies": {
-      "all": 130,
-      "math": 46,
-      "english": 41,
+      "all": 129,
+      "math": 45,
+      "english": 40,
       "korean": 19,
       "science": 2
      },
@@ -3603,8 +3615,8 @@
      "region": "경기-김포시",
      "km": 5.8,
      "academies": {
-      "all": 92,
-      "math": 26,
+      "all": 91,
+      "math": 25,
       "english": 21,
       "korean": 17,
       "science": 5
@@ -3631,10 +3643,10 @@
      "region": "경기-김포시",
      "km": 6.2,
      "academies": {
-      "all": 40,
+      "all": 39,
       "math": 11,
-      "english": 7,
-      "korean": 5,
+      "english": 6,
+      "korean": 6,
       "science": 5
      },
      "students": 2749,
@@ -3645,8 +3657,8 @@
      "region": "경기-김포시",
      "km": 6.3,
      "academies": {
-      "all": 145,
-      "math": 49,
+      "all": 144,
+      "math": 48,
       "english": 34,
       "korean": 22,
       "science": 7
@@ -3659,7 +3671,7 @@
      "region": "경기-김포시",
      "km": 6.5,
      "academies": {
-      "all": 141,
+      "all": 140,
       "math": 49,
       "english": 28,
       "korean": 26,
@@ -3673,11 +3685,11 @@
      "region": "인천-서해구",
      "km": 7.0,
      "academies": {
-      "all": 382,
-      "math": 136,
+      "all": 383,
+      "math": 137,
       "english": 114,
       "korean": 56,
-      "science": 20
+      "science": 21
      },
      "students": 5921,
      "sales": null
@@ -3693,10 +3705,10 @@
     "total": 9386
    },
    "academies": {
-    "all": 205,
-    "math": 82,
+    "all": 208,
+    "math": 83,
     "english": 54,
-    "korean": 33,
+    "korean": 34,
     "science": 8
    },
    "schools": [
@@ -3762,38 +3774,38 @@
     },
     "math": {
      "elem": [
-      220000,
-      64
+      230000,
+      68
      ],
      "middle": [
       300000,
-      60
+      65
      ],
      "high": [
       400000,
-      30
+      33
      ],
      "total": [
-      250000,
-      185
+      260000,
+      197
      ]
     },
     "english": {
      "elem": [
       240000,
-      28
+      24
      ],
      "middle": [
       300000,
-      19
+      14
      ],
      "high": [
       380000,
-      17
+      14
      ],
      "total": [
-      280000,
-      80
+      270000,
+      68
      ]
     },
     "korean": {
@@ -4080,17 +4092,17 @@
    },
    "opened": {
     "1y": {
-     "all": 38,
+     "all": 40,
      "math": 15,
-     "english": 10,
+     "english": 11,
      "korean": 9,
      "science": 1
     },
     "3y": {
-     "all": 112,
-     "math": 44,
+     "all": 115,
+     "math": 45,
      "english": 31,
-     "korean": 21,
+     "korean": 22,
      "science": 4
     }
    },
@@ -4098,10 +4110,16 @@
     37.5971,
     126.70813
    ],
-   "apt": [
-    27453549,
-    465
-   ],
+   "bigShare": {
+    "big": 15560,
+    "seats": 32134,
+    "count": 17,
+    "names": [
+     "일타수학과학학원",
+     "일단영어검단점1:1내신수능영어전문학원",
+     "베스트교육검단아라학원"
+    ]
+   },
    "fervor": {
     "score": 96,
     "parts": {
@@ -4121,7 +4139,7 @@
      "region": "경기-김포시",
      "km": 1.7,
      "academies": {
-      "all": 141,
+      "all": 140,
       "math": 49,
       "english": 28,
       "korean": 26,
@@ -4135,7 +4153,7 @@
      "region": "인천-검단구",
      "km": 1.9,
      "academies": {
-      "all": 105,
+      "all": 104,
       "math": 33,
       "english": 30,
       "korean": 14,
@@ -4163,10 +4181,10 @@
      "region": "경기-김포시",
      "km": 2.6,
      "academies": {
-      "all": 40,
+      "all": 39,
       "math": 11,
-      "english": 7,
-      "korean": 5,
+      "english": 6,
+      "korean": 6,
       "science": 5
      },
      "students": 2749,
@@ -4177,8 +4195,8 @@
      "region": "경기-김포시",
      "km": 3.0,
      "academies": {
-      "all": 92,
-      "math": 26,
+      "all": 91,
+      "math": 25,
       "english": 21,
       "korean": 17,
       "science": 5
@@ -4247,7 +4265,7 @@
      "region": "경기-김포시",
      "km": 4.6,
      "academies": {
-      "all": 114,
+      "all": 113,
       "math": 47,
       "english": 31,
       "korean": 21,
@@ -4275,10 +4293,10 @@
      "region": "경기-김포시",
      "km": 6.4,
      "academies": {
-      "all": 230,
+      "all": 229,
       "math": 83,
       "english": 68,
-      "korean": 36,
+      "korean": 35,
       "science": 8
      },
      "students": 10966,
@@ -4289,8 +4307,8 @@
      "region": "경기-김포시",
      "km": 6.5,
      "academies": {
-      "all": 145,
-      "math": 49,
+      "all": 144,
+      "math": 48,
       "english": 34,
       "korean": 22,
       "science": 7
@@ -4317,7 +4335,7 @@
      "region": "인천-계양구",
      "km": 6.7,
      "academies": {
-      "all": 57,
+      "all": 56,
       "math": 16,
       "english": 9,
       "korean": 13,
@@ -4345,11 +4363,11 @@
      "region": "인천-서해구",
      "km": 8.9,
      "academies": {
-      "all": 382,
-      "math": 136,
+      "all": 383,
+      "math": 137,
       "english": 114,
       "korean": 56,
-      "science": 20
+      "science": 21
      },
      "students": 5921,
      "sales": null
@@ -4359,9 +4377,9 @@
      "region": "경기-고양시",
      "km": 11.1,
      "academies": {
-      "all": 307,
+      "all": 308,
       "math": 114,
-      "english": 70,
+      "english": 71,
       "korean": 82,
       "science": 17
      },

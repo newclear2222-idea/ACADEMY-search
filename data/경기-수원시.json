@@ -2,8 +2,8 @@
  "id": "경기-수원시",
  "province": "경기도",
  "region": "경기도 수원시",
- "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 10월 기준",
- "builtAt": "2026-10-25",
+ "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 11월 기준",
+ "builtAt": "2026-11-01",
  "sources": [
   "학원: 나이스 교육정보 개방포털 학원교습소정보",
   "학생 수: 학교알리미 학년별·학급별 학생수",
@@ -20,7 +20,7 @@
   "all": {
    "elem": [
     180000,
-    915
+    913
    ],
    "middle": [
     250000,
@@ -28,29 +28,29 @@
    ],
    "high": [
     320000,
-    417
+    423
    ],
    "total": [
     220000,
-    2264
+    2268
    ]
   },
   "math": {
    "elem": [
-    186900,
-    421
+    186000,
+    419
    ],
    "middle": [
     270000,
-    361
+    360
    ],
    "high": [
     350000,
-    225
+    224
    ],
    "total": [
     240000,
-    1080
+    1076
    ]
   },
   "english": {
@@ -78,15 +78,15 @@
    ],
    "middle": [
     190000,
-    85
+    86
    ],
    "high": [
-    280000,
-    52
+    270000,
+    55
    ],
    "total": [
     180000,
-    289
+    293
    ]
   },
   "science": {
@@ -100,11 +100,11 @@
    ],
    "high": [
     220000,
-    12
+    16
    ],
    "total": [
-    100000,
-    49
+    125000,
+    53
    ]
   }
  },
@@ -273,7 +273,7 @@
      "kind": "학원",
      "capacity": 160,
      "since": 2024,
-     "branches": 38,
+     "branches": 39,
      "subjects": [
       "english"
      ]
@@ -303,7 +303,7 @@
      "kind": "학원",
      "capacity": 120,
      "since": 2026,
-     "branches": 11,
+     "branches": 12,
      "subjects": [
       "math"
      ]
@@ -377,15 +377,15 @@
     127.00431
    ],
    "apt": [
-    35707239,
-    122
+    36152890,
+    105
    ],
    "fervor": {
-    "score": 53,
+    "score": 52,
     "parts": {
      "density": [
       1.1,
-      39
+      38
      ],
      "fee": [
       240000,
@@ -623,7 +623,7 @@
      "region": "경기-수원시",
      "km": 3.1,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -651,9 +651,9 @@
      "region": "경기-수원시",
      "km": 3.7,
      "academies": {
-      "all": 137,
+      "all": 138,
       "math": 42,
-      "english": 42,
+      "english": 43,
       "korean": 25,
       "science": 3
      },
@@ -665,8 +665,8 @@
      "region": "경기-수원시",
      "km": 3.9,
      "academies": {
-      "all": 148,
-      "math": 54,
+      "all": 147,
+      "math": 53,
       "english": 44,
       "korean": 25,
       "science": 5
@@ -693,8 +693,8 @@
      "region": "경기-수원시",
      "km": 4.3,
      "academies": {
-      "all": 148,
-      "math": 55,
+      "all": 149,
+      "math": 56,
       "english": 28,
       "korean": 32,
       "science": 5
@@ -707,9 +707,9 @@
      "region": "경기-수원시",
      "km": 4.5,
      "academies": {
-      "all": 63,
+      "all": 64,
       "math": 23,
-      "english": 16,
+      "english": 17,
       "korean": 10,
       "science": 0
      },
@@ -791,10 +791,10 @@
      "region": "경기-수원시",
      "km": 6.3,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 16,
       "english": 7,
-      "korean": 2,
+      "korean": 3,
       "science": 2
      },
      "students": 2101,
@@ -1059,8 +1059,8 @@
     126.98254
    ],
    "apt": [
-    15720820,
-    64
+    15422479,
+    74
    ],
    "fervor": {
     "score": 12,
@@ -1137,9 +1137,9 @@
      "region": "경기-수원시",
      "km": 2.8,
      "academies": {
-      "all": 63,
+      "all": 64,
       "math": 23,
-      "english": 16,
+      "english": 17,
       "korean": 10,
       "science": 0
      },
@@ -1207,9 +1207,9 @@
      "region": "경기-수원시",
      "km": 4.1,
      "academies": {
-      "all": 137,
+      "all": 138,
       "math": 42,
-      "english": 42,
+      "english": 43,
       "korean": 25,
       "science": 3
      },
@@ -1319,8 +1319,8 @@
      "region": "경기-수원시",
      "km": 5.8,
      "academies": {
-      "all": 148,
-      "math": 54,
+      "all": 147,
+      "math": 53,
       "english": 44,
       "korean": 25,
       "science": 5
@@ -1375,7 +1375,7 @@
      "region": "경기-수원시",
      "km": 6.5,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -1389,7 +1389,7 @@
      "region": "경기-화성시",
      "km": 9.9,
      "academies": {
-      "all": 295,
+      "all": 296,
       "math": 109,
       "english": 58,
       "korean": 76,
@@ -1698,9 +1698,17 @@
     37.23872,
     127.02886
    ],
+   "bigShare": {
+    "big": 776,
+    "seats": 3923,
+    "count": 1,
+    "names": [
+     "이자경수학퍼스트학원"
+    ]
+   },
    "apt": [
-    30461961,
-    291
+    30746058,
+    261
    ],
    "fervor": {
     "score": 72,
@@ -1721,9 +1729,9 @@
      "region": "경기-수원시",
      "km": 1.3,
      "academies": {
-      "all": 137,
+      "all": 138,
       "math": 42,
-      "english": 42,
+      "english": 43,
       "korean": 25,
       "science": 3
      },
@@ -1791,8 +1799,8 @@
      "region": "경기-수원시",
      "km": 3.3,
      "academies": {
-      "all": 148,
-      "math": 54,
+      "all": 147,
+      "math": 53,
       "english": 44,
       "korean": 25,
       "science": 5
@@ -1861,8 +1869,8 @@
      "region": "경기-수원시",
      "km": 4.2,
      "academies": {
-      "all": 237,
-      "math": 64,
+      "all": 236,
+      "math": 63,
       "english": 57,
       "korean": 48,
       "science": 12
@@ -1875,10 +1883,10 @@
      "region": "경기-화성시",
      "km": 4.3,
      "academies": {
-      "all": 96,
+      "all": 97,
       "math": 34,
       "english": 31,
-      "korean": 12,
+      "korean": 13,
       "science": 0
      },
      "students": 3772,
@@ -1973,7 +1981,7 @@
      "region": "경기-화성시",
      "km": 5.9,
      "academies": {
-      "all": 295,
+      "all": 296,
       "math": 109,
       "english": 58,
       "korean": 76,
@@ -2001,8 +2009,8 @@
      "region": "경기-수원시",
      "km": 6.3,
      "academies": {
-      "all": 148,
-      "math": 55,
+      "all": 149,
+      "math": 56,
       "english": 28,
       "korean": 32,
       "science": 5
@@ -2196,6 +2204,14 @@
      "korean": 1,
      "science": 0
     }
+   },
+   "bigShare": {
+    "big": 610,
+    "seats": 1089,
+    "count": 1,
+    "names": [
+     "중앙검정고시수능재수학원"
+    ]
    }
   },
   {
@@ -2475,8 +2491,8 @@
     126.97663
    ],
    "apt": [
-    22679645,
-    180
+    23322758,
+    153
    ],
    "fervor": {
     "score": 34,
@@ -2609,9 +2625,9 @@
      "region": "경기-수원시",
      "km": 2.6,
      "academies": {
-      "all": 63,
+      "all": 64,
       "math": 23,
-      "english": 16,
+      "english": 17,
       "korean": 10,
       "science": 0
      },
@@ -2679,7 +2695,7 @@
      "region": "경기-수원시",
      "km": 4.2,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -2749,9 +2765,9 @@
      "region": "경기-수원시",
      "km": 5.7,
      "academies": {
-      "all": 137,
+      "all": 138,
       "math": 42,
-      "english": 42,
+      "english": 43,
       "korean": 25,
       "science": 3
      },
@@ -2777,8 +2793,8 @@
      "region": "경기-수원시",
      "km": 6.4,
      "academies": {
-      "all": 148,
-      "math": 54,
+      "all": 147,
+      "math": 53,
       "english": 44,
       "korean": 25,
       "science": 5
@@ -2805,8 +2821,8 @@
      "region": "경기-수원시",
      "km": 6.5,
      "academies": {
-      "all": 148,
-      "math": 55,
+      "all": 149,
+      "math": 56,
       "english": 28,
       "korean": 32,
       "science": 5
@@ -2833,8 +2849,8 @@
      "region": "경기-안양시",
      "km": 10.9,
      "academies": {
-      "all": 341,
-      "math": 116,
+      "all": 342,
+      "math": 117,
       "english": 81,
       "korean": 53,
       "science": 17
@@ -2853,9 +2869,9 @@
     "total": 9015
    },
    "academies": {
-    "all": 137,
+    "all": 138,
     "math": 42,
-    "english": 42,
+    "english": 43,
     "korean": 25,
     "science": 3
    },
@@ -3180,7 +3196,7 @@
      "kind": "학원",
      "capacity": 210,
      "since": 2012,
-     "branches": 193,
+     "branches": 194,
      "subjects": [
       "english"
      ]
@@ -3200,7 +3216,7 @@
      "kind": "학원",
      "capacity": 172,
      "since": 2020,
-     "branches": 57,
+     "branches": 58,
      "subjects": [
       "english",
       "math"
@@ -3247,16 +3263,16 @@
    },
    "opened": {
     "1y": {
-     "all": 10,
+     "all": 11,
      "math": 4,
-     "english": 2,
+     "english": 3,
      "korean": 3,
      "science": 0
     },
     "3y": {
-     "all": 41,
+     "all": 42,
      "math": 15,
-     "english": 14,
+     "english": 15,
      "korean": 9,
      "science": 0
     }
@@ -3265,9 +3281,19 @@
     37.25033,
     127.02909
    ],
+   "bigShare": {
+    "big": 8742,
+    "seats": 21424,
+    "count": 8,
+    "names": [
+     "웅진씽크빅학습센터권선학원",
+     "눈높이러닝센터권선학원",
+     "이자경고등수학학원"
+    ]
+   },
    "apt": [
-    22937649,
-    872
+    23298928,
+    862
    ],
    "fervor": {
     "score": 58,
@@ -3330,8 +3356,8 @@
      "region": "경기-수원시",
      "km": 2.2,
      "academies": {
-      "all": 148,
-      "math": 54,
+      "all": 147,
+      "math": 53,
       "english": 44,
       "korean": 25,
       "science": 5
@@ -3442,8 +3468,8 @@
      "region": "경기-수원시",
      "km": 3.8,
      "academies": {
-      "all": 237,
-      "math": 64,
+      "all": 236,
+      "math": 63,
       "english": 57,
       "korean": 48,
       "science": 12
@@ -3526,8 +3552,8 @@
      "region": "경기-수원시",
      "km": 5.1,
      "academies": {
-      "all": 148,
-      "math": 55,
+      "all": 149,
+      "math": 56,
       "english": 28,
       "korean": 32,
       "science": 5
@@ -3568,10 +3594,10 @@
      "region": "경기-화성시",
      "km": 5.4,
      "academies": {
-      "all": 96,
+      "all": 97,
       "math": 34,
       "english": 31,
-      "korean": 12,
+      "korean": 13,
       "science": 0
      },
      "students": 3772,
@@ -3610,10 +3636,10 @@
      "region": "경기-수원시",
      "km": 6.0,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 16,
       "english": 7,
-      "korean": 2,
+      "korean": 3,
       "science": 2
      },
      "students": 2101,
@@ -3624,7 +3650,7 @@
      "region": "경기-수원시",
      "km": 6.2,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -3638,9 +3664,9 @@
      "region": "경기-수원시",
      "km": 6.7,
      "academies": {
-      "all": 63,
+      "all": 64,
       "math": 23,
-      "english": 16,
+      "english": 17,
       "korean": 10,
       "science": 0
      },
@@ -3652,7 +3678,7 @@
      "region": "경기-화성시",
      "km": 7.0,
      "academies": {
-      "all": 295,
+      "all": 296,
       "math": 109,
       "english": 58,
       "korean": 76,
@@ -4038,9 +4064,19 @@
     37.27449,
     126.94368
    ],
+   "bigShare": {
+    "big": 6137,
+    "seats": 20978,
+    "count": 6,
+    "names": [
+     "더브릿지하이영어전문학원",
+     "눈높이러닝센터칠보학원",
+     "바른길학원"
+    ]
+   },
    "apt": [
-    18941134,
-    403
+    18829716,
+    386
    ],
    "fervor": {
     "score": 66,
@@ -4061,9 +4097,9 @@
      "region": "경기-수원시",
      "km": 1.5,
      "academies": {
-      "all": 63,
+      "all": 64,
       "math": 23,
-      "english": 16,
+      "english": 17,
       "korean": 10,
       "science": 0
      },
@@ -4299,8 +4335,8 @@
      "region": "경기-안양시",
      "km": 11.6,
      "academies": {
-      "all": 341,
-      "math": 116,
+      "all": 342,
+      "math": 117,
       "english": 81,
       "korean": 53,
       "science": 17
@@ -4668,7 +4704,7 @@
      "region": "경기-수원시",
      "km": 2.9,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -4682,8 +4718,8 @@
      "region": "경기-수원시",
      "km": 3.2,
      "academies": {
-      "all": 148,
-      "math": 54,
+      "all": 147,
+      "math": 53,
       "english": 44,
       "korean": 25,
       "science": 5
@@ -4696,9 +4732,9 @@
      "region": "경기-수원시",
      "km": 3.4,
      "academies": {
-      "all": 137,
+      "all": 138,
       "math": 42,
-      "english": 42,
+      "english": 43,
       "korean": 25,
       "science": 3
      },
@@ -4710,8 +4746,8 @@
      "region": "경기-수원시",
      "km": 3.5,
      "academies": {
-      "all": 148,
-      "math": 55,
+      "all": 149,
+      "math": 56,
       "english": 28,
       "korean": 32,
       "science": 5
@@ -4794,10 +4830,10 @@
      "region": "경기-수원시",
      "km": 5.4,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 16,
       "english": 7,
-      "korean": 2,
+      "korean": 3,
       "science": 2
      },
      "students": 2101,
@@ -4808,9 +4844,9 @@
      "region": "경기-수원시",
      "km": 5.4,
      "academies": {
-      "all": 63,
+      "all": 64,
       "math": 23,
-      "english": 16,
+      "english": 17,
       "korean": 10,
       "science": 0
      },
@@ -4836,8 +4872,8 @@
      "region": "경기-수원시",
      "km": 5.7,
      "academies": {
-      "all": 237,
-      "math": 64,
+      "all": 236,
+      "math": 63,
       "english": 57,
       "korean": 48,
       "science": 12
@@ -5160,7 +5196,7 @@
      "kind": "학원",
      "capacity": 150,
      "since": 2026,
-     "branches": 193,
+     "branches": 194,
      "subjects": [
       "english",
       "math"
@@ -5222,7 +5258,7 @@
      "kind": "학원",
      "capacity": 42,
      "since": 2012,
-     "branches": 51,
+     "branches": 53,
      "subjects": [
       "math"
      ]
@@ -5264,7 +5300,7 @@
      "kind": "교습소",
      "capacity": 0,
      "since": 2024,
-     "branches": 50,
+     "branches": 49,
      "subjects": [
       "korean"
      ]
@@ -5319,8 +5355,8 @@
     126.9408
    ],
    "apt": [
-    13893843,
-    85
+    13939393,
+    86
    ],
    "fervor": {
     "score": 70,
@@ -5425,9 +5461,9 @@
      "region": "경기-수원시",
      "km": 3.4,
      "academies": {
-      "all": 63,
+      "all": 64,
       "math": 23,
-      "english": 16,
+      "english": 17,
       "korean": 10,
       "science": 0
      },
@@ -5525,7 +5561,7 @@
      "academies": {
       "all": 49,
       "math": 19,
-      "english": 14,
+      "english": 13,
       "korean": 5,
       "science": 0
      },
@@ -5551,7 +5587,7 @@
      "region": "경기-수원시",
      "km": 6.5,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -5579,8 +5615,8 @@
      "region": "경기-안양시",
      "km": 9.6,
      "academies": {
-      "all": 341,
-      "math": 116,
+      "all": 342,
+      "math": 117,
       "english": 81,
       "korean": 53,
       "science": 17
@@ -5818,7 +5854,7 @@
      "kind": "학원",
      "capacity": 414,
      "since": 2026,
-     "branches": 32,
+     "branches": 34,
      "subjects": [
       "korean"
      ]
@@ -5996,10 +6032,10 @@
    },
    "opened": {
     "1y": {
-     "all": 31,
-     "math": 8,
+     "all": 29,
+     "math": 7,
      "english": 8,
-     "korean": 9,
+     "korean": 8,
      "science": 1
     },
     "3y": {
@@ -6014,9 +6050,19 @@
     37.23925,
     127.0508
    ],
+   "bigShare": {
+    "big": 3611,
+    "seats": 22747,
+    "count": 4,
+    "names": [
+     "눈높이러닝센터망포학원",
+     "망포와와학습코칭학원",
+     "망포엠코드학원"
+    ]
+   },
    "apt": [
-    30007380,
-    655
+    32090015,
+    589
    ],
    "fervor": {
     "score": 55,
@@ -6051,10 +6097,10 @@
      "region": "경기-용인시",
      "km": 1.7,
      "academies": {
-      "all": 1,
+      "all": 0,
       "math": 0,
       "english": 0,
-      "korean": 1,
+      "korean": 0,
       "science": 0
      },
      "students": 805,
@@ -6093,9 +6139,9 @@
      "region": "경기-수원시",
      "km": 2.3,
      "academies": {
-      "all": 137,
+      "all": 138,
       "math": 42,
-      "english": 42,
+      "english": 43,
       "korean": 25,
       "science": 3
      },
@@ -6121,8 +6167,8 @@
      "region": "경기-수원시",
      "km": 2.6,
      "academies": {
-      "all": 237,
-      "math": 64,
+      "all": 236,
+      "math": 63,
       "english": 57,
       "korean": 48,
       "science": 12
@@ -6135,8 +6181,8 @@
      "region": "경기-수원시",
      "km": 2.9,
      "academies": {
-      "all": 148,
-      "math": 54,
+      "all": 147,
+      "math": 53,
       "english": 44,
       "korean": 25,
       "science": 5
@@ -6163,10 +6209,10 @@
      "region": "경기-화성시",
      "km": 3.6,
      "academies": {
-      "all": 96,
+      "all": 97,
       "math": 34,
       "english": 31,
-      "korean": 12,
+      "korean": 13,
       "science": 0
      },
      "students": 3772,
@@ -6261,7 +6307,7 @@
      "region": "경기-화성시",
      "km": 5.0,
      "academies": {
-      "all": 295,
+      "all": 296,
       "math": 109,
       "english": 58,
       "korean": 76,
@@ -6317,9 +6363,9 @@
      "region": "경기-화성시",
      "km": 5.9,
      "academies": {
-      "all": 121,
+      "all": 122,
       "math": 46,
-      "english": 31,
+      "english": 32,
       "korean": 31,
       "science": 4
      },
@@ -6331,8 +6377,8 @@
      "region": "경기-수원시",
      "km": 6.0,
      "academies": {
-      "all": 148,
-      "math": 55,
+      "all": 149,
+      "math": 56,
       "english": 28,
       "korean": 32,
       "science": 5
@@ -6345,10 +6391,10 @@
      "region": "경기-수원시",
      "km": 6.2,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 16,
       "english": 7,
-      "korean": 2,
+      "korean": 3,
       "science": 2
      },
      "students": 2101,
@@ -6387,8 +6433,8 @@
      "region": "경기-화성시",
      "km": 7.0,
      "academies": {
-      "all": 197,
-      "math": 81,
+      "all": 196,
+      "math": 80,
       "english": 42,
       "korean": 47,
       "science": 7
@@ -6556,7 +6602,7 @@
      "kind": "학원",
      "capacity": 294,
      "since": 2022,
-     "branches": 38,
+     "branches": 39,
      "subjects": [
       "english"
      ]
@@ -6712,9 +6758,17 @@
     37.26787,
     127.01819
    ],
+   "bigShare": {
+    "big": 836,
+    "seats": 4925,
+    "count": 1,
+    "names": [
+     "이자경수학매교고등학원"
+    ]
+   },
    "apt": [
-    40142305,
-    354
+    41081065,
+    325
    ],
    "fervor": {
     "score": 32,
@@ -6847,9 +6901,9 @@
      "region": "경기-수원시",
      "km": 2.2,
      "academies": {
-      "all": 137,
+      "all": 138,
       "math": 42,
-      "english": 42,
+      "english": 43,
       "korean": 25,
       "science": 3
      },
@@ -6875,8 +6929,8 @@
      "region": "경기-수원시",
      "km": 2.5,
      "academies": {
-      "all": 148,
-      "math": 54,
+      "all": 147,
+      "math": 53,
       "english": 44,
       "korean": 25,
       "science": 5
@@ -6959,8 +7013,8 @@
      "region": "경기-수원시",
      "km": 3.9,
      "academies": {
-      "all": 148,
-      "math": 55,
+      "all": 149,
+      "math": 56,
       "english": 28,
       "korean": 32,
       "science": 5
@@ -6987,7 +7041,7 @@
      "region": "경기-수원시",
      "km": 4.1,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -7015,8 +7069,8 @@
      "region": "경기-수원시",
      "km": 5.0,
      "academies": {
-      "all": 237,
-      "math": 64,
+      "all": 236,
+      "math": 63,
       "english": 57,
       "korean": 48,
       "science": 12
@@ -7071,10 +7125,10 @@
      "region": "경기-수원시",
      "km": 5.5,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 16,
       "english": 7,
-      "korean": 2,
+      "korean": 3,
       "science": 2
      },
      "students": 2101,
@@ -7085,9 +7139,9 @@
      "region": "경기-수원시",
      "km": 5.5,
      "academies": {
-      "all": 63,
+      "all": 64,
       "math": 23,
-      "english": 16,
+      "english": 17,
       "korean": 10,
       "science": 0
      },
@@ -7324,8 +7378,8 @@
     }
    },
    "apt": [
-    25288458,
-    30
+    25916913,
+    23
    ]
   },
   {
@@ -7482,8 +7536,8 @@
     127.01071
    ],
    "apt": [
-    15190953,
-    6
+    15969976,
+    4
    ],
    "fervor": {
     "score": 52,
@@ -7672,9 +7726,9 @@
      "region": "경기-수원시",
      "km": 2.9,
      "academies": {
-      "all": 137,
+      "all": 138,
       "math": 42,
-      "english": 42,
+      "english": 43,
       "korean": 25,
       "science": 3
      },
@@ -7700,8 +7754,8 @@
      "region": "경기-수원시",
      "km": 3.2,
      "academies": {
-      "all": 148,
-      "math": 54,
+      "all": 147,
+      "math": 53,
       "english": 44,
       "korean": 25,
       "science": 5
@@ -7728,7 +7782,7 @@
      "region": "경기-수원시",
      "km": 3.6,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -7756,8 +7810,8 @@
      "region": "경기-수원시",
      "km": 4.1,
      "academies": {
-      "all": 148,
-      "math": 55,
+      "all": 149,
+      "math": 56,
       "english": 28,
       "korean": 32,
       "science": 5
@@ -7798,9 +7852,9 @@
      "region": "경기-수원시",
      "km": 4.9,
      "academies": {
-      "all": 63,
+      "all": 64,
       "math": 23,
-      "english": 16,
+      "english": 17,
       "korean": 10,
       "science": 0
      },
@@ -7854,8 +7908,8 @@
      "region": "경기-수원시",
      "km": 5.7,
      "academies": {
-      "all": 237,
-      "math": 64,
+      "all": 236,
+      "math": 63,
       "english": 57,
       "korean": 48,
       "science": 12
@@ -7868,10 +7922,10 @@
      "region": "경기-수원시",
      "km": 5.9,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 16,
       "english": 7,
-      "korean": 2,
+      "korean": 3,
       "science": 2
      },
      "students": 2101,
@@ -7930,8 +7984,8 @@
     "total": 8377
    },
    "academies": {
-    "all": 148,
-    "math": 54,
+    "all": 147,
+    "math": 53,
     "english": 44,
     "korean": 25,
     "science": 5
@@ -8027,37 +8081,37 @@
     "all": {
      "elem": [
       170000,
-      63
+      61
      ],
      "middle": [
       230000,
-      47
+      46
      ],
      "high": [
-      320000,
-      24
+      300000,
+      23
      ],
      "total": [
       190000,
-      151
+      147
      ]
     },
     "math": {
      "elem": [
       170000,
-      34
+      32
      ],
      "middle": [
       240000,
-      21
+      20
      ],
      "high": [
       340000,
-      12
+      11
      ],
      "total": [
-      210000,
-      67
+      200000,
+      63
      ]
     },
     "english": {
@@ -8354,9 +8408,19 @@
     37.26477,
     127.04601
    ],
+   "bigShare": {
+    "big": 8453,
+    "seats": 24395,
+    "count": 8,
+    "names": [
+     "자인에듀이자경수학매탄학원",
+     "눈높이러닝센터매탄학원",
+     "곰수학학원"
+    ]
+   },
    "apt": [
-    22193146,
-    579
+    22181253,
+    523
    ],
    "fervor": {
     "score": 42,
@@ -8405,9 +8469,9 @@
      "region": "경기-수원시",
      "km": 2.2,
      "academies": {
-      "all": 137,
+      "all": 138,
       "math": 42,
-      "english": 42,
+      "english": 43,
       "korean": 25,
       "science": 3
      },
@@ -8461,8 +8525,8 @@
      "region": "경기-수원시",
      "km": 2.5,
      "academies": {
-      "all": 237,
-      "math": 64,
+      "all": 236,
+      "math": 63,
       "english": 57,
       "korean": 48,
       "science": 12
@@ -8517,8 +8581,8 @@
      "region": "경기-수원시",
      "km": 3.2,
      "academies": {
-      "all": 148,
-      "math": 55,
+      "all": 149,
+      "math": 56,
       "english": 28,
       "korean": 32,
       "science": 5
@@ -8559,10 +8623,10 @@
      "region": "경기-수원시",
      "km": 3.8,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 16,
       "english": 7,
-      "korean": 2,
+      "korean": 3,
       "science": 2
      },
      "students": 2101,
@@ -8629,7 +8693,7 @@
      "region": "경기-수원시",
      "km": 5.3,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -8727,10 +8791,10 @@
      "region": "경기-화성시",
      "km": 6.4,
      "academies": {
-      "all": 96,
+      "all": 97,
       "math": 34,
       "english": 31,
-      "korean": 12,
+      "korean": 13,
       "science": 0
      },
      "students": 3772,
@@ -8769,7 +8833,7 @@
      "region": "경기-화성시",
      "km": 7.8,
      "academies": {
-      "all": 295,
+      "all": 296,
       "math": 109,
       "english": 58,
       "korean": 76,
@@ -9093,7 +9157,7 @@
      "region": "경기-수원시",
      "km": 2.2,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -9135,8 +9199,8 @@
      "region": "경기-수원시",
      "km": 2.7,
      "academies": {
-      "all": 148,
-      "math": 55,
+      "all": 149,
+      "math": 56,
       "english": 28,
       "korean": 32,
       "science": 5
@@ -9163,8 +9227,8 @@
      "region": "경기-수원시",
      "km": 3.3,
      "academies": {
-      "all": 148,
-      "math": 54,
+      "all": 147,
+      "math": 53,
       "english": 44,
       "korean": 25,
       "science": 5
@@ -9219,9 +9283,9 @@
      "region": "경기-수원시",
      "km": 4.0,
      "academies": {
-      "all": 137,
+      "all": 138,
       "math": 42,
-      "english": 42,
+      "english": 43,
       "korean": 25,
       "science": 3
      },
@@ -9247,10 +9311,10 @@
      "region": "경기-수원시",
      "km": 4.7,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 16,
       "english": 7,
-      "korean": 2,
+      "korean": 3,
       "science": 2
      },
      "students": 2101,
@@ -9331,8 +9395,8 @@
      "region": "경기-수원시",
      "km": 5.7,
      "academies": {
-      "all": 237,
-      "math": 64,
+      "all": 236,
+      "math": 63,
       "english": 57,
       "korean": 48,
       "science": 12
@@ -9359,9 +9423,9 @@
      "region": "경기-수원시",
      "km": 6.2,
      "academies": {
-      "all": 63,
+      "all": 64,
       "math": 23,
-      "english": 16,
+      "english": 17,
       "korean": 10,
       "science": 0
      },
@@ -9724,8 +9788,8 @@
     126.99165
    ],
    "apt": [
-    22835775,
-    130
+    22877819,
+    121
    ],
    "nearby": [
     {
@@ -9873,9 +9937,9 @@
      "region": "경기-수원시",
      "km": 3.2,
      "academies": {
-      "all": 63,
+      "all": 64,
       "math": 23,
-      "english": 16,
+      "english": 17,
       "korean": 10,
       "science": 0
      },
@@ -9929,9 +9993,9 @@
      "region": "경기-수원시",
      "km": 3.8,
      "academies": {
-      "all": 137,
+      "all": 138,
       "math": 42,
-      "english": 42,
+      "english": 43,
       "korean": 25,
       "science": 3
      },
@@ -10013,7 +10077,7 @@
      "region": "경기-수원시",
      "km": 4.6,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -10027,8 +10091,8 @@
      "region": "경기-수원시",
      "km": 4.8,
      "academies": {
-      "all": 148,
-      "math": 54,
+      "all": 147,
+      "math": 53,
       "english": 44,
       "korean": 25,
       "science": 5
@@ -10041,8 +10105,8 @@
      "region": "경기-수원시",
      "km": 5.8,
      "academies": {
-      "all": 148,
-      "math": 55,
+      "all": 149,
+      "math": 56,
       "english": 28,
       "korean": 32,
       "science": 5
@@ -10111,7 +10175,7 @@
      "region": "경기-화성시",
      "km": 10.5,
      "academies": {
-      "all": 295,
+      "all": 296,
       "math": 109,
       "english": 58,
       "korean": 76,
@@ -10394,7 +10458,7 @@
      "kind": "교습소",
      "capacity": 9,
      "since": 2023,
-     "branches": 5,
+     "branches": 4,
      "subjects": [
       "math"
      ]
@@ -10434,8 +10498,8 @@
     127.01279
    ],
    "apt": [
-    24118460,
-    191
+    24516122,
+    196
    ],
    "fervor": {
     "score": 39,
@@ -10470,9 +10534,9 @@
      "region": "경기-수원시",
      "km": 1.6,
      "academies": {
-      "all": 137,
+      "all": 138,
       "math": 42,
-      "english": 42,
+      "english": 43,
       "korean": 25,
       "science": 3
      },
@@ -10610,8 +10674,8 @@
      "region": "경기-수원시",
      "km": 3.1,
      "academies": {
-      "all": 148,
-      "math": 54,
+      "all": 147,
+      "math": 53,
       "english": 44,
       "korean": 25,
       "science": 5
@@ -10750,9 +10814,9 @@
      "region": "경기-수원시",
      "km": 5.1,
      "academies": {
-      "all": 63,
+      "all": 64,
       "math": 23,
-      "english": 16,
+      "english": 17,
       "korean": 10,
       "science": 0
      },
@@ -10764,8 +10828,8 @@
      "region": "경기-수원시",
      "km": 5.2,
      "academies": {
-      "all": 148,
-      "math": 55,
+      "all": 149,
+      "math": 56,
       "english": 28,
       "korean": 32,
       "science": 5
@@ -10778,8 +10842,8 @@
      "region": "경기-수원시",
      "km": 5.2,
      "academies": {
-      "all": 237,
-      "math": 64,
+      "all": 236,
+      "math": 63,
       "english": 57,
       "korean": 48,
       "science": 12
@@ -10792,7 +10856,7 @@
      "region": "경기-수원시",
      "km": 5.4,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -11126,8 +11190,8 @@
     127.00428
    ],
    "apt": [
-    24123569,
-    49
+    23564659,
+    47
    ],
    "fervor": {
     "score": 58,
@@ -11148,7 +11212,7 @@
      "region": "경기-수원시",
      "km": 0.9,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -11162,9 +11226,9 @@
      "region": "경기-수원시",
      "km": 1.1,
      "academies": {
-      "all": 11,
+      "all": 10,
       "math": 4,
-      "english": 4,
+      "english": 3,
       "korean": 0,
       "science": 0
      },
@@ -11358,8 +11422,8 @@
      "region": "경기-수원시",
      "km": 4.0,
      "academies": {
-      "all": 148,
-      "math": 55,
+      "all": 149,
+      "math": 56,
       "english": 28,
       "korean": 32,
       "science": 5
@@ -11414,8 +11478,8 @@
      "region": "경기-수원시",
      "km": 5.5,
      "academies": {
-      "all": 148,
-      "math": 54,
+      "all": 147,
+      "math": 53,
       "english": 44,
       "korean": 25,
       "science": 5
@@ -11442,9 +11506,9 @@
      "region": "경기-수원시",
      "km": 5.9,
      "academies": {
-      "all": 63,
+      "all": 64,
       "math": 23,
-      "english": 16,
+      "english": 17,
       "korean": 10,
       "science": 0
      },
@@ -11456,9 +11520,9 @@
      "region": "경기-수원시",
      "km": 6.0,
      "academies": {
-      "all": 137,
+      "all": 138,
       "math": 42,
-      "english": 42,
+      "english": 43,
       "korean": 25,
       "science": 3
      },
@@ -11484,10 +11548,10 @@
      "region": "경기-수원시",
      "km": 6.1,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 16,
       "english": 7,
-      "korean": 2,
+      "korean": 3,
       "science": 2
      },
      "students": 2101,
@@ -11554,8 +11618,8 @@
      "region": "경기-안양시",
      "km": 9.5,
      "academies": {
-      "all": 341,
-      "math": 116,
+      "all": 342,
+      "math": 117,
       "english": 81,
       "korean": 53,
       "science": 17
@@ -11772,8 +11836,8 @@
     }
    },
    "apt": [
-    30991734,
-    46
+    33081201,
+    42
    ]
   },
   {
@@ -12121,8 +12185,8 @@
     127.03074
    ],
    "apt": [
-    37339307,
-    51
+    37275717,
+    46
    ],
    "nearby": [
     {
@@ -12172,8 +12236,8 @@
      "region": "경기-수원시",
      "km": 1.6,
      "academies": {
-      "all": 148,
-      "math": 55,
+      "all": 149,
+      "math": 56,
       "english": 28,
       "korean": 32,
       "science": 5
@@ -12186,7 +12250,7 @@
      "region": "경기-수원시",
      "km": 1.8,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -12326,10 +12390,10 @@
      "region": "경기-수원시",
      "km": 3.7,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 16,
       "english": 7,
-      "korean": 2,
+      "korean": 3,
       "science": 2
      },
      "students": 2101,
@@ -12340,8 +12404,8 @@
      "region": "경기-수원시",
      "km": 3.8,
      "academies": {
-      "all": 148,
-      "math": 54,
+      "all": 147,
+      "math": 53,
       "english": 44,
       "korean": 25,
       "science": 5
@@ -12438,9 +12502,9 @@
      "region": "경기-수원시",
      "km": 5.1,
      "academies": {
-      "all": 137,
+      "all": 138,
       "math": 42,
-      "english": 42,
+      "english": 43,
       "korean": 25,
       "science": 3
      },
@@ -12466,8 +12530,8 @@
      "region": "경기-수원시",
      "km": 5.8,
      "academies": {
-      "all": 237,
-      "math": 64,
+      "all": 236,
+      "math": 63,
       "english": 57,
       "korean": 48,
       "science": 12
@@ -12536,8 +12600,8 @@
      "region": "경기-용인시",
      "km": 6.9,
      "academies": {
-      "all": 125,
-      "math": 40,
+      "all": 126,
+      "math": 41,
       "english": 34,
       "korean": 26,
       "science": 5
@@ -12556,8 +12620,8 @@
     "total": 10060
    },
    "academies": {
-    "all": 237,
-    "math": 64,
+    "all": 236,
+    "math": 63,
     "english": 57,
     "korean": 48,
     "science": 12
@@ -13010,15 +13074,25 @@
     37.25533,
     127.07208
    ],
+   "bigShare": {
+    "big": 22311,
+    "seats": 47181,
+    "count": 23,
+    "names": [
+     "잇올스파르타독학재수학원",
+     "눈높이러닝센터영통학원",
+     "엠코드하이학원"
+    ]
+   },
    "apt": [
-    27621867,
-    1431
+    28654912,
+    1259
    ],
    "fervor": {
     "score": 48,
     "parts": {
      "density": [
-      2.4,
+      2.3,
       84
      ],
      "fee": [
@@ -13061,10 +13135,10 @@
      "region": "경기-용인시",
      "km": 2.4,
      "academies": {
-      "all": 1,
+      "all": 0,
       "math": 0,
       "english": 0,
-      "korean": 1,
+      "korean": 0,
       "science": 0
      },
      "students": 805,
@@ -13075,8 +13149,8 @@
      "region": "경기-수원시",
      "km": 2.5,
      "academies": {
-      "all": 148,
-      "math": 54,
+      "all": 147,
+      "math": 53,
       "english": 44,
       "korean": 25,
       "science": 5
@@ -13145,9 +13219,9 @@
      "region": "경기-수원시",
      "km": 3.8,
      "academies": {
-      "all": 137,
+      "all": 138,
       "math": 42,
-      "english": 42,
+      "english": 43,
       "korean": 25,
       "science": 3
      },
@@ -13159,10 +13233,10 @@
      "region": "경기-수원시",
      "km": 4.1,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 16,
       "english": 7,
-      "korean": 2,
+      "korean": 3,
       "science": 2
      },
      "students": 2101,
@@ -13229,8 +13303,8 @@
      "region": "경기-수원시",
      "km": 4.7,
      "academies": {
-      "all": 148,
-      "math": 55,
+      "all": 149,
+      "math": 56,
       "english": 28,
       "korean": 32,
       "science": 5
@@ -13299,10 +13373,10 @@
      "region": "경기-화성시",
      "km": 5.4,
      "academies": {
-      "all": 96,
+      "all": 97,
       "math": 34,
       "english": 31,
-      "korean": 12,
+      "korean": 13,
       "science": 0
      },
      "students": 3772,
@@ -13327,9 +13401,9 @@
      "region": "경기-화성시",
      "km": 5.9,
      "academies": {
-      "all": 121,
+      "all": 122,
       "math": 46,
-      "english": 31,
+      "english": 32,
       "korean": 31,
       "science": 4
      },
@@ -13383,9 +13457,9 @@
      "region": "경기-용인시",
      "km": 6.4,
      "academies": {
-      "all": 27,
+      "all": 26,
       "math": 8,
-      "english": 8,
+      "english": 7,
       "korean": 2,
       "science": 0
      },
@@ -13411,7 +13485,7 @@
      "region": "경기-화성시",
      "km": 6.5,
      "academies": {
-      "all": 295,
+      "all": 296,
       "math": 109,
       "english": 58,
       "korean": 76,
@@ -13425,8 +13499,8 @@
      "region": "경기-용인시",
      "km": 6.9,
      "academies": {
-      "all": 125,
-      "math": 40,
+      "all": 126,
+      "math": 41,
       "english": 34,
       "korean": 26,
       "science": 5
@@ -13695,7 +13769,7 @@
     127.02
    ],
    "apt": [
-    14029030,
+    11029087,
     9
    ],
    "fervor": {
@@ -13745,7 +13819,7 @@
      "region": "경기-수원시",
      "km": 1.2,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -13843,9 +13917,9 @@
      "region": "경기-수원시",
      "km": 2.5,
      "academies": {
-      "all": 11,
+      "all": 10,
       "math": 4,
-      "english": 4,
+      "english": 3,
       "korean": 0,
       "science": 0
      },
@@ -13857,8 +13931,8 @@
      "region": "경기-수원시",
      "km": 2.5,
      "academies": {
-      "all": 148,
-      "math": 55,
+      "all": 149,
+      "math": 56,
       "english": 28,
       "korean": 32,
       "science": 5
@@ -13955,8 +14029,8 @@
      "region": "경기-수원시",
      "km": 4.1,
      "academies": {
-      "all": 148,
-      "math": 54,
+      "all": 147,
+      "math": 53,
       "english": 44,
       "korean": 25,
       "science": 5
@@ -13983,10 +14057,10 @@
      "region": "경기-수원시",
      "km": 4.7,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 16,
       "english": 7,
-      "korean": 2,
+      "korean": 3,
       "science": 2
      },
      "students": 2101,
@@ -14011,9 +14085,9 @@
      "region": "경기-수원시",
      "km": 5.0,
      "academies": {
-      "all": 137,
+      "all": 138,
       "math": 42,
-      "english": 42,
+      "english": 43,
       "korean": 25,
       "science": 3
      },
@@ -14123,8 +14197,8 @@
      "region": "경기-수원시",
      "km": 6.4,
      "academies": {
-      "all": 237,
-      "math": 64,
+      "all": 236,
+      "math": 63,
       "english": 57,
       "korean": 48,
       "science": 12
@@ -14435,9 +14509,19 @@
     37.2427,
     126.96684
    ],
+   "bigShare": {
+    "big": 2028,
+    "seats": 4304,
+    "count": 3,
+    "names": [
+     "눈높이러닝센터오목천학원",
+     "엠베스트에스이오목천비전학원",
+     "뮤엠영어오현학원"
+    ]
+   },
    "apt": [
-    20445267,
-    194
+    20470970,
+    196
    ],
    "fervor": {
     "score": 40,
@@ -14486,9 +14570,9 @@
      "region": "경기-수원시",
      "km": 2.6,
      "academies": {
-      "all": 63,
+      "all": 64,
       "math": 23,
-      "english": 16,
+      "english": 17,
       "korean": 10,
       "science": 0
      },
@@ -14612,9 +14696,9 @@
      "region": "경기-수원시",
      "km": 5.6,
      "academies": {
-      "all": 137,
+      "all": 138,
       "math": 42,
-      "english": 42,
+      "english": 43,
       "korean": 25,
       "science": 3
      },
@@ -14696,7 +14780,7 @@
      "region": "경기-화성시",
      "km": 10.5,
      "academies": {
-      "all": 295,
+      "all": 296,
       "math": 109,
       "english": 58,
       "korean": 76,
@@ -14988,7 +15072,7 @@
      "kind": "학원",
      "capacity": 80,
      "since": 2004,
-     "branches": 76,
+     "branches": 77,
      "subjects": [
       "korean"
      ]
@@ -15049,15 +15133,15 @@
     127.03762
    ],
    "apt": [
-    28890409,
-    208
+    29215775,
+    178
    ],
    "fervor": {
     "score": 26,
     "parts": {
      "density": [
       1.3,
-      48
+      47
      ],
      "fee": [
       150000,
@@ -15071,8 +15155,8 @@
      "region": "경기-수원시",
      "km": 1.4,
      "academies": {
-      "all": 148,
-      "math": 55,
+      "all": 149,
+      "math": 56,
       "english": 28,
       "korean": 32,
       "science": 5
@@ -15183,8 +15267,8 @@
      "region": "경기-수원시",
      "km": 2.3,
      "academies": {
-      "all": 148,
-      "math": 54,
+      "all": 147,
+      "math": 53,
       "english": 44,
       "korean": 25,
       "science": 5
@@ -15239,7 +15323,7 @@
      "region": "경기-수원시",
      "km": 3.1,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -15253,10 +15337,10 @@
      "region": "경기-수원시",
      "km": 3.2,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 16,
       "english": 7,
-      "korean": 2,
+      "korean": 3,
       "science": 2
      },
      "students": 2101,
@@ -15281,9 +15365,9 @@
      "region": "경기-수원시",
      "km": 3.9,
      "academies": {
-      "all": 137,
+      "all": 138,
       "math": 42,
-      "english": 42,
+      "english": 43,
       "korean": 25,
       "science": 3
      },
@@ -15351,8 +15435,8 @@
      "region": "경기-수원시",
      "km": 4.4,
      "academies": {
-      "all": 237,
-      "math": 64,
+      "all": 236,
+      "math": 63,
       "english": 57,
       "korean": 48,
       "science": 12
@@ -15809,7 +15893,18 @@
      ]
     }
    ],
-   "newApts": [],
+   "newApts": [
+    {
+     "name": "광교 자연앤 센트레빌(A17BL) 공공분양주택",
+     "households": 360,
+     "moveIn": "2029-10"
+    },
+    {
+     "name": "광교 자연앤 센트레빌(A17BL) 지분적립형 분양주택",
+     "households": 240,
+     "moveIn": "2029-10"
+    }
+   ],
    "studentsPast": {
     "elem": 4102,
     "middle": 1044,
@@ -15818,11 +15913,11 @@
    },
    "opened": {
     "1y": {
-     "all": 9,
+     "all": 8,
      "math": 3,
      "english": 2,
      "korean": 2,
-     "science": 1
+     "science": 0
     },
     "3y": {
      "all": 22,
@@ -15836,9 +15931,19 @@
     37.27507,
     127.05713
    ],
+   "bigShare": {
+    "big": 2846,
+    "seats": 7521,
+    "count": 3,
+    "names": [
+     "눈높이러닝센터원천학원",
+     "제이멘톡학원",
+     "SAP영어학원"
+    ]
+   },
    "apt": [
-    36458635,
-    311
+    37791214,
+    280
    ],
    "fervor": {
     "score": 40,
@@ -15859,8 +15964,8 @@
      "region": "경기-수원시",
      "km": 1.5,
      "academies": {
-      "all": 148,
-      "math": 54,
+      "all": 147,
+      "math": 53,
       "english": 44,
       "korean": 25,
       "science": 5
@@ -15901,8 +16006,8 @@
      "region": "경기-수원시",
      "km": 2.2,
      "academies": {
-      "all": 148,
-      "math": 55,
+      "all": 149,
+      "math": 56,
       "english": 28,
       "korean": 32,
       "science": 5
@@ -15915,10 +16020,10 @@
      "region": "경기-수원시",
      "km": 2.3,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 16,
       "english": 7,
-      "korean": 2,
+      "korean": 3,
       "science": 2
      },
      "students": 2101,
@@ -15943,8 +16048,8 @@
      "region": "경기-수원시",
      "km": 2.6,
      "academies": {
-      "all": 237,
-      "math": 64,
+      "all": 236,
+      "math": 63,
       "english": 57,
       "korean": 48,
       "science": 12
@@ -15985,9 +16090,9 @@
      "region": "경기-수원시",
      "km": 3.7,
      "academies": {
-      "all": 137,
+      "all": 138,
       "math": 42,
-      "english": 42,
+      "english": 43,
       "korean": 25,
       "science": 3
      },
@@ -16111,7 +16216,7 @@
      "region": "경기-수원시",
      "km": 5.1,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -16209,8 +16314,8 @@
      "region": "경기-용인시",
      "km": 5.9,
      "academies": {
-      "all": 125,
-      "math": 40,
+      "all": 126,
+      "math": 41,
       "english": 34,
       "korean": 26,
       "science": 5
@@ -16251,9 +16356,9 @@
      "region": "경기-용인시",
      "km": 6.5,
      "academies": {
-      "all": 27,
+      "all": 26,
       "math": 8,
-      "english": 8,
+      "english": 7,
       "korean": 2,
       "science": 0
      },
@@ -16578,9 +16683,19 @@
     37.30256,
     126.96807
    ],
+   "bigShare": {
+    "big": 2177,
+    "seats": 4691,
+    "count": 3,
+    "names": [
+     "지엘티영수전문학원",
+     "러닝브릿지학원",
+     "BPM학원"
+    ]
+   },
    "apt": [
-    18827995,
-    172
+    19033642,
+    163
    ],
    "fervor": {
     "score": 68,
@@ -16713,9 +16828,9 @@
      "region": "경기-수원시",
      "km": 2.8,
      "academies": {
-      "all": 11,
+      "all": 10,
       "math": 4,
-      "english": 4,
+      "english": 3,
       "korean": 0,
       "science": 0
      },
@@ -16783,7 +16898,7 @@
      "region": "경기-수원시",
      "km": 4.0,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -16811,9 +16926,9 @@
      "region": "경기-수원시",
      "km": 4.4,
      "academies": {
-      "all": 63,
+      "all": 64,
       "math": 23,
-      "english": 16,
+      "english": 17,
       "korean": 10,
       "science": 0
      },
@@ -16841,7 +16956,7 @@
      "academies": {
       "all": 49,
       "math": 19,
-      "english": 14,
+      "english": 13,
       "korean": 5,
       "science": 0
      },
@@ -16951,8 +17066,8 @@
      "region": "경기-안양시",
      "km": 8.4,
      "academies": {
-      "all": 341,
-      "math": 116,
+      "all": 342,
+      "math": 117,
       "english": 81,
       "korean": 53,
       "science": 17
@@ -17170,14 +17285,14 @@
    ],
    "apt": [
     24234528,
-    44
+    41
    ],
    "fervor": {
-    "score": 36,
+    "score": 35,
     "parts": {
      "density": [
       0.1,
-      4
+      3
      ],
      "fee": [
       240000,
@@ -17191,9 +17306,9 @@
      "region": "경기-수원시",
      "km": 1.7,
      "academies": {
-      "all": 11,
+      "all": 10,
       "math": 4,
-      "english": 4,
+      "english": 3,
       "korean": 0,
       "science": 0
      },
@@ -17303,7 +17418,7 @@
      "region": "경기-수원시",
      "km": 3.2,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -17361,7 +17476,7 @@
      "academies": {
       "all": 49,
       "math": 19,
-      "english": 14,
+      "english": 13,
       "korean": 5,
       "science": 0
      },
@@ -17457,8 +17572,8 @@
      "region": "경기-수원시",
      "km": 6.5,
      "academies": {
-      "all": 148,
-      "math": 55,
+      "all": 149,
+      "math": 56,
       "english": 28,
       "korean": 32,
       "science": 5
@@ -17485,9 +17600,9 @@
      "region": "경기-수원시",
      "km": 6.5,
      "academies": {
-      "all": 63,
+      "all": 64,
       "math": 23,
-      "english": 16,
+      "english": 17,
       "korean": 10,
       "science": 0
      },
@@ -17513,8 +17628,8 @@
      "region": "경기-안양시",
      "km": 6.9,
      "academies": {
-      "all": 341,
-      "math": 116,
+      "all": 342,
+      "math": 117,
       "english": 81,
       "korean": 53,
       "science": 17
@@ -17547,8 +17662,8 @@
     "total": 7535
    },
    "academies": {
-    "all": 148,
-    "math": 55,
+    "all": 149,
+    "math": 56,
     "english": 28,
     "korean": 32,
     "science": 5
@@ -17925,16 +18040,26 @@
     37.29339,
     127.04845
    ],
+   "bigShare": {
+    "big": 12243,
+    "seats": 28969,
+    "count": 9,
+    "names": [
+     "지트에듀케이션광교학원",
+     "지트에듀케이션광교해마루학원",
+     "눈높이러닝센터신풍학원"
+    ]
+   },
    "apt": [
-    47213632,
-    292
+    48765667,
+    259
    ],
    "fervor": {
-    "score": 82,
+    "score": 83,
     "parts": {
      "density": [
       2.0,
-      74
+      75
      ],
      "fee": [
       280000,
@@ -17976,10 +18101,10 @@
      "region": "경기-수원시",
      "km": 2.1,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 16,
       "english": 7,
-      "korean": 2,
+      "korean": 3,
       "science": 2
      },
      "students": 2101,
@@ -18074,8 +18199,8 @@
      "region": "경기-수원시",
      "km": 3.2,
      "academies": {
-      "all": 148,
-      "math": 54,
+      "all": 147,
+      "math": 53,
       "english": 44,
       "korean": 25,
       "science": 5
@@ -18088,7 +18213,7 @@
      "region": "경기-수원시",
      "km": 3.3,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -18172,8 +18297,8 @@
      "region": "경기-수원시",
      "km": 4.7,
      "academies": {
-      "all": 237,
-      "math": 64,
+      "all": 236,
+      "math": 63,
       "english": 57,
       "korean": 48,
       "science": 12
@@ -18228,9 +18353,9 @@
      "region": "경기-수원시",
      "km": 5.1,
      "academies": {
-      "all": 137,
+      "all": 138,
       "math": 42,
-      "english": 42,
+      "english": 43,
       "korean": 25,
       "science": 3
      },
@@ -18256,8 +18381,8 @@
      "region": "경기-용인시",
      "km": 5.5,
      "academies": {
-      "all": 125,
-      "math": 40,
+      "all": 126,
+      "math": 41,
       "english": 34,
       "korean": 26,
       "science": 5
@@ -18513,7 +18638,7 @@
      "kind": "학원",
      "capacity": 432,
      "since": 2012,
-     "branches": 57,
+     "branches": 58,
      "subjects": [
       "english",
       "math"
@@ -18664,8 +18789,8 @@
    },
    "opened": {
     "1y": {
-     "all": 5,
-     "math": 4,
+     "all": 4,
+     "math": 3,
      "english": 0,
      "korean": 0,
      "science": 0
@@ -18683,15 +18808,15 @@
     127.0291
    ],
    "apt": [
-    31586580,
-    392
+    31337213,
+    373
    ],
    "fervor": {
     "score": 72,
     "parts": {
      "density": [
       1.8,
-      67
+      68
      ],
      "fee": [
       250000,
@@ -18789,8 +18914,8 @@
      "region": "경기-수원시",
      "km": 1.7,
      "academies": {
-      "all": 148,
-      "math": 54,
+      "all": 147,
+      "math": 53,
       "english": 44,
       "korean": 25,
       "science": 5
@@ -18845,9 +18970,9 @@
      "region": "경기-수원시",
      "km": 2.5,
      "academies": {
-      "all": 137,
+      "all": 138,
       "math": 42,
-      "english": 42,
+      "english": 43,
       "korean": 25,
       "science": 3
      },
@@ -18901,8 +19026,8 @@
      "region": "경기-수원시",
      "km": 2.9,
      "academies": {
-      "all": 148,
-      "math": 55,
+      "all": 149,
+      "math": 56,
       "english": 28,
       "korean": 32,
       "science": 5
@@ -18943,7 +19068,7 @@
      "region": "경기-수원시",
      "km": 3.8,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -18985,8 +19110,8 @@
      "region": "경기-수원시",
      "km": 4.3,
      "academies": {
-      "all": 237,
-      "math": 64,
+      "all": 236,
+      "math": 63,
       "english": 57,
       "korean": 48,
       "science": 12
@@ -18999,10 +19124,10 @@
      "region": "경기-수원시",
      "km": 4.4,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 16,
       "english": 7,
-      "korean": 2,
+      "korean": 3,
       "science": 2
      },
      "students": 2101,
@@ -19359,8 +19484,8 @@
     126.96017
    ],
    "apt": [
-    18488513,
-    74
+    18683129,
+    71
    ],
    "nearby": [
     {
@@ -19508,9 +19633,9 @@
      "region": "경기-수원시",
      "km": 3.4,
      "academies": {
-      "all": 63,
+      "all": 64,
       "math": 23,
-      "english": 16,
+      "english": 17,
       "korean": 10,
       "science": 0
      },
@@ -19564,7 +19689,7 @@
      "region": "경기-수원시",
      "km": 4.8,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -19608,7 +19733,7 @@
      "academies": {
       "all": 49,
       "math": 19,
-      "english": 14,
+      "english": 13,
       "korean": 5,
       "science": 0
      },
@@ -19662,8 +19787,8 @@
      "region": "경기-안양시",
      "km": 9.3,
      "academies": {
-      "all": 341,
-      "math": 116,
+      "all": 342,
+      "math": 117,
       "english": 81,
       "korean": 53,
       "science": 17
@@ -20076,14 +20201,14 @@
    },
    "opened": {
     "1y": {
-     "all": 24,
-     "math": 11,
+     "all": 22,
+     "math": 10,
      "english": 2,
      "korean": 6,
      "science": 1
     },
     "3y": {
-     "all": 62,
+     "all": 61,
      "math": 21,
      "english": 15,
      "korean": 17,
@@ -20094,16 +20219,26 @@
     37.29601,
     126.99209
    ],
+   "bigShare": {
+    "big": 21924,
+    "seats": 42964,
+    "count": 22,
+    "names": [
+     "눈높이러닝센터다솔학원",
+     "눈높이정자명인학원",
+     "이자경수학정자학원"
+    ]
+   },
    "apt": [
-    28117918,
-    830
+    29836602,
+    779
    ],
    "fervor": {
-    "score": 77,
+    "score": 76,
     "parts": {
      "density": [
       2.4,
-      87
+      86
      ],
      "fee": [
       240000,
@@ -20159,9 +20294,9 @@
      "region": "경기-수원시",
      "km": 1.7,
      "academies": {
-      "all": 11,
+      "all": 10,
       "math": 4,
-      "english": 4,
+      "english": 3,
       "korean": 0,
       "science": 0
      },
@@ -20173,7 +20308,7 @@
      "region": "경기-수원시",
      "km": 2.1,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -20369,9 +20504,9 @@
      "region": "경기-수원시",
      "km": 4.8,
      "academies": {
-      "all": 63,
+      "all": 64,
       "math": 23,
-      "english": 16,
+      "english": 17,
       "korean": 10,
       "science": 0
      },
@@ -20411,8 +20546,8 @@
      "region": "경기-수원시",
      "km": 5.0,
      "academies": {
-      "all": 148,
-      "math": 55,
+      "all": 149,
+      "math": 56,
       "english": 28,
       "korean": 32,
       "science": 5
@@ -20425,8 +20560,8 @@
      "region": "경기-수원시",
      "km": 5.9,
      "academies": {
-      "all": 148,
-      "math": 54,
+      "all": 147,
+      "math": 53,
       "english": 44,
       "korean": 25,
       "science": 5
@@ -20453,9 +20588,9 @@
      "region": "경기-수원시",
      "km": 6.0,
      "academies": {
-      "all": 137,
+      "all": 138,
       "math": 42,
-      "english": 42,
+      "english": 43,
       "korean": 25,
       "science": 3
      },
@@ -20509,8 +20644,8 @@
      "region": "경기-안양시",
      "km": 9.6,
      "academies": {
-      "all": 341,
-      "math": 116,
+      "all": 342,
+      "math": 117,
       "english": 81,
       "korean": 53,
       "science": 17
@@ -20543,7 +20678,7 @@
     "total": 4562
    },
    "academies": {
-    "all": 58,
+    "all": 57,
     "math": 21,
     "english": 10,
     "korean": 10,
@@ -20918,16 +21053,26 @@
     37.30462,
     127.01344
    ],
+   "bigShare": {
+    "big": 4133,
+    "seats": 10042,
+    "count": 3,
+    "names": [
+     "눈높이러닝센터조원학원",
+     "눈높이러닝센터한일학원",
+     "신연세명문학원"
+    ]
+   },
    "apt": [
-    22215073,
-    227
+    22032847,
+    212
    ],
    "fervor": {
-    "score": 42,
+    "score": 41,
     "parts": {
      "density": [
-      1.3,
-      45
+      1.2,
+      44
      ],
      "fee": [
       210000,
@@ -20969,9 +21114,9 @@
      "region": "경기-수원시",
      "km": 1.5,
      "academies": {
-      "all": 11,
+      "all": 10,
       "math": 4,
-      "english": 4,
+      "english": 3,
       "korean": 0,
       "science": 0
      },
@@ -21095,8 +21240,8 @@
      "region": "경기-수원시",
      "km": 3.3,
      "academies": {
-      "all": 148,
-      "math": 55,
+      "all": 149,
+      "math": 56,
       "english": 28,
       "korean": 32,
       "science": 5
@@ -21179,8 +21324,8 @@
      "region": "경기-수원시",
      "km": 5.3,
      "academies": {
-      "all": 148,
-      "math": 54,
+      "all": 147,
+      "math": 53,
       "english": 44,
       "korean": 25,
       "science": 5
@@ -21221,10 +21366,10 @@
      "region": "경기-수원시",
      "km": 5.4,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 16,
       "english": 7,
-      "korean": 2,
+      "korean": 3,
       "science": 2
      },
      "students": 2101,
@@ -21277,9 +21422,9 @@
      "region": "경기-수원시",
      "km": 6.2,
      "academies": {
-      "all": 137,
+      "all": 138,
       "math": 42,
-      "english": 42,
+      "english": 43,
       "korean": 25,
       "science": 3
      },
@@ -21291,9 +21436,9 @@
      "region": "경기-수원시",
      "km": 6.8,
      "academies": {
-      "all": 63,
+      "all": 64,
       "math": 23,
-      "english": 16,
+      "english": 17,
       "korean": 10,
       "science": 0
      },
@@ -21319,8 +21464,8 @@
      "region": "경기-안양시",
      "km": 9.5,
      "academies": {
-      "all": 341,
-      "math": 116,
+      "all": 342,
+      "math": 117,
       "english": 81,
       "korean": 53,
       "science": 17
@@ -21553,7 +21698,7 @@
    ],
    "apt": [
     13797099,
-    5
+    6
    ],
    "nearby": [
     {
@@ -21701,8 +21846,8 @@
      "region": "경기-수원시",
      "km": 2.3,
      "academies": {
-      "all": 148,
-      "math": 54,
+      "all": 147,
+      "math": 53,
       "english": 44,
       "korean": 25,
       "science": 5
@@ -21729,8 +21874,8 @@
      "region": "경기-수원시",
      "km": 2.8,
      "academies": {
-      "all": 148,
-      "math": 55,
+      "all": 149,
+      "math": 56,
       "english": 28,
       "korean": 32,
       "science": 5
@@ -21771,9 +21916,9 @@
      "region": "경기-수원시",
      "km": 3.0,
      "academies": {
-      "all": 137,
+      "all": 138,
       "math": 42,
-      "english": 42,
+      "english": 43,
       "korean": 25,
       "science": 3
      },
@@ -21785,7 +21930,7 @@
      "region": "경기-수원시",
      "km": 3.2,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -21827,10 +21972,10 @@
      "region": "경기-수원시",
      "km": 4.6,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 16,
       "english": 7,
-      "korean": 2,
+      "korean": 3,
       "science": 2
      },
      "students": 2101,
@@ -21883,8 +22028,8 @@
      "region": "경기-수원시",
      "km": 4.9,
      "academies": {
-      "all": 237,
-      "math": 64,
+      "all": 236,
+      "math": 63,
       "english": 57,
       "korean": 48,
       "science": 12
@@ -22288,7 +22433,7 @@
      "kind": "교습소",
      "capacity": 66,
      "since": 2020,
-     "branches": 1,
+     "branches": 2,
      "subjects": [
       "korean"
      ]
@@ -22341,16 +22486,26 @@
     37.30064,
     126.97978
    ],
+   "bigShare": {
+    "big": 5939,
+    "seats": 15404,
+    "count": 5,
+    "names": [
+     "눈높이베스트천천학원",
+     "고등제이프라임학원",
+     "제이프라임학원"
+    ]
+   },
    "apt": [
     23803636,
-    262
+    218
    ],
    "fervor": {
     "score": 68,
     "parts": {
      "density": [
       2.1,
-      79
+      78
      ],
      "fee": [
       230000,
@@ -22406,9 +22561,9 @@
      "region": "경기-수원시",
      "km": 1.9,
      "academies": {
-      "all": 11,
+      "all": 10,
       "math": 4,
-      "english": 4,
+      "english": 3,
       "korean": 0,
       "science": 0
      },
@@ -22490,7 +22645,7 @@
      "region": "경기-수원시",
      "km": 3.0,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -22560,9 +22715,9 @@
      "region": "경기-수원시",
      "km": 4.6,
      "academies": {
-      "all": 63,
+      "all": 64,
       "math": 23,
-      "english": 16,
+      "english": 17,
       "korean": 10,
       "science": 0
      },
@@ -22660,7 +22815,7 @@
      "academies": {
       "all": 49,
       "math": 19,
-      "english": 14,
+      "english": 13,
       "korean": 5,
       "science": 0
      },
@@ -22672,8 +22827,8 @@
      "region": "경기-수원시",
      "km": 6.1,
      "academies": {
-      "all": 148,
-      "math": 55,
+      "all": 149,
+      "math": 56,
       "english": 28,
       "korean": 32,
       "science": 5
@@ -22714,8 +22869,8 @@
      "region": "경기-안양시",
      "km": 8.8,
      "academies": {
-      "all": 341,
-      "math": 116,
+      "all": 342,
+      "math": 117,
       "english": 81,
       "korean": 53,
       "science": 17
@@ -23025,9 +23180,17 @@
     37.26663,
     126.97281
    ],
+   "bigShare": {
+    "big": 770,
+    "seats": 4065,
+    "count": 1,
+    "names": [
+     "아이엘에스학원"
+    ]
+   },
    "apt": [
-    12098552,
-    38
+    12524433,
+    37
    ],
    "fervor": {
     "score": 39,
@@ -23048,9 +23211,9 @@
      "region": "경기-수원시",
      "km": 1.5,
      "academies": {
-      "all": 63,
+      "all": 64,
       "math": 23,
-      "english": 16,
+      "english": 17,
       "korean": 10,
       "science": 0
      },
@@ -23244,9 +23407,9 @@
      "region": "경기-수원시",
      "km": 5.3,
      "academies": {
-      "all": 137,
+      "all": 138,
       "math": 42,
-      "english": 42,
+      "english": 43,
       "korean": 25,
       "science": 3
      },
@@ -23258,7 +23421,7 @@
      "region": "경기-수원시",
      "km": 5.5,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -23328,8 +23491,8 @@
      "region": "경기-수원시",
      "km": 6.5,
      "academies": {
-      "all": 148,
-      "math": 54,
+      "all": 147,
+      "math": 53,
       "english": 44,
       "korean": 25,
       "science": 5
@@ -23342,7 +23505,7 @@
      "region": "경기-화성시",
      "km": 11.6,
      "academies": {
-      "all": 295,
+      "all": 296,
       "math": 109,
       "english": 58,
       "korean": 76,
@@ -23362,9 +23525,9 @@
     "total": 1123
    },
    "academies": {
-    "all": 11,
+    "all": 10,
     "math": 4,
-    "english": 4,
+    "english": 3,
     "korean": 0,
     "science": 0
    },
@@ -23505,16 +23668,6 @@
      "subjects": []
     },
     {
-     "name": "로고스영어학원",
-     "kind": "학원",
-     "capacity": 129,
-     "since": 2007,
-     "branches": 1,
-     "subjects": [
-      "english"
-     ]
-    },
-    {
      "name": "두런영어학원",
      "kind": "학원",
      "capacity": 75,
@@ -23523,6 +23676,14 @@
      "subjects": [
       "english"
      ]
+    },
+    {
+     "name": "단비학원",
+     "kind": "학원",
+     "capacity": 68,
+     "since": 2009,
+     "branches": 1,
+     "subjects": []
     },
     {
      "name": "튼튼영어마스터클럽장안파장학원",
@@ -23584,7 +23745,7 @@
    },
    "opened": {
     "1y": {
-     "all": 1,
+     "all": 0,
      "math": 0,
      "english": 0,
      "korean": 0,
@@ -23604,18 +23765,18 @@
    ],
    "apt": [
     33070845,
-    26
+    31
    ],
    "fervor": {
-    "score": 34,
+    "score": 32,
     "parts": {
      "density": [
-      1.0,
-      31
+      0.9,
+      26
      ],
      "fee": [
       201240,
-      36
+      37
      ]
     }
    },
@@ -23639,7 +23800,7 @@
      "region": "경기-수원시",
      "km": 1.5,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -23779,8 +23940,8 @@
      "region": "경기-수원시",
      "km": 4.8,
      "academies": {
-      "all": 148,
-      "math": 55,
+      "all": 149,
+      "math": 56,
       "english": 28,
       "korean": 32,
       "science": 5
@@ -23905,9 +24066,9 @@
      "region": "경기-수원시",
      "km": 6.3,
      "academies": {
-      "all": 63,
+      "all": 64,
       "math": 23,
-      "english": 16,
+      "english": 17,
       "korean": 10,
       "science": 0
      },
@@ -23921,7 +24082,7 @@
      "academies": {
       "all": 49,
       "math": 19,
-      "english": 14,
+      "english": 13,
       "korean": 5,
       "science": 0
      },
@@ -23947,8 +24108,8 @@
      "region": "경기-수원시",
      "km": 6.6,
      "academies": {
-      "all": 148,
-      "math": 54,
+      "all": 147,
+      "math": 53,
       "english": 44,
       "korean": 25,
       "science": 5
@@ -23961,10 +24122,10 @@
      "region": "경기-수원시",
      "km": 6.8,
      "academies": {
-      "all": 35,
+      "all": 36,
       "math": 16,
       "english": 7,
-      "korean": 2,
+      "korean": 3,
       "science": 2
      },
      "students": 2101,
@@ -24003,8 +24164,8 @@
      "region": "경기-안양시",
      "km": 8.3,
      "academies": {
-      "all": 341,
-      "math": 116,
+      "all": 342,
+      "math": 117,
       "english": 81,
       "korean": 53,
       "science": 17
@@ -24203,10 +24364,10 @@
     "total": 2101
    },
    "academies": {
-    "all": 35,
+    "all": 36,
     "math": 16,
     "english": 7,
-    "korean": 2,
+    "korean": 3,
     "science": 2
    },
    "schools": [
@@ -24234,15 +24395,15 @@
      ],
      "middle": [
       355524,
-      9
+      10
      ],
      "high": [
-      430000,
-      6
+      300000,
+      13
      ],
      "total": [
       250000,
-      34
+      42
      ]
     },
     "math": {
@@ -24288,15 +24449,15 @@
      ],
      "middle": [
       null,
-      0
+      1
      ],
      "high": [
-      null,
-      0
+      250000,
+      3
      ],
      "total": [
-      null,
-      0
+      250000,
+      4
      ]
     },
     "science": {
@@ -24309,12 +24470,12 @@
       3
      ],
      "high": [
-      null,
-      0
+      250000,
+      4
      ],
      "total": [
-      1000000,
-      4
+      800000,
+      8
      ]
     }
    },
@@ -24447,6 +24608,16 @@
      ]
     },
     {
+     "name": "연첼로음악교습소",
+     "kind": "교습소",
+     "capacity": 3,
+     "since": 2025,
+     "branches": 1,
+     "subjects": [
+      "korean"
+     ]
+    },
+    {
      "name": "잇다서은과학교습소",
      "kind": "교습소",
      "capacity": 0,
@@ -24466,17 +24637,17 @@
    },
    "opened": {
     "1y": {
-     "all": 8,
+     "all": 9,
      "math": 4,
      "english": 2,
-     "korean": 0,
+     "korean": 1,
      "science": 1
     },
     "3y": {
-     "all": 17,
+     "all": 18,
      "math": 10,
      "english": 4,
-     "korean": 0,
+     "korean": 1,
      "science": 1
     }
    },
@@ -24485,15 +24656,15 @@
     127.07255
    ],
    "apt": [
-    44276377,
-    208
+    45979815,
+    186
    ],
    "fervor": {
-    "score": 70,
+    "score": 71,
     "parts": {
      "density": [
       1.7,
-      63
+      65
      ],
      "fee": [
       250000,
@@ -24521,8 +24692,8 @@
      "region": "경기-수원시",
      "km": 2.1,
      "academies": {
-      "all": 148,
-      "math": 55,
+      "all": 149,
+      "math": 56,
       "english": 28,
       "korean": 32,
       "science": 5
@@ -24605,8 +24776,8 @@
      "region": "경기-용인시",
      "km": 3.7,
      "academies": {
-      "all": 125,
-      "math": 40,
+      "all": 126,
+      "math": 41,
       "english": 34,
       "korean": 26,
       "science": 5
@@ -24661,8 +24832,8 @@
      "region": "경기-수원시",
      "km": 3.8,
      "academies": {
-      "all": 148,
-      "math": 54,
+      "all": 147,
+      "math": 53,
       "english": 44,
       "korean": 25,
       "science": 5
@@ -24675,8 +24846,8 @@
      "region": "경기-수원시",
      "km": 4.1,
      "academies": {
-      "all": 237,
-      "math": 64,
+      "all": 236,
+      "math": 63,
       "english": 57,
       "korean": 48,
       "science": 12
@@ -24703,9 +24874,9 @@
      "region": "경기-용인시",
      "km": 4.8,
      "academies": {
-      "all": 27,
+      "all": 26,
       "math": 8,
-      "english": 8,
+      "english": 7,
       "korean": 2,
       "science": 0
      },
@@ -24745,7 +24916,7 @@
      "region": "경기-수원시",
      "km": 5.4,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -24815,9 +24986,9 @@
      "region": "경기-수원시",
      "km": 6.0,
      "academies": {
-      "all": 137,
+      "all": 138,
       "math": 42,
-      "english": 42,
+      "english": 43,
       "korean": 25,
       "science": 3
      },
@@ -24913,10 +25084,10 @@
      "region": "경기-성남시",
      "km": 9.8,
      "academies": {
-      "all": 310,
-      "math": 109,
-      "english": 74,
-      "korean": 59,
+      "all": 313,
+      "math": 110,
+      "english": 75,
+      "korean": 60,
       "science": 15
      },
      "students": 7205,
@@ -24933,9 +25104,9 @@
     "total": 5350
    },
    "academies": {
-    "all": 63,
+    "all": 64,
     "math": 23,
-    "english": 16,
+    "english": 17,
     "korean": 10,
     "science": 0
    },
@@ -25221,16 +25392,16 @@
    },
    "opened": {
     "1y": {
-     "all": 10,
+     "all": 11,
      "math": 4,
-     "english": 1,
+     "english": 2,
      "korean": 2,
      "science": 0
     },
     "3y": {
-     "all": 23,
+     "all": 24,
      "math": 8,
-     "english": 4,
+     "english": 5,
      "korean": 7,
      "science": 0
     }
@@ -25239,16 +25410,26 @@
     37.26437,
     126.95557
    ],
+   "bigShare": {
+    "big": 5929,
+    "seats": 11906,
+    "count": 5,
+    "names": [
+     "희소가치수학학원",
+     "서수원와와학습코칭학원",
+     "다짐수학학원"
+    ]
+   },
    "apt": [
-    23699359,
-    460
+    23816332,
+    447
    ],
    "fervor": {
-    "score": 28,
+    "score": 29,
     "parts": {
      "density": [
       1.2,
-      41
+      42
      ],
      "fee": [
       190000,
@@ -25486,9 +25667,9 @@
      "region": "경기-수원시",
      "km": 6.7,
      "academies": {
-      "all": 137,
+      "all": 138,
       "math": 42,
-      "english": 42,
+      "english": 43,
       "korean": 25,
       "science": 3
      },
@@ -25500,7 +25681,7 @@
      "region": "경기-수원시",
      "km": 6.8,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -25913,9 +26094,19 @@
     37.28536,
     126.99286
    ],
+   "bigShare": {
+    "big": 3559,
+    "seats": 8422,
+    "count": 3,
+    "names": [
+     "눈높이러닝센터숙지학원",
+     "연우입시학원",
+     "독수강영학원"
+    ]
+   },
    "apt": [
-    28208017,
-    354
+    28604836,
+    286
    ],
    "fervor": {
     "score": 34,
@@ -26104,9 +26295,9 @@
      "region": "경기-수원시",
      "km": 2.8,
      "academies": {
-      "all": 11,
+      "all": 10,
       "math": 4,
-      "english": 4,
+      "english": 3,
       "korean": 0,
       "science": 0
      },
@@ -26118,7 +26309,7 @@
      "region": "경기-수원시",
      "km": 2.8,
      "academies": {
-      "all": 58,
+      "all": 57,
       "math": 21,
       "english": 10,
       "korean": 10,
@@ -26216,9 +26407,9 @@
      "region": "경기-수원시",
      "km": 4.0,
      "academies": {
-      "all": 63,
+      "all": 64,
       "math": 23,
-      "english": 16,
+      "english": 17,
       "korean": 10,
       "science": 0
      },
@@ -26244,8 +26435,8 @@
      "region": "경기-수원시",
      "km": 5.0,
      "academies": {
-      "all": 148,
-      "math": 55,
+      "all": 149,
+      "math": 56,
       "english": 28,
       "korean": 32,
       "science": 5
@@ -26258,9 +26449,9 @@
      "region": "경기-수원시",
      "km": 5.0,
      "academies": {
-      "all": 137,
+      "all": 138,
       "math": 42,
-      "english": 42,
+      "english": 43,
       "korean": 25,
       "science": 3
      },
@@ -26286,8 +26477,8 @@
      "region": "경기-수원시",
      "km": 5.2,
      "academies": {
-      "all": 148,
-      "math": 54,
+      "all": 147,
+      "math": 53,
       "english": 44,
       "korean": 25,
       "science": 5

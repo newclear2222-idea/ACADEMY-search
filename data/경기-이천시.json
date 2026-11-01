@@ -2,8 +2,8 @@
  "id": "경기-이천시",
  "province": "경기도",
  "region": "경기도 이천시",
- "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 10월 기준",
- "builtAt": "2026-10-25",
+ "baseDate": "학생 수 2026년 학교알리미 공시, 학원 2026년 11월 기준",
+ "builtAt": "2026-11-01",
  "sources": [
   "학원: 나이스 교육정보 개방포털 학원교습소정보",
   "학생 수: 학교알리미 학년별·학급별 학생수",
@@ -119,7 +119,7 @@
    },
    "academies": {
     "all": 61,
-    "math": 19,
+    "math": 20,
     "english": 18,
     "korean": 11,
     "science": 2
@@ -247,7 +247,7 @@
      "kind": "학원",
      "capacity": 220,
      "since": 2008,
-     "branches": 65,
+     "branches": 66,
      "subjects": [
       "math"
      ]
@@ -383,7 +383,7 @@
     },
     "3y": {
      "all": 18,
-     "math": 4,
+     "math": 5,
      "english": 5,
      "korean": 3,
      "science": 0
@@ -393,10 +393,14 @@
     37.28554,
     127.45772
    ],
-   "apt": [
-    10813134,
-    38
-   ],
+   "bigShare": {
+    "big": 1008,
+    "seats": 4910,
+    "count": 1,
+    "names": [
+     "와와학습코칭갈산학원"
+    ]
+   },
    "fervor": {
     "score": 73,
     "parts": {
@@ -416,9 +420,9 @@
      "region": "경기-이천시",
      "km": 0.6,
      "academies": {
-      "all": 70,
+      "all": 69,
       "math": 26,
-      "english": 25,
+      "english": 24,
       "korean": 3,
       "science": 3
      },
@@ -514,7 +518,7 @@
      "region": "경기-이천시",
      "km": 2.6,
      "academies": {
-      "all": 0,
+      "all": 1,
       "math": 0,
       "english": 0,
       "korean": 0,
@@ -718,7 +722,7 @@
      "kind": "교습소",
      "capacity": 9,
      "since": 2026,
-     "branches": 66,
+     "branches": 65,
      "subjects": [
       "english"
      ]
@@ -751,17 +755,13 @@
     37.28434,
     127.43632
    ],
-   "apt": [
-    7132222,
-    22
-   ],
    "nearby": [
     {
      "name": "사음동",
      "region": "경기-이천시",
      "km": 1.0,
      "academies": {
-      "all": 0,
+      "all": 1,
       "math": 0,
       "english": 0,
       "korean": 0,
@@ -831,9 +831,9 @@
      "region": "경기-이천시",
      "km": 1.8,
      "academies": {
-      "all": 70,
+      "all": 69,
       "math": 26,
-      "english": 25,
+      "english": 24,
       "korean": 3,
       "science": 3
      },
@@ -860,7 +860,7 @@
      "km": 1.9,
      "academies": {
       "all": 61,
-      "math": 19,
+      "math": 20,
       "english": 18,
       "korean": 11,
       "science": 2
@@ -1075,7 +1075,7 @@
      "km": 6.5,
      "academies": {
       "all": 61,
-      "math": 19,
+      "math": 20,
       "english": 18,
       "korean": 11,
       "science": 2
@@ -1088,9 +1088,9 @@
      "region": "경기-이천시",
      "km": 7.0,
      "academies": {
-      "all": 70,
+      "all": 69,
       "math": 26,
-      "english": 25,
+      "english": 24,
       "korean": 3,
       "science": 3
      },
@@ -1287,7 +1287,7 @@
      "kind": "교습소",
      "capacity": 0,
      "since": 2018,
-     "branches": 81,
+     "branches": 80,
      "subjects": [
       "math"
      ]
@@ -1319,10 +1319,6 @@
    "center": [
     37.23453,
     127.49202
-   ],
-   "apt": [
-    6121824,
-    72
    ],
    "fervor": {
     "score": 58,
@@ -1358,7 +1354,7 @@
      "km": 6.4,
      "academies": {
       "all": 61,
-      "math": 19,
+      "math": 20,
       "english": 18,
       "korean": 11,
       "science": 2
@@ -1385,9 +1381,9 @@
      "region": "경기-이천시",
      "km": 7.0,
      "academies": {
-      "all": 70,
+      "all": 69,
       "math": 26,
-      "english": 25,
+      "english": 24,
       "korean": 3,
       "science": 3
      },
@@ -1642,7 +1638,7 @@
      "kind": "교습소",
      "capacity": 9,
      "since": 2024,
-     "branches": 76,
+     "branches": 77,
      "subjects": [
       "korean"
      ]
@@ -1726,7 +1722,7 @@
      "science": 0
     },
     "3y": {
-     "all": 11,
+     "all": 10,
      "math": 4,
      "english": 4,
      "korean": 3,
@@ -1737,10 +1733,15 @@
     37.25379,
     127.36781
    ],
-   "apt": [
-    13951100,
-    53
-   ],
+   "bigShare": {
+    "big": 1282,
+    "seats": 2179,
+    "count": 2,
+    "names": [
+     "강남대성기숙퀘타(QUETTA)학원",
+     "이투스247이천기숙학원"
+    ]
+   },
    "fervor": {
     "score": 40,
     "parts": {
@@ -2088,7 +2089,7 @@
      "kind": "학원",
      "capacity": 0,
      "since": 2023,
-     "branches": 57,
+     "branches": 58,
      "subjects": [
       "english",
       "math"
@@ -2132,10 +2133,6 @@
     37.32361,
     127.48217
    ],
-   "apt": [
-    6188131,
-    25
-   ],
    "fervor": {
     "score": 64,
     "parts": {
@@ -2155,9 +2152,9 @@
      "region": "경기-이천시",
      "km": 4.4,
      "academies": {
-      "all": 70,
+      "all": 69,
       "math": 26,
-      "english": 25,
+      "english": 24,
       "korean": 3,
       "science": 3
      },
@@ -2170,7 +2167,7 @@
      "km": 4.7,
      "academies": {
       "all": 61,
-      "math": 19,
+      "math": 20,
       "english": 18,
       "korean": 11,
       "science": 2
@@ -2525,10 +2522,14 @@
     37.26637,
     127.49049
    ],
-   "apt": [
-    8159709,
-    181
-   ],
+   "bigShare": {
+    "big": 520,
+    "seats": 3170,
+    "count": 1,
+    "names": [
+     "와와학습코칭부발학원"
+    ]
+   },
    "fervor": {
     "score": 62,
     "parts": {
@@ -2549,7 +2550,7 @@
      "km": 3.6,
      "academies": {
       "all": 61,
-      "math": 19,
+      "math": 20,
       "english": 18,
       "korean": 11,
       "science": 2
@@ -2562,9 +2563,9 @@
      "region": "경기-이천시",
      "km": 4.1,
      "academies": {
-      "all": 70,
+      "all": 69,
       "math": 26,
-      "english": 25,
+      "english": 24,
       "korean": 3,
       "science": 3
      },
@@ -2610,7 +2611,7 @@
     "total": 576
    },
    "academies": {
-    "all": 0,
+    "all": 1,
     "math": 0,
     "english": 0,
     "korean": 0,
@@ -2715,7 +2716,16 @@
      ]
     }
    },
-   "top": [],
+   "top": [
+    {
+     "name": "엠앤엠(M&M)독학기숙학원",
+     "kind": "학원",
+     "capacity": 85,
+     "since": 2026,
+     "branches": 1,
+     "subjects": []
+    }
+   ],
    "newApts": [],
    "studentsPast": {
     "elem": 0,
@@ -2725,14 +2735,14 @@
    },
    "opened": {
     "1y": {
-     "all": 0,
+     "all": 1,
      "math": 0,
      "english": 0,
      "korean": 0,
      "science": 0
     },
     "3y": {
-     "all": 0,
+     "all": 1,
      "math": 0,
      "english": 0,
      "korean": 0,
@@ -2819,9 +2829,9 @@
      "region": "경기-이천시",
      "km": 2.3,
      "academies": {
-      "all": 70,
+      "all": 69,
       "math": 26,
-      "english": 25,
+      "english": 24,
       "korean": 3,
       "science": 3
      },
@@ -2848,7 +2858,7 @@
      "km": 2.6,
      "academies": {
       "all": 61,
-      "math": 19,
+      "math": 20,
       "english": 18,
       "korean": 11,
       "science": 2
@@ -3303,7 +3313,7 @@
      "kind": "학원",
      "capacity": 37,
      "since": 2017,
-     "branches": 57,
+     "branches": 58,
      "subjects": [
       "english",
       "math"
@@ -3415,16 +3425,20 @@
     37.29384,
     127.4334
    ],
-   "apt": [
-    8411132,
-    135
-   ],
+   "bigShare": {
+    "big": 507,
+    "seats": 2055,
+    "count": 1,
+    "names": [
+     "대교하이캠퍼스송정학원"
+    ]
+   },
    "fervor": {
     "score": 56,
     "parts": {
      "density": [
       1.9,
-      73
+      74
      ],
      "fee": [
       210000,
@@ -3438,7 +3452,7 @@
      "region": "경기-이천시",
      "km": 0.5,
      "academies": {
-      "all": 0,
+      "all": 1,
       "math": 0,
       "english": 0,
       "korean": 0,
@@ -3480,9 +3494,9 @@
      "region": "경기-이천시",
      "km": 2.0,
      "academies": {
-      "all": 70,
+      "all": 69,
       "math": 26,
-      "english": 25,
+      "english": 24,
       "korean": 3,
       "science": 3
      },
@@ -3523,7 +3537,7 @@
      "km": 2.3,
      "academies": {
       "all": 61,
-      "math": 19,
+      "math": 20,
       "english": 18,
       "korean": 11,
       "science": 2
@@ -3705,7 +3719,7 @@
      "kind": "학원",
      "capacity": 150,
      "since": 2020,
-     "branches": 65,
+     "branches": 66,
      "subjects": [
       "math"
      ]
@@ -3715,7 +3729,7 @@
      "kind": "학원",
      "capacity": 130,
      "since": 2020,
-     "branches": 117,
+     "branches": 119,
      "subjects": [
       "english"
      ]
@@ -3787,10 +3801,6 @@
     37.30594,
     127.41502
    ],
-   "apt": [
-    6840782,
-    13
-   ],
    "fervor": {
     "score": 49,
     "parts": {
@@ -3810,7 +3820,7 @@
      "region": "경기-이천시",
      "km": 2.1,
      "academies": {
-      "all": 0,
+      "all": 1,
       "math": 0,
       "english": 0,
       "korean": 0,
@@ -3852,9 +3862,9 @@
      "region": "경기-이천시",
      "km": 4.0,
      "academies": {
-      "all": 70,
+      "all": 69,
       "math": 26,
-      "english": 25,
+      "english": 24,
       "korean": 3,
       "science": 3
      },
@@ -3867,7 +3877,7 @@
      "km": 4.4,
      "academies": {
       "all": 61,
-      "math": 19,
+      "math": 20,
       "english": 18,
       "korean": 11,
       "science": 2
@@ -4153,10 +4163,6 @@
     37.27967,
     127.4568
    ],
-   "apt": [
-    13615131,
-    69
-   ],
    "fervor": {
     "score": 34,
     "parts": {
@@ -4177,7 +4183,7 @@
      "km": 0.7,
      "academies": {
       "all": 61,
-      "math": 19,
+      "math": 20,
       "english": 18,
       "korean": 11,
       "science": 2
@@ -4218,9 +4224,9 @@
      "region": "경기-이천시",
      "km": 1.2,
      "academies": {
-      "all": 70,
+      "all": 69,
       "math": 26,
-      "english": 25,
+      "english": 24,
       "korean": 3,
       "science": 3
      },
@@ -4274,7 +4280,7 @@
      "region": "경기-이천시",
      "km": 2.8,
      "academies": {
-      "all": 0,
+      "all": 1,
       "math": 0,
       "english": 0,
       "korean": 0,
@@ -4712,10 +4718,6 @@
     37.13066,
     127.60483
    ],
-   "apt": [
-    5790915,
-    52
-   ],
    "fervor": {
     "score": 16,
     "parts": {
@@ -4902,7 +4904,7 @@
      "kind": "학원",
      "capacity": 60,
      "since": 2026,
-     "branches": 2,
+     "branches": 4,
      "subjects": [
       "english"
      ]
@@ -4981,10 +4983,6 @@
     37.27679,
     127.44423
    ],
-   "apt": [
-    19529518,
-    32
-   ],
    "nearby": [
     {
      "name": "증일동",
@@ -5048,7 +5046,7 @@
      "km": 1.5,
      "academies": {
       "all": 61,
-      "math": 19,
+      "math": 20,
       "english": 18,
       "korean": 11,
       "science": 2
@@ -5061,9 +5059,9 @@
      "region": "경기-이천시",
      "km": 1.8,
      "academies": {
-      "all": 70,
+      "all": 69,
       "math": 26,
-      "english": 25,
+      "english": 24,
       "korean": 3,
       "science": 3
      },
@@ -5075,7 +5073,7 @@
      "region": "경기-이천시",
      "km": 2.1,
      "academies": {
-      "all": 0,
+      "all": 1,
       "math": 0,
       "english": 0,
       "korean": 0,
@@ -5272,10 +5270,6 @@
     37.27171,
     127.43957
    ],
-   "apt": [
-    19879661,
-    57
-   ],
    "nearby": [
     {
      "name": "중리동",
@@ -5339,7 +5333,7 @@
      "km": 2.2,
      "academies": {
       "all": 61,
-      "math": 19,
+      "math": 20,
       "english": 18,
       "korean": 11,
       "science": 2
@@ -5352,7 +5346,7 @@
      "region": "경기-이천시",
      "km": 2.3,
      "academies": {
-      "all": 0,
+      "all": 1,
       "math": 0,
       "english": 0,
       "korean": 0,
@@ -5366,9 +5360,9 @@
      "region": "경기-이천시",
      "km": 2.5,
      "academies": {
-      "all": 70,
+      "all": 69,
       "math": 26,
-      "english": 25,
+      "english": 24,
       "korean": 3,
       "science": 3
      },
@@ -5428,9 +5422,9 @@
     "total": 3024
    },
    "academies": {
-    "all": 70,
+    "all": 69,
     "math": 26,
-    "english": 25,
+    "english": 24,
     "korean": 3,
     "science": 3
    },
@@ -5586,7 +5580,7 @@
      "kind": "학원",
      "capacity": 154,
      "since": 2009,
-     "branches": 65,
+     "branches": 66,
      "subjects": [
       "math"
      ]
@@ -5616,7 +5610,7 @@
      "kind": "학원",
      "capacity": 130,
      "since": 2008,
-     "branches": 2,
+     "branches": 3,
      "subjects": [
       "english",
       "math"
@@ -5691,7 +5685,7 @@
      "kind": "학원",
      "capacity": 64,
      "since": 2026,
-     "branches": 76,
+     "branches": 77,
      "subjects": [
       "korean"
      ]
@@ -5754,9 +5748,9 @@
      "science": 0
     },
     "3y": {
-     "all": 11,
+     "all": 10,
      "math": 4,
-     "english": 4,
+     "english": 3,
      "korean": 1,
      "science": 1
     }
@@ -5765,10 +5759,14 @@
     37.29013,
     127.45535
    ],
-   "apt": [
-    12839088,
-    198
-   ],
+   "bigShare": {
+    "big": 507,
+    "seats": 3932,
+    "count": 1,
+    "names": [
+     "눈높이러닝센터증포학원"
+    ]
+   },
    "fervor": {
     "score": 51,
     "parts": {
@@ -5789,7 +5787,7 @@
      "km": 0.6,
      "academies": {
       "all": 61,
-      "math": 19,
+      "math": 20,
       "english": 18,
       "korean": 11,
       "science": 2
@@ -5872,7 +5870,7 @@
      "region": "경기-이천시",
      "km": 2.3,
      "academies": {
-      "all": 0,
+      "all": 1,
       "math": 0,
       "english": 0,
       "korean": 0,
@@ -6069,7 +6067,7 @@
      "kind": "학원",
      "capacity": 196,
      "since": 2025,
-     "branches": 57,
+     "branches": 58,
      "subjects": [
       "english",
       "math"
@@ -6215,10 +6213,14 @@
     37.28455,
     127.44867
    ],
-   "apt": [
-    6421267,
-    31
-   ],
+   "bigShare": {
+    "big": 1080,
+    "seats": 4096,
+    "count": 1,
+    "names": [
+     "이천에이닷영어학원"
+    ]
+   },
    "fervor": {
     "score": 48,
     "parts": {
@@ -6239,7 +6241,7 @@
      "km": 0.8,
      "academies": {
       "all": 61,
-      "math": 19,
+      "math": 20,
       "english": 18,
       "korean": 11,
       "science": 2
@@ -6252,9 +6254,9 @@
      "region": "경기-이천시",
      "km": 0.9,
      "academies": {
-      "all": 70,
+      "all": 69,
       "math": 26,
-      "english": 25,
+      "english": 24,
       "korean": 3,
       "science": 3
      },
@@ -6336,7 +6338,7 @@
      "region": "경기-이천시",
      "km": 1.9,
      "academies": {
-      "all": 0,
+      "all": 1,
       "math": 0,
       "english": 0,
       "korean": 0,
@@ -6517,10 +6519,14 @@
     37.21948,
     127.41089
    ],
-   "apt": [
-    6725125,
-    10
-   ],
+   "bigShare": {
+    "big": 990,
+    "seats": 990,
+    "count": 1,
+    "names": [
+     "강남대성기숙의대관학원"
+    ]
+   },
    "nearby": [
     {
      "name": "마장면",
