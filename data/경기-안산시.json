@@ -28,7 +28,7 @@
    ],
    "high": [
     300000,
-    90
+    91
    ],
    "total": [
     200000,
@@ -848,7 +848,7 @@
      ],
      "high": [
       315000,
-      36
+      37
      ],
      "total": [
       200000,
@@ -1083,7 +1083,9 @@
     },
     {
      "name": "NK입시전문학원",
-     "levels": [],
+     "levels": [
+      "high"
+     ],
      "kind": "학원",
      "capacity": 160,
      "since": 2013,
@@ -3763,7 +3765,9 @@
     },
     {
      "name": "세린학원",
-     "levels": [],
+     "levels": [
+      "high"
+     ],
      "kind": "학원",
      "capacity": 200,
      "since": 2021,
@@ -3775,6 +3779,7 @@
     {
      "name": "채움에듀수학영어초중등학원",
      "levels": [
+      "elem",
       "middle"
      ],
      "kind": "학원",
@@ -3855,7 +3860,9 @@
     },
     {
      "name": "이근재수학전문학원",
-     "levels": [],
+     "levels": [
+      "high"
+     ],
      "kind": "학원",
      "capacity": 60,
      "since": 2014,
@@ -8071,7 +8078,10 @@
     },
     {
      "name": "티(T)2티(T)9학원",
-     "levels": [],
+     "levels": [
+      "high",
+      "middle"
+     ],
      "kind": "학원",
      "capacity": 60,
      "since": 2002,
@@ -9605,7 +9615,9 @@
     },
     {
      "name": "하이클래스국어과학입시학원",
-     "levels": [],
+     "levels": [
+      "high"
+     ],
      "kind": "학원",
      "capacity": 91,
      "since": 2008,
