@@ -266,6 +266,7 @@
    "top": [
     {
      "name": "학사모아카데미학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 860,
      "since": 2005,
@@ -274,6 +275,7 @@
     },
     {
      "name": "계명의숙학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 768,
      "since": 2015,
@@ -282,6 +284,7 @@
     },
     {
      "name": "대한영어보습학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 720,
      "since": 1998,
@@ -292,6 +295,7 @@
     },
     {
      "name": "솔터학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 450,
      "since": 2010,
@@ -300,6 +304,7 @@
     },
     {
      "name": "윙스학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 372,
      "since": 2023,
@@ -308,6 +313,7 @@
     },
     {
      "name": "나스영어전문학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 240,
      "since": 2015,
@@ -319,6 +325,7 @@
     },
     {
      "name": "정결한수학학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 82,
      "since": 2026,
@@ -329,6 +336,7 @@
     },
     {
      "name": "리드인독서·논술학원강화점",
+     "levels": [],
      "kind": "학원",
      "capacity": 80,
      "since": 2026,
@@ -339,6 +347,10 @@
     },
     {
      "name": "글샘명샘문해톡논술교습소",
+     "levels": [
+      "elem",
+      "middle"
+     ],
      "kind": "교습소",
      "capacity": 72,
      "since": 2022,
@@ -349,6 +361,7 @@
     },
     {
      "name": "영어수학의정원학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 67,
      "since": 1996,
@@ -360,6 +373,7 @@
     },
     {
      "name": "윙스국어학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 62,
      "since": 2024,
@@ -370,6 +384,7 @@
     },
     {
      "name": "사유와공감수학학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 60,
      "since": 2026,
@@ -380,6 +395,11 @@
     },
     {
      "name": "A+수학교습소",
+     "levels": [
+      "elem",
+      "high",
+      "middle"
+     ],
      "kind": "교습소",
      "capacity": 54,
      "since": 2009,
@@ -390,6 +410,9 @@
     },
     {
      "name": "원수학교습소",
+     "levels": [
+      "middle"
+     ],
      "kind": "교습소",
      "capacity": 36,
      "since": 2023,
@@ -400,6 +423,7 @@
     },
     {
      "name": "공쌤글사랑국어교습소",
+     "levels": [],
      "kind": "교습소",
      "capacity": 27,
      "since": 2015,
@@ -410,6 +434,7 @@
     },
     {
      "name": "강화퍼스트영어교습소",
+     "levels": [],
      "kind": "교습소",
      "capacity": 9,
      "since": 2025,
@@ -420,6 +445,7 @@
     },
     {
      "name": "제니쌤 영어교습소",
+     "levels": [],
      "kind": "교습소",
      "capacity": 9,
      "since": 2024,
@@ -466,6 +492,10 @@
      "대한영어보습학원"
     ]
    },
+   "apt": [
+    4670258,
+    22
+   ],
    "fervor": {
     "score": 38,
     "parts": {
@@ -762,6 +792,7 @@
    "top": [
     {
      "name": "선율종합학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 656,
      "since": 2008,
@@ -770,6 +801,10 @@
     },
     {
      "name": "톡톡수학교습소",
+     "levels": [
+      "elem",
+      "middle"
+     ],
      "kind": "교습소",
      "capacity": 27,
      "since": 2012,
@@ -780,6 +815,10 @@
     },
     {
      "name": "권쌤영어교습소",
+     "levels": [
+      "elem",
+      "middle"
+     ],
      "kind": "교습소",
      "capacity": 12,
      "since": 2017,
@@ -1578,6 +1617,11 @@
    "top": [
     {
      "name": "한솔플러스수학교습소",
+     "levels": [
+      "elem",
+      "high",
+      "middle"
+     ],
      "kind": "교습소",
      "capacity": 27,
      "since": 2009,
@@ -1588,6 +1632,10 @@
     },
     {
      "name": "영어원서교실 영어교습소",
+     "levels": [
+      "elem",
+      "middle"
+     ],
      "kind": "교습소",
      "capacity": 9,
      "since": 2020,
@@ -1598,6 +1646,7 @@
     },
     {
      "name": "창의융합독서논술교습소",
+     "levels": [],
      "kind": "교습소",
      "capacity": 9,
      "since": 2026,
@@ -1608,6 +1657,9 @@
     },
     {
      "name": "모여봐요초등수학교습소",
+     "levels": [
+      "elem"
+     ],
      "kind": "교습소",
      "capacity": 7,
      "since": 2025,
@@ -1618,6 +1670,9 @@
     },
     {
      "name": "수학의숲중등수학교습소",
+     "levels": [
+      "middle"
+     ],
      "kind": "교습소",
      "capacity": 0,
      "since": 2025,
@@ -1659,6 +1714,10 @@
    "center": [
     37.71464,
     126.47996
+   ],
+   "apt": [
+    12736400,
+    36
    ],
    "nearby": [
     {

@@ -246,6 +246,7 @@
    "top": [
     {
      "name": "한빛입시학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 245,
      "since": 2017,
@@ -254,6 +255,7 @@
     },
     {
      "name": "청명멘토르학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 166,
      "since": 1984,
@@ -262,6 +264,7 @@
     },
     {
      "name": "PIS영어학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 165,
      "since": 2014,
@@ -272,6 +275,7 @@
     },
     {
      "name": "새로운스터디학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 96,
      "since": 2019,
@@ -280,6 +284,7 @@
     },
     {
      "name": "쑥쑥영어학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 76,
      "since": 2024,
@@ -290,6 +295,10 @@
     },
     {
      "name": "스마트에듀영어교습소",
+     "levels": [
+      "elem",
+      "middle"
+     ],
      "kind": "교습소",
      "capacity": 54,
      "since": 2017,
@@ -300,6 +309,7 @@
     },
     {
      "name": "EiE 고려대학교영어교육프로그램 가평학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 40,
      "since": 2022,
@@ -310,6 +320,11 @@
     },
     {
      "name": "스텝업잉글리쉬영어교습소",
+     "levels": [
+      "elem",
+      "high",
+      "middle"
+     ],
      "kind": "교습소",
      "capacity": 26,
      "since": 2018,
@@ -320,6 +335,11 @@
     },
     {
      "name": "뿌리수학교습소",
+     "levels": [
+      "elem",
+      "high",
+      "middle"
+     ],
      "kind": "교습소",
      "capacity": 20,
      "since": 2022,
@@ -330,6 +350,7 @@
     },
     {
      "name": "생각키움수학교습소",
+     "levels": [],
      "kind": "교습소",
      "capacity": 13,
      "since": 2020,
@@ -340,6 +361,7 @@
     },
     {
      "name": "미래엔수학 가평학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 0,
      "since": 2026,
@@ -350,6 +372,7 @@
     },
     {
      "name": "해미국어교습소",
+     "levels": [],
      "kind": "교습소",
      "capacity": 0,
      "since": 2026,
@@ -391,6 +414,10 @@
    "center": [
     37.82846,
     127.50596
+   ],
+   "apt": [
+    11623442,
+    79
    ],
    "fervor": {
     "score": 50,
@@ -920,6 +947,7 @@
    "top": [
     {
      "name": "웅진씽크빅 스마트올클래스 설악학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 110,
      "since": 2020,
@@ -928,6 +956,7 @@
     },
     {
      "name": "ASG 영어 수학 학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 90,
      "since": 2014,
@@ -939,6 +968,7 @@
     },
     {
      "name": "탑클래스 설악 학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 87,
      "since": 2025,
@@ -947,6 +977,7 @@
     },
     {
      "name": "선학한국어학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 50,
      "since": 2016,
@@ -957,6 +988,10 @@
     },
     {
      "name": "그릿잉글리시영어교습소",
+     "levels": [
+      "elem",
+      "middle"
+     ],
      "kind": "교습소",
      "capacity": 27,
      "since": 2021,
@@ -998,6 +1033,10 @@
    "center": [
     37.67745,
     127.51423
+   ],
+   "apt": [
+    13226252,
+    13
    ],
    "fervor": {
     "score": 55,
@@ -1136,6 +1175,7 @@
    "top": [
     {
      "name": "광릉한샘기숙학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 750,
      "since": 2021,
@@ -1144,6 +1184,7 @@
     },
     {
      "name": "탑엘리트 해법영어학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 130,
      "since": 2020,
@@ -1154,6 +1195,7 @@
     },
     {
      "name": "강남고도 미대재수학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 120,
      "since": 2022,
@@ -1164,6 +1206,7 @@
     },
     {
      "name": "로그학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 100,
      "since": 2025,
@@ -1172,6 +1215,7 @@
     },
     {
      "name": "수학의 신 학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 75,
      "since": 2022,
@@ -1182,6 +1226,9 @@
     },
     {
      "name": "디딤돌수학교습소",
+     "levels": [
+      "elem"
+     ],
      "kind": "교습소",
      "capacity": 15,
      "since": 2008,
@@ -1408,6 +1455,7 @@
    "top": [
     {
      "name": "청평실력이쑥쑥학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 380,
      "since": 2017,
@@ -1416,6 +1464,7 @@
     },
     {
      "name": "와이즈영수학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 128,
      "since": 2020,
@@ -1426,6 +1475,7 @@
     },
     {
      "name": "예담아카데미학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 126,
      "since": 2006,
@@ -1434,6 +1484,7 @@
     },
     {
      "name": "이지학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 96,
      "since": 2003,
@@ -1442,6 +1493,7 @@
     },
     {
      "name": "튼튼나무학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 70,
      "since": 2011,
@@ -1452,6 +1504,7 @@
     },
     {
      "name": "프로수학교습소",
+     "levels": [],
      "kind": "교습소",
      "capacity": 6,
      "since": 2014,
@@ -1462,6 +1515,7 @@
     },
     {
      "name": "레이첼영어교습소",
+     "levels": [],
      "kind": "교습소",
      "capacity": 4,
      "since": 2025,
@@ -1472,6 +1526,7 @@
     },
     {
      "name": "에이펙스(APEX)영어교습소",
+     "levels": [],
      "kind": "교습소",
      "capacity": 0,
      "since": 2024,
@@ -1513,6 +1568,10 @@
    "center": [
     37.7331,
     127.41871
+   ],
+   "apt": [
+    9307178,
+    26
    ],
    "nearby": []
   },
@@ -1633,6 +1692,7 @@
    "top": [
     {
      "name": "실력이쑥쑥학원",
+     "levels": [],
      "kind": "학원",
      "capacity": 350,
      "since": 2015,
