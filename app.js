@@ -111,31 +111,43 @@ function onlySubject(x, subject) {
 
 function bigAcademies(data, count = 2, subject = "all", level = "total") {
   const brand = (n) => n.replace(/\([^)]*\)/g, "").replace(/\s/g, "").replace(/(어학원|학원|교습소)$/, "");
-  const groups = [];
+  // 이름 앞의 동네 이름(목동, 대치 등)은 떼고 비교해야 '목동시대인재'와 '시대인재'가 같은 학원으로 묶입니다.
+  const places = new Set(["대치", "목동", "중계", "평촌", "분당", "강남", "일산"]);
+  data.areas.forEach((a) => { const n = a.name.replace(/제?\d+동$/, "동"); places.add(n); if (n.length >= 3) places.add(n.replace(/동$/, "")); });
+  const placeList = [...places].sort((p, q) => q.length - p.length);
+  const core = (n) => { const b = brand(n); const p = placeList.find((x) => b.startsWith(x) && b.length - x.length >= 3); return p ? b.slice(p.length) : b; };
+  const xs = [];
   for (const a of data.areas) {
-    const xs = (a.top || []).filter((x) => x.kind === "학원" && x.capacity >= (subject === "all" ? 500 : 100) && x.capacity <= 30000 && !BIG_SKIP.test(x.name) && (subject === "all" || onlySubject(x, subject)) && (level === "total" || !x.levels || x.levels.includes(level)));
-    const starts = {};
-    xs.forEach((x) => { const b = brand(x.name); for (let i = 4; i <= b.length; i++) starts[b.slice(0, i)] = (starts[b.slice(0, i)] || 0) + 1; });
-    const byKey = {};
-    xs.forEach((x) => {
-      const b = brand(x.name);
-      let key = b;
-      for (let i = 4; i <= b.length; i++) if (starts[b.slice(0, i)] >= 2) { key = b.slice(0, i); break; }
-      (byKey[key] ||= []).push(x);
-    });
-    Object.values(byKey).forEach((list) => {
-      list.sort((p, q) => q.capacity - p.capacity);
-      groups.push({ name: list[0].name.replace(/학원$/, ""), dong: a.name, halls: list.length, seats: list.reduce((t, x) => t + x.capacity, 0) });
+    (a.top || []).forEach((x) => {
+      if (x.kind === "학원" && x.capacity >= (subject === "all" ? 500 : 100) && x.capacity <= 30000 && !BIG_SKIP.test(x.name) && (subject === "all" || onlySubject(x, subject)) && (level === "total" || !x.levels || x.levels.includes(level))) xs.push({ ...x, dong: a.name });
     });
   }
-  // 같은 브랜드가 여러 동에 있으면 가장 큰 곳 하나만 남겨 서로 다른 학원 2곳을 보여 줍니다.
-  const picked = [];
-  for (const g of groups.sort((p, q) => q.seats - p.seats)) {
-    if (picked.some((x) => brand(x.name).slice(0, 4) === brand(g.name).slice(0, 4))) continue;
-    picked.push(g);
-    if (picked.length === count) break;
-  }
-  return picked;
+  // 구 전체에서 앞 3글자 이상이 같은 이름(1관·2관·고등관·별관 등)은 한 학원으로 묶어 정원을 더합니다. 다른 구는 섞지 않습니다.
+  const starts = {};
+  xs.forEach((x) => { const b = core(x.name); for (let i = 3; i <= b.length; i++) starts[b.slice(0, i)] = (starts[b.slice(0, i)] || 0) + 1; });
+  const byKey = {};
+  xs.forEach((x) => {
+    const b = core(x.name);
+    let key = b;
+    for (let i = 3; i <= b.length; i++) if (starts[b.slice(0, i)] >= 2) { key = b.slice(0, i); break; }
+    (byKey[key] ||= []).push(x);
+  });
+  const groups = Object.entries(byKey).map(([key, list]) => {
+    list.sort((p, q) => q.capacity - p.capacity);
+    const seatsBy = {};
+    list.forEach((x) => { seatsBy[x.dong] = (seatsBy[x.dong] || 0) + x.capacity; });
+    const dongs = Object.keys(seatsBy).sort((p, q) => seatsBy[q] - seatsBy[p]);
+    // 여러 관이면 공통 이름(예: 시대인재)만, 한 곳이면 원래 이름을 씁니다.
+    let name = list[0].name.replace(/학원$/, "");
+    if (list.length > 1) {
+      const bs = list.map((x) => core(x.name));
+      let i = 0;
+      while (bs.every((b) => b[i] && b[i] === bs[0][i])) i++;
+      name = bs[0].slice(0, Math.max(i, key.length)).replace(/(\D)제?\d$/, "$1");
+    }
+    return { name, dong: dongs.length > 2 ? `${dongs[0]} 외 ${dongs.length - 1}개 동` : dongs.join("·"), halls: list.length, seats: list.reduce((t, x) => t + x.capacity, 0) };
+  });
+  return groups.sort((p, q) => q.seats - p.seats).slice(0, count);
 }
 
 // 숫자에서 읽을 수 있는 이유만 적습니다. 현장 조사나 설문이 아닙니다.
