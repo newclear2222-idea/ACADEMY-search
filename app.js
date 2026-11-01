@@ -95,13 +95,13 @@ function bigHeavyText(area) {
 }
 
 // 구·시마다 대표 대형 학원 2곳: 정원 500명 이상 학원 중 정원이 큰 곳. 한 동 안 같은 이름의 여러 관(2관·3관)은 하나로 묶어 정원을 더합니다.
-// 눈높이·씽크빅 같은 학습센터 체인과 원격 학원, 정원 5,000명이 넘는 입력 실수는 뺍니다.
+// 눈높이·씽크빅 같은 학습센터 체인과 원격 학원, 정원 3만 명이 넘는 입력 실수는 뺍니다.
 const BIG_SKIP = /원격|러닝센터|학습센터|학습코칭|씽크빅|구몬|공부방/;
 function bigAcademies(data, count = 2) {
   const brand = (n) => n.replace(/\([^)]*\)/g, "").replace(/\s/g, "").replace(/(어학원|학원|교습소)$/, "");
   const groups = [];
   for (const a of data.areas) {
-    const xs = (a.top || []).filter((x) => x.kind === "학원" && x.capacity >= 500 && x.capacity <= 5000 && !BIG_SKIP.test(x.name));
+    const xs = (a.top || []).filter((x) => x.kind === "학원" && x.capacity >= 500 && x.capacity <= 30000 && !BIG_SKIP.test(x.name));
     const starts = {};
     xs.forEach((x) => { const b = brand(x.name); for (let i = 4; i <= b.length; i++) starts[b.slice(0, i)] = (starts[b.slice(0, i)] || 0) + 1; });
     const byKey = {};
