@@ -109,6 +109,8 @@ function onlySubject(x, subject) {
   return x.subjects.length === 1 && x.subjects[0] === subject;
 }
 
+// 앞 글자가 짧아 자동으로 안 묶이지만 같은 학원인 이름들입니다(대찬시대·대찬W·대찬바론 등).
+const SAME_BRAND = ["대찬"];
 function bigAcademies(data, count = 2, subject = "all", level = "total") {
   const brand = (n) => n.replace(/\([^)]*\)/g, "").replace(/\s/g, "").replace(/(어학원|학원|교습소)$/, "");
   // 이름 앞의 동네 이름(목동, 대치 등)은 떼고 비교해야 '목동시대인재'와 '시대인재'가 같은 학원으로 묶입니다.
@@ -128,8 +130,8 @@ function bigAcademies(data, count = 2, subject = "all", level = "total") {
   const byKey = {};
   xs.forEach((x) => {
     const b = core(x.name);
-    let key = b;
-    for (let i = 3; i <= b.length; i++) if (starts[b.slice(0, i)] >= 2) { key = b.slice(0, i); break; }
+    let key = SAME_BRAND.find((x) => b.startsWith(x)) || b;
+    if (key === b) for (let i = 3; i <= b.length; i++) if (starts[b.slice(0, i)] >= 2) { key = b.slice(0, i); break; }
     (byKey[key] ||= []).push(x);
   });
   const groups = Object.entries(byKey).map(([key, list]) => {
@@ -139,7 +141,8 @@ function bigAcademies(data, count = 2, subject = "all", level = "total") {
     const dongs = Object.keys(seatsBy).sort((p, q) => seatsBy[q] - seatsBy[p]);
     // 여러 관이면 공통 이름(예: 시대인재)만, 한 곳이면 원래 이름을 씁니다.
     let name = list[0].name.replace(/학원$/, "");
-    if (list.length > 1) {
+    if (SAME_BRAND.includes(key)) name = key;
+    else if (list.length > 1) {
       const bs = list.map((x) => core(x.name));
       let i = 0;
       while (bs.every((b) => b[i] && b[i] === bs[0][i])) i++;
